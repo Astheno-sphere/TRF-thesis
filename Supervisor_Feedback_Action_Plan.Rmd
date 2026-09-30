@@ -1,0 +1,154 @@
+---
+title: "Response to Supervisor Feedback — Action Plan"
+subtitle: "Verifiable Crypto-Erasure for Cross-Border Health Data Audit Trails under the EHDS"
+author: "Arshad Akhtar Abbasia — MSc Sustainable Energy Logistics, Høgskolen i Molde"
+date: "16 September 2026"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    number_sections: true
+  html_document:
+    theme: readable
+    toc: true
+---
+
+# Purpose
+
+This document records the response to Prof. Ferreira's feedback of September 2026, sorts it into work items, flags the two points that require his clarification before they can be actioned, and sequences everything against the submission date of 14 November 2026.
+
+Feedback items are marked: *Accepted* (will be done as stated), *Accepted with variation* (will be done, with a stated difference), *Needs decision* (cannot proceed without his answer), or *Query* (I believe the instruction may rest on an error and want to check before applying it).
+
+---
+
+# Assessment of the feedback
+
+The feedback is substantive and lands on three real weaknesses, one of which had not been identified by any prior review of this work.
+
+The strongest item is the demand for a replicable literature-review methodology. Section 2.1 currently describes a search approach in prose — databases named, date range given, two inclusion criteria stated — but it does not document exact Boolean strings, does not give the date each search was run, does not state exclusion criteria, and contains no screening flow. That is a genuine methodological gap in a thesis whose entire credibility argument rests on verifiability. It is also fixable in a day, and fixing it strengthens the chapter's weakest section.
+
+The second strong item is the request for an evaluation framework. The thesis currently evaluates the artefact analytically — internal consistency, external compatibility, reliability through determinism — and does not collect stakeholder input at all. Adding expert evaluation would complete the Design Science Research cycle in the form Hevner and Peffers describe. Whether it can be *conducted* within the remaining time is the open question of Section 3 below.
+
+The third is the cleanup of inline draft markers, which is correct and already partly logged on the verification register.
+
+Two items require care before action, and both are set out in Section 4.
+
+---
+
+# Needs decision: the evaluation framework
+
+This is the single most consequential item in the feedback and it must be resolved before anything else is scheduled.
+
+The feedback specifies 6–8 domain experts, 45-minute semi-structured sessions demonstrating the sandbox, thematic analysis, and a five-point Likert questionnaire across four dimensions. It also says, separately, that the thesis does not need a real implementation. Those two statements admit two readings, and the difference between them is approximately five weeks of work and a change to the ethics position of the entire thesis.
+
+## Reading A — conduct the evaluation
+
+Recruit and interview 2 Data Protection Officers, 2 health IT architects, 2 SPE operators, and 2 information-logistics specialists. What this entails:
+
+- Notification to Sikt (Norwegian Agency for Shared Services in Education and Research), because semi-structured interviews with identifiable professionals process personal data. Typical processing time is 4–6 weeks.
+- Recruitment of eight experts across Norsk Helsenett, Helsedataservice, and NORTRE, none of whom is currently a contact of this project.
+- Eight sessions, transcription, thematic coding, and integration into Chapter 6.
+- Rewriting the ethics declaration, the scope statement in Chapter 1 Section 1.5, and Chapter 3 Section 3.8, all of which currently state that the research involves no human participants.
+
+Realistic elapsed time is six to eight weeks assuming Sikt approval is fast and all eight experts respond promptly. Against a 14 November deadline, this consumes the entire remaining schedule and leaves no margin for the chapters themselves.
+
+## Reading B — specify the evaluation protocol as designed, unconducted
+
+Add a section to Chapter 3 specifying the evaluation instrument in full — panel composition, session protocol, the Likert instrument with its four dimensions and their items, the thematic-analysis approach — and present it as the designed next iteration of the DSR cycle, with Chapter 7 carrying it as the immediate future-work item. No participants, no personal data, no Sikt notification, and the ethics position stands unchanged.
+
+This is defensible DSR practice: specification-and-demonstration studies routinely design the evaluation that a subsequent cycle would execute. It also answers the feedback's substance — the instrument exists, it is rigorous, and it is reproducible by anyone who wants to run it.
+
+## Recommendation
+
+Reading B, unless Prof. Ferreira intends Reading A and is willing to extend the deadline. **This question goes to him first, before any other work begins**, because the answer determines whether the remaining schedule is comfortable or impossible.
+
+A middle path exists if he wants stakeholder input specifically: a single informal expert conversation, unrecorded, unattributed, and reported only as design commentary rather than as data, which would not constitute research on human participants. This is weaker than Reading A and stronger than Reading B, and it is worth offering.
+
+---
+
+# Query: two corrections I have not applied
+
+Both concern factual instructions in the feedback that appear to rest on an error. Neither is applied pending his confirmation, because inserting an unverified date or an unverified title is precisely the failure mode this rebuild exists to eliminate.
+
+## The eHOMB date
+
+The feedback directs that the placeholder in Section 1.1 be replaced with **2024**, described as the formal operational adoption year for cross-border MyHealth@EU architecture guidelines by "the eHMGB."
+
+Two difficulties. First, the body named in the primary source is the eHealth Operational Management Board (eHOMB); "eHMGB" does not correspond to a body in the MyHealth@EU governance structure, which comprises eHMSEG and eHOMB. Second, the source sentence appears on the Helsedirektoratet national e-health portfolio page, which was published around late March 2025 and states that the change proposal "ble godkjent og besluttet i eHOMB 12. mars" without a year. The page's age metadata cannot date that sentence: the same page also reports events of 2026, so it is updated in place, and the year of the 12 March decision is not recoverable from it.
+
+The sentence also concerns something narrower than the feedback suggests: not the adoption of cross-border architecture guidelines, but the approval of Norway's specific change proposal to the requirement catalogue for implementing ePrescription without eDispensation.
+
+**Proposed resolution:** keep the date without a year, as the chapters now do, and ask Prof. Ferreira whether he holds a source for the year. An earlier version of this plan proposed 12 March 2025; that inference was invalid and is withdrawn.
+
+## The SPUHiN reference
+
+The feedback proposes: *SPUHiN Consortium. (2025). Deliverable D5.2: Technical minimum security requirements for secure processing environments under EHDS. Norwegian Infrastructure for Health Data (SPUHiN).*
+
+The title held in this project, taken from the Helsedirektoratet project page, is *Recommendations for minimum requirements for Secure Processing Environments in Norway*, produced by the SPUHiN project run jointly by Helsedirektoratet and Folkehelseinstituttet. "Technical minimum security requirements" and "Norwegian Infrastructure for Health Data" do not match that source.
+
+**Proposed resolution:** the editorial flag is removed as instructed, and the entry is formatted as a project deliverable in APA gray-literature style, retaining the verified title and issuing bodies. If he holds a different version of D5.2, his citation prevails.
+
+---
+
+# Accepted work items
+
+## Literature-review methodology — replicable protocol
+
+*Accepted.* Section 2.1 to be rewritten as a documented protocol containing:
+
+- every database and search engine used, with the date each search was executed
+- the exact Boolean strings, with fields targeted, reproduced in a table
+- inclusion criteria (peer-reviewed journal and conference papers; primary regulatory, standards, and government sources; 2018–2026 for the technical literature, unrestricted for primary law; English and Norwegian)
+- exclusion criteria (non-peer-reviewed commentary except where used explicitly as practitioner evidence and marked as such; work confined to non-EU data-protection regimes; opinion pieces)
+- a screening flow from database returns through duplicate removal, title and abstract screening, to full-text assessment, presented as a PRISMA-style diagram
+- an explicit statement of how the practitioner and gray-literature sources (SecuPi, VeritasChain, Oneuptime, Matheson, Berngaard) were treated, since these are cited as evidence of industry practice rather than as regulatory fact
+
+One honesty constraint applies. The searches for this review were conducted iteratively across May and September 2026 rather than as a single systematic sweep, and the protocol must describe what was actually done rather than a reconstruction that implies otherwise. A narrative review with a documented and replicable search protocol is the accurate description, and it will be labelled as such rather than as a systematic review.
+
+## Evaluation instrument
+
+*Accepted, subject to Section 3.* The Likert instrument as specified — perceived utility, regulatory alignment, operational viability, audit integrity — together with the panel composition and session protocol, to be written into Chapter 3 as a new section and referenced from Chapter 6 and Chapter 7.
+
+## Scalability discussion
+
+*Accepted.* A short subsection in Chapter 6 addressing computational overhead as record volumes grow: per-record key registry size, accumulator witness maintenance cost under dynamic revocation, and the point at which per-record granularity becomes operationally burdensome. This connects directly to the existing cost engagement in Section 6.4 and strengthens it.
+
+## Threat model for key destruction
+
+*Accepted.* Section 4.9 already states that lawfulness depends on a documented threat model and lists its four required elements. To be elaborated with the trust assumptions made explicit: what the controller is trusted to do, what the log operator is trusted not to do, and what an auditor can and cannot verify without hardware-backed attestation. This connects to the attested-versus-proven distinction already carried in Section 4.7 and Chapter 6 Section 6.3.
+
+## Removal of inline draft markers
+
+*Accepted.* Full-document audit for `[flag O]`, `[year to confirm]`, `[pending fetch F-nn]`, `[Deliverable number pending]`, and similar. Where a flag marks genuine unresolved verification, the underlying item is either resolved or the claim is restated at a strength that does not require the flag.
+
+## Formatting
+
+*Accepted, sequenced last.* University template; bold removed from body text, with emphasis carried by italics or by the template's heading styles; single consolidated reference list at the end in APA 7th edition. The consolidated list already exists with 67 entries de-duplicated across the seven chapter lists.
+
+---
+
+# Sequence to 14 November
+
+| Week | Dates | Work |
+|---|---|---|
+| 1 | 17–21 Sep | Send supervisor query (evaluation reading; eHOMB date; SPUHiN title). Literature-review protocol and PRISMA diagram. Draft-marker audit. |
+| 2 | 22–28 Sep | Evaluation instrument written into Chapter 3. Scalability subsection. Threat-model elaboration in 4.9. |
+| 3 | 29 Sep–5 Oct | Chapter 2 reduction of approximately 2,000 words; remaining verification fetches in one session. |
+| 4 | 6–12 Oct | Two figures: regulatory timeline; record-state diagram. Viva preparation notes. |
+| 5 | 13–19 Oct | Template migration, bold removal, single reference list, cross-reference check. |
+| 6 | 20–26 Oct | Full read-through for flow and interconnection; supervisor review round. |
+| 7 | 27 Oct–2 Nov | Supervisor comments actioned. |
+| 8 | 3–9 Nov | Final proofread, appendix, reproducibility package link. |
+| 9 | 10–14 Nov | Buffer and submission. |
+
+The schedule holds under Reading B. Under Reading A it does not, and the deadline would need to move.
+
+---
+
+# Current state
+
+Seven chapters, front matter, and Appendix A are drafted and internally cross-referenced. Measured length is approximately 40,300 words, which is roughly 89 pages at 450 words per page, against a stated ceiling of 80. Chapter 2 carries the excess and is the reduction target.
+
+The artefact is complete and self-verifying: the feasibility checker reproduces byte-identically on re-execution, the Synthea realism layer confirms that no reported figure depends on payload provenance, and the reproducibility package runs end to end with an integrity table mapping every reported number to its location in the thesis.
+
+Four verification items remain open — the SPUHiN D5.2 full deliverable, the Haque et al. publication venue, the eHOMB year, and the official EUR-Lex text of Article 73(1)(e) — none of which is load-bearing, and each of which is flagged in the text where it matters.

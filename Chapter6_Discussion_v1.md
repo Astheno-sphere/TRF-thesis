@@ -1,0 +1,197 @@
+# Chapter 6. Discussion
+
+---
+
+## 6.1 What the Thesis Establishes
+
+Before the limitations, the claim. Stating it precisely is what makes the limitations affordable.
+
+The thesis establishes that the European Health Data Space Regulation contains, within a single chapter, two provisions that cannot both be satisfied by a Secure Processing Environment under ordinary operating conditions. Article 73(1)(e) requires identifiable logs of access to and activity in the environment to be kept for at least one year. Article 68(12) requires personal data to be deleted from that environment within six months of the expiry of the data permit. Identifiable access logs are personal data. Where the remaining permit duration at the time a log is written is six months or less, the two requirements overlap, and no state of the environment satisfies both.
+
+That claim rests on one contestable interpretive step, stated here rather than buried: Article 68(12) governs *the data within the secure processing environment*, and the thesis reads that as reaching the identifiable access logs the environment generates rather than only the dataset supplied under the permit. Chapter 4, Section 4.6 sets out the grounds on both sides and identifies exactly which results depend on the reading: the answer being this claim alone. Given that step, the claim requires no data subject to exercise any right, no deployment baseline external to the Regulation, and no synthesis across instruments of different legal weight. Chapter 5 produced thirty-nine concrete witnesses of it in a population of one hundred Secure Processing Environment records, and the same conditions produced ninety infeasible records across the full population of two hundred when the cross-border audit floor is included.
+
+The thesis further establishes that this infeasibility is not a property of the obligations but of an assumption about what satisfies them. Under the semantics implicit in audit systems designed before the right to erasure existed, a record is verifiable while its payload is readable, the constraint system has no solution. Under a semantics in which a record is verifiable while its accountability content is intact and any loss of payload accessibility is itself logged, grounded, and attributed, the system is satisfiable for every arrival pattern of erasure requests and permit expiries, and for every retention floor. Chapter 4 proves both results; Chapter 5 witnesses them executably, and an independently written exhaustive search confirms that under the first semantics no assignment of payload accessibility whatsoever could succeed.
+
+Finally, the thesis specifies the mechanism that the feasibility proof exhibits: per-record keys, hiding commitments, invalidation entries carrying month, legal ground, and authorising actor, and a terminal transition at floor expiry that discharges the storage-limitation obligation on the metadata itself. Two clarifications of status belong here. The specification also provides for accumulator-based validity witnesses, which are an efficiency and verifiability layer rather than a component of either theorem, since Theorem 2 holds if validity is established by linear scan. They are specified but not implemented: the demonstration of Chapter 5 exercises keys, commitments, and invalidation entries, and no accumulator was built or run.
+
+What follows engages the objections to all of this in the order of their seriousness.
+
+## 6.2 The Authority Problem
+
+The most serious objection to this thesis is not technical, and it has not been raised by any reviewer of the work. It is that Semantics II is an argument, not an authority.
+
+No regulator, court, or supervisory authority has held that an audit record whose payload has been cryptographically invalidated continues to satisfy a retention obligation. The thesis argues that it does, and the argument is a good one. Article 17(3)(b) protects only processing that is *necessary* for the legal obligation, and Article 5(1)(c) requires that no more personal data be retained than the purpose demands. The accountability purpose of an audit record is served by knowing who accessed what, when, and under what authority, not by continued readability of the clinical payload. The Norwegian Data Protection Authority's internal-control guidance places exactly this balancing on the controller (Datatilsynet, n.d.-a), and its privacy-by-design guidance equates anonymisation with deletion (Datatilsynet, n.d.-b). But none of this amounts to a holding that invalidation discharges retention.
+
+The consequence must be stated without softening. If a supervisory authority takes the view that Article 73(1)(e)'s requirement of "identifiable logs" entails logs whose subject matter remains readable, then Theorem 2 remains mathematically true and becomes practically inert: the mechanism would satisfy a constraint system that does not describe the law. The thesis would still have established the collision, which is textual and survives any reading, and would still have established that the collision is *dissolvable in principle* by a semantic move. It would not have established that the move is available.
+
+Three considerations bear on how likely that outcome is, and they are offered as reasons rather than reassurance.
+
+First, the alternative readings are worse. If verifiability requires readability, then Article 73(1)(e) and Article 68(12) are in irreconcilable conflict and one must simply be disapplied: an outcome a supervisory authority is unlikely to prefer to a reading under which both can be honoured.
+
+Second, the direction of regulatory travel favours the argument. The European Data Protection Board's Guidelines 02/2025 were finalised as version 2.0 on 7 July 2026. They accept that where physical deletion is not technically possible, deleting the decryption key can render the data unintelligible and so serve the erasure obligation, while maintaining that encrypted and hashed data may themselves remain personal data and that the unintelligibility holds at least until the algorithm is broken (European Data Protection Board, 2026b). The further qualification that such a substitution depends on a *documented threat model* is not the Board's formulation but Aikebaier's (2026), whose equivalence proposition connects a Destruction-IND security notion to the Board's criterion; the distinction is preserved here because the two carry different authority. What the Guidelines themselves supply is a functional rather than literal reading of an obligation: the same move Semantics II makes on the retention side.
+
+Third, the question is decidable by asking. Chapter 7 proposes, as the highest-value next step, seeking an opinion from Datatilsynet on whether accountability-preserving verifiability discharges the retention obligation in Article 73(1)(e). That is a tractable request with a determinate answer, and it would convert the thesis's central interpretive move from argument to authority or else refute it cleanly. Either outcome is worth more than the present uncertainty.
+
+A second authority question sits beside the first and is narrower. Whether Article 68(12) reaches the access logs is a question of statutory construction that a supervisory authority or, ultimately, a court will settle, and that this author cannot. The thesis adopts the broad reading on textual grounds. The provision is framed by location rather than provenance, and the Regulation uses the narrower "made available under the data permit" formulation freely elsewhere when it means it. The thesis concedes, however, that the provision's placement within the data-permit article supports the narrower construction. What makes this tolerable rather than fatal is that the dependency is confined: Corollary 1.2 stands or falls with it, and nothing else in the thesis does. A request to Datatilsynet on the verifiability question could reasonably carry this one alongside it.
+
+## 6.3 Key Destruction and the Limits of Assurance
+
+The second objection is the one the thesis has carried since Chapter 2, and it is the honest ceiling of the contribution.
+
+The mechanism's guarantees are conditional on the irreversible destruction of key material. The canonical systematisation of secure deletion establishes that the further a deletion approach operates from the physical storage medium, the harder it becomes to assert that destruction actually occurred (Reardon, Basin, & Capkun, 2013). Cryptographic erasure is the limiting case: it operates entirely above the medium, reducing the deletion of arbitrary data to the deletion of a key, and inheriting in concentrated form the problem that key destruction cannot be confirmed by inspection.
+
+The thesis's response is to be precise about what the invalidation entry is. It is an *attested* record of destruction, not a *proof* of it. The entry records that a named actor destroyed a named key at a named month on a named legal ground, and binds that claim into an append-only audit trail alongside a commitment to the destroyed key's identifier. An auditor can establish that the claim was made, by whom, and when; an auditor cannot establish that the claim is true. The difference between attestation and proof is the boundary of this contribution.
+
+That boundary is where an active research programme sits, and naming it locates the thesis honestly within the field rather than overstating its reach. Proof-of-secure-erasure protocols seek evidence that a prover has erased its memory, with recent work relaxing the isolation assumptions such protocols traditionally require (Bursuc, Gil-Pons, Mauw, & Trujillo-Rasua, 2024). In the quantum setting, encryption with certified deletion produces a deletion certificate, and its authors identify *public verifiability*, enabling parties other than the originator to verify such a certificate, as an open problem (Broadbent & Islam, 2020). Were public verifiability of deletion certificates achieved, the invalidation entry specified in Chapter 4 could carry a proof rather than an attestation, and the mechanism's guarantee would strengthen from conditional to demonstrable without any change to the model.
+
+One further consideration limits the practical weight of this objection. The alternative to attested key destruction is not proven deletion; it is unattested deletion. A controller who deletes an audit record and logs that a deletion occurred is making exactly the same kind of unverifiable claim, with strictly less structure: there is no surviving commitment, so an auditor cannot even establish *what* was destroyed. The mechanism does not solve the assurance problem. It does improve on every available alternative with respect to it.
+
+## 6.4 The Cost Objection
+
+SecuPi (2025) argues that cryptographic erasure introduces operational complexity in row-level encryption scenarios, that auditable key management adds rather than removes overhead, and that policy-based access control is a better answer to the right to erasure in heavily distributed systems. This critique is substantially correct on its own terms and must be engaged rather than dismissed.
+
+The mechanism specified in Chapter 4 requires per-record key granularity, and Section 4.8 explains why: invalidation events occur at record granularity, because a permit expiry invalidates the records of one permit while an erasure request invalidates the records relating to one data subject, and those sets intersect without nesting. Coarser granularity would make some invalidations impossible to perform without over-invalidating. Per-record keys in a high-volume audit repository are an operational burden, and the thesis does not pretend otherwise.
+
+Three observations bound that burden without denying it.
+
+The burden falls on audit records rather than on clinical data stores. The mechanism operates at the audit-trail boundary (the sixth step of the MyHealth@EU transmission flow, or the access-logging boundary of a Secure Processing Environment) not on the electronic health records themselves. This is the smaller of the two surfaces by a wide margin, and the placement was chosen for that reason as much as for substrate independence.
+
+The burden is bounded and auditable in a way the alternative's is not. Key-management overhead is a known quantity that scales with record volume and can be budgeted, monitored, and inspected. The residual-copy problem that plaintext deletion faces (establishing that no backup, cache, replica, or derived index retains the deleted data) is unbounded and largely uninspectable. Trading an unbounded and invisible cost for a bounded and visible one is a defensible engineering choice, and it is the choice the mechanism makes.
+
+The critique's proposed alternative does not address the problem this thesis identifies. Policy-based and attribute-based access control govern *who may read* data; they do not cause data to cease to be readable. Against Article 68(12), which requires that personal data not remain in the environment, an access-control answer does not satisfy the obligation: the data remain, protected by policy. Against the collision of Corollary 1.2, access control offers nothing at all. The critique is well-aimed at crypto-shredding as a general answer to the right to erasure, which is the claim SecuPi is addressing; it is not aimed at the tri-lateral retention problem, and does not reach it.
+
+## 6.5 Scalability
+
+The demonstration ran two hundred records. A national audit repository handles volumes several orders of magnitude larger, and the mechanism's costs do not all scale in the same way.
+
+Three components grow linearly with the number of records and present no difficulty at realistic volumes. Metadata and commitments are small fixed-size additions per record; the invalidation registry grows only with the number of invalidation events, which is bounded by the number of records but in practice far smaller; and the feasibility check itself is a per-record operation independent of the rest of the population.
+
+The key registry is where the cost concentrates, and it is the component the cost objection of Section 6.4 correctly identifies. Per-record keys mean one key-management entry per audit record, and at national cross-border volumes over a ten-year retention horizon that is a large registry to maintain, back up, and audit. Two properties mitigate the growth without eliminating it. Keys for invalidated records are destroyed rather than retained, so the live registry shrinks as invalidations accumulate, and over a long horizon the steady-state registry is smaller than the cumulative record count. And key material is small and uniform, so the registry is an indexing and custody problem rather than a storage one.
+
+The accumulator layer has the least favourable scaling profile and is also the most dispensable. Dynamic accumulators with efficient revocation require witness maintenance as the accumulated set changes, and witness update costs grow with the frequency of revocation. This is why Chapter 4, Section 4.8 specifies the accumulator as a verifiability and efficiency layer rather than a component of either theorem: an implementation that finds witness maintenance too costly at its volume can establish validity by scanning the invalidation registry, losing succinctness and retaining correctness.
+
+No measurement supports any of this. The demonstration made no performance claim and none is made here; these are structural observations about how the specified components grow, and establishing their practical limits is work for an implementation rather than for this thesis.
+
+## 6.6 Evaluation Design and the Role of Stakeholder Assessment
+
+The evaluation reported in this thesis is analytical, and Section 3.7 states its criteria. That evaluation assesses whether the artefact is internally coherent, whether it fits the infrastructure it was designed against, and whether its results reproduce. It does not assess whether the people who would have to deploy it find it defensible, implementable, or trustworthy, and those are different questions that analytical evaluation cannot answer.
+
+An instrument for answering them has been designed and is specified in full in Appendix C. It comprises an eight-person expert panel spanning data protection, health IT architecture, Secure Processing Environment operation, and information logistics, and a session structure in which participants describe current practice before being shown the mechanism. It also comprises a demonstration script that runs the artefact and states its limitations before participants are invited to find them, a semi-structured interview guide, and a sixteen-item closed-response instrument across perceived utility, regulatory alignment, operational viability, and audit integrity.
+
+Three questions in that instrument bear directly on matters this chapter has had to leave open, and the connection is worth making explicit. Interview question seven asks practitioners whether Article 68(12) reaches the access logs an environment generates, which is the interpretive condition Section 6.2 identifies as carrying Corollary 1.2. Questionnaire item A2 asks whether attested key destruction is sufficient without hardware-backed proof, which is the boundary Section 6.3 describes. And items O1 to O4 address the operational burden that Section 6.4 concedes and cannot quantify. Each of these is a question about practitioner judgement rather than about the model, and none can be settled by further analysis.
+
+The instrument has not been executed, for the reasons given in Chapter 3, Section 3.8: doing so would process personal data about identifiable professionals, require notification to Sikt, and require revision of the scope and ethics statements that are accurate for the thesis as submitted. Its execution is the immediate next step identified in Chapter 7, Section 7.5, and the findings would feed back into the design cycle rather than being appended to it, revising the trust model of Chapter 4, Section 4.9, the residue analysis, and the direction of the next iteration.
+
+## 6.7 Synthetic Data and the Limits of the Demonstration
+
+Chapter 3 specified a two-layer sandbox: a feasibility checker carrying the load-bearing claim, and a realism layer feeding it Synthea-generated FHIR records. Both were built and both were run, and the result of running the second is more informative than its mere existence.
+
+Substituting real FHIR R4 resources for constructed payload strings changed every commitment in the population, all two hundred, and changed no reported figure whatsoever. Mean payload size rose from thirty-five bytes to one thousand and six. Violations, witnesses, invalidation counts, and grounds were identical. This is the expected outcome and the model would be defective otherwise, since no constraint in the TRF Model reads payload content; the value of running the comparison rather than asserting the invariance is that the claim was tested against a case where the inputs demonstrably moved.
+
+Two limitations of the generated cohort are carried forward rather than resolved.
+
+Synthea's default export conforms to the US Core implementation guide, with United States demographic, geographic, and care-pattern parameters. The FHIR version matches the version the Norwegian basisprofiler constrain, and the resource structure is genuine, but the profiles are not Norwegian and no claim of Norwegian clinical representativeness is made for the records. The invariance result establishes that this cannot affect any figure, and the thesis's Norwegian grounding rests on the infrastructure analysis of Chapter 4, Section 4.11 rather than on the synthetic population. Had the thesis made epidemiological or clinical claims, this limitation would be disqualifying; because its claims concern the behaviour of audit records under constraint, it is not.
+
+Synthea's validity has itself been assessed. Chen and colleagues found the generator reliable in modelling demographics and the probability of services being offered, and limited in modelling heterogeneous outcomes following intervention and regional variation in care quality (Chen, Chun, Patel, Chiang, & James, 2019). The same reasoning applies: the limitations are in dimensions this thesis does not use.
+
+The deeper limitation is that a demonstration over generated instances is not a proof over all instances. The general claims rest on the arguments in Chapter 4, and those arguments are informal rather than machine-checked. The executable check and the exhaustive cross-check reduce the probability that an error in the proofs has gone unnoticed; they do not eliminate it.
+
+## 6.8 Implications for Practice and Policy
+
+The timing argument is the strongest claim to practical relevance this thesis makes, and it is worth stating with the calendar in front of it.
+
+Regulation (EU) 2025/327 entered into force on 26 March 2025. Under Article 105 it applies generally from 26 March 2027, and the secondary-use provisions of Chapter IV, which contain both Article 68(12) and Article 73(1)(e), apply from 26 March 2029. Article 73(5) requires the Commission, by means of implementing acts and by 26 March 2027, to lay down the technical, organisational, information-security, confidentiality, data-protection, and interoperability requirements for Secure Processing Environments.
+
+The collision this thesis characterises is therefore not yet operative, and the specifications that will determine how it is handled are not yet written. That is an unusually favourable position for a piece of academic work to occupy. A framework that arrives after infrastructure has hardened around a problem is archaeology; one that arrives while the specifications are being drafted can affect defaults. The Norwegian position sharpens this further: the national criteria for Secure Processing Environments were finalised through the SPUHiN process after a public hearing running from July to October 2025, and are positioned explicitly as a national reference basis pending the Union implementing act (SPUHiN, 2025). The finalised compliance checklists, as inspected, address information-security management, identity assurance, and access governance. They grade an information-security management system as mandatory and ISO 27001 certification as recommended, and require eID-based authentication at defined assurance levels. No requirement addressing the reconciliation of retention with erasure and deletion appears among them. This is an absence observed in the published checklists rather than established against the full deliverable, which remains on the verification register; the claim is stated at that strength deliberately.
+
+The corrected picture of Norwegian cross-border operations reinforces rather than weakens this. Norway's National Contact Point is in live pilot operation at the Bodø and Stjørdal emergency clinics, connected to Portugal, Czechia, and Finland, with the Directorate's own portfolio reporting noting that no relevant patients had yet presented for the solution to be used in practice (Helsedirektoratet, 2026). The cross-border audit stream has effectively not begun. A design element proposed now would shape how those records are structured from the outset rather than requiring their retrospective reconstruction.
+
+Three concrete implications follow for the bodies that will write the specifications.
+
+For the Commission drafting the Article 73(5) implementing acts, the reconciliation of Article 73(1)(e) with Article 68(12) is a question the acts must answer, and this thesis offers a candidate answer that does not require amending either provision. Silence in the implementing acts would leave every Health Data Access Body to resolve the collision independently, which is the outcome that produces the fragmentation the EHDS exists to prevent.
+
+For Health Data Access Bodies including Helsedataservice, the invalidation entry is the practical takeaway even if the full mechanism is not adopted: recording *what was invalidated, when, on what legal ground, and by whom* as a first-class audit event costs little and converts an unexplained absence into an accountable one.
+
+For TEHDAS2 and its successors, whose Secure Processing Environment specifications published during 2026 define minimum capabilities and the interoperability baseline for federating environments, the collision is presently unaddressed in guidance that treats deletion at permit closure as an operational service.
+
+A word of restraint is owed here. This thesis is a Master's dissertation proposing a design, not a regulatory impact assessment. The policy implications above are offered as an argument to the bodies concerned, not as advice they are obliged to weigh, and their force depends entirely on the authority question of Section 6.2 being resolved favourably.
+
+## 6.9 Theoretical Implications
+
+Three contributions to the scholarly conversation follow from the work, each modest and each stated at its actual size.
+
+The first is the formalisation itself. Treating a retention conflict as a constraint-satisfaction problem over a single binary accessibility variable per record, and making the semantics of verifiability an explicit parameter of the model rather than an unexamined assumption, is a way of stating retention problems that appears not to have been used before in this domain. The general method of formalising legal compliance as satisfiability is established (Feng, Marsso, Sabetzadeh, & Chechik, 2022); its application here is what is new, and the applicability of the formulation beyond health data is an open question the thesis does not settle. The structure (one or more floors, a subject-triggered right, a ceiling) is not obviously specific to health. Section 6.9a tests that expectation against a statute outside health and returns a negative result which revises it: what matters is not that a floor and a ceiling coexist but where the ceiling is anchored. Financial record-keeping under MiFID II remains a candidate instance on that revised test, flagged for future analysis rather than established: the practitioner literature reviewed in Chapter 2 treats that setting as a floor-against-right conflict, and whether any ceiling analogous to Article 68(12) operates there is a question this thesis has not investigated.
+
+The second is the identification of the semantic assumption as the locus of the problem. The literature treats the retention-erasure tension as a conflict between obligations. The model locates it instead in an interpretive assumption that neither obligation states, and shows that the assumption is doing the work: with it, infeasibility; without it, satisfiability. This reframing suggests a general question for regulatory-compliance modelling, namely how many apparent conflicts between legal obligations are artefacts of implicit operational semantics inherited from systems built under earlier law.
+
+The third is the positioning of the contribution relative to the cryptographic literature. Aikebaier's (2026) systematisation of cryptographic erasure closes by naming five open problems, of which the fifth is erasure under multi-regime retention conflict. That source is an unreviewed preprint and is cited as corroboration rather than authority. This thesis addresses the problem in one regulatory setting, with the reservations of Sections 6.2 and 6.3 attached. The fourth open problem on the same list, composition with zero-knowledge selective disclosure, is a problem this thesis creates rather than solves, and Chapter 7 treats it accordingly.
+
+## 6.9a Where the Ceiling Is Anchored: a Cross-Sector Test
+
+The first of those three contributions raised a question it did not answer. If the structure of one or more floors, a subject-triggered right and a ceiling is not specific to health, then some other domain ought to exhibit it, and running that domain through the same model ought to produce the same infeasibility. A cross-sector instance was therefore constructed and executed rather than argued.
+
+The instance is Norwegian police register law. Section 17 of politiregisterloven imposes a traceability duty on the use of police information systems and converts it into a retention rule: *Opplysninger om bruk av systemet skal registreres og lagres i minst 1 år og slettes senest etter 3 år* (Politiregisterloven, 2010, § 17). The provision therefore places a floor of twelve months and a ceiling of thirty-six months on the same access log, outside health, and the data subject's rights operate on that log as they do on any other personal data. On the reading that motivated the thesis, this ought to be a second instance of the tri-lateral collision.
+
+It is not, and the result is the more informative one. Sixty records were generated under a floor of twelve months and a ceiling of thirty-six, with erasure requests arriving as they do elsewhere in the demonstration. Seven records carried at least one Semantics I violation. Of those seven, **none** arose without an erasure request. Under Semantics II there were no violations at all, and every record was invalidated at its scheduled month. The module that produces this is listed in full at Appendix A, Section A.9c, and its console output at Section A.14.
+
+The zero is the finding. Section 17 fixes both of its limbs against the same event, the making of the log entry: the log is stored for at least a year from that point and deleted at the latest three years from the same point. Two periods measured from one origin do not collide; they bound a retention window, and the later limit is simply the end of it. Every collision the model finds in this instance is therefore erasure-driven, which is the ordinary bi-lateral conflict the literature already describes, not the structure this thesis is about.
+
+Article 68(12) behaves differently for a structural reason rather than a numerical one. Its ceiling is anchored not to the creation of the record but to the expiry of the data permit, an event external to the record and capable of falling at any point relative to the floor, including before the floor has run. A floor measured from creation and a ceiling measured from an unrelated later event are not two ends of one window; they are two clocks that can cross. That crossing is what Theorem 1 characterises, and Corollary 1.2 is the case where it happens with no erasure request present at all.
+
+This sharpens the contribution and narrows it at the same time. It suggests that the diagnostic question for any candidate instance is not whether a floor and a ceiling both exist, which is common, but whether they are anchored to the same event, which is not. It also withdraws the loose expectation, expressed in the preceding section, that any domain combining the three constraint types will exhibit the collision. Financial record-keeping under MiFID II remains a candidate on that revised test only if some ceiling there is anchored externally, which this thesis has not investigated.
+
+Three limits belong with the result. The instance is illustrative and not empirical: no Norwegian police data was obtained, no operational retention practice was observed, and the record population was generated exactly as elsewhere in the demonstration. The provision does not state in words when either period begins; that both run from the log entry is a reading of the sentence's own syntax, and a reader who requires the anchor to be expressly fixed will find that Section 17 does not fix it. And whether the mechanism of Chapter 4 transfers to a record-level ceiling in a policing context is a design question this thesis does not open. What the instance establishes is narrower and sufficient: that the collision at the centre of this thesis depends on where a ceiling is anchored, and that a statute pairing a floor with a ceiling from a single origin does not produce it.
+
+## 6.10 Boundaries as Contribution
+
+An unusual amount of this thesis consists of statements about what it does not do. That is a deliberate methodological position and not an apology, and it is worth defending explicitly because an examiner may read it either way.
+
+The first version of this project, abandoned in May 2026, claimed six original contributions, a first-ever framework, institutional review board approval that had not been obtained, and a zero-knowledge architecture that was never built. Its bibliography contained a series of citations to works that do not exist, identified during the audit that led to the rebuild. None of those claims could survive a determined reader, and the breadth of the claims was precisely what made them fragile: a claim to have done six things fails if any one of them fails.
+
+The rebuilt thesis makes one bounded claim and prices every limitation into it in advance. The proofs are informal, not machine-checked. The demonstration covers generated instances under one seed, not all instances. Key destruction is simulated in program state and says nothing about deployment assurance. The synthetic records carry US Core profiles, not Norwegian ones. The cryptographic primitives are established technique, not novel construction. The closest prior art is a patent claiming key-expiry selection for retention-purge conflicts, disclosed and distinguished rather than omitted. The interpretive move at the centre of the thesis is an argument without authority behind it.
+
+Each of those concessions costs nothing, because none of them was ever claimed. That is the practical value of a narrow claim, and it is the methodological lesson of the rebuild: a contribution that states its boundaries can be checked at those boundaries and found sound, whereas a contribution that does not can only be found wanting.
+
+## 6.11 Summary
+
+The thesis establishes a collision internal to the European Health Data Space Regulation, proves that it follows from an assumption about verifiability rather than from the obligations themselves, exhibits the mechanism that dissolves it, and demonstrates both results executably with an independent cross-check.
+
+Its principal vulnerability is that the interpretive move at its centre has no regulatory authority behind it, and resolving that is the most valuable next step available. Its honest ceiling is that attested key destruction is not proven key destruction, a boundary marked by an active research programme in proof-of-secure-erasure and certified deletion. Its principal cost is per-record key management, bounded and auditable where the alternative's residual-copy problem is neither. Its demonstration is a witness rather than a proof, and its synthetic records are structurally genuine but not Norwegian.
+
+Against those, the collision is textual and survives any reading; the field's own systematisation names the problem class as open; the specifications that will determine the outcome are not yet written; and the Norwegian cross-border audit stream has barely begun. Chapter 7 draws the conclusions and states the work that follows.
+
+---
+
+## References (Chapter 6)
+
+Aikebaier, Y. (2026). *SoK: Cryptographic erasure on public ledgers: Application-layer architectures, key-lifecycle adversaries, and GDPR Art. 17 equivalence* (Cryptology ePrint Archive, Paper 2026/1109). https://eprint.iacr.org/2026/1109 [Preprint; not peer-reviewed]
+
+Broadbent, A., & Islam, R. (2020). Quantum encryption with certified deletion. In *Theory of Cryptography (TCC 2020)* (LNCS 12552, pp. 92–122). Springer. https://doi.org/10.1007/978-3-030-64381-2_4
+
+Bursuc, S., Gil-Pons, R., Mauw, S., & Trujillo-Rasua, R. (2024). Software-based memory erasure with relaxed isolation requirements. In *2024 IEEE 37th Computer Security Foundations Symposium (CSF)*. IEEE. https://doi.org/10.48550/arXiv.2401.06626
+
+Chen, J., Chun, D., Patel, M., Chiang, E., & James, J. (2019). The validity of synthetic clinical data: A validation study of a leading synthetic data generator (Synthea) using clinical quality measures. *BMC Medical Informatics and Decision Making*, *19*, 44. https://doi.org/10.1186/s12911-019-0793-0
+
+Datatilsynet. (n.d.-a). *Etablere internkontroll* [Guidance]. Norwegian Data Protection Authority. https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/informasjonssikkerhet-internkontroll/etablere-internkontroll/
+
+Datatilsynet. (n.d.-b). *Innebygd personvern og personvern som standard* [Guidance]. Norwegian Data Protection Authority. https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/innebygd-personvern-og-personvern-som-standard/
+
+European Data Protection Board. (2026a). *Coordinated Enforcement Action, implementation of the right to erasure by controllers* (18 February 2026). EDPB. https://www.edpb.europa.eu/our-work-tools/our-documents/other/coordinated-enforcement-action-implementation-right-erasure_en
+
+European Data Protection Board. (2026b). *Guidelines 02/2025 on processing of personal data through blockchain technologies* (Version 2.0, adopted 7 July 2026 following public consultation). EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202502_blockchain_v2_en.pdf
+
+European Parliament and Council of the European Union. (2025). Regulation (EU) 2025/327 of 11 February 2025 on the European Health Data Space. *Official Journal of the European Union*. http://data.europa.eu/eli/reg/2025/327/oj
+
+Feng, N., Marsso, L., Sabetzadeh, M., & Chechik, M. (2022). *Bounded satisfiability checking of metric first-order temporal logic*. arXiv. https://doi.org/10.48550/arXiv.2209.04052
+
+Helsedirektoratet. (2026). *MyHealth@EU, Helsedirektoratet* [National e-health portfolio measure]. Norwegian Directorate of Health. https://www.helsedirektoratet.no/digitalisering-og-e-helse/nasjonal-e-helseportefolje/tiltak-i-nasjonal-e-helseportefolje/myhealth-eu-helsedirektoratet
+
+Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16
+
+Reardon, J., Basin, D., & Capkun, S. (2013). SoK: Secure data deletion. In *2013 IEEE Symposium on Security and Privacy* (pp. 301–315). IEEE. https://doi.org/10.1109/SP.2013.28
+
+SecuPi. (2025). *Crypto-shredding is not nirvana for right of erasure or RTBF compliance* [Industry commentary]. https://secupi.com/crypto-shredding-is-not-nirvana-for-right-of-erasure-or-rtbf-compliance/
+
+SPUHiN. (2025). *Recommendations for minimum requirements for Secure Processing Environments in Norway* (Deliverable D5.2, project 101128232; version issued for public hearing, July–October 2025) [Project deliverable]. Helsedirektoratet & Folkehelseinstituttet. The hearing page has since been withdrawn and no stable public locator for this version could be established; the deliverable number and the hearing window are confirmed on the project page at https://www.helsedirektoratet.no/om-oss/forsoksordninger-og-prosjekter/fair-secure-provision-and-use-of-health-data-in-norway-spuhin
+
+TEHDAS2. (2026). *Technical specification for Health Data Access Bodies on the implementation of secure processing environments* (D7.4, Version 1.2, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20266473

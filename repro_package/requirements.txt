@@ -1,0 +1,9 @@
+# The feasibility checker and the Synthea realism layer use the Python standard
+# library only. No installation is required to reproduce any result in the thesis.
+#
+#   python3 src/trf_checker.py
+#   python3 src/synthea_layer.py
+#
+# The optional substrate-patch generators (research bookkeeping, not thesis results)
+# require:
+openpyxl>=3.1

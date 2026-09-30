@@ -1,0 +1,28 @@
+
+=== Journal Entry 2026-05-25T23:16:30.798596+00:00 ===
+2026-05-25-23-16-30-vera-snark-thesis-build.txt
+[Multi-session thesis construction project for Tiger (Arshad Akhtar Abbasia), MSc Sustainable Energy Logistics at Molde University College (HiMolde), supervisor Prof. João Ferreira. Topic: cryptographic compliance for cross-border health data under European Health Data Space (EHDS). Contains: 7 versioned research-substrate checkpoints (v1-v7), fact-checking audit catching ~14 fabricated citations and wrong EU regulation numbers in original draft, rebuild plan with locked research question, draft prose for Chapter 1 + complete Chapter 2 (4 runs), and full consolidation patch with 17+ new verified sources. Bull-mode discipline applied throughout — every citation independently verified, every claim flagged against primary sources. Phase 6 (Chapter 3 Methodology) is the next step.]
+
+
+
+
+=== Journal Entry 2026-05-29T18:12:43.195525+00:00 ===
+2026-05-29-18-12-42-vera-snark-thesis-build.txt
+[Multi-session MSc thesis construction project for Tiger (Arshad Akhtar Abbasia), MSc Sustainable Energy Logistics at Molde University College (HiMolde), supervisor Prof. João Ferreira. Topic: verifiable crypto-erasure for cross-border health data audit trails under EHDS. Contains: full v1-v7 research substrate verification history (17 Google Sheet subsheets + flag taxonomy), Phase 0 draft autopsy catching fabricated citations, locked research question/methodology/outline, completed Chapter 1 draft (2,650 words) and complete Chapter 2 draft (7,034 words, 4 runs), post-Chapter-2 REPO-PATCH, deferred-items register, and an in-progress novelty audit identifying that current contribution is application-level and proposing deeper formal-model novelty. Next step pending: 3 novelty-confirming searches before Chapter 3.]
+
+
+
+
+=== Journal Entry 2026-09-15T02:29:25.920805+00:00 ===
+2026-09-15-02-29-25-vera-snark-thesis-resume-retrofit.txt
+[Continuation of the multi-session MSc thesis build for Tiger (VERA-SNARK / TRF Model). Contains: post-pause resume audit, novelty upgrade commitment, TRF Model gate passage, actual Google Sheet audit via Drive read, landscape re-verification (Sept 2026), Chapter 1 v2 retrofit, Chapter 2 v2 retrofit + final assembly with new verification round (EDPB 02/2025, IACR SoK, Datatilsynet, Reardon, Finck), and outstanding sheet-sync obligations. Full prose of delivered chapters is in the output files listed.]
+
+
+
+
+=== Journal Entry 2026-09-15T02:42:38.348614+00:00 ===
+2026-09-15-02-42-38-trf-thesis-sheet-patch-ch3-unblock.txt
+[Continuation of Tiger's VERA-SNARK/TRF MSc thesis build (14 Nov 2026 deadline). Contains: post-pause state audit, Google Sheet read + sync audit, TRF gate passage, Ch1 v2/v2.1 retrofit delivery, Ch2 v2 verification round + final assembly, and the substrate PATCH workbook build (7-tab xlsx, base64 generated, Drive upload interrupted mid-turn). Chapter 3 unblocks once the patch lands in Drive. Full row data of the patch is in the builder script; delivered chapters are in output files.]
+
+
+

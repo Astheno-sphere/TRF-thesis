@@ -1,0 +1,126 @@
+# Version Register — canonical files
+
+This register lists the single live copy of every deliverable. If a file is not listed here it is not canonical. Checksums let any copy be verified against the register; a mismatch means drift.
+
+*Migration package prepared 21 September 2026. Start the next conversation from `HANDOFF_READ_FIRST.md`.*
+
+*Last reconciled: 28 September 2026, twice. First after the Synthea subset was committed to the public repository and the working set was brought back into line with it. Then again after the app gained Tab 5, a recorded run was committed per command, and 88 MB of duplicate bundles was removed. Checksums verified by reading the files; the submission was rebuilt by `handoff_tools/assemble.py` and came back byte-identical, and `handoff_tools/inspector.py` returned ADMIT on the rebuild.*
+
+*On the Words column: it is `len(text.split())` on the raw Markdown, which counts code blocks, tables and the bibliography. The submission's 50,667 is therefore an upper bound on prose; `wc -w` gives 50,486 on the same file. Figures recorded before 28 September were produced by another method and read about four per cent high — the md5 column was accurate throughout and is the one to trust.*
+
+| Type | File | md5 | Words | Modified | Contents |
+|---|---|---|---|---|---|
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | b1e0effec1be | 59,413 | 29 Sep 13:10 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | f620c3c949ee | 191 eq, 24 tbl | 29 Sep 13:10 | Word build of the submission. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | Front_Matter_v1.md | e3afa723b46f | 2,678 | 28 Sep 09:05 | Title, abstract, contribution, declarations, nomenclature, TOC |
+| THESIS | Chapter1_Introduction_v2.md | f84b04ab31b3 | 4,975 | 29 Sep 13:10 | Chapter 1 |
+| THESIS | Chapter2_LitReview_v2_FINAL.md | f2694c7dfd13 | 13,481 | 28 Sep 09:05 | Chapter 2 incl. review protocol §2.1 |
+| THESIS | Chapter3_Methodology_v1.md | 98a20e582088 | 5,230 | 28 Sep 09:05 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
+| THESIS | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 | 7,702 | 28 Sep 09:05 | Chapter 4 — all math in LaTeX (159 equations) |
+| THESIS | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a | 4,078 | 28 Sep 09:05 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
+| THESIS | Chapter6_Discussion_v1.md | 24b87a0c77b1 | 5,723 | 28 Sep 09:05 | Chapter 6, 11 sections |
+| THESIS | Chapter7_Conclusion_v1.md | d2d9cca37aca | 2,125 | 28 Sep 09:05 | Chapter 7 |
+| APPENDIX | code_artefacts/README_Appendix_A.md | cec08a37ddb2 | 10,511 | 29 Sep 12:35 | Appendix A: provenance, commands, full source, console output |
+| APPENDIX | Appendix_B_Search_Log.md | 535856d92083 | 1,737 | 29 Sep 12:35 | Appendix B: 59 queries, 4 rounds |
+| APPENDIX | Appendix_C_Evaluation_Instrument.md | beee9ba249f1 | 2,811 | 29 Sep 12:35 | Appendix C: evaluation instrument (designed, not executed) |
+| BIBLIO | Consolidated_Bibliography.md | 3c2efeb526ee | 2,025 | 28 Sep 09:05 | 67 entries, chapter-tagged — READ this |
+| BIBLIO | Consolidated_Bibliography.Rmd | 9fc8588d1ed0 | 2,020 | 28 Sep 07:20 | Same content — KNIT this |
+| CODE | demo_app/trf_checker.py | d0496883a669 | 1,735 | 28 Sep 06:22 | CANONICAL checker (delta witness + salt destruction, Ch4 §4.8) |
+| CODE | demo_app/synthea_layer.py | 2b4a53730227 | 700 | 28 Sep 06:22 | CANONICAL realism layer (three-directory fallback) |
+| CODE | demo_app/app.py | b07777129395 | 2,610 | 28 Sep 07:05 | Streamlit viewer, deployed, 4 tabs |
+| CODE | demo_app/norwegian_layer.py | 3e2ff91225ac | 782 | 28 Sep 06:22 | Norwegian context classes (NO-XB, NO-SPE, NO-JOURNAL) |
+| CODE | demo_app/cross_sector_check.py | 86deaf873464 | 819 | 28 Sep 06:22 | politiregisterloven § 17 instance |
+| CODE | repro_package/run_all.sh | e53b50904052 | 328 | 28 Sep 07:05 | Reproduces all four steps; self-verifies |
+| DATA | repro_package/data/synthea_subset/ | dir | 8 bundles + README | 28 Sep 06:29 | The only working-set copy of the eight untrimmed Synthea bundles. The second copy is on GitHub at the same path. The `repo_synthea_subset/` staging directory was removed on 28 Sept once the push completed; `code_artefacts/DATA_LOCATION.md` records where the data went |
+| SUPPORT | Data_Provenance_Statement.md | 36aeddac1f9c | 889 | 28 Sep 06:29 | Answer to Joao's data blocker; records the 28 Sep subset commit |
+| SUPPORT | thesis_yaml_header.yml | 4636c30b4882 | 47 | 29 Sep 12:35 | YAML: breezedark code, Word template hook |
+| SUPPORT | thesis_reference.docx | 2df421c0e4bd | A4, 12pt, 1.5 | 29 Sep 12:33 | Pandoc reference document: A4, 2.5 cm margins, Times New Roman 12 pt, 1.5 spacing, heading hierarchy, monospace code, no table shading or vertical rules |
+| SUPPORT | Substrate_ARTEFACT_PATCH_28Sept.xlsx | 1bca2c5e07cf | 6 tabs | 28 Sep 06:34 | Artefact-integrity patch for the substrate; uploaded to Drive alongside the master sheet |
+| SUPPORT | Substrate_FINAL_PATCH.xlsx | b78d09fbc53c | 1,640 | 16 Sep 03:22 | Research substrate patch (supersedes 1/2/3/Master) |
+| SUPPORT | Supervisor_Feedback_Action_Plan.Rmd | e318cfab1ca8 | 2,003 | 21 Sep 05:10 | Response plan to first feedback round |
+
+| HANDOFF | HANDOFF_READ_FIRST.md | 2878638805d2 | 3,429 | 30 Sep | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
+| CONTROL | SUPERVISOR_REVIEW_2026-09-30_Ferreira.md | cda9534c3d75 | 2,801 | 30 Sep | Supervisor peer review, 30 Sept. THE LIVE WORK. Each major item verified against the files; sequencing note overrides his numbering |
+| CONTROL | PATCHES.md | 6cd0fb9be537 | 15,562c | 30 Sep | The working patch list for Joao Round 3. Seven waves, three gating decisions, cascade map. NOTHING APPLIED YET |
+| CONTROL | SUPERVISOR_FEEDBACK_HISTORY.md | 8c1b0ba4b752 | 8,151c | 30 Sep | Every supervisory round and what it changed. Patterns across rounds |
+| CONTROL | supervisor_review_RAW_2026-09-30.txt | bb280bd623ae | 3,127 | 30 Sep | The review exactly as received, unedited, so nothing rests on my paraphrase |
+| CONTROL | DECISION_RECORD.md | 27015d2a67cb | 1,388 | 30 Sep | Settled decisions with alternatives rejected; ten open decisions, O-01 blocking |
+| CONTROL | FAILURE_LEDGER.md | cebe4ab4bcc5 | 1,165 | 30 Sep | Every failure mode and the rule from it; the five false trail entries |
+| CONTROL | NUANCES.md | 1b13c87dc5a5 | 1,112 | 30 Sep | How Tiger works, standing rules, reversed decisions, false-positive errors |
+| CONTROL | CONVERSATION_LINEAGE.md | ef5f940af032 | 673 | 30 Sep | Seven sessions mapped; this session's identifier for future reference |
+| CONTROL | RESUME_PROMPT.md | 5ac7a2565f14 | 590 | 30 Sep | Paste-ready resume prompt with verification commands |
+| CONTROL | MASTER_MANIFEST.md | 4d11cc13ae28 | 4,115 | 28 Sep 13:00 | Every file, where it lives, its state and what is going on with it |
+| SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
+| ARCHIVE | TRF_Thesis_Migration_Package_30Sept.zip | (not self-recordable) | 79 files | 28 Sep 07:03 | Complete working set. Every file inside verified byte-identical to its original. Supersedes the 21 Sept archive, which was deleted. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other 33 rows, which is what the integrity pass does |
+| CONTROL | CHANGE_TRAIL.md | 8c6ae14f5649 | 10,402 | 30 Sep | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | 9261b088033a | 173 | 28 Sep 06:59 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
+| HANDOFF | handoff_tools/mathconv.py | a731f3cb5ca1 | — | 21 Sep 05:29 | Italic-unicode math to LaTeX converter |
+| HANDOFF | handoff_tools/assemble.py | 2c05f3f9b4ad | — | 21 Sep 05:29 | Rebuilds bibliography and submission |
+| HANDOFF | conversation_history/SESSION_LOG_15-21_Sept_2026.md | db9552b1cc61 | — | 21 Sep 05:29 | Chronological log of the 15-21 Sept session (not in any transcript) |
+
+## Code copies
+
+`trf_checker.py` and `synthea_layer.py` exist in five places: `demo_app/`, `repro_package/`, `code_artefacts/`, the outputs root, and the public repository. The `demo_app/` copy is canonical and all five must carry the same checksum: `d0496883a669` and `2b4a53730227`. `norwegian_layer.py` (`3e2ff91225ac`) and `cross_sector_check.py` (`86deaf873464`) live in the same places except the outputs root.
+
+Reconciled 21 Sept: `synthea_layer.py` had drifted in two copies and was resynced.
+
+Reconciled 28 Sept, and the direction of drift was the reverse of what was assumed. The public repository was **ahead** of the working set, not behind it. Four trail entries recorded as applied — D-05, A-04, A3-l, P8-03 — were present only in the pushed copy. The working set therefore still carried the 362-line checker without the Chapter 4 §4.8 salt destruction, and an Appendix A that stated a line count of 362, described three trimmed sample bundles that no longer ship, and repeated the false claim that the code states in a comment that production deployments must use a CSPRNG. That claim is false: `grep CSPRNG` over the source returns nothing, which is why D-05 removed it. The assembled submission carried the same false sentence. All five copies of both files, all four copies of Appendix A, and the submission were brought onto the repository's version and verified identical.
+
+The lesson for the next reconciliation: diff against the public repository, not only within the working set. A trail entry marked applied is a claim to be checked, not a fact.
+
+## Non-canonical files — do not use as source
+
+| File | Why kept |
+|---|---|
+| `_superseded_Chapter2_RETROFIT.md` | Change record of the 15 Sept retrofit |
+| `_draft_Thesis_FULL_with_chapter_refs.md` | Earlier assembly with per-chapter reference lists |
+
+## Integrity log, 21 September
+
+| Fault | Scope | Resolution |
+|---|---|---|
+| Em-dash pass (earlier round) broke paired asides into dash-then-colon | 44 sentences, 10 files | Closing dash restored; 1 false positive reverted; word invariance asserted |
+| EDPB threat-model condition attributed to the Board | Ch1 §1.4, Ch2 §2.3, Ch4 §4.9 | Re-attributed to Aikebaier (2026); Ch6 §6.2 already correct |
+| D5.2 title truncated in body text | Ch2 §2.6 | Full verified title restored |
+| Unverified 'NCP-A under construction' claim | Ch2 §2.6 | Synced to verified §2.2 |
+| Subject-verb agreement broken by earlier edit | Ch2 §2.6 | 'specification ... defines' |
+| HDAB still called 'designated' | Ch1 §1.4 | 'presumptive, not yet formally designated' — matches Ch2, Ch4 |
+| SPUHiN said to 'acknowledge' the retention question | Ch1 §1.4 | 'published checklists do not address' — matches Table 2.1 |
+| Malformed non-APA citations naming systems not authors | Ch2 §2.4 | Proper APA: Natsiavas 2021; Albalwy 2026; Bai 2022; Sharma 2025; Brunner 2025; Camenisch & Lysyanskaya 2002 |
+| Drafting note left in front matter | Front matter | Removed |
+| Duplicated clause from two alternative edits both firing | Ch5 §5.2 | Removed |
+| Comma splice from em-dash rule converting a clause-bearing pair | Ch6 §6.1 | Repaired |
+| Four broken dash pairs missed by the narrow detector | Ch3 (x2), Ch4, Ch7 | Repaired; detector widened |
+| Verified NCP-A claim wrongly removed as 'unverified' in an earlier round | Ch1 §1.1, Ch2 §2.2 | Restored with citation |
+| Invalid '12 March 2025' inference given to supervisor | Action plan (Rmd + published page) | Withdrawn and republished |
+| Benaloh & de Mare year 1993 | Ch2 | 1994 per Springer (proceedings publication year); in-text and reference both corrected |
+| DOIs added (verified against publisher) | Bibliography | Hevner 10.2307/25148625; Finck 2018 10.21552/edpl/2018/1/6; Benaloh 10.1007/3-540-48285-7_24 |
+| Dash residue in Ch4 summary | Ch4 §4.12 | Repaired |
+| References lacking DOI/URL | Bibliography | 40 -> 29, verified or deterministic identifiers only |
+| Prior art described as a patent only | Ch2 §2.1.4 | Research programme and patent |
+
+## Discovered sources — status
+
+Found in the 21 Sept jeopardy check. None addresses the tri-lateral feasibility question. Not cited yet: only snippets seen, author lists not captured.
+
+| Source | Relevance | Placement if confirmed |
+|---|---|---|
+| aiAuthZ, arXiv 2607.05518 (2026) | Tamper-evident audit chain; retention stated as "by crypto-erasure". Same pattern, AI-agent authorisation | Ch2 §2.4, as converging practice |
+| P2E2 — Chakraborty et al. (2025), PVLDB 18(10):3435-3448, doi 10.14778/3748191.3748206 | READ AND INTEGRATED 21 Sept into Ch2 §2.5. Peer-reviewed (VLDB). Supports: GDPR leaves 'erasure' open to interpretation | DONE |
+| Privacy Engineering SLR, arXiv 2606.23696 (2026) | Lifecycle controls reliable when retention/deletion emit audit trail justifying each decision | Ch2 §2.4 or Ch6, corroborates invalidation entry |
+| EDPS formal comments on draft EHDS Board implementing regulation, 23 Jan 2026 | Implementing acts in consultation; no SPE act published | Ch6 §6.8, timing |
+
+## Open work tracked against these files
+
+| Item | File | State |
+|---|---|---|
+| Inline math in proof prose | Chapter 4 | DONE 21 Sept — 159 equations |
+| Inline math | Chapter 5 | DONE 21 Sept — verbatim program output deliberately left unconverted |
+| Sentence pass 2 | All | COMPLETE 21 Sept. Ch2: 45 read, 10 split. Ch1, Ch3-7, Front: 128 screened, 22 structurally complex read in full, 11 split, 11 left as clear parallel lists. Simple sentences screened by structure, not read individually. |
+| HiMolde template | — | Download needed; site blocks automated fetch |
+| Synthea subset commit | GitHub repo | DONE 28 Sept. Eight untrimmed bundles at `data/synthea_subset/`, plus `requirements.txt`, `docs/expected_trf_output.txt` and `norwegian_docs/HOW_TO_RUN.md`, which the 23 Sept web upload had dropped. Verified from a fresh clone of the public repository: checker byte-identical to the recorded run, layer reports 891 bytes and six identical measures |
+| Streamlit Tab 3 | trfhimolde.streamlit.app | Redeploys from the new commit. Confirm it shows Table 5.4 with mean payload 891 rather than the no-bundles notice |
+| Zenodo DOI | GitHub repo | Pending |
+| F-10 eHOMB year | Ch1, Ch2 | CLOSED 21 Sept: not recoverable from public record. Source page is updated in place (reports 2026 events despite ~542-day age), so its age cannot date the sentence. Earlier '2025' inference was invalid and is withdrawn. Dateless form is final. |
+| F-11 EUR-Lex verbatim Art 73(1)(e) | Ch1, Ch2, Ch4 | CLOSED 21 Sept at primary source: official EUR-Lex OJ text (L_202500327) retrieved, and the author has read the EUR-Lex page directly. |
