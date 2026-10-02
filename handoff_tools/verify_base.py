@@ -41,7 +41,8 @@ def is_artefact(f, s):
     return False
 
 
-def main():
+def collect():
+    """Return (prose lines checked, differences as (file, ours, closest draft line), missing draft lines)."""
     md_lines = []
     for f in FILES:
         for block in open(f, encoding="utf-8").read().split("\n\n"):
@@ -67,6 +68,11 @@ def main():
     mset = {s for _, s in md_lines}
     missing = [d for d in draft if d not in mset and squash(d) not in {squash(s) for s in mset}
                and len(d.split()) >= 12 and not re.search(r"\s\d{1,3}$", d)]
+    return md_lines, diffs, missing
+
+
+def main():
+    md_lines, diffs, missing = collect()
     print(f"prose lines checked: {len(md_lines)} | wording differences: {len(diffs)}")
     for f, s, d in diffs:
         print(f"\n[{f}]\n  ours : {s[:220]}\n  draft: {(d or '(no counterpart)')[:220]}")

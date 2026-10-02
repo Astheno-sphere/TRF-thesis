@@ -8,7 +8,7 @@ provenance is recorded in `data/synthea_subset/README.md` and in
 |---|---|---|
 | `CHANGE_TRAIL.md` | 0fd1a33b8771 | 246 |
 | `PUSH_INSTRUCTIONS.md` | 6bb6853f5241 | 50 |
-| `README.md` | b15679678845 | 113 |
+| `README.md` | 8c024f9b6d65 | 113 |
 | `app.py` | b07777129395 | 526 |
 | `cross_sector_check.py` | 86deaf873464 | 110 |
 | `data/synthea_subset/README.md` | c2c9564cf734 | 67 |
@@ -25,3 +25,5 @@ provenance is recorded in `data/synthea_subset/README.md` and in
 | `requirements.txt` | 944269ad914f | 1 |
 | `synthea_layer.py` | 2b4a53730227 | 152 |
 | `trf_checker.py` | d0496883a669 | 363 |
+
+*3 Oct 2026: `README.md` updated to the repository's HEAD `dba9c56`. Two commits after `0d855a7` (28 Sept 11:10) corrected the `app.py` line count in the README table, 524 to 526; the earlier md5 `b15679678845` is `0d855a7`'s README. Every other row matched a fresh clone.*
