@@ -1,0 +1,240 @@
+{
+ "prose_files": [
+  "Front_Matter_v1.md",
+  "Chapter1_Introduction_v2.md",
+  "Chapter2_LitReview_v2_FINAL.md",
+  "Chapter3_Methodology_v1.md",
+  "Chapter4_TRF_Model_v1.md",
+  "Chapter5_Demonstration_v1.md",
+  "Chapter6_Discussion_v1.md",
+  "Chapter7_Conclusion_v1.md",
+  "code_artefacts/README_Appendix_A.md",
+  "Appendix_B_Search_Log.md",
+  "Appendix_C_Evaluation_Instrument.md"
+ ],
+ "code_files": [
+  "demo_app/trf_checker.py",
+  "demo_app/synthea_layer.py",
+  "demo_app/norwegian_layer.py",
+  "demo_app/cross_sector_check.py",
+  "demo_app/app.py"
+ ],
+ "guards": [
+  {
+   "kind": "regression",
+   "name": "NIST 800-88 dated 2024",
+   "pattern": "800-88[^.\\n]{0,80}\\b2024\\b",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "regression",
+   "name": "Haque misattribution of arXiv 2210.04541",
+   "pattern": "Haque et al",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "regression",
+   "name": "Benaloh & de Mare 1993",
+   "pattern": "de Mare[^.\\n]{0,20}1993",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "regression",
+   "name": "HDAB called designated",
+   "pattern": "(?<!formally )(?<!not )\\bdesignated (HDAB|health data access body)|has been designated",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "regression",
+   "name": "SPUHiN said to acknowledge retention/erasure",
+   "pattern": "(SPUHiN|D5\\.2)[^.\\n]{0,150}acknowledg[^.\\n]{0,80}(retention|erasure)",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "regression",
+   "name": "eHOMB dated 12 March 2025",
+   "pattern": "12 March 2025",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "regression",
+   "name": "CSPRNG claim (D-05)",
+   "pattern": "CSPRNG",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "EY law alert as EHDS source",
+   "pattern": "Ernst & Young|\\bEY\\b",
+   "scope": "prose",
+   "item": "M5d",
+   "baseline": 4,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "EHDS dates 'by June 2025'/'by January 2026'",
+   "pattern": "by June 2025|by January 2026",
+   "scope": "prose",
+   "item": "M5d",
+   "baseline": 2,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "Art 68(12) paraphrased 'the data within the SPE'",
+   "pattern": "the data within the secure processing environment",
+   "scope": "prose",
+   "item": "M5c",
+   "baseline": 6,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "SPUHiN 'survives against the final national document'",
+   "pattern": "survives (against )?the final national document",
+   "scope": "prose",
+   "item": "M5b",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'four dated rounds'",
+   "pattern": "four dated rounds",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 3,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'an separately'",
+   "pattern": "an separately",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 3,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "salt '*not* destroyed' in text",
+   "pattern": "\\*not\\* destroyed",
+   "scope": "prose",
+   "item": "M3a",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'accumulator-based' (s1.6)",
+   "pattern": "accumulator-based",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 2,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'fifty to one hundred lines'",
+   "pattern": "fifty to one hundred lines",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'two to four hundred' lines",
+   "pattern": "two to four hundred",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'tuples defined in Section 3.4'",
+   "pattern": "tuples defined in Section 3\\.4",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "s6.1 opens 'cannot both be satisfied'",
+   "pattern": "cannot both be satisfied",
+   "scope": "prose",
+   "item": "M2c",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'thirty-nine concrete witnesses'",
+   "pattern": "thirty-nine concrete witnesses",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 2,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'addendum to the thesis supervisor'",
+   "pattern": "addendum to the thesis supervisor",
+   "scope": "prose",
+   "item": "MIN",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "'imports a solution structure'",
+   "pattern": "imports a solution structure",
+   "scope": "prose",
+   "item": "M7a",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "dead salt branch in code",
+   "pattern": "os\\.urandom\\(16\\) if False",
+   "scope": "code",
+   "item": "M3c",
+   "baseline": 1,
+   "goal": 0
+  },
+  {
+   "kind": "target",
+   "name": "defensive meta-commentary phrases",
+   "pattern": "stated rather than buried|recorded rather than concealed|reader is entitled to|examiner's first reaction|\\bhonest(ly)?\\b",
+   "scope": "prose",
+   "item": "PRES1",
+   "baseline": 19,
+   "goal": 9
+  }
+ ]
+}

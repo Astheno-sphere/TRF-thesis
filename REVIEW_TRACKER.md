@@ -1,0 +1,55 @@
+# Review Tracker — Prof. Ferreira, 30 Sept 2026
+
+One row per item in the emailed review (`supervisor_review/review_email_text_2026-09-30.txt`).
+`handoff_tools/trail_check.py` reads this table. Rules it enforces:
+
+- Status is one of `OPEN`, `BLOCKED`, `PARTIAL`, `CLOSED`, `DECLINED`.
+- A `CLOSED` or `PARTIAL` row must name at least one patch ID, and every ID named must exist in `patches/APPLIED.log`.
+- A `CLOSED` row whose guard (in `handoff_tools/guards.json`, `item` field) has not reached its goal is an error.
+- `DECLINED` needs a reason in Evidence: we answer his point with evidence, we do not ignore it.
+
+His authority is the emailed text. His tracked changes in the returned .docx are proposals, judged
+passage by passage when the patch for that passage is written.
+
+| Item | What he asked | Status | Patches | Evidence / note |
+|---|---|---|---|---|
+| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | BLOCKED |  | DEC-1. Our answer: ITI-55 rev 20.1 §3.55.5.1 puts the full QueryByParameter (name, birth time required, §3.55.4.1.2.1) in ParticipantObjectQuery, so the audit record does carry identifying content. p(a) is redefined as that content, not "the clinical document" |
+| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | BLOCKED |  | DEC-1. Art 2(2)(a),(c): "electronic health data" = data concerning health. Proposed: Cor 1.2 conditional on log granularity (patient-record logs in), dataset-level logs out |
+| M2b | Rival 6: move the logs out of the SPE at permit closure | BLOCKED |  | DEC-1. Proposed answer: relocation satisfies a location-anchored ceiling but not a right that follows the data (Proposition L) |
+| M2c | Rewrite §6.1's opening; lead with the robust result | BLOCKED |  | After M2a |
+| M3a | Salt: text, code and change record agree | OPEN |  | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
+| M3b | Ciphertext: delete at invalidation or justify | BLOCKED |  | DEC-2 |
+| M3c | Remove the dead salt branch; seeded generator or `--reproducible` | OPEN |  | Code change; recorded runs must still match or be re-recorded with a logged reason |
+| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | BLOCKED |  | DEC-3 |
+| M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | BLOCKED |  | DEC-3 |
+| M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | OPEN |  | Not blocked. Proposed: Merkle log (RFC 9162 style) rather than a bare chain; tamper test must make V_II fail |
+| M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
+| M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | OPEN |  | Search the eHDSI/eHMSEG documents first; fallback is "illustrative" (Cor 2.2 makes results F-independent) |
+| M5b | SPUHiN "finalised" claims aligned to what was inspected | OPEN |  | Ch1 l.31 "survives against the final national document" |
+| M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | OPEN |  | Verbatim already retrieved (streamlex mirror of OJ L 2025/327). Fork pass F3 on the superseded branch did this once |
+| M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | OPEN |  |  |
+| M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | OPEN |  |  |
+| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | OPEN |  | The evaluation step |
+| M6b | Reword Appendix C item A1 ("full confidence"), record in one line | OPEN |  |  |
+| M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | OPEN |  | Check UCC Art 51 (3-year floor) against seized-goods destruction; test against the anchoring result |
+| M7b | One sentence in §1.5 on the programme fit | OPEN |  |  |
+| MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | OPEN |  |  |
+| MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | OPEN |  |  |
+| MIN-03 | §1.6 drop "accumulator-based" | OPEN |  |  |
+| MIN-04 | §2.1.4 "four dated rounds" vs Appendix B five | OPEN |  | Fork R1 merged rounds to 7 on the superseded branch; re-judge |
+| MIN-05 | §3.4 / Cor 1.1 "ordinary"/"generic case" are frequency claims; soften | OPEN |  |  |
+| MIN-06 | §4.4 C1 closed window spans F+1 months | OPEN |  | Half-open interval, or justify |
+| MIN-07 | Table 5.0a, A.9c, A.14: "Section 6.9" → 6.9a after renumbering | OPEN |  |  |
+| MIN-08 | Appendix C preamble: "Chapter 3, Section 3.9" → 3.8 | OPEN |  |  |
+| MIN-09 | "an separately written" ×3 → "a separately written" | OPEN |  |  |
+| MIN-10 | §5.3, §5.4, §5.6: witness lines in a code block, one per line | OPEN |  |  |
+| MIN-11 | §6.1 "thirty-nine concrete witnesses" → "witnesses in the model" | OPEN |  |  |
+| MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | OPEN |  |  |
+| MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | OPEN |  |  |
+| MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
+| MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
+| PRES-1 | Cut defensive meta-commentary by at least half | OPEN |  | Guard counts 19 with a narrow pattern; he counts ~50. Widen the detector before claiming half |
+| PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work; the tools cannot close this |
+| PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | OPEN |  |  |
+| PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | OPEN |  |  |
+| PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |
