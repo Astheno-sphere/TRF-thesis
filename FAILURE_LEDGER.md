@@ -8,7 +8,40 @@ Read this before trusting any claim in any other document, including this one.
 
 ---
 
-## The governing lesson
+## 2 October 2026: two corrections that override what follows
+
+### F-0. Building on a base that is not the version the supervisor reviewed (the costliest failure)
+On 30 Sept–1 Oct the work was built on the chapter files of the 30 Sept migration zip. That zip
+was **not** the draft sent to Prof. Ferreira. The draft he reviewed (his tracked file,
+`supervisor_review/Master_thesis_Abbasia_tracked_JF.docx`, read with tracked changes rejected)
+differs from the zip in 29 content edits: a rewritten abstract, a Norwegian abstract, "five
+rivals", the accumulator caveats, the F+1 window, the corrected witness count, the
+Datatilsynet/EHDS addressee split, the narrow-reading hedges, two Chapter 5 paragraphs and more.
+The zip also carried one edit made *after* the draft was sent (the Bodø opening, H-01). The
+divergence was noticed on 30 Sept, flagged, and then not acted on. Patches F1–R1 were built on
+the wrong base and are now on branch `zip-base-superseded`.
+
+The register reported 0 mismatches throughout. **A register verifies that the package agrees
+with itself, not that it is the version anyone else has seen.**
+
+**Rule.** The base is the last version that left the building: the draft the supervisor
+reviewed, recovered from the file he returned. Before any patch, diff the working copy against
+that file and reconcile every difference. Record the base's provenance in the register.
+
+### Correction to the governing lesson below
+The five entries in the table below (D-05, A-04, A3-l, P8-03, H-01) were **not** false. They
+were applied on 22 Sept in a separate chat (claude.ai `2a87fc70-ba56-4c97-9960-fcca3b03ed36`,
+"File reconciliation and checksum mismatch resolution") that worked from the 21 Sept package.
+Its chapters never returned to the main line; only its change trail and code did, through the
+23 Sept GitHub push. The main line then read a trail describing chapters it did not have.
+
+**Rule.** One working copy. A second chat that edits thesis files is a fork, and a fork's trail
+is not evidence about this copy. The underlying lesson below (diff the artefact, not the
+record) still stands.
+
+---
+
+## The governing lesson (written 30 Sept; see the correction above)
 
 **A record that a thing was done is not evidence that it was done.**
 

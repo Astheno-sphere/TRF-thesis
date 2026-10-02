@@ -4,11 +4,42 @@
 **Author:** Arshad Akhtar Abbasia ("Tiger"), MSc Sustainable Energy Logistics, Høgskolen i Molde
 **Supervisor:** Prof. João Ferreira
 **Submission:** 14 November 2026 · **Defence:** first week of December 2026
-**Handoff written:** 21 September 2026. **Rebuilt 30 September 2026** after a supervisor peer review that changes the priorities.
+**Handoff written:** 21 September 2026. Rebuilt 30 September 2026 after the supervisor's review. **Rebased 2 October 2026 onto the draft the supervisor reviewed — read §00 first.**
 
 ---
 
-## 0a. THE LIVE WORK — read this before anything else
+## 00. STATE ON 2 OCTOBER 2026 — the base was reset
+
+**The working copy is now the draft Prof. Ferreira reviewed**, not the 30 Sept migration zip.
+The two differed in 29 content edits; the zip also carried the Bodø opening (H-01), added after
+the draft was sent. Commit `0438daf`, tag `joao-base-v1`, branch `joao-base`. The returned file
+and its text are in `supervisor_review/`. See `DECISION_RECORD.md` D-14 and `FAILURE_LEDGER.md`
+F-0.
+
+**What this means for every other section of this handoff.** Sections 3, 8a and 10 were written
+about the zip. Where they describe the *text*, check the base with grep before relying on them.
+Known differences on the base:
+- The opening is the draft's ("the most significant data-governance transformation"). H-01 is
+  proposal C-1 in `patches/` on branch `zip-base-superseded`, and its two versions disagree on
+  whether Finland is connected: unverified.
+- §2.2 still carries the EY "June 2025 / January 2026" dates; Art 68(12) is still paraphrased;
+  §4.8 still says the salt is not destroyed; §2.1.4 still says four rounds. These are the
+  draft's defects, kept because the review refers to them. Fixes are queued in `PATCHES.md`.
+- The base already has five rivals, the accumulator caveats, the F+1 window, the corrected
+  witness count, the addressee split and the Norwegian abstract.
+
+**Work already done once and queued.** Patches F1–R1 and AS-01 (branch `zip-base-superseded`,
+scripts in `patches/` there) answer much of M1, M2, M3 and M5 and were source-verified on 30
+Sept–1 Oct. They are candidates in `PATCHES.md` Wave −1, to be re-run on this base and judged
+with the supervisor's own tracked change for each passage.
+
+**Order of work from here.** (1) Control documents and package brought into line with this
+base: done 2 Oct, see `CHANGE_TRAIL.md`. (2) The supervisor's feedback, starting with the
+three gating decisions DEC-1 to DEC-3 in `PATCHES.md`, with DEC-2's salt part already settled.
+
+---
+
+## 0a. THE LIVE WORK (as written 30 Sept)
 
 **Prof. Ferreira delivered a detailed peer review on 30 September 2026. Nothing in it has
 been actioned.** It is captured, verified against the files, and sequenced in
@@ -94,6 +125,8 @@ EHDS Regulation (EU) 2025/327 puts cross-border health audit records under three
 
 ## 3. Corrections already made — never reintroduce
 
+*Facts, not a claim about the base's text: several of these are not yet in the reviewed draft. Grep before relying on one (see §00).*
+
 These were each found, verified and fixed. A future edit that reverses any of them is a regression.
 
 **Facts**
@@ -102,7 +135,7 @@ These were each found, verified and fixed. A future edit that reverses any of th
 - Helsedataservice is the **presumptive** HDAB, **not yet formally designated** (Norway had not appointed a coordinating HDAB under Arts 55–59 per the 2025 hearing response). Never "designated".
 - SPUHiN D5.2 published checklists **do not address** the retention–erasure question. Never "acknowledge".
 - D5.2 title: *Recommendations for minimum requirements for Secure Processing Environments in Norway*, Deliverable D5.2, Milestone M10, project 101128232. João's alternative title was not verified.
-- Norwegian NCPeH pilot: live at Bodø and Stjørdal, receiving from Portugal, Czechia, Finland; **no relevant patients had yet presented**. In 2026 the project began establishing **NCP-A** (outbound contact point). Both claims are sourced to Helsedirektoratet (2026a).
+- Norwegian NCPeH pilot: live at Bodø and Stjørdal, receiving from Portugal, Czechia and (per the fork; the main line says only Portugal and Czechia; unverified) Finland; **no relevant patients had yet presented**. In 2026 the project began establishing **NCP-A** (outbound contact point). Both claims are sourced to Helsedirektoratet (2026a).
 - eHOMB approval date: **12 March, year not recoverable** from the public record. Dateless is final. An earlier inference of "2025" was invalid and has been withdrawn.
 - arXiv 2210.04541 is **Belen-Saglam, Altuncu, Lu & Li (2023)**, *Blockchain: Research and Applications* 4(2):100129 — **not** Haque et al.
 - Benaloh & de Mare is **1994** (proceedings publication year), not 1993.
@@ -185,7 +218,7 @@ See `VERSION_REGISTER.md` for checksums. Canonical files:
 | `mathconv.py IN OUT` | Converts `*t*ᵣ(*a*)`-style italic unicode math to LaTeX. Skips headings, tables, code, lines with `$`. **Inspect output before committing**; it does not know about backticks. |
 | `assemble.py` | Rebuilds the consolidated bibliography from chapter reference lists and the submission assembly. |
 
-Verify Word conversion with: `pandoc FILE.md -o out.docx` then count `<m:oMath>` in `word/document.xml`. Current state: **175 native equations, zero LaTeX or `$` leaking**.
+Verify Word conversion with: `pandoc FILE.md -o out.docx` then count `<m:oMath>` in `word/document.xml`. Current state (base, 2 Oct): **176 native equations, zero LaTeX or `$` leaking** (175 before the rebase; the draft adds `$t(a) + F(a) + 1$`).
 
 ---
 
@@ -215,7 +248,7 @@ Each item below is finished and verified. A fresh conversation must not repeat i
 |---|---|
 | Sentence pass 1 | Every prose sentence over 55 words resolved. Three deliberate exclusions: the TOC list, the research question, the Semantics II formal definition |
 | Sentence pass 2 | **Complete across all chapters.** Every 41–55-word sentence screened; structurally complex ones read in full and 21 split; parallel lists left. Simple sentences screened by structure, not read individually |
-| Math to LaTeX | 175 native Word equations, zero LaTeX or `$` leakage (verified via pandoc) |
+| Math to LaTeX | 176 native Word equations (base, 2 Oct), zero LaTeX or `$` leakage (verified via pandoc) |
 | Em-dash corruption repair | 48 broken dash pairs and comma splices found and repaired |
 | P2E2 source | Read and integrated into Ch2 §2.5 as Chakraborty et al. (2025), PVLDB, peer-reviewed |
 | F-10, F-11 | Both closed (see §8) |

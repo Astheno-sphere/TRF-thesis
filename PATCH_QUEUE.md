@@ -1,3 +1,5 @@
+> **Superseded on 2 Oct 2026 by `PATCHES.md`, which is the single patch list.** Kept for its grepped cascade counts, which were taken on the zip base and must be re-grepped on `joao-base` before use.
+
 # Patch Queue — João's Review
 
 Live working list. Updated as we go. Every item records what it touches and what it drags

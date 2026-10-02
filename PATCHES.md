@@ -15,6 +15,29 @@ not `VERIFIED` until a check was run and named. The trail has been wrong five ti
 
 ---
 
+## Wave −1 — work already done once, queued for re-application on the reviewed base
+
+Built 30 Sept–1 Oct on the wrong base (branch `zip-base-superseded`), each as an exact-match
+script in `patches/` on that branch. Every source claim in them was re-verified then. They are
+**candidate patches**, not applied: each must be re-run on `joao-base`, where some anchors will
+have moved (D0 already supplies "five rivals" and the "separately" wording), and each must be
+judged alongside the supervisor's own tracked change for the same passage.
+
+| Script | Content | Answers |
+|---|---|---|
+| F1 | EY dates → Art 19(1) (verified); App C §3.8/§3.9 refs; aiAuthZ (N-01) and Borovits SLR (N-02, corrected to source) | M5 (§2.2 dates), minor (App C ref) |
+| F2 | ITI-55 grounding of p(a) (verified, with the patient-identifier exception); §4.8/§4.9/§5.6 salt prose matching the code; A2 erasure-ground chain; theorems framed as immediate; Semantics I unattributed; realism layer 152 lines, checker logic ~90 | M1 (cross-border class), M3 (salt), M4 (partly), minor (§3.6 line counts, "generic case") |
+| F3 | Art 68(12) quoted verbatim ("the electronic health data within…") at every site; D7.4 support; *EDPS v SRB* | M2, M5 (verbatim quotation) |
+| F6 | Rak (2024) (corrected: "could", pre-adoption); Figures 1 and 2 (rebuilt after visual check) | M2 (drafting ambiguity), minor (no figures) |
+| F7 | TEHDAS2 D7.2 (salt separate and secure; unsalted hash is not pseudonymisation); labels 2026a/2026b | M3 support |
+| R1 | Search rounds 5–7 merged; App B renumbered | minor (§2.1.4 vs App B) |
+| AS-01 | `assemble.py` bibliography sort (fixes three pre-existing APA order errors) | tooling |
+
+Re-verification still owed before any of these is final: the D7.4 and D7.2 PDFs (fetch needs
+Tiger's approval); the *SRB* press release.
+
+---
+
 ## Wave 0 — Decisions that gate everything
 
 These are not patches. They are answers needed before patches can be written.
@@ -25,7 +48,7 @@ infeasible under both semantics, present as a drafting defect) or Option B (Art.
 lex specialis). Either way Rival 6 must be answered.
 **Blocks:** P-M2-*, P-M4-*, and all Chapter 4, 6 and 7 prose work.
 
-### DEC-2 · Salt and ciphertext design?
+### DEC-2 · Ciphertext and dead branch? (salt settled: destroy, D-15)
 Three sub-questions: destroy the salt at invalidation, keep it, or store it under k(a);
 delete the ciphertext or justify keeping it; replace the `if False` branch with a seeded
 generator or a `--reproducible` flag.

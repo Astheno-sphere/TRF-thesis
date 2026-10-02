@@ -57,6 +57,9 @@ the list is the actual message. Do not spend the reply on the praise.
 - **Being told an audit was run without the numbers.** "Register: 36 files, 0 stale" is
   worth more than a paragraph.
 
+- **Rework caused by the assistant's own unverified assumptions.** The 30 Sept–1 Oct work on
+  the wrong base cost a day and many tokens. Verify the base before building on it.
+
 ## What he reacts well to
 
 - Being told he is wrong, with the grep output that shows it.
@@ -83,6 +86,16 @@ the list is the actual message. Do not spend the reply on the praise.
    twice.
 
 ---
+
+6. **The base is the last version that left the building.** Today that is the draft sent to
+   Prof. Ferreira, recovered from his returned file (`supervisor_review/`). Diff against it
+   before any patch. Tiger's words, 2 Oct: "we restart our journey with joao base".
+7. **One working copy.** No second chat edits thesis files. A fork's trail is not evidence about
+   this copy.
+8. **The returned .docx is our draft**, sent back by the supervisor in the university template
+   for his audit. His review arrived by email as text. Do not attribute the draft's wording to
+   him; his authority is the emailed review, and his tracked changes are proposals to judge on
+   evidence.
 
 ## Things that look like errors and are not
 

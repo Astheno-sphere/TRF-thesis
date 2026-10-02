@@ -116,6 +116,29 @@ wrong five times. See `FAILURE_LEDGER.md`.
 
 ---
 
+### D-14. The working base is the draft the supervisor reviewed
+**Decided** by the candidate, 2 Oct 2026.
+**Context.** The 30 Sept migration zip differed from the draft sent to Prof. Ferreira in 29
+content edits (see `FAILURE_LEDGER.md` F-0). His review and his 47 tracked changes are against
+that draft, so any other base makes his anchors miss and silently drops work he already saw.
+**Rejected.** Continuing on the zip; merging the zip and the draft by judgement.
+**Consequence.** Commit `0438daf`, tag `joao-base-v1`. The chapter files equal the draft in
+every content paragraph; the remaining differences are template and rendering only (title-page
+fields, Word's automatic TOC, equation spacing, code-listing wrapping, chapter-level reference
+variants). `supervisor_review/` holds the returned file and its text with tracked changes
+rejected and accepted. The Bodø opening (H-01, added after the draft was sent) is a proposal,
+not base text.
+**Status.** Holds.
+
+### D-15. Salt is destroyed at invalidation (the A3 design)
+**Decided** by the candidate on 22 Sept in the fork chat (turn 12, "yes Please"), before
+Prof. Ferreira's review. The code already does this; §4.8 of the base text still says the
+opposite. The supervisor's M3 asks for the same design. What remains open under O-03 is the
+ciphertext and the dead branch, not the salt.
+**Status.** Holds. Prose to be aligned in the M3 patch.
+
+---
+
 ## OPEN — these need an answer before work continues
 
 ### O-01 (BLOCKING). Which reading of Art. 68(12) does the thesis carry?
@@ -138,7 +161,7 @@ Raised by M1. Research first, then a decision. If eHDSI audit repositories hold 
 content, Semantics I must be reframed as the semantics of a rich audit log, and the
 cross-border instance of Theorem 1 weakens. Resolve after O-01, before Chapter 4 prose.
 
-### O-03. Salt and ciphertext design
+### O-03. Ciphertext and dead branch (salt settled, see D-15)
 Raised by M3. Three sub-decisions: destroy the salt at invalidation, keep it, or store it
 under k(a); delete the ciphertext at invalidation or justify keeping it; fix the `if False`
 dead branch. Currently **text and code contradict each other and the code cites the text it
