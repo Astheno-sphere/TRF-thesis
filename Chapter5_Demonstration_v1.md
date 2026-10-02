@@ -97,7 +97,7 @@ The witnesses, verbatim:
 > rid=103: t_a=7, permit expires t_pi=10 → C3 from t=16, C1 to t=19 | collision at t=16
 > rid=104: t_a=3, permit expires t_pi=4 → C3 from t=10, C1 to t=15 | collision at t=10
 
-Take the first. The access-log record is created in month seven. Article 73(1)(e) requires the identifiable log to remain verifiable until month nineteen. The data permit expires in month ten, so Article 68(12) requires personal data to be gone from the environment by month sixteen. Months sixteen through nineteen are therefore months in which the same regulation requires the same environment both to retain an identifiable access log and to hold no personal data. No data subject has exercised any right. No deployment baseline is involved. No synthesis across instruments of differing legal weight has occurred. On the reading of Article 68(12) adopted in Chapter 4, Section 4.6, the conflict is internal to Regulation (EU) 2025/327. Under the narrower reading canvassed there, these thirty-nine witnesses lapse and the secondary-use collisions reduce to the twenty-two records in this population that received erasure requests; Theorem 1, Corollary 1.1, and every Semantics II result are unaffected.
+Take the first. The access-log record is created in month seven. Article 73(1)(e) requires the identifiable log to remain verifiable until month nineteen. The data permit expires in month ten, so Article 68(12) requires personal data to be gone from the environment by month sixteen. Months sixteen through nineteen are therefore months in which the same regulation requires the same environment both to retain an identifiable access log and to hold no personal data. No data subject has exercised any right. No deployment baseline is involved. No synthesis across instruments of differing legal weight has occurred. On the reading of Article 68(12) adopted in Chapter 4, Section 4.6, the conflict is internal to Regulation (EU) 2025/327. Under the narrower reading canvassed there, these thirty-nine witnesses lapse and the secondary-use collisions reduce to the nine records in this population whose erasure requests fall inside the retention window (four that collide with C2 only and five that also collide with C3; twenty-two records received requests in all); Theorem 1, Corollary 1.1, and every Semantics II result are unaffected.
 
 The fifty per cent figure has a straightforward structural explanation, and stating it guards against reading the number as more precise than it is. The collision occurs when $t_\pi + 6 \le t_a + 12$, that is when the permit runs six months or less. Permit lengths were drawn uniformly from one to twelve months, so half the draws fall at or below six. The figure is therefore a direct consequence of the permit-length distribution and is not an empirical estimate of how often this occurs in Norwegian practice. What the demonstration establishes is that the collision arises under ordinary parameters rather than contrived ones.
 
@@ -105,7 +105,7 @@ The obvious attack on this figure is that the twelve-month horizon was chosen to
 
 ## 5.5 Independent Cross-Check
 
-A checker that implements the constraints incorrectly would produce violations that reflect the implementation rather than the model. To guard against this, the sandbox includes a second, independently written procedure that takes the constraint definitions directly. It searches exhaustively over every possible assignment of the accessibility variable across a fourteen-month horizon, 2¹⁴ = 16,384 assignments per case, and reports whether *any* assignment satisfies C1 under Semantics I together with C2 and C3.
+A checker that implements the constraints incorrectly would produce violations that reflect the implementation rather than the model. To guard against this, the sandbox includes a second, separately written procedure that takes the constraint definitions directly. It searches exhaustively over every possible assignment of the accessibility variable across a fourteen-month horizon, 2¹⁴ = 16,384 assignments per case, and reports whether *any* assignment satisfies C1 under Semantics I together with C2 and C3.
 
 *Table 5.2. Exhaustive search over $\alpha$ assignments (horizon = 14 months)*
 
@@ -117,6 +117,8 @@ A checker that implements the constraints incorrectly would produce violations t
 | Control: no erasure request, no permit expiry | **True** |
 
 The three conflict cases admit no satisfying assignment whatsoever, which is a stronger statement than the main checker makes: it establishes not merely that the trajectory the checker examined fails, but that no trajectory succeeds. The control case, in which neither C2 nor C3 is active, is feasible: confirming that the search is capable of returning True and that the infeasibility results are not an artefact of a procedure that never succeeds.
+
+This cross-check is separate code, not independent evidence in a stronger sense. It was written in the same AI-assisted process as the main checker and encodes the same constraint definitions from Section 4.4, so it guards against implementation error in the checker and not against error in the model.
 
 The cross-border floor is scaled from one hundred and twenty months to twelve for this check, because exhaustive search over 2¹²⁰ assignments is not computable. The scaling does not affect the logic: Theorem 1's argument depends on the deadline falling inside the window, not on the window's length, and the scaled case preserves that relation. This substitution is noted rather than hidden, and it is the one place in the demonstration where a parameter was altered for tractability.
 
@@ -169,9 +171,11 @@ This is the state the mechanism is designed to produce, and it is worth reading 
 
 ## 5.7 What the Demonstration Establishes, and What It Does Not
 
-*Established.* Both theorems hold on all two hundred generated instances. Theorem 1's conditional structure is reproduced exactly, including the boundary case of the request falling outside the window. Corollary 1.2 has thirty-nine concrete witnesses in which two provisions of one regulation collide over one environment with no data-subject action involved. The infeasibility results survive an independently written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines. The invalidation trajectory eliminates every violation without introducing any.
+*Established.* Both theorems hold on all two hundred generated instances. Theorem 1's conditional structure is reproduced exactly, including the boundary case of the request falling outside the window. Corollary 1.2 has thirty-nine concrete witnesses in which two provisions of one regulation collide over one environment with no data-subject action involved. The infeasibility results survive an separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines. The invalidation trajectory eliminates every violation without introducing any.
 
 *Not established, and not claimed.* The demonstration does not prove the theorems for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.
+
+*How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Theorem 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The violation rates of Table 5.1 are functions of the generator parameters in Table 5.0 and are not estimates of real frequency.
 
 *Payload provenance, tested rather than assumed.* Chapter 3, Section 3.6 specifies a realism layer feeding Synthea-generated records into the checker. That layer was built and executed, and its result is reported here because it bears on how much the demonstration's figures depend on the fixtures chosen.
 
@@ -200,13 +204,6 @@ The complete run, including the exhaustive cross-check over 65,536 assignments, 
 The artefact is publicly available, which converts the reproducibility claim from an assertion into something a reader can test while reading. The source repository and a hosted demonstration are listed in Appendix A. The hosted application executes the same unmodified source and verifies, at the point of execution, that its run reproduces the figures reported in this chapter; it reports a failure notice rather than results if it does not. No claim in this thesis depends on the hosted application remaining available, and the repository, not the hosting, is the artefact.
 
 The demonstration therefore supports precisely the claim Chapter 1 made for it: the artefact behaves as specified, and the specification's central results are checkable by a reader who declines to take the proofs on trust.
-
----
-
-## Appendix A. Checker source and run output
-
-The complete source of `trf_checker.py` and the verbatim console output of the run reported in this chapter are reproduced in Appendix A of the thesis. The run is reproduced by executing `python trf_checker.py` with no arguments; seed 20260915 is set in the module header, and the output is byte-identical across runs.
-
 
 ---
 

@@ -1,0 +1,29 @@
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-01 | Front_Matter_v1.md | e3afa723b46f -> 2fef1ca1fe2f | Abstract as in the draft sent to Joao (shorter rewrite); Norwegian abstract (Sammendrag) and supervisor/artefact line added; "(Approx. 520 words.)" note dropped
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-02 | Chapter1_Introduction_v2.md | f84b04ab31b3 -> 058761032204 | Opening as in the draft Joao reviewed. The Bodo/Stjordal hook (H-01) was applied after the draft was sent and is now a proposal (conflict C-1)
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-03 | Chapter2_LitReview_v2_FINAL.md | f2694c7dfd13 -> 8579e4f4a081 | Draft: round 5 (28 Sept) mentioned in s2.1.4
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-04 | Chapter2_LitReview_v2_FINAL.md | f2694c7dfd13 -> 8579e4f4a081 | Draft: accumulator not implemented
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-05 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: Corollary 1.2 month
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-06 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: terminal transition outside the C1 trajectory
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-07 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: accumulator caveat
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-08 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: auditor view without accumulator
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-09 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: F+1 window (closed interval spans F+1 months)
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-10 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Same
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-11 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: accumulator manager trust
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-12 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: five rivals
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-13 | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 -> 6a6d4b088b23 | Draft: five rivals
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-14 | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a -> e90ea79e5c03 | Draft: corrected witness count under the narrow reading
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-15 | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a -> e90ea79e5c03 | Draft wording (source of the "an separately" typo Joao flagged)
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-16 | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a -> e90ea79e5c03 | Draft: new paragraph after the cross-check result
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-17 | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a -> e90ea79e5c03 | Draft wording
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-18 | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a -> e90ea79e5c03 | Draft: new paragraph "How the tables should be read"
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-19 | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a -> e90ea79e5c03 | Draft drops the chapter-level Appendix A stub
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-20 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Draft wording
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-21 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Draft: terminal transition not implemented
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-22 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Draft: narrow-reading hedge
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-23 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Draft: Datatilsynet for GDPR side; EHDS authorities for Arts 68/73
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-24 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Same
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-25 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Draft: narrow-reading hedge
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-26 | Chapter6_Discussion_v1.md | 24b87a0c77b1 -> 683c99d03623 | Draft: shorter first-version paragraph
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-27 | Chapter7_Conclusion_v1.md | d2d9cca37aca -> 3faa644b3eef | Draft wording
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-28 | Chapter7_Conclusion_v1.md | d2d9cca37aca -> 3faa644b3eef | Draft: accumulators not implemented
+2026-10-02 05:32 | D0_rebase_to_draft.py | D0-29 | Chapter7_Conclusion_v1.md | d2d9cca37aca -> 3faa644b3eef | Draft: competent authorities
