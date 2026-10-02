@@ -1,5 +1,31 @@
 # Change trail
 
+## 2 October 2026 — base reset to the draft the supervisor reviewed (read this first)
+
+The 30 Sept working set was not the draft sent to Prof. Ferreira. The draft he reviewed is our
+draft, returned in the HiMolde template with his tracked changes. Read with tracked changes
+rejected, it differs from the 30 Sept files in 29 content edits, and the 30 Sept files carry
+one edit made after it was sent (H-01). Work from 30 Sept to 1 Oct was built on the wrong base
+and is preserved on branch `zip-base-superseded` (commits F1–R1, AS-01, and the merge review).
+
+| ID | Change | Verification |
+|---|---|---|
+| D0-01 to D0-29 | Chapter files brought to the reviewed draft: abstract and Sammendrag; Ch1 opening; Ch2 ×2; Ch4 ×9; Ch5 ×6; Ch6 ×7; Ch7 ×3. Full list in `PATCH_LOG.md` | Every prose paragraph compared against `supervisor_review/draft_as_reviewed_tracked_rejected.txt`; 13 residual differences, all template or rendering. Checker byte-identical; bibliography 67/67 |
+| B-01 | Git repository; branch `joao-base`, tag `joao-base-v1` at `0438daf`; superseded work kept on `zip-base-superseded` | `git log`, `git tag` |
+| B-02 | `handoff_tools/patch.py`: exact-match patcher that writes nothing if any anchor fails, and logs every edit with before/after md5 to `patches/APPLIED.log` | Used for D0 (29 edits, 0 failures) |
+| B-03 | `supervisor_review/`: the returned .docx; its text with tracked changes rejected and accepted; the email review text; the raw review | md5 in the register |
+| B-04 | `conversation_history/`: full export of the MAIN chat (22 May – 30 Sept) | md5 in the register |
+| B-05 | Control documents corrected: `FAILURE_LEDGER.md` F-0 and the correction to the "five false entries" lesson (they were applied on the fork); `DECISION_RECORD.md` D-14 (base) and D-15 (salt settled); `CONVERSATION_LINEAGE.md` (MAIN, FORK, UNKNOWN, THIS); `NUANCES.md` rules 6–8; `HANDOFF_READ_FIRST.md` §00; `PATCHES.md` Wave −1; `PATCH_LOG.md` D0 entry; `PATCH_QUEUE.md` marked superseded by `PATCHES.md`; `SUPERVISOR_REVIEW…` and `SUPERVISOR_FEEDBACK_HISTORY.md` describe the returned file | Each statement about the base checked with grep on 2 Oct |
+| B-06 | `handoff_tools/verify_base.py`: renders every prose line of the front matter and Ch1–7 with pandoc and compares it with the reviewed draft's text; after patching, every difference it lists must correspond to a logged patch | Base: 621 lines, 0 differences. Negative test on `184c91d`: 28 |
+| B-07 | `VERA-SNARK_Thesis_SUBMISSION.docx` rebuilt from the base submission (`pandoc --reference-doc=thesis_reference.docx --toc`). The 29 Sept build carried the pre-rebase text | 176 native equations (175 + `$t(a) + F(a) + 1$` from the draft's F+1 wording, D0-08/09), 25 tables, 0 LaTeX leaks. Same command on `184c91d` gives 175 / 25 |
+| B-08 | `review/TRF_Thesis_merged_2026-10-01.zip` removed from `joao-base`. It was the 1 Oct review copy of zip-base work, committed into D0 by accident | The merge review stays on `zip-base-superseded` (`53b77e3`) |
+| B-09 | `supervisor_review_RAW_2026-09-30.txt` moved into `supervisor_review/`; register path updated | md5 unchanged `bb280bd623ae` |
+| B-10 | `VERSION_REGISTER.md` recomputed for every row; new rows for B-01..B-09; `RESUME_PROMPT.md` rewritten for the 2 Oct package with five verification commands; package `TRF_Thesis_Migration_Package_02Oct.zip` built with `.git` (both branches, tag) | Register check: 0 mismatches. Archive unpacked and re-checked |
+
+**Rows below this section describe earlier states.** The 22 Sept rows describe edits made on the
+fork. They are not in the base unless re-applied from Wave −1.
+
+
 Every change to a canonical file, with the chapters it affects. Newest session first.
 Columns: ID · file · section · chapters affected · change · reason and source · inspector verdict.
 A REJECT is acceptable only when every *lost* item is the intended removal; each is listed.

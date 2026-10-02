@@ -5,24 +5,19 @@ than guessing.
 
 ---
 
-## Sessions
+## Sessions (corrected 2 Oct 2026)
 
 | # | When | Surface | Identifier | What happened |
 |---|---|---|---|---|
 | 1 | 25 May 2026 | claude.ai chat | `conversation_history/2026-05-25-23-16-30-vera-snark-thesis-build.txt` | Original VERA-SNARK build. Produced the draft later abandoned for fabricated citations |
 | 2 | 29 May 2026 | claude.ai chat | `conversation_history/2026-05-29-18-12-42-vera-snark-thesis-build.txt` | Verification and correction round |
-| 3 | 15 Sept 2026 | claude.ai chat | `conversation_history/2026-09-15-02-29-25-vera-snark-thesis-resume-retrofit.txt` | Resumption; retrofit of Ch1–Ch2 |
-| 4 | 15 Sept 2026 | claude.ai chat | `conversation_history/2026-09-15-02-42-38-trf-thesis-sheet-patch-ch3-unblock.txt` | Substrate patch; Ch3 unblocked |
-| 5 | 15–21 Sept 2026 | claude.ai chat | `conversation_history/SESSION_LOG_15-21_Sept_2026.md` — **no transcript exists** | Ch3–Ch7 written, theorems penned, checker built, migration package prepared. The log is the only record |
-| 6 | 21 Sept 2026 | claude.ai chat | *(transcript not captured)* | Migration handoff prepared. **Wrote the D-05, A-04, A3-l, P8-03 and H-01 trail entries that were never applied** |
-| 7 | 28–30 Sept 2026 | **Claude Code / this session** | **`session_01FPbdSPsPKYDLpxAt9wbLiy`**<br>`https://claude.ai/code/session_01FPbdSPsPKYDLpxAt9wbLiy` | Synthea subset to GitHub; repository repair; citation link pass; em-dash pass; Word formatting; table rules; viva notes; this handoff |
+| 3–4 | 15 Sept 2026 | claude.ai chat | `conversation_history/2026-09-15-*.txt` | Resumption; Ch1–Ch2 retrofit; substrate patch |
+| MAIN | 22 May – 30 Sept 2026 | claude.ai chat "Norwegian health records and European EHR interoperability" | `https://claude.ai/chat/21041d7e-c1ff-40e9-bb05-00344c7795b8`; full export in `conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt` | The long main thread. Contains the 15–21 Sept rebuild (previously recorded as "no transcript"), the 21 Sept migration zip, and the 28–30 Sept work (Synthea push, repository repair, link and em-dash passes, Word formatting, H-01, receipt of the review, the 30 Sept handoff). The Claude Code identifier `session_01FPbdSPsPKYDLpxAt9wbLiy` belongs to this thread's tool session |
+| FORK | 21–23 Sept 2026 | claude.ai chat "File reconciliation and checksum mismatch resolution" | `https://claude.ai/chat/2a87fc70-ba56-4c97-9960-fcca3b03ed36` (50 turns) | Opened with the 21 Sept zip. Passes 1–9: drift fixes D-01–D-08, A1–A5 (ITI-55 grounding, salt destruction approved), Art 68(12) verbatim object, D7.4, D7.2, *SRB*, Rak, figures, Norwegian module, Tab 4, Datatilsynet draft, its own H-01. Delivered to its own `TRF_Thesis_2026-09-22/` folder. **Its chapters never returned to MAIN**; its trail and code did, via the 23 Sept GitHub push. Its patch scripts are verbatim in the transcript and were replayed (with corrections) on branch `zip-base-superseded` |
+| UNKNOWN | ~29 Sept 2026 | not identified | — | Produced the draft sent to Prof. Ferreira: 29 content edits not present in any transcript searched (Norwegian abstract, accumulator caveats, F+1 window, addressee split, "separately" wording). Recovered from his returned file |
+| THIS | 30 Sept – 2 Oct 2026 | Claude Code session | `https://claude.ai/code/session_01NcQq1nsLTRuJVxEX8DbgE6` | Migration; fork found and read; F1–R1 replays (superseded); rebase onto the reviewed draft (D0, tag `joao-base-v1`); control documents rebuilt |
 
-**Session 7 is the current one and holds the most detail.** A future session can be told to
-consult it by that identifier for anything this handoff summarises too tightly.
-
----
-
-## What session 7 did, in order
+## What the MAIN thread did on 28–30 Sept, in order
 
 Useful because several findings only make sense with their sequence.
 

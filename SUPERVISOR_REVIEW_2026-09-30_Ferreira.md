@@ -1,6 +1,8 @@
 # Supervisor Peer Review — Prof. João Ferreira, 30 September 2026
 
 **Status: UNRESOLVED. Nothing in this review has been actioned yet.**
+
+**Added 2 Oct 2026.** The review came in two parts. The email text (`supervisor_review/review_email_text_2026-09-30.txt`) is his review and carries his authority. The returned Word file (`supervisor_review/Master_thesis_Abbasia_tracked_JF.docx`) is **our own draft** placed in the HiMolde template, carrying **47 tracked revisions and 27 comments** under his account, dated 29 Sept. Those revisions are drafted patches for his own points (Rival 6 and log relocation in §4.8/§4.10, salt and ciphertext text in §4.8–4.9, a new §6.1 opening, the A1 rewording, the SPUHiN "as published for consultation" wording, §1.4/§1.5 programme fit, the minor fixes). They are proposals, judged on evidence, not adopted on his name. The working copy is now exactly the text his revisions were made against (tag `joao-base-v1`), so every tracked change can be applied or rejected against its own anchor. The file also gives us the HiMolde template (company HSM, A4, logo, title page); its two logos are *linked* to paths on his machine and must be embedded before any PDF export.
 This file captures the review, records what I verified against the files, and states
 what each item actually demands. It is the primary input to the next work session.
 

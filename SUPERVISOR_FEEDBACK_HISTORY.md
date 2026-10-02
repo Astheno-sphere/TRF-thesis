@@ -92,7 +92,7 @@ The substantial one. Captured in full in `SUPERVISOR_REVIEW_2026-09-30_Ferreira.
 unedited original is `supervisor_review_RAW_2026-09-30.txt`.
 
 **Format.** Applied the university template, ran a peer review, and returned it with track
-changes. Four issues decide the verdict: M1, M2, M3, M5. Seven major concerns in total, a
+changes: 47 tracked revisions and 27 comments, in `supervisor_review/`. The file's untracked text is our draft as sent; since 2 Oct it is the working base (tag `joao-base-v1`). Four issues decide the verdict: M1, M2, M3, M5. Seven major concerns in total, a
 minor-issues table, presentation notes, eight viva questions, and a ten-item priority list.
 
 **What he named as strengths.** Source discipline, transparency and reproducibility called

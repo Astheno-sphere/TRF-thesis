@@ -4,22 +4,24 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 *Migration package prepared 21 September 2026. Start the next conversation from `HANDOFF_READ_FIRST.md`.*
 
-*Last reconciled: 28 September 2026, twice. First after the Synthea subset was committed to the public repository and the working set was brought back into line with it. Then again after the app gained Tab 5, a recorded run was committed per command, and 88 MB of duplicate bundles was removed. Checksums verified by reading the files; the submission was rebuilt by `handoff_tools/assemble.py` and came back byte-identical, and `handoff_tools/inspector.py` returned ADMIT on the rebuild.*
+*Last reconciled: 2 October 2026, after the base reset. The chapter files are the draft Prof. Ferreira reviewed, recovered from the file he returned (`supervisor_review/`), on git branch `joao-base` at tag `joao-base-v1` (`0438daf`), plus the control-document commit that carries this register. Every row recomputed by reading the file. `handoff_tools/verify_base.py`: 0 wording differences against the reviewed draft. `assemble.py` rebuild byte-identical. Checker output `41b56742d35d`. Code, data and the public repository are unchanged by the rebase, so `CHECKSUMS.md` stands.*
+
+*Previously reconciled: 28 September 2026, twice. First after the Synthea subset was committed to the public repository and the working set was brought back into line with it. Then again after the app gained Tab 5, a recorded run was committed per command, and 88 MB of duplicate bundles was removed. Checksums verified by reading the files; the submission was rebuilt by `handoff_tools/assemble.py` and came back byte-identical, and `handoff_tools/inspector.py` returned ADMIT on the rebuild.*
 
 *On the Words column: it is `len(text.split())` on the raw Markdown, which counts code blocks, tables and the bibliography. The submission's 50,667 is therefore an upper bound on prose; `wc -w` gives 50,486 on the same file. Figures recorded before 28 September were produced by another method and read about four per cent high — the md5 column was accurate throughout and is the one to trust.*
 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | b1e0effec1be | 59,413 | 29 Sep 13:10 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | f620c3c949ee | 191 eq, 24 tbl | 29 Sep 13:10 | Word build of the submission. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
-| THESIS | Front_Matter_v1.md | e3afa723b46f | 2,678 | 28 Sep 09:05 | Title, abstract, contribution, declarations, nomenclature, TOC |
-| THESIS | Chapter1_Introduction_v2.md | f84b04ab31b3 | 4,975 | 29 Sep 13:10 | Chapter 1 |
-| THESIS | Chapter2_LitReview_v2_FINAL.md | f2694c7dfd13 | 13,481 | 28 Sep 09:05 | Chapter 2 incl. review protocol §2.1 |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 4f9c7c861a5e | 59,631 | 2 Oct 05:33 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 8e5d391e9d8d | 176 eq, 25 tbl | 2 Oct 05:40 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | Front_Matter_v1.md | 2fef1ca1fe2f | 2,673 | 2 Oct 05:32 | Title, abstract, contribution, declarations, nomenclature, TOC |
+| THESIS | Chapter1_Introduction_v2.md | 058761032204 | 4,894 | 2 Oct 05:32 | Chapter 1 |
+| THESIS | Chapter2_LitReview_v2_FINAL.md | 8579e4f4a081 | 13,522 | 2 Oct 05:32 | Chapter 2 incl. review protocol §2.1 |
 | THESIS | Chapter3_Methodology_v1.md | 98a20e582088 | 5,230 | 28 Sep 09:05 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
-| THESIS | Chapter4_TRF_Model_v1.md | 1cc7345b20e0 | 7,702 | 28 Sep 09:05 | Chapter 4 — all math in LaTeX (159 equations) |
-| THESIS | Chapter5_Demonstration_v1.md | 5cb69c2a5b0a | 4,078 | 28 Sep 09:05 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
-| THESIS | Chapter6_Discussion_v1.md | 24b87a0c77b1 | 5,723 | 28 Sep 09:05 | Chapter 6, 11 sections |
-| THESIS | Chapter7_Conclusion_v1.md | d2d9cca37aca | 2,125 | 28 Sep 09:05 | Chapter 7 |
+| THESIS | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 | 7,815 | 2 Oct 05:32 | Chapter 4 — all math in LaTeX (159 equations) |
+| THESIS | Chapter5_Demonstration_v1.md | e90ea79e5c03 | 4,165 | 2 Oct 05:32 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
+| THESIS | Chapter6_Discussion_v1.md | 683c99d03623 | 5,759 | 2 Oct 05:32 | Chapter 6, 11 sections |
+| THESIS | Chapter7_Conclusion_v1.md | 3faa644b3eef | 2,152 | 2 Oct 05:32 | Chapter 7 |
 | APPENDIX | code_artefacts/README_Appendix_A.md | cec08a37ddb2 | 10,511 | 29 Sep 12:35 | Appendix A: provenance, commands, full source, console output |
 | APPENDIX | Appendix_B_Search_Log.md | 535856d92083 | 1,737 | 29 Sep 12:35 | Appendix B: 59 queries, 4 rounds |
 | APPENDIX | Appendix_C_Evaluation_Instrument.md | beee9ba249f1 | 2,811 | 29 Sep 12:35 | Appendix C: evaluation instrument (designed, not executed) |
@@ -39,25 +41,36 @@ This register lists the single live copy of every deliverable. If a file is not 
 | SUPPORT | Substrate_FINAL_PATCH.xlsx | b78d09fbc53c | 1,640 | 16 Sep 03:22 | Research substrate patch (supersedes 1/2/3/Master) |
 | SUPPORT | Supervisor_Feedback_Action_Plan.Rmd | e318cfab1ca8 | 2,003 | 21 Sep 05:10 | Response plan to first feedback round |
 
-| HANDOFF | HANDOFF_READ_FIRST.md | 2878638805d2 | 3,429 | 30 Sep | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
-| CONTROL | SUPERVISOR_REVIEW_2026-09-30_Ferreira.md | cda9534c3d75 | 2,801 | 30 Sep | Supervisor peer review, 30 Sept. THE LIVE WORK. Each major item verified against the files; sequencing note overrides his numbering |
-| CONTROL | PATCHES.md | 6cd0fb9be537 | 15,562c | 30 Sep | The working patch list for Joao Round 3. Seven waves, three gating decisions, cascade map. NOTHING APPLIED YET |
-| CONTROL | SUPERVISOR_FEEDBACK_HISTORY.md | 8c1b0ba4b752 | 8,151c | 30 Sep | Every supervisory round and what it changed. Patterns across rounds |
-| CONTROL | supervisor_review_RAW_2026-09-30.txt | bb280bd623ae | 3,127 | 30 Sep | The review exactly as received, unedited, so nothing rests on my paraphrase |
-| CONTROL | DECISION_RECORD.md | 27015d2a67cb | 1,388 | 30 Sep | Settled decisions with alternatives rejected; ten open decisions, O-01 blocking |
-| CONTROL | FAILURE_LEDGER.md | cebe4ab4bcc5 | 1,165 | 30 Sep | Every failure mode and the rule from it; the five false trail entries |
-| CONTROL | NUANCES.md | 1b13c87dc5a5 | 1,112 | 30 Sep | How Tiger works, standing rules, reversed decisions, false-positive errors |
-| CONTROL | CONVERSATION_LINEAGE.md | ef5f940af032 | 673 | 30 Sep | Seven sessions mapped; this session's identifier for future reference |
-| CONTROL | RESUME_PROMPT.md | 5ac7a2565f14 | 590 | 30 Sep | Paste-ready resume prompt with verification commands |
-| CONTROL | MASTER_MANIFEST.md | 4d11cc13ae28 | 4,115 | 28 Sep 13:00 | Every file, where it lives, its state and what is going on with it |
+| HANDOFF | HANDOFF_READ_FIRST.md | 9e354bece4a9 | 3,833 | 2 Oct 05:40 | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
+| CONTROL | SUPERVISOR_REVIEW_2026-09-30_Ferreira.md | 3924dc7b50d5 | 2,962 | 2 Oct 05:36 | Supervisor peer review, 30 Sept. THE LIVE WORK. Each major item verified against the files; sequencing note overrides his numbering |
+| CONTROL | PATCHES.md | 42f6e033f307 | 15,562c | 2 Oct 05:35 | The working patch list for Joao Round 3. Wave −1 (work done on the wrong base, queued for re-application), seven waves, three gating decisions, cascade map. Nothing of the supervisor review applied yet |
+| CONTROL | SUPERVISOR_FEEDBACK_HISTORY.md | b0052ac4a404 | 8,151c | 2 Oct 05:36 | Every supervisory round and what it changed. Patterns across rounds |
+| CONTROL | supervisor_review/supervisor_review_RAW_2026-09-30.txt | bb280bd623ae | 3,127 | 30 Sep | The review exactly as received, unedited, so nothing rests on my paraphrase |
+| CONTROL | DECISION_RECORD.md | 962c4618d4a8 | 1,614 | 2 Oct 05:34 | Settled decisions with alternatives rejected; ten open decisions, O-01 blocking |
+| CONTROL | FAILURE_LEDGER.md | 586ab203f202 | 1,508 | 2 Oct 05:34 | Every failure mode and the rule from it; the five false trail entries |
+| CONTROL | NUANCES.md | 4102be608b9d | 1,255 | 2 Oct 05:35 | How Tiger works, standing rules, reversed decisions, false-positive errors |
+| CONTROL | CONVERSATION_LINEAGE.md | 22e003f72408 | 791 | 2 Oct 05:34 | Seven sessions mapped; this session's identifier for future reference |
+| CONTROL | RESUME_PROMPT.md | 1d7f71771301 | 478 | 2 Oct 05:38 | Paste-ready resume prompt with verification commands |
+| CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
-| ARCHIVE | TRF_Thesis_Migration_Package_30Sept.zip | (not self-recordable) | 79 files | 28 Sep 07:03 | Complete working set. Every file inside verified byte-identical to its original. Supersedes the 21 Sept archive, which was deleted. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other 33 rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 8c6ae14f5649 | 10,402 | 30 Sep | Every change with an ID, reason and verification. Synced with the repository copy |
+| ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
+| CONTROL | CHANGE_TRAIL.md | 1e47a3076fde | 11,032 | 2 Oct 05:40 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | 9261b088033a | 173 | 28 Sep 06:59 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
+| CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
 | HANDOFF | handoff_tools/mathconv.py | a731f3cb5ca1 | — | 21 Sep 05:29 | Italic-unicode math to LaTeX converter |
 | HANDOFF | handoff_tools/assemble.py | 2c05f3f9b4ad | — | 21 Sep 05:29 | Rebuilds bibliography and submission |
 | HANDOFF | conversation_history/SESSION_LOG_15-21_Sept_2026.md | db9552b1cc61 | — | 21 Sep 05:29 | Chronological log of the 15-21 Sept session (not in any transcript) |
+| CONTROL | supervisor_review/Master_thesis_Abbasia_tracked_JF.docx | 0927389302c7 | 47 tracked, 27 comments | 2 Oct 05:34 | The draft as returned by the supervisor. OUR draft; his tracked changes are proposals |
+| CONTROL | supervisor_review/draft_as_reviewed_tracked_rejected.txt | da6c6e516ac3 | 58,895 | 2 Oct 05:34 | Its text with tracked changes rejected = the base. Input to verify_base.py |
+| CONTROL | supervisor_review/draft_with_tracked_accepted.txt | 5a3f18bfe4d5 | 59,580 | 2 Oct 05:34 | Its text with tracked changes accepted, to read his proposals in place |
+| CONTROL | supervisor_review/review_email_text_2026-09-30.txt | 71a963f94788 | 3,112 | 2 Oct 05:34 | The emailed review text. His authority is this text |
+| HANDOFF | handoff_tools/patch.py | 0eab483b5a50 | — | 2 Oct 05:31 | All-or-nothing exact-match patcher; logs to patches/APPLIED.log |
+| HANDOFF | handoff_tools/verify_base.py | 472c28b6a644 | — | 2 Oct 05:37 | Chapters vs reviewed draft, prose line by line. Base: 0 differences |
+| HANDOFF | patches/D0_rebase_to_draft.py | f90ab76b04b8 | 29 edits | 2 Oct 05:32 | The rebase onto the reviewed draft (commit 0438daf) |
+| HANDOFF | patches/APPLIED.log | 09eef8138ebd | 554 | 2 Oct 05:32 | Every applied edit with before/after md5 |
+| HANDOFF | conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies
 

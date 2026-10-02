@@ -8,6 +8,26 @@ to know what a particular file is, or whether a copy somewhere is the current on
 
 ---
 
+## 0. Update, 2 October 2026 — read before section 1
+
+**The source of truth for the thesis text is now the draft the supervisor reviewed**, held as
+the chapter files on git branch `joao-base` (tag `joao-base-v1`). Section 1's "working set is
+the source of truth" referred to the 30 Sept files, which were not that draft.
+
+| Place | What it is |
+|---|---|
+| Chapter `.md` files, branch `joao-base` | The thesis text, equal to the reviewed draft in every prose paragraph |
+| `supervisor_review/` | The returned .docx (template, 47 tracked changes, 27 comments); its text with changes rejected (= the base) and accepted; the email review; the raw review |
+| `patches/` | `D0_rebase_to_draft.py` and `APPLIED.log` (every applied edit with before/after md5) |
+| `handoff_tools/patch.py` | All-or-nothing exact-match patcher |
+| `handoff_tools/verify_base.py` | Compares every prose line of the chapters with the reviewed draft; 0 differences on the base, and after patching every difference must match a logged patch |
+| `VERA-SNARK_Thesis_SUBMISSION.docx` | Rebuilt 2 Oct from the base (176 equations, 25 tables). The 29 Sept build carried pre-rebase text |
+| Branch `zip-base-superseded` | F1–R1 replays, AS-01 sort fix, two figures, merge review; candidates in `PATCHES.md` Wave −1 |
+| `conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt` | Full export of the MAIN chat |
+
+Code, data, the reproduction package and the public repository are unchanged by the rebase.
+The checker output is byte-identical to the recorded run.
+
 ## 1. Where things live
 
 The work exists in four places. They are not copies of one another and each has a job.
