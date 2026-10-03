@@ -1,5 +1,17 @@
 # Change trail
 
+## 4 October 2026 — patches P38–P41 (numbering, app, Appendix A, TOC) and B-36
+
+| ID | Change | Verification |
+|---|---|---|
+| P38-001 to P38-120 | MIN-13: §5.5a→5.6 (5.6→5.7, 5.7→5.8); §6.9a→6.10 (6.10→6.11, 6.11→6.12); Chapter 5 tables in order of appearance (5.0a, 5.0, 5.1, 5.2, 5.2a, 5.3, 5.4 → 5.1–5.7); Appendix A sections in order of appearance (A.1b, A.2b, A.9b–e, A.11b gone; A.1–A.22). Every reference in prose, appendices, code docstrings, app labels, run_all.sh and the repo README follows. D7.4's own tables untouched | Generated and frozen (`P38_renumber.edits.json`); a check found no D7.4 table reference altered; 13/13 Appendix listings still equal their files |
+| B-36 | `appendix_sync.py`: BLOCKS keyed by the new Appendix A headings | 13/13 equal |
+| P39-01 to P39-12 | Streamlit app: Tab 1 shows integrity (200/200) and both tamper tests and includes them in the match check; Tab 5 runs the AES-256-GCM module (138 refused, 62 read); new Tab 6 explores Proposition 3 with Art 68(12) and politiregisterloven § 17 presets; Corollary 1.2 label conditional; cross-check label corrected (§5.5, was §5.4); deprecated `use_container_width` replaced; requirements streamlit>=1.45, cryptography>=42 | Run headless with `streamlit.testing.v1.AppTest`: no exceptions; Tab 1 success message with 95/90/39/0, 200/200, both tamper tests fail; crypto 138/62; Tab 6 all three presets render |
+| P40-01 to P40-05 | Appendix A.14 listing synced to app.py; Appendix A, Ch5 Table 5.1 and repo README: six tabs, 671 lines | appendix_sync 13/13 |
+| P39b-01 to P39b-02 | `use_container_width` replaced by width="stretch"; requirements streamlit>=1.45, cryptography>=42 | AppTest re-run: no exceptions |
+| P40-B01 to P40-B13 | Appendix A.14 listing block synced to app.py (block edit built by appendix_sync, frozen) | appendix_sync 13/13 |
+| P41-01 | MIN-13: Table of Contents regenerated from the headings, every numbered section listed | Generated and frozen |
+
 ## 4 October 2026 — patches P32–P37 (D7.4 pages, cross-chapter links, references) and B-35
 
 | ID | Change | Verification |

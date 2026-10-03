@@ -155,19 +155,130 @@ Two declarations are made explicitly because the first version of this project, 
 
 ## Table of Contents
 
-1. *Introduction*: background, problem statement, research questions, significance, scope, methodological approach, structure
-2. *Literature Review and Theoretical Foundation*: review strategy; cross-border landscape; the audit-retention versus erasure tension; cryptographic approaches; formal approaches to compliance verification; Norwegian secondary-use infrastructure; information-logistics framing; comparative analysis; research gaps; conceptual positioning
-3. *Methodology and Research Design*: design science paradigm; the adopted cycle; specification-and-demonstration with formal modelling; formal-modelling methodology; synthetic data; sandbox approach; validity, reliability and limitations; ethics
-4. *The Tri-Lateral Retention Feasibility Model and the Crypto-Erasure by Invalidation Mechanism*: necessity analysis; model and notation; constraints; two semantics; Proposition 1 and corollaries; Proposition 2; mechanism specification; residue analysis; rival designs; Norwegian integration
-5. *Demonstration*: implementation; results under each semantics; Corollary 1.2 witnesses; independent cross-check; payload-provenance comparison; what is and is not established
-6. *Discussion*: what the thesis establishes; the authority problems; key destruction and assurance; the cost objection; synthetic data; practice and policy; theoretical implications; boundaries as contribution
-7. *Conclusion*: problem and answer; contributions; limitations; open questions of authority; future work
+**Chapter 1. Introduction**
 
-*Appendix A*: Code artefacts, reproduction commands, data provenance, integrity record, full source of all five modules and the recorded console run of every command
+- 1.1 Background and Context
+- 1.2 Problem Statement
+- 1.3 Research Objectives and Questions
+- 1.4 Significance and Relevance
+- 1.5 Scope and Out-of-Scope
+- 1.6 Methodological Approach
+- 1.7 Thesis Structure
 
-*Appendix B*: Search query log: 59 queries across four dated search rounds, a fifth round of 18 locator verifications, round purposes and coverage notes
+**Chapter 2. Literature Review and Theoretical Foundation**
 
-*Appendix C*: Expert evaluation instrument: panel composition, session structure, demonstration script, semi-structured interview guide, closed-response questionnaire, analysis plan
+- 2.1 Review Protocol
+- 2.2 The Cross-Border Health Data Exchange Landscape
+- 2.3 The Audit-Retention versus Right-to-Erasure Tension
+- 2.4 Cryptographic Approaches to Audit Compliance
+- 2.5 Formal Approaches to Regulatory-Compliance Verification
+- 2.6 Norwegian Secondary-Use Infrastructure
+- 2.7 Information Logistics Framing
+- 2.8 Comparative Analysis
+- 2.9 Identified Research Gaps
+- 2.10 Conceptual Positioning of the Thesis
+
+**Chapter 3. Methodology and Research Design**
+
+- 3.1 Research Paradigm
+- 3.2 The Design Science Cycle Adopted
+- 3.3 The Specification-and-Demonstration Variant, Extended with Formal Modelling
+- 3.4 Formal-Modelling Methodology
+- 3.5 Synthetic Data
+- 3.6 Sandbox Implementation Approach
+- 3.7 Validity, Reliability, and Limitations
+- 3.8 Evaluation Design for the Next Cycle
+- 3.9 Ethical Considerations
+
+**Chapter 4. The Tri-Lateral Retention Feasibility Model and the Crypto-Erasure by Invalidation Mechanism**
+
+- 4.1 Purpose and Structure of the Chapter
+- 4.2 What Must Be Retained: The Necessity Analysis
+- 4.3 The Model: Objects and Notation
+- 4.4 The Three Constraints
+- 4.5 Two Semantics of Verifiability
+- 4.6 Proposition 1: Infeasibility under Plaintext Verifiability
+- 4.7 Proposition 2: Feasibility under Accountability-Preserving Verifiability
+- 4.8 The Mechanism: Crypto-Erasure by Invalidation
+- 4.9 Residue Analysis
+- 4.10 Rival Designs
+- 4.11 Integration with the Norwegian Infrastructure
+- 4.12 Summary
+
+**Chapter 5. Demonstration**
+
+- 5.1 Purpose and Claim
+- 5.2 Implementation
+- 5.3 Results under Semantics I
+- 5.4 Corollary 1.2: Infeasibility Without an Erasure Request
+- 5.5 Independent Cross-Check
+- 5.6 Witness at the Extended Response Period
+- 5.7 Results under Semantics II
+- 5.8 What the Demonstration Establishes, and What It Does Not
+
+**Chapter 6. Discussion**
+
+- 6.1 What the Thesis Establishes
+- 6.2 The Authority Problem
+- 6.3 Key Destruction and the Limits of Assurance
+- 6.4 The Cost Objection
+- 6.5 Scalability
+- 6.6 Evaluation Design and the Role of Stakeholder Assessment
+- 6.7 Synthetic Data and the Limits of the Demonstration
+- 6.8 Implications for Practice and Policy
+- 6.9 Theoretical Implications
+- 6.10 Where the Ceiling Is Anchored: a Cross-Sector Test
+- 6.11 Boundaries as Contribution
+- 6.12 Summary
+
+**Chapter 7. Conclusion**
+
+- 7.1 The Problem and the Answer
+- 7.2 Contributions
+- 7.3 What the Thesis Does Not Establish
+- 7.4 The Two Open Questions of Authority
+- 7.5 Future Work
+- 7.6 Closing
+
+**References**
+
+**Appendix A. Code Artefacts and Reproduction Record**
+
+- A.1 Availability
+- A.2 Contents
+- A.3 Environment and generation provenance
+- A.4 Software environment
+- A.5 Exact commands
+- A.6 What the code does
+- A.7 Data provenance
+- A.8 Integrity record
+- A.9 Known limitations of the artefact
+- A.10 Source listing: `trf_checker.py`
+- A.11 Source listing: `synthea_layer.py`
+- A.12 Source listing: `norwegian_layer.py`
+- A.13 Source listing: `cross_sector_check.py`
+- A.14 Source listing: `app.py`
+- A.15 Source listing: `crypto_envelope.py`
+- A.16 Console output of the reported run
+- A.17 Console output of the payload-provenance comparison, full cohort
+- A.18 Console output of the erasure-response-period witness
+- A.19 Console output of the Norwegian context module
+- A.20 Console output of the cross-sector instance
+- A.21 Console output of the payload-provenance comparison, committed subset
+- A.22 Console output of the envelope-encryption module
+
+**Appendix B. Search Query Log**
+
+**Appendix C. Expert Evaluation Instrument**
+
+- C.1 Purpose and status
+- C.2 Panel composition
+- C.3 Session structure
+- C.4 Demonstration script
+- C.5 Semi-structured interview guide
+- C.6 Closed-response questionnaire
+- C.7 Analysis
+- C.8 Data protection, if executed
 
 
 \pagebreak
@@ -463,7 +574,7 @@ The thesis frames the audit-retention versus erasure problem as one of informati
 
 The International Chamber of Commerce (2025) policy brief on data flows in supply chains documents that cross-border data flows are functionally equivalent to material flows in their structural role within global supply chain operations. They enable real-time coordination, traceability, customs clearance, and the deployment of digital tools across jurisdictional boundaries. They are also subject to the same kind of fragmented regulatory landscape that has historically constrained physical cross-border logistics through divergent national rules. The Organisation for Economic Co-operation and Development has estimated that full data autarky, defined as complete restriction of cross-border data flows, would reduce global gross domestic product by 4.5 percent and cut exports by 8.5 percent (International Chamber of Commerce, 2025). Restrictive and fragmented data policies act as non-tariff barriers in the same operational sense that documentation requirements, retention obligations, and audit rules act as non-tariff barriers in physical logistics.
 
-The structural analogy is precise rather than loose. A Norwegian patient summary moving from a Norwegian National Contact Point for eHealth to a Spanish point of care is a digital good crossing a jurisdictional boundary. It must satisfy the originating jurisdiction's audit and retention rules, the destination jurisdiction's clinical and consent rules, and any superordinate Union-level provisions. The audit log of the cross-border access event is the digital equivalent of the customs documentation that accompanies physical goods. The retention floor on that audit log is the digital equivalent of customs record-keeping. The Union Customs Code requires the person concerned to keep the documents and information on which a customs declaration rests "for at least three years", the period running from the end of the year in which the declaration is accepted or the procedure discharged, and extended while a correction, an appeal or court proceedings are pending (European Parliament and Council of the European Union, 2013, Article 51). The erasure obligation of Article 17 GDPR has its physical counterpart in destruction: customs authorities "may require goods which have been presented to customs to be destroyed" (Article 197). The two do not collide, because destruction reaches the goods and record-keeping reaches the documents, so the record of a destroyed consignment, including the fact of its destruction, is kept for the full period. That separation of the record from the thing recorded is what Semantics II does for the audit trail, where accountability attaches to the record of the access and of its payload's invalidation rather than to the payload's continued existence (Chapter 4, Section 4.5). Checked against the anchoring result of Chapter 6, Section 6.9a, the customs case confirms it from the other side: the destruction power is anchored to an external event, a customs decision, and would cross the record-keeping floor if it reached the documents; it does not, because it is confined to the goods. The analogy also marks where it stops. In customs the floor and the destruction act on different objects by design, whereas in an audit trail the personal data and the record of their processing begin in the same record, and the mechanism has to separate them.
+The structural analogy is precise rather than loose. A Norwegian patient summary moving from a Norwegian National Contact Point for eHealth to a Spanish point of care is a digital good crossing a jurisdictional boundary. It must satisfy the originating jurisdiction's audit and retention rules, the destination jurisdiction's clinical and consent rules, and any superordinate Union-level provisions. The audit log of the cross-border access event is the digital equivalent of the customs documentation that accompanies physical goods. The retention floor on that audit log is the digital equivalent of customs record-keeping. The Union Customs Code requires the person concerned to keep the documents and information on which a customs declaration rests "for at least three years", the period running from the end of the year in which the declaration is accepted or the procedure discharged, and extended while a correction, an appeal or court proceedings are pending (European Parliament and Council of the European Union, 2013, Article 51). The erasure obligation of Article 17 GDPR has its physical counterpart in destruction: customs authorities "may require goods which have been presented to customs to be destroyed" (Article 197). The two do not collide, because destruction reaches the goods and record-keeping reaches the documents, so the record of a destroyed consignment, including the fact of its destruction, is kept for the full period. That separation of the record from the thing recorded is what Semantics II does for the audit trail, where accountability attaches to the record of the access and of its payload's invalidation rather than to the payload's continued existence (Chapter 4, Section 4.5). Checked against the anchoring result of Chapter 6, Section 6.10, the customs case confirms it from the other side: the destruction power is anchored to an external event, a customs decision, and would cross the record-keeping floor if it reached the documents; it does not, because it is confined to the goods. The analogy also marks where it stops. In customs the floor and the destruction act on different objects by design, whereas in an audit trail the personal data and the record of their processing begin in the same record, and the mechanism has to separate them.
 
 The maritime sector provides a concrete Norwegian-context illustration of the information-logistics framing in operation. Norwegian regulations on the medical examination of seafarers are governed by the Norwegian Maritime Authority under the implementation of the International Convention on Standards of Training, Certification and Watchkeeping for Seafarers and the Maritime Labour Convention 2006. They were amended specifically to implement the General Data Protection Regulation, restricting electronic registration of medical certificates by seafarer's doctors operating outside Norway and the European Economic Area (Norwegian Maritime Authority, 2023). The amendments demonstrate that cross-border health data flow is not a theoretical question for Norwegian maritime and offshore logistics; it is an operationally binding regulatory constraint that already shapes which doctors can submit which medical certifications electronically and which cannot.
 
@@ -592,7 +703,7 @@ Synthetic records are generated using Synthea, an open-source synthetic patient 
 
 Three configuration decisions are fixed, and one limitation of the generator must be recorded alongside them. The output conforms to *FHIR R4*, not R5, because the Norwegian national profile set (basisprofiler) maintained by HL7 Norway constrains R4; matching the Norwegian profile version is what makes the demonstration representative of the Norwegian setting rather than of a generic one. The population is approximately *one hundred synthetic patients*. That size is large enough to exercise the audit-record lifecycle across varied clinical encounter patterns and small enough to remain inspectable by hand when a result needs to be traced to its cause. Because the thesis reports no statistical inference, no power calculation governs this choice. And *random seeds are fixed and reported*, population seed and clinician seed both set to 20260915, so that the entire demonstration is reproducible from the thesis text.
 
-The limitation concerns profiles rather than versions. Synthea's default export conforms to the US Core implementation guide and draws its demographic, geographic, and care-pattern parameters from a United States population. The FHIR version therefore matches the version Norwegian basisprofiler constrain, but the profiles and the clinical content do not represent Norwegian practice, and this thesis makes no claim that they do. The consequence is bounded and is verified rather than assumed in Chapter 5, Section 5.7: because no constraint in the model reads the content of a payload, the demonstration's results are invariant to payload provenance, and Norwegian representativeness is required of the *infrastructure analysis* in Chapter 4 rather than of the generated records.
+The limitation concerns profiles rather than versions. Synthea's default export conforms to the US Core implementation guide and draws its demographic, geographic, and care-pattern parameters from a United States population. The FHIR version therefore matches the version Norwegian basisprofiler constrain, but the profiles and the clinical content do not represent Norwegian practice, and this thesis makes no claim that they do. The consequence is bounded and is verified rather than assumed in Chapter 5, Section 5.8: because no constraint in the model reads the content of a payload, the demonstration's results are invariant to payload provenance, and Norwegian representativeness is required of the *infrastructure analysis* in Chapter 4 rather than of the generated records.
 
 Synthea's fidelity has been independently validated, and the validation bounds what may be claimed for it. Chen, Chun, Patel, Chiang, and James (2019) computed four clinical quality measures over a 1.2-million-patient Synthea cohort and compared them against publicly reported state and national rates. They found Synthea reliable in modelling demographics and the probability of services being offered, but limited in modelling heterogeneous health outcomes following intervention and in reproducing regional variation in care quality. These limitations do not, however, bear on the use made of Synthea in this thesis: the demonstration requires structurally valid FHIR resources and plausible encounter events from which audit records are generated, not accurate post-intervention outcome distributions. Had this thesis made epidemiological or clinical-effectiveness claims, the validation findings would be disqualifying; because it makes claims only about the behaviour of audit records under constraint, they are not.
 
@@ -602,9 +713,9 @@ The records themselves are not the object of study. They are the realism layer: 
 
 The sandbox is implemented in Python and has two layers, separated so that the load-bearing claim rests on the smaller and more inspectable component, and one optional module that reports no thesis figure.
 
-The *feasibility checker* is the primary layer and the executable witness of the propositions. It constructs audit records as the tuples defined in Chapter 4, Section 4.3, in two classes: cross-border audit records carrying the ten-year floor, and Secure Processing Environment access-log records carrying the one-year floor and the six-month ceiling. It then generates randomised arrivals of erasure requests and permit expiries across a monthly time horizon, and evaluates the three constraints under each semantics in turn, reporting violations. The two classes differ only in their floor parameter and in whether the ceiling applies, which is what makes them instances of one model rather than two models. The checker is kept small enough to be read and checked in full; Table 5.0a gives its size. A reader who doubts Proposition 1 can find in its output the specific record, month, and constraint at which plaintext semantics fails; a reader who doubts Proposition 2 can confirm that no violation arises under invalidation semantics across the generated instances.
+The *feasibility checker* is the primary layer and the executable witness of the propositions. It constructs audit records as the tuples defined in Chapter 4, Section 4.3, in two classes: cross-border audit records carrying the ten-year floor, and Secure Processing Environment access-log records carrying the one-year floor and the six-month ceiling. It then generates randomised arrivals of erasure requests and permit expiries across a monthly time horizon, and evaluates the three constraints under each semantics in turn, reporting violations. The two classes differ only in their floor parameter and in whether the ceiling applies, which is what makes them instances of one model rather than two models. The checker is kept small enough to be read and checked in full; Table 5.1 gives its size. A reader who doubts Proposition 1 can find in its output the specific record, month, and constraint at which plaintext semantics fails; a reader who doubts Proposition 2 can confirm that no violation arises under invalidation semantics across the generated instances.
 
-The *realism layer* wraps the checker so that its inputs derive from Synthea-generated FHIR bundles rather than from abstract record identifiers, computing commitments over the actual payloads and constructing metadata from the actual encounter events. It is smaller than the checker (Table 5.0a) and is not load-bearing: if the wrapper were removed, the propositions and their executable check would stand unchanged. Its function is to demonstrate that the model's abstractions correspond to the structure of real health-data artefacts rather than only to a convenient idealisation, and to test, by execution rather than assertion, whether any reported result depends on payload provenance.
+The *realism layer* wraps the checker so that its inputs derive from Synthea-generated FHIR bundles rather than from abstract record identifiers, computing commitments over the actual payloads and constructing metadata from the actual encounter events. It is smaller than the checker (Table 5.1) and is not load-bearing: if the wrapper were removed, the propositions and their executable check would stand unchanged. Its function is to demonstrate that the model's abstractions correspond to the structure of real health-data artefacts rather than only to a convenient idealisation, and to test, by execution rather than assertion, whether any reported result depends on payload provenance.
 
 Both layers, together with a demonstration viewer that executes them unmodified, are published in a public repository listed in Appendix A, so that the sandbox described here can be inspected and run rather than only read about.
 
@@ -821,13 +932,13 @@ This thesis states Corollary 1.2 conditionally, for logs kept at patient-record 
 
 The narrow reading, or logs kept at dataset granularity, therefore cost the thesis its sharpest instance and none of its results. The broad reading, for logs kept at patient-record granularity, adds a collision that requires no data subject to act, and Proposition 2 resolves it without choosing between the readings, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach (Section 4.7). Chapter 6 treats the resolution of this interpretive question as a matter for supervisory authority rather than for this author, alongside the authority question concerning verifiability itself.
 
-*Where the ceiling is anchored.* Corollary 1.2 and the cross-sector instance of Chapter 6, Section 6.9a are both cases of one condition, the structural content of the problem rather than a property of either instrument.
+*Where the ceiling is anchored.* Corollary 1.2 and the cross-sector instance of Chapter 6, Section 6.10 are both cases of one condition, the structural content of the problem rather than a property of either instrument.
 
 > *Proposition 3 (anchoring).* Let a record's floor of $F$ months run from its creation month $t(a)$, and let a ceiling of $L$ months run from an event at month $e(a) \ge t(a)$. Under Semantics I, the floor and the ceiling are jointly satisfiable for $a$ if and only if $e(a) + L > t(a) + F$. Hence (i) if the ceiling is anchored to the same event as the floor, $e(a) = t(a)$, they are satisfiable for every record if and only if $L > F$, a condition decidable from the text alone; and (ii) if the ceiling is anchored to an external event, then whenever $L \le F$ they fail for exactly those records with $e(a) - t(a) \le F - L$, a set that the text does not reveal and each record's history determines.
 
 *Proof.* C1 under Semantics I requires $\alpha(a,t) = 1$ for every month $t$ up to $t(a) + F$; the ceiling requires $\alpha(a,t) = 0$ for every $t \ge e(a) + L$. Since $e(a) + L \ge t(a)$, some month of the window carries both demands if and only if $e(a) + L \le t(a) + F$. Cases (i) and (ii) substitute $e(a) = t(a)$ and rearrange. ∎
 
-The proposition corrects as well as formalises. A collision needs a ceiling no longer than the floor whichever way it is anchored; what the anchor decides is whether the collision can be seen. A provision that measured both limits from one event and set the ceiling inside the floor would contradict itself on its face. Section 17 of politiregisterloven, a floor of twelve months and a ceiling of thirty-six from the same log entry, does not (Chapter 6, Section 6.9a). A ceiling measured from an external event can sit inside the floor with no visible contradiction, because whether the two clocks cross depends on when that event falls for each record. Article 68(12) is of the second kind: six months from permit expiry against twelve months from the log entry, with the collision arising for exactly the records whose permit expires within six months of the entry, which is the condition of Corollary 1.2. The diagnostic question for any candidate instance is therefore whether a ceiling no longer than the floor is anchored to an event other than the one the floor runs from.
+The proposition corrects as well as formalises. A collision needs a ceiling no longer than the floor whichever way it is anchored; what the anchor decides is whether the collision can be seen. A provision that measured both limits from one event and set the ceiling inside the floor would contradict itself on its face. Section 17 of politiregisterloven, a floor of twelve months and a ceiling of thirty-six from the same log entry, does not (Chapter 6, Section 6.10). A ceiling measured from an external event can sit inside the floor with no visible contradiction, because whether the two clocks cross depends on when that event falls for each record. Article 68(12) is of the second kind: six months from permit expiry against twelve months from the log entry, with the collision arising for exactly the records whose permit expires within six months of the entry, which is the condition of Corollary 1.2. The diagnostic question for any candidate instance is therefore whether a ceiling no longer than the floor is anchored to an event other than the one the floor runs from.
 
 ## 4.7 Proposition 2: Feasibility under Accountability-Preserving Verifiability
 
@@ -868,7 +979,7 @@ All three constraints are satisfied, for arbitrary arrival times and arbitrary $
 
 The trajectory constructed in the proof of Proposition 2 is the specification of the mechanism. This section states it as an implementable design.
 
-*Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Proposition 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary. This is the hierarchy that key-management guidance prescribes, in which data keys are protected by key-encrypting keys and destruction means removing "all traces of a cryptographic key so that it cannot be recovered by either physical or electronic means" (Barker, 2020, Section 2.1). The optional module of the artefact executes it: per-record 256-bit data keys under AES in Galois/Counter Mode (Dworkin, 2007), each wrapped under a key-encrypting key and destroyed at the record's invalidation month (Appendix A, A.9e). The custody object stands in for a hardware security module, so destruction there is destruction in program memory.
+*Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Proposition 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary. This is the hierarchy that key-management guidance prescribes, in which data keys are protected by key-encrypting keys and destruction means removing "all traces of a cryptographic key so that it cannot be recovered by either physical or electronic means" (Barker, 2020, Section 2.1). The optional module of the artefact executes it: per-record 256-bit data keys under AES in Galois/Counter Mode (Dworkin, 2007), each wrapped under a key-encrypting key and destroyed at the record's invalidation month (Appendix A, A.15). The custody object stands in for a hardware security module, so destruction there is destruction in program memory.
 
 *Ciphertext.* At $t^{I}(a)$ the ciphertext of $p(a)$ is deleted from the audit store together with $k(a)$. Nothing in Semantics II uses it once the key is gone, and deleting it removes the exposure that a retained ciphertext would carry to future cryptanalytic capability, quantum capability included, over the rest of a ten-year floor (Section 4.9). Key destruction remains the operative erasure for copies the store cannot delete at once, such as replicas and backups: they become unreadable at $t^{I}(a)$ and leave by ordinary rotation. The specification for Secure Processing Environments accepts exactly this: electronic health data "MUST be deleted or rendered unrecoverable within six months of permit expiry, including any backups or redundant copies" (TEHDAS2, 2026, Table 5.2, OPR-6, p. 43). The same requirement continues: deletion must proceed "while ensuring compliance with applicable legal obligations and traceability or reproducibility requirements where relevant", and its rationale leaves it to "the deletion and retention policy" to "balance these obligations". The specification asks for the balance and does not say how it is struck; for the logs, this mechanism is one way to strike it.
 
@@ -876,7 +987,7 @@ The trajectory constructed in the proof of Proposition 2 is the specification of
 
 *The invalidation registry.* Invalidation entries are appended to the audit trail as first-class records. Each entry $\iota(a)$ contains the identifier of the invalidated record, the invalidation month, the legal ground, the authorising actor, and a commitment to the destroyed key's identifier: not to the key itself. The registry is append-only. Invalidation is an event that is logged, not an event that erases the log. Key-management guidance anticipates exactly this record: once a key is destroyed, "its previous existence may be recorded (e.g., in metadata or audit logs)" (Barker, 2020, Section 7.6). The invalidation entry is that record, given a legal ground and an authorising actor.
 
-*Tamper evidence.* An append-only registry is only as good as the means of detecting an append-only violation. Secure audit logging has addressed this since Schneier and Kelsey (1999), whose hash-chained logs make earlier entries unalterable without detection; Merkle trees (Merkle, 1988) let the same assurance be checked for a single entry with a logarithmic proof (Crosby & Wallach, 2009), and Certificate Transparency standardised that construction for public logs (Laurie, Langley, & Kasper, 2013). The mechanism appends every access event, invalidation and subject-link removal to such a log, with the leaf and node hashing of RFC 6962, and Semantics II condition (i) is checked as an inclusion proof against the log's root rather than as the presence of fields (Chapter 5, Section 5.6). What enters a leaf is chosen so that the log never needs erasing: the accessor fields, the creation month and the commitment, never the payload and never the subject fields. The tension that Chapter 2, Section 2.4 found unresolved in blockchain audit logging, an immutable trail facing an erasure right, therefore does not arise: what the right and the ceiling reach is held outside the log and destroyed there, and what the log holds is what accountability requires.
+*Tamper evidence.* An append-only registry is only as good as the means of detecting an append-only violation. Secure audit logging has addressed this since Schneier and Kelsey (1999), whose hash-chained logs make earlier entries unalterable without detection; Merkle trees (Merkle, 1988) let the same assurance be checked for a single entry with a logarithmic proof (Crosby & Wallach, 2009), and Certificate Transparency standardised that construction for public logs (Laurie, Langley, & Kasper, 2013). The mechanism appends every access event, invalidation and subject-link removal to such a log, with the leaf and node hashing of RFC 6962, and Semantics II condition (i) is checked as an inclusion proof against the log's root rather than as the presence of fields (Chapter 5, Section 5.7). What enters a leaf is chosen so that the log never needs erasing: the accessor fields, the creation month and the commitment, never the payload and never the subject fields. The tension that Chapter 2, Section 2.4 found unresolved in blockchain audit logging, an immutable trail facing an erasure right, therefore does not arise: what the right and the ceiling reach is held outside the log and destroyed there, and what the log holds is what accountability requires.
 
 *Accumulator-based validity witnesses.* The set of currently valid (non-invalidated) records is maintained in a dynamic cryptographic accumulator supporting efficient revocation (Camenisch & Lysyanskaya, 2002). This provides an auditor with a succinct proof that a given record either is or is not currently valid, without the auditor enumerating the registry. The accumulator is an efficiency and verifiability layer, not a load-bearing component of the propositions: Proposition 2 holds if validity is established by linear scan of the registry, and the accumulator makes that check succinct. The accumulator is specified but not implemented in the artefact (Section 6.1). Dynamic accumulators of the Camenisch and Lysyanskaya type also require a trusted accumulator manager holding a trapdoor, which adds a trust assumption stated in Section 4.9.
 
@@ -1004,18 +1115,18 @@ The checker is a single Python module of 533 lines including documentation, the 
 
 Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A.
 
-*Table 5.0a. The artefact as published*
+*Table 5.1. The artefact as published*
 
 | Module | Lines | What it does | Reports a thesis figure? |
 |---|---|---|---|
-| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.1, 5.2a, 5.3 |
-| `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.4 |
+| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.3, 5.5, 5.6 |
+| `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.7 |
 | `norwegian_layer.py` | 135 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
-| `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a | No |
-| `app.py` | 530 | Five-tab viewer over the artefact; never a source of results | No |
+| `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10 | No |
+| `app.py` | 671 | Six-tab viewer over the artefact; never a source of results | No |
 | `crypto_envelope.py` | 118 | Optional: the same lifecycle with real AES-256-GCM envelope encryption (needs `cryptography`) | No |
 
-Every command has a recorded console run committed beside it in the repository, so that a reader who executes a command and diffs the output against its recorded file can tell a changed file from a changed result. The eight Synthea bundles the realism layer reads are committed with the code, so no regeneration is required to reproduce Table 5.4.
+Every command has a recorded console run committed beside it in the repository, so that a reader who executes a command and diffs the output against its recorded file can tell a changed file from a changed result. The eight Synthea bundles the realism layer reads are committed with the code, so no regeneration is required to reproduce Table 5.7.
 
 Records are represented exactly as the model specifies. Each carries metadata `m` split into accessor fields (the actor, the national contact point or the data permit, the document category, the legal basis, and the outcome) and subject fields (the patient pseudonym); a payload, which stands for the demographic query of the patient-discovery transaction in a cross-border record and for the logged activity in a Secure Processing Environment record; a hiding commitment `c = SHA-256(salt ‖ payload)` with a per-record sixteen-byte salt; a payload key `k`; a creation month `t_a`; a floor parameter `F`; and a pathway marker. Key destruction is modelled as irreversible removal of the key reference from the record's state, and deletion of the ciphertext as removal of the payload, which is the sandbox's analogue of destruction within a custody boundary and is not a claim that the simulation destroys anything cryptographically.
 
@@ -1026,7 +1137,7 @@ Two record classes are generated, implementing the two floor instances that Chap
 
 One hundred records of each class are generated, matching the population scale fixed in Chapter 3, Section 3.5. Seed 20260915 is fixed and reported; the run is deterministic and reproduces identically.
 
-*Table 5.0. Generation parameters (complete)*
+*Table 5.2. Generation parameters (complete)*
 
 | Parameter | Cross-border audit | SPE access log |
 |---|---|---|
@@ -1042,13 +1153,13 @@ One hundred records of each class are generated, matching the population scale f
 
 Erasure-request assignment is drawn independently of permit length, so no record is steered toward violation by the generator.
 
-Payloads are drawn from FHIR R4 resources in patient bundles generated by Synthea (Walonoski et al., 2018), produced with `java -jar synthea.jar -s 20260915 -cs 20260915 -p 100` and yielding 98 usable bundles. The generator was run with `--generate.only_alive_patients=true`, and two of the hundred requested patients did not survive to the end of their simulated lifetime and were therefore not exported. One clinical resource (a Condition, Observation, MedicationRequest, AllergyIntolerance, Immunization, or Procedure) is taken per bundle and serialised as the payload, giving a mean payload of 1,006 bytes against 35 bytes for the constructed strings used during development. Section 5.7 reports the comparison between the two.
+Payloads are drawn from FHIR R4 resources in patient bundles generated by Synthea (Walonoski et al., 2018), produced with `java -jar synthea.jar -s 20260915 -cs 20260915 -p 100` and yielding 98 usable bundles. The generator was run with `--generate.only_alive_patients=true`, and two of the hundred requested patients did not survive to the end of their simulated lifetime and were therefore not exported. One clinical resource (a Condition, Observation, MedicationRequest, AllergyIntolerance, Immunization, or Procedure) is taken per bundle and serialised as the payload, giving a mean payload of 1,006 bytes against 35 bytes for the constructed strings used during development. Section 5.8 reports the comparison between the two.
 
 ## 5.3 Results under Semantics I
 
 Under plaintext-verifiability semantics, $V(a,t) = \alpha(a,t)$, so constraint C1 requires the payload to remain accessible throughout the retention window while C2 and C3 require it to become inaccessible from their respective deadlines. The checker reports every month at which both are required at once.
 
-*Table 5.1. Violations under Semantics I (seed 20260915, n = 200)*
+*Table 5.3. Violations under Semantics I (seed 20260915, n = 200)*
 
 | Record class | Records | With ≥1 violation | Share |
 |---|---|---|---|
@@ -1058,7 +1169,7 @@ Under plaintext-verifiability semantics, $V(a,t) = \alpha(a,t)$, so constraint C
 
 Total constraint violations: 95 across 90 records. The two counts differ because five SPE records collide with both C2 and C3; each is counted once in the per-record column and twice in the violation total. The full decomposition is 41 records violating C2 only, 44 violating C3 only, and 5 violating both: all five necessarily in the secondary pathway, since only that pathway carries both constraints.
 
-First, the violation rate is not one hundred per cent, and this is the correct behaviour. The rates in this chapter are functions of the generator parameters in Table 5.0 and are not estimates of real frequency; in particular, the generator treats every erasure request as valid, whereas many would be lawfully refused under Article 17(3) (Chapter 3, Section 3.7). Proposition 1 is conditional: it states infeasibility for records whose erasure or ceiling deadline falls inside the retention window. A cross-border record for which no data subject ever exercises Article 17 has no second constraint to collide with C1, and is trivially feasible. Of the one hundred cross-border records, thirty-eight received an erasure request; of those, thirty-seven had a deadline landing inside the one-hundred-and-twenty-month window, and all thirty-seven are among the violations. The single exception is the record whose request arrived beyond the window, which is precisely the case the proposition excludes. The checker therefore reproduces the proposition's conditional structure exactly, including its boundary.
+First, the violation rate is not one hundred per cent, and this is the correct behaviour. The rates in this chapter are functions of the generator parameters in Table 5.2 and are not estimates of real frequency; in particular, the generator treats every erasure request as valid, whereas many would be lawfully refused under Article 17(3) (Chapter 3, Section 3.7). Proposition 1 is conditional: it states infeasibility for records whose erasure or ceiling deadline falls inside the retention window. A cross-border record for which no data subject ever exercises Article 17 has no second constraint to collide with C1, and is trivially feasible. Of the one hundred cross-border records, thirty-eight received an erasure request; of those, thirty-seven had a deadline landing inside the one-hundred-and-twenty-month window, and all thirty-seven are among the violations. The single exception is the record whose request arrived beyond the window, which is precisely the case the proposition excludes. The checker therefore reproduces the proposition's conditional structure exactly, including its boundary.
 
 Second, the witnesses are specific and inspectable, which is the property Chapter 3 required of this component. Three examples, verbatim from the run:
 
@@ -1094,7 +1205,7 @@ The fifty per cent figure has a structural explanation. The collision occurs whe
 
 A checker that implements the constraints incorrectly would produce violations that reflect the implementation rather than the model. To guard against this, the sandbox includes a second, separately written procedure that takes the constraint definitions directly. It searches exhaustively over every possible assignment of the accessibility variable across a fourteen-month horizon, 2¹⁴ = 16,384 assignments per case, and reports whether *any* assignment satisfies C1 under Semantics I together with C2 and C3.
 
-*Table 5.2. Exhaustive search over $\alpha$ assignments (horizon = 14 months)*
+*Table 5.4. Exhaustive search over $\alpha$ assignments (horizon = 14 months)*
 
 | Case | Feasible assignment exists? |
 |---|---|
@@ -1109,11 +1220,11 @@ This cross-check is separate code, not independent evidence in a stronger sense.
 
 The cross-border floor is scaled from one hundred and twenty months to twelve for this check, because exhaustive search over 2¹²⁰ assignments is not computable. The scaling does not affect the logic: Proposition 1's argument depends on the deadline falling inside the window, not on the window's length, and the scaled case preserves that relation. It is the one place in the demonstration where a parameter was altered for tractability.
 
-## 5.5a Witness at the Extended Response Period
+## 5.6 Witness at the Extended Response Period
 
 Chapter 4, Section 4.4 sets the erasure response period $\delta$ from Article 12(3) GDPR, which allows the controller one month from receipt and permits extension by a further two months for complex or numerous requests. The propositions are stated for arbitrary finite $\delta$, and the model admits $\delta = 3$. That claim is witnessed here at $\delta = 3$.
 
-*Table 5.2a. Results at $\delta = 1$ and $\delta = 3$ (seed 20260915, n = 200)*
+*Table 5.5. Results at $\delta = 1$ and $\delta = 3$ (seed 20260915, n = 200)*
 
 | Measure | $\delta = 1$ | $\delta = 3$ |
 |---|---|---|
@@ -1128,11 +1239,11 @@ Extending the response period moves one record out of violation under Semantics 
 
 The run is reproduced with `python3 trf_checker.py --delta-witness`.
 
-## 5.6 Results under Semantics II
+## 5.7 Results under Semantics II
 
 The invalidation trajectory from the constructive proof of Proposition 2 was then applied to every record: destroy the payload key at $t^{I} = \min(t_r + \delta,\; t_\pi + 6)$, destroy the salt with it, append an invalidation entry recording the month, the legal ground, and the authorising actor, and retain metadata and commitment unchanged.
 
-*Table 5.3. Results under Semantics II (same 200 records, same seed)*
+*Table 5.6. Results under Semantics II (same 200 records, same seed)*
 
 | Measure | Value |
 |---|---|
@@ -1160,21 +1271,21 @@ payload readable?    : False
 
 This is the state the mechanism is designed to produce, and it is worth reading against what Semantics I would have demanded. The access event is fully established: which researcher, under which permit, with what outcome. The link to the patient was removed at the ceiling, and its removal is itself a logged entry. The binding to a specific payload survives in the commitment. The invalidation is itself a logged, grounded, attributed event rather than a silent absence. And the payload is unreadable, at month nineteen as at month sixteen. An auditor examining this record learns everything accountability requires and nothing the erasure obligation forbids.
 
-The record is also checked against the audit log. Every access event, invalidation and subject-link removal is an entry in an append-only Merkle log, and condition (i) of Semantics II is tested as an inclusion proof against the log's root rather than as the presence of fields. All two hundred records verify. Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.10). The Semantics II result of Table 5.3 therefore rests on a check that can fail, which the earlier presence test could not.
+The record is also checked against the audit log. Every access event, invalidation and subject-link removal is an entry in an append-only Merkle log, and condition (i) of Semantics II is tested as an inclusion proof against the log's root rather than as the presence of fields. All two hundred records verify. Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.16). The Semantics II result of Table 5.6 therefore rests on a check that can fail, which the earlier presence test could not.
 
-## 5.7 What the Demonstration Establishes, and What It Does Not
+## 5.8 What the Demonstration Establishes, and What It Does Not
 
 *Established.* Both propositions hold on all two hundred generated instances. Proposition 1's conditional structure is reproduced exactly, including the boundary case of the request falling outside the window. Corollary 1.2 has thirty-nine witnesses in the model: records in which two provisions of one regulation collide over one environment with no data-subject action involved. The infeasibility results survive a separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines. The invalidation trajectory eliminates every violation without introducing any.
 
-*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment. An optional module repeats the lifecycle with real AES-256-GCM envelope encryption (Appendix A, A.9e and A.15): after the 138 scheduled destructions exactly those records refuse to decrypt and the other 62 still read, so unreadability is executed rather than asserted; the keys are still destroyed in program memory, not in hardware: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.
+*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment. An optional module repeats the lifecycle with real AES-256-GCM envelope encryption (Appendix A, A.15 and A.22): after the 138 scheduled destructions exactly those records refuse to decrypt and the other 62 still read, so unreadability is executed rather than asserted; the keys are still destroyed in program memory, not in hardware: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.
 
-*How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The rates of Table 5.1 are read as Section 5.3 states.
+*How the tables should be read.* The Semantics II result of Table 5.6 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The rates of Table 5.3 are read as Section 5.3 states.
 
 *Payload provenance.* The realism layer specified in Chapter 3, Section 3.6 was built and executed; its result bears on how much the figures depend on the fixtures chosen.
 
-The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.11). All two hundred commitments change, confirming that the payloads genuinely differ.
+The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.17). All two hundred commitments change, confirming that the payloads genuinely differ.
 
-*Table 5.4. Constructed against Synthea-generated payloads (same seed, same timings)*
+*Table 5.7. Constructed against Synthea-generated payloads (same seed, same timings)*
 
 | Measure | Constructed | Synthea | 
 |---|---|---|
@@ -1210,7 +1321,7 @@ The thesis establishes that the conflict between audit-retention floors and the 
 
 The request-driven form of the conflict cannot be escaped by moving the record. A deletion ceiling anchored to a location yields to relocation, but the right to erasure attaches to whichever controller holds the data (Chapter 4, Section 4.10, Proposition 4). Cryptographic invalidation is therefore necessary where a data subject's request meets a retention floor, and in the cross-border pathway that is every request arriving inside the ten-year window, because the patient-discovery transaction puts the patient's identifying query into the audit record by design.
 
-The sharpest instance is narrower, and rests on one contestable interpretive step. Article 73(1)(e) requires identifiable logs of access to and activity in a Secure Processing Environment to be kept for at least one year. Article 68(12) requires "the electronic health data within the secure processing environment" to be deleted within six months of the expiry of the data permit. Where an environment logs access at patient-record granularity, those log entries are electronic health data within the environment on the broad reading, and where the remaining permit duration at the time a log is written is six months or less, the two requirements overlap with no data subject acting. Chapter 4, Section 4.6 sets out the grounds on both sides. Chapter 5 produced thirty-nine witnesses of this collision in the model, in a population of one hundred Secure Processing Environment records; across the full population of two hundred, cross-border records included, ninety records were infeasible under Semantics I, most of them through erasure requests (Chapter 5, Table 5.1). Proposition 3 states the general condition: a ceiling no longer than the floor, anchored to an event other than the one the floor runs from. On the narrow reading, or where logs are kept at dataset granularity, the collision does not arise. On either reading the mechanism meets both provisions, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach.
+The sharpest instance is narrower, and rests on one contestable interpretive step. Article 73(1)(e) requires identifiable logs of access to and activity in a Secure Processing Environment to be kept for at least one year. Article 68(12) requires "the electronic health data within the secure processing environment" to be deleted within six months of the expiry of the data permit. Where an environment logs access at patient-record granularity, those log entries are electronic health data within the environment on the broad reading, and where the remaining permit duration at the time a log is written is six months or less, the two requirements overlap with no data subject acting. Chapter 4, Section 4.6 sets out the grounds on both sides. Chapter 5 produced thirty-nine witnesses of this collision in the model, in a population of one hundred Secure Processing Environment records; across the full population of two hundred, cross-border records included, ninety records were infeasible under Semantics I, most of them through erasure requests (Chapter 5, Table 5.3). Proposition 3 states the general condition: a ceiling no longer than the floor, anchored to an event other than the one the floor runs from. On the narrow reading, or where logs are kept at dataset granularity, the collision does not arise. On either reading the mechanism meets both provisions, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach.
 
 Finally, the thesis specifies the mechanism that the feasibility proof exhibits: per-record keys under a key-encrypting key, hiding commitments, deletion of the ciphertext with the key, removal of the subject link at the ceiling, invalidation entries carrying month, legal ground, and authorising actor, a tamper-evident log built never to hold what erasure reaches, and a terminal transition at floor expiry that discharges the storage-limitation obligation on the metadata itself. The artefact executes all of these but the terminal transition, which Section 4.8 specifies and the checker does not implement; nor does it implement the per-entry nonce that keeps surviving leaf hashes from confirming guesses (Chapter 4, Section 4.9). The specification also provides for accumulator-based validity witnesses, which are an efficiency and verifiability layer rather than a component of either proposition, since Proposition 2 holds if validity is established by linear scan. They are specified but not implemented: the demonstration of Chapter 5 exercises keys, commitments, and invalidation entries, and no accumulator was built or run.
 
@@ -1240,7 +1351,7 @@ The second objection is the one the thesis has carried since Chapter 2, and it i
 
 The mechanism's guarantees are conditional on the irreversible destruction of key material. The canonical systematisation of secure deletion establishes that the further a deletion approach operates from the physical storage medium, the harder it becomes to assert that destruction actually occurred (Reardon, Basin, & Capkun, 2013). Cryptographic erasure is the limiting case: it operates entirely above the medium, reducing the deletion of arbitrary data to the deletion of a key, and inheriting in concentrated form the problem that key destruction cannot be confirmed by inspection.
 
-The thesis's response is to be precise about what the invalidation entry is. It is an *attested* record of destruction, not a *proof* of it. The entry records that a named actor destroyed a named key at a named month on a named legal ground, and binds that claim into an append-only Merkle log alongside a commitment to the destroyed key's identifier, so that the claim, once made, cannot be altered or withdrawn without detection (Chapter 4, Section 4.8). Key-management guidance treats such a record as the normal trace of a destroyed key (Barker, 2020). An auditor can establish that the claim was made, by whom, and when; an auditor cannot establish that the claim is true. The difference between attestation and proof is the boundary of this contribution. Two things narrow it without closing it. Hardware security modules validated against FIPS 140-3 (National Institute of Standards and Technology, 2019) place destruction inside a tested boundary, though validation attests the design of the module, not any particular destruction. And the optional module of the artefact replaces the simulated key with real AES-256-GCM envelope encryption: after the 138 scheduled destructions, exactly those records refuse to decrypt (Chapter 5, Section 5.7), which shows that unreadability follows from the destruction, not that the destruction took place.
+The thesis's response is to be precise about what the invalidation entry is. It is an *attested* record of destruction, not a *proof* of it. The entry records that a named actor destroyed a named key at a named month on a named legal ground, and binds that claim into an append-only Merkle log alongside a commitment to the destroyed key's identifier, so that the claim, once made, cannot be altered or withdrawn without detection (Chapter 4, Section 4.8). Key-management guidance treats such a record as the normal trace of a destroyed key (Barker, 2020). An auditor can establish that the claim was made, by whom, and when; an auditor cannot establish that the claim is true. The difference between attestation and proof is the boundary of this contribution. Two things narrow it without closing it. Hardware security modules validated against FIPS 140-3 (National Institute of Standards and Technology, 2019) place destruction inside a tested boundary, though validation attests the design of the module, not any particular destruction. And the optional module of the artefact replaces the simulated key with real AES-256-GCM envelope encryption: after the 138 scheduled destructions, exactly those records refuse to decrypt (Chapter 5, Section 5.8), which shows that unreadability follows from the destruction, not that the destruction took place.
 
 That boundary is where an active research programme sits. Proof-of-secure-erasure protocols seek evidence that a prover has erased its memory, with recent work relaxing the isolation assumptions such protocols traditionally require (Bursuc, Gil-Pons, Mauw, & Trujillo-Rasua, 2024). In the quantum setting, encryption with certified deletion produces a deletion certificate, and its authors identify *public verifiability*, enabling parties other than the originator to verify such a certificate, as an open problem (Broadbent & Islam, 2020). Were public verifiability of deletion certificates achieved, the invalidation entry specified in Chapter 4 could carry a proof rather than an attestation, and the mechanism's guarantee would strengthen from conditional to demonstrable without any change to the model.
 
@@ -1286,7 +1397,7 @@ The instrument has not been executed, for the reasons given in Chapter 3, Sectio
 
 Chapter 3 specified a two-layer sandbox: a feasibility checker carrying the load-bearing claim, and a realism layer feeding it Synthea-generated FHIR records. Both were built and both were run, and the result of running the second is more informative than its mere existence.
 
-Substituting real FHIR R4 resources for constructed payload strings changed all two hundred commitments and no reported figure (Chapter 5, Section 5.7, Table 5.4), as it must, since no constraint in the TRF Model reads payload content.
+Substituting real FHIR R4 resources for constructed payload strings changed all two hundred commitments and no reported figure (Chapter 5, Section 5.8, Table 5.7), as it must, since no constraint in the TRF Model reads payload content.
 
 Two limitations of the generated cohort are carried forward rather than resolved.
 
@@ -1320,19 +1431,19 @@ A word of restraint is owed here. This thesis is a Master's dissertation proposi
 
 Three contributions to the scholarly conversation follow from the work, each modest and each stated at its actual size.
 
-The first is the formalisation itself. Treating a retention conflict as a constraint-satisfaction problem over a single binary accessibility variable per record, and making the semantics of verifiability an explicit parameter of the model rather than an unexamined assumption, is a way of stating retention problems that appears not to have been used before in this domain. The general method of formalising legal compliance as satisfiability is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023); its application here is what is new, and the applicability of the formulation beyond health data is an open question the thesis does not settle. The structure (one or more floors, a subject-triggered right, a ceiling) is not obviously specific to health. Section 6.9a tests that expectation against a statute outside health and returns a negative result which revises it: what matters is not that a floor and a ceiling coexist but where the ceiling is anchored. Financial record-keeping under MiFID II remains a candidate instance on that revised test, flagged for future analysis rather than established: the practitioner literature reviewed in Chapter 2 treats that setting as a floor-against-right conflict, and whether any ceiling analogous to Article 68(12) operates there is a question this thesis has not investigated.
+The first is the formalisation itself. Treating a retention conflict as a constraint-satisfaction problem over a single binary accessibility variable per record, and making the semantics of verifiability an explicit parameter of the model rather than an unexamined assumption, is a way of stating retention problems that appears not to have been used before in this domain. The general method of formalising legal compliance as satisfiability is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023); its application here is what is new, and the applicability of the formulation beyond health data is an open question the thesis does not settle. The structure (one or more floors, a subject-triggered right, a ceiling) is not obviously specific to health. Section 6.10 tests that expectation against a statute outside health and returns a negative result which revises it: what matters is not that a floor and a ceiling coexist but where the ceiling is anchored. Financial record-keeping under MiFID II remains a candidate instance on that revised test, flagged for future analysis rather than established: the practitioner literature reviewed in Chapter 2 treats that setting as a floor-against-right conflict, and whether any ceiling analogous to Article 68(12) operates there is a question this thesis has not investigated.
 
 The second is the identification of the semantic assumption as the locus of the problem. The literature treats the retention-erasure tension as a conflict between obligations. The model locates it instead in an interpretive assumption that neither obligation states, and shows that the assumption is doing the work: with it, infeasibility; without it, satisfiability. This reframing suggests a general question for regulatory-compliance modelling, namely how many apparent conflicts between legal obligations are artefacts of implicit operational semantics inherited from systems built under earlier law.
 
 The third is the positioning of the contribution relative to the cryptographic literature. Aikebaier's (2026) systematisation of cryptographic erasure closes by naming five open problems, of which the fifth is erasure under multi-regime retention conflict. That source is an unreviewed preprint and is cited as corroboration rather than authority. This thesis addresses the problem in one regulatory setting, with the reservations of Sections 6.2 and 6.3 attached. The fourth open problem on the same list, composition with zero-knowledge selective disclosure, is a problem this thesis creates rather than solves, and Chapter 7 treats it accordingly.
 
-## 6.9a Where the Ceiling Is Anchored: a Cross-Sector Test
+## 6.10 Where the Ceiling Is Anchored: a Cross-Sector Test
 
 The first of those three contributions raised a question it did not answer. If the structure of one or more floors, a subject-triggered right and a ceiling is not specific to health, then some other domain ought to exhibit it, and running that domain through the same model ought to produce the same infeasibility. A cross-sector instance was therefore constructed and executed rather than argued.
 
 The instance is Norwegian police register law. Section 17 of politiregisterloven imposes a traceability duty on the use of police information systems and converts it into a retention rule: *Opplysninger om bruk av systemet skal registreres og lagres i minst 1 år og slettes senest etter 3 år* (Politiregisterloven, 2010, § 17). The provision therefore places a floor of twelve months and a ceiling of thirty-six months on the same access log, outside health, and the data subject's rights operate on that log as they do on any other personal data. On the reading that motivated the thesis, this ought to be a second instance of the tri-lateral collision.
 
-It is not, and the result is the more informative one. Sixty records were generated under a floor of twelve months and a ceiling of thirty-six, with erasure requests arriving as they do elsewhere in the demonstration. Seven records carried at least one Semantics I violation. Of those seven, **none** arose without an erasure request. Under Semantics II there were no violations at all, and every record was invalidated at its scheduled month. The module that produces this is listed in full at Appendix A, Section A.9c, and its console output at Section A.14.
+It is not, and the result is the more informative one. Sixty records were generated under a floor of twelve months and a ceiling of thirty-six, with erasure requests arriving as they do elsewhere in the demonstration. Seven records carried at least one Semantics I violation. Of those seven, **none** arose without an erasure request. Under Semantics II there were no violations at all, and every record was invalidated at its scheduled month. The module that produces this is listed in full at Appendix A, Section A.13, and its console output at Section A.20.
 
 The zero is the finding. Section 17 fixes both of its limbs against the same event, the making of the log entry: the log is stored for at least a year from that point and deleted at the latest three years from the same point. Two periods measured from one origin, the later longer than the earlier, do not collide; they bound a retention window, and the later limit is simply the end of it. Every collision the model finds in this instance is therefore erasure-driven, which is the ordinary bi-lateral conflict the literature already describes, not the structure this thesis is about.
 
@@ -1342,11 +1453,11 @@ This sharpens the contribution and narrows it at the same time. It suggests that
 
 Three limits belong with the result. The instance is illustrative and not empirical: no Norwegian police data was obtained, no operational retention practice was observed, and the record population was generated exactly as elsewhere in the demonstration. The provision does not state in words when either period begins; that both run from the log entry is a reading of the sentence's own syntax, and a reader who requires the anchor to be expressly fixed will find that Section 17 does not fix it. And whether the mechanism of Chapter 4 transfers to a record-level ceiling in a policing context is a design question this thesis does not open. What the instance establishes is narrower and sufficient: that the collision at the centre of this thesis depends on where a ceiling is anchored, and that a statute pairing a floor with a longer ceiling from a single origin does not produce it.
 
-## 6.10 Boundaries as Contribution
+## 6.11 Boundaries as Contribution
 
 The thesis makes one bounded claim and prices every limitation into it in advance. The proofs are informal, not machine-checked. The demonstration covers generated instances under one seed, not all instances. Key destruction is simulated in program state and says nothing about deployment assurance. The synthetic records carry US Core profiles, not Norwegian ones. The cryptographic primitives are established technique, not novel construction. The closest prior art is a patent claiming key-expiry selection for retention-purge conflicts, disclosed and distinguished (Chapter 2, Section 2.4; Chapter 4, Section 4.10). The interpretive move at the centre of the thesis is an argument without authority behind it. None of these was claimed, so none of them reduces what was: a contribution that states its boundaries can be checked at them.
 
-## 6.11 Summary
+## 6.12 Summary
 
 The thesis establishes that audit-retention floors, the right to erasure and the deletion ceiling conflict only under an assumption about verifiability, and not because of the obligations themselves; that, on the broad reading of Article 68(12) and for logs kept at patient-record granularity, the conflict arises inside the European Health Data Space Regulation with no data subject acting; that a ceiling collides with a floor exactly when Proposition 3 says, and that relocation escapes the ceiling but not the right (Proposition 4). It exhibits the mechanism that dissolves the conflict and demonstrates Propositions 1 and 2 executably with an independent cross-check.
 
@@ -1382,9 +1493,9 @@ Four contributions are claimed, each bounded.
 
 *A formal characterisation of the tri-lateral retention conflict.* The general method of treating legal compliance as a satisfiability problem is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023) and is not claimed here. What is new is its application to a retention system combining floors, a subject-triggered right, and a ceiling, and the isolation of verifiability semantics as the parameter that determines feasibility. The most recent systematisation of the cryptographic-erasure literature, an unreviewed preprint cited here as corroboration rather than authority, names erasure under multi-regime retention conflict among five open problems for the field (Aikebaier, 2026); this thesis addresses that problem in one regulatory setting.
 
-*Feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the status-quo semantics; Proposition 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Proposition 3 gives the condition under which a ceiling and a floor collide, which the cross-sector test of Chapter 6, Section 6.9a confirmed on a statute outside health; Proposition 4 shows why relocation answers the ceiling and not the right. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.
+*Feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the status-quo semantics; Proposition 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Proposition 3 gives the condition under which a ceiling and a floor collide, which the cross-sector test of Chapter 6, Section 6.10 confirmed on a statute outside health; Proposition 4 shows why relocation answers the ceiling and not the right. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.
 
-*A mechanism specification with its residue analysed.* The mechanism applies established primitives (cryptographic erasure as recognised in NIST SP 800-88 Revision 2, hiding commitments, and, without implementing them, dynamic accumulators) and claims no cryptographic novelty. What it adds to the practitioner crypto-shredding pattern is verifiability: an auditor can establish what was invalidated, when, on what ground, and by whom, and can check each of those entries against the root of a Merkle log (Chapter 5, Section 5.6). The key hierarchy is executed with real AES-256-GCM in an optional module of the artefact. The residue it leaves is characterised as pseudonymised rather than anonymous by the Norwegian threshold, and designed to the corridor that the European Data Protection Board's finalised Guidelines 02/2025 establish.
+*A mechanism specification with its residue analysed.* The mechanism applies established primitives (cryptographic erasure as recognised in NIST SP 800-88 Revision 2, hiding commitments, and, without implementing them, dynamic accumulators) and claims no cryptographic novelty. What it adds to the practitioner crypto-shredding pattern is verifiability: an auditor can establish what was invalidated, when, on what ground, and by whom, and can check each of those entries against the root of a Merkle log (Chapter 5, Section 5.7). The key hierarchy is executed with real AES-256-GCM in an optional module of the artefact. The residue it leaves is characterised as pseudonymised rather than anonymous by the Norwegian threshold, and designed to the corridor that the European Data Protection Board's finalised Guidelines 02/2025 establish.
 
 *An integration analysis against verified Norwegian infrastructure.* The mechanism is placed at the two narrowest points at which it achieves its purpose: the audit-repository step of the MyHealth@EU transmission flow, and the access-logging boundary of a Secure Processing Environment. It requires of the substrate nothing that the national criteria do not already demand. That constraint was derived from the documented fragmentation of Norwegian practice rather than assumed. Table 4.1 traces the mechanism to each requirement of the regulation and of the Joint Action's specification it touches, and places it in the activity-monitoring component of the specification's reference architecture.
 
@@ -1414,7 +1525,7 @@ Four lines follow, the first immediate and the remainder in ascending order of d
 
 *Public verifiability of deletion certificates.* The boundary identified in Chapter 6, Section 6.3 would move if a deletion could be proven rather than attested. Proof-of-secure-erasure protocols pursue this in the classical setting under relaxed isolation assumptions (Bursuc, Gil-Pons, Mauw, & Trujillo-Rasua, 2024), and quantum encryption with certified deletion produces a certificate whose public verifiability its authors identify as open (Broadbent & Islam, 2020). Were public verifiability achieved, the invalidation entry specified here could carry a proof in place of an attestation, and the mechanism's guarantee would strengthen from conditional to demonstrable with no change to the model.
 
-*Generalisation beyond health data.* The structure the model captures (one or more retention floors, a subject-triggered erasure right, and a deletion ceiling) is not obviously specific to health, and Chapter 6, Section 6.9a ran one test outside it: Norwegian police register law pairs a floor with a longer ceiling from the same event and, as Proposition 3 predicts, produces no collision without an erasure request. Proposition 3 turns the search for other instances into a test that can be applied to a statute's text: look for a ceiling no longer than a floor and anchored to a different event. Applying it across regulated sectors, financial record-keeping first, would determine whether the contribution is a result about one regulation or a method for a class of them.
+*Generalisation beyond health data.* The structure the model captures (one or more retention floors, a subject-triggered erasure right, and a deletion ceiling) is not obviously specific to health, and Chapter 6, Section 6.10 ran one test outside it: Norwegian police register law pairs a floor with a longer ceiling from the same event and, as Proposition 3 predicts, produces no collision without an erasure request. Proposition 3 turns the search for other instances into a test that can be applied to a statute's text: look for a ceiling no longer than a floor and anchored to a different event. Applying it across regulated sectors, financial record-keeping first, would determine whether the contribution is a result about one regulation or a method for a class of them.
 
 ## 7.6 Closing
 
@@ -1617,11 +1728,11 @@ The artefact is publicly available in two forms.
 
 The repository is the citable artefact. It contains five Python modules, the eight-bundle Synthea subset the realism layer reads, a recorded console run for every command, and this appendix. The live application is a convenience for readers who prefer not to clone and run: it executes the same unmodified source, and its first tab asserts that the run reproduces the figures reported in Chapter 5, displaying a failure notice rather than results if it does not.
 
-The demonstration presents five tabs. Tab 1 runs the thesis configuration and reproduces Tables 5.1 and 5.3. Tab 2 varies population parameters as a teaching aid and is explicitly outside the thesis claims. Tab 3 runs the realism layer and reproduces Table 5.4. Tab 4 runs the Norwegian context modules, which are illustrative and report no thesis figure. Tab 5 runs the two robustness checks: the independent exhaustive cross-check of Section 5.4 and the erasure-response-period witness of Section 5.5a.
+The demonstration presents six tabs. Tab 1 runs the thesis configuration, reproduces Tables 5.3 and 5.6, and shows the audit-log integrity check and both tamper tests of Section 5.7. Tab 2 varies population parameters as a teaching aid and is explicitly outside the thesis claims. Tab 3 runs the realism layer and reproduces Table 5.7. Tab 4 runs the Norwegian context modules, which are illustrative and report no thesis figure. Tab 5 runs the robustness checks: the independent exhaustive cross-check of Section 5.5, the erasure-response-period witness of Section 5.6, and the optional envelope-encryption module of Section 5.8. Tab 6 evaluates the condition of Proposition 3 for any floor and ceiling, with Article 68(12) and politiregisterloven § 17 as presets.
 
 A note on durability. Hosted applications are not archival objects: the live demonstration may be withdrawn or may sleep after inactivity, and no claim in this thesis depends on its availability. Every result reported here is reproducible from the code listed below by executing a single command on any machine with Python installed, which is the form in which the artefact should be assessed.
 
-## A.1b Contents
+## A.2 Contents
 
 | File | Purpose | Lines |
 |---|---|---|
@@ -1629,7 +1740,7 @@ A note on durability. Hosted applications are not archival objects: the live dem
 | `synthea_layer.py` | Realism layer — substitutes Synthea-generated FHIR R4 payloads and compares every reported figure against the constructed-payload run | 152 |
 | `norwegian_layer.py` | Three Norwegian record classes, parallel to the thesis and reporting no thesis figure | 135 |
 | `cross_sector_check.py` | Cross-sector instance drawn from politiregisterloven § 17 | 110 |
-| `app.py` | Five-tab demonstration viewer over the artefact, never a source of results | 530 |
+| `app.py` | Six-tab demonstration viewer over the artefact, never a source of results | 671 |
 | `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |
 | `data/synthea_subset/` | Eight untrimmed Synthea bundles from the reported cohort, so a reader can run the realism layer without regenerating it | 8 files, 40 MB |
 | `docs/expected_trf_output.txt` | Recorded console run of the checker | — |
@@ -1643,13 +1754,13 @@ A note on durability. Hosted applications are not archival objects: the live dem
 
 Every command has a recorded run committed beside it. A reader who executes a command and diffs the result against its recorded file can distinguish a changed file from a changed result, which is the distinction that matters when a figure disagrees with the text.
 
-Two files are *not* included and the reason is stated rather than omitted: the full 98-bundle Synthea cohort (314 MB) and the Synthea jar (197 MB). Both are regenerable from the commands in A.3, deterministically, under the seeds given. The eight-bundle subset that is included is drawn from that cohort and is sufficient to run the realism layer; Chapter 5, Section 5.7 reports the comparison at both cohort sizes and finds every figure identical.
+Two files are *not* included and the reason is stated rather than omitted: the full 98-bundle Synthea cohort (314 MB) and the Synthea jar (197 MB). Both are regenerable from the commands in A.5, deterministically, under the seeds given. The eight-bundle subset that is included is drawn from that cohort and is sufficient to run the realism layer; Chapter 5, Section 5.8 reports the comparison at both cohort sizes and finds every figure identical.
 
-## A.2 Environment and generation provenance
+## A.3 Environment and generation provenance
 
-The synthetic cohort was generated by the official Synthea release jar, downloaded from the project's own GitHub releases and executed with the command in Section A.3. Generation was carried out in a Linux environment with OpenJDK 21 rather than under Windows PowerShell, which does not affect the output: Synthea is deterministic under fixed population and clinician seeds, and produces byte-identical bundles in any environment with a compatible JVM. The bundles carry Synthea's own resource-identifier namespace, its `disability-adjusted-life-years` Patient extension, US Core profile conformance and its default Massachusetts demographics, all of which are verifiable by inspecting any bundle.
+The synthetic cohort was generated by the official Synthea release jar, downloaded from the project's own GitHub releases and executed with the command in Section A.5. Generation was carried out in a Linux environment with OpenJDK 21 rather than under Windows PowerShell, which does not affect the output: Synthea is deterministic under fixed population and clinician seeds, and produces byte-identical bundles in any environment with a compatible JVM. The bundles carry Synthea's own resource-identifier namespace, its `disability-adjusted-life-years` Patient extension, US Core profile conformance and its default Massachusetts demographics, all of which are verifiable by inspecting any bundle.
 
-## A.2b Software environment
+## A.4 Software environment
 
 ```text
 OS            Ubuntu 24.04
@@ -1662,9 +1773,9 @@ The checker has no third-party dependencies. This is deliberate: a reader should
 
 ---
 
-## A.3 Exact commands
+## A.5 Exact commands
 
-*1. Run the feasibility checker (produces every figure in Chapter 5, Sections 5.3–5.6):*
+*1. Run the feasibility checker (produces every figure in Chapter 5, Sections 5.3–5.7):*
 
 ```bash
 python3 trf_checker.py
@@ -1693,7 +1804,7 @@ java -jar ../synthea.jar \
 
 `-s` sets the population seed and `-cs` the clinician seed; both are fixed to the thesis seed so the cohort is reproducible. The run yields 98 usable patient bundles from 100 requested. Output lands in `synthea_run/output/fhir/`.
 
-*4. Run the realism layer and the payload-provenance comparison (produces Table 5.4):*
+*4. Run the realism layer and the payload-provenance comparison (produces Table 5.7):*
 
 ```bash
 python3 synthea_layer.py
@@ -1701,7 +1812,7 @@ python3 synthea_layer.py
 
 Looks for bundles in `./synthea_run/output/fhir/` first and falls back to `./data/synthea_subset/`, so it runs against either the regenerated cohort or the subset shipped with the artefact. Reports both runs side by side and flags any divergence.
 
-*5. Run the erasure-response-period witness (produces Table 5.2a):*
+*5. Run the erasure-response-period witness (produces Table 5.5):*
 
 ```bash
 python3 trf_checker.py --delta-witness
@@ -1716,7 +1827,7 @@ python3 norwegian_layer.py
 python3 cross_sector_check.py
 ```
 
-The first builds the NO-XB, NO-SPE and NO-JOURNAL classes and walks through one case per class. The second builds the politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a.
+The first builds the NO-XB, NO-SPE and NO-JOURNAL classes and walks through one case per class. The second builds the politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10.
 
 *7. Run the demonstration viewer locally:*
 
@@ -1731,15 +1842,15 @@ streamlit run app.py
 python3 trf_checker.py | diff - docs/expected_trf_output.txt && echo identical
 ```
 
-The same form applies to each of the five recorded runs listed in A.1b. A difference means a file changed, not that the result changed.
+The same form applies to each of the five recorded runs listed in A.2. A difference means a file changed, not that the result changed.
 
 ---
 
-## A.4 What the code does
+## A.6 What the code does
 
 ### `trf_checker.py`
 
-Implements the TRF Model of Chapter 4 directly. Records are the seven-element tuples of Section 4.3, with the metadata split into accessor fields and subject fields. A Secure Processing Environment record carries a researcher and a permit rather than a clinician and a contact point, and its payload stands for the logged activity; a cross-border record's payload stands for the demographic query that the IHE patient-discovery transaction puts into the audit message. Two record classes are generated: cross-border audit records with a 120-month floor, and Secure Processing Environment access-log records with a 12-month floor and the Article 68(12) ceiling. Generation parameters are listed in full in Chapter 5, Table 5.0.
+Implements the TRF Model of Chapter 4 directly. Records are the seven-element tuples of Section 4.3, with the metadata split into accessor fields and subject fields. A Secure Processing Environment record carries a researcher and a permit rather than a clinician and a contact point, and its payload stands for the logged activity; a cross-border record's payload stands for the demographic query that the IHE patient-discovery transaction puts into the audit message. Two record classes are generated: cross-border audit records with a 120-month floor, and Secure Processing Environment access-log records with a 12-month floor and the Article 68(12) ceiling. Generation parameters are listed in full in Chapter 5, Table 5.2.
 
 Three components matter for the thesis's claims:
 
@@ -1750,50 +1861,50 @@ Three components matter for the thesis's claims:
 
 Cryptographic operations use `hashlib` only. Commitments are salted (`SHA-256(salt ‖ payload)`) because Chapter 4, Section 4.9 establishes that an unsalted hash of a low-entropy clinical payload would itself remain personal data. By default `make_salt()` derives each salt from the record identifier so that runs reproduce exactly; `--random-salts` draws them from `os.urandom` instead and gives the same results. The derivation is for reproducibility only: a production deployment must draw each salt from a cryptographically secure random source, since a salt derivable from the record identifier offers no hiding against an adversary who knows the derivation.
 
-Key destruction is modelled as setting the key reference to `None`, and deletion of the ciphertext as setting the payload to `None`. This demonstrates the mechanism's logic and demonstrates nothing about deployment assurance: a limitation stated in Chapter 5, Section 5.7 and treated in Chapter 6.
+Key destruction is modelled as setting the key reference to `None`, and deletion of the ciphertext as setting the payload to `None`. This demonstrates the mechanism's logic and demonstrates nothing about deployment assurance: a limitation stated in Chapter 5, Section 5.8 and treated in Chapter 6.
 
 ### `synthea_layer.py`
 
 Replaces the constructed payload strings with real FHIR R4 resources drawn from Synthea bundles (one clinical resource per bundle, from `Condition`, `Observation`, `MedicationRequest`, `AllergyIntolerance`, `Immunization`, or `Procedure`), recomputes each commitment over the real payload, and leaves every timing quantity untouched. It then runs both populations through the same checks and prints them side by side.
 
-The expected result, and the observed one, is that every reported figure is identical while all 200 commitments differ. Mean payload size rises from 43 bytes to 891 with the committed subset (to 1,006 with the full cohort, recorded on 28 September when the constructed payloads averaged 35 bytes; see A.11). The model reads timing and accessibility, never payload content; running the comparison rather than asserting the invariance lets a reader see the claim tested against inputs that demonstrably changed.
+The expected result, and the observed one, is that every reported figure is identical while all 200 commitments differ. Mean payload size rises from 43 bytes to 891 with the committed subset (to 1,006 with the full cohort, recorded on 28 September when the constructed payloads averaged 35 bytes; see A.17). The model reads timing and accessibility, never payload content; running the comparison rather than asserting the invariance lets a reader see the claim tested against inputs that demonstrably changed.
 
 ---
 
-## A.5 Data provenance
+## A.7 Data provenance
 
 All data used anywhere in this thesis is synthetic. No real patient data was requested, obtained, or processed at any point.
 
-The cohort is generated by Synthea (Walonoski et al., 2018), an open-source synthetic patient generator. Synthea's default export conforms to the *US Core* implementation guide with United States demographic, geographic, and care-pattern parameters. The FHIR version is *R4*, which matches the version the Norwegian basisprofiler constrain; the *profiles* are not Norwegian, and no claim of Norwegian clinical representativeness is made for these records. The invariance result of Table 5.4 establishes that this mismatch cannot affect any reported figure. The thesis's Norwegian grounding rests on the infrastructure analysis of Chapter 4, Section 4.11.
+The cohort is generated by Synthea (Walonoski et al., 2018), an open-source synthetic patient generator. Synthea's default export conforms to the *US Core* implementation guide with United States demographic, geographic, and care-pattern parameters. The FHIR version is *R4*, which matches the version the Norwegian basisprofiler constrain; the *profiles* are not Norwegian, and no claim of Norwegian clinical representativeness is made for these records. The invariance result of Table 5.7 establishes that this mismatch cannot affect any reported figure. The thesis's Norwegian grounding rests on the infrastructure analysis of Chapter 4, Section 4.11.
 
-The eight bundles in `data/synthea_subset/` are untrimmed output from that cohort. With the subset the mean payload is 891 bytes rather than the 1,006 bytes of the full cohort, because a different set of clinical resources is drawn; Chapter 5, Section 5.7 reports both and every other figure is identical.
+The eight bundles in `data/synthea_subset/` are untrimmed output from that cohort. With the subset the mean payload is 891 bytes rather than the 1,006 bytes of the full cohort, because a different set of clinical resources is drawn; Chapter 5, Section 5.8 reports both and every other figure is identical.
 
 ---
 
-## A.6 Integrity record
+## A.8 Integrity record
 
 Results reported in Chapters 4 and 5 and confirmed by execution:
 
 | Result | Value | Where reported |
 |---|---|---|
-| Semantics I — records with ≥1 violation | 90 / 200 | Table 5.1 |
+| Semantics I — records with ≥1 violation | 90 / 200 | Table 5.3 |
 | Semantics I — total violations | 95 | §5.3 |
 | Violation decomposition | 41 C2-only, 44 C3-only, 5 both | §5.3 |
 | Corollary 1.2 witnesses (no erasure request) | 39 | §5.4 |
-| Exhaustive cross-check, three conflict cases | no satisfying assignment | Table 5.2 |
-| Exhaustive cross-check, control case | satisfying assignment exists | Table 5.2 |
-| Semantics II — records invalidated | 138 (52 Art 17, 86 Art 68(12)) | Table 5.3 |
-| Semantics II — total violations | 0 | Table 5.3 |
-| Synthea comparison — figures changed | none | Table 5.4 |
-| Synthea comparison — commitments changed | 200 / 200 | Table 5.4 |
-| Audit-log integrity | 200 / 200 records verify; both tamper tests fail V_II | §5.6 |
-| Reference commitment, record 100 | `678ade47c1e6dc03…` | §5.6 |
+| Exhaustive cross-check, three conflict cases | no satisfying assignment | Table 5.4 |
+| Exhaustive cross-check, control case | satisfying assignment exists | Table 5.4 |
+| Semantics II — records invalidated | 138 (52 Art 17, 86 Art 68(12)) | Table 5.6 |
+| Semantics II — total violations | 0 | Table 5.6 |
+| Synthea comparison — figures changed | none | Table 5.7 |
+| Synthea comparison — commitments changed | 200 / 200 | Table 5.7 |
+| Audit-log integrity | 200 / 200 records verify; both tamper tests fail V_II | §5.7 |
+| Reference commitment, record 100 | `678ade47c1e6dc03…` | §5.7 |
 
 The reference commitment is included so that a reader re-running the checker can confirm in one glance that their run matches the one reported. It changed once, on 3 October 2026, when the Secure Processing Environment payload was redefined as the logged activity (Chapter 4, Section 4.3). Under `--random-salts` it differs on every run, by design.
 
 ---
 
-## A.7 Known limitations of the artefact
+## A.9 Known limitations of the artefact
 
 Stated here so that they are not inferred from silence:
 
@@ -1806,7 +1917,7 @@ Stated here so that they are not inferred from silence:
 
 ---
 
-## A.8 Source listing: `trf_checker.py`
+## A.10 Source listing: `trf_checker.py`
 
 The complete source of the feasibility checker, reproduced as executed. It depends on the Python standard library only. Line count: 533.
 
@@ -1868,7 +1979,7 @@ def make_salt(rid: int) -> bytes:
     """Per-record 16-byte salt. By default derived from the record id so that every run
     reproduces exactly; that derivation is for reproducibility only and gives no hiding
     against an adversary who knows it. --random-salts draws each salt from os.urandom,
-    which is what a deployment must do (Appendix A, A.4)."""
+    which is what a deployment must do (Appendix A, A.6)."""
     if RANDOM_SALTS:
         return os.urandom(16)
     return bytes([(rid * 7 + i) % 256 for i in range(16)])
@@ -2307,7 +2418,7 @@ if __name__ == "__main__":
 
 
 # ----------------------------------------------------------------------
-# Extended response period witness (Chapter 5, Section 5.5a)
+# Extended response period witness (Chapter 5, Section 5.6)
 # GDPR Art 12(3) permits extension of the one-month response period by a
 # further two months. The propositions are stated for arbitrary finite delta;
 # this runs the model at delta = 3 to witness that claim rather than assert it.
@@ -2346,7 +2457,7 @@ if __name__ == "__main__" and "--delta-witness" in __import__("sys").argv:
               f"{r['invalidated']:>13}")
 ```
 
-## A.9 Source listing: `synthea_layer.py`
+## A.11 Source listing: `synthea_layer.py`
 
 The realism layer, reproduced as executed.
 
@@ -2505,7 +2616,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## A.9b Source listing: `norwegian_layer.py`
+## A.12 Source listing: `norwegian_layer.py`
 
 The Norwegian context module, reproduced as executed. It imports `trf_checker.py` without modifying it and changes nothing the thesis reports: it varies only the retention floor, the pathway, and the arrival of erasure requests and permit expiries. Line count: 135.
 
@@ -2649,9 +2760,9 @@ if __name__ == "__main__":
 
 ---
 
-## A.9c Source listing: `cross_sector_check.py`
+## A.13 Source listing: `cross_sector_check.py`
 
-The cross-sector instance discussed in Chapter 6, Section 6.9a. It takes the floor and ceiling of politiregisterloven § 17 and runs them through the same unmodified model. Line count: 110.
+The cross-sector instance discussed in Chapter 6, Section 6.10. It takes the floor and ceiling of politiregisterloven § 17 and runs them through the same unmodified model. Line count: 110.
 
 ```python
 """
@@ -2768,7 +2879,7 @@ if __name__ == "__main__":
 
 ---
 
-## A.9d Source listing: `app.py`
+## A.14 Source listing: `app.py`
 
 The demonstration viewer. It is a viewer over the artefact and never a source of results: every figure it displays comes from executing one of the modules above. Tab 1 self-asserts the reported figures and shows a failure banner rather than results if the run disagrees with Chapter 5. Line count: 530.
 
@@ -2779,7 +2890,7 @@ TRF Feasibility Checker — online demonstration (viewer over the verified artef
 THESIS INTEGRITY NOTE
   Tab 1 executes trf_checker.py UNMODIFIED under seed 20260915. Every figure it
   shows is the figure reported in Chapter 5. Tab 3 executes the Synthea realism
-  layer unmodified and reproduces Table 5.4. Tab 2 is a teaching aid that varies
+  layer unmodified and reproduces Table 5.7. Tab 2 is a teaching aid that varies
   population parameters and is NOT part of any thesis claim.
 
   The app is a viewer over the artefact, never a source of results. If a number
@@ -2799,14 +2910,16 @@ st.set_page_config(page_title="TRF Feasibility Checker", layout="wide")
 
 st.title("Tri-Lateral Retention Feasibility Model")
 st.caption(
-    "Live demonstration of the executable witness for Propositions 1 and 2. "
+    "Live demonstration of the executable witness for Propositions 1 and 2, "
+    "with an explorer for Proposition 3. "
     "Abbasia, MSc Sustainable Energy Logistics, Høgskolen i Molde, 2026. "
     "Seed 20260915 throughout the thesis run."
 )
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(
+tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(
     ["Thesis run", "Exploration — not thesis claims", "Synthea realism layer",
-     "Norwegian context — illustrative", "Robustness and cross-checks"]
+     "Norwegian context — illustrative", "Robustness and cross-checks",
+     "Where the ceiling is anchored"]
 )
 
 
@@ -2851,7 +2964,8 @@ def measure(records):
 with tab1:
     st.subheader("Thesis configuration — seed 20260915, n = 200")
     st.info(
-        "Executes the checker exactly as reported in Chapter 5, Tables 5.1 to 5.3. "
+        "Executes the checker exactly as reported in Chapter 5, Tables 5.3 and 5.6, "
+        "and the audit-log integrity check of Section 5.7. "
         "Deterministic: this run is byte-identical to the one in the thesis."
     )
 
@@ -2865,7 +2979,7 @@ with tab1:
         c3.metric("Corollary 1.2 witnesses", M["cor12"])
         c4.metric("Violations — Semantics II", M["sem2_total"])
 
-        st.markdown("**Table 5.1 — violations under Semantics I**")
+        st.markdown("**Table 5.3 — violations under Semantics I**")
         st.table({
             "Record class": ["Cross-border audit (F = 120)",
                              "SPE access log (F = 12)", "Total"],
@@ -2877,13 +2991,14 @@ with tab1:
         st.markdown(
             "**Corollary 1.2 — infeasible with no erasure request whatsoever.** "
             "These records received no Article 17 request. The collision is between "
-            "Article 73(1)(e) and Article 68(12) alone, conditional on the reading "
-            "of Article 68(12) defended in Chapter 4, Section 4.6."
+            "Article 73(1)(e) and Article 68(12) alone, on the broad reading of "
+            "Article 68(12) and for logs kept at patient-record granularity "
+            "(Chapter 4, Section 4.6). On the narrow reading these witnesses lapse."
         )
         for w in M["witnesses"]:
             st.code(w["detail"], language="text")
 
-        st.markdown("**Table 5.3 — Semantics II**")
+        st.markdown("**Table 5.6 — Semantics II**")
         st.table({
             "Measure": ["Records invalidated", "— ground: GDPR Art. 17(1)",
                         "— ground: EHDS Art. 68(12)", "Records with violation",
@@ -2908,11 +3023,41 @@ with tab1:
             language="text",
         )
 
-        if M["sem1_total"] == 95 and M["sem2_total"] == 0 and M["cor12"] == 39:
+        st.markdown("**Audit-log integrity — Chapter 5, Section 5.7**")
+        st.write(
+            "Every access, invalidation and subject-link removal is a leaf of an "
+            "append-only Merkle log (RFC 6962 hashing). A record counts as verifiable "
+            "under Semantics II only if each of its entries passes an inclusion proof "
+            "against the log root. Leaves hold the accessor fields and the commitment, "
+            "never the payload or the patient link, so the log never needs erasing."
+        )
+        n_ok = sum(1 for r in records if trf.integrity(r)[0])
+        saved = demo.m["actor"]
+        demo.m["actor"] = "R-999"
+        ok_t, why_t = trf.V_II(demo, demo.t_a)
+        demo.m["actor"] = saved
+        saved_g = demo.iota["ground"]
+        demo.iota["ground"] = "none"
+        ok_g, why_g = trf.V_II(demo, demo.t_a)
+        demo.iota["ground"] = saved_g
+        ok_r = trf.V_II(demo, demo.t_a)[0]
+        i1, i2, i3 = st.columns(3)
+        i1.metric("Records verifying", f"{n_ok}/{len(records)}")
+        i2.metric("Tamper: actor altered", "fails" if not ok_t else "PASSES")
+        i3.metric("Tamper: ground altered", "fails" if not ok_g else "PASSES")
+        st.code(
+            f"rid={demo.rid} actor R-008 -> R-999 : V_II={ok_t}  ({why_t})\n"
+            f"rid={demo.rid} ground -> 'none'    : V_II={ok_g}  ({why_g})\n"
+            f"after restoring both          : V_II={ok_r}",
+            language="text",
+        )
+
+        if (M["sem1_total"] == 95 and M["sem2_total"] == 0 and M["cor12"] == 39
+                and n_ok == len(records) and not ok_t and not ok_g and ok_r):
             st.success(
                 "Matches the thesis: 95 violations across 90 records under "
                 "Semantics I, 39 Corollary 1.2 witnesses, 0 violations under "
-                "Semantics II."
+                "Semantics II, 200/200 records verifying, both tamper tests failing."
             )
         else:
             st.error(
@@ -3014,7 +3159,7 @@ with tab3:
                     ("invalidated", "Records invalidated"),
                     ("sem2_records", "Semantics II — records with violation"),
                     ("sem2_total", "Semantics II — total violations")]
-            st.markdown("**Table 5.4 — constructed against Synthea payloads**")
+            st.markdown("**Table 5.7 — constructed against Synthea payloads**")
             st.table({
                 "Measure": [label for _, label in keys],
                 "Constructed": [Mb[k] for k, _ in keys],
@@ -3111,7 +3256,7 @@ with tab4:
                     "invalidated": sum(1 for r in sub if r.iota),
                     "Sem II violations": sum(len(v2[r.rid]) for r in sub),
                 })
-            st.dataframe(rows, use_container_width=True, hide_index=True)
+            st.dataframe(rows, width="stretch", hide_index=True)
 
             st.markdown("**One case per class**")
             for k in sorted({r.m["klasse"] for r in recs}):
@@ -3187,7 +3332,7 @@ with tab4:
 
 
 # ----------------------------------------------------------------------
-# Tab 5 — Robustness and cross-checks (Chapter 5 §5.4 and §5.5a)
+# Tab 5 — Robustness and cross-checks (Chapter 5 §5.5, §5.6 and §5.8)
 # ----------------------------------------------------------------------
 
 with tab5:
@@ -3198,7 +3343,7 @@ with tab5:
         "implementation, or on one arbitrary parameter."
     )
 
-    st.markdown("**Independent exhaustive cross-check — Chapter 5 §5.4**")
+    st.markdown("**Independent exhaustive cross-check — Chapter 5 §5.5**")
     st.write(
         "`brute_force_semantics_I()` is written separately from "
         "`check_semantics_I()`. It takes the constraint definitions directly and "
@@ -3231,7 +3376,7 @@ with tab5:
                              "expected": expected,
                              "agrees": "yes" if got == expected else "NO"})
                 ok = ok and got == expected
-        st.dataframe(rows, use_container_width=True, hide_index=True)
+        st.dataframe(rows, width="stretch", hide_index=True)
         if ok:
             st.success(
                 "Both implementations agree on every case, and the control "
@@ -3246,7 +3391,7 @@ with tab5:
             )
 
     st.divider()
-    st.markdown("**Erasure response period — Chapter 5 §5.5a**")
+    st.markdown("**Erasure response period — Chapter 5 §5.6**")
     st.write(
         "The model sets δ, the controller's response period for an erasure "
         "request, to one month. GDPR Article 12(3) allows an extension to three "
@@ -3265,7 +3410,7 @@ with tab5:
               "Corollary 1.2 witnesses": r["cor12"],
               "invalidated": r["invalidated"],
               "Sem II violations": r["sem2_total"]} for r in rows],
-            use_container_width=True, hide_index=True,
+            width="stretch", hide_index=True,
         )
         if all(r["sem2_total"] == 0 for r in rows) and all(
                 r["sem1_total"] > 0 for r in rows):
@@ -3277,29 +3422,136 @@ with tab5:
             )
         else:
             st.warning(
-                "The pattern differs from what Chapter 5 §5.5a reports. Check "
+                "The pattern differs from what Chapter 5 §5.6 reports. Check "
                 "the module before citing this.",
                 icon="⚠️",
             )
+
+    st.divider()
+    st.markdown("**Real envelope encryption — optional module, Chapter 5 §5.8**")
+    st.write(
+        "The checker models key destruction as removing a reference. This module "
+        "repeats the lifecycle with real AES-256-GCM: each record under its own data "
+        "key, each data key wrapped under a key-encrypting key, and the wrapped key "
+        "destroyed at the record's invalidation month. Keys are random on every run; "
+        "the counts are not."
+    )
+    if st.button("Run envelope encryption", key="run_crypto"):
+        try:
+            import crypto_envelope as ce
+
+            with st.spinner("Encrypting 200 records, destroying keys, decrypting ..."):
+                recs = trf.generate()
+                custody = ce.Custody()
+                store = {r.rid: ce.encrypt(custody, r.rid, r.payload) for r in recs}
+                inval = [r for r in recs if r.t_invalidation() < trf.INF]
+                for r in inval:
+                    custody.destroy(r.rid)
+                readable = refused = 0
+                for r in recs:
+                    try:
+                        ce.decrypt(custody, r.rid, *store[r.rid])
+                        readable += 1
+                    except KeyError:
+                        refused += 1
+            e1, e2, e3 = st.columns(3)
+            e1.metric("Records encrypted", len(recs))
+            e2.metric("Refused after key destruction", refused)
+            e3.metric("Still readable", readable)
+            if refused == len(inval) == 138 and readable == 62:
+                st.success(
+                    "Exactly the 138 invalidated records refuse to decrypt and the "
+                    "other 62 read, as Appendix A.22 records. Unreadability follows "
+                    "from destruction; that destruction happened in hardware is still "
+                    "an attestation (Chapter 6, Section 6.3).",
+                    icon="✅",
+                )
+            else:
+                st.error("Counts differ from Appendix A.22. Investigate before citing.")
+        except ImportError:
+            st.info("The `cryptography` package is not installed in this deployment.")
 
     st.divider()
     st.markdown("**What this artefact does not do**")
     st.write(
         "It does not connect to any National Contact Point, implement the "
         "OpenNCP transmission flow, evaluate consent policies, or implement any "
-        "zero-knowledge proof system. Key destruction is simulated by removing a "
-        "reference in program state: that demonstrates the mechanism's logic and "
+        "zero-knowledge proof system, and it does not implement the terminal "
+        "transition at floor expiry. Key destruction is simulated by removing a "
+        "reference in program state, or in the optional module by discarding a "
+        "wrapped key in memory: either demonstrates the mechanism's logic and "
         "says nothing about whether destruction can be assured in deployment. "
-        "Chapter 5 §5.7 and Chapter 6 state these limits in full."
+        "Chapter 5 §5.8 and Chapter 6 state these limits in full."
     )
+
+
+
+# ----------------------------------------------------------------------
+# Tab 6 — Proposition 3: where the ceiling is anchored (Chapter 4, Section 4.6)
+# ----------------------------------------------------------------------
+
+with tab6:
+    st.subheader("Where the ceiling is anchored — Proposition 3")
+    st.write(
+        "A retention floor of F months runs from the record's creation t(a). A deletion "
+        "ceiling of L months runs from an event e(a) at or after creation. Under plaintext "
+        "verifiability the two collide for a record exactly when e(a) + L <= t(a) + F. "
+        "A collision therefore needs L <= F; where the ceiling is anchored decides "
+        "whether the collision can be read from the text or only from each record's history."
+    )
+    preset = st.radio(
+        "Preset",
+        ["EHDS Art 73(1)(e) floor, Art 68(12) ceiling", "politiregisterloven § 17",
+         "Free"], horizontal=True)
+    if preset.startswith("EHDS"):
+        F0, L0, same0 = 12, 6, False
+    elif preset.startswith("politi"):
+        F0, L0, same0 = 12, 36, True
+    else:
+        F0, L0, same0 = 24, 12, False
+    F = st.slider("Floor F (months, from creation)", 1, 120, F0, key=f"F_{preset}")
+    L = st.slider("Ceiling L (months, from its anchor)", 1, 120, L0, key=f"L_{preset}")
+    same = st.checkbox("Ceiling anchored to creation, the same event as the floor",
+                       value=same0, key=f"same_{preset}")
+    if same:
+        if L > F:
+            st.success(f"L = {L} > F = {F}: no record collides. The two limits bound one "
+                       "retention window, readable from the text alone.", icon="✅")
+        else:
+            st.error(f"L = {L} <= F = {F}: every record collides, and the text "
+                     "contradicts itself on its face.", icon="🚨")
+    else:
+        if L > F:
+            st.success(f"L = {L} > F = {F}: no record collides, wherever its anchor "
+                       "event falls.", icon="✅")
+        else:
+            gap = F - L
+            st.warning(
+                f"L = {L} <= F = {F}: a record collides exactly when its anchor event "
+                f"falls within {gap} month(s) of creation (e(a) - t(a) <= {gap}). "
+                "Nothing in the text says which records those are; each record's "
+                "history does.", icon="⚠️")
+            offsets = list(range(0, F + 1))
+            st.bar_chart(
+                {"months of collision": [max(0, (t0 + F) - (t0 + d + L) + 1)
+                                         for t0, d in [(0, d) for d in offsets]]},
+                x_label="anchor event, months after creation",
+                y_label="months in which both apply")
+    st.caption(
+        "Article 68(12) is of the external-anchor kind: six months from permit expiry "
+        "against twelve from the log entry, so logs whose permit expires within six "
+        "months of the entry collide (Corollary 1.2). Section 17 of politiregisterloven "
+        "measures both limbs from the log entry with the ceiling longer, so it bounds a "
+        "window instead (Chapter 6, Section 6.10).")
 
 
 st.divider()
 st.caption(
     "This application is a viewer over the verified artefact. It is not a source "
     "of results. Tab 1, Tab 3 and Tab 5 reproduce figures reported in Chapter 5; "
-    "Tab 2 is outside the thesis claims, and Tab 4 is illustrative of the "
-    "Norwegian setting and not a thesis claim either. Source: trf_checker.py and "
+    "Tab 2 is outside the thesis claims, Tab 4 is illustrative of the "
+    "Norwegian setting and not a thesis claim either, and Tab 6 evaluates the "
+    "condition of Proposition 3 for any floor and ceiling you set. Source: trf_checker.py and "
     "synthea_layer.py, both unmodified, plus the Norwegian modules, which "
     "import the checker without modifying it."
 )
@@ -3307,7 +3559,7 @@ st.caption(
 
 ---
 
-## A.9e Source listing: `crypto_envelope.py`
+## A.15 Source listing: `crypto_envelope.py`
 
 The optional envelope-encryption module. Each record's payload is encrypted under its own AES-256-GCM data key; the data keys are wrapped under a key-encrypting key held in a custody object standing in for a hardware security module; at each record's invalidation month the wrapped key is destroyed; every record is then decrypted again. It is the only module with a dependency outside the standard library. Line count: 118.
 
@@ -3434,9 +3686,9 @@ if __name__ == "__main__":
 
 ---
 
-## A.10 Console output of the reported run
+## A.16 Console output of the reported run
 
-Verbatim output of `python3 trf_checker.py` under seed 20260915. Every figure in Chapter 5, Tables 5.1 to 5.3, appears here.
+Verbatim output of `python3 trf_checker.py` under seed 20260915. Every figure in Chapter 5, Tables 5.3 to 5.6, appears here.
 
 ```text
 ==========================================================================
@@ -3506,11 +3758,11 @@ RESULT  Semantics II: 0 violations across 0 records  -> FEASIBLE
 ==========================================================================
 ```
 
-## A.11 Console output of the payload-provenance comparison, full cohort
+## A.17 Console output of the payload-provenance comparison, full cohort
 
-Produced by command 4 against the regenerated 98-bundle cohort. This is the run Chapter 5, Section 5.7 reports at a mean payload of 1,006 bytes. It was recorded on 28 September 2026, before the code revision of 3 October, and its constructed-payload mean (35 bytes) reflects the earlier constructed strings; no measure in it depends on them, as the subset run in A.11b, recorded after the revision, shows. Reproducing it requires regenerating the cohort with command 3, because the full cohort is 314 MB and is not committed.
+Produced by command 4 against the regenerated 98-bundle cohort. This is the run Chapter 5, Section 5.8 reports at a mean payload of 1,006 bytes. It was recorded on 28 September 2026, before the code revision of 3 October, and its constructed-payload mean (35 bytes) reflects the earlier constructed strings; no measure in it depends on them, as the subset run in A.21, recorded after the revision, shows. Reproducing it requires regenerating the cohort with command 3, because the full cohort is 314 MB and is not committed.
 
-Verbatim output of `python3 synthea_layer.py` against the full 98-bundle cohort. This is the source of Chapter 5, Table 5.4.
+Verbatim output of `python3 synthea_layer.py` against the full 98-bundle cohort. This is the source of Chapter 5, Table 5.7.
 
 ```text
 ==========================================================================
@@ -3543,9 +3795,9 @@ commitments differing between the two runs: 200/200   (expected 200 — same sal
 
 ---
 
-## A.12 Console output of the erasure-response-period witness
+## A.18 Console output of the erasure-response-period witness
 
-Produced by command 5. Reproduces Table 5.2a: the infeasibility survives the extension Article 12(3) GDPR permits.
+Produced by command 5. Reproduces Table 5.5: the infeasibility survives the extension Article 12(3) GDPR permits.
 
 ```text
 ==========================================================================
@@ -3620,7 +3872,7 @@ RESULT  Semantics II: 0 violations across 0 records  -> FEASIBLE
 
 ---
 
-## A.13 Console output of the Norwegian context module
+## A.19 Console output of the Norwegian context module
 
 Produced by the first command in 6. Illustrative of the Norwegian setting; no figure here is a thesis claim, and the module states so in its own output.
 
@@ -3668,9 +3920,9 @@ reproduced by running trf_checker.py on its own.
 
 ---
 
-## A.14 Console output of the cross-sector instance
+## A.20 Console output of the cross-sector instance
 
-Produced by the second command in 6, and discussed in Chapter 6, Section 6.9a. The zero in the second row is the finding: § 17 fixes both its limbs from the same origin, so it bounds a retention window rather than contradicting itself, and every collision the model finds is erasure-driven.
+Produced by the second command in 6, and discussed in Chapter 6, Section 6.10. The zero in the second row is the finding: § 17 fixes both its limbs from the same origin, so it bounds a retention window rather than contradicting itself, and every collision the model finds is erasure-driven.
 
 ```text
 ==========================================================================
@@ -3700,9 +3952,9 @@ design question this module does not answer.
 
 ---
 
-## A.11b Console output of the payload-provenance comparison, committed subset
+## A.21 Console output of the payload-provenance comparison, committed subset
 
-Produced by command 4 against the eight bundles committed at `data/synthea_subset/`, which is what a reader who clones the repository obtains without regenerating anything. Chapter 5, Section 5.7 reports both cohort sizes because one figure changes and the rest do not: the mean payload is 891 bytes here against 1,006 for the full cohort, while all six measures and all 200 differing commitments are identical. That the measures hold across cohort size and across payload repetition frequency is a stronger result than a single substitution would give.
+Produced by command 4 against the eight bundles committed at `data/synthea_subset/`, which is what a reader who clones the repository obtains without regenerating anything. Chapter 5, Section 5.8 reports both cohort sizes because one figure changes and the rest do not: the mean payload is 891 bytes here against 1,006 for the full cohort, while all six measures and all 200 differing commitments are identical. That the measures hold across cohort size and across payload repetition frequency is a stronger result than a single substitution would give.
 
 ```text
 ==========================================================================
@@ -3736,7 +3988,7 @@ commitments differing between the two runs: 200/200   (expected 200 — same sal
 
 ---
 
-## A.15 Console output of the envelope-encryption module
+## A.22 Console output of the envelope-encryption module
 
 Verbatim output of `python3 crypto_envelope.py`. Keys are random on every run; the counts are the same on every run. All 200 records decrypt before invalidation; after the 138 data keys due for destruction are destroyed, those 138 records are refused and the other 62 still read, and the ciphertext of an invalidated record opens under none of the surviving keys.
 

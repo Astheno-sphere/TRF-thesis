@@ -1,0 +1,962 @@
+[
+ {
+  "id": "P38-001",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "The structural analogy is precise rather than loose. A Norwegian patient summary moving from a Norwegian National Contact Point for eHealth to a Spanish point of care is a digital good crossing a jurisdictional boundary. It must satisfy the originating jurisdiction's audit and retention rules, the destination jurisdiction's clinical and consent rules, and any superordinate Union-level provisions. The audit log of the cross-border access event is the digital equivalent of the customs documentation that accompanies physical goods. The retention floor on that audit log is the digital equivalent of customs record-keeping. The Union Customs Code requires the person concerned to keep the documents and information on which a customs declaration rests \"for at least three years\", the period running from the end of the year in which the declaration is accepted or the procedure discharged, and extended while a correction, an appeal or court proceedings are pending (European Parliament and Council of the European Union, 2013, Article 51). The erasure obligation of Article 17 GDPR has its physical counterpart in destruction: customs authorities \"may require goods which have been presented to customs to be destroyed\" (Article 197). The two do not collide, because destruction reaches the goods and record-keeping reaches the documents, so the record of a destroyed consignment, including the fact of its destruction, is kept for the full period. That separation of the record from the thing recorded is what Semantics II does for the audit trail, where accountability attaches to the record of the access and of its payload's invalidation rather than to the payload's continued existence (Chapter 4, Section 4.5). Checked against the anchoring result of Chapter 6, Section 6.9a, the customs case confirms it from the other side: the destruction power is anchored to an external event, a customs decision, and would cross the record-keeping floor if it reached the documents; it does not, because it is confined to the goods. The analogy also marks where it stops. In customs the floor and the destruction act on different objects by design, whereas in an audit trail the personal data and the record of their processing begin in the same record, and the mechanism has to separate them.",
+  "new": "The structural analogy is precise rather than loose. A Norwegian patient summary moving from a Norwegian National Contact Point for eHealth to a Spanish point of care is a digital good crossing a jurisdictional boundary. It must satisfy the originating jurisdiction's audit and retention rules, the destination jurisdiction's clinical and consent rules, and any superordinate Union-level provisions. The audit log of the cross-border access event is the digital equivalent of the customs documentation that accompanies physical goods. The retention floor on that audit log is the digital equivalent of customs record-keeping. The Union Customs Code requires the person concerned to keep the documents and information on which a customs declaration rests \"for at least three years\", the period running from the end of the year in which the declaration is accepted or the procedure discharged, and extended while a correction, an appeal or court proceedings are pending (European Parliament and Council of the European Union, 2013, Article 51). The erasure obligation of Article 17 GDPR has its physical counterpart in destruction: customs authorities \"may require goods which have been presented to customs to be destroyed\" (Article 197). The two do not collide, because destruction reaches the goods and record-keeping reaches the documents, so the record of a destroyed consignment, including the fact of its destruction, is kept for the full period. That separation of the record from the thing recorded is what Semantics II does for the audit trail, where accountability attaches to the record of the access and of its payload's invalidation rather than to the payload's continued existence (Chapter 4, Section 4.5). Checked against the anchoring result of Chapter 6, Section 6.10, the customs case confirms it from the other side: the destruction power is anchored to an external event, a customs decision, and would cross the record-keeping floor if it reached the documents; it does not, because it is confined to the goods. The analogy also marks where it stops. In customs the floor and the destruction act on different objects by design, whereas in an audit trail the personal data and the record of their processing begin in the same record, and the mechanism has to separate them.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-002",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The limitation concerns profiles rather than versions. Synthea's default export conforms to the US Core implementation guide and draws its demographic, geographic, and care-pattern parameters from a United States population. The FHIR version therefore matches the version Norwegian basisprofiler constrain, but the profiles and the clinical content do not represent Norwegian practice, and this thesis makes no claim that they do. The consequence is bounded and is verified rather than assumed in Chapter 5, Section 5.7: because no constraint in the model reads the content of a payload, the demonstration's results are invariant to payload provenance, and Norwegian representativeness is required of the *infrastructure analysis* in Chapter 4 rather than of the generated records.",
+  "new": "The limitation concerns profiles rather than versions. Synthea's default export conforms to the US Core implementation guide and draws its demographic, geographic, and care-pattern parameters from a United States population. The FHIR version therefore matches the version Norwegian basisprofiler constrain, but the profiles and the clinical content do not represent Norwegian practice, and this thesis makes no claim that they do. The consequence is bounded and is verified rather than assumed in Chapter 5, Section 5.8: because no constraint in the model reads the content of a payload, the demonstration's results are invariant to payload provenance, and Norwegian representativeness is required of the *infrastructure analysis* in Chapter 4 rather than of the generated records.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-003",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The *feasibility checker* is the primary layer and the executable witness of the propositions. It constructs audit records as the tuples defined in Chapter 4, Section 4.3, in two classes: cross-border audit records carrying the ten-year floor, and Secure Processing Environment access-log records carrying the one-year floor and the six-month ceiling. It then generates randomised arrivals of erasure requests and permit expiries across a monthly time horizon, and evaluates the three constraints under each semantics in turn, reporting violations. The two classes differ only in their floor parameter and in whether the ceiling applies, which is what makes them instances of one model rather than two models. The checker is kept small enough to be read and checked in full; Table 5.0a gives its size. A reader who doubts Proposition 1 can find in its output the specific record, month, and constraint at which plaintext semantics fails; a reader who doubts Proposition 2 can confirm that no violation arises under invalidation semantics across the generated instances.",
+  "new": "The *feasibility checker* is the primary layer and the executable witness of the propositions. It constructs audit records as the tuples defined in Chapter 4, Section 4.3, in two classes: cross-border audit records carrying the ten-year floor, and Secure Processing Environment access-log records carrying the one-year floor and the six-month ceiling. It then generates randomised arrivals of erasure requests and permit expiries across a monthly time horizon, and evaluates the three constraints under each semantics in turn, reporting violations. The two classes differ only in their floor parameter and in whether the ceiling applies, which is what makes them instances of one model rather than two models. The checker is kept small enough to be read and checked in full; Table 5.1 gives its size. A reader who doubts Proposition 1 can find in its output the specific record, month, and constraint at which plaintext semantics fails; a reader who doubts Proposition 2 can confirm that no violation arises under invalidation semantics across the generated instances.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-004",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The *realism layer* wraps the checker so that its inputs derive from Synthea-generated FHIR bundles rather than from abstract record identifiers, computing commitments over the actual payloads and constructing metadata from the actual encounter events. It is smaller than the checker (Table 5.0a) and is not load-bearing: if the wrapper were removed, the propositions and their executable check would stand unchanged. Its function is to demonstrate that the model's abstractions correspond to the structure of real health-data artefacts rather than only to a convenient idealisation, and to test, by execution rather than assertion, whether any reported result depends on payload provenance.",
+  "new": "The *realism layer* wraps the checker so that its inputs derive from Synthea-generated FHIR bundles rather than from abstract record identifiers, computing commitments over the actual payloads and constructing metadata from the actual encounter events. It is smaller than the checker (Table 5.1) and is not load-bearing: if the wrapper were removed, the propositions and their executable check would stand unchanged. Its function is to demonstrate that the model's abstractions correspond to the structure of real health-data artefacts rather than only to a convenient idealisation, and to test, by execution rather than assertion, whether any reported result depends on payload provenance.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-005",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Where the ceiling is anchored.* Corollary 1.2 and the cross-sector instance of Chapter 6, Section 6.9a are both cases of one condition, the structural content of the problem rather than a property of either instrument.",
+  "new": "*Where the ceiling is anchored.* Corollary 1.2 and the cross-sector instance of Chapter 6, Section 6.10 are both cases of one condition, the structural content of the problem rather than a property of either instrument.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-006",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The proposition corrects as well as formalises. A collision needs a ceiling no longer than the floor whichever way it is anchored; what the anchor decides is whether the collision can be seen. A provision that measured both limits from one event and set the ceiling inside the floor would contradict itself on its face. Section 17 of politiregisterloven, a floor of twelve months and a ceiling of thirty-six from the same log entry, does not (Chapter 6, Section 6.9a). A ceiling measured from an external event can sit inside the floor with no visible contradiction, because whether the two clocks cross depends on when that event falls for each record. Article 68(12) is of the second kind: six months from permit expiry against twelve months from the log entry, with the collision arising for exactly the records whose permit expires within six months of the entry, which is the condition of Corollary 1.2. The diagnostic question for any candidate instance is therefore whether a ceiling no longer than the floor is anchored to an event other than the one the floor runs from.",
+  "new": "The proposition corrects as well as formalises. A collision needs a ceiling no longer than the floor whichever way it is anchored; what the anchor decides is whether the collision can be seen. A provision that measured both limits from one event and set the ceiling inside the floor would contradict itself on its face. Section 17 of politiregisterloven, a floor of twelve months and a ceiling of thirty-six from the same log entry, does not (Chapter 6, Section 6.10). A ceiling measured from an external event can sit inside the floor with no visible contradiction, because whether the two clocks cross depends on when that event falls for each record. Article 68(12) is of the second kind: six months from permit expiry against twelve months from the log entry, with the collision arising for exactly the records whose permit expires within six months of the entry, which is the condition of Corollary 1.2. The diagnostic question for any candidate instance is therefore whether a ceiling no longer than the floor is anchored to an event other than the one the floor runs from.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-007",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Proposition 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary. This is the hierarchy that key-management guidance prescribes, in which data keys are protected by key-encrypting keys and destruction means removing \"all traces of a cryptographic key so that it cannot be recovered by either physical or electronic means\" (Barker, 2020, Section 2.1). The optional module of the artefact executes it: per-record 256-bit data keys under AES in Galois/Counter Mode (Dworkin, 2007), each wrapped under a key-encrypting key and destroyed at the record's invalidation month (Appendix A, A.9e). The custody object stands in for a hardware security module, so destruction there is destruction in program memory.",
+  "new": "*Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Proposition 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary. This is the hierarchy that key-management guidance prescribes, in which data keys are protected by key-encrypting keys and destruction means removing \"all traces of a cryptographic key so that it cannot be recovered by either physical or electronic means\" (Barker, 2020, Section 2.1). The optional module of the artefact executes it: per-record 256-bit data keys under AES in Galois/Counter Mode (Dworkin, 2007), each wrapped under a key-encrypting key and destroyed at the record's invalidation month (Appendix A, A.15). The custody object stands in for a hardware security module, so destruction there is destruction in program memory.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-008",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Tamper evidence.* An append-only registry is only as good as the means of detecting an append-only violation. Secure audit logging has addressed this since Schneier and Kelsey (1999), whose hash-chained logs make earlier entries unalterable without detection; Merkle trees (Merkle, 1988) let the same assurance be checked for a single entry with a logarithmic proof (Crosby & Wallach, 2009), and Certificate Transparency standardised that construction for public logs (Laurie, Langley, & Kasper, 2013). The mechanism appends every access event, invalidation and subject-link removal to such a log, with the leaf and node hashing of RFC 6962, and Semantics II condition (i) is checked as an inclusion proof against the log's root rather than as the presence of fields (Chapter 5, Section 5.6). What enters a leaf is chosen so that the log never needs erasing: the accessor fields, the creation month and the commitment, never the payload and never the subject fields. The tension that Chapter 2, Section 2.4 found unresolved in blockchain audit logging, an immutable trail facing an erasure right, therefore does not arise: what the right and the ceiling reach is held outside the log and destroyed there, and what the log holds is what accountability requires.",
+  "new": "*Tamper evidence.* An append-only registry is only as good as the means of detecting an append-only violation. Secure audit logging has addressed this since Schneier and Kelsey (1999), whose hash-chained logs make earlier entries unalterable without detection; Merkle trees (Merkle, 1988) let the same assurance be checked for a single entry with a logarithmic proof (Crosby & Wallach, 2009), and Certificate Transparency standardised that construction for public logs (Laurie, Langley, & Kasper, 2013). The mechanism appends every access event, invalidation and subject-link removal to such a log, with the leaf and node hashing of RFC 6962, and Semantics II condition (i) is checked as an inclusion proof against the log's root rather than as the presence of fields (Chapter 5, Section 5.7). What enters a leaf is chosen so that the log never needs erasing: the accessor fields, the creation month and the commitment, never the payload and never the subject fields. The tension that Chapter 2, Section 2.4 found unresolved in blockchain audit logging, an immutable trail facing an erasure right, therefore does not arise: what the right and the ceiling reach is held outside the log and destroyed there, and what the log holds is what accountability requires.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-009",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.0a. The artefact as published*",
+  "new": "*Table 5.1. The artefact as published*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-010",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.1, 5.2a, 5.3 |",
+  "new": "| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.3, 5.5, 5.6 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-011",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "| `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.4 |",
+  "new": "| `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.7 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-012",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "| `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a | No |",
+  "new": "| `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10 | No |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-013",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Every command has a recorded console run committed beside it in the repository, so that a reader who executes a command and diffs the output against its recorded file can tell a changed file from a changed result. The eight Synthea bundles the realism layer reads are committed with the code, so no regeneration is required to reproduce Table 5.4.",
+  "new": "Every command has a recorded console run committed beside it in the repository, so that a reader who executes a command and diffs the output against its recorded file can tell a changed file from a changed result. The eight Synthea bundles the realism layer reads are committed with the code, so no regeneration is required to reproduce Table 5.7.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-014",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.0. Generation parameters (complete)*",
+  "new": "*Table 5.2. Generation parameters (complete)*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-015",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Payloads are drawn from FHIR R4 resources in patient bundles generated by Synthea (Walonoski et al., 2018), produced with `java -jar synthea.jar -s 20260915 -cs 20260915 -p 100` and yielding 98 usable bundles. The generator was run with `--generate.only_alive_patients=true`, and two of the hundred requested patients did not survive to the end of their simulated lifetime and were therefore not exported. One clinical resource (a Condition, Observation, MedicationRequest, AllergyIntolerance, Immunization, or Procedure) is taken per bundle and serialised as the payload, giving a mean payload of 1,006 bytes against 35 bytes for the constructed strings used during development. Section 5.7 reports the comparison between the two.",
+  "new": "Payloads are drawn from FHIR R4 resources in patient bundles generated by Synthea (Walonoski et al., 2018), produced with `java -jar synthea.jar -s 20260915 -cs 20260915 -p 100` and yielding 98 usable bundles. The generator was run with `--generate.only_alive_patients=true`, and two of the hundred requested patients did not survive to the end of their simulated lifetime and were therefore not exported. One clinical resource (a Condition, Observation, MedicationRequest, AllergyIntolerance, Immunization, or Procedure) is taken per bundle and serialised as the payload, giving a mean payload of 1,006 bytes against 35 bytes for the constructed strings used during development. Section 5.8 reports the comparison between the two.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-016",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.1. Violations under Semantics I (seed 20260915, n = 200)*",
+  "new": "*Table 5.3. Violations under Semantics I (seed 20260915, n = 200)*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-017",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "First, the violation rate is not one hundred per cent, and this is the correct behaviour. The rates in this chapter are functions of the generator parameters in Table 5.0 and are not estimates of real frequency; in particular, the generator treats every erasure request as valid, whereas many would be lawfully refused under Article 17(3) (Chapter 3, Section 3.7). Proposition 1 is conditional: it states infeasibility for records whose erasure or ceiling deadline falls inside the retention window. A cross-border record for which no data subject ever exercises Article 17 has no second constraint to collide with C1, and is trivially feasible. Of the one hundred cross-border records, thirty-eight received an erasure request; of those, thirty-seven had a deadline landing inside the one-hundred-and-twenty-month window, and all thirty-seven are among the violations. The single exception is the record whose request arrived beyond the window, which is precisely the case the proposition excludes. The checker therefore reproduces the proposition's conditional structure exactly, including its boundary.",
+  "new": "First, the violation rate is not one hundred per cent, and this is the correct behaviour. The rates in this chapter are functions of the generator parameters in Table 5.2 and are not estimates of real frequency; in particular, the generator treats every erasure request as valid, whereas many would be lawfully refused under Article 17(3) (Chapter 3, Section 3.7). Proposition 1 is conditional: it states infeasibility for records whose erasure or ceiling deadline falls inside the retention window. A cross-border record for which no data subject ever exercises Article 17 has no second constraint to collide with C1, and is trivially feasible. Of the one hundred cross-border records, thirty-eight received an erasure request; of those, thirty-seven had a deadline landing inside the one-hundred-and-twenty-month window, and all thirty-seven are among the violations. The single exception is the record whose request arrived beyond the window, which is precisely the case the proposition excludes. The checker therefore reproduces the proposition's conditional structure exactly, including its boundary.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-018",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.2. Exhaustive search over $\\alpha$ assignments (horizon = 14 months)*",
+  "new": "*Table 5.4. Exhaustive search over $\\alpha$ assignments (horizon = 14 months)*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-019",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "## 5.5a Witness at the Extended Response Period",
+  "new": "## 5.6 Witness at the Extended Response Period",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-020",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.2a. Results at $\\delta = 1$ and $\\delta = 3$ (seed 20260915, n = 200)*",
+  "new": "*Table 5.5. Results at $\\delta = 1$ and $\\delta = 3$ (seed 20260915, n = 200)*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-021",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "## 5.6 Results under Semantics II",
+  "new": "## 5.7 Results under Semantics II",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-022",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.3. Results under Semantics II (same 200 records, same seed)*",
+  "new": "*Table 5.6. Results under Semantics II (same 200 records, same seed)*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-023",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The record is also checked against the audit log. Every access event, invalidation and subject-link removal is an entry in an append-only Merkle log, and condition (i) of Semantics II is tested as an inclusion proof against the log's root rather than as the presence of fields. All two hundred records verify. Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.10). The Semantics II result of Table 5.3 therefore rests on a check that can fail, which the earlier presence test could not.",
+  "new": "The record is also checked against the audit log. Every access event, invalidation and subject-link removal is an entry in an append-only Merkle log, and condition (i) of Semantics II is tested as an inclusion proof against the log's root rather than as the presence of fields. All two hundred records verify. Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.16). The Semantics II result of Table 5.6 therefore rests on a check that can fail, which the earlier presence test could not.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-024",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "## 5.7 What the Demonstration Establishes, and What It Does Not",
+  "new": "## 5.8 What the Demonstration Establishes, and What It Does Not",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-025",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment. An optional module repeats the lifecycle with real AES-256-GCM envelope encryption (Appendix A, A.9e and A.15): after the 138 scheduled destructions exactly those records refuse to decrypt and the other 62 still read, so unreadability is executed rather than asserted; the keys are still destroyed in program memory, not in hardware: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.",
+  "new": "*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment. An optional module repeats the lifecycle with real AES-256-GCM envelope encryption (Appendix A, A.15 and A.22): after the 138 scheduled destructions exactly those records refuse to decrypt and the other 62 still read, so unreadability is executed rather than asserted; the keys are still destroyed in program memory, not in hardware: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-026",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The rates of Table 5.1 are read as Section 5.3 states.",
+  "new": "*How the tables should be read.* The Semantics II result of Table 5.6 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The rates of Table 5.3 are read as Section 5.3 states.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-027",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.11). All two hundred commitments change, confirming that the payloads genuinely differ.",
+  "new": "The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.17). All two hundred commitments change, confirming that the payloads genuinely differ.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-028",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Table 5.4. Constructed against Synthea-generated payloads (same seed, same timings)*",
+  "new": "*Table 5.7. Constructed against Synthea-generated payloads (same seed, same timings)*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-029",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The sharpest instance is narrower, and rests on one contestable interpretive step. Article 73(1)(e) requires identifiable logs of access to and activity in a Secure Processing Environment to be kept for at least one year. Article 68(12) requires \"the electronic health data within the secure processing environment\" to be deleted within six months of the expiry of the data permit. Where an environment logs access at patient-record granularity, those log entries are electronic health data within the environment on the broad reading, and where the remaining permit duration at the time a log is written is six months or less, the two requirements overlap with no data subject acting. Chapter 4, Section 4.6 sets out the grounds on both sides. Chapter 5 produced thirty-nine witnesses of this collision in the model, in a population of one hundred Secure Processing Environment records; across the full population of two hundred, cross-border records included, ninety records were infeasible under Semantics I, most of them through erasure requests (Chapter 5, Table 5.1). Proposition 3 states the general condition: a ceiling no longer than the floor, anchored to an event other than the one the floor runs from. On the narrow reading, or where logs are kept at dataset granularity, the collision does not arise. On either reading the mechanism meets both provisions, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach.",
+  "new": "The sharpest instance is narrower, and rests on one contestable interpretive step. Article 73(1)(e) requires identifiable logs of access to and activity in a Secure Processing Environment to be kept for at least one year. Article 68(12) requires \"the electronic health data within the secure processing environment\" to be deleted within six months of the expiry of the data permit. Where an environment logs access at patient-record granularity, those log entries are electronic health data within the environment on the broad reading, and where the remaining permit duration at the time a log is written is six months or less, the two requirements overlap with no data subject acting. Chapter 4, Section 4.6 sets out the grounds on both sides. Chapter 5 produced thirty-nine witnesses of this collision in the model, in a population of one hundred Secure Processing Environment records; across the full population of two hundred, cross-border records included, ninety records were infeasible under Semantics I, most of them through erasure requests (Chapter 5, Table 5.3). Proposition 3 states the general condition: a ceiling no longer than the floor, anchored to an event other than the one the floor runs from. On the narrow reading, or where logs are kept at dataset granularity, the collision does not arise. On either reading the mechanism meets both provisions, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-030",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The thesis's response is to be precise about what the invalidation entry is. It is an *attested* record of destruction, not a *proof* of it. The entry records that a named actor destroyed a named key at a named month on a named legal ground, and binds that claim into an append-only Merkle log alongside a commitment to the destroyed key's identifier, so that the claim, once made, cannot be altered or withdrawn without detection (Chapter 4, Section 4.8). Key-management guidance treats such a record as the normal trace of a destroyed key (Barker, 2020). An auditor can establish that the claim was made, by whom, and when; an auditor cannot establish that the claim is true. The difference between attestation and proof is the boundary of this contribution. Two things narrow it without closing it. Hardware security modules validated against FIPS 140-3 (National Institute of Standards and Technology, 2019) place destruction inside a tested boundary, though validation attests the design of the module, not any particular destruction. And the optional module of the artefact replaces the simulated key with real AES-256-GCM envelope encryption: after the 138 scheduled destructions, exactly those records refuse to decrypt (Chapter 5, Section 5.7), which shows that unreadability follows from the destruction, not that the destruction took place.",
+  "new": "The thesis's response is to be precise about what the invalidation entry is. It is an *attested* record of destruction, not a *proof* of it. The entry records that a named actor destroyed a named key at a named month on a named legal ground, and binds that claim into an append-only Merkle log alongside a commitment to the destroyed key's identifier, so that the claim, once made, cannot be altered or withdrawn without detection (Chapter 4, Section 4.8). Key-management guidance treats such a record as the normal trace of a destroyed key (Barker, 2020). An auditor can establish that the claim was made, by whom, and when; an auditor cannot establish that the claim is true. The difference between attestation and proof is the boundary of this contribution. Two things narrow it without closing it. Hardware security modules validated against FIPS 140-3 (National Institute of Standards and Technology, 2019) place destruction inside a tested boundary, though validation attests the design of the module, not any particular destruction. And the optional module of the artefact replaces the simulated key with real AES-256-GCM envelope encryption: after the 138 scheduled destructions, exactly those records refuse to decrypt (Chapter 5, Section 5.8), which shows that unreadability follows from the destruction, not that the destruction took place.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-031",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "Substituting real FHIR R4 resources for constructed payload strings changed all two hundred commitments and no reported figure (Chapter 5, Section 5.7, Table 5.4), as it must, since no constraint in the TRF Model reads payload content.",
+  "new": "Substituting real FHIR R4 resources for constructed payload strings changed all two hundred commitments and no reported figure (Chapter 5, Section 5.8, Table 5.7), as it must, since no constraint in the TRF Model reads payload content.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-032",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The first is the formalisation itself. Treating a retention conflict as a constraint-satisfaction problem over a single binary accessibility variable per record, and making the semantics of verifiability an explicit parameter of the model rather than an unexamined assumption, is a way of stating retention problems that appears not to have been used before in this domain. The general method of formalising legal compliance as satisfiability is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023); its application here is what is new, and the applicability of the formulation beyond health data is an open question the thesis does not settle. The structure (one or more floors, a subject-triggered right, a ceiling) is not obviously specific to health. Section 6.9a tests that expectation against a statute outside health and returns a negative result which revises it: what matters is not that a floor and a ceiling coexist but where the ceiling is anchored. Financial record-keeping under MiFID II remains a candidate instance on that revised test, flagged for future analysis rather than established: the practitioner literature reviewed in Chapter 2 treats that setting as a floor-against-right conflict, and whether any ceiling analogous to Article 68(12) operates there is a question this thesis has not investigated.",
+  "new": "The first is the formalisation itself. Treating a retention conflict as a constraint-satisfaction problem over a single binary accessibility variable per record, and making the semantics of verifiability an explicit parameter of the model rather than an unexamined assumption, is a way of stating retention problems that appears not to have been used before in this domain. The general method of formalising legal compliance as satisfiability is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023); its application here is what is new, and the applicability of the formulation beyond health data is an open question the thesis does not settle. The structure (one or more floors, a subject-triggered right, a ceiling) is not obviously specific to health. Section 6.10 tests that expectation against a statute outside health and returns a negative result which revises it: what matters is not that a floor and a ceiling coexist but where the ceiling is anchored. Financial record-keeping under MiFID II remains a candidate instance on that revised test, flagged for future analysis rather than established: the practitioner literature reviewed in Chapter 2 treats that setting as a floor-against-right conflict, and whether any ceiling analogous to Article 68(12) operates there is a question this thesis has not investigated.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-033",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "## 6.9a Where the Ceiling Is Anchored: a Cross-Sector Test",
+  "new": "## 6.10 Where the Ceiling Is Anchored: a Cross-Sector Test",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-034",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "It is not, and the result is the more informative one. Sixty records were generated under a floor of twelve months and a ceiling of thirty-six, with erasure requests arriving as they do elsewhere in the demonstration. Seven records carried at least one Semantics I violation. Of those seven, **none** arose without an erasure request. Under Semantics II there were no violations at all, and every record was invalidated at its scheduled month. The module that produces this is listed in full at Appendix A, Section A.9c, and its console output at Section A.14.",
+  "new": "It is not, and the result is the more informative one. Sixty records were generated under a floor of twelve months and a ceiling of thirty-six, with erasure requests arriving as they do elsewhere in the demonstration. Seven records carried at least one Semantics I violation. Of those seven, **none** arose without an erasure request. Under Semantics II there were no violations at all, and every record was invalidated at its scheduled month. The module that produces this is listed in full at Appendix A, Section A.13, and its console output at Section A.20.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-035",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "## 6.10 Boundaries as Contribution",
+  "new": "## 6.11 Boundaries as Contribution",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-036",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "## 6.11 Summary",
+  "new": "## 6.12 Summary",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-037",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "*Feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the status-quo semantics; Proposition 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Proposition 3 gives the condition under which a ceiling and a floor collide, which the cross-sector test of Chapter 6, Section 6.9a confirmed on a statute outside health; Proposition 4 shows why relocation answers the ceiling and not the right. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.",
+  "new": "*Feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the status-quo semantics; Proposition 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Proposition 3 gives the condition under which a ceiling and a floor collide, which the cross-sector test of Chapter 6, Section 6.10 confirmed on a statute outside health; Proposition 4 shows why relocation answers the ceiling and not the right. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-038",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "*A mechanism specification with its residue analysed.* The mechanism applies established primitives (cryptographic erasure as recognised in NIST SP 800-88 Revision 2, hiding commitments, and, without implementing them, dynamic accumulators) and claims no cryptographic novelty. What it adds to the practitioner crypto-shredding pattern is verifiability: an auditor can establish what was invalidated, when, on what ground, and by whom, and can check each of those entries against the root of a Merkle log (Chapter 5, Section 5.6). The key hierarchy is executed with real AES-256-GCM in an optional module of the artefact. The residue it leaves is characterised as pseudonymised rather than anonymous by the Norwegian threshold, and designed to the corridor that the European Data Protection Board's finalised Guidelines 02/2025 establish.",
+  "new": "*A mechanism specification with its residue analysed.* The mechanism applies established primitives (cryptographic erasure as recognised in NIST SP 800-88 Revision 2, hiding commitments, and, without implementing them, dynamic accumulators) and claims no cryptographic novelty. What it adds to the practitioner crypto-shredding pattern is verifiability: an auditor can establish what was invalidated, when, on what ground, and by whom, and can check each of those entries against the root of a Merkle log (Chapter 5, Section 5.7). The key hierarchy is executed with real AES-256-GCM in an optional module of the artefact. The residue it leaves is characterised as pseudonymised rather than anonymous by the Norwegian threshold, and designed to the corridor that the European Data Protection Board's finalised Guidelines 02/2025 establish.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-039",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "*Generalisation beyond health data.* The structure the model captures (one or more retention floors, a subject-triggered erasure right, and a deletion ceiling) is not obviously specific to health, and Chapter 6, Section 6.9a ran one test outside it: Norwegian police register law pairs a floor with a longer ceiling from the same event and, as Proposition 3 predicts, produces no collision without an erasure request. Proposition 3 turns the search for other instances into a test that can be applied to a statute's text: look for a ceiling no longer than a floor and anchored to a different event. Applying it across regulated sectors, financial record-keeping first, would determine whether the contribution is a result about one regulation or a method for a class of them.",
+  "new": "*Generalisation beyond health data.* The structure the model captures (one or more retention floors, a subject-triggered erasure right, and a deletion ceiling) is not obviously specific to health, and Chapter 6, Section 6.10 ran one test outside it: Norwegian police register law pairs a floor with a longer ceiling from the same event and, as Proposition 3 predicts, produces no collision without an erasure request. Proposition 3 turns the search for other instances into a test that can be applied to a statute's text: look for a ceiling no longer than a floor and anchored to a different event. Applying it across regulated sectors, financial record-keeping first, would determine whether the contribution is a result about one regulation or a method for a class of them.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-040",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The demonstration presents five tabs. Tab 1 runs the thesis configuration and reproduces Tables 5.1 and 5.3. Tab 2 varies population parameters as a teaching aid and is explicitly outside the thesis claims. Tab 3 runs the realism layer and reproduces Table 5.4. Tab 4 runs the Norwegian context modules, which are illustrative and report no thesis figure. Tab 5 runs the two robustness checks: the independent exhaustive cross-check of Section 5.4 and the erasure-response-period witness of Section 5.5a.",
+  "new": "The demonstration presents five tabs. Tab 1 runs the thesis configuration and reproduces Tables 5.3 and 5.6. Tab 2 varies population parameters as a teaching aid and is explicitly outside the thesis claims. Tab 3 runs the realism layer and reproduces Table 5.7. Tab 4 runs the Norwegian context modules, which are illustrative and report no thesis figure. Tab 5 runs the two robustness checks: the independent exhaustive cross-check of Section 5.4 and the erasure-response-period witness of Section 5.6.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-041",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.1b Contents",
+  "new": "## A.2 Contents",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-042",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Two files are *not* included and the reason is stated rather than omitted: the full 98-bundle Synthea cohort (314 MB) and the Synthea jar (197 MB). Both are regenerable from the commands in A.3, deterministically, under the seeds given. The eight-bundle subset that is included is drawn from that cohort and is sufficient to run the realism layer; Chapter 5, Section 5.7 reports the comparison at both cohort sizes and finds every figure identical.",
+  "new": "Two files are *not* included and the reason is stated rather than omitted: the full 98-bundle Synthea cohort (314 MB) and the Synthea jar (197 MB). Both are regenerable from the commands in A.5, deterministically, under the seeds given. The eight-bundle subset that is included is drawn from that cohort and is sufficient to run the realism layer; Chapter 5, Section 5.8 reports the comparison at both cohort sizes and finds every figure identical.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-043",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.2 Environment and generation provenance",
+  "new": "## A.3 Environment and generation provenance",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-044",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The synthetic cohort was generated by the official Synthea release jar, downloaded from the project's own GitHub releases and executed with the command in Section A.3. Generation was carried out in a Linux environment with OpenJDK 21 rather than under Windows PowerShell, which does not affect the output: Synthea is deterministic under fixed population and clinician seeds, and produces byte-identical bundles in any environment with a compatible JVM. The bundles carry Synthea's own resource-identifier namespace, its `disability-adjusted-life-years` Patient extension, US Core profile conformance and its default Massachusetts demographics, all of which are verifiable by inspecting any bundle.",
+  "new": "The synthetic cohort was generated by the official Synthea release jar, downloaded from the project's own GitHub releases and executed with the command in Section A.5. Generation was carried out in a Linux environment with OpenJDK 21 rather than under Windows PowerShell, which does not affect the output: Synthea is deterministic under fixed population and clinician seeds, and produces byte-identical bundles in any environment with a compatible JVM. The bundles carry Synthea's own resource-identifier namespace, its `disability-adjusted-life-years` Patient extension, US Core profile conformance and its default Massachusetts demographics, all of which are verifiable by inspecting any bundle.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-045",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.2b Software environment",
+  "new": "## A.4 Software environment",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-046",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.3 Exact commands",
+  "new": "## A.5 Exact commands",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-047",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "*1. Run the feasibility checker (produces every figure in Chapter 5, Sections 5.3–5.6):*",
+  "new": "*1. Run the feasibility checker (produces every figure in Chapter 5, Sections 5.3–5.7):*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-048",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "*4. Run the realism layer and the payload-provenance comparison (produces Table 5.4):*",
+  "new": "*4. Run the realism layer and the payload-provenance comparison (produces Table 5.7):*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-049",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "*5. Run the erasure-response-period witness (produces Table 5.2a):*",
+  "new": "*5. Run the erasure-response-period witness (produces Table 5.5):*",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-050",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The first builds the NO-XB, NO-SPE and NO-JOURNAL classes and walks through one case per class. The second builds the politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a.",
+  "new": "The first builds the NO-XB, NO-SPE and NO-JOURNAL classes and walks through one case per class. The second builds the politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-051",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The same form applies to each of the five recorded runs listed in A.1b. A difference means a file changed, not that the result changed.",
+  "new": "The same form applies to each of the five recorded runs listed in A.2. A difference means a file changed, not that the result changed.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-052",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.4 What the code does",
+  "new": "## A.6 What the code does",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-053",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Implements the TRF Model of Chapter 4 directly. Records are the seven-element tuples of Section 4.3, with the metadata split into accessor fields and subject fields. A Secure Processing Environment record carries a researcher and a permit rather than a clinician and a contact point, and its payload stands for the logged activity; a cross-border record's payload stands for the demographic query that the IHE patient-discovery transaction puts into the audit message. Two record classes are generated: cross-border audit records with a 120-month floor, and Secure Processing Environment access-log records with a 12-month floor and the Article 68(12) ceiling. Generation parameters are listed in full in Chapter 5, Table 5.0.",
+  "new": "Implements the TRF Model of Chapter 4 directly. Records are the seven-element tuples of Section 4.3, with the metadata split into accessor fields and subject fields. A Secure Processing Environment record carries a researcher and a permit rather than a clinician and a contact point, and its payload stands for the logged activity; a cross-border record's payload stands for the demographic query that the IHE patient-discovery transaction puts into the audit message. Two record classes are generated: cross-border audit records with a 120-month floor, and Secure Processing Environment access-log records with a 12-month floor and the Article 68(12) ceiling. Generation parameters are listed in full in Chapter 5, Table 5.2.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-054",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Key destruction is modelled as setting the key reference to `None`, and deletion of the ciphertext as setting the payload to `None`. This demonstrates the mechanism's logic and demonstrates nothing about deployment assurance: a limitation stated in Chapter 5, Section 5.7 and treated in Chapter 6.",
+  "new": "Key destruction is modelled as setting the key reference to `None`, and deletion of the ciphertext as setting the payload to `None`. This demonstrates the mechanism's logic and demonstrates nothing about deployment assurance: a limitation stated in Chapter 5, Section 5.8 and treated in Chapter 6.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-055",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The expected result, and the observed one, is that every reported figure is identical while all 200 commitments differ. Mean payload size rises from 43 bytes to 891 with the committed subset (to 1,006 with the full cohort, recorded on 28 September when the constructed payloads averaged 35 bytes; see A.11). The model reads timing and accessibility, never payload content; running the comparison rather than asserting the invariance lets a reader see the claim tested against inputs that demonstrably changed.",
+  "new": "The expected result, and the observed one, is that every reported figure is identical while all 200 commitments differ. Mean payload size rises from 43 bytes to 891 with the committed subset (to 1,006 with the full cohort, recorded on 28 September when the constructed payloads averaged 35 bytes; see A.17). The model reads timing and accessibility, never payload content; running the comparison rather than asserting the invariance lets a reader see the claim tested against inputs that demonstrably changed.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-056",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.5 Data provenance",
+  "new": "## A.7 Data provenance",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-057",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The cohort is generated by Synthea (Walonoski et al., 2018), an open-source synthetic patient generator. Synthea's default export conforms to the *US Core* implementation guide with United States demographic, geographic, and care-pattern parameters. The FHIR version is *R4*, which matches the version the Norwegian basisprofiler constrain; the *profiles* are not Norwegian, and no claim of Norwegian clinical representativeness is made for these records. The invariance result of Table 5.4 establishes that this mismatch cannot affect any reported figure. The thesis's Norwegian grounding rests on the infrastructure analysis of Chapter 4, Section 4.11.",
+  "new": "The cohort is generated by Synthea (Walonoski et al., 2018), an open-source synthetic patient generator. Synthea's default export conforms to the *US Core* implementation guide with United States demographic, geographic, and care-pattern parameters. The FHIR version is *R4*, which matches the version the Norwegian basisprofiler constrain; the *profiles* are not Norwegian, and no claim of Norwegian clinical representativeness is made for these records. The invariance result of Table 5.7 establishes that this mismatch cannot affect any reported figure. The thesis's Norwegian grounding rests on the infrastructure analysis of Chapter 4, Section 4.11.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-058",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The eight bundles in `data/synthea_subset/` are untrimmed output from that cohort. With the subset the mean payload is 891 bytes rather than the 1,006 bytes of the full cohort, because a different set of clinical resources is drawn; Chapter 5, Section 5.7 reports both and every other figure is identical.",
+  "new": "The eight bundles in `data/synthea_subset/` are untrimmed output from that cohort. With the subset the mean payload is 891 bytes rather than the 1,006 bytes of the full cohort, because a different set of clinical resources is drawn; Chapter 5, Section 5.8 reports both and every other figure is identical.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-059",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.6 Integrity record",
+  "new": "## A.8 Integrity record",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-060",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Semantics I — records with ≥1 violation | 90 / 200 | Table 5.1 |",
+  "new": "| Semantics I — records with ≥1 violation | 90 / 200 | Table 5.3 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-061",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Exhaustive cross-check, three conflict cases | no satisfying assignment | Table 5.2 |",
+  "new": "| Exhaustive cross-check, three conflict cases | no satisfying assignment | Table 5.4 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-062",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Exhaustive cross-check, control case | satisfying assignment exists | Table 5.2 |",
+  "new": "| Exhaustive cross-check, control case | satisfying assignment exists | Table 5.4 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-063",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Semantics II — records invalidated | 138 (52 Art 17, 86 Art 68(12)) | Table 5.3 |",
+  "new": "| Semantics II — records invalidated | 138 (52 Art 17, 86 Art 68(12)) | Table 5.6 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-064",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Semantics II — total violations | 0 | Table 5.3 |",
+  "new": "| Semantics II — total violations | 0 | Table 5.6 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-065",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Synthea comparison — figures changed | none | Table 5.4 |",
+  "new": "| Synthea comparison — figures changed | none | Table 5.7 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-066",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Synthea comparison — commitments changed | 200 / 200 | Table 5.4 |",
+  "new": "| Synthea comparison — commitments changed | 200 / 200 | Table 5.7 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-067",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Audit-log integrity | 200 / 200 records verify; both tamper tests fail V_II | §5.6 |",
+  "new": "| Audit-log integrity | 200 / 200 records verify; both tamper tests fail V_II | §5.7 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-068",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| Reference commitment, record 100 | `678ade47c1e6dc03…` | §5.6 |",
+  "new": "| Reference commitment, record 100 | `678ade47c1e6dc03…` | §5.7 |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-069",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.7 Known limitations of the artefact",
+  "new": "## A.9 Known limitations of the artefact",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-070",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.8 Source listing: `trf_checker.py`",
+  "new": "## A.10 Source listing: `trf_checker.py`",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-071",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "    which is what a deployment must do (Appendix A, A.4).\"\"\"",
+  "new": "    which is what a deployment must do (Appendix A, A.6).\"\"\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-072",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "# Extended response period witness (Chapter 5, Section 5.5a)",
+  "new": "# Extended response period witness (Chapter 5, Section 5.6)",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-073",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.9 Source listing: `synthea_layer.py`",
+  "new": "## A.11 Source listing: `synthea_layer.py`",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-074",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.9b Source listing: `norwegian_layer.py`",
+  "new": "## A.12 Source listing: `norwegian_layer.py`",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-075",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.9c Source listing: `cross_sector_check.py`",
+  "new": "## A.13 Source listing: `cross_sector_check.py`",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-076",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The cross-sector instance discussed in Chapter 6, Section 6.9a. It takes the floor and ceiling of politiregisterloven § 17 and runs them through the same unmodified model. Line count: 110.",
+  "new": "The cross-sector instance discussed in Chapter 6, Section 6.10. It takes the floor and ceiling of politiregisterloven § 17 and runs them through the same unmodified model. Line count: 110.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-077",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.9d Source listing: `app.py`",
+  "new": "## A.14 Source listing: `app.py`",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-078",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "  layer unmodified and reproduces Table 5.4. Tab 2 is a teaching aid that varies",
+  "new": "  layer unmodified and reproduces Table 5.7. Tab 2 is a teaching aid that varies",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-079",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "        \"Executes the checker exactly as reported in Chapter 5, Tables 5.1 to 5.3. \"",
+  "new": "        \"Executes the checker exactly as reported in Chapter 5, Tables 5.3 to 5.6. \"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-080",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "        st.markdown(\"**Table 5.1 — violations under Semantics I**\")",
+  "new": "        st.markdown(\"**Table 5.3 — violations under Semantics I**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-081",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "        st.markdown(\"**Table 5.3 — Semantics II**\")",
+  "new": "        st.markdown(\"**Table 5.6 — Semantics II**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-082",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "            st.markdown(\"**Table 5.4 — constructed against Synthea payloads**\")",
+  "new": "            st.markdown(\"**Table 5.7 — constructed against Synthea payloads**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-083",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "# Tab 5 — Robustness and cross-checks (Chapter 5 §5.4 and §5.5a)",
+  "new": "# Tab 5 — Robustness and cross-checks (Chapter 5 §5.4 and §5.6)",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-084",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "    st.markdown(\"**Erasure response period — Chapter 5 §5.5a**\")",
+  "new": "    st.markdown(\"**Erasure response period — Chapter 5 §5.6**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-085",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "                \"The pattern differs from what Chapter 5 §5.5a reports. Check \"",
+  "new": "                \"The pattern differs from what Chapter 5 §5.6 reports. Check \"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-086",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "        \"Chapter 5 §5.7 and Chapter 6 state these limits in full.\"",
+  "new": "        \"Chapter 5 §5.8 and Chapter 6 state these limits in full.\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-087",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.9e Source listing: `crypto_envelope.py`",
+  "new": "## A.15 Source listing: `crypto_envelope.py`",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-088",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.10 Console output of the reported run",
+  "new": "## A.16 Console output of the reported run",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-089",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Verbatim output of `python3 trf_checker.py` under seed 20260915. Every figure in Chapter 5, Tables 5.1 to 5.3, appears here.",
+  "new": "Verbatim output of `python3 trf_checker.py` under seed 20260915. Every figure in Chapter 5, Tables 5.3 to 5.6, appears here.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-090",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.11 Console output of the payload-provenance comparison, full cohort",
+  "new": "## A.17 Console output of the payload-provenance comparison, full cohort",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-091",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Produced by command 4 against the regenerated 98-bundle cohort. This is the run Chapter 5, Section 5.7 reports at a mean payload of 1,006 bytes. It was recorded on 28 September 2026, before the code revision of 3 October, and its constructed-payload mean (35 bytes) reflects the earlier constructed strings; no measure in it depends on them, as the subset run in A.11b, recorded after the revision, shows. Reproducing it requires regenerating the cohort with command 3, because the full cohort is 314 MB and is not committed.",
+  "new": "Produced by command 4 against the regenerated 98-bundle cohort. This is the run Chapter 5, Section 5.8 reports at a mean payload of 1,006 bytes. It was recorded on 28 September 2026, before the code revision of 3 October, and its constructed-payload mean (35 bytes) reflects the earlier constructed strings; no measure in it depends on them, as the subset run in A.21, recorded after the revision, shows. Reproducing it requires regenerating the cohort with command 3, because the full cohort is 314 MB and is not committed.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-092",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Verbatim output of `python3 synthea_layer.py` against the full 98-bundle cohort. This is the source of Chapter 5, Table 5.4.",
+  "new": "Verbatim output of `python3 synthea_layer.py` against the full 98-bundle cohort. This is the source of Chapter 5, Table 5.7.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-093",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.12 Console output of the erasure-response-period witness",
+  "new": "## A.18 Console output of the erasure-response-period witness",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-094",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Produced by command 5. Reproduces Table 5.2a: the infeasibility survives the extension Article 12(3) GDPR permits.",
+  "new": "Produced by command 5. Reproduces Table 5.5: the infeasibility survives the extension Article 12(3) GDPR permits.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-095",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.13 Console output of the Norwegian context module",
+  "new": "## A.19 Console output of the Norwegian context module",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-096",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.14 Console output of the cross-sector instance",
+  "new": "## A.20 Console output of the cross-sector instance",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-097",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Produced by the second command in 6, and discussed in Chapter 6, Section 6.9a. The zero in the second row is the finding: § 17 fixes both its limbs from the same origin, so it bounds a retention window rather than contradicting itself, and every collision the model finds is erasure-driven.",
+  "new": "Produced by the second command in 6, and discussed in Chapter 6, Section 6.10. The zero in the second row is the finding: § 17 fixes both its limbs from the same origin, so it bounds a retention window rather than contradicting itself, and every collision the model finds is erasure-driven.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-098",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.11b Console output of the payload-provenance comparison, committed subset",
+  "new": "## A.21 Console output of the payload-provenance comparison, committed subset",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-099",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Produced by command 4 against the eight bundles committed at `data/synthea_subset/`, which is what a reader who clones the repository obtains without regenerating anything. Chapter 5, Section 5.7 reports both cohort sizes because one figure changes and the rest do not: the mean payload is 891 bytes here against 1,006 for the full cohort, while all six measures and all 200 differing commitments are identical. That the measures hold across cohort size and across payload repetition frequency is a stronger result than a single substitution would give.",
+  "new": "Produced by command 4 against the eight bundles committed at `data/synthea_subset/`, which is what a reader who clones the repository obtains without regenerating anything. Chapter 5, Section 5.8 reports both cohort sizes because one figure changes and the rest do not: the mean payload is 891 bytes here against 1,006 for the full cohort, while all six measures and all 200 differing commitments are identical. That the measures hold across cohort size and across payload repetition frequency is a stronger result than a single substitution would give.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-100",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "## A.15 Console output of the envelope-encryption module",
+  "new": "## A.22 Console output of the envelope-encryption module",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-101",
+  "file": "demo_app/app.py",
+  "old": "  layer unmodified and reproduces Table 5.4. Tab 2 is a teaching aid that varies",
+  "new": "  layer unmodified and reproduces Table 5.7. Tab 2 is a teaching aid that varies",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-102",
+  "file": "demo_app/app.py",
+  "old": "        \"Executes the checker exactly as reported in Chapter 5, Tables 5.1 to 5.3. \"",
+  "new": "        \"Executes the checker exactly as reported in Chapter 5, Tables 5.3 to 5.6. \"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-103",
+  "file": "demo_app/app.py",
+  "old": "        st.markdown(\"**Table 5.1 — violations under Semantics I**\")",
+  "new": "        st.markdown(\"**Table 5.3 — violations under Semantics I**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-104",
+  "file": "demo_app/app.py",
+  "old": "        st.markdown(\"**Table 5.3 — Semantics II**\")",
+  "new": "        st.markdown(\"**Table 5.6 — Semantics II**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-105",
+  "file": "demo_app/app.py",
+  "old": "            st.markdown(\"**Table 5.4 — constructed against Synthea payloads**\")",
+  "new": "            st.markdown(\"**Table 5.7 — constructed against Synthea payloads**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-106",
+  "file": "demo_app/app.py",
+  "old": "# Tab 5 — Robustness and cross-checks (Chapter 5 §5.4 and §5.5a)",
+  "new": "# Tab 5 — Robustness and cross-checks (Chapter 5 §5.4 and §5.6)",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-107",
+  "file": "demo_app/app.py",
+  "old": "    st.markdown(\"**Erasure response period — Chapter 5 §5.5a**\")",
+  "new": "    st.markdown(\"**Erasure response period — Chapter 5 §5.6**\")",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-108",
+  "file": "demo_app/app.py",
+  "old": "                \"The pattern differs from what Chapter 5 §5.5a reports. Check \"",
+  "new": "                \"The pattern differs from what Chapter 5 §5.6 reports. Check \"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-109",
+  "file": "demo_app/app.py",
+  "old": "        \"Chapter 5 §5.7 and Chapter 6 state these limits in full.\"",
+  "new": "        \"Chapter 5 §5.8 and Chapter 6 state these limits in full.\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-110",
+  "file": "demo_app/trf_checker.py",
+  "old": "    which is what a deployment must do (Appendix A, A.4).\"\"\"",
+  "new": "    which is what a deployment must do (Appendix A, A.6).\"\"\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-111",
+  "file": "demo_app/trf_checker.py",
+  "old": "# Extended response period witness (Chapter 5, Section 5.5a)",
+  "new": "# Extended response period witness (Chapter 5, Section 5.6)",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-112",
+  "file": "repro_package/trf_checker.py",
+  "old": "    which is what a deployment must do (Appendix A, A.4).\"\"\"",
+  "new": "    which is what a deployment must do (Appendix A, A.6).\"\"\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-113",
+  "file": "repro_package/trf_checker.py",
+  "old": "# Extended response period witness (Chapter 5, Section 5.5a)",
+  "new": "# Extended response period witness (Chapter 5, Section 5.6)",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-114",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "    which is what a deployment must do (Appendix A, A.4).\"\"\"",
+  "new": "    which is what a deployment must do (Appendix A, A.6).\"\"\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-115",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "# Extended response period witness (Chapter 5, Section 5.5a)",
+  "new": "# Extended response period witness (Chapter 5, Section 5.6)",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-116",
+  "file": "demo_app/README_repo.md",
+  "old": "Extended erasure response period, Chapter 5 §5.5a:",
+  "new": "Extended erasure response period, Chapter 5 §5.6:",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-117",
+  "file": "demo_app/README_repo.md",
+  "old": "Reproduces Table 5.2a: 90 records and 95 violations at δ = 1, against 89 and 94 at δ = 3, with 39 Corollary 1.2 witnesses and zero Semantics II violations at both. The infeasibility is structural, not a consequence of the one-month response period.",
+  "new": "Reproduces Table 5.5: 90 records and 95 violations at δ = 1, against 89 and 94 at δ = 3, with 39 Corollary 1.2 witnesses and zero Semantics II violations at both. The infeasibility is structural, not a consequence of the one-month response period.",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-118",
+  "file": "demo_app/README_repo.md",
+  "old": "| `docs/expected_delta_witness_output.txt` | Recorded δ = 1 against δ = 3 run, Chapter 5 §5.5a | — |",
+  "new": "| `docs/expected_delta_witness_output.txt` | Recorded δ = 1 against δ = 3 run, Chapter 5 §5.6 | — |",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-119",
+  "file": "repro_package/run_all.sh",
+  "old": "echo \"=== 2/4  Extended erasure response period (Chapter 5, Section 5.5a) ===\"",
+  "new": "echo \"=== 2/4  Extended erasure response period (Chapter 5, Section 5.6) ===\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ },
+ {
+  "id": "P38-120",
+  "file": "repro_package/run_all.sh",
+  "old": "echo \"1,006 bytes against the full 98-bundle cohort. Chapter 5, Section 5.7 reports\"",
+  "new": "echo \"1,006 bytes against the full 98-bundle cohort. Chapter 5, Section 5.8 reports\"",
+  "count": 1,
+  "why": "MIN-13 renumbering"
+ }
+]
