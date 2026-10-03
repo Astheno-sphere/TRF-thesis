@@ -1,0 +1,46 @@
+# P14 — Chapter 5 and Table F.2 follow the code wave (P12); MIN-07 "Section 6.9" -> 6.9a.
+# Figures from the re-recorded run of 3 Oct (repro_package/results/trf_output.txt, md5 b0ba15484259):
+# 533 lines (413 non-blank, non-comment); record 100 commitment 678ade47c1e6dc03...; integrity
+# 200/200; both tamper tests fail V_II. Constructed payload mean 43 bytes (subset run f6eacf54972c).
+C5, A, F = "Chapter5_Demonstration_v1.md", "code_artefacts/README_Appendix_A.md", "Front_Matter_v1.md"
+EDITS = [
+    dict(id="P14-01", file=C5,
+         old="The checker is a single Python module of 363 lines including documentation and the independent cross-check, of which 276 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately ninety. It depends only on the Python standard library: `hashlib` for commitments, `random` for seeded generation, and `itertools` for the exhaustive cross-check.",
+         new="The checker is a single Python module of 533 lines including documentation, the independent cross-check and the audit-log integrity check, of which 413 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check.",
+         why="code wave: counts and modules"),
+    dict(id="P14-02", file=C5,
+         old="| `trf_checker.py` | 363 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check |",
+         new="| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check |",
+         why="Table 5.0a"),
+    dict(id="P14-03", file=C5, old="| `app.py` | 526 |", new="| `app.py` | 530 |", why="Table 5.0a"),
+    dict(id="P14-04", file=C5, old="discussed in Chapter 6, Section 6.9 | No |", new="discussed in Chapter 6, Section 6.9a | No |", why="MIN-07"),
+    dict(id="P14-05", file=C5,
+         old="Each carries metadata `m` containing the actor identifier, the national contact point, the patient pseudonym, the document category, the legal basis, and the outcome; a payload;",
+         new="Each carries metadata `m` split into accessor fields (the actor, the national contact point or the data permit, the document category, the legal basis, and the outcome) and subject fields (the patient pseudonym); a payload, which stands for the demographic query of the patient-discovery transaction in a cross-border record and for the logged activity in a Secure Processing Environment record;",
+         why="M1: record model as revised; SPE records name a researcher and permit"),
+    dict(id="P14-06", file=C5,
+         old="Key destruction is modelled as irreversible removal of the key reference from the record's state,",
+         new="Key destruction is modelled as irreversible removal of the key reference from the record's state, and deletion of the ciphertext as removal of the payload,",
+         why="M3b"),
+    dict(id="P14-07", file=C5,
+         old="> metadata intact : True — actor=HP-026, ncp=NO, outcome=success\n> commitment c(a) : 11087780fd192c8fdaa237081ee0bb11…\n> payload key k(a) : None ← destroyed\n> invalidation ι(a) : month=16, ground=EHDS Art 68(12)\n> payload readable? : False",
+         new="```text\naccessor fields      : True  actor=R-008 permit=DP-015 outcome=success\nsubject link         : removed month 16\ncommitment c(a)      : 678ade47c1e6dc03296175e056fd8116...\npayload key k(a)     : None   <- destroyed\nsalt, ciphertext     : None, None   <- destroyed, deleted\ninvalidation iota(a) : month=16 ground=EHDS Art 68(12)\npayload readable?    : False\n```",
+         why="M1 (supervisor: the SPE record showed a clinician and a contact point); MIN-10 (verbatim lines in a code block, one per line)"),
+    dict(id="P14-08", file=C5,
+         old="The access event is fully established: which health professional, at which contact point, with what outcome.",
+         new="The access event is fully established: which researcher, under which permit, with what outcome. The link to the patient was removed at the ceiling, and its removal is itself a logged entry.",
+         why="M1, D-16"),
+    dict(id="P14-09", file=C5,
+         old="An auditor examining this record learns everything accountability requires and nothing the erasure obligation forbids.",
+         new="An auditor examining this record learns everything accountability requires and nothing the erasure obligation forbids.\n\nThe record is also checked against the audit log. Every access event, invalidation and subject-link removal is an entry in an append-only Merkle log, and condition (i) of Semantics II is tested as an inclusion proof against the log's root rather than as the presence of fields. All two hundred records verify. Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.10). The Semantics II result of Table 5.3 therefore rests on a check that can fail, which the earlier presence test could not.",
+         why="M4c: V_II tests integrity, with the tamper result"),
+    dict(id="P14-10", file=C5,
+         old="Mean payload size rises from 35 bytes to 1,006.",
+         new="Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.11).",
+         why="code wave: constructed mean 35 -> 43; full-cohort run is historical"),
+    dict(id="P14-11", file=F, old="| `trf_checker.py` | 363 | Yes — Tables 5.1, 5.2a, 5.3 |", new="| `trf_checker.py` | 533 | Yes — Tables 5.1, 5.2a, 5.3 |", why="Table F.2"),
+    dict(id="P14-12", file=A, old="builds the politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9.", new="builds the politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a.", why="MIN-07"),
+    dict(id="P14-13", file=A, old="The cross-sector instance discussed in Chapter 6, Section 6.9. It takes", new="The cross-sector instance discussed in Chapter 6, Section 6.9a. It takes", why="MIN-07"),
+    dict(id="P14-14", file=A, old="and discussed in Chapter 6, Section 6.9. The zero", new="and discussed in Chapter 6, Section 6.9a. The zero", why="MIN-07"),
+]
+LOST_OK = ["number 363", "number 276", "number 526", "number 026", "number 16", "number 6.9"]

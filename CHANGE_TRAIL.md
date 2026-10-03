@@ -1,5 +1,17 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, code wave: patches P12–P14 and the public repository
+
+| ID | Change | Verification |
+|---|---|---|
+| P12-01 to P12-04 | `trf_checker.py` (three copies) and `app.py`. Metadata split into accessor and subject fields; SPE records name a researcher and a permit; subject link removed at the ceiling and logged (Ch4 §4.7 step 4); key, salt and payload removed at invalidation (D-15, D-17); payloads per record class (ITI-55 query, SPE activity); `V_II` checks each record against an append-only Merkle log (RFC 6962 hashing) and the run prints two tamper tests; C3 checked over the subject link; `make_salt()` and `--random-salts` replace the `if False` branch. New contents kept in `patches/P12_payloads/` | Before applying: Semantics I 90/200, 95, 39 witnesses, 138 invalidated, Semantics II 0, all unchanged; 200/200 records verify; both tamper tests make `V_II` fail; `--random-salts` same results; Norwegian and cross-sector runs byte-identical; Streamlit AppTest: every button, no exception. Code edits were first made directly, then reverted and replayed through `patch.py` so the md5 chain holds |
+| B-20 | Recorded runs re-recorded from the P12 code: `trf_output.txt` (b0ba15484259), `expected_delta_witness_output.txt` (b5ee877549fc), `synthea_comparison_subset_output.txt` (f6eacf54972c). `synthea_comparison_full_cohort_output.txt` kept as the 28 Sept record (cannot be re-run without the 98-bundle cohort) and labelled as such in A.11 | `run_all.sh`: 5/5 match |
+| P13-B01 to P13-B09 | Appendix A A.8, A.9d, A.10, A.11b, A.12 regenerated from their files by `handoff_tools/appendix_sync.py` (new) | `appendix_sync.py`: 11/11 equal |
+| P13-01 to P13-12 | Appendix A prose: line counts (533, 530), record model, `check_semantics_II` and integrity description, `make_salt`, ciphertext deletion, payload means (43 → 891 subset; full cohort historical), integrity row and new reference commitment `678ade47c1e6dc03…` in A.6, A.11 marked as recorded before the revision | patch.py: declared losses are the old counts (363, 526), HP-026 from the old console line, and "§4.8" now written "s4.8" in a code comment |
+| P14-01 to P14-14 | Ch5: module size (533 lines, 413 non-blank non-comment), Table 5.0a, record model (§5.2), ciphertext deletion, §5.6 auditor view as a code block with the SPE record's researcher and permit (the supervisor's M1 point about HP-026 and ncp=NO), new integrity paragraph with the tamper result (M4c), payload means. Table F.2: 533. MIN-07: "Section 6.9" → 6.9a in Table 5.0a and Appendix A ×3 | Figures copied from the re-recorded run |
+| B-21 | Public repository `Astheno-sphere/TRF` commit `a6062e3` (pushed 3 Oct): code, three recorded runs, `docs/Appendix_A.md` replaced by the thesis's Appendix A (the copy there was older), README (counts, revision section), repository trail R-16 to R-21, CHECKSUMS regenerated from the files. `CHECKSUMS.md` here is now a copy of the repository's | All five recorded runs reproduced inside the repository clone before pushing. `trail_check.py --remote` now uses the push clone; new check 13 (Appendix A listings equal their files) |
+| B-22 | Guard "dead salt branch in code" narrowed to the assignment (`= os.urandom(16) if False`): the commit gate refused M3c as closed because the pattern matched the new docstring that records the branch's removal | Guard 0 in all code files |
+
 ## 3 October 2026 — supervisor review, patch P11 (logistics anchor, programme fit)
 
 | ID | Change | Verification |

@@ -222,11 +222,12 @@
   {
    "kind": "target",
    "name": "dead salt branch in code",
-   "pattern": "os\\.urandom\\(16\\) if False",
+   "pattern": "=\\s*os\\.urandom\\(16\\) if False",
    "scope": "code",
    "item": "M3c",
    "baseline": 1,
-   "goal": 0
+   "goal": 0,
+   "note": "Narrowed 3 Oct: the old pattern also matched the docstring describing the branch's removal"
   },
   {
    "kind": "target",
