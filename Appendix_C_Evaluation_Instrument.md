@@ -1,6 +1,6 @@
 # Appendix C. Expert Evaluation Instrument
 
-*(v1, 18 September 2026. The instrument specified here was designed following supervisory feedback of September 2026 and constitutes the evaluation design for the next iteration of the design science cycle. Its execution status is stated in Chapter 3, Section 3.9. **This is a design, not a fielded instrument. Section C.1a states what is expected to change once it meets real respondents.**)*
+*(v1, 18 September 2026. The instrument specified here was designed following supervisory feedback of September 2026 and constitutes the evaluation design for the next iteration of the design science cycle. Its execution status is stated in Chapter 3, Section 3.8. **This is a design, not a fielded instrument. Section C.1a states what is expected to change once it meets real respondents.**)*
 
 ---
 

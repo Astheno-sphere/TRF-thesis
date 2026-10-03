@@ -1,5 +1,11 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patch P01 (minor issues)
+
+| ID | Change | Verification |
+|---|---|---|
+| P01-01 to P01-16 | MIN-01 §3.6 line counts (wrong and inverted) replaced by a reference to Table 5.0a; MIN-02 §3.6 cross-reference → Chapter 4, Section 4.3; MIN-03 §1.6 "accumulator-based invalidation" → "a logged invalidation registry", accumulator stated optional and unimplemented; MIN-04 round 5 named in §2.1 text, Table of rounds and the appendix list; MIN-08 Appendix C → §3.8; MIN-09 "a separately written" ×3; MIN-11 "witnesses in the model" in §5.7 and §6.1; MIN-12 the supervisor addendum removed from §1.5 and §3.2 (scope statement kept). Supervisor's tracked wording adopted for MIN-02, -03 (substance), -08, -09. Per-edit reasons in `patches/P01_minor_batch.py` | patch.py inspection: 2 declared losses (section numbers 3.4, 3.9), no undeclared loss. trail_check: 11 wording differences from the reviewed draft, all replayed from logged edits. Guards: 8/17 targets met. `trail_check.py` check 8 now replays every logged edit on the draft line before falling back to shingles (a 4-word edit had been reported unexplained) |
+
 ## 2 October 2026 — base reset to the draft the supervisor reviewed (read this first)
 
 The 30 Sept working set was not the draft sent to Prof. Ferreira. The draft he reviewed is our

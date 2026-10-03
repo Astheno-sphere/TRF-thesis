@@ -192,6 +192,6 @@ Two corrections are recorded here because they were made against the thesis's ow
 
 *Appendix A*: Code artefacts, reproduction commands, data provenance, integrity record, full source of all five modules and the recorded console run of every command
 
-*Appendix B*: Search query log: 59 queries across four dated rounds, with round purposes and coverage notes
+*Appendix B*: Search query log: 59 queries across four dated search rounds, a fifth round of 18 locator verifications, round purposes and coverage notes
 
 *Appendix C*: Expert evaluation instrument: panel composition, session structure, demonstration script, semi-structured interview guide, closed-response questionnaire, analysis plan

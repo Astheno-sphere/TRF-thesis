@@ -27,3 +27,19 @@
 2026-10-02 05:32 | D0_rebase_to_draft.py | D0-27 | Chapter7_Conclusion_v1.md | d2d9cca37aca -> 3faa644b3eef | Draft wording
 2026-10-02 05:32 | D0_rebase_to_draft.py | D0-28 | Chapter7_Conclusion_v1.md | d2d9cca37aca -> 3faa644b3eef | Draft: accumulators not implemented
 2026-10-02 05:32 | D0_rebase_to_draft.py | D0-29 | Chapter7_Conclusion_v1.md | d2d9cca37aca -> 3faa644b3eef | Draft: competent authorities
+2026-10-03 00:19 | P01_minor_batch.py | P01-01 | Chapter3_Methodology_v1.md | 98a20e582088 -> 9a69873c2034 | MIN-01: 'fifty to one hundred lines' was wrong (363). Size now stated once, in Table 5.0a
+2026-10-03 00:19 | P01_minor_batch.py | P01-02 | Chapter3_Methodology_v1.md | 98a20e582088 -> 9a69873c2034 | MIN-01: 'larger, two to four hundred lines' was wrong (152, smaller than the checker)
+2026-10-03 00:19 | P01_minor_batch.py | P01-03 | Chapter3_Methodology_v1.md | 98a20e582088 -> 9a69873c2034 | MIN-02: wrong cross-reference. Supervisor's tracked wording adopted
+2026-10-03 00:19 | P01_minor_batch.py | P01-04 | Chapter1_Introduction_v2.md | 058761032204 -> 1870f6938506 | MIN-03: the accumulator is unimplemented and not load-bearing. Supervisor's tracked substance adopted, parenthesis moved to the end of the sentence
+2026-10-03 00:19 | P01_minor_batch.py | P01-05 | Chapter2_LitReview_v2_FINAL.md | 8579e4f4a081 -> 3a0b8c0b6b0e | MIN-04: Appendix B lists five rounds; round 5 verified locators and ran no discovery queries
+2026-10-03 00:19 | P01_minor_batch.py | P01-06 | Chapter2_LitReview_v2_FINAL.md | 8579e4f4a081 -> 3a0b8c0b6b0e | MIN-04: the absence claim rests on the discovery rounds only; wording now says so
+2026-10-03 00:19 | P01_minor_batch.py | P01-07 | Chapter2_LitReview_v2_FINAL.md | 8579e4f4a081 -> 3a0b8c0b6b0e | MIN-04: the supervisor asked for round 5 in the table. Figures from Appendix B (18 locator verifications)
+2026-10-03 00:19 | P01_minor_batch.py | P01-08 | Front_Matter_v1.md | 2fef1ca1fe2f -> 602285fe3830 | MIN-04: list of appendices aligned with Appendix B
+2026-10-03 00:19 | P01_minor_batch.py | P01-09 | Appendix_C_Evaluation_Instrument.md | beee9ba249f1 -> b0facda1a8cd | MIN-08: §3.8 is the evaluation design; §3.9 is ethics. Supervisor's tracked wording adopted
+2026-10-03 00:19 | P01_minor_batch.py | P01-10 | Chapter5_Demonstration_v1.md | e90ea79e5c03 -> cd0cbb51845d | MIN-09: article. Supervisor's tracked wording adopted
+2026-10-03 00:19 | P01_minor_batch.py | P01-11 | Chapter6_Discussion_v1.md | 683c99d03623 -> cd67df56b103 | MIN-09
+2026-10-03 00:19 | P01_minor_batch.py | P01-12 | Chapter7_Conclusion_v1.md | 3faa644b3eef -> cd5f2b9c2585 | MIN-09
+2026-10-03 00:19 | P01_minor_batch.py | P01-13 | Chapter5_Demonstration_v1.md | e90ea79e5c03 -> cd0cbb51845d | MIN-11: 'concrete witnesses' read as evidence about the world
+2026-10-03 00:19 | P01_minor_batch.py | P01-14 | Chapter6_Discussion_v1.md | 683c99d03623 -> cd67df56b103 | MIN-11: supervisor's suggested wording 'witnesses in the model'
+2026-10-03 00:19 | P01_minor_batch.py | P01-15 | Chapter1_Introduction_v2.md | 058761032204 -> 1870f6938506 | MIN-12: removed the reference to an addendum examiners will not see; the scope statement stays
+2026-10-03 00:19 | P01_minor_batch.py | P01-16 | Chapter3_Methodology_v1.md | 98a20e582088 -> 9a69873c2034 | MIN-12: same addendum, second mention
