@@ -55,8 +55,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | d1dab69dfc3e | 17,131 | 3 Oct 22:37 | Every change with an ID, reason and verification. Synced with the repository copy |
-| CONTROL | CHECKSUMS.md | a1902c60198a | 194 | 3 Oct 21:17 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 91a03f786e42 | 17,157 | 3 Oct 22:43 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | 85c3349853aa | 194 | 3 Oct 22:43 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
