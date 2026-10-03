@@ -2,10 +2,13 @@
 # by handoff_tools/appendix_sync.py (block edits P13-Bnn), prose updated (P13-nn).
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent / "handoff_tools"))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import appendix_sync
+from frozen import freeze, at
+PRE, POST = "e1143af", "e83e061"   # commits before and after the code wave
 
 A = "code_artefacts/README_Appendix_A.md"
-EDITS = appendix_sync.block_edits("P13-B") + [
+PROSE = [
     dict(id="P13-01", file=A, old="including the independent exhaustive cross-check | 363 |",
          new="including the independent exhaustive cross-check and the audit-log integrity check | 533 |", why="line count after P12"),
     dict(id="P13-02", file=A, old="| `app.py` | Five-tab demonstration viewer over the artefact, never a source of results | 526 |",
@@ -49,6 +52,9 @@ EDITS = appendix_sync.block_edits("P13-B") + [
          new="Produced by command 4 against the regenerated 98-bundle cohort. This is the run Chapter 5, Section 5.7 reports at a mean payload of 1,006 bytes. It was recorded on 28 September 2026, before the code revision of 3 October, and its constructed-payload mean (35 bytes) reflects the earlier constructed strings; no measure in it depends on them, as the subset run in A.11b, recorded after the revision, shows.",
          why="historical record stated as such"),
 ]
+
+EDITS = freeze("P13_appendixA_codewave", lambda: appendix_sync.block_edits_text(
+    at(PRE, appendix_sync.APPENDIX), lambda f: at(POST, f), "P13-B") + PROSE)
 
 # Old line counts (363, 526) and the old SPE auditor line (actor=HP-026) leave with the code they described.
 LOST_OK = ["number 363", "number 526", "number 026", "number 4.8"]  # 4.8: code comment "§4.8" now written "s4.8"

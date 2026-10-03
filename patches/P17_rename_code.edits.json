@@ -1,0 +1,162 @@
+[
+ {
+  "id": "P17-demo-trf-01",
+  "file": "demo_app/trf_checker.py",
+  "old": "Executable witness for Theorem 1 (infeasibility under plaintext-verifiability",
+  "new": "Executable witness for Proposition 1 (infeasibility under plaintext-verifiability",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-trf-02",
+  "file": "demo_app/trf_checker.py",
+  "old": "semantics) and Theorem 2 (feasibility under accountability-preserving semantics)",
+  "new": "semantics) and Proposition 2 (feasibility under accountability-preserving semantics)",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-trf-03",
+  "file": "demo_app/trf_checker.py",
+  "old": "# Trajectory from the constructive proof of Theorem 2.",
+  "new": "# Trajectory from the constructive proof of Proposition 2.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-trf-04",
+  "file": "demo_app/trf_checker.py",
+  "old": "    print(\"SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Theorem 1\")",
+  "new": "    print(\"SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Proposition 1\")",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-trf-05",
+  "file": "demo_app/trf_checker.py",
+  "old": "    print(\"SEMANTICS II (accountability preservation)          -> Theorem 2\")",
+  "new": "    print(\"SEMANTICS II (accountability preservation)          -> Proposition 2\")",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-trf-06",
+  "file": "demo_app/trf_checker.py",
+  "old": "# further two months. The theorems are stated for arbitrary finite delta;",
+  "new": "# further two months. The propositions are stated for arbitrary finite delta;",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-repr-trf-01",
+  "file": "repro_package/trf_checker.py",
+  "old": "Executable witness for Theorem 1 (infeasibility under plaintext-verifiability",
+  "new": "Executable witness for Proposition 1 (infeasibility under plaintext-verifiability",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-repr-trf-02",
+  "file": "repro_package/trf_checker.py",
+  "old": "semantics) and Theorem 2 (feasibility under accountability-preserving semantics)",
+  "new": "semantics) and Proposition 2 (feasibility under accountability-preserving semantics)",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-repr-trf-03",
+  "file": "repro_package/trf_checker.py",
+  "old": "# Trajectory from the constructive proof of Theorem 2.",
+  "new": "# Trajectory from the constructive proof of Proposition 2.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-repr-trf-04",
+  "file": "repro_package/trf_checker.py",
+  "old": "    print(\"SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Theorem 1\")",
+  "new": "    print(\"SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Proposition 1\")",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-repr-trf-05",
+  "file": "repro_package/trf_checker.py",
+  "old": "    print(\"SEMANTICS II (accountability preservation)          -> Theorem 2\")",
+  "new": "    print(\"SEMANTICS II (accountability preservation)          -> Proposition 2\")",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-repr-trf-06",
+  "file": "repro_package/trf_checker.py",
+  "old": "# further two months. The theorems are stated for arbitrary finite delta;",
+  "new": "# further two months. The propositions are stated for arbitrary finite delta;",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-code-trf-01",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "Executable witness for Theorem 1 (infeasibility under plaintext-verifiability",
+  "new": "Executable witness for Proposition 1 (infeasibility under plaintext-verifiability",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-code-trf-02",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "semantics) and Theorem 2 (feasibility under accountability-preserving semantics)",
+  "new": "semantics) and Proposition 2 (feasibility under accountability-preserving semantics)",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-code-trf-03",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "# Trajectory from the constructive proof of Theorem 2.",
+  "new": "# Trajectory from the constructive proof of Proposition 2.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-code-trf-04",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "    print(\"SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Theorem 1\")",
+  "new": "    print(\"SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Proposition 1\")",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-code-trf-05",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "    print(\"SEMANTICS II (accountability preservation)          -> Theorem 2\")",
+  "new": "    print(\"SEMANTICS II (accountability preservation)          -> Proposition 2\")",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-code-trf-06",
+  "file": "code_artefacts/trf_checker.py",
+  "old": "# further two months. The theorems are stated for arbitrary finite delta;",
+  "new": "# further two months. The propositions are stated for arbitrary finite delta;",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-app-01",
+  "file": "demo_app/app.py",
+  "old": "    \"Live demonstration of the executable witness for Theorems 1 and 2. \"",
+  "new": "    \"Live demonstration of the executable witness for Propositions 1 and 2. \"",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ },
+ {
+  "id": "P17-demo-app-02",
+  "file": "demo_app/app.py",
+  "old": "        \"the chosen parameters: Theorem 1 holds for any parameters under which a \"",
+  "new": "        \"the chosen parameters: Proposition 1 holds for any parameters under which a \"",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions in code"
+ }
+]

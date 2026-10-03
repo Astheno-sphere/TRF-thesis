@@ -1,5 +1,18 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patches P15–P18 (propositions; anchoring result)
+
+| ID | Change | Verification |
+|---|---|---|
+| P15-01 to P15-06 | M4b: §6.9a's anchoring result promoted into Ch4 (end of §4.6) as Proposition 3, with proof. Checked formally first: for a ceiling of L months anchored at e(a) ≥ t(a), floor and ceiling collide for a record iff e(a) + L ≤ t(a) + F, so a collision needs L ≤ F under any anchor; §6.9a's "structural rather than numerical" overstated it. Corrected in §6.9a ×3 ("as well as numerical"; "the later longer than the earlier"; "a longer ceiling"). What the anchor decides is visibility: a same-anchor collision would be a contradiction readable in the text; an external-anchor one depends on each record's history. M4a: the §4.7 note now says why the results are propositions and where the weight lies (§4.2, Propositions 3 and 4) | Derivation in the patch file; proof re-read |
+| P16-* (58 edits) | M4a: Theorem → Proposition, theorems → propositions, Proposition L → Proposition 4, across front matter, Ch1–7 and Appendix C, one logged edit per changed line. Appendix B excluded (query 34 is a verbatim search string) | No "theorem" left in those files |
+| P17-* (20 edits) | Same rename in the code (three checker copies, app) | Two printed header lines change; Synthea, Norwegian, cross-sector runs byte-identical |
+| B-23 | `trf_output.txt` and `expected_delta_witness_output.txt` re-recorded (header lines only) | run_all 5/5 |
+| P18-B*, P18-* | Appendix A: listings and the two outputs synced; prose renamed outside code fences | appendix_sync 11/11 |
+| B-24 | Public repository commit `0f3c39e`: rename in code, README, Appendix A, two recorded runs; repository trail R-22; CHECKSUMS regenerated and copied here | 5/5 runs reproduced in the repository clone before pushing |
+| B-25 | `TIGER_TASKS.md`: the tasks only Tiger can do (D7.4 page check with link, UCC on EUR-Lex, owning §4.6 and Propositions 3–4, live app check, Zenodo DOI, logos, voice pass, length guidance, two optional) | — |
+| B-26 | Defect in my tooling, found when check 8 reported 28 unexplained lines after P16: generated patches (P12, P13, P16, P17, P18) computed their edits from the files at import, so once applied they replayed as nothing and the base-diff check could not see them. `patches/frozen.py` added: generated edits are frozen to `patches/<name>.edits.json`, rebuilt for the five patches from git history (pre-states `e1143af`, `e83e061`). New check 14 replays every patch since `joao-base-v1` in log order and requires the files on disk; check 3 accepts wildcard rows (`P16-*`) | Frozen edit IDs equal the log for all five; replay from git reproduces every logged after-md5 (22 of 22) |
+
 ## 3 October 2026 — supervisor review, code wave: patches P12–P14 and the public repository
 
 | ID | Change | Verification |
