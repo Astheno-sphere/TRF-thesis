@@ -1,5 +1,14 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patches P19–P22 (A1, Table 2.1, frequency and window, traceability)
+
+| ID | Change | Verification |
+|---|---|---|
+| P19-01 to P19-04 | M6b: Appendix C item A1 reworded to what the mechanism lets an auditor verify (logged, unaltered invalidation); the change recorded in one line, as the supervisor asked; A1/A2 note and §3.8 follow | patch.py: "does not" kept after the gate flagged its loss |
+| P20-01, P20-02 | M5e: Table 2.1 in three bands (peer-reviewed systems; national policy; preprints and practitioner sources, now holding zkFL-Health (arXiv), Aikebaier (ePrint) and VeritasChain); one sentence on what the third band may carry. SPUHiN row "Norwegian policy, final" → "hearing version": P10's sweep searched for "finalis" and missed "final" | Venues checked in the bibliography |
+| P21-01 to P21-04 | MIN-05: "the ordinary case" (§3.4) and "the generic case" (Cor 1.1) replaced by what the condition says and a pointer to §3.7; Ch4 summary made conditional on log granularity. MIN-06: the closed window kept and justified (conservative reading of "at least"; changing it would shorten every obligation and change every recorded figure) | patch.py: Article 17 kept after the gate flagged its loss |
+| P22-01 | M6a: Table 4.1, the traceability matrix, at the end of §4.11: 14 requirements (EHDS Arts 68(12), 73(1)(e); D7.4 OPR-6, EHDSR-6/7/8; GDPR Arts 17(1), 12(3), 17(3)(b), 5(1)(c), 5(1)(e); EDPB 02/2025; ITI-55; SPUHiN hearing version ×2), each with what the mechanism does, where, and a status (met in the artefact, met by specification, no conflict, open) | Statuses checked against the code and the recorded run. D7.4 page references wait on TIGER_TASKS T-1 |
+
 ## 3 October 2026 — supervisor review, patches P15–P18 (propositions; anchoring result)
 
 | ID | Change | Verification |

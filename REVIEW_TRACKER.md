@@ -28,17 +28,17 @@ passage by passage when the patch for that passage is written.
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | CLOSED | P10 | Every claim limited to the hearing version inspected (P10, P10b) |
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim at every site; Art 73(1)(e) verbatim in Ch1, Ch2, Ch4. Open: one further language version (supervisor's 'ideally') |
 | M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
-| M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | PARTIAL | P09 | Feng et al. now CAV 2023 (P09). Open: Table 2.1 practitioner/preprint band |
-| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | OPEN |  | The evaluation step |
-| M6b | Reword Appendix C item A1 ("full confidence"), record in one line | OPEN |  |  |
+| M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | CLOSED | P09, P20 | Feng peer-reviewed (P09); Table 2.1 bands (P20) |
+| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | PARTIAL | P22 | Table 4.1 in §4.11. Open: D7.4 page references (TIGER_TASKS T-1) |
+| M6b | Reword Appendix C item A1 ("full confidence"), record in one line | CLOSED | P19 | A1 reworded; one-line record in Appendix C |
 | M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | CLOSED | P11 | UCC Arts 51 and 197: record outlives the destroyed goods; tested against §6.9a; §1.4 overreach removed. Seafarer and OECD material left for PRES trimming |
 | M7b | One sentence in §1.5 on the programme fit | CLOSED | P11 | One sentence in §1.5 |
 | MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | CLOSED | P01 | Prose now points to Table 5.0a; the code wave must update Table 5.0a, Table F.2 and Appendix A counts |
 | MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | CLOSED | P01 |  |
 | MIN-03 | §1.6 drop "accumulator-based" | CLOSED | P01 |  |
 | MIN-04 | §2.1.4 "four dated rounds" vs Appendix B five | CLOSED | P01 | Fork R1 merged rounds to 7 on the superseded branch; re-judge |
-| MIN-05 | §3.4 / Cor 1.1 "ordinary"/"generic case" are frequency claims; soften | OPEN |  |  |
-| MIN-06 | §4.4 C1 closed window spans F+1 months | OPEN |  | Half-open interval, or justify |
+| MIN-05 | §3.4 / Cor 1.1 "ordinary"/"generic case" are frequency claims; soften | CLOSED | P21 | §3.4, Cor 1.1, Ch4 summary |
+| MIN-06 | §4.4 C1 closed window spans F+1 months | CLOSED | P21 | Closed window justified in §4.4 |
 | MIN-07 | Table 5.0a, A.9c, A.14: "Section 6.9" → 6.9a after renumbering | CLOSED | P14 | Table 5.0a and Appendix A ×3 |
 | MIN-08 | Appendix C preamble: "Chapter 3, Section 3.9" → 3.8 | CLOSED | P01 |  |
 | MIN-09 | "an separately written" ×3 → "a separately written" | CLOSED | P01 |  |

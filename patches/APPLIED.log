@@ -259,3 +259,14 @@
 2026-10-03 16:55 | P18_appendixA_propositions.py | P18-03 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
 2026-10-03 16:55 | P18_appendixA_propositions.py | P18-04 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
 2026-10-03 16:55 | P18_appendixA_propositions.py | P18-05 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
+2026-10-03 17:17 | P19_appendixC_A1.py | P19-01 | Appendix_C_Evaluation_Instrument.md | 20f5bd2517c8 -> be9986f476b2 | M6b: one-line record of the change
+2026-10-03 17:17 | P19_appendixC_A1.py | P19-02 | Appendix_C_Evaluation_Instrument.md | 20f5bd2517c8 -> be9986f476b2 | M6b: states what the mechanism verifiably provides
+2026-10-03 17:17 | P19_appendixC_A1.py | P19-03 | Appendix_C_Evaluation_Instrument.md | 20f5bd2517c8 -> be9986f476b2 | M6b
+2026-10-03 17:17 | P19_appendixC_A1.py | P19-04 | Chapter3_Methodology_v1.md | 0fef8b15ed8c -> aa355ceb6f54 | M6b: §3.8 follows Appendix C
+2026-10-03 17:17 | P20_table21_bands.py | P20-01 | Chapter2_LitReview_v2_FINAL.md | bdef79451f51 -> 96c829174ddf | M5e: three bands; preprint and practitioner sources separated; SPUHiN row 'final' corrected (M5b residue)
+2026-10-03 17:17 | P20_table21_bands.py | P20-02 | Chapter2_LitReview_v2_FINAL.md | bdef79451f51 -> 96c829174ddf | M5e: what the third band may and may not carry
+2026-10-03 17:18 | P21_frequency_window.py | P21-01 | Chapter3_Methodology_v1.md | aa355ceb6f54 -> 1fbea0b59954 | MIN-05: no frequency claim
+2026-10-03 17:18 | P21_frequency_window.py | P21-02 | Chapter4_TRF_Model_v1.md | 948871a55957 -> 499278854dd7 | MIN-05: 'the generic case' was a frequency claim
+2026-10-03 17:18 | P21_frequency_window.py | P21-03 | Chapter4_TRF_Model_v1.md | 948871a55957 -> 499278854dd7 | MIN-05; D-16 conditional carried into the chapter summary
+2026-10-03 17:18 | P21_frequency_window.py | P21-04 | Chapter4_TRF_Model_v1.md | 948871a55957 -> 499278854dd7 | MIN-06: closed window justified
+2026-10-03 17:19 | P22_traceability_matrix.py | P22-01 | Chapter4_TRF_Model_v1.md | 499278854dd7 -> 3c60a97e2d07 | M6a: traceability matrix, Table 4.1
