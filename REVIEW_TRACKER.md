@@ -14,9 +14,9 @@ passage by passage when the patch for that passage is written.
 | Item | What he asked | Status | Patches | Evidence / note |
 |---|---|---|---|---|
 | M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | PARTIAL | P04, P06 | Cross-border p(a) grounded in ITI-55 (P04); SPE log identifiability grounded in D7.4 EHDSR-7 (P06). Open: SPE record model in code (code wave) |
-| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | PARTIAL | P04, P05 | Ch4 carries the partition reading (P04, P05). Open: Ch1 §1.1, Ch2 §2.3, Ch6, Ch7 §7.4 still carry the old broad-reading paraphrase |
+| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | CLOSED | P04, P05, P07 | Partition reading carried through Ch1, Ch2, Ch4, Ch6, Ch7 (P04, P05, P07) |
 | M2b | Rival 6: move the logs out of the SPE at permit closure | CLOSED | P06 | Rival 6 accepted for the ceiling and bounded by Proposition L (P06). Ch6/Ch7 echo in P07 |
-| M2c | Rewrite §6.1's opening; lead with the robust result | OPEN |  | After M2a |
+| M2c | Rewrite §6.1's opening; lead with the robust result | CLOSED | P07 | §6.1 leads with the robust result, then Proposition L, then the conditional SPE instance |
 | M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
 | M3b | Ciphertext: delete at invalidation or justify | PARTIAL | P02 | D-17. Text done (P02). Code still keeps the payload after invalidation: code wave |
 | M3c | Remove the dead salt branch; seeded generator or `--reproducible` | OPEN |  | Code change; recorded runs must still match or be re-recorded with a logged reason |
@@ -26,7 +26,7 @@ passage by passage when the patch for that passage is written.
 | M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | OPEN |  | Search the eHDSI/eHMSEG documents first; fallback is "illustrative" (Cor 2.2 makes results F-independent) |
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | OPEN |  | Ch1 l.31 "survives against the final national document" |
-| M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04 | Ch4 quotes Art 68(12) verbatim (P04). Open: Ch1, Ch2, Ch6, Ch7, Appendix A; one further language version |
+| M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim at every site; Art 73(1)(e) verbatim in Ch1, Ch2, Ch4. Open: one further language version (supervisor's 'ideally') |
 | M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | OPEN |  |  |
 | M6a | Traceability matrix against D7.4 and the SPUHiN checklist | OPEN |  | The evaluation step |

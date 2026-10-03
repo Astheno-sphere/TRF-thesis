@@ -1,5 +1,12 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patches P07 and P08 (the reading carried through)
+
+| ID | Change | Verification |
+|---|---|---|
+| P07-01 to P07-07 | Ch1 §1.1, Ch2 §2.3: Art 68(12) quoted verbatim and the reading stated as in §4.6 (reaches logs at patient-record granularity on the broad reading). Ch6 §6.1 rewritten to lead with the robust result (supervisor's M2c), then Proposition L, then the SPE instance stated conditionally; the opening "two provisions that cannot both be satisfied" is gone. Ch6 §6.2 and Ch7 §7.4: "the thesis adopts the broad reading" → Corollary 1.2 stated conditionally; §7.4 now poses the open joint (does auditing need the subject link after the ceiling) and puts it in the request to the authorities. Removed in §6.2 and §7.4: "the Regulation uses the narrower 'made available under the data permit' formulation freely elsewhere", never verified (no instance found on 3 Oct) and no longer needed | patch.py: one declared loss ("narrower" in the removed claim). Guard "cannot both be satisfied" 1 → 0; paraphrase guard 6 → 1 (Appendix C, P08) |
+| P08-01 | Appendix C item 7: verbatim Art 68(12); the item now asks both questions the thesis depends on | Paraphrase guard 1 → 0 |
+
 ## 3 October 2026 — supervisor review, patch P06 (Rival 6, Proposition L, D7.4)
 
 | ID | Change | Verification |

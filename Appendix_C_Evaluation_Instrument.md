@@ -120,7 +120,7 @@ Thirteen questions across four themes. Prompts are used only where a participant
 4. The mechanism treats an audit record as verifiable when its metadata is intact, its commitment survives, and the invalidation is logged: without the payload remaining readable. Is that defensible as satisfying a retention obligation, in your judgement?
 5. What would a supervisory authority need to see before accepting it?
 6. The surviving residue is characterised as pseudonymised rather than anonymous. Does that characterisation match your reading of the Norwegian threshold?
-7. Article 68(12) governs "the data within the secure processing environment." Does that reach the access logs the environment generates, or only the dataset supplied under the permit?
+7. Article 68(12) provides that "the electronic health data within the secure processing environment shall be deleted within six months of the expiry of the data permit." Does that reach access logs kept at patient-record granularity, or only the dataset supplied under the permit? And does auditing "all processing operations" under Article 73(1)(e) after that point need the link to the patient, or only the identity of the person who accessed?
 
 ### Trust and key custody
 
