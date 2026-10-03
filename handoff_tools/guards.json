@@ -233,11 +233,12 @@
   {
    "kind": "target",
    "name": "defensive meta-commentary phrases",
-   "pattern": "stated rather than buried|recorded rather than concealed|reader is entitled to|examiner's first reaction|\\bhonest(ly)?\\b",
+   "pattern": "rather than buried|rather than concealed|rather than (?:left|omitted|assumed|asserted|by assertion|hidden)|reader is entitled|examiner|\\bhonest(?:ly)?\\b|stated (?:here|plainly|explicitly|rather)|must be stated|should be (?:stated|recorded|said|noted)|worth (?:stating|recording|noting|saying)|without softening|is recorded (?:here|as)|\\bcandid|deliberately|a reviewer will|an objection should be anticipated",
    "scope": "prose",
    "item": "PRES1",
-   "baseline": 19,
-   "goal": 9
+   "baseline": 84,
+   "goal": 42,
+   "note": "Widened 3 Oct (B-33): the narrow pattern found 18-19; the wide one 84 before P26. Goal: at least half cut (supervisor). Some remaining hits carry argument and stay"
   },
   {
    "kind": "regression",

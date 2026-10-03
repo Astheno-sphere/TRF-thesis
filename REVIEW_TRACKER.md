@@ -48,7 +48,7 @@ passage by passage when the patch for that passage is written.
 | MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | OPEN |  |  |
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
-| PRES-1 | Cut defensive meta-commentary by at least half | OPEN |  | Guard counts 19 with a narrow pattern; he counts ~50. Widen the detector before claiming half |
+| PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
 | PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work (TIGER_TASKS T-7) |
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | OPEN |  |  |
 | PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | OPEN |  |  |
