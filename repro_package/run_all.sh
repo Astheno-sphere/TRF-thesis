@@ -36,16 +36,26 @@ echo
 python3 cross_sector_check.py | tee results/cross_sector_rerun.txt
 
 echo
+echo "=== 5 (optional)  Envelope encryption with real AES-256-GCM; needs the cryptography package ==="
+if python3 -c "import cryptography" 2>/dev/null; then
+  python3 crypto_envelope.py | tee results/crypto_envelope_rerun.txt
+else
+  echo "skipped: pip install cryptography to run it; no thesis figure depends on it"
+fi
+
+echo
 echo "-----------------------------------------------------------------------"
-echo "Now diff each rerun against its recorded run. All five should be identical;"
+echo "Now diff each rerun against its recorded run. All six should be identical;"
 echo "a difference means a file changed, not that the result changed."
 echo "  diff results/trf_output_rerun.txt            results/trf_output.txt"
 echo "  diff results/delta_witness_rerun.txt         results/expected_delta_witness_output.txt"
 echo "  diff results/synthea_comparison_rerun.txt    results/synthea_comparison_subset_output.txt"
 echo "  diff results/norwegian_layer_rerun.txt       results/expected_norwegian_output.txt"
 echo "  diff results/cross_sector_rerun.txt          results/expected_cross_sector_output.txt"
+echo "  diff results/crypto_envelope_rerun.txt       results/crypto_envelope_output.txt"
 echo
 echo "results/synthea_comparison_full_cohort_output.txt records the same comparison"
-echo "against all 98 bundles. It differs from the subset run in two lines only, the"
-echo "bundle count and the mean payload. Diff the two against each other to see that"
+echo "against all 98 bundles, recorded on 28 September 2026 before the constructed"
+echo "payloads were revised. Besides the bundle count and the mean payloads, no line"
+echo "differs from the subset run. Diff the two against each other to see that"
 echo "no reported measure moves with cohort size."

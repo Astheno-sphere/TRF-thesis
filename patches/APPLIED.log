@@ -270,3 +270,14 @@
 2026-10-03 17:18 | P21_frequency_window.py | P21-03 | Chapter4_TRF_Model_v1.md | 948871a55957 -> 499278854dd7 | MIN-05; D-16 conditional carried into the chapter summary
 2026-10-03 17:18 | P21_frequency_window.py | P21-04 | Chapter4_TRF_Model_v1.md | 948871a55957 -> 499278854dd7 | MIN-06: closed window justified
 2026-10-03 17:19 | P22_traceability_matrix.py | P22-01 | Chapter4_TRF_Model_v1.md | 499278854dd7 -> 3c60a97e2d07 | M6a: traceability matrix, Table 4.1
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-01 | repro_package/run_all.sh | e53b50904052 -> 046cb64b24bf | new optional step
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-02 | repro_package/run_all.sh | e53b50904052 -> 046cb64b24bf | diff line for the new run
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-03 | repro_package/run_all.sh | e53b50904052 -> 046cb64b24bf | the full-cohort file is historical (P12/P13)
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-04 | repro_package/requirements.txt | 7ebd6817e2cc -> 1d0d75fba225 | dependency of the optional module only
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-05 | code_artefacts/README_Appendix_A.md | a15c7e1a78d1 -> 4c51649d84e9 | contents table
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-06 | code_artefacts/README_Appendix_A.md | a15c7e1a78d1 -> 4c51649d84e9 | new listing
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-07 | code_artefacts/README_Appendix_A.md | a15c7e1a78d1 -> 4c51649d84e9 | new console output
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-08 | Chapter5_Demonstration_v1.md | 71b93b688622 -> 1e42f3e1d1b2 | Table 5.0a row
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-09 | Chapter5_Demonstration_v1.md | 71b93b688622 -> 1e42f3e1d1b2 | optional module reported where the limitation is stated
+2026-10-03 17:32 | P23_crypto_envelope.py | P23-10 | Chapter4_TRF_Model_v1.md | 3c60a97e2d07 -> 7bae96114732 | Table 4.1 OPR-6 row reflects the executed check
+2026-10-03 17:32 | P23b_runall_label.py | P23b-01 | repro_package/run_all.sh | 046cb64b24bf -> 70dd99521feb | label consistent with steps 1/4 to 4/4

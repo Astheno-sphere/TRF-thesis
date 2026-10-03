@@ -16,12 +16,14 @@ BLOCKS = {
     "## A.9b Source listing": "demo_app/norwegian_layer.py",
     "## A.9c Source listing": "demo_app/cross_sector_check.py",
     "## A.9d Source listing": "demo_app/app.py",
+    "## A.9e Source listing": "demo_app/crypto_envelope.py",
     "## A.10 Console output": "repro_package/results/trf_output.txt",
     "## A.11 Console output": "repro_package/results/synthea_comparison_full_cohort_output.txt",
     "## A.11b Console output": "repro_package/results/synthea_comparison_subset_output.txt",
     "## A.12 Console output": "repro_package/results/expected_delta_witness_output.txt",
     "## A.13 Console output": "repro_package/results/expected_norwegian_output.txt",
     "## A.14 Console output": "repro_package/results/expected_cross_sector_output.txt",
+    "## A.15 Console output": "repro_package/results/crypto_envelope_output.txt",
 }
 
 

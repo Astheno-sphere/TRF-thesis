@@ -987,7 +987,7 @@ The mechanism is specified against the Norwegian infrastructure as verified in C
 | Requirement | Source | What the mechanism does | Where | Status |
 |---|---|---|---|---|
 | Electronic health data within the SPE deleted within six months of permit expiry | EHDS Art. 68(12) | Payload key, salt and ciphertext destroyed at $t_\pi + 6$; subject fields of patient-level logs removed at the same month | §4.7 steps 2–4; `apply_invalidation()` | Met in the artefact (C3 over $\alpha$ and $\beta$: 0 violations) |
-| Same, "deleted or rendered unrecoverable … including any backups or redundant copies" | TEHDAS2 D7.4, Table 5.2, OPR-6 (page to confirm) | Key destruction renders copies the store cannot delete at once unrecoverable | §4.8 *Ciphertext* | Met by specification; key destruction simulated (§4.9, §6.3) |
+| Same, "deleted or rendered unrecoverable … including any backups or redundant copies" | TEHDAS2 D7.4, Table 5.2, OPR-6 (page to confirm) | Key destruction renders copies the store cannot delete at once unrecoverable | §4.8 *Ciphertext*; `crypto_envelope.py` | Met in the optional module with real AES-256-GCM (138 of 138 refused); destruction in program memory, not hardware (§4.9, §6.3) |
 | Identifiable logs of access and activities, kept for the period needed to audit, at least one year | EHDS Art. 73(1)(e) | Accessor fields kept identifiable for the full floor; activity committed | §4.3, §4.7; `V_II()` | Met in the artefact (C1 under Semantics II: 0 violations) |
 | "All SPE logs MUST identify the actor" | D7.4, Table 5.1, EHDSR-7 (page to confirm) | Actor is an accessor field, never removed within the floor | §4.3 | Met in the artefact |
 | "All SPE logs MUST be kept at least for one year" | D7.4, Table 5.1, EHDSR-8 (page to confirm) | Floor parameter $F = 12$ | §4.3 | Met in the artefact |
@@ -1044,6 +1044,7 @@ Four further modules accompany it, none of which alters anything the checker rep
 | `norwegian_layer.py` | 135 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
 | `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a | No |
 | `app.py` | 530 | Five-tab viewer over the artefact; never a source of results | No |
+| `crypto_envelope.py` | 118 | Optional: the same lifecycle with real AES-256-GCM envelope encryption (needs `cryptography`) | No |
 
 Every command has a recorded console run committed beside it in the repository, one per command, so that a reader who executes a command and diffs the output against its recorded file can distinguish a changed file from a changed result. That distinction matters: if a figure in this chapter ever disagrees with the artefact, the question is which of the two moved, and the recorded runs answer it. The eight Synthea bundles the realism layer reads are committed with the code, so no regeneration is required to reproduce Table 5.4.
 
@@ -1196,7 +1197,7 @@ The record is also checked against the audit log. Every access event, invalidati
 
 *Established.* Both propositions hold on all two hundred generated instances. Proposition 1's conditional structure is reproduced exactly, including the boundary case of the request falling outside the window. Corollary 1.2 has thirty-nine witnesses in the model: records in which two provisions of one regulation collide over one environment with no data-subject action involved. The infeasibility results survive a separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines. The invalidation trajectory eliminates every violation without introducing any.
 
-*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.
+*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment. An optional module repeats the lifecycle with real AES-256-GCM envelope encryption (Appendix A, A.9e and A.15): after the 138 scheduled destructions exactly those records refuse to decrypt and the other 62 still read, so unreadability is executed rather than asserted; the keys are still destroyed in program memory, not in hardware: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.
 
 *How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The violation rates of Table 5.1 are functions of the generator parameters in Table 5.0 and are not estimates of real frequency.
 
@@ -1650,6 +1651,7 @@ A note on durability. Hosted applications are not archival objects: the live dem
 | `norwegian_layer.py` | Three Norwegian record classes, parallel to the thesis and reporting no thesis figure | 135 |
 | `cross_sector_check.py` | Cross-sector instance drawn from politiregisterloven § 17 | 110 |
 | `app.py` | Five-tab demonstration viewer over the artefact, never a source of results | 530 |
+| `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |
 | `data/synthea_subset/` | Eight untrimmed Synthea bundles from the reported cohort, so a reader can run the realism layer without regenerating it | 8 files, 40 MB |
 | `docs/expected_trf_output.txt` | Recorded console run of the checker | — |
 | `docs/expected_delta_witness_output.txt` | Recorded run at δ = 1 and δ = 3 | — |
@@ -3326,6 +3328,133 @@ st.caption(
 
 ---
 
+## A.9e Source listing: `crypto_envelope.py`
+
+The optional envelope-encryption module. Each record's payload is encrypted under its own AES-256-GCM data key; the data keys are wrapped under a key-encrypting key held in a custody object standing in for a hardware security module; at each record's invalidation month the wrapped key is destroyed; every record is then decrypted again. It is the only module with a dependency outside the standard library. Line count: 118.
+
+```python
+"""
+Envelope encryption with real AES-256-GCM (optional module)
+===========================================================
+The feasibility checker (trf_checker.py) models key destruction as removing a reference and
+uses the standard library only. This module shows the same lifecycle with real cryptography,
+so that "rendered unrecoverable" (TEHDAS2 D7.4, OPR-6) is executed rather than asserted:
+
+  - each record's payload is encrypted under its own random 256-bit data key (AES-256-GCM,
+    record id as associated data);
+  - each data key is wrapped under a key-encrypting key held in a custody object standing in
+    for a hardware security module (Chapter 4, Section 4.8, key hierarchy);
+  - at the record's invalidation month the wrapped data key is destroyed in custody;
+  - every record is then decrypted again: invalidated records must fail, the rest must succeed.
+
+It reads its population and invalidation months from trf_checker unchanged and reports no
+thesis figure. Destruction here is still destruction in program memory: the module shows that
+the ciphertext is unreadable without the key, not that a key was erased from hardware
+(Chapter 6, Section 6.3).
+
+Run:  pip install cryptography   then   python3 crypto_envelope.py
+Keys are random on every run; the printed counts are deterministic.
+"""
+
+import os
+
+from cryptography.exceptions import InvalidTag
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+import trf_checker as trf
+
+
+class Custody:
+    """Stands in for an HSM: holds the key-encrypting key and the wrapped data keys."""
+
+    def __init__(self):
+        self._kek = AESGCM(AESGCM.generate_key(bit_length=256))
+        self._wrapped = {}                                # rid -> (nonce, wrapped data key)
+
+    def new_data_key(self, rid):
+        dek = AESGCM.generate_key(bit_length=256)
+        nonce = os.urandom(12)
+        self._wrapped[rid] = (nonce, self._kek.encrypt(nonce, dek, f"dek:{rid}".encode()))
+        return dek
+
+    def data_key(self, rid):
+        if rid not in self._wrapped:
+            raise KeyError(f"data key for record {rid} destroyed")
+        nonce, wrapped = self._wrapped[rid]
+        return self._kek.decrypt(nonce, wrapped, f"dek:{rid}".encode())
+
+    def destroy(self, rid):
+        self._wrapped.pop(rid, None)
+
+
+def encrypt(custody, rid, payload):
+    dek = custody.new_data_key(rid)
+    nonce = os.urandom(12)
+    ct = AESGCM(dek).encrypt(nonce, payload, f"rec:{rid}".encode())
+    del dek                                            # only the wrapped copy survives
+    return nonce, ct
+
+
+def decrypt(custody, rid, nonce, ct):
+    return AESGCM(custody.data_key(rid)).decrypt(nonce, ct, f"rec:{rid}".encode())
+
+
+def main():
+    print("=" * 74)
+    print("ENVELOPE ENCRYPTION (AES-256-GCM, wrapped data keys)".center(74))
+    print("=" * 74)
+    records = trf.generate()
+    custody = Custody()
+    store = {r.rid: encrypt(custody, r.rid, r.payload) for r in records}
+    ok_before = sum(1 for r in records if decrypt(custody, r.rid, *store[r.rid]) == r.payload)
+    print(f"records encrypted                     : {len(records)}")
+    print(f"decrypt and match before invalidation : {ok_before}/{len(records)}")
+
+    invalidated = [r for r in records if r.t_invalidation() < trf.INF]
+    for r in invalidated:
+        custody.destroy(r.rid)                          # key destroyed at t_I (Ch4 s4.7 step 2)
+    print(f"data keys destroyed (t_I finite)      : {len(invalidated)}")
+
+    readable, refused = 0, 0
+    for r in records:
+        try:
+            decrypt(custody, r.rid, *store[r.rid])
+            readable += 1
+        except KeyError:
+            refused += 1
+    print(f"decryptable after invalidation        : {readable}  (expected {len(records) - len(invalidated)})")
+    print(f"refused, key destroyed                : {refused}  (expected {len(invalidated)})")
+
+    # The ciphertext of an invalidated record does not open under any surviving key.
+    victim = invalidated[0]
+    survivors = [r for r in records if r.t_invalidation() == trf.INF]
+    opened = 0
+    for s in survivors:
+        try:
+            AESGCM(custody.data_key(s.rid)).decrypt(store[victim.rid][0], store[victim.rid][1],
+                                                    f"rec:{victim.rid}".encode())
+            opened += 1
+        except InvalidTag:
+            pass
+    print(f"rid={victim.rid} ciphertext tried under {len(survivors)} surviving keys : opened {opened}")
+
+    for r in invalidated:                               # then the ciphertext is deleted (D-17)
+        del store[r.rid]
+    print(f"ciphertexts kept after deletion       : {len(store)}")
+
+    ok = (ok_before == len(records) and refused == len(invalidated)
+          and readable == len(records) - len(invalidated) and opened == 0)
+    print("=" * 74)
+    print(f"RESULT: {'every invalidated record is unrecoverable; every other record reads' if ok else 'MISMATCH'}")
+    print("=" * 74)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
 ## A.10 Console output of the reported run
 
 Verbatim output of `python3 trf_checker.py` under seed 20260915. Every figure in Chapter 5, Tables 5.1 to 5.3, appears here.
@@ -3622,6 +3751,29 @@ commitments differing between the two runs: 200/200   (expected 200 — same sal
 ==========================================================================
    RESULT: every reported figure is IDENTICAL under real FHIR payloads,   
    while every commitment differs. The model reads timing, not content.   
+==========================================================================
+```
+
+
+---
+
+## A.15 Console output of the envelope-encryption module
+
+Verbatim output of `python3 crypto_envelope.py`. Keys are random on every run; the counts are the same on every run. All 200 records decrypt before invalidation; after the 138 data keys due for destruction are destroyed, those 138 records are refused and the other 62 still read, and the ciphertext of an invalidated record opens under none of the surviving keys.
+
+```text
+==========================================================================
+           ENVELOPE ENCRYPTION (AES-256-GCM, wrapped data keys)           
+==========================================================================
+records encrypted                     : 200
+decrypt and match before invalidation : 200/200
+data keys destroyed (t_I finite)      : 138
+decryptable after invalidation        : 62  (expected 62)
+refused, key destroyed                : 138  (expected 138)
+rid=3 ciphertext tried under 62 surviving keys : opened 0
+ciphertexts kept after deletion       : 62
+==========================================================================
+RESULT: every invalidated record is unrecoverable; every other record reads
 ==========================================================================
 ```
 
