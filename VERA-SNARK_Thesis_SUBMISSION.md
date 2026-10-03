@@ -1098,9 +1098,11 @@ First, the violation rate is not one hundred per cent, and this is the correct b
 
 Second, the witnesses are specific and inspectable, which is the property Chapter 3 required of this component. Three examples, verbatim from the run:
 
-> C1 requires V=1 (⇒ α=1) at t=116 within [11,131]; C2 requires α=0 from t=116
-> C1 requires V=1 (⇒ α=1) at t=120 within [4,124]; C2 requires α=0 from t=120
-> C1 requires V=1 (⇒ α=1) at t=41 within [0,120]; C2 requires α=0 from t=41
+```text
+C1 requires V=1 (=> alpha=1) at t=116 within [11,131]; C2 requires alpha=0 from t=116
+C1 requires V=1 (=> alpha=1) at t=120 within [4,124]; C2 requires alpha=0 from t=120
+C1 requires V=1 (=> alpha=1) at t=41 within [0,120]; C2 requires alpha=0 from t=41
+```
 
 Each names the record, the collision month, the two constraints in conflict, and the window within which the conflict arises. A reader who doubts Proposition 1 can take any of these lines and check the arithmetic by hand.
 
@@ -1114,9 +1116,11 @@ Seventy-eight of the one hundred Secure Processing Environment records received 
 
 The witnesses, verbatim:
 
-> rid=100: t_a=7, permit expires t_pi=10 → C3 from t=16, C1 to t=19 | collision at t=16
-> rid=103: t_a=7, permit expires t_pi=10 → C3 from t=16, C1 to t=19 | collision at t=16
-> rid=104: t_a=3, permit expires t_pi=4 → C3 from t=10, C1 to t=15 | collision at t=10
+```text
+rid=100: t_a=7 permit expires t_pi=10 -> C3 from t=16, C1 to t=19  | collision at t=16
+rid=103: t_a=7 permit expires t_pi=10 -> C3 from t=16, C1 to t=19  | collision at t=16
+rid=104: t_a=3 permit expires t_pi=4 -> C3 from t=10, C1 to t=15  | collision at t=10
+```
 
 Take the first. The access-log record is created in month seven. Article 73(1)(e) requires the identifiable log to remain verifiable until month nineteen. The data permit expires in month ten, so Article 68(12) requires personal data to be gone from the environment by month sixteen. Months sixteen through nineteen are therefore months in which the same regulation requires the same environment both to retain an identifiable access log and to hold no personal data. No data subject has exercised any right. No deployment baseline is involved. No synthesis across instruments of differing legal weight has occurred. On the reading of Article 68(12) adopted in Chapter 4, Section 4.6, the conflict is internal to Regulation (EU) 2025/327. Under the narrower reading canvassed there, these thirty-nine witnesses lapse and the secondary-use collisions reduce to the nine records in this population whose erasure requests fall inside the retention window (four that collide with C2 only and five that also collide with C3; twenty-two records received requests in all); Proposition 1, Corollary 1.1, and every Semantics II result are unaffected.
 
