@@ -1,5 +1,11 @@
 # Change trail
 
+## 4 October 2026 — independent audit against the 30 Sept review
+
+| ID | Change | Verification |
+|---|---|---|
+| B-38 | A separate agent audited every point of the emailed review against the current text and code, without trusting the tracker. Nine items marked CLOSED were found only partly done (M1, M2a, M4a, M4d, M5a, M6a, M7a, PRES-3, PRES-4) and M5c's note was wrong. Tracker statuses corrected to PARTIAL with the audit's finding in each row | Key findings spot-checked: 'propositions rather than propositions' in Ch4 §4.7; no verbatim Art 73(1)(e); 'Theorems' in README_repo; body text 45,605 words |
+
 ## 4 October 2026 — patches P38–P41 (numbering, app, Appendix A, TOC) and B-36
 
 | ID | Change | Verification |

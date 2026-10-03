@@ -13,25 +13,25 @@ passage by passage when the patch for that passage is written.
 
 | Item | What he asked | Status | Patches | Evidence / note |
 |---|---|---|---|---|
-| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | CLOSED | P04, P06, P12, P14 | p(a) grounded per class (ITI-55; SPE activity per D7.4); SPE record model in code names researcher and permit; subject link removed at ceiling |
-| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | CLOSED | P04, P05, P07 | Partition reading carried through Ch1, Ch2, Ch4, Ch6, Ch7 (P04, P05, P07) |
+| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | PARTIAL | P04, P06, P12, P14 | Audit 4 Oct: SPE p(a) fields not named; no eHDSI/D7.4 grounding; Semantics I 'current practice' unevidenced; synthea_layer still clinical payloads |
+| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | PARTIAL | P04, P05, P07 | Audit 4 Oct: §1.1, §2.3, §5.4, §6.4 still say the ceiling covers 'personal data'; §6.2 'irreconcilable' contradicts Rival 6 |
 | M2b | Rival 6: move the logs out of the SPE at permit closure | CLOSED | P06 | Rival 6 accepted for the ceiling and bounded by Proposition L (P06). Ch6/Ch7 echo in P07 |
 | M2c | Rewrite §6.1's opening; lead with the robust result | CLOSED | P07 | §6.1 leads with the robust result, then Proposition L, then the conditional SPE instance |
 | M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
 | M3b | Ciphertext: delete at invalidation or justify | CLOSED | P02, P12 | Text (P02) and code (P12): ciphertext deleted at invalidation |
 | M3c | Remove the dead salt branch; seeded generator or `--reproducible` | CLOSED | P12 | make_salt() and --random-salts; dead branch gone (guard 1 → 0) |
-| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | CLOSED | P15, P16, P17, P18 | Propositions 1–4 throughout text, code and repository; §4.7 note moves the weight to §4.2 and Propositions 3–4 |
+| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | PARTIAL | P15, P16, P17, P18 | Audit 4 Oct: §4.7 reads 'propositions rather than propositions' (P16 rename error); repo READMEs still say Theorems |
 | M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | CLOSED | P15 | Proposition 3 in Ch4 §4.6, stated precisely (collision needs L ≤ F; anchor decides visibility); §6.9a corrected |
 | M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | CLOSED | P12, P14 | Merkle log (RFC 6962), inclusion proofs in V_II, two tamper tests fail V_II; reported in §5.6 |
-| M4d | Shorten Ch5; violation rates are generator artefacts | CLOSED | P31 | Rate disclaimer said once (§5.3); meta and repetition cut; §5.4 aligned with conditional Cor 1.2 |
-| M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | CLOSED | P09 | Supervisor's fallback taken: F = 120 illustrative; primary agreement cited for what it says (no period). Reopen if the eHDSI annex is obtained |
+| M4d | Shorten Ch5; violation rates are generator artefacts | PARTIAL | P31 | Audit 4 Oct: Ch5 grew 3,386 → 4,168 words; inversion and 50% paragraphs still interpret generator rates |
+| M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | PARTIAL | P09 | Audit 4 Oct: F=120 illustrative in 3 places, stated as fact in ~12 (Abstract, §1.2, §2.2, §2.3, §2.10, §3.4, C1, Table 5.2, §6.1, §7.1, code comment) |
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | CLOSED | P10 | Every claim limited to the hearing version inspected (P10, P10b) |
-| M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim at every site; Art 73(1)(e) verbatim in Ch1, Ch2, Ch4. Open: one further language version (supervisor's 'ideally') |
+| M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim. Audit 4 Oct: Art 73(1)(e) is NOT quoted verbatim anywhere (earlier note was wrong). Open: one further language version (supervisor's 'ideally') |
 | M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | CLOSED | P09, P20 | Feng peer-reviewed (P09); Table 2.1 bands (P20) |
-| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | CLOSED | P22, P24 | Table 4.1: 17 requirements with D7.4 pages, read in full |
+| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | PARTIAL | P22, P24 | Audit 4 Oct: SPUHiN checklist has 2 summary rows, not a requirement-by-requirement trace |
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | CLOSED | P19 | A1 reworded; one-line record in Appendix C |
-| M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | CLOSED | P11 | UCC Arts 51 and 197: record outlives the destroyed goods; tested against §6.9a; §1.4 overreach removed. Seafarer and OECD material left for PRES trimming |
+| M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | PARTIAL | P11 | Audit 4 Oct: seafarer and OECD material untouched; §1.4 'same problem class' overreach remains |
 | M7b | One sentence in §1.5 on the programme fit | CLOSED | P11 | One sentence in §1.5 |
 | MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | CLOSED | P01 | Prose now points to Table 5.0a; the code wave must update Table 5.0a, Table F.2 and Appendix A counts |
 | MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | CLOSED | P01 |  |
@@ -50,6 +50,6 @@ passage by passage when the patch for that passage is written.
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
 | PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work (TIGER_TASKS T-7) |
-| PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27 | One statement in the Declaration; Version and Change Record moved to docs/VERSION_RECORD.md in the repository |
-| PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | CLOSED | P28, P29 | Pilot details in §2.2 only; 68(12) grounds in §4.6 only; others cross-refer |
+| PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | PARTIAL | P27 | Audit 4 Oct: process residue in §2.1.4, §2.9, §6.8, §5.7, A.8, A.17, checker header (patch IDs), Declaration twice |
+| PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | PARTIAL | P28, P29 | Audit 4 Oct: §1.1 still carries full pilot detail; pilot status recurs §2.6, §6.8, §7.6; §2.3 argues location vs object |
 | PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |
