@@ -1,5 +1,14 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patch P09 (ten-year floor illustrative; Feng peer-reviewed)
+
+| ID | Change | Verification |
+|---|---|---|
+| P09-01 to P09-09 | M5a. The ten-year floor is now "reported" (abstract, Sammendrag, Ch1 ×3, Ch4 §4.3) and §2.3 says what each source supports: Simjanoska Misheva et al. (2025) for the figure; the 2017 NCPeH agreement, clause II.4.2, for an audit-trail requirement without a stated period; F = 120 treated as illustrative, Corollary 2.2 cited for independence. New reference: eHealth Network (2017) | Searched 3 Oct (RESEARCH_LOG rows 22–26); no primary document stating ten years was reachable. The agreement's text retrieved and quoted |
+| P09-F09 to P09-F23 | M5e (part). Feng et al. (2022, arXiv) → Feng et al. (2023), CAV 2023, LNCS 13966, pp. 374–396, in five chapter reference lists and every in-text citation | Springer page retrieved 3 Oct; it names arXiv 2209.04052 as its extended version. patch.py: all losses are the 2022 forms, each matched by a 2023 gain |
+| B-18 | `assemble.py` dropped any reference starting with a lower-case letter, so "eHealth Network" never reached the bibliography. Filter widened for that entry. Checked every chapter list: no earlier entry had been lost this way | Bibliography 67 → 68 |
+| B-19 | `trail_check.py` range rows: the parser accepted only `X-NN to X-MM`; P09's generated IDs (`P09-F09 to P09-F23`) were refused by the commit gate. Parser generalised to any prefix | Gate refused P09 first, as it should; check 3 PASS after the fix |
+
 ## 3 October 2026 — supervisor review, patches P07 and P08 (the reading carried through)
 
 | ID | Change | Verification |

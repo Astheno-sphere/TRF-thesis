@@ -16,7 +16,7 @@ def bibliography():
         if not m: continue
         for line in m.group(1).split("\n"):
             line = line.strip()
-            if not line or line.startswith(("#", "*(", "---", ">")) or not re.match(r"^[A-ZÅØÆ]", line): continue
+            if not line or line.startswith(("#", "*(", "---", ">")) or not re.match(r"^(?:[A-ZÅØÆ]|eHealth )", line): continue  # "eHealth Network" starts lower-case (3 Oct)
             n = re.sub(r"[^a-z0-9]", "", line.lower())[:60]
             if n in entries:
                 p = entries[n]; entries[n] = (p[0] if len(p[0]) >= len(line) else line, p[1] | {label[f]})

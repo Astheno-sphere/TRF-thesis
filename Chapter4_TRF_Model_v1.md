@@ -52,7 +52,7 @@ where:
 
 The floor is a parameter of the record rather than a constant of the model. The form is taken from chain-of-custody practice in physical cross-border logistics, where a consignment carries one custody record whose retention parameter is set by whichever jurisdiction's regime governs it, rather than a separate ledger per jurisdiction; Chapter 2, Section 2.7 sets out the correspondence. In the present setting it takes two values:
 
-- $F(a) = 120$ for cross-border audit records held in ATNA-compliant audit repositories, this being the ten-year minimum imposed by the eHDSI deployment baseline for MyHealth@EU operations (Simjanoska Misheva et al., 2025). The IHE ATNA profile itself prescribes no retention period; the floor arises from the deployment binding, and the model is correct only if this distinction is preserved.
+- $F(a) = 120$ for cross-border audit records held in ATNA-compliant audit repositories, this being the ten-year minimum reported as the eHDSI deployment baseline for MyHealth@EU operations (Simjanoska Misheva et al., 2025). The value is illustrative: the primary agreement inspected requires audit trails without stating a period (eHealth Network, 2017, clause II.4.2), and by Corollary 2.2 no result depends on it. The IHE ATNA profile itself prescribes no retention period; the floor arises from the deployment binding, and the model is correct only if this distinction is preserved.
 - $F(a) = 12$ for access and activity logs of Secure Processing Environments, this being the one-year minimum imposed by Article 73(1)(e) of Regulation (EU) 2025/327 (European Parliament and Council of the European Union, 2025).
 
 Two event processes act on records. An *erasure request* arrives for record $a$ at month $t_r(a)$ if the data subject exercises Article 17 in respect of the personal data underlying that record; if no request arrives, $t_r(a) = \infty$. A *permit expiry* occurs at month $t_\pi(a)$ for records with $\sigma(a)$ = secondary, being the month in which the data permit under which the processing occurred expires; for primary-pathway records $t_\pi(a) = \infty$.
@@ -287,6 +287,8 @@ European Data Protection Board. (2026b). *Guidelines 02/2025 on processing of pe
 European Parliament and Council of the European Union. (2016). Regulation (EU) 2016/679 (General Data Protection Regulation). *Official Journal of the European Union, L 119*, 1–88. http://data.europa.eu/eli/reg/2016/679/oj
 
 European Parliament and Council of the European Union. (2025). Regulation (EU) 2025/327 of 11 February 2025 on the European Health Data Space. *Official Journal of the European Union*. http://data.europa.eu/eli/reg/2025/327/oj
+
+eHealth Network. (2017). *Agreement between National Authorities or National Organisations responsible for National Contact Points for eHealth on the Criteria required for the participation in Cross-Border eHealth Information Services* (adopted 9 May 2017). European Commission. https://health.ec.europa.eu/system/files/2017-07/ev_20170509_co06_en_0.pdf
 
 Finck, M. (2018). Blockchains and data protection in the European Union. *European Data Protection Law Review*, *4*(1), 17–35. https://doi.org/10.21552/edpl/2018/1/6
 

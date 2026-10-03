@@ -84,3 +84,27 @@
 2026-10-03 14:58 | P07_reading_carried_through.py | P07-06 | Chapter7_Conclusion_v1.md | cd5f2b9c2585 -> e94d22c9e7f1 | M5c verbatim; M2a; unverified claim removed; the open joint named in §4.8 is now posed here
 2026-10-03 14:58 | P07_reading_carried_through.py | P07-07 | Chapter7_Conclusion_v1.md | cd5f2b9c2585 -> e94d22c9e7f1 | M2a: the request to the authorities asks the questions the thesis now depends on
 2026-10-03 14:58 | P08_appendixC_verbatim.py | P08-01 | Appendix_C_Evaluation_Instrument.md | b0facda1a8cd -> 20f5bd2517c8 | M5c: verbatim; item aligned with D-16 and §7.4
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-01 | Front_Matter_v1.md | 602285fe3830 -> 210865ce14d4 | M5a: abstract no longer states the floor as established
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-02 | Front_Matter_v1.md | 602285fe3830 -> 210865ce14d4 | M5a: Sammendrag aligned with the abstract
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-03 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5a
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-04 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5a
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-05 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5a
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-06 | Chapter2_LitReview_v2_FINAL.md | f2968e6a73f3 -> 5c73a2a025fe | M5a: secondary source named as such; primary document cited for what it says; F=120 illustrative
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-07 | Chapter2_LitReview_v2_FINAL.md | f2968e6a73f3 -> 5c73a2a025fe | M5a: new primary reference
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-08 | Chapter4_TRF_Model_v1.md | e6572937841c -> 78336c95d5de | M5a
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-09 | Chapter4_TRF_Model_v1.md | e6572937841c -> 78336c95d5de | M5a: reference in Ch4 list
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F09 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5e: peer-reviewed version (CAV 2023) replaces the arXiv preprint
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F10 | Chapter2_LitReview_v2_FINAL.md | f2968e6a73f3 -> 5c73a2a025fe | M5e: peer-reviewed version (CAV 2023) replaces the arXiv preprint
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F11 | Chapter3_Methodology_v1.md | 9a69873c2034 -> 053dc11c7ce7 | M5e: peer-reviewed version (CAV 2023) replaces the arXiv preprint
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F12 | Chapter6_Discussion_v1.md | c2ce137fe0f2 -> e1b94633b9b9 | M5e: peer-reviewed version (CAV 2023) replaces the arXiv preprint
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F13 | Chapter7_Conclusion_v1.md | e94d22c9e7f1 -> 0c87832e3f4b | M5e: peer-reviewed version (CAV 2023) replaces the arXiv preprint
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F14 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F15 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F16 | Chapter1_Introduction_v2.md | 67d19d4524e4 -> dfbb1c1e9e22 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F17 | Chapter2_LitReview_v2_FINAL.md | f2968e6a73f3 -> 5c73a2a025fe | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F18 | Chapter2_LitReview_v2_FINAL.md | f2968e6a73f3 -> 5c73a2a025fe | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F19 | Chapter3_Methodology_v1.md | 9a69873c2034 -> 053dc11c7ce7 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F20 | Chapter3_Methodology_v1.md | 9a69873c2034 -> 053dc11c7ce7 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F21 | Chapter3_Methodology_v1.md | 9a69873c2034 -> 053dc11c7ce7 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F22 | Chapter6_Discussion_v1.md | c2ce137fe0f2 -> e1b94633b9b9 | M5e: year
+2026-10-03 15:04 | P09_floor_illustrative_feng.py | P09-F23 | Chapter7_Conclusion_v1.md | e94d22c9e7f1 -> 0c87832e3f4b | M5e: year

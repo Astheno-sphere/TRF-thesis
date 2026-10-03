@@ -20,7 +20,7 @@ The answer to the research question is therefore that the three regimes can be r
 
 Four contributions are claimed, each bounded.
 
-*A formal characterisation of the tri-lateral retention conflict.* The general method of treating legal compliance as a satisfiability problem is established (Feng, Marsso, Sabetzadeh, & Chechik, 2022) and is not claimed here. What is new is its application to a retention system combining floors, a subject-triggered right, and a ceiling, and the isolation of verifiability semantics as the parameter that determines feasibility. The most recent systematisation of the cryptographic-erasure literature, an unreviewed preprint cited here as corroboration rather than authority, names erasure under multi-regime retention conflict among five open problems for the field (Aikebaier, 2026); this thesis addresses that problem in one regulatory setting.
+*A formal characterisation of the tri-lateral retention conflict.* The general method of treating legal compliance as a satisfiability problem is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023) and is not claimed here. What is new is its application to a retention system combining floors, a subject-triggered right, and a ceiling, and the isolation of verifiability semantics as the parameter that determines feasibility. The most recent systematisation of the cryptographic-erasure literature, an unreviewed preprint cited here as corroboration rather than authority, names erasure under multi-regime retention conflict among five open problems for the field (Aikebaier, 2026); this thesis addresses that problem in one regulatory setting.
 
 *Two feasibility results with an executable witness.* Theorem 1 establishes infeasibility under the status-quo semantics; Theorem 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.
 
@@ -76,7 +76,7 @@ Broadbent, A., & Islam, R. (2020). Quantum encryption with certified deletion. I
 
 Bursuc, S., Gil-Pons, R., Mauw, S., & Trujillo-Rasua, R. (2024). Software-based memory erasure with relaxed isolation requirements. In *2024 IEEE 37th Computer Security Foundations Symposium (CSF)*. IEEE. https://doi.org/10.48550/arXiv.2401.06626
 
-Feng, N., Marsso, L., Sabetzadeh, M., & Chechik, M. (2022). *Bounded satisfiability checking of metric first-order temporal logic*. arXiv. https://doi.org/10.48550/arXiv.2209.04052
+Feng, N., Marsso, L., Sabetzadeh, M., & Chechik, M. (2023). Early verification of legal compliance via bounded satisfiability checking. In *Computer Aided Verification (CAV 2023)* (LNCS 13966, pp. 374–396). Springer. https://doi.org/10.1007/978-3-031-37709-9_18
 
 National Institute of Standards and Technology. (2025). *Special Publication 800-88 Revision 2: Guidelines for media sanitization* (R. Chandramouli & E. Hibbard). NIST. https://doi.org/10.6028/NIST.SP.800-88r2
 
