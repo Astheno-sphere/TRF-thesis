@@ -1,5 +1,11 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patch P02 (salt and ciphertext)
+
+| ID | Change | Verification |
+|---|---|---|
+| P02-01 to P02-08 | §4.8: new *Ciphertext* item (deleted at t^I; key destruction still governs replicas and backups) and *Commitment* rewritten (salt destroyed with the key; binding unaffected; a party needing to prove correspondence keeps its own opening). §4.8 terminal transition now also removes key, salt and ciphertext for records never invalidated. §4.9 residue list, guess-confirmation response, pseudonymisation finding and residual-risk paragraph ("unavoidable" → reduced, with the three exposures that remain) follow the design. §4.12 summary and §5.6 trajectory follow the code. Decisions D-15, D-17 | Text now agrees with `trf_checker.py` (`rec.salt = None`) and Appendix A §A.4. patch.py: one declared loss, hedge "conditional" from "not unconditionally unlinkable", which described the retained-salt oracle that no longer exists; pseudonymised status kept (P02-05). Guard "salt *not* destroyed": 1 → 0. Open: the code still keeps the payload after invalidation (code wave, M3b). Noted, not fixed: §4.9 says the residual risk "is recorded as a limitation in Chapter 6", but Chapter 6 only touches it at §6.2 (EDPB "until the algorithm is broken"); to settle in PRES-4 |
+
 ## 3 October 2026 — supervisor review, patch P01 (minor issues)
 
 | ID | Change | Verification |
