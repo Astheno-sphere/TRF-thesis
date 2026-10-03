@@ -1,5 +1,13 @@
 # Change trail
 
+## 3 October 2026 — D7.4 and the Union Customs Code read in full (Tiger's T-1, T-2), patch P24
+
+| ID | Change | Verification |
+|---|---|---|
+| B-30 | `sources/TEHDAS2_D7.4_v1.2_2026-02-24.md` and `sources/UCC_Regulation_952_2013_OJ_text.md` added: the two texts Tiger supplied, kept so every quotation can be checked against them | Research log rows 36–37 |
+| P24-01 to P24-08 | Table 4.1: D7.4 page numbers (EHDSR-6/7/8 p. 32; OPR-6 p. 43; OPR-8 p. 47; OPR-17/18 p. 52) and three new rows (tamper protection, proportionate logging, OPR-6's own "balance"). §4.6: EHDSR-7 page. §4.8: OPR-6 quoted in full; the specification asks for a balance between deletion and retention and leaves its form open. §4.10 Rival 3: OPR-17 quoted; no granularity requirement anywhere in D7.4. §4.3: OPR-18 five-year recommendation, with Proposition 3 and Corollary 2.2. **Corrections:** Ch1 §1.4 and Ch2 §2.9 said the review found "no treatment" of the collision "including in the guidance published by the Joint Action"; D7.4 asks for the deletion–retention balance and its Annex 7 names "open questions about how accountability and anonymisation obligations intersect". Both passages now say so; Ch2's "no interpretive work by this author" removed (the collision is conditional since D-16) | patch.py: one declared loss ("inspected", the hedge on a claim now checked against the full text). Three fetch errors from 3 Oct corrected in the research log (p. 31→32, p. 19→20, five-year recommendation kept in the final) |
+| B-31 | TIGER_TASKS T-1 and T-2 marked done | — |
+
 ## 3 October 2026 — optional real-cryptography module (Tiger: "go ahead")
 
 | ID | Change | Verification |

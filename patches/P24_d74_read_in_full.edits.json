@@ -1,0 +1,58 @@
+[
+ {
+  "id": "P24-01",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "| Same, \"deleted or rendered unrecoverable … including any backups or redundant copies\" | TEHDAS2 D7.4, Table 5.2, OPR-6 (page to confirm) | Key destruction renders copies the store cannot delete at once unrecoverable | §4.8 *Ciphertext*; `crypto_envelope.py` | Met in the optional module with real AES-256-GCM (138 of 138 refused); destruction in program memory, not hardware (§4.9, §6.3) |\n| Identifiable logs of access and activities, kept for the period needed to audit, at least one year | EHDS Art. 73(1)(e) | Accessor fields kept identifiable for the full floor; activity committed | §4.3, §4.7; `V_II()` | Met in the artefact (C1 under Semantics II: 0 violations) |\n| \"All SPE logs MUST identify the actor\" | D7.4, Table 5.1, EHDSR-7 (page to confirm) | Actor is an accessor field, never removed within the floor | §4.3 | Met in the artefact |\n| \"All SPE logs MUST be kept at least for one year\" | D7.4, Table 5.1, EHDSR-8 (page to confirm) | Floor parameter $F = 12$ | §4.3 | Met in the artefact |\n| Logs available for verification and auditing | D7.4, Table 5.1, EHDSR-6 (page to confirm) | Every access, invalidation and subject-link removal in an append-only Merkle log; inclusion proofs | `MerkleLog`, `integrity()` | Met in the artefact (200/200 verify; tamper tests fail) |",
+  "new": "| Same, \"deleted or rendered unrecoverable … including any backups or redundant copies\" | TEHDAS2 D7.4, Table 5.2, OPR-6, p. 43 | Key destruction renders copies the store cannot delete at once unrecoverable | §4.8 *Ciphertext*; `crypto_envelope.py` | Met in the optional module with real AES-256-GCM (138 of 138 refused); destruction in program memory, not hardware (§4.9, §6.3) |\n| Identifiable logs of access and activities, kept for the period needed to audit, at least one year | EHDS Art. 73(1)(e) | Accessor fields kept identifiable for the full floor; activity committed | §4.3, §4.7; `V_II()` | Met in the artefact (C1 under Semantics II: 0 violations) |\n| \"All SPE logs MUST identify the actor\" | D7.4, Table 5.1, EHDSR-7, p. 32 | Actor is an accessor field, never removed within the floor | §4.3 | Met in the artefact |\n| \"All SPE logs MUST be kept at least for one year\" | D7.4, Table 5.1, EHDSR-8, p. 32; OPR-18, p. 52 (five years recommended) | Floor parameter $F = 12$; any longer value is a parameter change (Corollary 2.2) | §4.3 | Met in the artefact |\n| Logs available for verification and auditing | D7.4, Table 5.1, EHDSR-6, p. 32; OPR-8, p. 47 | Every access, invalidation and subject-link removal in an append-only Merkle log; inclusion proofs | `MerkleLog`, `integrity()` | Met in the artefact (200/200 verify; tamper tests fail) |\n| Logs protected against tampering | D7.4, Table 5.4, OPR-17, and OPR-18, p. 52 | Append-only Merkle log; an altered entry fails its inclusion proof | `MerkleLog`, `integrity()` | Met in the artefact (both tamper tests fail $V^{II}$) |\n| Logging proportionate; no unnecessary detail on user behaviour; must cover access to electronic health data | D7.4, Table 5.4, OPR-17, p. 52 | Accessor fields kept; subject fields only where the log is kept per patient record, and removed at the ceiling | §4.3, §4.10 Rival 3 | Met by specification; granularity is the operator's choice, which the specification leaves open |\n| Deletion \"while ensuring compliance with applicable legal obligations and traceability or reproducibility requirements\"; the deletion and retention policy to \"balance these obligations\" | D7.4, Table 5.2, OPR-6, p. 43 | Supplies the balance for the logs: what accountability needs is kept, what the ceiling reaches is invalidated | §4.7, §4.8 | Met by specification: the specification asks for the balance and leaves its form open |",
+  "why": "T-1: D7.4 page numbers; three rows added (OPR-8/17/18 tamper protection, OPR-17 proportionality, OPR-6 balance)"
+ },
+ {
+  "id": "P24-02",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "It lists only requirements this thesis has read in the source; the specification's page references are to be confirmed against the published PDF.",
+  "new": "It lists only requirements this thesis has read in the source, with the page of the specification (TEHDAS2, 2026) where it applies.",
+  "why": "T-1 done"
+ },
+ {
+  "id": "P24-03",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "(TEHDAS2, 2026, Table 5.1, EHDSR-7)",
+  "new": "(TEHDAS2, 2026, Table 5.1, EHDSR-7, p. 32)",
+  "why": "T-1 page"
+ },
+ {
+  "id": "P24-04",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "(TEHDAS2, 2026, Table 5.2, OPR-6).",
+  "new": "(TEHDAS2, 2026, Table 5.2, OPR-6, p. 43). The same requirement continues: deletion must proceed \"while ensuring compliance with applicable legal obligations and traceability or reproducibility requirements where relevant\", and its rationale leaves it to \"the deletion and retention policy\" to \"balance these obligations\". The specification asks for the balance and does not say how it is struck; for the logs, this mechanism is one way to strike it.",
+  "why": "T-1: OPR-6 read in full; the specification itself names the balance the mechanism supplies"
+ },
+ {
+  "id": "P24-05",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The version of the specification inspected requires logs to identify the actor and states no requirement for patient-level logging (TEHDAS2, 2026).",
+  "new": "The specification requires logs to identify the actor and to cover \"access to electronic health data\", and requires logging to be \"proportionate, risk-based, and technically feasible\" and to \"avoid unnecessary collection of detailed user behaviour not required for auditability or misuse detection\" (TEHDAS2, 2026, Table 5.4, OPR-17, p. 52). It sets no requirement on the granularity of logs, which leaves the choice, and with it Corollary 1.2, to the operator.",
+  "why": "T-1: OPR-17 read; granularity checked (no requirement anywhere in the document)"
+ },
+ {
+  "id": "P24-06",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "this being the one-year minimum imposed by Article 73(1)(e) of Regulation (EU) 2025/327 (European Parliament and Council of the European Union, 2025).",
+  "new": "this being the one-year minimum imposed by Article 73(1)(e) of Regulation (EU) 2025/327 (European Parliament and Council of the European Union, 2025). The Joint Action's specification recommends five years (TEHDAS2, 2026, Table 5.4, OPR-18, p. 52); by Proposition 3 a longer floor enlarges the set of records whose permit expiry falls inside it, and by Corollary 2.2 no result depends on the value.",
+  "why": "T-1: OPR-18 five-year recommendation"
+ },
+ {
+  "id": "P24-07",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "yet the review conducted for this thesis found no treatment of it, including in the guidance published by the Joint Action drafting the specifications for both provisions.",
+  "new": "yet the review conducted for this thesis found no treatment of it in the literature. The Joint Action's specification for these environments comes closest: it requires deletion at permit expiry \"while ensuring compliance with applicable legal obligations and traceability or reproducibility requirements\", leaves the balance to each operator's policy, and in its expert commentary names \"open questions about how accountability and anonymisation obligations intersect\" (TEHDAS2, 2026, Table 5.2, OPR-6, p. 43; Annex 7, p. 97). It asks for the balance; it does not supply one.",
+  "why": "T-1: the gap claim corrected and sharpened; the Joint Action names the open question"
+ },
+ {
+  "id": "P24-08",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "requires no synthesis across instruments of differing legal weight and no interpretive work by this author: it is stated by one regulation, in adjacent articles of one chapter, about one environment. The review conducted for this thesis located no treatment of it: not in the academic literature, not in the professional commentary on EHDS secondary use, and not in the guidance published by the Joint Action drafting the specifications for both provisions.",
+  "new": "requires no synthesis across instruments of differing legal weight: on the broad reading, for logs kept at patient-record granularity, it is stated by one regulation, in adjacent articles of one chapter, about one environment. The review conducted for this thesis located no treatment of it in the academic literature or in the professional commentary on EHDS secondary use. The Joint Action drafting the specifications comes closest. Its specification requires deletion at permit expiry \"while ensuring compliance with applicable legal obligations and traceability or reproducibility requirements where relevant\" and leaves \"the deletion and retention policy\" to \"balance these obligations\" (TEHDAS2, 2026, Table 5.2, OPR-6, p. 43). Its expert commentary goes further: log keeping \"raises open questions about how accountability and anonymisation obligations intersect\", and \"further guidance will be needed on retention of project-level collaborative metadata\" (Annex 7, p. 97). The body drafting the requirements names the question; no mechanism answering it has been published.",
+  "why": "T-1: 'no interpretive work' overclaimed after D-16; 'not in the Joint Action guidance' corrected; corroboration from the Joint Action itself"
+ }
+]
