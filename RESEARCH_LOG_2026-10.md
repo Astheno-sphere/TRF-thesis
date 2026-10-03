@@ -40,6 +40,8 @@ fetch and is flagged where the fetches disagreed.
 | 28 | fetch | link.springer.com/chapter/10.1007/978-3-031-37709-9_18 | Feng, Marsso, Sabetzadeh, Chechik, "Early verification of legal compliance via bounded satisfiability checking", CAV 2023, LNCS 13966, 374–396; cites arXiv 2209.04052 as its extended version | M5e, P09 |
 | 29 | search | SPUHiN D5.2 anbefalinger minimumskrav sikre behandlingsmiljøer endelig versjon 2025 | Helsedirektoratet SPUHiN project page; helsedata.no gap report; Legeforeningen hearing response 3 Oct 2025. Final version not yet located | M5b (open) |
 | 30 | search | Union Customs Code Article 51 … destruction of goods | UCC 952/2013 on EUR-Lex; Finnish Customs destruction page. Not yet read | M7a (open) |
+| 31 | fetch | helsedirektoratet.no … fair-secure-provision-and-use-of-health-data-in-norway-spuhin | Criteria "were on hearing July–October 2025" and are "included in SPUHiN-rapport D5.2"; D5.2 via EU Funding & Tenders portal; adaptation to the implementing act depends on the Commission. No final national publication date given | M5b, P10 |
+| 32 | fetch | legeforeningen.no hearing response 3 Oct 2025 | Responds to "Høring – Oversikt over kriterier til sikre analyserom …" (Helsedirektoratet); no mention of logging, retention or deletion | M5b |
 
 **To confirm by opening the PDF yourself:** the D7.4 page numbers above, the OPR-6 wording, and the
 absence of a record-level logging requirement. The shell cannot reach tehdas.eu or zenodo.org

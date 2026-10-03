@@ -1,5 +1,11 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patch P10 (SPUHiN as inspected)
+
+| ID | Change | Verification |
+|---|---|---|
+| P10-01 to P10-19 | M5b. Every "finalised" claim about the Norwegian SPE criteria (Statement of Contribution, §1.2, §1.5, §2.6 ×4, §2.6a, §2.9 ×2 incl. Table 2.1, §3.7, §4.11 ×2, §6.8 ×2, §7.2, §7.6) now names the version inspected: the hearing version. §1.2 says the absence "is observed in that version and has not been checked against the deliverable as submitted". The guard "survives against the final national document" reached 0. P10-18/19 (`P10b`) were found by grepping after the first pass; EDPB "finalised" uses left, being correct | Helsedirektoratet SPUHiN page fetched 3 Oct (RESEARCH_LOG row 31): criteria "included in" D5.2, adaptation pending the Commission |
+
 ## 3 October 2026 — supervisor review, patch P09 (ten-year floor illustrative; Feng peer-reviewed)
 
 | ID | Change | Verification |

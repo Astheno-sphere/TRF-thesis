@@ -25,7 +25,7 @@ passage by passage when the patch for that passage is written.
 | M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | OPEN |  | Not blocked. Proposed: Merkle log (RFC 9162 style) rather than a bare chain; tamper test must make V_II fail |
 | M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | CLOSED | P09 | Supervisor's fallback taken: F = 120 illustrative; primary agreement cited for what it says (no period). Reopen if the eHDSI annex is obtained |
-| M5b | SPUHiN "finalised" claims aligned to what was inspected | OPEN |  | Ch1 l.31 "survives against the final national document" |
+| M5b | SPUHiN "finalised" claims aligned to what was inspected | CLOSED | P10 | Every claim limited to the hearing version inspected (P10, P10b) |
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim at every site; Art 73(1)(e) verbatim in Ch1, Ch2, Ch4. Open: one further language version (supervisor's 'ideally') |
 | M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | PARTIAL | P09 | Feng et al. now CAV 2023 (P09). Open: Table 2.1 practitioner/preprint band |
