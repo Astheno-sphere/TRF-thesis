@@ -596,3 +596,101 @@
 2026-10-03 21:02 | P40_appendixA_app.py | P40-04 | Chapter5_Demonstration_v1.md | d11657231678 -> 88c33a2fcc1d | line count
 2026-10-03 21:02 | P40_appendixA_app.py | P40-05 | demo_app/README_repo.md | 4b623e6f4896 -> e17c6aa6a9d4 | repo README
 2026-10-03 21:03 | P41_toc.py | P41-01 | Front_Matter_v1.md | fcabceb8783a -> fb2490cebe1a | MIN-13: TOC regenerated from headings
+2026-10-03 22:33 | P42_consistency.py | P42-01 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | rename error
+2026-10-03 22:33 | P42_consistency.py | P42-02 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M5c verbatim
+2026-10-03 22:33 | P42_consistency.py | P42-03 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M5c verbatim
+2026-10-03 22:33 | P42_consistency.py | P42-04 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-05 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-06 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-07 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-08 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-09 | Chapter5_Demonstration_v1.md | 88c33a2fcc1d -> 203d223a0f95 | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-10 | Chapter6_Discussion_v1.md | 298329d3ad12 -> 79ce5519123f | M2a
+2026-10-03 22:33 | P42_consistency.py | P42-11 | Chapter6_Discussion_v1.md | 298329d3ad12 -> 79ce5519123f | M2: consistent with Rival 6
+2026-10-03 22:33 | P42_consistency.py | P42-12 | Chapter5_Demonstration_v1.md | 88c33a2fcc1d -> 203d223a0f95 | M2b carried through
+2026-10-03 22:33 | P42_consistency.py | P42-13 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-14 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-15 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-16 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-17 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-18 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-19 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-20 | Chapter2_LitReview_v2_FINAL.md | 34cddfb31b94 -> eae0effab415 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-21 | Chapter3_Methodology_v1.md | ede6fcdb0750 -> a720935a9d52 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-22 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-23 | Chapter5_Demonstration_v1.md | 88c33a2fcc1d -> 203d223a0f95 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-24 | Chapter6_Discussion_v1.md | 298329d3ad12 -> 79ce5519123f | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-25 | Chapter7_Conclusion_v1.md | 8ef1fad5773e -> e3af8c335c29 | M5a
+2026-10-03 22:33 | P42_consistency.py | P42-26 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M1a
+2026-10-03 22:33 | P42_consistency.py | P42-27 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-28 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-29 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-30 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-31 | Chapter4_TRF_Model_v1.md | e5df2776a1d5 -> 4696f354fd29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-32 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-33 | Chapter1_Introduction_v2.md | b607cd6c3efb -> 4655853c6b11 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-34 | Chapter3_Methodology_v1.md | ede6fcdb0750 -> a720935a9d52 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-35 | Chapter3_Methodology_v1.md | ede6fcdb0750 -> a720935a9d52 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-36 | Chapter6_Discussion_v1.md | 298329d3ad12 -> 79ce5519123f | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-37 | Chapter7_Conclusion_v1.md | 8ef1fad5773e -> e3af8c335c29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-38 | Chapter7_Conclusion_v1.md | 8ef1fad5773e -> e3af8c335c29 | M1b
+2026-10-03 22:33 | P42_consistency.py | P42-39 | Front_Matter_v1.md | fb2490cebe1a -> adb1d06d413b | M1b
+2026-10-03 22:34 | P43_cuts.py | P43-01 | Chapter1_Introduction_v2.md | 4655853c6b11 -> 3104872d6574 | PRES-4: pilot details said once (§2.2)
+2026-10-03 22:34 | P43_cuts.py | P43-02 | Chapter1_Introduction_v2.md | 4655853c6b11 -> 3104872d6574 | M7a: §1.4 overreach
+2026-10-03 22:34 | P43_cuts.py | P43-03 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-4: the reading argued once (§4.6)
+2026-10-03 22:34 | P43_cuts.py | P43-04 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-1
+2026-10-03 22:34 | P43_cuts.py | P43-05 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | length: compressed
+2026-10-03 22:34 | P43_cuts.py | P43-06 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | length: compressed
+2026-10-03 22:34 | P43_cuts.py | P43-07 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | length: compressed
+2026-10-03 22:34 | P43_cuts.py | P43-08 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | MIN-03 follow-through: the accumulator is not built
+2026-10-03 22:34 | P43_cuts.py | P43-09 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-1
+2026-10-03 22:34 | P43_cuts.py | P43-10 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | M7a: OECD figure tangential
+2026-10-03 22:34 | P43_cuts.py | P43-11 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-1
+2026-10-03 22:34 | P43_cuts.py | P43-12 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | M7a: seafarer material tangential
+2026-10-03 22:34 | P43_cuts.py | P43-13 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-1
+2026-10-03 22:34 | P43_cuts.py | P43-14 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | reference no longer cited
+2026-10-03 22:34 | P43_cuts.py | P43-15 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-3
+2026-10-03 22:34 | P43_cuts.py | P43-16 | Chapter2_LitReview_v2_FINAL.md | eae0effab415 -> b558a22f3f39 | PRES-3
+2026-10-03 22:34 | P43_cuts.py | P43-17 | Chapter4_TRF_Model_v1.md | 4696f354fd29 -> 152127780de7 | repetition: said earlier in the paragraph
+2026-10-03 22:34 | P43_cuts.py | P43-18 | Chapter4_TRF_Model_v1.md | 4696f354fd29 -> 152127780de7 | four propositions now
+2026-10-03 22:34 | P43_cuts.py | P43-19 | Chapter5_Demonstration_v1.md | 203d223a0f95 -> 399771b1ff3f | stale-run disclosure
+2026-10-03 22:34 | P43_cuts.py | P43-20 | Chapter5_Demonstration_v1.md | 203d223a0f95 -> 399771b1ff3f | M1c; stale 35-byte figure
+2026-10-03 22:34 | P43_cuts.py | P43-21 | Chapter5_Demonstration_v1.md | 203d223a0f95 -> 399771b1ff3f | M4d: rate not interpreted
+2026-10-03 22:34 | P43_cuts.py | P43-22 | Chapter5_Demonstration_v1.md | 203d223a0f95 -> 399771b1ff3f | the Semantics I lines carry no record id
+2026-10-03 22:34 | P43_cuts.py | P43-23 | Chapter5_Demonstration_v1.md | 203d223a0f95 -> 399771b1ff3f | M4d: shortened; 'ordinary parameters' frequency claim removed
+2026-10-03 22:34 | P43_cuts.py | P43-24 | Chapter5_Demonstration_v1.md | 203d223a0f95 -> 399771b1ff3f | PRES-3
+2026-10-03 22:34 | P43_cuts.py | P43-25 | Chapter6_Discussion_v1.md | 79ce5519123f -> 07ac4c7f2796 | PRES-3
+2026-10-03 22:34 | P43_cuts.py | P43-26 | Chapter6_Discussion_v1.md | 79ce5519123f -> 07ac4c7f2796 | repetition: §6.10 states it
+2026-10-03 22:34 | P43_cuts.py | P43-27 | Front_Matter_v1.md | adb1d06d413b -> 0cc4ed6fe538 | PRES-3: one statement, under Sources
+2026-10-03 22:34 | P43_cuts.py | P43-28 | Appendix_C_Evaluation_Instrument.md | be9986f476b2 -> 57d72bb62224 | header
+2026-10-03 22:34 | P43_cuts.py | P43-29 | Appendix_C_Evaluation_Instrument.md | be9986f476b2 -> 57d72bb62224 | MIN-13
+2026-10-03 22:34 | P43_cuts.py | P43-30 | Appendix_C_Evaluation_Instrument.md | be9986f476b2 -> 57d72bb62224 | MIN-13: no C.1a
+2026-10-03 22:34 | P43_cuts.py | P43-31 | Appendix_C_Evaluation_Instrument.md | be9986f476b2 -> 57d72bb62224 | wrong reference (ethics is §3.9)
+2026-10-03 22:35 | P44_code_appendix.py | P44-01 | demo_app/trf_checker.py | 07a9ef328e1d -> feb283e8554e | PRES-3: no patch IDs or review references in the code
+2026-10-03 22:35 | P44_code_appendix.py | P44-02 | demo_app/trf_checker.py | 07a9ef328e1d -> feb283e8554e | M5a
+2026-10-03 22:35 | P44_code_appendix.py | P44-03 | repro_package/trf_checker.py | 07a9ef328e1d -> feb283e8554e | PRES-3: no patch IDs or review references in the code
+2026-10-03 22:35 | P44_code_appendix.py | P44-04 | repro_package/trf_checker.py | 07a9ef328e1d -> feb283e8554e | M5a
+2026-10-03 22:35 | P44_code_appendix.py | P44-05 | code_artefacts/trf_checker.py | 07a9ef328e1d -> feb283e8554e | PRES-3: no patch IDs or review references in the code
+2026-10-03 22:35 | P44_code_appendix.py | P44-06 | code_artefacts/trf_checker.py | 07a9ef328e1d -> feb283e8554e | M5a
+2026-10-03 22:35 | P44_code_appendix.py | P44-07 | code_artefacts/README_Appendix_A.md | 02d2da6d1a15 -> 24f368f3fb3b | stale date
+2026-10-03 22:35 | P44_code_appendix.py | P44-08 | code_artefacts/README_Appendix_A.md | 02d2da6d1a15 -> 24f368f3fb3b | count
+2026-10-03 22:35 | P44_code_appendix.py | P44-09 | code_artefacts/README_Appendix_A.md | 02d2da6d1a15 -> 24f368f3fb3b | count
+2026-10-03 22:35 | P44_code_appendix.py | P44-10 | code_artefacts/README_Appendix_A.md | 02d2da6d1a15 -> 24f368f3fb3b | precise
+2026-10-03 22:35 | P44_code_appendix.py | P44-11 | code_artefacts/README_Appendix_A.md | 02d2da6d1a15 -> 24f368f3fb3b | duplicate intro (merged below)
+2026-10-03 22:35 | P44_code_appendix.py | P44-12 | code_artefacts/README_Appendix_A.md | 02d2da6d1a15 -> 24f368f3fb3b | merged intro
+2026-10-03 22:35 | P44_code_appendix.py | P44-13 | demo_app/README_repo.md | e17c6aa6a9d4 -> 2ab1f2771226 | stale commitment (current run)
+2026-10-03 22:35 | P44_code_appendix.py | P44-14 | demo_app/README_repo.md | e17c6aa6a9d4 -> 2ab1f2771226 | stale
+2026-10-03 22:35 | P44_code_appendix.py | P44-15 | demo_app/README_repo.md | e17c6aa6a9d4 -> 2ab1f2771226 | M4a; line count
+2026-10-03 22:35 | P44b_appendixA_sync.py | P44b-B01 | code_artefacts/README_Appendix_A.md | 24f368f3fb3b -> e4a0d644ac5c | Appendix A A.10 synced to demo_app/trf_checker.py
+2026-10-03 22:36 | P45_meta_headings.py | P45-01 | Chapter1_Introduction_v2.md | 3104872d6574 -> c82d984af2ee | PRES-1
+2026-10-03 22:36 | P45_meta_headings.py | P45-02 | Chapter2_LitReview_v2_FINAL.md | b558a22f3f39 -> 3c1218128378 | PRES-1
+2026-10-03 22:36 | P45_meta_headings.py | P45-03 | Chapter4_TRF_Model_v1.md | 152127780de7 -> 5faa4cf4312a | PRES-1
+2026-10-03 22:36 | P45_meta_headings.py | P45-04 | Chapter4_TRF_Model_v1.md | 152127780de7 -> 5faa4cf4312a | PRES-1
+2026-10-03 22:36 | P45_meta_headings.py | P45-05 | Chapter6_Discussion_v1.md | 07ac4c7f2796 -> d9f3393fa52e | PRES-1
+2026-10-03 22:36 | P45_meta_headings.py | P45-06 | Chapter4_TRF_Model_v1.md | 152127780de7 -> 5faa4cf4312a | Prop 3 findable
+2026-10-03 22:36 | P45_meta_headings.py | P45-07 | Chapter4_TRF_Model_v1.md | 152127780de7 -> 5faa4cf4312a | Prop 4 findable
+2026-10-03 22:36 | P45_meta_headings.py | P45-08 | Front_Matter_v1.md | 0cc4ed6fe538 -> a7c9ed72997b | TOC
+2026-10-03 22:36 | P45_meta_headings.py | P45-09 | Front_Matter_v1.md | 0cc4ed6fe538 -> a7c9ed72997b | TOC
+2026-10-03 22:36 | P46_synthea_once.py | P46-01 | Chapter5_Demonstration_v1.md | 399771b1ff3f -> 629d62797425 | PRES-4: said once in §3.5
+2026-10-03 22:36 | P46_synthea_once.py | P46-02 | Chapter6_Discussion_v1.md | d9f3393fa52e -> 0da3f5261d0e | PRES-1/PRES-4
+2026-10-03 22:36 | P46_synthea_once.py | P46-03 | Chapter6_Discussion_v1.md | d9f3393fa52e -> 0da3f5261d0e | PRES-4: said once in §3.5

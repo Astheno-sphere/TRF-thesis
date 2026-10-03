@@ -19,7 +19,7 @@ Expected output, which must match `docs/expected_trf_output.txt` byte for byte:
 | Corollary 1.2 witnesses, no erasure request | 39 |
 | Records invalidated | 138 (52 under GDPR Art 17(1), 86 under EHDS Art 68(12)) |
 | Semantics II, total violations | 0 |
-| Reference commitment, record 100 | `11087780fd192c8f…` |
+| Reference commitment, record 100 | `678ade47c1e6dc03…` |
 
 Seed 20260915 is fixed in the module header. If a number differs, the file has changed.
 
@@ -49,7 +49,7 @@ python3 synthea_layer.py
 
 It reads `synthea_run/output/fhir/` if you have regenerated the full cohort, and otherwise falls back to the eight bundles in `data/synthea_subset/`.
 
-Every reported figure is identical to the constructed-payload run while all 200 commitments differ. Mean payload rises from 35 bytes to 891 with this 8-bundle subset, and to 1,006 with the full 98-bundle cohort. The model reads timing and accessibility, never payload content.
+Every reported figure is identical to the constructed-payload run while all 200 commitments differ. Mean payload rises from 43 bytes to 891 with this 8-bundle subset, and to 1,006 with the full 98-bundle cohort. The model reads timing and accessibility, never payload content.
 
 ## Norwegian context modules
 
@@ -68,7 +68,7 @@ All Python files sit at the repository root, because Streamlit Cloud runs `app.p
 
 | Path | What it is | Lines |
 |---|---|---|
-| `trf_checker.py` | Feasibility checker: executable witness for Theorems 1 and 2, with an independently written exhaustive cross-check | 363 |
+| `trf_checker.py` | Feasibility checker: executable witness for Propositions 1 and 2, with an independently written exhaustive cross-check | 533 |
 | `synthea_layer.py` | Realism layer and payload-provenance comparison | 152 |
 | `app.py` | Streamlit viewer over the artefact, never a source of results. Tab 1 the thesis run, Tab 2 exploration, Tab 3 payload independence, Tab 4 Norwegian context, Tab 5 robustness and cross-checks (including real envelope encryption), Tab 6 where the ceiling is anchored (Proposition 3) | 671 |
 | `norwegian_layer.py` | Three Norwegian record classes | 135 |
