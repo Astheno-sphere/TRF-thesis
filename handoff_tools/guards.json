@@ -86,11 +86,12 @@
   {
    "kind": "target",
    "name": "EY law alert as EHDS source",
-   "pattern": "Ernst & Young|\\bEY\\b",
+   "pattern": "\\(Ernst & Young, 2025\\)|EY Greece",
    "scope": "prose",
    "item": "M5d",
-   "baseline": 4,
-   "goal": 0
+   "baseline": 2,
+   "goal": 0,
+   "note": "Narrowed 3 Oct: the old pattern also matched Appendix B's round-5 locator log, which is history, not a citation"
   },
   {
    "kind": "target",

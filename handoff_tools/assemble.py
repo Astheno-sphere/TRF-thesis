@@ -26,6 +26,10 @@ def bibliography():
     hdr = open("Consolidated_Bibliography.md").read().split("## References")[0]
     body = "\n".join(f"{t} `{' '.join(f'[{c}]' for c in sorted(ch, key=lambda x: int(x[2:])))}`\n" for t, ch in srt)
     open("Consolidated_Bibliography.md", "w").write(hdr + "## References\n\n" + body + "\n")
+    # The .Rmd twin (the copy to knit) gets the same body under its own YAML header.
+    # Until 3 Oct 2026 it was maintained by hand and had drifted (missing Politiregisterloven).
+    rhdr = open("Consolidated_Bibliography.Rmd").read().split("## References")[0]
+    open("Consolidated_Bibliography.Rmd", "w").write(rhdr + "## References\n\n" + body + "\n")
     have = sum(1 for t, _ in srt if "doi.org" in t or "http" in t)
     print(f"bibliography: {len(srt)} entries, {have} with DOI/URL")
 

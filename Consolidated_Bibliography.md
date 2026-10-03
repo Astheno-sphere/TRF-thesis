@@ -59,8 +59,6 @@ Dhandala, N. (2026, 17 February). *How to set up crypto-shredding for GDPR right
 
 Diamantopoulos, S., Karlsson, L., Karkaletsis, G., Tsoumas, V., Berler, A., Karkaletsis, K., et al. (2019). Secure cross-border exchange of health related data: The KONFIDO approach. In *Computer Security: ESORICS 2019 International Workshops* (pp. 318–333). Springer. https://doi.org/10.1007/978-3-030-34914-1_30 `[Ch2]`
 
-Ernst & Young. (2025). *Regulation (EU) 2025/327: Establishing the European Health Data Space (EHDS)* [Law alert]. EY Greece. https://www.ey.com/en_gr/technical/tax/tax-alerts/regulation-2025-327-establishing-ehds `[Ch2]`
-
 European Commission. (2025a). *European Health Data Space Regulation (EHDS)*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en `[Ch2]`
 
 European Commission. (2025b). *Electronic cross-border health services*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en `[Ch2]`

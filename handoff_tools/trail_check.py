@@ -130,12 +130,12 @@ def main():
 
     # 6 assembly reproducible
     with tempfile.TemporaryDirectory() as d:
-        for f in pathlib.Path(".").glob("*.md"):
+        for f in list(pathlib.Path(".").glob("*.md")) + [pathlib.Path("Consolidated_Bibliography.Rmd")]:
             shutil.copy(f, d)
         os.makedirs(f"{d}/code_artefacts")
         shutil.copy("code_artefacts/README_Appendix_A.md", f"{d}/code_artefacts/")
         subprocess.run([sys.executable, str(ROOT / "handoff_tools/assemble.py")], cwd=d, capture_output=True)
-        stale = [f for f in ("VERA-SNARK_Thesis_SUBMISSION.md", "Consolidated_Bibliography.md")
+        stale = [f for f in ("VERA-SNARK_Thesis_SUBMISSION.md", "Consolidated_Bibliography.md", "Consolidated_Bibliography.Rmd")
                  if fmd5(f"{d}/{f}") != fmd5(f)]
     report(6, "submission and bibliography equal a fresh assembly", "FAIL" if stale else "PASS",
            [f"{f} is stale: run handoff_tools/assemble.py" for f in stale])
