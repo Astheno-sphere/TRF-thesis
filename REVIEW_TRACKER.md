@@ -13,15 +13,15 @@ passage by passage when the patch for that passage is written.
 
 | Item | What he asked | Status | Patches | Evidence / note |
 |---|---|---|---|---|
-| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | BLOCKED |  | DEC-1. Our answer: ITI-55 rev 20.1 §3.55.5.1 puts the full QueryByParameter (name, birth time required, §3.55.4.1.2.1) in ParticipantObjectQuery, so the audit record does carry identifying content. p(a) is redefined as that content, not "the clinical document" |
-| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | BLOCKED |  | DEC-1. Art 2(2)(a),(c): "electronic health data" = data concerning health. Proposed: Cor 1.2 conditional on log granularity (patient-record logs in), dataset-level logs out |
-| M2b | Rival 6: move the logs out of the SPE at permit closure | BLOCKED |  | DEC-1. Proposed answer: relocation satisfies a location-anchored ceiling but not a right that follows the data (Proposition L) |
-| M2c | Rewrite §6.1's opening; lead with the robust result | BLOCKED |  | After M2a |
+| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | OPEN |  | D-16. Our answer: ITI-55 rev 20.1 §3.55.5.1 puts the full QueryByParameter (name, birth time required, §3.55.4.1.2.1) in ParticipantObjectQuery, so the audit record does carry identifying content. p(a) is redefined as that content, not "the clinical document" |
+| M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | OPEN |  | D-16. Art 2(2)(a),(c): "electronic health data" = data concerning health. Proposed: Cor 1.2 conditional on log granularity (patient-record logs in), dataset-level logs out |
+| M2b | Rival 6: move the logs out of the SPE at permit closure | OPEN |  | D-16. Proposed answer: relocation satisfies a location-anchored ceiling but not a right that follows the data (Proposition L) |
+| M2c | Rewrite §6.1's opening; lead with the robust result | OPEN |  | After M2a |
 | M3a | Salt: text, code and change record agree | OPEN |  | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
-| M3b | Ciphertext: delete at invalidation or justify | BLOCKED |  | DEC-2 |
+| M3b | Ciphertext: delete at invalidation or justify | OPEN |  | D-17: delete ciphertext at invalidation. Text now; code in the code wave |
 | M3c | Remove the dead salt branch; seeded generator or `--reproducible` | OPEN |  | Code change; recorded runs must still match or be re-recorded with a logged reason |
-| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | BLOCKED |  | DEC-3 |
-| M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | BLOCKED |  | DEC-3 |
+| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | OPEN |  | D-18 |
+| M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | OPEN |  | D-18 |
 | M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | OPEN |  | Not blocked. Proposed: Merkle log (RFC 9162 style) rather than a bare chain; tamper test must make V_II fail |
 | M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | OPEN |  | Search the eHDSI/eHMSEG documents first; fallback is "illustrative" (Cor 2.2 makes results F-independent) |

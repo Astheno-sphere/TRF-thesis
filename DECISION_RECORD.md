@@ -137,11 +137,71 @@ opposite. The supervisor's M3 asks for the same design. What remains open under 
 ciphertext and the dead branch, not the salt.
 **Status.** Holds. Prose to be aligned in the M3 patch.
 
+### D-16. Art. 68(12): the partition reading, with Proposition L (resolves O-01, O-02's framing)
+**Decided** by the candidate, 3 Oct 2026, on the rule "the supervisor's option if it is better,
+ours if our research is better". Ours was judged better because it contains his Option A and
+rests on the Regulation's own text rather than on an interpretive claim with no authority.
+**Evidence (retrieved 3 Oct, streamlex mirror of OJ L 2025/327).**
+- Art. 68(12): "The electronic health data within the secure processing environment shall be
+  deleted within six months of the expiry of the data permit." The same paragraph is about the
+  permit dataset: storage costs, "a storage system with reduced capabilities", "the formula for
+  the creation of the requested dataset".
+- Art. 2(2)(a), (c): electronic health data are "data concerning health and genetic data,
+  processed in an electronic form", personal or non-personal.
+- Art. 73(1)(e): "the keeping of identifiable logs of access to and activities in the secure
+  processing environment for the period necessary to verify and audit all processing
+  operations in that environment; logs of access shall be kept for at least one year".
+  Art. 73(1)(a) and (c) tie identifiability to the persons who access: "authorised natural
+  persons listed in the data permit", "authorised identifiable individuals".
+**The decision.**
+1. Partition the metadata: m(a) = m_acc(a) ∪ m_subj(a). m_acc identifies who accessed, when and
+   under which permit; this is what Art. 73(1)(e) requires to be identifiable, and it is not
+   data concerning health. m_subj links the event to a data subject (patient pseudonym,
+   record references); at patient-record granularity inside a health dataset it reveals health
+   information and falls under Art. 68(12) on the broad reading.
+2. C3 is formalised over p(a) *and* m_subj(a) (the supervisor's Option 1). The mechanism
+   invalidates both at t_π + 6 and keeps m_acc, c and ι. On the broad reading both provisions
+   are then met; on the narrow reading C3 does not reach the log and nothing changes.
+3. Corollary 1.2 is restated as conditional on log granularity: logs kept at patient-record
+   granularity collide with the ceiling without any request under Semantics I; logs kept at
+   dataset granularity do not reach it.
+4. Rival 6 (move the logs out at permit closure) is answered by **Proposition L**: a ceiling
+   anchored to a location can be met by relocation, without cryptography; a right that follows
+   the data (Art. 17) cannot, because it attaches to whoever holds the data. Cryptographic
+   invalidation is therefore necessary for the request-driven conflict and optional for the
+   location-anchored one. The thesis says so plainly.
+**Rejected.** Option B (Art. 73(1)(e) as *lex specialis*): no authority, and the text does not
+say 73(1)(e) derogates from 68(12); the partition makes it unnecessary. Option A unmodified:
+concedes SPE infeasibility under both semantics, which the partition shows is not forced.
+**Open within it.** Whether auditing "all processing operations" after t_π + 6 needs the
+subject link is an interpretive question for the §7.4 Datatilsynet enquiry; stated as a
+limitation. The partition is our reading, not an authority's.
+**Consequence.** Unblocks M1, M2a–c, M4a–b. Code: SPE records carry m_acc and m_subj.
+
+### D-17. Ciphertext deleted at invalidation; dead branch replaced (resolves O-03)
+**Decided** by the candidate, 3 Oct 2026 ("if it is of no use, trim it").
+**Reasoning.** Nothing in Semantics II uses the ciphertext once k(a) is destroyed, so keeping it
+satisfies no constraint and the supervisor's M3 accepts deletion. Keeping it carries a
+ten-year harvest-now-decrypt-later exposure, including against future quantum capability.
+Deleting it does not make crypto-erasure redundant: key destruction remains the operative
+erasure for copies the store cannot reach promptly (replicas, backups), which become
+unreadable at t^I and leave by ordinary rotation. The salt is destroyed with the key (D-15);
+a party that legitimately holds its own copy of the payload and must later prove
+correspondence keeps its own opening.
+**Code.** The `if False` branch is replaced by an explicit, documented deterministic salt for
+reproducible runs and a `--random-salts` flag using `os.urandom`. Done in the code wave,
+together with M1 and M4c, so the recorded runs are re-recorded once.
+
+### D-18. Theorems become Propositions; anchoring result and Proposition L enter Chapter 4 (resolves O-06)
+**Decided** by the candidate, 3 Oct 2026. Weight moves to the §4.2 necessity analysis, the
+anchoring result of §6.9a (promoted), the partition (D-16) and Proposition L. V_II gains a
+real integrity test (Merkle log over m, c, ι with a tamper test), not a presence check.
+
 ---
 
 ## OPEN — these need an answer before work continues
 
-### O-01 (BLOCKING). Which reading of Art. 68(12) does the thesis carry?
+### O-01. RESOLVED 3 Oct by D-16. Which reading of Art. 68(12) does the thesis carry?
 Raised by João's M2. **This is the candidate's decision, not a research task**, and it
 determines what Chapter 4 proves, whether Corollary 1.2 survives, and what the abstract
 claims. Every other Chapter 4/6/7 edit is wasted until it is settled.
@@ -156,12 +216,12 @@ claims. Every other Chapter 4/6/7 edit is wasted until it is settled.
 - **Either way:** Rival 6 (export the logs out of the SPE at permit closure) must be
   answered. It satisfies both provisions literally with no cryptography.
 
-### O-02 (BLOCKING). Can p(a) be grounded in a real audit-record format?
+### O-02. Framing settled by D-16; grounding is patch M1. Can p(a) be grounded in a real audit-record format?
 Raised by M1. Research first, then a decision. If eHDSI audit repositories hold no clinical
 content, Semantics I must be reframed as the semantics of a rich audit log, and the
 cross-border instance of Theorem 1 weakens. Resolve after O-01, before Chapter 4 prose.
 
-### O-03. Ciphertext and dead branch (salt settled, see D-15)
+### O-03. RESOLVED 3 Oct by D-17. Ciphertext and dead branch (salt settled, see D-15)
 Raised by M3. Three sub-decisions: destroy the salt at invalidation, keep it, or store it
 under k(a); delete the ciphertext at invalidation or justify keeping it; fix the `if False`
 dead branch. Currently **text and code contradict each other and the code cites the text it
@@ -176,7 +236,7 @@ need a Sikt check with a four-to-six-week lead time against six weeks remaining.
 Raised by M5. Move Aikebaier, VeritasChain, SecuPi and OneUptime to a footnote row or a
 separate practitioner band, or leave them inline with their caveats.
 
-### O-06. Rename theorems to propositions?
+### O-06. RESOLVED 3 Oct by D-18. Rename theorems to propositions?
 Raised by M4. If yes, also promote §6.9a's anchoring result into Chapter 4 as a formal
 result — do both or neither. The V_II hash-chain integrity test should be done regardless.
 

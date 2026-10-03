@@ -42,6 +42,8 @@ Tiger's approval); the *SRB* press release.
 
 These are not patches. They are answers needed before patches can be written.
 
+**All three answered 3 Oct 2026: DEC-1 → D-16 (partition reading + Proposition L), DEC-2 → D-17 (ciphertext deleted, dead branch replaced), DEC-3 → D-18 (Propositions; anchoring result and Proposition L into Ch4). See `DECISION_RECORD.md`. Nothing below is blocked any more.**
+
 ### DEC-1 · Which reading of Art. 68(12)? · **BLOCKING**
 Tiger's call. `DECISION_RECORD.md` O-01. Option A (formalise C3 over m(a), concede SPE
 infeasible under both semantics, present as a drafting defect) or Option B (Art. 73(1)(e) as
