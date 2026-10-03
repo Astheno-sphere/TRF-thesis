@@ -281,3 +281,11 @@
 2026-10-03 17:32 | P23_crypto_envelope.py | P23-09 | Chapter5_Demonstration_v1.md | 71b93b688622 -> 1e42f3e1d1b2 | optional module reported where the limitation is stated
 2026-10-03 17:32 | P23_crypto_envelope.py | P23-10 | Chapter4_TRF_Model_v1.md | 3c60a97e2d07 -> 7bae96114732 | Table 4.1 OPR-6 row reflects the executed check
 2026-10-03 17:32 | P23b_runall_label.py | P23b-01 | repro_package/run_all.sh | 046cb64b24bf -> 70dd99521feb | label consistent with steps 1/4 to 4/4
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-01 | Chapter4_TRF_Model_v1.md | 7bae96114732 -> bffb948573cc | T-1: D7.4 page numbers; three rows added (OPR-8/17/18 tamper protection, OPR-17 proportionality, OPR-6 balance)
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-02 | Chapter4_TRF_Model_v1.md | 7bae96114732 -> bffb948573cc | T-1 done
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-03 | Chapter4_TRF_Model_v1.md | 7bae96114732 -> bffb948573cc | T-1 page
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-04 | Chapter4_TRF_Model_v1.md | 7bae96114732 -> bffb948573cc | T-1: OPR-6 read in full; the specification itself names the balance the mechanism supplies
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-05 | Chapter4_TRF_Model_v1.md | 7bae96114732 -> bffb948573cc | T-1: OPR-17 read; granularity checked (no requirement anywhere in the document)
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-06 | Chapter4_TRF_Model_v1.md | 7bae96114732 -> bffb948573cc | T-1: OPR-18 five-year recommendation
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-07 | Chapter1_Introduction_v2.md | f37488f80a08 -> fe045a479d59 | T-1: the gap claim corrected and sharpened; the Joint Action names the open question
+2026-10-03 18:07 | P24_d74_read_in_full.py | P24-08 | Chapter2_LitReview_v2_FINAL.md | 96c829174ddf -> 95093ad93515 | T-1: 'no interpretive work' overclaimed after D-16; 'not in the Joint Action guidance' corrected; corroboration from the Joint Action itself

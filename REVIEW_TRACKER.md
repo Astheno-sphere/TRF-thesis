@@ -29,7 +29,7 @@ passage by passage when the patch for that passage is written.
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim at every site; Art 73(1)(e) verbatim in Ch1, Ch2, Ch4. Open: one further language version (supervisor's 'ideally') |
 | M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | CLOSED | P09, P20 | Feng peer-reviewed (P09); Table 2.1 bands (P20) |
-| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | PARTIAL | P22 | Table 4.1 in §4.11. Open: D7.4 page references (TIGER_TASKS T-1) |
+| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | CLOSED | P22, P24 | Table 4.1: 17 requirements with D7.4 pages, read in full |
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | CLOSED | P19 | A1 reworded; one-line record in Appendix C |
 | M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | CLOSED | P11 | UCC Arts 51 and 197: record outlives the destroyed goods; tested against §6.9a; §1.4 overreach removed. Seafarer and OECD material left for PRES trimming |
 | M7b | One sentence in §1.5 on the programme fit | CLOSED | P11 | One sentence in §1.5 |
