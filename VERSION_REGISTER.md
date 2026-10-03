@@ -12,12 +12,12 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 046c1703a37e | 66,098 | 3 Oct 18:26 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 53ad3385811d | 176 eq, 25 tbl | 3 Oct 18:26 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
-| THESIS | Front_Matter_v1.md | 7c1005a29872 | 2,685 | 3 Oct 18:25 | Title, abstract, contribution, declarations, nomenclature, TOC |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 91bac7934ccf | 65,289 | 3 Oct 18:29 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 73d1b8a4b5aa | 176 eq, 25 tbl | 3 Oct 18:29 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | Front_Matter_v1.md | 7800e9980027 | 2,094 | 3 Oct 18:28 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
 | THESIS | Chapter1_Introduction_v2.md | 2d918da21e59 | 5,086 | 3 Oct 18:25 | Chapter 1 |
-| THESIS | Chapter2_LitReview_v2_FINAL.md | 17a6d9ca2122 | 14,047 | 3 Oct 18:25 | Chapter 2 incl. review protocol §2.1 |
-| THESIS | Chapter3_Methodology_v1.md | 9705dab802d4 | 5,181 | 3 Oct 18:25 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
+| THESIS | Chapter2_LitReview_v2_FINAL.md | 029087612410 | 13,894 | 3 Oct 18:28 | Chapter 2 incl. review protocol §2.1 |
+| THESIS | Chapter3_Methodology_v1.md | c7509b0e6936 | 5,116 | 3 Oct 18:28 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
 | THESIS | Chapter4_TRF_Model_v1.md | 396b15055162 | 11,079 | 3 Oct 18:25 | Chapter 4 — all math in LaTeX (159 equations) |
 | THESIS | Chapter5_Demonstration_v1.md | b087472a8d18 | 4,414 | 3 Oct 18:25 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
 | THESIS | Chapter6_Discussion_v1.md | 7cc3f69a367e | 5,850 | 3 Oct 18:25 | Chapter 6, 11 sections |
@@ -55,7 +55,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | cf72857f0fd3 | 15,306 | 3 Oct 18:26 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | faa4f8bed372 | 15,471 | 3 Oct 18:31 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | 92c8e0c96a51 | 187 | 3 Oct 17:33 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
@@ -69,12 +69,12 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | supervisor_review/review_email_text_2026-09-30.txt | 71a963f94788 | 3,112 | 2 Oct 05:34 | The emailed review text. His authority is this text |
 | HANDOFF | handoff_tools/patch.py | ee54315d88bc | — | 2 Oct 23:48 | All-or-nothing exact-match patcher; logs to patches/APPLIED.log |
 | HANDOFF | handoff_tools/verify_base.py | afbaedb3d18a | — | 2 Oct 23:45 | Chapters vs reviewed draft, prose line by line. Base: 0 differences |
-| CONTROL | REVIEW_TRACKER.md | de1a32f9d9fc | 40 items | 3 Oct 18:26 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
+| CONTROL | REVIEW_TRACKER.md | 35d858abafa4 | 40 items | 3 Oct 18:29 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
 | CONTROL | TIGER_TASKS.md | ec06e6fe33ed | 10 tasks | 3 Oct 18:08 | Tasks only Tiger can do, with links and exactly what to check |
 | SOURCE | sources/TEHDAS2_D7.4_v1.2_2026-02-24.md | 8f2d41343f50 | 3,344 lines | 3 Oct | TEHDAS2 D7.4 v1.2 full text (supplied by Tiger); source for P06, P22, P24 |
 | SOURCE | sources/UCC_Regulation_952_2013_OJ_text.md | 13165c25f8ce | 6,158 lines | 3 Oct | UCC OJ text (supplied by Tiger); source for P11 |
 | CONTROL | RESEARCH_LOG_2026-10.md | 282492c93204 | 20 rows | 3 Oct 18:14 | Every search and fetch since 3 Oct; candidate round for Appendix B |
-| HANDOFF | handoff_tools/trail_check.py | d5160db653f6 | — | 3 Oct 17:32 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
+| HANDOFF | handoff_tools/trail_check.py | 418a44e6b7df | — | 3 Oct 18:31 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
 | HANDOFF | handoff_tools/guards.json | f65310b02be7 | 24 guards | 3 Oct 18:26 | Regression patterns held at 0 and review targets that may only fall, with baselines |
 | HANDOFF | handoff_tools/register_sync.py | c7c87a4d9a76 | — | 3 Oct | Recomputes register rows whose file changed; run before each commit |
 | HANDOFF | handoff_tools/commit.sh | eb8828fc6bea | — | 3 Oct 17:22 | Gated commit: refuses on any trail_check FAIL. The only way to commit |
@@ -113,6 +113,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P25_witness_codeblocks.py | 0cdb69134834 | 2 edits | 3 Oct | MIN-10 witness code blocks |
 | HANDOFF | patches/P25_witness_codeblocks.edits.json | ff4908cb6403 | 2 edits | 3 Oct | Frozen edits of P25 |
 | HANDOFF | patches/P26_meta_commentary.py | 7dc930fb0dce | 47 edits | 3 Oct | PRES-1 meta-commentary cut |
+| HANDOFF | patches/P27_process_material.py | 0c6491892db3 | 9 edits | 3 Oct | PRES-3 process material |
+| HANDOFF | patches/P27_process_material.edits.json | 49658b8601b2 | 9 edits | 3 Oct | Frozen edits of P27 |
 | HANDOFF | repro_package/results/crypto_envelope_output.txt | 4647ce0fcff9 | 13 lines | 3 Oct | Recorded run of crypto_envelope.py |
 | HANDOFF | patches/P20_table21_bands.edits.json | 25b693fdc52f | 2 edits | 3 Oct | Frozen edits of P20 |
 | HANDOFF | handoff_tools/appendix_sync.py | 478f1018ca15 | — | 3 Oct 17:32 | Appendix A listings regenerated from and checked against their files |
@@ -122,7 +124,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P16_rename_propositions.edits.json | 77e1509c187d | 58 edits | 3 Oct | Frozen edits of P16 |
 | HANDOFF | patches/P17_rename_code.edits.json | 1c4ae096d145 | 20 edits | 3 Oct | Frozen edits of P17 |
 | HANDOFF | patches/P18_appendixA_propositions.edits.json | d00fd3d3b5ca | 9 edits | 3 Oct | Frozen edits of P18 |
-| HANDOFF | patches/APPLIED.log | 169d54be7056 | 6,501 | 3 Oct 18:25 | Every applied edit with before/after md5 |
+| HANDOFF | patches/APPLIED.log | 6a543107f250 | 6,668 | 3 Oct 18:28 | Every applied edit with before/after md5 |
 | HANDOFF | conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies

@@ -50,6 +50,6 @@ passage by passage when the patch for that passage is written.
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
 | PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work (TIGER_TASKS T-7) |
-| PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | OPEN |  |  |
+| PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27 | One statement in the Declaration; Version and Change Record moved to docs/VERSION_RECORD.md in the repository |
 | PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | OPEN |  |  |
 | PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |
