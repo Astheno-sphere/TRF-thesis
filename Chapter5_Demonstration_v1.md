@@ -6,7 +6,7 @@
 
 ## 5.1 Purpose and Claim
 
-This chapter discharges Activity 4 of the design science cycle set out in Chapter 3, Section 3.2: demonstration. Its function is narrow and should be stated before the results, so that the results are not read as establishing more than they do.
+This chapter discharges Activity 4 of the design science cycle set out in Chapter 3, Section 3.2: demonstration. Its function is narrow.
 
 The chapter demonstrates that the two propositions of Chapter 4 hold on the instances examined. It does not verify them in the proof-assistant sense, it does not measure performance, and it does not deploy anything. Proposition 1 predicts that under plaintext-verifiability semantics the constraint system fails whenever an erasure deadline or a deletion-ceiling deadline falls inside a record's retention window. Proposition 2 predicts that under accountability-preserving semantics the invalidation trajectory satisfies all three constraints for every arrival pattern. The demonstration's job is to make both predictions checkable by execution rather than only by argument.
 
@@ -86,7 +86,7 @@ C1 requires V=1 (=> alpha=1) at t=41 within [0,120]; C2 requires alpha=0 from t=
 
 Each names the record, the collision month, the two constraints in conflict, and the window within which the conflict arises. A reader who doubts Proposition 1 can take any of these lines and check the arithmetic by hand.
 
-Third, and most consequentially, the Secure Processing Environment class violates at a higher rate than the cross-border class, fifty-three per cent against thirty-seven, despite receiving erasure requests at a *lower* probability. The mechanism behind the inversion should be stated plainly, because an examiner's first reaction will be that the secondary pathway simply carries more constraints. That reaction is correct, and it is the point. Every SPE record faces the Article 68(12) ceiling by construction, while only forty per cent of cross-border records ever face any second constraint at all; the decomposition bears this out, with 49 of the SPE violations structural and only 4 request-driven, against all 37 cross-border violations being request-driven. The inversion is therefore not a sampling accident but the direct signature of a collision that the secondary pathway inherits from Regulation (EU) 2025/327 alone, without any data-subject action. Section 5.4 isolates it.
+Third, and most consequentially, the Secure Processing Environment class violates at a higher rate than the cross-border class, fifty-three per cent against thirty-seven, despite receiving erasure requests at a *lower* probability. The inversion has a simple mechanism: the secondary pathway carries more constraints. Every SPE record faces the Article 68(12) ceiling by construction, while only forty per cent of cross-border records ever face any second constraint at all; the decomposition bears this out, with 49 of the SPE violations structural and only 4 request-driven, against all 37 cross-border violations being request-driven. The inversion is therefore not a sampling accident but the direct signature of a collision that the secondary pathway inherits from Regulation (EU) 2025/327 alone, without any data-subject action. Section 5.4 isolates it.
 
 ## 5.4 Corollary 1.2: Infeasibility Without an Erasure Request
 
@@ -125,11 +125,11 @@ The three conflict cases admit no satisfying assignment whatsoever, which is a s
 
 This cross-check is separate code, not independent evidence in a stronger sense. It was written in the same AI-assisted process as the main checker and encodes the same constraint definitions from Section 4.4, so it guards against implementation error in the checker and not against error in the model.
 
-The cross-border floor is scaled from one hundred and twenty months to twelve for this check, because exhaustive search over 2¹²⁰ assignments is not computable. The scaling does not affect the logic: Proposition 1's argument depends on the deadline falling inside the window, not on the window's length, and the scaled case preserves that relation. This substitution is noted rather than hidden, and it is the one place in the demonstration where a parameter was altered for tractability.
+The cross-border floor is scaled from one hundred and twenty months to twelve for this check, because exhaustive search over 2¹²⁰ assignments is not computable. The scaling does not affect the logic: Proposition 1's argument depends on the deadline falling inside the window, not on the window's length, and the scaled case preserves that relation. It is the one place in the demonstration where a parameter was altered for tractability.
 
 ## 5.5a Witness at the Extended Response Period
 
-Chapter 4, Section 4.4 sets the erasure response period $\delta$ from Article 12(3) GDPR, which allows the controller one month from receipt and permits extension by a further two months for complex or numerous requests. The propositions are stated for arbitrary finite $\delta$, and the model admits $\delta = 3$. That claim is witnessed rather than asserted.
+Chapter 4, Section 4.4 sets the erasure response period $\delta$ from Article 12(3) GDPR, which allows the controller one month from receipt and permits extension by a further two months for complex or numerous requests. The propositions are stated for arbitrary finite $\delta$, and the model admits $\delta = 3$. That claim is witnessed here at $\delta = 3$.
 
 *Table 5.2a. Results at $\delta = 1$ and $\delta = 3$ (seed 20260915, n = 200)*
 
@@ -188,7 +188,7 @@ The record is also checked against the audit log. Every access event, invalidati
 
 *How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The violation rates of Table 5.1 are functions of the generator parameters in Table 5.0 and are not estimates of real frequency.
 
-*Payload provenance, tested rather than assumed.* Chapter 3, Section 3.6 specifies a realism layer feeding Synthea-generated records into the checker. That layer was built and executed, and its result is reported here because it bears on how much the demonstration's figures depend on the fixtures chosen.
+*Payload provenance.* Chapter 3, Section 3.6 specifies a realism layer feeding Synthea-generated records into the checker. That layer was built and executed, and its result is reported here because it bears on how much the demonstration's figures depend on the fixtures chosen.
 
 The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.11). All two hundred commitments change, confirming that the payloads genuinely differ.
 

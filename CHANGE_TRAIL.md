@@ -1,5 +1,12 @@
 # Change trail
 
+## 3 October 2026 — patch P26 (meta-commentary)
+
+| ID | Change | Verification |
+|---|---|---|
+| P26-01 to P26-47 | PRES-1: the detector widened to 16 phrase families (84 matches in 74 sentences); every sentence read; 47 cut or shortened across the front matter and Ch1–7. Kept where the phrase carries argument (Datatilsynet's "deliberately high threshold", the NCPeH's "deliberately narrow" scope, "honest key destruction" as the trust assumption, Aikebaier's interpretation "rather than asserted as a regulatory requirement"). Two substantive fixes found while reading: §4.10 said every rival is rejected, but Rival 6 is accepted for the ceiling; §6.9a's diagnostic question restated to agree with Proposition 3 | Meta-commentary 84 → 31 (−63%; the supervisor asked for at least half). patch.py: one declared loss ("may", inside "an examiner may read it either way") |
+| B-33 | Guard PRES1 widened to the 16-family pattern, baseline 84, goal 42 | Now 31 |
+
 ## 3 October 2026 — patch P25 (witness lines)
 
 | ID | Change | Verification |

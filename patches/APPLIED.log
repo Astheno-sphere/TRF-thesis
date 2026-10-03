@@ -291,3 +291,50 @@
 2026-10-03 18:07 | P24_d74_read_in_full.py | P24-08 | Chapter2_LitReview_v2_FINAL.md | 96c829174ddf -> 95093ad93515 | T-1: 'no interpretive work' overclaimed after D-16; 'not in the Joint Action guidance' corrected; corroboration from the Joint Action itself
 2026-10-03 18:13 | P25_witness_codeblocks.py | P25-01 | Chapter5_Demonstration_v1.md | 1e42f3e1d1b2 -> e2dcd605a2aa | MIN-10: §5.3 witnesses verbatim, one per line
 2026-10-03 18:13 | P25_witness_codeblocks.py | P25-02 | Chapter5_Demonstration_v1.md | 1e42f3e1d1b2 -> e2dcd605a2aa | MIN-10: §5.4 witnesses verbatim, one per line
+2026-10-03 18:25 | P26_meta_commentary.py | P26-01 | Front_Matter_v1.md | 97178131493e -> 7c1005a29872 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-02 | Chapter1_Introduction_v2.md | fe045a479d59 -> 2d918da21e59 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-03 | Chapter1_Introduction_v2.md | fe045a479d59 -> 2d918da21e59 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-04 | Chapter1_Introduction_v2.md | fe045a479d59 -> 2d918da21e59 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-05 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-06 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-07 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-08 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-09 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-10 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-11 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-12 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-13 | Chapter2_LitReview_v2_FINAL.md | 95093ad93515 -> 17a6d9ca2122 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-14 | Chapter3_Methodology_v1.md | 1fbea0b59954 -> 9705dab802d4 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-15 | Chapter3_Methodology_v1.md | 1fbea0b59954 -> 9705dab802d4 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-16 | Chapter3_Methodology_v1.md | 1fbea0b59954 -> 9705dab802d4 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-17 | Chapter3_Methodology_v1.md | 1fbea0b59954 -> 9705dab802d4 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-18 | Chapter3_Methodology_v1.md | 1fbea0b59954 -> 9705dab802d4 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-19 | Chapter3_Methodology_v1.md | 1fbea0b59954 -> 9705dab802d4 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-20 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-21 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-22 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-23 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-24 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-25 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-26 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-27 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-28 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-29 | Chapter4_TRF_Model_v1.md | bffb948573cc -> 396b15055162 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-30 | Chapter5_Demonstration_v1.md | e2dcd605a2aa -> b087472a8d18 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-31 | Chapter5_Demonstration_v1.md | e2dcd605a2aa -> b087472a8d18 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-32 | Chapter5_Demonstration_v1.md | e2dcd605a2aa -> b087472a8d18 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-33 | Chapter5_Demonstration_v1.md | e2dcd605a2aa -> b087472a8d18 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-34 | Chapter5_Demonstration_v1.md | e2dcd605a2aa -> b087472a8d18 | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-35 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-36 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-37 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-38 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-39 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-40 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1; Proposition 3 consistency
+2026-10-03 18:25 | P26_meta_commentary.py | P26-41 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-42 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-43 | Chapter6_Discussion_v1.md | 372e1b5bb5bf -> 7cc3f69a367e | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-44 | Chapter7_Conclusion_v1.md | 749682dd93b5 -> ec1bc1c80f3d | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-45 | Chapter7_Conclusion_v1.md | 749682dd93b5 -> ec1bc1c80f3d | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-46 | Chapter7_Conclusion_v1.md | 749682dd93b5 -> ec1bc1c80f3d | PRES-1: meta-commentary cut
+2026-10-03 18:25 | P26_meta_commentary.py | P26-47 | Chapter7_Conclusion_v1.md | 749682dd93b5 -> ec1bc1c80f3d | PRES-1: meta-commentary cut
