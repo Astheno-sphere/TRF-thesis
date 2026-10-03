@@ -107,9 +107,9 @@ def main():
     # 3 trail rows
     trail = pathlib.Path("CHANGE_TRAIL.md").read_text(encoding="utf-8")
     covered = set()
-    for m in re.finditer(r"^\| ([A-Za-z0-9]+)-(\d+) to \1-(\d+) \|", trail, re.M):  # "| D0-01 to D0-29 |"
+    for m in re.finditer(r"^\| (\S+?)(\d+) to \1(\d+) \|", trail, re.M):  # "| D0-01 to D0-29 |", "| P09-F09 to P09-F23 |"
         w = len(m.group(2))
-        covered |= {f"{m.group(1)}-{i:0{w}d}" for i in range(int(m.group(2)), int(m.group(3)) + 1)}
+        covered |= {f"{m.group(1)}{i:0{w}d}" for i in range(int(m.group(2)), int(m.group(3)) + 1)}
     for m in re.finditer(r"^\| ([A-Za-z0-9]+-\d+(?:, [A-Za-z0-9]+-\d+)+) \|", trail, re.M):  # "| P03-01, P03-02 |"
         covered |= set(m.group(1).split(", "))
     missing = sorted({r["id"] for r in log if r["id"] not in covered
