@@ -10,6 +10,7 @@
 | P40-01 to P40-05 | Appendix A.14 listing synced to app.py; Appendix A, Ch5 Table 5.1 and repo README: six tabs, 671 lines | appendix_sync 13/13 |
 | P39b-01 to P39b-02 | `use_container_width` replaced by width="stretch"; requirements streamlit>=1.45, cryptography>=42 | AppTest re-run: no exceptions |
 | P40-B01 to P40-B13 | Appendix A.14 listing block synced to app.py (block edit built by appendix_sync, frozen) | appendix_sync 13/13 |
+| B-37 | Public repo pushed: R-24 (`docs/VERSION_RECORD.md`, b99aa5f) and R-25 (app, checker docstrings, requirements, README, Appendix A; 94b099f). `CHECKSUMS.md` copied back | GitHub API shows 94b099f as head of main; checker and δ-witness output byte-identical to the recorded files |
 | P41-01 | MIN-13: Table of Contents regenerated from the headings, every numbered section listed | Generated and frozen |
 
 ## 4 October 2026 — patches P32–P37 (D7.4 pages, cross-chapter links, references) and B-35
