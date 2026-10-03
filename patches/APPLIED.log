@@ -347,3 +347,32 @@
 2026-10-03 18:28 | P27_process_material.py | P27-07 | Chapter2_LitReview_v2_FINAL.md | 17a6d9ca2122 -> 029087612410 | PRES-3
 2026-10-03 18:28 | P27_process_material.py | P27-08 | Chapter3_Methodology_v1.md | 9705dab802d4 -> c7509b0e6936 | PRES-3: stated once, in the Declaration
 2026-10-03 18:28 | P27_process_material.py | P27-09 | Chapter3_Methodology_v1.md | 9705dab802d4 -> c7509b0e6936 | PRES-3
+2026-10-03 18:35 | P28_pilot_said_once.py | P28-01 | Chapter1_Introduction_v2.md | 2d918da21e59 -> 20ba6a736e93 | PRES-4: short first account; details in §2.2
+2026-10-03 18:35 | P28_pilot_said_once.py | P28-02 | Chapter1_Introduction_v2.md | 2d918da21e59 -> 20ba6a736e93 | PRES-4: cross-reference
+2026-10-03 18:35 | P28_pilot_said_once.py | P28-03 | Chapter2_LitReview_v2_FINAL.md | 029087612410 -> 495e5be568ab | PRES-4: the one fact only §1.1 carried moves here
+2026-10-03 18:35 | P28_pilot_said_once.py | P28-04 | Chapter2_LitReview_v2_FINAL.md | 029087612410 -> 495e5be568ab | PRES-4: cross-reference
+2026-10-03 18:35 | P28_pilot_said_once.py | P28-05 | Chapter4_TRF_Model_v1.md | 396b15055162 -> c374ad7df035 | PRES-4: cross-reference
+2026-10-03 18:35 | P28_pilot_said_once.py | P28-06 | Chapter6_Discussion_v1.md | 7cc3f69a367e -> 0d4e96ff3702 | PRES-4: cross-reference
+2026-10-03 20:09 | P29_reading_said_once.py | P29-01 | Chapter6_Discussion_v1.md | 0d4e96ff3702 -> 5cd8c2f3596b | PRES-4: grounds argued once, in §4.6
+2026-10-03 20:09 | P29_reading_said_once.py | P29-02 | Chapter7_Conclusion_v1.md | ec1bc1c80f3d -> 2d029aa89736 | PRES-4: the question stated; the grounds left to §4.6
+2026-10-03 20:09 | P30_front_matter_current.py | P30-01 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | PRES-4/MIN: abstract level with Ch4 (Props 3-4, D-16 partition, Merkle log)
+2026-10-03 20:09 | P30_front_matter_current.py | P30-02 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | Corollary 1.2 stated with both of its conditions (D-16)
+2026-10-03 20:09 | P30_front_matter_current.py | P30-03 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | D-18 rename carried into the Norwegian summary
+2026-10-03 20:09 | P30_front_matter_current.py | P30-04 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | D-18 rename; Sammendrag level with the Abstract
+2026-10-03 20:09 | P30_front_matter_current.py | P30-05 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | Corollary 1.2 conditions, Norwegian
+2026-10-03 20:09 | P30_front_matter_current.py | P30-06 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | Props 3-4 claimed at the level Ch4 defends them
+2026-10-03 20:09 | P30_front_matter_current.py | P30-07 | Front_Matter_v1.md | 7800e9980027 -> fcabceb8783a | D-16 partition and Merkle log in the contribution statement
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-01 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | four propositions now; say which are demonstrated
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-02 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | PRES-3 meta/hype cut; Cor 1.2 conditions stated (D-16)
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-03 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | contradiction with crypto_envelope.py removed
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-04 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d: shorten
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-05 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | PRES-3 meta cut; the rate disclaimer said once, here (M4d)
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-06 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | PRES-3
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-07 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | §5.4 aligned with the conditional statement of Cor 1.2 (P29/D-16)
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-08 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | PRES-3; cross-chapter link to Proposition 3
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-09 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d: rate disclaimer not repeated
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-10 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d: said once in §5.3
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-11 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-12 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-13 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d
+2026-10-03 20:09 | P31_ch5_tighten.py | P31-14 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d/PRES-3; bridge to Ch6

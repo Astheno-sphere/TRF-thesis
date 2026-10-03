@@ -23,7 +23,7 @@ passage by passage when the patch for that passage is written.
 | M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | CLOSED | P15, P16, P17, P18 | Propositions 1–4 throughout text, code and repository; §4.7 note moves the weight to §4.2 and Propositions 3–4 |
 | M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | CLOSED | P15 | Proposition 3 in Ch4 §4.6, stated precisely (collision needs L ≤ F; anchor decides visibility); §6.9a corrected |
 | M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | CLOSED | P12, P14 | Merkle log (RFC 6962), inclusion proofs in V_II, two tamper tests fail V_II; reported in §5.6 |
-| M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
+| M4d | Shorten Ch5; violation rates are generator artefacts | CLOSED | P31 | Rate disclaimer said once (§5.3); meta and repetition cut; §5.4 aligned with conditional Cor 1.2 |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | CLOSED | P09 | Supervisor's fallback taken: F = 120 illustrative; primary agreement cited for what it says (no period). Reopen if the eHDSI annex is obtained |
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | CLOSED | P10 | Every claim limited to the hearing version inspected (P10, P10b) |
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08 | Art 68(12) verbatim at every site; Art 73(1)(e) verbatim in Ch1, Ch2, Ch4. Open: one further language version (supervisor's 'ideally') |
@@ -51,5 +51,5 @@ passage by passage when the patch for that passage is written.
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
 | PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work (TIGER_TASKS T-7) |
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27 | One statement in the Declaration; Version and Change Record moved to docs/VERSION_RECORD.md in the repository |
-| PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | OPEN |  |  |
+| PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | CLOSED | P28, P29 | Pilot details in §2.2 only; 68(12) grounds in §4.6 only; others cross-refer |
 | PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |
