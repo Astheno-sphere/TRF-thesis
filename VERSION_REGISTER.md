@@ -12,13 +12,13 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 59852af852d5 | 60,775 | 3 Oct 00:31 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 6d947bf2d480 | 176 eq, 25 tbl | 3 Oct 00:31 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | e0cb5f36dd54 | 61,304 | 3 Oct 14:55 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 2f5f1ae8a72c | 176 eq, 25 tbl | 3 Oct 14:55 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
 | THESIS | Front_Matter_v1.md | 602285fe3830 | 2,680 | 3 Oct 00:19 | Title, abstract, contribution, declarations, nomenclature, TOC |
 | THESIS | Chapter1_Introduction_v2.md | 1870f6938506 | 4,903 | 3 Oct 00:19 | Chapter 1 |
 | THESIS | Chapter2_LitReview_v2_FINAL.md | 04d3c5c10fa9 | 13,559 | 3 Oct 00:24 | Chapter 2 incl. review protocol §2.1 |
 | THESIS | Chapter3_Methodology_v1.md | 9a69873c2034 | 5,200 | 3 Oct 00:19 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
-| THESIS | Chapter4_TRF_Model_v1.md | ad1766c1eb79 | 8,927 | 3 Oct 00:31 | Chapter 4 — all math in LaTeX (159 equations) |
+| THESIS | Chapter4_TRF_Model_v1.md | e6572937841c | 9,456 | 3 Oct 14:55 | Chapter 4 — all math in LaTeX (159 equations) |
 | THESIS | Chapter5_Demonstration_v1.md | 856a60416066 | 4,172 | 3 Oct 00:22 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
 | THESIS | Chapter6_Discussion_v1.md | cd67df56b103 | 5,761 | 3 Oct 00:19 | Chapter 6, 11 sections |
 | THESIS | Chapter7_Conclusion_v1.md | cd5f2b9c2585 | 2,152 | 3 Oct 00:19 | Chapter 7 |
@@ -54,7 +54,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 066ea7c07227 | 12,270 | 3 Oct 00:33 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 58841df0b18f | 12,476 | 3 Oct 14:55 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | fdfc17f22984 | 216 | 2 Oct 23:47 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
@@ -68,7 +68,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | supervisor_review/review_email_text_2026-09-30.txt | 71a963f94788 | 3,112 | 2 Oct 05:34 | The emailed review text. His authority is this text |
 | HANDOFF | handoff_tools/patch.py | ee54315d88bc | — | 2 Oct 23:48 | All-or-nothing exact-match patcher; logs to patches/APPLIED.log |
 | HANDOFF | handoff_tools/verify_base.py | afbaedb3d18a | — | 2 Oct 23:45 | Chapters vs reviewed draft, prose line by line. Base: 0 differences |
-| CONTROL | REVIEW_TRACKER.md | 1be0d51d81a8 | 40 items | 3 Oct 00:31 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
+| CONTROL | REVIEW_TRACKER.md | 2440903b43b3 | 40 items | 3 Oct 14:55 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
+| CONTROL | RESEARCH_LOG_2026-10.md | 429e1daf3c82 | 20 rows | 3 Oct | Every search and fetch since 3 Oct; candidate round for Appendix B |
 | HANDOFF | handoff_tools/trail_check.py | c1b174ecd6f1 | — | 3 Oct 00:33 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
 | HANDOFF | handoff_tools/guards.json | 24efd423853d | 24 guards | 3 Oct 00:25 | Regression patterns held at 0 and review targets that may only fall, with baselines |
 | HANDOFF | handoff_tools/register_sync.py | c7c87a4d9a76 | — | 3 Oct | Recomputes register rows whose file changed; run before each commit |
@@ -80,7 +81,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P03_ehds_dates.py | a047194f2daa | 2 edits | 3 Oct | M5d EHDS dates; EY source dropped |
 | HANDOFF | patches/P04_ch4_partition_reading.py | ccf74dc1a954 | 16 edits | 3 Oct | Ch4 core: M1 grounding, D-16 partition, Cor 1.2 conditional, verbatim Art 68(12) |
 | HANDOFF | patches/P05_trajectory_gap.py | 51c03262114d | 2 edits | 3 Oct | Proof gap in P04 closed (step 4) |
-| HANDOFF | patches/APPLIED.log | 80ea7e70d1dd | 1,684 | 3 Oct 00:31 | Every applied edit with before/after md5 |
+| HANDOFF | patches/P06_rival6_propL_d74.py | 097031922f5b | 5 edits | 3 Oct | Rival 6, Proposition L, D7.4 EHDSR-7 and OPR-6 |
+| HANDOFF | patches/APPLIED.log | 11aa346be5ae | 1,808 | 3 Oct 14:55 | Every applied edit with before/after md5 |
 | HANDOFF | conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies

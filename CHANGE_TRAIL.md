@@ -1,5 +1,12 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patch P06 (Rival 6, Proposition L, D7.4)
+
+| ID | Change | Verification |
+|---|---|---|
+| P06-01 to P06-05 | §4.6: D7.4 EHDSR-7 ("All SPE logs MUST identify the actor") added to the textual case for the partition. §4.8 *Ciphertext*: D7.4 OPR-6 ("deleted or rendered unrecoverable … including any backups or redundant copies") supports key destruction for unreachable copies. §4.10: six rivals; Rival 3 rewritten (no longer says Art 17 targets the pseudonym, which contradicted §4.2; the cross-border payload is put there by ITI-55; dataset-level logging conceded as a real alternative for the ceiling); Rival 6 (move the logs out at permit closure) accepted as an answer to Corollary 1.2 and bounded by Proposition L, stated and proved: a location-anchored ceiling yields to relocation, a controller-anchored right does not | D7.4 v1.2 retrieved 3 Oct via tehdas.eu (four fetches; see `RESEARCH_LOG_2026-10.md`, row 20, including one disagreement on OPR-6). patch.py: gained TEHDAS2 (2026) citation and Arts 17(1), 68(12), 73(1), 73(1)(e); "Article 17" kept in Rival 3 after the gate flagged its loss |
+| B-17 | `RESEARCH_LOG_2026-10.md`: every search and fetch of 3 Oct (20 rows), with outcomes and what still needs confirming in the D7.4 PDF | — |
+
 ## 3 October 2026 — supervisor review, patches P04 and P05 (Chapter 4 core: M1, M2a, M5c)
 
 | ID | Change | Verification |

@@ -13,9 +13,9 @@ passage by passage when the patch for that passage is written.
 
 | Item | What he asked | Status | Patches | Evidence / note |
 |---|---|---|---|---|
-| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | PARTIAL | P04 | Cross-border p(a) grounded in ITI-55 (P04). Open: SPE activity-log content against D7.4; SPE record model in code (code wave) |
+| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | PARTIAL | P04, P06 | Cross-border p(a) grounded in ITI-55 (P04); SPE log identifiability grounded in D7.4 EHDSR-7 (P06). Open: SPE record model in code (code wave) |
 | M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | PARTIAL | P04, P05 | Ch4 carries the partition reading (P04, P05). Open: Ch1 §1.1, Ch2 §2.3, Ch6, Ch7 §7.4 still carry the old broad-reading paraphrase |
-| M2b | Rival 6: move the logs out of the SPE at permit closure | OPEN |  | D-16. Proposed answer: relocation satisfies a location-anchored ceiling but not a right that follows the data (Proposition L) |
+| M2b | Rival 6: move the logs out of the SPE at permit closure | CLOSED | P06 | Rival 6 accepted for the ceiling and bounded by Proposition L (P06). Ch6/Ch7 echo in P07 |
 | M2c | Rewrite §6.1's opening; lead with the robust result | OPEN |  | After M2a |
 | M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
 | M3b | Ciphertext: delete at invalidation or justify | PARTIAL | P02 | D-17. Text done (P02). Code still keeps the payload after invalidation: code wave |
