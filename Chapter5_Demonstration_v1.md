@@ -14,7 +14,7 @@ A subsidiary claim is made for Corollary 1.2, which is the sharpest result in th
 
 ## 5.2 Implementation
 
-The checker is a single Python module of 363 lines including documentation and the independent cross-check, of which 276 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately ninety. It depends only on the Python standard library: `hashlib` for commitments, `random` for seeded generation, and `itertools` for the exhaustive cross-check. No cryptographic library, no solver, and no zero-knowledge proof system is used, consistent with the scope commitments of Chapter 1, Section 1.5.
+The checker is a single Python module of 533 lines including documentation, the independent cross-check and the audit-log integrity check, of which 413 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check. No cryptographic library, no solver, and no zero-knowledge proof system is used, consistent with the scope commitments of Chapter 1, Section 1.5.
 
 Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A.
 
@@ -22,15 +22,15 @@ Four further modules accompany it, none of which alters anything the checker rep
 
 | Module | Lines | What it does | Reports a thesis figure? |
 |---|---|---|---|
-| `trf_checker.py` | 363 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check | Yes — Tables 5.1, 5.2a, 5.3 |
+| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.1, 5.2a, 5.3 |
 | `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.4 |
 | `norwegian_layer.py` | 135 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
-| `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9 | No |
-| `app.py` | 526 | Five-tab viewer over the artefact; never a source of results | No |
+| `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.9a | No |
+| `app.py` | 530 | Five-tab viewer over the artefact; never a source of results | No |
 
 Every command has a recorded console run committed beside it in the repository, one per command, so that a reader who executes a command and diffs the output against its recorded file can distinguish a changed file from a changed result. That distinction matters: if a figure in this chapter ever disagrees with the artefact, the question is which of the two moved, and the recorded runs answer it. The eight Synthea bundles the realism layer reads are committed with the code, so no regeneration is required to reproduce Table 5.4.
 
-Records are represented exactly as the model specifies. Each carries metadata `m` containing the actor identifier, the national contact point, the patient pseudonym, the document category, the legal basis, and the outcome; a payload; a hiding commitment `c = SHA-256(salt ‖ payload)` with a per-record sixteen-byte salt; a payload key `k`; a creation month `t_a`; a floor parameter `F`; and a pathway marker. Key destruction is modelled as irreversible removal of the key reference from the record's state, which is the sandbox's analogue of destruction within a custody boundary and is not a claim that the simulation destroys anything cryptographically.
+Records are represented exactly as the model specifies. Each carries metadata `m` split into accessor fields (the actor, the national contact point or the data permit, the document category, the legal basis, and the outcome) and subject fields (the patient pseudonym); a payload, which stands for the demographic query of the patient-discovery transaction in a cross-border record and for the logged activity in a Secure Processing Environment record; a hiding commitment `c = SHA-256(salt ‖ payload)` with a per-record sixteen-byte salt; a payload key `k`; a creation month `t_a`; a floor parameter `F`; and a pathway marker. Key destruction is modelled as irreversible removal of the key reference from the record's state, and deletion of the ciphertext as removal of the payload, which is the sandbox's analogue of destruction within a custody boundary and is not a claim that the simulation destroys anything cryptographically.
 
 Two record classes are generated, implementing the two floor instances that Chapter 4 absorbed into one parameterised constraint:
 
@@ -161,13 +161,19 @@ The distribution of invalidation grounds is itself informative. Eighty-six inval
 
 The auditor's view of a record that was infeasible before invalidation, verbatim from the run for record 100:
 
-> metadata intact : True — actor=HP-026, ncp=NO, outcome=success
-> commitment c(a) : 11087780fd192c8fdaa237081ee0bb11…
-> payload key k(a) : None ← destroyed
-> invalidation ι(a) : month=16, ground=EHDS Art 68(12)
-> payload readable? : False
+```text
+accessor fields      : True  actor=R-008 permit=DP-015 outcome=success
+subject link         : removed month 16
+commitment c(a)      : 678ade47c1e6dc03296175e056fd8116...
+payload key k(a)     : None   <- destroyed
+salt, ciphertext     : None, None   <- destroyed, deleted
+invalidation iota(a) : month=16 ground=EHDS Art 68(12)
+payload readable?    : False
+```
 
-This is the state the mechanism is designed to produce, and it is worth reading against what Semantics I would have demanded. The access event is fully established: which health professional, at which contact point, with what outcome. The binding to a specific payload survives in the commitment. The invalidation is itself a logged, grounded, attributed event rather than a silent absence. And the payload is unreadable, at month nineteen as at month sixteen. An auditor examining this record learns everything accountability requires and nothing the erasure obligation forbids.
+This is the state the mechanism is designed to produce, and it is worth reading against what Semantics I would have demanded. The access event is fully established: which researcher, under which permit, with what outcome. The link to the patient was removed at the ceiling, and its removal is itself a logged entry. The binding to a specific payload survives in the commitment. The invalidation is itself a logged, grounded, attributed event rather than a silent absence. And the payload is unreadable, at month nineteen as at month sixteen. An auditor examining this record learns everything accountability requires and nothing the erasure obligation forbids.
+
+The record is also checked against the audit log. Every access event, invalidation and subject-link removal is an entry in an append-only Merkle log, and condition (i) of Semantics II is tested as an inclusion proof against the log's root rather than as the presence of fields. All two hundred records verify. Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.10). The Semantics II result of Table 5.3 therefore rests on a check that can fail, which the earlier presence test could not.
 
 ## 5.7 What the Demonstration Establishes, and What It Does Not
 
@@ -179,7 +185,7 @@ This is the state the mechanism is designed to produce, and it is worth reading 
 
 *Payload provenance, tested rather than assumed.* Chapter 3, Section 3.6 specifies a realism layer feeding Synthea-generated records into the checker. That layer was built and executed, and its result is reported here because it bears on how much the demonstration's figures depend on the fixtures chosen.
 
-The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 35 bytes to 1,006. All two hundred commitments change, confirming that the payloads genuinely differ.
+The layer substitutes real FHIR R4 resources for the constructed payload strings and leaves every timing quantity (creation month, erasure arrival, permit expiry, floor, response period) exactly as generated. Mean payload size rises from 43 bytes to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.11). All two hundred commitments change, confirming that the payloads genuinely differ.
 
 *Table 5.4. Constructed against Synthea-generated payloads (same seed, same timings)*
 

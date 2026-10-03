@@ -22,6 +22,7 @@ Checks
   9  guards       regression patterns stay at 0; review targets never rise (handoff_tools/guards.json)
  10  tracker      REVIEW_TRACKER.md: closed items name applied patches and meet their guard goals
  11  full/remote  optional, see above
+ 13  appendix     every source listing and console output in Appendix A equals its file
 """
 import hashlib, json, os, pathlib, re, shutil, subprocess, sys, tempfile
 
@@ -225,7 +226,7 @@ def main():
         bad = [a for a, b in pairs if fmd5(R / a) != fmd5(R / b)]
         report(11, f"recorded runs: {5 - len(bad)}/5 match", "FAIL" if bad else "PASS", bad)
     if remote:
-        clone = pathlib.Path("/home/claude/astheno-sphere/trf")
+        clone = pathlib.Path("/home/claude/trf") if pathlib.Path("/home/claude/trf/.git").exists() else pathlib.Path("/home/claude/astheno-sphere/trf")
         if not (clone / ".git").exists():
             subprocess.run(["git", "clone", "-q", "--depth", "1", "https://github.com/Astheno-sphere/trf", str(clone)],
                            env={**os.environ, "GIT_LFS_SKIP_SMUDGE": "1"}, capture_output=True)
@@ -239,6 +240,14 @@ def main():
         bad += [f"{c} (canonical {o}) != repo {pathlib.Path(o).name}" for o in COPIES
                 if (clone / pathlib.Path(o).name).exists() and fmd5(o) != fmd5(clone / pathlib.Path(o).name)]
         report(12, f"public repository at {head} vs CHECKSUMS.md and demo_app/", "FAIL" if bad else "PASS", bad)
+
+    # 13 Appendix A listings equal the files they reproduce
+    import appendix_sync
+    A = pathlib.Path(appendix_sync.APPENDIX).read_text(encoding="utf-8")
+    bad = [f"{h[3:]} differs from {f}" for h, f in appendix_sync.BLOCKS.items()
+           if appendix_sync.block(A, h).strip() != pathlib.Path(f).read_text(encoding="utf-8").strip()]
+    report(13, f"Appendix A: {len(appendix_sync.BLOCKS) - len(bad)}/{len(appendix_sync.BLOCKS)} listings equal their files",
+           "FAIL" if bad else "PASS", bad)
 
     n_fail = results.count("FAIL")
     print(f"\nTRAIL {'BROKEN' if n_fail else 'INTACT'}: {n_fail} fail, {results.count('WARN')} warn")

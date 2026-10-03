@@ -160,7 +160,7 @@ This thesis and its artefact are versioned together. The table records what chan
 
 | Module | Lines | Reports a thesis figure? |
 |---|---|---|
-| `trf_checker.py` | 363 | Yes — Tables 5.1, 5.2a, 5.3 |
+| `trf_checker.py` | 533 | Yes — Tables 5.1, 5.2a, 5.3 |
 | `synthea_layer.py` | 152 | Yes — Table 5.4 |
 | `norwegian_layer.py` | 135 | No — illustrative |
 | `cross_sector_check.py` | 110 | No — illustrative, discussed at §6.9a |

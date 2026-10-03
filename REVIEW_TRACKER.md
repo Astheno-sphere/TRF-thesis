@@ -13,16 +13,16 @@ passage by passage when the patch for that passage is written.
 
 | Item | What he asked | Status | Patches | Evidence / note |
 |---|---|---|---|---|
-| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | PARTIAL | P04, P06 | Cross-border p(a) grounded in ITI-55 (P04); SPE log identifiability grounded in D7.4 EHDSR-7 (P06). Open: SPE record model in code (code wave) |
+| M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | CLOSED | P04, P06, P12, P14 | p(a) grounded per class (ITI-55; SPE activity per D7.4); SPE record model in code names researcher and permit; subject link removed at ceiling |
 | M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | CLOSED | P04, P05, P07 | Partition reading carried through Ch1, Ch2, Ch4, Ch6, Ch7 (P04, P05, P07) |
 | M2b | Rival 6: move the logs out of the SPE at permit closure | CLOSED | P06 | Rival 6 accepted for the ceiling and bounded by Proposition L (P06). Ch6/Ch7 echo in P07 |
 | M2c | Rewrite §6.1's opening; lead with the robust result | CLOSED | P07 | §6.1 leads with the robust result, then Proposition L, then the conditional SPE instance |
 | M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
-| M3b | Ciphertext: delete at invalidation or justify | PARTIAL | P02 | D-17. Text done (P02). Code still keeps the payload after invalidation: code wave |
-| M3c | Remove the dead salt branch; seeded generator or `--reproducible` | OPEN |  | Code change; recorded runs must still match or be re-recorded with a logged reason |
+| M3b | Ciphertext: delete at invalidation or justify | CLOSED | P02, P12 | Text (P02) and code (P12): ciphertext deleted at invalidation |
+| M3c | Remove the dead salt branch; seeded generator or `--reproducible` | CLOSED | P12 | make_salt() and --random-salts; dead branch gone (guard 1 → 0) |
 | M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | OPEN |  | D-18 |
 | M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | OPEN |  | D-18 |
-| M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | OPEN |  | Not blocked. Proposed: Merkle log (RFC 9162 style) rather than a bare chain; tamper test must make V_II fail |
+| M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | CLOSED | P12, P14 | Merkle log (RFC 6962), inclusion proofs in V_II, two tamper tests fail V_II; reported in §5.6 |
 | M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | CLOSED | P09 | Supervisor's fallback taken: F = 120 illustrative; primary agreement cited for what it says (no period). Reopen if the eHDSI annex is obtained |
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | CLOSED | P10 | Every claim limited to the hearing version inspected (P10, P10b) |
@@ -39,10 +39,10 @@ passage by passage when the patch for that passage is written.
 | MIN-04 | §2.1.4 "four dated rounds" vs Appendix B five | CLOSED | P01 | Fork R1 merged rounds to 7 on the superseded branch; re-judge |
 | MIN-05 | §3.4 / Cor 1.1 "ordinary"/"generic case" are frequency claims; soften | OPEN |  |  |
 | MIN-06 | §4.4 C1 closed window spans F+1 months | OPEN |  | Half-open interval, or justify |
-| MIN-07 | Table 5.0a, A.9c, A.14: "Section 6.9" → 6.9a after renumbering | OPEN |  |  |
+| MIN-07 | Table 5.0a, A.9c, A.14: "Section 6.9" → 6.9a after renumbering | CLOSED | P14 | Table 5.0a and Appendix A ×3 |
 | MIN-08 | Appendix C preamble: "Chapter 3, Section 3.9" → 3.8 | CLOSED | P01 |  |
 | MIN-09 | "an separately written" ×3 → "a separately written" | CLOSED | P01 |  |
-| MIN-10 | §5.3, §5.4, §5.6: witness lines in a code block, one per line | OPEN |  |  |
+| MIN-10 | §5.3, §5.4, §5.6: witness lines in a code block, one per line | PARTIAL | P14 | §5.6 auditor view now a code block. Open: §5.3, §5.4 witness lines |
 | MIN-11 | §6.1 "thirty-nine concrete witnesses" → "witnesses in the model" | CLOSED | P01 |  |
 | MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | CLOSED | P01 |  |
 | MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | OPEN |  |  |

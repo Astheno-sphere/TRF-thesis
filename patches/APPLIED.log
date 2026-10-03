@@ -131,3 +131,38 @@
 2026-10-03 15:11 | P11_logistics_anchor.py | P11-02 | Chapter1_Introduction_v2.md | 654344ccfe63 -> 437363c0af1b | M7b: one honest sentence on programme fit
 2026-10-03 15:11 | P11_logistics_anchor.py | P11-03 | Chapter2_LitReview_v2_FINAL.md | 8537fac2a525 -> bdef79451f51 | M7a: verified UCC anchor; unsourced 'destruction-of-records requirements' claim removed; tested against §6.9a; limit stated
 2026-10-03 15:11 | P11_logistics_anchor.py | P11-04 | Chapter2_LitReview_v2_FINAL.md | 8537fac2a525 -> bdef79451f51 | M7a: new reference
+2026-10-03 15:17 | P12_code_wave.py | P12-01 | demo_app/trf_checker.py | d0496883a669 -> 39ce93590969 | M1, M3b, M3c, M4c: m_acc/m_subj, subject link removed at ceiling, payload deleted, make_salt/--random-salts, Merkle log + tamper test
+2026-10-03 15:17 | P12_code_wave.py | P12-02 | repro_package/trf_checker.py | d0496883a669 -> 39ce93590969 | M1, M3b, M3c, M4c: m_acc/m_subj, subject link removed at ceiling, payload deleted, make_salt/--random-salts, Merkle log + tamper test
+2026-10-03 15:17 | P12_code_wave.py | P12-03 | code_artefacts/trf_checker.py | d0496883a669 -> 39ce93590969 | M1, M3b, M3c, M4c: m_acc/m_subj, subject link removed at ceiling, payload deleted, make_salt/--random-salts, Merkle log + tamper test
+2026-10-03 15:17 | P12_code_wave.py | P12-04 | demo_app/app.py | b07777129395 -> 81ddca087c18 | App follows the checker: SPE auditor view (accessor fields, permit, subject link, salt and ciphertext), Synthea sample read before invalidation
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-B01 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | Appendix A A.8 synced to demo_app/trf_checker.py
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-B05 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | Appendix A A.9d synced to demo_app/app.py
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-B06 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | Appendix A A.10 synced to repro_package/results/trf_output.txt
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-B08 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | Appendix A A.11b synced to repro_package/results/synthea_comparison_subset_output.txt
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-B09 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | Appendix A A.12 synced to repro_package/results/expected_delta_witness_output.txt
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-01 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | line count after P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-02 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | line count after P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-03 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | M1: the record model as revised
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-04 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | M4c, M3b, D-16 described
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-05 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | M3c
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-06 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | M3b
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-07 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | constructed payloads changed in P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-08 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | M4c result; commitment after P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-09 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | commitment after P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-10 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | line count after P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-11 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | line count after P12
+2026-10-03 15:19 | P13_appendixA_codewave.py | P13-12 | code_artefacts/README_Appendix_A.md | cec08a37ddb2 -> 572a07b11098 | historical record stated as such
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-01 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | code wave: counts and modules
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-02 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | Table 5.0a
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-03 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | Table 5.0a
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-04 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | MIN-07
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-05 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | M1: record model as revised; SPE records name a researcher and permit
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-06 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | M3b
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-07 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | M1 (supervisor: the SPE record showed a clinician and a contact point); MIN-10 (verbatim lines in a code block, one per line)
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-08 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | M1, D-16
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-09 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | M4c: V_II tests integrity, with the tamper result
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-10 | Chapter5_Demonstration_v1.md | 856a60416066 -> 1e5f95286db3 | code wave: constructed mean 35 -> 43; full-cohort run is historical
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-11 | Front_Matter_v1.md | ba1a6b255d3c -> e5a87b0aa247 | Table F.2
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-12 | code_artefacts/README_Appendix_A.md | 572a07b11098 -> c5dc277b74b7 | MIN-07
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-13 | code_artefacts/README_Appendix_A.md | 572a07b11098 -> c5dc277b74b7 | MIN-07
+2026-10-03 15:20 | P14_ch5_codewave.py | P14-14 | code_artefacts/README_Appendix_A.md | 572a07b11098 -> c5dc277b74b7 | MIN-07
