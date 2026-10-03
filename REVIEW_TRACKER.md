@@ -27,7 +27,7 @@ passage by passage when the patch for that passage is written.
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | OPEN |  | Search the eHDSI/eHMSEG documents first; fallback is "illustrative" (Cor 2.2 makes results F-independent) |
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | OPEN |  | Ch1 l.31 "survives against the final national document" |
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | OPEN |  | Verbatim already retrieved (streamlex mirror of OJ L 2025/327). Fork pass F3 on the superseded branch did this once |
-| M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | OPEN |  |  |
+| M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | OPEN |  |  |
 | M6a | Traceability matrix against D7.4 and the SPUHiN checklist | OPEN |  | The evaluation step |
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | OPEN |  |  |

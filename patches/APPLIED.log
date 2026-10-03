@@ -51,3 +51,5 @@
 2026-10-03 00:22 | P02_salt_ciphertext.py | P02-06 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3b: the supervisor noted the risk called 'unavoidable' is removable for the retained copy; what remains is stated
 2026-10-03 00:22 | P02_salt_ciphertext.py | P02-07 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a, M3b: chapter summary follows the design
 2026-10-03 00:22 | P02_salt_ciphertext.py | P02-08 | Chapter5_Demonstration_v1.md | cd0cbb51845d -> 856a60416066 | M3a: §5.6 now describes what the code does (rec.salt = None)
+2026-10-03 00:24 | P03_ehds_dates.py | P03-01 | Chapter2_LitReview_v2_FINAL.md | 3a0b8c0b6b0e -> 04d3c5c10fa9 | M5d: dates verified against Arts 19(1) and 105(1)(a); EY law alert dropped as a source
+2026-10-03 00:24 | P03_ehds_dates.py | P03-02 | Chapter2_LitReview_v2_FINAL.md | 3a0b8c0b6b0e -> 04d3c5c10fa9 | M5d: reference entry removed with its only citation

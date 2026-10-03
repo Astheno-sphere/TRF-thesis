@@ -72,8 +72,6 @@ Dhandala, N. (2026, 17 February). *How to set up crypto-shredding for GDPR right
 
 Diamantopoulos, S., Karlsson, L., Karkaletsis, G., Tsoumas, V., Berler, A., Karkaletsis, K., et al. (2019). Secure cross-border exchange of health related data: The KONFIDO approach. In *Computer Security: ESORICS 2019 International Workshops* (pp. 318–333). Springer. https://doi.org/10.1007/978-3-030-34914-1_30 `[Ch2]`
 
-Ernst & Young. (2025). *Regulation (EU) 2025/327: Establishing the European Health Data Space (EHDS)* [Law alert]. EY Greece. https://www.ey.com/en_gr/technical/tax/tax-alerts/regulation-2025-327-establishing-ehds `[Ch2]`
-
 European Commission. (2025a). *European Health Data Space Regulation (EHDS)*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en `[Ch2]`
 
 European Commission. (2025b). *Electronic cross-border health services*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en `[Ch2]`
@@ -131,6 +129,8 @@ Norwegian Maritime Authority. (2023). *Amendments to the Health Regulations refl
 Norwegian Trusted Research Environments. (n.d.). *Norwegian Trusted Research Environments (NORTRE)* [A collaboration between TSD/UiO, SAFE/UiB and HUNT Cloud/NTNU]. Retrieved 28 September 2026, from https://nortre.no/ `[Ch1] [Ch2]`
 
 Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45–77. https://doi.org/10.2753/MIS0742-1222240302 `[Ch1] [Ch3]`
+
+Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16 `[Ch6]`
 
 Reardon, J., Basin, D., & Capkun, S. (2013). SoK: Secure data deletion. In *2013 IEEE Symposium on Security and Privacy* (pp. 301–315). IEEE. https://doi.org/10.1109/SP.2013.28 `[Ch2] [Ch6] [Ch7]`
 
