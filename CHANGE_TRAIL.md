@@ -10,6 +10,7 @@
 | P44b-B01 to P44b-B13 | Appendix A.10 listing synced to the checker | appendix_sync 13/13 |
 | P45-01 to P45-09 | Remaining meta phrases (§1.5, §2.1.7, §4.1, §6.8); §4.6 and §4.10 headings name Propositions 3 and 4, TOC follows | — |
 | P46-01 to P46-03 | Synthea limitations stated once (§3.5); §5.8 and §6.7 point there | Inspector: losses declared |
+| B-42 | Public repo R-26 pushed (b8b90bf): checker header, Appendix A, README commitment; CHECKSUMS copied back | GitHub API head b8b90bf; checker output byte-identical |
 | B-41 | Tracker updated: 33 closed, 3 partial (M4d length, M5c language version, M6a SPUHiN row by row), 4 open (Tiger's) | Body text 44,690 words (45,605 before the round) |
 
 ## 4 October 2026 — Word build and tracked-changes comparison (B-39, B-40)
