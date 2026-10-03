@@ -1,5 +1,17 @@
 # Change trail
 
+## 4 October 2026 — fix round after the independent audit (P42–P46)
+
+| ID | Change | Verification |
+|---|---|---|
+| P42-01 to P42-39 | M4a "propositions rather than theorems"; M2a ceiling = electronic health data at every site, §6.2 consistent with Rival 6, §5.4 notes relocation; M5a ten-year floor as reported and illustrative everywhere; M5c Art 73(1)(e) verbatim (OJ wording recorded in DECISION_RECORD at primary source, matching D7.4's quotation p. 51); M1a SPE payload fields and D7.4 OPR-17; M1b Semantics I without the current-practice claim | Inspector: one hedge declared (the removed practice claim) |
+| P43-01 to P43-31 | Cuts and pointers: §1.1 pilot detail to §2.2; §1.4 overreach; §2.3 to §4.6; §2.4 ZK paragraphs compressed; §2.7 OECD and seafarer material cut (Norwegian Maritime Authority reference removed); process residue (§2.1.4, §2.9, §5.7, §6.8, Declaration); §4.9 duplicate; Ch5 header discloses the 28 Sept full-cohort run; §5.2 stale 35 bytes and Synthea payloads as stand-ins (M1c); §5.3/§5.4 rate interpretation removed (M4d); §6.9 MiFID duplicate; Appendix C C.1a folded, §3.9 reference, header | Inspector: each loss checked and declared in the patch (details stated elsewhere, or cut material) |
+| P44-01 to P44-15 | Checker header without patch IDs or review references (three copies); FLOOR_XBORDER comment illustrative; Appendix A date, module and component counts, A.16 claim, A.17 intro; README_repo Propositions, 533 lines, current commitment, 43 bytes | Checker output byte-identical to the recorded run |
+| P44b-B01 to P44b-B13 | Appendix A.10 listing synced to the checker | appendix_sync 13/13 |
+| P45-01 to P45-09 | Remaining meta phrases (§1.5, §2.1.7, §4.1, §6.8); §4.6 and §4.10 headings name Propositions 3 and 4, TOC follows | — |
+| P46-01 to P46-03 | Synthea limitations stated once (§3.5); §5.8 and §6.7 point there | Inspector: losses declared |
+| B-41 | Tracker updated: 33 closed, 3 partial (M4d length, M5c language version, M6a SPUHiN row by row), 4 open (Tiger's) | Body text 44,690 words (45,605 before the round) |
+
 ## 4 October 2026 — Word build and tracked-changes comparison (B-39, B-40)
 
 | ID | Change | Verification |

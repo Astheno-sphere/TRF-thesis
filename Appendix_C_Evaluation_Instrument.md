@@ -1,6 +1,6 @@
 # Appendix C. Expert Evaluation Instrument
 
-*(v1, 18 September 2026. The instrument specified here was designed following supervisory feedback of September 2026 and constitutes the evaluation design for the next iteration of the design science cycle. Its execution status is stated in Chapter 3, Section 3.8. **This is a design, not a fielded instrument. Section C.1a states what is expected to change once it meets real respondents.**)*
+*(v1.1, 18 September 2026; item A1 reworded October 2026. The instrument specified here was designed following supervisory feedback of September 2026 and constitutes the evaluation design for the next iteration of the design science cycle. Its execution status is stated in Chapter 3, Section 3.8. **This is a design, not a fielded instrument. Section C.1 states what is expected to change once it meets real respondents.**)*
 
 ---
 
@@ -14,7 +14,7 @@ The instrument is specified in sufficient detail to be executed without further 
 
 ---
 
-## C.1a Status of this instrument, and what is expected to change
+### Status of this instrument, and what is expected to change
 
 An instrument that has never been administered is a hypothesis about what respondents will
 understand, not a measurement device. This one has been reviewed by a supervisor and
@@ -214,7 +214,7 @@ Execution would process personal data about identifiable professionals and would
 
 The arrangements would be: written information and consent obtained before each session; audio recording only with consent, transcribed and the recording deleted on transcription; participants identified in reporting by perspective and number only (P1 through P8), with institutions named only where a participant expressly agrees; no special-category data collected; storage on institutional infrastructure for the duration of the project and deletion on completion; and withdrawal permitted at any point up to the completion of analysis.
 
-Executing this instrument would change the thesis's ethics position materially. Chapter 1, Section 1.5, Chapter 3, Section 3.8, and the Declaration of Originality each state that this research involves no human participants and required no ethical approval. Those statements are accurate for the thesis as submitted and would require revision if the instrument were executed. This appendix does not revise them.
+Executing this instrument would change the thesis's ethics position materially. Chapter 1, Section 1.5, Chapter 3, Section 3.9, and the Declaration of Originality each state that this research involves no human participants and required no ethical approval. Those statements are accurate for the thesis as submitted and would require revision if the instrument were executed. This appendix does not revise them.
 
 ---
 

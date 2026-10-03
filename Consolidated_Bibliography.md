@@ -137,8 +137,6 @@ Natsiavas, P., Mazzeo, G., Faiella, G., Campegiani, P., Dumortier, J., Stan, O.,
 
 Norsk forening for allmennmedisin. (2025, 3 October). *Høring — Oversikt over kriterier til sikre analyserom for sekundærbruk av helsedata i Norge — i forberedelse til kommende krav i EHDS* [Consultation response]. Den norske legeforening. https://www.legeforeningen.no/contentassets/6d966320995146c791837a915f6fc11b/hoering-oversikt-over-kriterier-til-sikre-analyserom-for-sekundarbruk-av-helsedata-i-norge-i-forberedelse-til-kommende-krav-i-ehds-3.10.2025.pdf `[Ch2]`
 
-Norwegian Maritime Authority. (2023). *Amendments to the Health Regulations reflecting the GDPR* (Circular RSR 2-2023, 2 June 2023, amending the Regulations of 5 June 2014 No. 805 on the medical examination of employees on Norwegian ships and mobile offshore units). Sjøfartsdirektoratet. https://www.sdir.no/en/regelverk/circulars/amendments-to-the-health-regulations-reflecting-the-gdpr/ `[Ch2]`
-
 Norwegian Trusted Research Environments. (n.d.). *Norwegian Trusted Research Environments (NORTRE)* [A collaboration between TSD/UiO, SAFE/UiB and HUNT Cloud/NTNU]. Retrieved 28 September 2026, from https://nortre.no/ `[Ch1] [Ch2]`
 
 Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45–77. https://doi.org/10.2753/MIS0742-1222240302 `[Ch1] [Ch3]`
