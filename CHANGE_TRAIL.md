@@ -6,6 +6,7 @@
 |---|---|---|
 | P03-01, P03-02 | §2.2: "designate a National Digital Health Authority by June 2025 … certify their systems … by January 2026 (Ernst & Young, 2025)" replaced by Art 19(1) (designate and inform the Commission by 26 March 2027) and the Art 105(1)(a) schedule (EHR-system requirements from 26 March 2029 for the first priority categories), cited to the Regulation. Ernst & Young entry removed | Arts 19(1) and 105 retrieved 3 Oct (streamlex mirror of OJ L 2025/327). patch.py: declared losses (EY citation; 2025, 2026 from the wrong dates); gained citation to the Regulation and Arts 19(1), 105. Bibliography 67 → 66 entries, all with locators |
 | B-14 | `assemble.py` now regenerates `Consolidated_Bibliography.Rmd` from the same body. The hand-kept twin had drifted: it lacked the Politiregisterloven (2010) entry. `trail_check.py` check 6 now also compares the `.Rmd`. Guard "EY" narrowed to the in-text citation and the reference entry (it had also matched Appendix B's locator log, which is history) | `.Rmd` body identical to `.md` after rebuild; Politiregisterloven present |
+| B-15 | P03 was committed (`git log`: "P03: EHDS dates…") while `trail_check.py` check 3 failed: the checker did not parse a trail cell listing two IDs ("P03-01, P03-02"). The row was right, the parser was narrow. Parser fixed; `handoff_tools/commit.sh` added, which refuses to commit on any FAIL. Rule: commit only through `commit.sh` | Re-run after the fix: check 3 PASS |
 
 ## 3 October 2026 — supervisor review, patch P02 (salt and ciphertext)
 
