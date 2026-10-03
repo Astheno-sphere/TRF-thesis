@@ -143,7 +143,7 @@ The run is reproduced with `python3 trf_checker.py --delta-witness`.
 
 ## 5.6 Results under Semantics II
 
-The invalidation trajectory from the constructive proof of Theorem 2 was then applied to every record: destroy the payload key at $t^{I} = \min(t_r + \delta,\; t_\pi + 6)$, append an invalidation entry recording the month, the legal ground, and the authorising actor, and retain metadata, commitment, and salt unchanged.
+The invalidation trajectory from the constructive proof of Theorem 2 was then applied to every record: destroy the payload key at $t^{I} = \min(t_r + \delta,\; t_\pi + 6)$, destroy the salt with it, append an invalidation entry recording the month, the legal ground, and the authorising actor, and retain metadata and commitment unchanged.
 
 *Table 5.3. Results under Semantics II (same 200 records, same seed)*
 

@@ -17,8 +17,8 @@ passage by passage when the patch for that passage is written.
 | M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | OPEN |  | D-16. Art 2(2)(a),(c): "electronic health data" = data concerning health. Proposed: Cor 1.2 conditional on log granularity (patient-record logs in), dataset-level logs out |
 | M2b | Rival 6: move the logs out of the SPE at permit closure | OPEN |  | D-16. Proposed answer: relocation satisfies a location-anchored ceiling but not a right that follows the data (Proposition L) |
 | M2c | Rewrite §6.1's opening; lead with the robust result | OPEN |  | After M2a |
-| M3a | Salt: text, code and change record agree | OPEN |  | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
-| M3b | Ciphertext: delete at invalidation or justify | OPEN |  | D-17: delete ciphertext at invalidation. Text now; code in the code wave |
+| M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
+| M3b | Ciphertext: delete at invalidation or justify | PARTIAL | P02 | D-17. Text done (P02). Code still keeps the payload after invalidation: code wave |
 | M3c | Remove the dead salt branch; seeded generator or `--reproducible` | OPEN |  | Code change; recorded runs must still match or be re-recorded with a logged reason |
 | M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | OPEN |  | D-18 |
 | M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | OPEN |  | D-18 |

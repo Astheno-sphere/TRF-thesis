@@ -43,3 +43,11 @@
 2026-10-03 00:19 | P01_minor_batch.py | P01-14 | Chapter6_Discussion_v1.md | 683c99d03623 -> cd67df56b103 | MIN-11: supervisor's suggested wording 'witnesses in the model'
 2026-10-03 00:19 | P01_minor_batch.py | P01-15 | Chapter1_Introduction_v2.md | 058761032204 -> 1870f6938506 | MIN-12: removed the reference to an addendum examiners will not see; the scope statement stays
 2026-10-03 00:19 | P01_minor_batch.py | P01-16 | Chapter3_Methodology_v1.md | 98a20e582088 -> 9a69873c2034 | MIN-12: same addendum, second mention
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-01 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a, M3b: text contradicted the code and D-15; ciphertext had no stated justification (D-17)
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-02 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a: salt now goes at t^I; a record with no erasure request and no ceiling still holds key, salt and ciphertext at floor expiry, so the terminal transition must remove them
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-03 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a, M3b: residue list follows the decided design
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-04 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a: the guess-confirmation oracle the supervisor identified is closed by destroying the salt
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-05 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a, M3b: the pseudonymisation finding now rests on the metadata, which is what remains
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-06 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3b: the supervisor noted the risk called 'unavoidable' is removable for the retained copy; what remains is stated
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-07 | Chapter4_TRF_Model_v1.md | 6a6d4b088b23 -> b8c72a3689d4 | M3a, M3b: chapter summary follows the design
+2026-10-03 00:22 | P02_salt_ciphertext.py | P02-08 | Chapter5_Demonstration_v1.md | cd0cbb51845d -> 856a60416066 | M3a: §5.6 now describes what the code does (rec.salt = None)
