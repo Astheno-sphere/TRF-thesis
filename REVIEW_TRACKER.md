@@ -20,8 +20,8 @@ passage by passage when the patch for that passage is written.
 | M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
 | M3b | Ciphertext: delete at invalidation or justify | CLOSED | P02, P12 | Text (P02) and code (P12): ciphertext deleted at invalidation |
 | M3c | Remove the dead salt branch; seeded generator or `--reproducible` | CLOSED | P12 | make_salt() and --random-salts; dead branch gone (guard 1 → 0) |
-| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | OPEN |  | D-18 |
-| M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | OPEN |  | D-18 |
+| M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | CLOSED | P15, P16, P17, P18 | Propositions 1–4 throughout text, code and repository; §4.7 note moves the weight to §4.2 and Propositions 3–4 |
+| M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | CLOSED | P15 | Proposition 3 in Ch4 §4.6, stated precisely (collision needs L ≤ F; anchor decides visibility); §6.9a corrected |
 | M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | CLOSED | P12, P14 | Merkle log (RFC 6962), inclusion proofs in V_II, two tamper tests fail V_II; reported in §5.6 |
 | M4d | Shorten Ch5; violation rates are generator artefacts | OPEN |  | After M4c |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | CLOSED | P09 | Supervisor's fallback taken: F = 120 illustrative; primary agreement cited for what it says (no period). Reopen if the eHDSI annex is obtained |
@@ -49,7 +49,7 @@ passage by passage when the patch for that passage is written.
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
 | PRES-1 | Cut defensive meta-commentary by at least half | OPEN |  | Guard counts 19 with a narrow pattern; he counts ~50. Widen the detector before claiming half |
-| PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work; the tools cannot close this |
+| PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work (TIGER_TASKS T-7) |
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | OPEN |  |  |
 | PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | OPEN |  |  |
 | PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |

@@ -166,3 +166,96 @@
 2026-10-03 15:20 | P14_ch5_codewave.py | P14-12 | code_artefacts/README_Appendix_A.md | 572a07b11098 -> c5dc277b74b7 | MIN-07
 2026-10-03 15:20 | P14_ch5_codewave.py | P14-13 | code_artefacts/README_Appendix_A.md | 572a07b11098 -> c5dc277b74b7 | MIN-07
 2026-10-03 15:20 | P14_ch5_codewave.py | P14-14 | code_artefacts/README_Appendix_A.md | 572a07b11098 -> c5dc277b74b7 | MIN-07
+2026-10-03 16:54 | P15_anchoring_proposition.py | P15-01 | Chapter4_TRF_Model_v1.md | 64c86d2a0793 -> 43c098c4f01d | M4b: anchoring result promoted to Ch4 as Proposition 3, stated precisely (collision needs L <= F under any anchor)
+2026-10-03 16:54 | P15_anchoring_proposition.py | P15-02 | Chapter4_TRF_Model_v1.md | 64c86d2a0793 -> 43c098c4f01d | M4a: weight moved to the necessity analysis and Propositions 3 and 4
+2026-10-03 16:54 | P15_anchoring_proposition.py | P15-03 | Chapter6_Discussion_v1.md | 533d689962b4 -> 94f5803e80f9 | M4b: same-anchor periods collide if the ceiling is not longer (Proposition 3)
+2026-10-03 16:54 | P15_anchoring_proposition.py | P15-04 | Chapter6_Discussion_v1.md | 533d689962b4 -> 94f5803e80f9 | M4b: 'rather than numerical' overstated; Proposition 3 shows both matter
+2026-10-03 16:54 | P15_anchoring_proposition.py | P15-05 | Chapter6_Discussion_v1.md | 533d689962b4 -> 94f5803e80f9 | M4b: cross-reference to the promoted result
+2026-10-03 16:54 | P15_anchoring_proposition.py | P15-06 | Chapter6_Discussion_v1.md | 533d689962b4 -> 94f5803e80f9 | M4b: same correction
+2026-10-03 16:54 | P16_rename_propositions.py | P16-FrontMat-01 | Front_Matter_v1.md | e5a87b0aa247 -> 97178131493e | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-FrontMat-02 | Front_Matter_v1.md | e5a87b0aa247 -> 97178131493e | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-FrontMat-03 | Front_Matter_v1.md | e5a87b0aa247 -> 97178131493e | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter1-01 | Chapter1_Introduction_v2.md | 437363c0af1b -> f37488f80a08 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter1-02 | Chapter1_Introduction_v2.md | 437363c0af1b -> f37488f80a08 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter1-03 | Chapter1_Introduction_v2.md | 437363c0af1b -> f37488f80a08 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter1-04 | Chapter1_Introduction_v2.md | 437363c0af1b -> f37488f80a08 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-01 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-02 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-03 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-04 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-05 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-06 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-07 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-08 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-09 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter3-10 | Chapter3_Methodology_v1.md | 369e36415770 -> 0fef8b15ed8c | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-01 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-02 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-03 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-04 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-05 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-06 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-07 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-08 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-09 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-10 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-11 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-12 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-13 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-14 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-15 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-16 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-17 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-18 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-19 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-20 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-21 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter4-22 | Chapter4_TRF_Model_v1.md | 43c098c4f01d -> 948871a55957 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-01 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-02 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-03 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-04 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-05 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-06 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-07 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-08 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-09 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-10 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-11 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter5-12 | Chapter5_Demonstration_v1.md | 1e5f95286db3 -> 71b93b688622 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter6-01 | Chapter6_Discussion_v1.md | 94f5803e80f9 -> 372e1b5bb5bf | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter6-02 | Chapter6_Discussion_v1.md | 94f5803e80f9 -> 372e1b5bb5bf | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter6-03 | Chapter6_Discussion_v1.md | 94f5803e80f9 -> 372e1b5bb5bf | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter6-04 | Chapter6_Discussion_v1.md | 94f5803e80f9 -> 372e1b5bb5bf | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter6-05 | Chapter6_Discussion_v1.md | 94f5803e80f9 -> 372e1b5bb5bf | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter7-01 | Chapter7_Conclusion_v1.md | dd98dc0f6b7d -> 749682dd93b5 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P16_rename_propositions.py | P16-Chapter7-02 | Chapter7_Conclusion_v1.md | dd98dc0f6b7d -> 749682dd93b5 | M4a: theorems renamed propositions
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-trf-01 | demo_app/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-trf-02 | demo_app/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-trf-03 | demo_app/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-trf-04 | demo_app/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-trf-05 | demo_app/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-trf-06 | demo_app/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-repr-trf-01 | repro_package/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-repr-trf-02 | repro_package/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-repr-trf-03 | repro_package/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-repr-trf-04 | repro_package/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-repr-trf-05 | repro_package/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-repr-trf-06 | repro_package/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-code-trf-01 | code_artefacts/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-code-trf-02 | code_artefacts/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-code-trf-03 | code_artefacts/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-code-trf-04 | code_artefacts/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-code-trf-05 | code_artefacts/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-code-trf-06 | code_artefacts/trf_checker.py | 39ce93590969 -> cf1822dffd35 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-app-01 | demo_app/app.py | 81ddca087c18 -> dd801d14a6c5 | M4a: theorems renamed propositions in code
+2026-10-03 16:54 | P17_rename_code.py | P17-demo-app-02 | demo_app/app.py | 81ddca087c18 -> dd801d14a6c5 | M4a: theorems renamed propositions in code
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-B01 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | Appendix A A.8 synced to demo_app/trf_checker.py
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-B05 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | Appendix A A.9d synced to demo_app/app.py
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-B06 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | Appendix A A.10 synced to repro_package/results/trf_output.txt
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-B09 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | Appendix A A.12 synced to repro_package/results/expected_delta_witness_output.txt
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-01 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-02 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-03 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-04 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions
+2026-10-03 16:55 | P18_appendixA_propositions.py | P18-05 | code_artefacts/README_Appendix_A.md | c5dc277b74b7 -> a15c7e1a78d1 | M4a: theorems renamed propositions

@@ -1,0 +1,466 @@
+[
+ {
+  "id": "P16-FrontMat-01",
+  "file": "Front_Matter_v1.md",
+  "old": "The thesis develops the Tri-Lateral Retention Feasibility (TRF) Model, a constraint-satisfaction formulation in which the semantics of audit verifiability is an explicit parameter. Under plaintext-verifiability semantics the constraints are infeasible whenever an erasure or deletion deadline falls inside a retention window (Theorem 1). Under accountability-preserving semantics they are jointly satisfiable for every arrival pattern of erasure requests and permit expiries and for every retention floor (Theorem 2). The witnessing mechanism, Crypto-Erasure by Invalidation, destroys a per-record payload key while retaining event metadata, a hiding commitment and a logged invalidation entry.",
+  "new": "The thesis develops the Tri-Lateral Retention Feasibility (TRF) Model, a constraint-satisfaction formulation in which the semantics of audit verifiability is an explicit parameter. Under plaintext-verifiability semantics the constraints are infeasible whenever an erasure or deletion deadline falls inside a retention window (Proposition 1). Under accountability-preserving semantics they are jointly satisfiable for every arrival pattern of erasure requests and permit expiries and for every retention floor (Proposition 2). The witnessing mechanism, Crypto-Erasure by Invalidation, destroys a per-record payload key while retaining event metadata, a hiding commitment and a logged invalidation entry.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-FrontMat-02",
+  "file": "Front_Matter_v1.md",
+  "old": "*2. Two feasibility results with an executable witness.* Theorem 1 establishes infeasibility under the semantics implicit in current audit practice. Theorem 2 establishes satisfiability under an alternative and exhibits the trajectory achieving it. Both are proved informally and demonstrated executably, with an independent exhaustive cross-check.",
+  "new": "*2. Two feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the semantics implicit in current audit practice. Proposition 2 establishes satisfiability under an alternative and exhibits the trajectory achieving it. Both are proved informally and demonstrated executably, with an independent exhaustive cross-check.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-FrontMat-03",
+  "file": "Front_Matter_v1.md",
+  "old": "4. *The Tri-Lateral Retention Feasibility Model and the Crypto-Erasure by Invalidation Mechanism*: necessity analysis; model and notation; constraints; two semantics; Theorem 1 and corollaries; Theorem 2; mechanism specification; residue analysis; rival designs; Norwegian integration",
+  "new": "4. *The Tri-Lateral Retention Feasibility Model and the Crypto-Erasure by Invalidation Mechanism*: necessity analysis; model and notation; constraints; two semantics; Proposition 1 and corollaries; Proposition 2; mechanism specification; residue analysis; rival designs; Norwegian integration",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter1-01",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "SQ1 is addressed through Chapter 2's literature analysis and the formal characterisation in Chapter 4. SQ2 is addressed through the TRF Model's feasibility theorems, the mechanism specification in Chapter 4, and the executable demonstration in Chapter 5. SQ3 is addressed through Chapter 4's integration analysis and Chapter 6's discussion of implications for Norwegian implementing actors.",
+  "new": "SQ1 is addressed through Chapter 2's literature analysis and the formal characterisation in Chapter 4. SQ2 is addressed through the TRF Model's feasibility propositions, the mechanism specification in Chapter 4, and the executable demonstration in Chapter 5. SQ3 is addressed through Chapter 4's integration analysis and Chapter 6's discussion of implications for Norwegian implementing actors.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter1-02",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "The thesis explicitly does *not* include the following. First, it does not build a working zero-knowledge SNARK circuit; no component of the mechanism requires one, and the cryptographic machinery that an earlier design iteration envisaged is treated as future work. Second, it does not deploy to a real National Contact Point for eHealth; integration with Norwegian NCPeH operations remains an architectural mapping rather than a runtime test. Third, it does not conduct human-subject interviews, and no qualitative empirical data are reported. Fourth, it does not measure hardware energy consumption, and no sustainability metrics are claimed beyond conceptual framing. Its place in a programme in Sustainable Energy Logistics is therefore in the logistics of information rather than of energy: it treats a regulated cross-border record as a consignment whose custody, retention and destruction are governed by the regimes it crosses. Fifth, it does not use real patient data; all sandbox data are synthetic and contain no information about real individuals. Sixth, it does not implement healthcare-professional authentication or consent-propagation protocols beyond the invalidation mechanism itself. Seventh, it does not provide machine-checked formal proofs; the two feasibility theorems are proved informally at the level of rigour standard for design-science work, and their executable check in the sandbox is a demonstration, not a verification in the proof-assistant sense. Eighth, it does not prove destruction of cryptographic keys; the mechanism's guarantees are conditional on honest key destruction, a limitation examined in Chapter 6. Ninth, it does not model the national retention laws of receiving jurisdictions beyond the Union-level instruments; the time horizon of the model is parameterised so that jurisdiction-specific floors can be substituted. Tenth, it does not address non-EU and non-EEA jurisdictions.",
+  "new": "The thesis explicitly does *not* include the following. First, it does not build a working zero-knowledge SNARK circuit; no component of the mechanism requires one, and the cryptographic machinery that an earlier design iteration envisaged is treated as future work. Second, it does not deploy to a real National Contact Point for eHealth; integration with Norwegian NCPeH operations remains an architectural mapping rather than a runtime test. Third, it does not conduct human-subject interviews, and no qualitative empirical data are reported. Fourth, it does not measure hardware energy consumption, and no sustainability metrics are claimed beyond conceptual framing. Its place in a programme in Sustainable Energy Logistics is therefore in the logistics of information rather than of energy: it treats a regulated cross-border record as a consignment whose custody, retention and destruction are governed by the regimes it crosses. Fifth, it does not use real patient data; all sandbox data are synthetic and contain no information about real individuals. Sixth, it does not implement healthcare-professional authentication or consent-propagation protocols beyond the invalidation mechanism itself. Seventh, it does not provide machine-checked formal proofs; the two feasibility propositions are proved informally at the level of rigour standard for design-science work, and their executable check in the sandbox is a demonstration, not a verification in the proof-assistant sense. Eighth, it does not prove destruction of cryptographic keys; the mechanism's guarantees are conditional on honest key destruction, a limitation examined in Chapter 6. Ninth, it does not model the national retention laws of receiving jurisdictions beyond the Union-level instruments; the time horizon of the model is parameterised so that jurisdiction-specific floors can be substituted. Tenth, it does not address non-EU and non-EEA jurisdictions.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter1-03",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "The demonstration is conducted in a controlled sandbox using synthetic data generated by Synthea, an open-source generator of synthetic patient records compliant with HL7 FHIR R4, the version reflected in the current Norwegian basisprofiler maintained by HL7 Norway (HL7 Norway, 2025). The sandbox has two layers: a feasibility checker that walks synthetic audit records through randomised arrivals of erasure requests and permit expiries, verifying that the constraint system fails under plaintext-verifiability semantics and holds under invalidation semantics; and a realism layer feeding Synthea-generated records into the checker. The evaluation strategy is analytical: internal validity through the logical consistency of the model and the coherence of mechanism and theorems; external validity through compatibility with verified existing infrastructure; reliability through deterministic execution with fixed random seeds. No empirical performance benchmarks are reported. The full methodological treatment is provided in Chapter 3.",
+  "new": "The demonstration is conducted in a controlled sandbox using synthetic data generated by Synthea, an open-source generator of synthetic patient records compliant with HL7 FHIR R4, the version reflected in the current Norwegian basisprofiler maintained by HL7 Norway (HL7 Norway, 2025). The sandbox has two layers: a feasibility checker that walks synthetic audit records through randomised arrivals of erasure requests and permit expiries, verifying that the constraint system fails under plaintext-verifiability semantics and holds under invalidation semantics; and a realism layer feeding Synthea-generated records into the checker. The evaluation strategy is analytical: internal validity through the logical consistency of the model and the coherence of mechanism and propositions; external validity through compatibility with verified existing infrastructure; reliability through deterministic execution with fixed random seeds. No empirical performance benchmarks are reported. The full methodological treatment is provided in Chapter 3.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter1-04",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "*Chapter 4* develops the TRF Model, covering its sets, decomposition, constraints, the two verifiability semantics, and the infeasibility and feasibility theorems. It then specifies the Crypto-Erasure by Invalidation mechanism derived from it, including the invalidation registry, audit-trail behaviour, a comparison against rival designs, and integration analysis with Norwegian NCPeH and NORTRE infrastructure.",
+  "new": "*Chapter 4* develops the TRF Model, covering its sets, decomposition, constraints, the two verifiability semantics, and the infeasibility and feasibility propositions. It then specifies the Crypto-Erasure by Invalidation mechanism derived from it, including the invalidation registry, audit-trail behaviour, a comparison against rival designs, and integration analysis with Norwegian NCPeH and NORTRE infrastructure.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-01",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "Third, the machinery must be proportionate. This thesis deliberately employs a lighter formalism than the Metric First-Order Temporal Logic and Satisfiability Modulo Theories apparatus of Feng et al. (2023): a feasibility formulation over discretised time with one binary accessibility variable per audit record, in the constraint-modelling style of operations research. The justification is threefold. The conflict turns on a single semantic question, what \"verifiable\" means for an audit record, and a formulation that isolates that question communicates it more clearly than a general temporal-logic encoding. The lighter formulation is defensible at Master's level by an author trained in logistics modelling rather than formal methods, which matters for the integrity of a thesis that must be owned and defended by its author. And the formulation is executable in ordinary Python, which makes the theorems checkable by a reader with no proof-assistant background. The cost of this choice is expressive power: the model cannot represent obligations whose structure exceeds the chosen formalism, a limitation recorded in Section 3.7 and revisited in Chapter 6.",
+  "new": "Third, the machinery must be proportionate. This thesis deliberately employs a lighter formalism than the Metric First-Order Temporal Logic and Satisfiability Modulo Theories apparatus of Feng et al. (2023): a feasibility formulation over discretised time with one binary accessibility variable per audit record, in the constraint-modelling style of operations research. The justification is threefold. The conflict turns on a single semantic question, what \"verifiable\" means for an audit record, and a formulation that isolates that question communicates it more clearly than a general temporal-logic encoding. The lighter formulation is defensible at Master's level by an author trained in logistics modelling rather than formal methods, which matters for the integrity of a thesis that must be owned and defended by its author. And the formulation is executable in ordinary Python, which makes the propositions checkable by a reader with no proof-assistant background. The cost of this choice is expressive power: the model cannot represent obligations whose structure exceeds the chosen formalism, a limitation recorded in Section 3.7 and revisited in Chapter 6.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-02",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "This section states how the TRF Model is constructed. The model itself, with its full notation, theorems, and proofs, is developed in Chapter 4; what follows is the method by which it is built and the standard to which it is held.",
+  "new": "This section states how the TRF Model is constructed. The model itself, with its full notation, propositions, and proofs, is developed in Chapter 4; what follows is the method by which it is built and the standard to which it is held.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-03",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "*Step 4: Establishing the two results.* Theorem 1 states that under plaintext-verifiability semantics the constraint system is infeasible whenever an erasure request or a permit expiry falls within a record's retention window, which, over a ten-year window, is the ordinary case rather than the exception. The second floor instance makes the result sharper rather than weaker: where a one-year log-retention floor operates against a six-month deletion ceiling on the same environment, infeasibility under plaintext semantics arises from the two retention provisions alone, with no erasure request required to trigger it. Theorem 2 states that under accountability-preservation semantics the system is jointly satisfiable for every arrival pattern of erasure requests and permit expiries, and exhibits the mechanism that achieves this as the constructive witness. Both are argued informally at the level of rigour standard for design-science work rather than machine-checked; Section 3.7 records what that means for the strength of the claim.",
+  "new": "*Step 4: Establishing the two results.* Proposition 1 states that under plaintext-verifiability semantics the constraint system is infeasible whenever an erasure request or a permit expiry falls within a record's retention window, which, over a ten-year window, is the ordinary case rather than the exception. The second floor instance makes the result sharper rather than weaker: where a one-year log-retention floor operates against a six-month deletion ceiling on the same environment, infeasibility under plaintext semantics arises from the two retention provisions alone, with no erasure request required to trigger it. Proposition 2 states that under accountability-preservation semantics the system is jointly satisfiable for every arrival pattern of erasure requests and permit expiries, and exhibits the mechanism that achieves this as the constructive witness. Both are argued informally at the level of rigour standard for design-science work rather than machine-checked; Section 3.7 records what that means for the strength of the claim.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-04",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "*Step 5: Executable checking.* Because the formulation is deliberately light, both results can be checked by direct execution rather than only by argument. The checker described in Section 3.6 walks synthetic records through randomised arrivals of erasure requests and permit expiries and evaluates the constraints under each semantics in turn, producing violations under the first and none under the second. This does not constitute formal verification in the proof-assistant sense, and is not presented as such; it is a demonstration that the theorems hold on the instances examined, and its value is that it makes the argument inspectable by a reader who does not wish to take the proofs on trust.",
+  "new": "*Step 5: Executable checking.* Because the formulation is deliberately light, both results can be checked by direct execution rather than only by argument. The checker described in Section 3.6 walks synthetic records through randomised arrivals of erasure requests and permit expiries and evaluates the constraints under each semantics in turn, producing violations under the first and none under the second. This does not constitute formal verification in the proof-assistant sense, and is not presented as such; it is a demonstration that the propositions hold on the instances examined, and its value is that it makes the argument inspectable by a reader who does not wish to take the proofs on trust.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-05",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The *feasibility checker* is the primary layer and the executable witness of the theorems. It constructs audit records as the tuples defined in Chapter 4, Section 4.3, in two classes: cross-border audit records carrying the ten-year floor, and Secure Processing Environment access-log records carrying the one-year floor and the six-month ceiling. It then generates randomised arrivals of erasure requests and permit expiries across a monthly time horizon, and evaluates the three constraints under each semantics in turn, reporting violations. The two classes differ only in their floor parameter and in whether the ceiling applies, which is what makes them instances of one model rather than two models. The checker is kept small enough to be read and checked in full; Table 5.0a gives its size. A reader who doubts Theorem 1 can find in its output the specific record, month, and constraint at which plaintext semantics fails; a reader who doubts Theorem 2 can confirm that no violation arises under invalidation semantics across the generated instances.",
+  "new": "The *feasibility checker* is the primary layer and the executable witness of the propositions. It constructs audit records as the tuples defined in Chapter 4, Section 4.3, in two classes: cross-border audit records carrying the ten-year floor, and Secure Processing Environment access-log records carrying the one-year floor and the six-month ceiling. It then generates randomised arrivals of erasure requests and permit expiries across a monthly time horizon, and evaluates the three constraints under each semantics in turn, reporting violations. The two classes differ only in their floor parameter and in whether the ceiling applies, which is what makes them instances of one model rather than two models. The checker is kept small enough to be read and checked in full; Table 5.0a gives its size. A reader who doubts Proposition 1 can find in its output the specific record, month, and constraint at which plaintext semantics fails; a reader who doubts Proposition 2 can confirm that no violation arises under invalidation semantics across the generated instances.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-06",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The *realism layer* wraps the checker so that its inputs derive from Synthea-generated FHIR bundles rather than from abstract record identifiers, computing commitments over the actual payloads and constructing metadata from the actual encounter events. It is smaller than the checker (Table 5.0a) and is not load-bearing: if the wrapper were removed, the theorems and their executable check would stand unchanged. Its function is to demonstrate that the model's abstractions correspond to the structure of real health-data artefacts rather than only to a convenient idealisation, and to test, by execution rather than assertion, whether any reported result depends on payload provenance.",
+  "new": "The *realism layer* wraps the checker so that its inputs derive from Synthea-generated FHIR bundles rather than from abstract record identifiers, computing commitments over the actual payloads and constructing metadata from the actual encounter events. It is smaller than the checker (Table 5.0a) and is not load-bearing: if the wrapper were removed, the propositions and their executable check would stand unchanged. Its function is to demonstrate that the model's abstractions correspond to the structure of real health-data artefacts rather than only to a convenient idealisation, and to test, by execution rather than assertion, whether any reported result depends on payload provenance.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-07",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "*Internal validity* concerns whether the artefact is internally coherent: whether the constraints faithfully represent the instruments they translate, whether the two semantics are stated precisely enough to be distinguished, whether the theorems follow from the definitions, and whether the mechanism specified in Chapter 4 is in fact the witness the feasibility result requires. This is assessed by argument and by the executable check of Section 3.6, and it is the axis on which the contribution principally stands or falls.",
+  "new": "*Internal validity* concerns whether the artefact is internally coherent: whether the constraints faithfully represent the instruments they translate, whether the two semantics are stated precisely enough to be distinguished, whether the propositions follow from the definitions, and whether the mechanism specified in Chapter 4 is in fact the witness the feasibility result requires. This is assessed by argument and by the executable check of Section 3.6, and it is the axis on which the contribution principally stands or falls.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-08",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The first is the *proof standard*. The theorems are argued informally and checked executably on generated instances; they are not machine-checked, and the executable check confirms the results on the instances examined rather than establishing them for all instances. The claim made in this thesis is correspondingly bounded.",
+  "new": "The first is the *proof standard*. The propositions are argued informally and checked executably on generated instances; they are not machine-checked, and the executable check confirms the results on the instances examined rather than establishing them for all instances. The claim made in this thesis is correspondingly bounded.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-09",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The seventh is that the model treats every erasure request as valid. Article 17 is qualified: a controller may lawfully refuse a request where one of the exemptions in Article 17(3) applies, and in the audit setting many requests will be refused on exactly the Article 17(3)(b) ground the thesis discusses. A refused request imposes no erasure deadline, so the model, which treats every arriving request as triggering constraint C2, overstates how often erasure-driven collisions occur. It does not overstate whether they occur: Theorem 1 requires only that some valid request fall inside a retention window, and Corollary 1.2 involves no erasure request at all. The abstraction therefore inflates the frequencies reported in Chapter 5 and leaves the theorems untouched, which is why no result in this thesis is stated as a frequency.",
+  "new": "The seventh is that the model treats every erasure request as valid. Article 17 is qualified: a controller may lawfully refuse a request where one of the exemptions in Article 17(3) applies, and in the audit setting many requests will be refused on exactly the Article 17(3)(b) ground the thesis discusses. A refused request imposes no erasure deadline, so the model, which treats every arriving request as triggering constraint C2, overstates how often erasure-driven collisions occur. It does not overstate whether they occur: Proposition 1 requires only that some valid request fall inside a retention window, and Corollary 1.2 involves no erasure request at all. The abstraction therefore inflates the frequencies reported in Chapter 5 and leaves the propositions untouched, which is why no result in this thesis is stated as a frequency.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter3-10",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "The eighth is that the model represents a record's payload as a single unit that is either readable or not. Real systems often erase at field level, redacting some elements of a record while retaining others, and a single binary accessibility variable cannot represent that. The simplification is conservative with respect to the theorems, since a mechanism that satisfies the constraints for a whole payload satisfies them for any subset of it, but it means the model says nothing about partial erasure, and a mechanism designed for field-level redaction would need a richer state space than the one used here.",
+  "new": "The eighth is that the model represents a record's payload as a single unit that is either readable or not. Real systems often erase at field level, redacting some elements of a record while retaining others, and a single binary accessibility variable cannot represent that. The simplification is conservative with respect to the propositions, since a mechanism that satisfies the constraints for a whole payload satisfies them for any subset of it, but it means the model says nothing about partial erasure, and a mechanism designed for field-level redaction would need a richer state space than the one used here.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-01",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Theorem statements and proofs in this chapter are the author's own. Regulatory claims are anchored to the primary instruments cited at each point.*",
+  "new": "*Proposition statements and proofs in this chapter are the author's own. Regulatory claims are anchored to the primary instruments cited at each point.*",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-02",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Second, it constructs the Tri-Lateral Retention Feasibility (TRF) Model: a formal representation of the retention regimes as constraints over discretised time, together with two candidate semantics for what it means for an audit record to be verifiable. Within that model it states and proves two results. Theorem 1 establishes that under the semantics implicit in current practice the constraint system is infeasible. Theorem 2 establishes that under an alternative semantics the system is jointly satisfiable, and its proof is constructive: it exhibits the mechanism that achieves satisfaction.",
+  "new": "Second, it constructs the Tri-Lateral Retention Feasibility (TRF) Model: a formal representation of the retention regimes as constraints over discretised time, together with two candidate semantics for what it means for an audit record to be verifiable. Within that model it states and proves two results. Proposition 1 establishes that under the semantics implicit in current practice the constraint system is infeasible. Proposition 2 establishes that under an alternative semantics the system is jointly satisfiable, and its proof is constructive: it exhibits the mechanism that achieves satisfaction.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-03",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "A note on what the theorems are and are not. They are mathematical statements about a model, proved informally at the standard of rigour normal for design-science work, and checked executably in Chapter 5. They are not machine-checked, and they are not claims about the world independent of the model's fidelity. Their force depends entirely on whether the constraints faithfully translate the instruments, which is why Section 4.2 documents that translation claim by claim rather than asserting it.",
+  "new": "A note on what the propositions are and are not. They are mathematical statements about a model, proved informally at the standard of rigour normal for design-science work, and checked executably in Chapter 5. They are not machine-checked, and they are not claims about the world independent of the model's fidelity. Their force depends entirely on whether the constraints faithfully translate the instruments, which is why Section 4.2 documents that translation claim by claim rather than asserting it.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-04",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Let $V(a,t) \\in \\{0, 1\\}$ denote whether record $a$ *counts as verifiable* at month $t$. $V$ is not defined yet; defining it is the subject of Section 4.5, and the two competing definitions are what the theorems distinguish.",
+  "new": "Let $V(a,t) \\in \\{0, 1\\}$ denote whether record $a$ *counts as verifiable* at month $t$. $V$ is not defined yet; defining it is the subject of Section 4.5, and the two competing definitions are what the propositions distinguish.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-05",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The payload must cease to be accessible within the response period $\\delta$. Source: Article 17(1) GDPR, with $\\delta$ determined by Article 12(3) GDPR, which requires the controller to act without undue delay and in any event within one month of receipt, extendable by two further months for complex or numerous requests provided the data subject is informed within the first month. The model takes $\\delta = 1$ as the baseline and admits $\\delta = 3$ as the extended case; results are stated for arbitrary finite $\\delta$ and do not depend on which is chosen. Constraint C2 is triggered only by a *valid* request. The model does not represent the Article 17(3) exemptions under which a controller may lawfully refuse, and so treats every arriving request as valid; Chapter 3, Section 3.7 explains why this affects the frequencies reported in Chapter 5 but not the theorems.",
+  "new": "The payload must cease to be accessible within the response period $\\delta$. Source: Article 17(1) GDPR, with $\\delta$ determined by Article 12(3) GDPR, which requires the controller to act without undue delay and in any event within one month of receipt, extendable by two further months for complex or numerous requests provided the data subject is informed within the first month. The model takes $\\delta = 1$ as the baseline and admits $\\delta = 3$ as the extended case; results are stated for arbitrary finite $\\delta$ and do not depend on which is chosen. Constraint C2 is triggered only by a *valid* request. The model does not represent the Article 17(3) exemptions under which a controller may lawfully refuse, and so treats every arriving request as valid; Chapter 3, Section 3.7 explains why this affects the frequencies reported in Chapter 5 but not the propositions.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-06",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Neither semantics is stipulated by the instruments. Section 4.10 argues that Semantics II is the better reading of what the instruments require; the theorems below establish what follows from each.",
+  "new": "Neither semantics is stipulated by the instruments. Section 4.10 argues that Semantics II is the better reading of what the instruments require; the propositions below establish what follows from each.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-07",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "## 4.6 Theorem 1: Infeasibility under Plaintext Verifiability",
+  "new": "## 4.6 Proposition 1: Infeasibility under Plaintext Verifiability",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-08",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "> *Theorem 1.* Under Semantics I, the constraint system $\\{C1, C2, C3\\}$ is infeasible for any record $a$ such that",
+  "new": "> *Proposition 1.* Under Semantics I, the constraint system $\\{C1, C2, C3\\}$ is infeasible for any record $a$ such that",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-09",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "This thesis states Corollary 1.2 conditionally, for logs kept at patient-record granularity on the broad reading, and gives the grounds for both readings rather than choosing one by assertion. But the architecture of the results is deliberately such that little turns on which reading prevails, and that should be made explicit. Under the narrow reading, Corollary 1.2 lapses, and with it the claim that infeasibility arises without any data-subject action. Theorem 1 itself is untouched, because its first disjunct concerns erasure requests rather than permit expiry: identifiable access logs remain personal data whoever provided them, they remain within the scope of Article 17, and a request arriving inside the twelve-month floor collides with Article 73(1)(e) exactly as the cross-border case collides with the eHDSI floor. Corollary 1.1 is untouched entirely. Theorem 2, the mechanism, and the residue analysis are untouched, since they are indifferent to which instrument generates the deadline.",
+  "new": "This thesis states Corollary 1.2 conditionally, for logs kept at patient-record granularity on the broad reading, and gives the grounds for both readings rather than choosing one by assertion. But the architecture of the results is deliberately such that little turns on which reading prevails, and that should be made explicit. Under the narrow reading, Corollary 1.2 lapses, and with it the claim that infeasibility arises without any data-subject action. Proposition 1 itself is untouched, because its first disjunct concerns erasure requests rather than permit expiry: identifiable access logs remain personal data whoever provided them, they remain within the scope of Article 17, and a request arriving inside the twelve-month floor collides with Article 73(1)(e) exactly as the cross-border case collides with the eHDSI floor. Corollary 1.1 is untouched entirely. Proposition 2, the mechanism, and the residue analysis are untouched, since they are indifferent to which instrument generates the deadline.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-10",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The narrow reading, or logs kept at dataset granularity, therefore cost the thesis its sharpest instance and none of its results. The broad reading, for logs kept at patient-record granularity, adds a collision that requires no data subject to act, and Theorem 2 resolves it without choosing between the readings, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach (Section 4.7). Chapter 6 treats the resolution of this interpretive question as a matter for supervisory authority rather than for this author, alongside the authority question concerning verifiability itself.",
+  "new": "The narrow reading, or logs kept at dataset granularity, therefore cost the thesis its sharpest instance and none of its results. The broad reading, for logs kept at patient-record granularity, adds a collision that requires no data subject to act, and Proposition 2 resolves it without choosing between the readings, because the accessor fields that Article 73(1)(e) requires to be identifiable are not the subject fields that Article 68(12) may reach (Section 4.7). Chapter 6 treats the resolution of this interpretive question as a matter for supervisory authority rather than for this author, alongside the authority question concerning verifiability itself.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-11",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "## 4.7 Theorem 2: Feasibility under Accountability-Preserving Verifiability",
+  "new": "## 4.7 Proposition 2: Feasibility under Accountability-Preserving Verifiability",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-12",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "> *Theorem 2.* Under Semantics II, the constraint system $\\{C1, C2, C3\\}$ is jointly satisfiable for every record $a \\in A$, for every arrival pattern of erasure requests $\\{t_r(a)\\}$ and permit expiries $\\{t_\\pi(a)\\}$, and for every floor parameter $F(a) \\in \\mathbb{N}$.",
+  "new": "> *Proposition 2.* Under Semantics II, the constraint system $\\{C1, C2, C3\\}$ is jointly satisfiable for every record $a \\in A$, for every arrival pattern of erasure requests $\\{t_r(a)\\}$ and permit expiries $\\{t_\\pi(a)\\}$, and for every floor parameter $F(a) \\in \\mathbb{N}$.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-13",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*A note on what kind of result this is.* The results of this chapter are stated as propositions rather than theorems, because their proofs are short once the semantics are fixed. The weight of the argument lies elsewhere: in Section 4.2's necessity analysis, which justifies Semantics II, and in Propositions 3 and 4, which say where the conflict arises and where cryptography is necessary. An objection should be anticipated rather than left for a reader to formulate: that Theorem 2 proves little, because Semantics II was defined in full knowledge of the trajectory that satisfies it. The objection has force and the response is to concede its premise and deny its conclusion. The mathematical content of Theorem 2 is indeed modest: once verifiability is decoupled from payload accessibility, the existence of a satisfying trajectory is close to immediate, and the proof is a verification rather than a discovery. But the substantive claim of this chapter was never that a satisfying trajectory exists under some semantics; any number of semantics would admit one, including trivial semantics under which every record counts as verifiable always. The claim is that *this* semantics is a defensible reading of what the retention obligations require, grounded in the necessity boundary of Article 17(3)(b), the minimisation principle of Article 5(1)(c), and the accountability purpose the obligations serve. It is also the weakest departure from current practice that achieves feasibility, preserving every element of the audit record that the accountability purpose needs and discarding only what it does not. Theorem 1 carries the load that Theorem 2 does not: it establishes that *some* departure is unavoidable, because the status quo admits no solution at all. Theorem 2 then shows that a principled and minimal departure suffices. The legal defensibility of Semantics II is argued in Section 4.2 and its want of authority is confronted in Chapter 6, Section 6.2; it is not established by the theorem, and no reader should take the theorem as establishing it.",
+  "new": "*A note on what kind of result this is.* The results of this chapter are stated as propositions rather than propositions, because their proofs are short once the semantics are fixed. The weight of the argument lies elsewhere: in Section 4.2's necessity analysis, which justifies Semantics II, and in Propositions 3 and 4, which say where the conflict arises and where cryptography is necessary. An objection should be anticipated rather than left for a reader to formulate: that Proposition 2 proves little, because Semantics II was defined in full knowledge of the trajectory that satisfies it. The objection has force and the response is to concede its premise and deny its conclusion. The mathematical content of Proposition 2 is indeed modest: once verifiability is decoupled from payload accessibility, the existence of a satisfying trajectory is close to immediate, and the proof is a verification rather than a discovery. But the substantive claim of this chapter was never that a satisfying trajectory exists under some semantics; any number of semantics would admit one, including trivial semantics under which every record counts as verifiable always. The claim is that *this* semantics is a defensible reading of what the retention obligations require, grounded in the necessity boundary of Article 17(3)(b), the minimisation principle of Article 5(1)(c), and the accountability purpose the obligations serve. It is also the weakest departure from current practice that achieves feasibility, preserving every element of the audit record that the accountability purpose needs and discarding only what it does not. Proposition 1 carries the load that Proposition 2 does not: it establishes that *some* departure is unavoidable, because the status quo admits no solution at all. Proposition 2 then shows that a principled and minimal departure suffices. The legal defensibility of Semantics II is argued in Section 4.2 and its want of authority is confronted in Chapter 6, Section 6.2; it is not established by the proposition, and no reader should take the proposition as establishing it.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-14",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*What the theorem does and does not establish.* It establishes that the constraint system as formalised admits a solution, and exhibits one. It does not establish that the exhibited solution is lawful (that depends on whether the residue it leaves clears the legal threshold, which Section 4.9 addresses) nor that key destruction can be verified by an external party, which Section 4.10 concedes it cannot. The invalidation entry specified in Section 4.8 is an *attested* record of destruction, not a *proof* of it; the proof-of-secure-erasure and certified-deletion literatures reviewed in Chapter 2, Section 2.4 mark that boundary, and Chapter 6 treats it as the outer limit of the contribution. Theorem 2 is a mathematical result about a model, and its value is that it converts a question that has been debated qualitatively into one with a definite answer under stated assumptions.",
+  "new": "*What the proposition does and does not establish.* It establishes that the constraint system as formalised admits a solution, and exhibits one. It does not establish that the exhibited solution is lawful (that depends on whether the residue it leaves clears the legal threshold, which Section 4.9 addresses) nor that key destruction can be verified by an external party, which Section 4.10 concedes it cannot. The invalidation entry specified in Section 4.8 is an *attested* record of destruction, not a *proof* of it; the proof-of-secure-erasure and certified-deletion literatures reviewed in Chapter 2, Section 2.4 mark that boundary, and Chapter 6 treats it as the outer limit of the contribution. Proposition 2 is a mathematical result about a model, and its value is that it converts a question that has been debated qualitatively into one with a definite answer under stated assumptions.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-15",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The trajectory constructed in the proof of Theorem 2 is the specification of the mechanism. This section states it as an implementable design.",
+  "new": "The trajectory constructed in the proof of Proposition 2 is the specification of the mechanism. This section states it as an implementable design.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-16",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Theorem 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary.",
+  "new": "*Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Proposition 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-17",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Accumulator-based validity witnesses.* The set of currently valid (non-invalidated) records is maintained in a dynamic cryptographic accumulator supporting efficient revocation (Camenisch & Lysyanskaya, 2002). This provides an auditor with a succinct proof that a given record either is or is not currently valid, without the auditor enumerating the registry. The accumulator is an efficiency and verifiability layer, not a load-bearing component of the theorems: Theorem 2 holds if validity is established by linear scan of the registry, and the accumulator makes that check succinct. The accumulator is specified but not implemented in the artefact (Section 6.1). Dynamic accumulators of the Camenisch and Lysyanskaya type also require a trusted accumulator manager holding a trapdoor, which adds a trust assumption stated in Section 4.9.",
+  "new": "*Accumulator-based validity witnesses.* The set of currently valid (non-invalidated) records is maintained in a dynamic cryptographic accumulator supporting efficient revocation (Camenisch & Lysyanskaya, 2002). This provides an auditor with a succinct proof that a given record either is or is not currently valid, without the auditor enumerating the registry. The accumulator is an efficiency and verifiability layer, not a load-bearing component of the propositions: Proposition 2 holds if validity is established by linear scan of the registry, and the accumulator makes that check succinct. The accumulator is specified but not implemented in the artefact (Section 6.1). Dynamic accumulators of the Camenisch and Lysyanskaya type also require a trusted accumulator manager holding a trapdoor, which adds a trust assumption stated in Section 4.9.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-18",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Theorem 2 leaves a residue: $m(a), c(a), \\iota(a)$ and, where the optional layer is used, the accumulator state. The salt $r(a)$, the key $k(a)$ and the ciphertext of $p(a)$ are destroyed at invalidation (Section 4.8). Whether the mechanism is lawful depends on whether this residue sits on the correct side of the threshold at which data cease to be personal. This section performs that analysis, and it is included because Chapter 2 identified its absence as the fourth gap in the literature.",
+  "new": "Proposition 2 leaves a residue: $m(a), c(a), \\iota(a)$ and, where the optional layer is used, the accumulator state. The salt $r(a)$, the key $k(a)$ and the ciphertext of $p(a)$ are destroyed at invalidation (Section 4.8). Whether the mechanism is lawful depends on whether this residue sits on the correct side of the threshold at which data cease to be personal. This section performs that analysis, and it is included because Chapter 2 identified its absence as the fourth gap in the literature.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-19",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Rival 3: Minimise the payload at capture, so that nothing needs erasing.* Recording less at the outset is good practice and is compatible with this mechanism; where a deployment can minimise, the mechanism has less to invalidate. For cross-border records it does not dissolve the problem, because the payload is put there by the standard rather than by the deployment: the IHE patient-discovery transaction requires the audit message to carry the query segment, name and birth time included (Section 4.3). A deployment cannot minimise it away without departing from the profile. In the Secure Processing Environment case minimisation is a genuine alternative for the ceiling: a log kept at dataset granularity carries no subject fields and falls outside Article 68(12) on either reading, at the cost of patient-level traceability. The version of the specification inspected requires logs to identify the actor and states no requirement for patient-level logging (TEHDAS2, 2026). Minimisation does not remove from the scope of Article 17 the payload the standard requires, which is the case Proposition L below shows no relocation or reduction of the log can escape.",
+  "new": "*Rival 3: Minimise the payload at capture, so that nothing needs erasing.* Recording less at the outset is good practice and is compatible with this mechanism; where a deployment can minimise, the mechanism has less to invalidate. For cross-border records it does not dissolve the problem, because the payload is put there by the standard rather than by the deployment: the IHE patient-discovery transaction requires the audit message to carry the query segment, name and birth time included (Section 4.3). A deployment cannot minimise it away without departing from the profile. In the Secure Processing Environment case minimisation is a genuine alternative for the ceiling: a log kept at dataset granularity carries no subject fields and falls outside Article 68(12) on either reading, at the cost of patient-level traceability. The version of the specification inspected requires logs to identify the actor and states no requirement for patient-level logging (TEHDAS2, 2026). Minimisation does not remove from the scope of Article 17 the payload the standard requires, which is the case Proposition 4 below shows no relocation or reduction of the log can escape.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-20",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "> *Proposition L (location and right).* Let a ceiling be anchored to a location, requiring data to be absent from that location after a deadline, and let a right be anchored to the data subject, requiring data to be inaccessible to any controller holding them after a deadline. Under Semantics I, relocating a record before the ceiling's deadline satisfies the ceiling and the floor together, while the floor and the right remain infeasible for every record satisfying the first disjunct of Theorem 1.",
+  "new": "> *Proposition 4 (location and right).* Let a ceiling be anchored to a location, requiring data to be absent from that location after a deadline, and let a right be anchored to the data subject, requiring data to be inaccessible to any controller holding them after a deadline. Under Semantics I, relocating a record before the ceiling's deadline satisfies the ceiling and the floor together, while the floor and the right remain infeasible for every record satisfying the first disjunct of Proposition 1.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-21",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Proof.* The ceiling quantifies over the location: after relocation the record is not in it, so the ceiling holds, and on the rival's premise the floor is met at the new location. The right quantifies over the controller: Article 17(1) obliges the controller holding the data to erase them, and a controller receiving the record receives the obligation with it. Relocation therefore leaves C1 and C2 as they were, and the argument of Theorem 1 applies unchanged. ∎",
+  "new": "*Proof.* The ceiling quantifies over the location: after relocation the record is not in it, so the ceiling holds, and on the rival's premise the floor is met at the new location. The right quantifies over the controller: Article 17(1) obliges the controller holding the data to erase them, and a controller receiving the record receives the obligation with it. Relocation therefore leaves C1 and C2 as they were, and the argument of Proposition 1 applies unchanged. ∎",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter4-22",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Chapter 5 demonstrates both theorems executably, over synthetic records generated as described in Chapter 3.",
+  "new": "Chapter 5 demonstrates both propositions executably, over synthetic records generated as described in Chapter 3.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-01",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The chapter demonstrates that the two theorems of Chapter 4 hold on the instances examined. It does not verify them in the proof-assistant sense, it does not measure performance, and it does not deploy anything. Theorem 1 predicts that under plaintext-verifiability semantics the constraint system fails whenever an erasure deadline or a deletion-ceiling deadline falls inside a record's retention window. Theorem 2 predicts that under accountability-preserving semantics the invalidation trajectory satisfies all three constraints for every arrival pattern. The demonstration's job is to make both predictions checkable by execution rather than only by argument.",
+  "new": "The chapter demonstrates that the two propositions of Chapter 4 hold on the instances examined. It does not verify them in the proof-assistant sense, it does not measure performance, and it does not deploy anything. Proposition 1 predicts that under plaintext-verifiability semantics the constraint system fails whenever an erasure deadline or a deletion-ceiling deadline falls inside a record's retention window. Proposition 2 predicts that under accountability-preserving semantics the invalidation trajectory satisfies all three constraints for every arrival pattern. The demonstration's job is to make both predictions checkable by execution rather than only by argument.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-02",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "First, the violation rate is not one hundred per cent, and this is the correct behaviour rather than a weakness of the result. The rate itself should not be read as an estimate of real frequency, for a reason stated in Chapter 3, Section 3.7: the generator treats every erasure request as valid, whereas in practice many would be lawfully refused under Article 17(3), so real erasure-driven collision rates would be lower than those shown here. Theorem 1 is conditional: it states infeasibility for records whose erasure or ceiling deadline falls inside the retention window. A cross-border record for which no data subject ever exercises Article 17 has no second constraint to collide with C1, and is trivially feasible. Of the one hundred cross-border records, thirty-eight received an erasure request; of those, thirty-seven had a deadline landing inside the one-hundred-and-twenty-month window, and all thirty-seven are among the violations. The single exception is the record whose request arrived beyond the window, which is precisely the case the theorem excludes. The checker therefore reproduces the theorem's conditional structure exactly, including its boundary.",
+  "new": "First, the violation rate is not one hundred per cent, and this is the correct behaviour rather than a weakness of the result. The rate itself should not be read as an estimate of real frequency, for a reason stated in Chapter 3, Section 3.7: the generator treats every erasure request as valid, whereas in practice many would be lawfully refused under Article 17(3), so real erasure-driven collision rates would be lower than those shown here. Proposition 1 is conditional: it states infeasibility for records whose erasure or ceiling deadline falls inside the retention window. A cross-border record for which no data subject ever exercises Article 17 has no second constraint to collide with C1, and is trivially feasible. Of the one hundred cross-border records, thirty-eight received an erasure request; of those, thirty-seven had a deadline landing inside the one-hundred-and-twenty-month window, and all thirty-seven are among the violations. The single exception is the record whose request arrived beyond the window, which is precisely the case the proposition excludes. The checker therefore reproduces the proposition's conditional structure exactly, including its boundary.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-03",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Each names the record, the collision month, the two constraints in conflict, and the window within which the conflict arises. A reader who doubts Theorem 1 can take any of these lines and check the arithmetic by hand.",
+  "new": "Each names the record, the collision month, the two constraints in conflict, and the window within which the conflict arises. A reader who doubts Proposition 1 can take any of these lines and check the arithmetic by hand.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-04",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Take the first. The access-log record is created in month seven. Article 73(1)(e) requires the identifiable log to remain verifiable until month nineteen. The data permit expires in month ten, so Article 68(12) requires personal data to be gone from the environment by month sixteen. Months sixteen through nineteen are therefore months in which the same regulation requires the same environment both to retain an identifiable access log and to hold no personal data. No data subject has exercised any right. No deployment baseline is involved. No synthesis across instruments of differing legal weight has occurred. On the reading of Article 68(12) adopted in Chapter 4, Section 4.6, the conflict is internal to Regulation (EU) 2025/327. Under the narrower reading canvassed there, these thirty-nine witnesses lapse and the secondary-use collisions reduce to the nine records in this population whose erasure requests fall inside the retention window (four that collide with C2 only and five that also collide with C3; twenty-two records received requests in all); Theorem 1, Corollary 1.1, and every Semantics II result are unaffected.",
+  "new": "Take the first. The access-log record is created in month seven. Article 73(1)(e) requires the identifiable log to remain verifiable until month nineteen. The data permit expires in month ten, so Article 68(12) requires personal data to be gone from the environment by month sixteen. Months sixteen through nineteen are therefore months in which the same regulation requires the same environment both to retain an identifiable access log and to hold no personal data. No data subject has exercised any right. No deployment baseline is involved. No synthesis across instruments of differing legal weight has occurred. On the reading of Article 68(12) adopted in Chapter 4, Section 4.6, the conflict is internal to Regulation (EU) 2025/327. Under the narrower reading canvassed there, these thirty-nine witnesses lapse and the secondary-use collisions reduce to the nine records in this population whose erasure requests fall inside the retention window (four that collide with C2 only and five that also collide with C3; twenty-two records received requests in all); Proposition 1, Corollary 1.1, and every Semantics II result are unaffected.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-05",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The obvious attack on this figure is that the twelve-month horizon was chosen to produce it. The response is structural: the collision rate scales as $6/\\pi_{\\max}$ under a uniform permit horizon, so a longer horizon attenuates the rate without altering the existence of the collision, which Theorem 1 establishes independently of any distribution. The twelve-month horizon models the remaining permit duration at the moment an access event is logged, not total project length, and a record created late in a multi-year permit has a short remaining horizon regardless of the project's overall size. No figure in this chapter depends on the rate; the thesis's claim is that the collision occurs, not that it occurs with any particular frequency.",
+  "new": "The obvious attack on this figure is that the twelve-month horizon was chosen to produce it. The response is structural: the collision rate scales as $6/\\pi_{\\max}$ under a uniform permit horizon, so a longer horizon attenuates the rate without altering the existence of the collision, which Proposition 1 establishes independently of any distribution. The twelve-month horizon models the remaining permit duration at the moment an access event is logged, not total project length, and a record created late in a multi-year permit has a short remaining horizon regardless of the project's overall size. No figure in this chapter depends on the rate; the thesis's claim is that the collision occurs, not that it occurs with any particular frequency.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-06",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The cross-border floor is scaled from one hundred and twenty months to twelve for this check, because exhaustive search over 2¹²⁰ assignments is not computable. The scaling does not affect the logic: Theorem 1's argument depends on the deadline falling inside the window, not on the window's length, and the scaled case preserves that relation. This substitution is noted rather than hidden, and it is the one place in the demonstration where a parameter was altered for tractability.",
+  "new": "The cross-border floor is scaled from one hundred and twenty months to twelve for this check, because exhaustive search over 2¹²⁰ assignments is not computable. The scaling does not affect the logic: Proposition 1's argument depends on the deadline falling inside the window, not on the window's length, and the scaled case preserves that relation. This substitution is noted rather than hidden, and it is the one place in the demonstration where a parameter was altered for tractability.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-07",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Chapter 4, Section 4.4 sets the erasure response period $\\delta$ from Article 12(3) GDPR, which allows the controller one month from receipt and permits extension by a further two months for complex or numerous requests. The theorems are stated for arbitrary finite $\\delta$, and the model admits $\\delta = 3$. That claim is witnessed rather than asserted.",
+  "new": "Chapter 4, Section 4.4 sets the erasure response period $\\delta$ from Article 12(3) GDPR, which allows the controller one month from receipt and permits extension by a further two months for complex or numerous requests. The propositions are stated for arbitrary finite $\\delta$, and the model admits $\\delta = 3$. That claim is witnessed rather than asserted.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-08",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Extending the response period moves one record out of violation under Semantics I, which is the expected behaviour: a longer deadline pushes one erasure collision past the end of its retention window, and Theorem 1 excludes exactly that case. Everything else is unchanged. The Corollary 1.2 count is identical because those collisions arise from the deletion ceiling rather than from any erasure request, and so do not involve $\\delta$ at all. Semantics II yields zero violations at both settings, as Theorem 2 requires for any finite $\\delta$.",
+  "new": "Extending the response period moves one record out of violation under Semantics I, which is the expected behaviour: a longer deadline pushes one erasure collision past the end of its retention window, and Proposition 1 excludes exactly that case. Everything else is unchanged. The Corollary 1.2 count is identical because those collisions arise from the deletion ceiling rather than from any erasure request, and so do not involve $\\delta$ at all. Semantics II yields zero violations at both settings, as Proposition 2 requires for any finite $\\delta$.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-09",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The invalidation trajectory from the constructive proof of Theorem 2 was then applied to every record: destroy the payload key at $t^{I} = \\min(t_r + \\delta,\\; t_\\pi + 6)$, destroy the salt with it, append an invalidation entry recording the month, the legal ground, and the authorising actor, and retain metadata and commitment unchanged.",
+  "new": "The invalidation trajectory from the constructive proof of Proposition 2 was then applied to every record: destroy the payload key at $t^{I} = \\min(t_r + \\delta,\\; t_\\pi + 6)$, destroy the salt with it, append an invalidation entry recording the month, the legal ground, and the authorising actor, and retain metadata and commitment unchanged.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-10",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Established.* Both theorems hold on all two hundred generated instances. Theorem 1's conditional structure is reproduced exactly, including the boundary case of the request falling outside the window. Corollary 1.2 has thirty-nine witnesses in the model: records in which two provisions of one regulation collide over one environment with no data-subject action involved. The infeasibility results survive a separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines. The invalidation trajectory eliminates every violation without introducing any.",
+  "new": "*Established.* Both propositions hold on all two hundred generated instances. Proposition 1's conditional structure is reproduced exactly, including the boundary case of the request falling outside the window. Corollary 1.2 has thirty-nine witnesses in the model: records in which two provisions of one regulation collide over one environment with no data-subject action involved. The infeasibility results survive a separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines. The invalidation trajectory eliminates every violation without introducing any.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-11",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*Not established, and not claimed.* The demonstration does not prove the theorems for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.",
+  "new": "*Not established, and not claimed.* The demonstration does not prove the propositions for all instances; it checks them on the instances generated under one seed, and the exhaustive cross-check covers four small cases rather than the general result. The proofs in Chapter 4, not this chapter, carry the general claim. No performance measurement was taken, and no statement about execution time, throughput, or storage overhead appears anywhere in this thesis. The sandbox does not connect to any National Contact Point, implement the OpenNCP transmission flow, or evaluate consent policies. Key destruction is simulated by removing a reference in program state, which demonstrates the mechanism's logic and demonstrates nothing whatever about whether key destruction can be assured in deployment: the limitation that Chapter 2 drew from the secure-deletion literature and that Chapter 6 engages.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter5-12",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "*How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Theorem 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The violation rates of Table 5.1 are functions of the generator parameters in Table 5.0 and are not estimates of real frequency.",
+  "new": "*How the tables should be read.* The Semantics II result of Table 5.3 holds by construction: the checker derives payload accessibility from the same invalidation month that the trajectory of Proposition 2 prescribes, so zero violations is the expected outcome, and a failure would expose an implementation error and not a modelling error. The violation rates of Table 5.1 are functions of the generator parameters in Table 5.0 and are not estimates of real frequency.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter6-01",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The request-driven form of the conflict cannot be escaped by moving the record. A deletion ceiling anchored to a location yields to relocation, but the right to erasure attaches to whichever controller holds the data (Chapter 4, Section 4.10, Proposition L). Cryptographic invalidation is therefore necessary where a data subject's request meets a retention floor, and in the cross-border pathway that is every request arriving inside the ten-year window, because the patient-discovery transaction puts the patient's identifying query into the audit record by design.",
+  "new": "The request-driven form of the conflict cannot be escaped by moving the record. A deletion ceiling anchored to a location yields to relocation, but the right to erasure attaches to whichever controller holds the data (Chapter 4, Section 4.10, Proposition 4). Cryptographic invalidation is therefore necessary where a data subject's request meets a retention floor, and in the cross-border pathway that is every request arriving inside the ten-year window, because the patient-discovery transaction puts the patient's identifying query into the audit record by design.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter6-02",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "Finally, the thesis specifies the mechanism that the feasibility proof exhibits: per-record keys, hiding commitments, invalidation entries carrying month, legal ground, and authorising actor, and a terminal transition at floor expiry that discharges the storage-limitation obligation on the metadata itself. Two clarifications of status belong here. The terminal transition of Section 4.8 is likewise specified but not implemented in the checker. The specification also provides for accumulator-based validity witnesses, which are an efficiency and verifiability layer rather than a component of either theorem, since Theorem 2 holds if validity is established by linear scan. They are specified but not implemented: the demonstration of Chapter 5 exercises keys, commitments, and invalidation entries, and no accumulator was built or run.",
+  "new": "Finally, the thesis specifies the mechanism that the feasibility proof exhibits: per-record keys, hiding commitments, invalidation entries carrying month, legal ground, and authorising actor, and a terminal transition at floor expiry that discharges the storage-limitation obligation on the metadata itself. Two clarifications of status belong here. The terminal transition of Section 4.8 is likewise specified but not implemented in the checker. The specification also provides for accumulator-based validity witnesses, which are an efficiency and verifiability layer rather than a component of either proposition, since Proposition 2 holds if validity is established by linear scan. They are specified but not implemented: the demonstration of Chapter 5 exercises keys, commitments, and invalidation entries, and no accumulator was built or run.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter6-03",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The consequence must be stated without softening. If a supervisory authority takes the view that Article 73(1)(e)'s requirement of \"identifiable logs\" entails logs whose subject matter remains readable, then Theorem 2 remains mathematically true and becomes practically inert: the mechanism would satisfy a constraint system that does not describe the law. The thesis would still have established the collision, which is textual and, on the narrow reading of Article 68(12), survives in its erasure-driven form, and would still have established that the collision is *dissolvable in principle* by a semantic move. It would not have established that the move is available.",
+  "new": "The consequence must be stated without softening. If a supervisory authority takes the view that Article 73(1)(e)'s requirement of \"identifiable logs\" entails logs whose subject matter remains readable, then Proposition 2 remains mathematically true and becomes practically inert: the mechanism would satisfy a constraint system that does not describe the law. The thesis would still have established the collision, which is textual and, on the narrow reading of Article 68(12), survives in its erasure-driven form, and would still have established that the collision is *dissolvable in principle* by a semantic move. It would not have established that the move is available.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter6-04",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The accumulator layer has the least favourable scaling profile and is also the most dispensable. Dynamic accumulators with efficient revocation require witness maintenance as the accumulated set changes, and witness update costs grow with the frequency of revocation. This is why Chapter 4, Section 4.8 specifies the accumulator as a verifiability and efficiency layer rather than a component of either theorem: an implementation that finds witness maintenance too costly at its volume can establish validity by scanning the invalidation registry, losing succinctness and retaining correctness.",
+  "new": "The accumulator layer has the least favourable scaling profile and is also the most dispensable. Dynamic accumulators with efficient revocation require witness maintenance as the accumulated set changes, and witness update costs grow with the frequency of revocation. This is why Chapter 4, Section 4.8 specifies the accumulator as a verifiability and efficiency layer rather than a component of either proposition: an implementation that finds witness maintenance too costly at its volume can establish validity by scanning the invalidation registry, losing succinctness and retaining correctness.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter6-05",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "Article 68(12) behaves differently for a structural reason as well as a numerical one: its ceiling is shorter than the floor, which any collision requires, and it is anchored where the shortfall cannot be seen. Its ceiling is anchored not to the creation of the record but to the expiry of the data permit, an event external to the record and capable of falling at any point relative to the floor, including before the floor has run. A floor measured from creation and a ceiling measured from an unrelated later event are not two ends of one window; they are two clocks that can cross. That crossing is what Theorem 1 characterises, Corollary 1.2 is the case where it happens with no erasure request present at all, and Chapter 4, Section 4.6 states the general condition as Proposition 3: floor and ceiling collide for a record exactly when the ceiling's end falls inside the floor, which needs a ceiling no longer than the floor and, under an external anchor, depends on each record's history.",
+  "new": "Article 68(12) behaves differently for a structural reason as well as a numerical one: its ceiling is shorter than the floor, which any collision requires, and it is anchored where the shortfall cannot be seen. Its ceiling is anchored not to the creation of the record but to the expiry of the data permit, an event external to the record and capable of falling at any point relative to the floor, including before the floor has run. A floor measured from creation and a ceiling measured from an unrelated later event are not two ends of one window; they are two clocks that can cross. That crossing is what Proposition 1 characterises, Corollary 1.2 is the case where it happens with no erasure request present at all, and Chapter 4, Section 4.6 states the general condition as Proposition 3: floor and ceiling collide for a record exactly when the ceiling's end falls inside the floor, which needs a ceiling no longer than the floor and, under an external anchor, depends on each record's history.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter7-01",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "*Two feasibility results with an executable witness.* Theorem 1 establishes infeasibility under the status-quo semantics; Theorem 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.",
+  "new": "*Two feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the status-quo semantics; Proposition 2 establishes satisfiability under the alternative and exhibits the trajectory that achieves it. Both were demonstrated over two hundred records, producing ninety infeasible records and ninety-five violations under the first semantics and none under the second, with a separately written exhaustive search confirming that under the first semantics no assignment of payload accessibility whatsoever succeeds. The proofs are informal and the demonstration covers generated instances; neither is presented as more.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ },
+ {
+  "id": "P16-Chapter7-02",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "The first concerns verifiability. No regulator or court has held that an audit record whose payload has been cryptographically invalidated continues to satisfy a retention obligation. The thesis argues that it does, from the necessity boundary of Article 17(3)(b) read with the data-minimisation principle of Article 5(1)(c), and from the Norwegian Data Protection Authority's own framing of retention as a balancing duty on the controller. If a supervisory authority instead reads \"identifiable logs\" in Article 73(1)(e) as requiring logs whose subject matter remains readable, Theorem 2 remains true of the model and inert in practice.",
+  "new": "The first concerns verifiability. No regulator or court has held that an audit record whose payload has been cryptographically invalidated continues to satisfy a retention obligation. The thesis argues that it does, from the necessity boundary of Article 17(3)(b) read with the data-minimisation principle of Article 5(1)(c), and from the Norwegian Data Protection Authority's own framing of retention as a balancing duty on the controller. If a supervisory authority instead reads \"identifiable logs\" in Article 73(1)(e) as requiring logs whose subject matter remains readable, Proposition 2 remains true of the model and inert in practice.",
+  "count": 1,
+  "why": "M4a: theorems renamed propositions"
+ }
+]

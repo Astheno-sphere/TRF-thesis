@@ -23,6 +23,7 @@ Checks
  10  tracker      REVIEW_TRACKER.md: closed items name applied patches and meet their guard goals
  11  full/remote  optional, see above
  13  appendix     every source listing and console output in Appendix A equals its file
+ 14  replay       every patch since the tag, replayed in log order from the tag, reproduces the files
 """
 import hashlib, json, os, pathlib, re, shutil, subprocess, sys, tempfile
 
@@ -111,6 +112,9 @@ def main():
     for m in re.finditer(r"^\| (\S+?)(\d+) to \1(\d+) \|", trail, re.M):  # "| D0-01 to D0-29 |", "| P09-F09 to P09-F23 |"
         w = len(m.group(2))
         covered |= {f"{m.group(1)}{i:0{w}d}" for i in range(int(m.group(2)), int(m.group(3)) + 1)}
+    prefixes = [tok.split(" ")[0][:-1] for m in re.finditer(r"^\| ([^|]*\*[^|]*)\|", trail, re.M)  # "| P16-* (58 edits) |", "| P18-B*, P18-* |"
+                for tok in m.group(1).strip().split(", ") if tok.split(" ")[0].endswith("*")]
+    covered |= {r["id"] for r in log if any(r["id"].startswith(px) for px in prefixes)}
     for m in re.finditer(r"^\| ([A-Za-z0-9]+-\d+(?:, [A-Za-z0-9]+-\d+)+) \|", trail, re.M):  # "| P03-01, P03-02 |"
         covered |= set(m.group(1).split(", "))
     missing = sorted({r["id"] for r in log if r["id"] not in covered
@@ -248,6 +252,30 @@ def main():
            if appendix_sync.block(A, h).strip() != pathlib.Path(f).read_text(encoding="utf-8").strip()]
     report(13, f"Appendix A: {len(appendix_sync.BLOCKS) - len(bad)}/{len(appendix_sync.BLOCKS)} listings equal their files",
            "FAIL" if bad else "PASS", bad)
+
+    # 14 full replay: every patch since the tag, in log order, reproduces the files on disk
+    import importlib.util, json as _json
+    state, bad, order = {}, [], []
+    for r in log:
+        if r["patch"].startswith("D0_"):
+            continue
+        if (r["ts"], r["patch"]) not in order:
+            order.append((r["ts"], r["patch"]))
+    for ts, pf in order:
+        spec = importlib.util.spec_from_file_location(pf, pathlib.Path("patches") / pf)
+        mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+        for e in mod.EDITS:
+            f = e["file"]
+            if f not in state:
+                state[f] = subprocess.run(["git", "show", f"{TAG}:{f}"], capture_output=True, text=True).stdout
+            if state[f].count(e["old"]) != e.get("count", 1):
+                bad.append(f"{pf} {e['id']}: anchor does not match the replayed state of {f}")
+                continue
+            state[f] = state[f].replace(e["old"], e["new"])
+    for f, t in state.items():
+        if pathlib.Path(f).exists() and md5(t) != fmd5(f):
+            bad.append(f"{f}: replay gives {md5(t)}, file is {fmd5(f)}")
+    report(14, f"full replay of {len(order)} patch runs from {TAG}: {len(state)} files", "FAIL" if bad else "PASS", bad)
 
     n_fail = results.count("FAIL")
     print(f"\nTRAIL {'BROKEN' if n_fail else 'INTACT'}: {n_fail} fail, {results.count('WARN')} warn")

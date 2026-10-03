@@ -32,25 +32,27 @@ def block(text, heading):
     return text[j:k + 1]
 
 
-def block_edits(prefix):
-    """One patch edit per listing whose block differs from its file. Each edit is anchored
-    from the section heading to the end of its block, because one console output (A.10)
-    occurs verbatim inside another (A.12)."""
-    text = (ROOT / APPENDIX).read_text(encoding="utf-8")
+def block_edits_text(text, read_new, prefix):
+    """Edits that turn each listing block in `text` into read_new(file). Anchored from the
+    section heading to the end of its block, because A.10's output occurs verbatim inside A.12's."""
     edits = []
     for n, (h, f) in enumerate(BLOCKS.items(), 1):
         i = text.index(h)
         j = text.index("```", i); j = text.index("\n", j) + 1
         k = text.index("\n```", j) + 1
-        new_block = (ROOT / f).read_text(encoding="utf-8")
+        new_block = read_new(f)
         new_block = new_block if new_block.endswith("\n") else new_block + "\n"
         if text[j:k] != new_block:
             old = text[i:k]
             assert text.count(old) == 1, f"{h}: anchor not unique"
-            edits.append(dict(id=f"{prefix}{n:02d}", file=APPENDIX, old=old,
-                              new=text[i:j] + new_block,
+            edits.append(dict(id=f"{prefix}{n:02d}", file=APPENDIX, old=old, new=text[i:j] + new_block,
                               why=f"Appendix A {h[3:].split(' ')[0]} synced to {f}"))
     return edits
+
+
+def block_edits(prefix):
+    text = (ROOT / APPENDIX).read_text(encoding="utf-8")
+    return block_edits_text(text, lambda f: (ROOT / f).read_text(encoding="utf-8"), prefix)
 
 
 def main():
