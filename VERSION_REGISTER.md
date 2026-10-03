@@ -12,17 +12,17 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 783584cdbde6 | 65,055 | 3 Oct 17:19 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 8c568cd18afc | 176 eq, 25 tbl | 3 Oct 17:19 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 660e5d9f6471 | 65,930 | 3 Oct 17:33 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 53eefa8d0443 | 176 eq, 25 tbl | 3 Oct 17:33 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
 | THESIS | Front_Matter_v1.md | 97178131493e | 2,691 | 3 Oct 16:54 | Title, abstract, contribution, declarations, nomenclature, TOC |
 | THESIS | Chapter1_Introduction_v2.md | f37488f80a08 | 5,039 | 3 Oct 16:54 | Chapter 1 |
 | THESIS | Chapter2_LitReview_v2_FINAL.md | 96c829174ddf | 14,042 | 3 Oct 17:17 | Chapter 2 incl. review protocol §2.1 |
 | THESIS | Chapter3_Methodology_v1.md | 1fbea0b59954 | 5,208 | 3 Oct 17:18 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
-| THESIS | Chapter4_TRF_Model_v1.md | 3c60a97e2d07 | 10,776 | 3 Oct 17:19 | Chapter 4 — all math in LaTeX (159 equations) |
-| THESIS | Chapter5_Demonstration_v1.md | 71b93b688622 | 4,397 | 3 Oct 16:54 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
+| THESIS | Chapter4_TRF_Model_v1.md | 7bae96114732 | 10,789 | 3 Oct 17:32 | Chapter 4 — all math in LaTeX (159 equations) |
+| THESIS | Chapter5_Demonstration_v1.md | 1e42f3e1d1b2 | 4,467 | 3 Oct 17:32 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
 | THESIS | Chapter6_Discussion_v1.md | 372e1b5bb5bf | 5,907 | 3 Oct 16:54 | Chapter 6, 11 sections |
 | THESIS | Chapter7_Conclusion_v1.md | 749682dd93b5 | 2,210 | 3 Oct 16:54 | Chapter 7 |
-| APPENDIX | code_artefacts/README_Appendix_A.md | a15c7e1a78d1 | 11,948 | 3 Oct 16:55 | Appendix A: provenance, commands, full source, console output |
+| APPENDIX | code_artefacts/README_Appendix_A.md | 4c51649d84e9 | 12,740 | 3 Oct 17:32 | Appendix A: provenance, commands, full source, console output |
 | APPENDIX | Appendix_B_Search_Log.md | 535856d92083 | 1,737 | 29 Sep 12:35 | Appendix B: 59 queries, 4 rounds |
 | APPENDIX | Appendix_C_Evaluation_Instrument.md | be9986f476b2 | 2,818 | 3 Oct 17:17 | Appendix C: evaluation instrument (designed, not executed) |
 | BIBLIO | Consolidated_Bibliography.md | c1dd99c1ba5b | 2,115 | 3 Oct 15:11 | 69 entries, chapter-tagged — READ this |
@@ -32,7 +32,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CODE | demo_app/app.py | dd801d14a6c5 | 2,641 | 3 Oct 16:54 | Streamlit viewer, deployed, 4 tabs |
 | CODE | demo_app/norwegian_layer.py | 3e2ff91225ac | 782 | 28 Sep 06:22 | Norwegian context classes (NO-XB, NO-SPE, NO-JOURNAL) |
 | CODE | demo_app/cross_sector_check.py | 86deaf873464 | 819 | 28 Sep 06:22 | politiregisterloven § 17 instance |
-| CODE | repro_package/run_all.sh | e53b50904052 | 328 | 28 Sep 07:05 | Reproduces all four steps; self-verifies |
+| CODE | demo_app/crypto_envelope.py | e2191bdc0656 | 118 lines | 3 Oct | Optional: real AES-256-GCM envelope encryption of the lifecycle; pushed as 2b2dddb |
+| CODE | repro_package/run_all.sh | 70dd99521feb | 386 | 3 Oct 17:32 | Reproduces all four steps; self-verifies |
 | DATA | repro_package/data/synthea_subset/ | dir | 8 bundles + README | 28 Sep 06:29 | The only working-set copy of the eight untrimmed Synthea bundles. The second copy is on GitHub at the same path. The `repo_synthea_subset/` staging directory was removed on 28 Sept once the push completed; `code_artefacts/DATA_LOCATION.md` records where the data went |
 | SUPPORT | Data_Provenance_Statement.md | 36aeddac1f9c | 889 | 28 Sep 06:29 | Answer to Joao's data blocker; records the 28 Sep subset commit |
 | SUPPORT | thesis_yaml_header.yml | 4636c30b4882 | 47 | 29 Sep 12:35 | YAML: breezedark code, Word template hook |
@@ -54,8 +55,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | ab7915cfaa7b | 14,563 | 3 Oct 17:22 | Every change with an ID, reason and verification. Synced with the repository copy |
-| CONTROL | CHECKSUMS.md | cead1eb0079f | 173 | 3 Oct 16:56 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 27aad9dc880a | 14,820 | 3 Oct 17:33 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | 92c8e0c96a51 | 187 | 3 Oct 17:33 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
@@ -71,8 +72,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | REVIEW_TRACKER.md | 2a107091b7d1 | 40 items | 3 Oct 17:19 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
 | CONTROL | TIGER_TASKS.md | 0f4f50a414f8 | 10 tasks | 3 Oct | Tasks only Tiger can do, with links and exactly what to check |
 | CONTROL | RESEARCH_LOG_2026-10.md | d876a876c05b | 20 rows | 3 Oct 15:12 | Every search and fetch since 3 Oct; candidate round for Appendix B |
-| HANDOFF | handoff_tools/trail_check.py | dcf6645d6963 | — | 3 Oct 17:02 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
-| HANDOFF | handoff_tools/guards.json | a707db51712f | 24 guards | 3 Oct 15:22 | Regression patterns held at 0 and review targets that may only fall, with baselines |
+| HANDOFF | handoff_tools/trail_check.py | d5160db653f6 | — | 3 Oct 17:32 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
+| HANDOFF | handoff_tools/guards.json | c8a5a53ce9df | 24 guards | 3 Oct 17:32 | Regression patterns held at 0 and review targets that may only fall, with baselines |
 | HANDOFF | handoff_tools/register_sync.py | c7c87a4d9a76 | — | 3 Oct | Recomputes register rows whose file changed; run before each commit |
 | HANDOFF | handoff_tools/commit.sh | eb8828fc6bea | — | 3 Oct 17:22 | Gated commit: refuses on any trail_check FAIL. The only way to commit |
 | HANDOFF | handoff_tools/README.md | fd8a88632157 | — | 2 Oct 23:48 | How to run each tool |
@@ -102,15 +103,19 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P20_table21_bands.py | cc8009d0d113 | 2 edits | 3 Oct 17:22 | M5e Table 2.1 bands |
 | HANDOFF | patches/P21_frequency_window.py | c87f392533d0 | 4 edits | 3 Oct | MIN-05, MIN-06 |
 | HANDOFF | patches/P22_traceability_matrix.py | 5fd822699302 | 1 edit | 3 Oct | M6a Table 4.1 traceability matrix |
+| HANDOFF | patches/P23_crypto_envelope.py | 812a536a2122 | 10 edits | 3 Oct | Wires in the optional crypto module |
+| HANDOFF | patches/P23_crypto_envelope.edits.json | daf77fc717f0 | 10 edits | 3 Oct | Frozen edits of P23 |
+| HANDOFF | patches/P23b_runall_label.py | 302b3f6215b2 | 1 edit | 3 Oct | run_all step label |
+| HANDOFF | repro_package/results/crypto_envelope_output.txt | 4647ce0fcff9 | 13 lines | 3 Oct | Recorded run of crypto_envelope.py |
 | HANDOFF | patches/P20_table21_bands.edits.json | 25b693fdc52f | 2 edits | 3 Oct | Frozen edits of P20 |
-| HANDOFF | handoff_tools/appendix_sync.py | 291a2d434aac | — | 3 Oct 16:58 | Appendix A listings regenerated from and checked against their files |
+| HANDOFF | handoff_tools/appendix_sync.py | 478f1018ca15 | — | 3 Oct 17:32 | Appendix A listings regenerated from and checked against their files |
 | HANDOFF | patches/frozen.py | c92ba8189e82 | — | 3 Oct | Freezes generated patch edits to JSON; rebuilds them from git |
 | HANDOFF | patches/P12_code_wave.edits.json | 74fdc62f5464 | 4 edits | 3 Oct | Frozen edits of P12 |
 | HANDOFF | patches/P13_appendixA_codewave.edits.json | f193f1e09522 | 17 edits | 3 Oct | Frozen edits of P13 |
 | HANDOFF | patches/P16_rename_propositions.edits.json | 77e1509c187d | 58 edits | 3 Oct | Frozen edits of P16 |
 | HANDOFF | patches/P17_rename_code.edits.json | 1c4ae096d145 | 20 edits | 3 Oct | Frozen edits of P17 |
 | HANDOFF | patches/P18_appendixA_propositions.edits.json | d00fd3d3b5ca | 9 edits | 3 Oct | Frozen edits of P18 |
-| HANDOFF | patches/APPLIED.log | fb41a528ad50 | 5,326 | 3 Oct 17:19 | Every applied edit with before/after md5 |
+| HANDOFF | patches/APPLIED.log | be71aa3431f7 | 5,523 | 3 Oct 17:32 | Every applied edit with before/after md5 |
 | HANDOFF | conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies

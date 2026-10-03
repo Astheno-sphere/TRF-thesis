@@ -1,5 +1,14 @@
 # Change trail
 
+## 3 October 2026 — optional real-cryptography module (Tiger: "go ahead")
+
+| ID | Change | Verification |
+|---|---|---|
+| B-28 | New files: `crypto_envelope.py` (demo_app, repro_package, code_artefacts; 118 lines) and `repro_package/results/crypto_envelope_output.txt`. Each record's payload encrypted under its own AES-256-GCM data key (record id as associated data); data keys wrapped under a key-encrypting key in a custody object standing in for an HSM; wrapped key destroyed at the record's invalidation month; every record decrypted again | Two runs with fresh random keys give byte-identical output: 200/200 decrypt before; 138 keys destroyed; 138 refused, 62 read; the invalidated record's ciphertext opens under none of the 62 surviving keys; 62 ciphertexts kept after deletion. The checker and every reported figure untouched |
+| P23-01 to P23-10 | `run_all.sh` optional step and diff line; full-cohort note corrected (it is historical, P12/P13); `requirements.txt` gains `cryptography>=42` (this module only); Appendix A contents row, new A.9e listing and A.15 output; Table 5.0a row; §5.7 limitation paragraph reports the executed check; Table 4.1 OPR-6 row now "met in the optional module", destruction still in program memory | `appendix_sync.py` 13/13 (two new blocks added to its map); `trail_check.py` checks the module's copies and its recorded run |
+| P23b-01 | `run_all.sh`: the new step labelled "5 (optional)", the others being 1/4 to 4/4 | — |
+| B-29 | Public repository commit `2b2dddb`: module, recorded output, requirements, README row and revision note, Appendix A, repository trail R-23, CHECKSUMS regenerated and copied here | All six recorded runs reproduced in the repository clone before pushing |
+
 ## 3 October 2026 — supervisor review, patches P19–P22 (A1, Table 2.1, frequency and window, traceability)
 
 | ID | Change | Verification |

@@ -34,7 +34,8 @@ TAG, BRANCH = "joao-base-v1", "joao-base"
 COPIES = {"demo_app/trf_checker.py": ["repro_package/trf_checker.py", "code_artefacts/trf_checker.py"],
           "demo_app/synthea_layer.py": ["repro_package/synthea_layer.py", "code_artefacts/synthea_layer.py"],
           "demo_app/norwegian_layer.py": ["repro_package/norwegian_layer.py", "code_artefacts/norwegian/norwegian_layer.py"],
-          "demo_app/cross_sector_check.py": ["repro_package/cross_sector_check.py", "code_artefacts/norwegian/cross_sector_check.py"]}
+          "demo_app/cross_sector_check.py": ["repro_package/cross_sector_check.py", "code_artefacts/norwegian/cross_sector_check.py"],
+          "demo_app/crypto_envelope.py": ["repro_package/crypto_envelope.py", "code_artefacts/crypto_envelope.py"]}
 results = []
 
 
@@ -226,9 +227,11 @@ def main():
         pairs = [("trf_output_rerun.txt", "trf_output.txt"), ("delta_witness_rerun.txt", "expected_delta_witness_output.txt"),
                  ("synthea_comparison_rerun.txt", "synthea_comparison_subset_output.txt"),
                  ("norwegian_layer_rerun.txt", "expected_norwegian_output.txt"), ("cross_sector_rerun.txt", "expected_cross_sector_output.txt")]
+        if (pathlib.Path("repro_package/results") / "crypto_envelope_rerun.txt").exists():
+            pairs.append(("crypto_envelope_rerun.txt", "crypto_envelope_output.txt"))
         R = pathlib.Path("repro_package/results")
         bad = [a for a, b in pairs if fmd5(R / a) != fmd5(R / b)]
-        report(11, f"recorded runs: {5 - len(bad)}/5 match", "FAIL" if bad else "PASS", bad)
+        report(11, f"recorded runs: {len(pairs) - len(bad)}/{len(pairs)} match", "FAIL" if bad else "PASS", bad)
     if remote:
         clone = pathlib.Path("/home/claude/trf") if pathlib.Path("/home/claude/trf/.git").exists() else pathlib.Path("/home/claude/astheno-sphere/trf")
         if not (clone / ".git").exists():

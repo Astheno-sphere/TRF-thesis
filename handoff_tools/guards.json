@@ -17,7 +17,8 @@
   "demo_app/synthea_layer.py",
   "demo_app/norwegian_layer.py",
   "demo_app/cross_sector_check.py",
-  "demo_app/app.py"
+  "demo_app/app.py",
+  "demo_app/crypto_envelope.py"
  ],
  "guards": [
   {

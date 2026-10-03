@@ -7,3 +7,6 @@
 # The optional substrate-patch generators (research bookkeeping, not thesis results)
 # require:
 openpyxl>=3.1
+#
+# The optional envelope-encryption module (crypto_envelope.py) requires:
+cryptography>=42
