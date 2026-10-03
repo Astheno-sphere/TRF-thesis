@@ -151,18 +151,28 @@ def main():
     # 8 base diff explained by patches
     import verify_base
     _, diffs, _ = verify_base.collect()
-    news = []
+    pairs = []
     for pf in sorted({r["patch"] for r in log}):
         p = pathlib.Path("patches") / pf
         if p.exists():
             import importlib.util
             spec = importlib.util.spec_from_file_location(pf, p); m = importlib.util.module_from_spec(spec)
             spec.loader.exec_module(m)
-            news += [e["new"] for e in m.EDITS]
-    plain = verify_base.norm(sh_in("\n\n".join(news)))
+            pairs += [(e["old"], e["new"]) for e in m.EDITS]
+    SEP = "QQSEPQQ"
+    rendered = sh_in(f"\n\n{SEP}\n\n".join(x for pr in pairs for x in pr)).split(SEP)
+    rendered = [verify_base.norm(x) for x in rendered]
+    plain_pairs = [(rendered[2 * i], rendered[2 * i + 1]) for i in range(len(pairs))] if len(rendered) == 2 * len(pairs) else []
+    plain = " ".join(b for _, b in plain_pairs)
     unexplained = []
     for f, ours, draft in diffs:
-        w = ours.split()
+        replayed = draft or ""
+        for a, b in plain_pairs:  # replay every logged edit on the closest draft line
+            if a and a in replayed:
+                replayed = replayed.replace(a, b)
+        if replayed == ours:
+            continue
+        w = ours.split()  # fallback: a new sentence that has no draft counterpart
         shingles = [" ".join(w[i:i + 6]) for i in range(0, max(1, len(w) - 5))]
         if not any(x in plain for x in shingles):
             unexplained.append(f"[{f}] {ours[:160]}")

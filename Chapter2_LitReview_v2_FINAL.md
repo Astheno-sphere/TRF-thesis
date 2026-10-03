@@ -6,7 +6,7 @@
 
 ### 2.1.1 Type of review and why it is named as such
 
-This review is a structured narrative review conducted under a documented and dated protocol. It is not a systematic review, and the distinction is stated at the outset rather than left to inference. A systematic review executes a pre-registered search strategy in a single sweep, against a fixed set of indexed databases, with independent screening by more than one reviewer. This review proceeded iteratively across four dated rounds, used natural-language rather than Boolean queries, drew substantially on primary regulatory and government sources that are not indexed in bibliographic databases at all, and was screened by one reviewer. Calling it systematic would misdescribe it.
+This review is a structured narrative review conducted under a documented and dated protocol. It is not a systematic review, and the distinction is stated at the outset rather than left to inference. A systematic review executes a pre-registered search strategy in a single sweep, against a fixed set of indexed databases, with independent screening by more than one reviewer. This review proceeded iteratively across four dated search rounds and a fifth, verification-only round, used natural-language rather than Boolean queries, drew substantially on primary regulatory and government sources that are not indexed in bibliographic databases at all, and was screened by one reviewer. Calling it systematic would misdescribe it.
 
 What the review can offer instead is replicability of a different and, for this subject, more appropriate kind. It provides a complete record of what was searched and when, the criteria applied, and the screening account. It also provides a prospective Boolean protocol that a researcher may execute against indexed databases, to test whether the conclusions survive a systematic sweep. Section 2.1.6 provides that protocol and states plainly that it was not the instrument used here.
 
@@ -27,7 +27,8 @@ Academic literature was searched through Google Scholar, arXiv, the Cryptology e
 | 2 | 29 May 2026 | Verification and correction of the initial draft's claims | 10 |
 | 3 | 15 September 2026 | Resumption; novelty audit and currency check | 10 |
 | 4 | 16 September 2026 | Adversarial novelty testing, prior art, final currency | 23 |
-| | | **Total** | **59** |
+| 5 | 28 September 2026 | Locator verification and source-standing audit; no discovery queries | 18 locator checks |
+| | | **Total discovery and verification queries, rounds 1–4** | **59** |
 
 Round 0 requires explanation. An exploratory phase preceded the documented rounds and produced a full draft dated 24 May 2026, which survives as an artifact and is the reason the rebuild occurred. That draft contains no search strings, no inclusion criteria, no screening account, and no reference to any review protocol: a fact established by inspection of the file rather than by recollection. Its queries are not recoverable and are not reconstructed here. Round 0 is therefore reported at artifact level rather than query level, and contributes nothing to the absence claim of Section 2.9, which rests entirely on the four documented rounds.
 
@@ -64,7 +65,7 @@ Filters for replication: publication years 2018 to 2026 for B1, B2, B4 and B6; u
 
 Four limitations follow from how the review was conducted and are stated so that they are not inferred from silence.
 
-The exploratory phase preceding the documented rounds is acknowledged but not claimed as evidence, because its queries were never recorded; only the resulting draft survives, and it is used in this chapter solely as an artifact demonstrating the absence of a protocol. Screening was performed by a single reviewer, so no inter-rater reliability can be reported. Intermediate screening counts for the first two rounds were not retained, so no PRISMA flow diagram is offered. The queries were natural-language, so recall cannot be characterised in the way a Boolean strategy over an indexed corpus permits. The absence of prior work on the central conflict, reported in Section 2.9, rests on four dated rounds, two of them adversarial, together with an independent corroborating statement in the cryptographic literature. But an absence established by searching remains weaker evidence than a positive finding. Section 2.9 therefore states the additional reasons the gap is likely genuine, rather than resting on the searches alone.
+The exploratory phase preceding the documented rounds is acknowledged but not claimed as evidence, because its queries were never recorded; only the resulting draft survives, and it is used in this chapter solely as an artifact demonstrating the absence of a protocol. Screening was performed by a single reviewer, so no inter-rater reliability can be reported. Intermediate screening counts for the first two rounds were not retained, so no PRISMA flow diagram is offered. The queries were natural-language, so recall cannot be characterised in the way a Boolean strategy over an indexed corpus permits. The absence of prior work on the central conflict, reported in Section 2.9, rests on four dated search rounds, two of them adversarial, together with an independent corroborating statement in the cryptographic literature. But an absence established by searching remains weaker evidence than a positive finding. Section 2.9 therefore states the additional reasons the gap is likely genuine, rather than resting on the searches alone.
 
 ## 2.2 The Cross-Border Health Data Exchange Landscape
 

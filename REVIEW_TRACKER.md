@@ -33,18 +33,18 @@ passage by passage when the patch for that passage is written.
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | OPEN |  |  |
 | M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | OPEN |  | Check UCC Art 51 (3-year floor) against seized-goods destruction; test against the anchoring result |
 | M7b | One sentence in §1.5 on the programme fit | OPEN |  |  |
-| MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | OPEN |  |  |
-| MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | OPEN |  |  |
-| MIN-03 | §1.6 drop "accumulator-based" | OPEN |  |  |
-| MIN-04 | §2.1.4 "four dated rounds" vs Appendix B five | OPEN |  | Fork R1 merged rounds to 7 on the superseded branch; re-judge |
+| MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | CLOSED | P01 | Prose now points to Table 5.0a; the code wave must update Table 5.0a, Table F.2 and Appendix A counts |
+| MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | CLOSED | P01 |  |
+| MIN-03 | §1.6 drop "accumulator-based" | CLOSED | P01 |  |
+| MIN-04 | §2.1.4 "four dated rounds" vs Appendix B five | CLOSED | P01 | Fork R1 merged rounds to 7 on the superseded branch; re-judge |
 | MIN-05 | §3.4 / Cor 1.1 "ordinary"/"generic case" are frequency claims; soften | OPEN |  |  |
 | MIN-06 | §4.4 C1 closed window spans F+1 months | OPEN |  | Half-open interval, or justify |
 | MIN-07 | Table 5.0a, A.9c, A.14: "Section 6.9" → 6.9a after renumbering | OPEN |  |  |
-| MIN-08 | Appendix C preamble: "Chapter 3, Section 3.9" → 3.8 | OPEN |  |  |
-| MIN-09 | "an separately written" ×3 → "a separately written" | OPEN |  |  |
+| MIN-08 | Appendix C preamble: "Chapter 3, Section 3.9" → 3.8 | CLOSED | P01 |  |
+| MIN-09 | "an separately written" ×3 → "a separately written" | CLOSED | P01 |  |
 | MIN-10 | §5.3, §5.4, §5.6: witness lines in a code block, one per line | OPEN |  |  |
-| MIN-11 | §6.1 "thirty-nine concrete witnesses" → "witnesses in the model" | OPEN |  |  |
-| MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | OPEN |  |  |
+| MIN-11 | §6.1 "thirty-nine concrete witnesses" → "witnesses in the model" | CLOSED | P01 |  |
+| MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | CLOSED | P01 |  |
 | MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | OPEN |  |  |
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
