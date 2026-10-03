@@ -101,6 +101,8 @@ HL7 Norway. (2025). *hl7.fhir.no.basis* (Version 2.2.2, released 27 March 2025) 
 
 IHE International. (2023). *Audit Trail and Node Authentication (ATNA) Profile* — IT Infrastructure Technical Framework, Vol. 1, Ch. 9 (Revision 20.0, 4 August 2023, Final Text). https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html `[Ch1] [Ch2]`
 
+IHE International. (2024). *IT Infrastructure (ITI) Technical Framework, Volume 2: Transactions* (Revision 20.1, 12 December 2024, Final Text), Section 3.55 Cross Gateway Patient Discovery [ITI-55]. https://profiles.ihe.net/ITI/TF/Volume2/ITI-55.html `[Ch4]`
+
 International Chamber of Commerce. (2025). *Data flows in supply chains: Practical realities and policy implications*. ICC. https://iccwbo.org/news-publications/policies-reports/data-flows-in-supply-chains-practical-realities-and-policy-implications/ `[Ch2]`
 
 Matheson. (2026). *EDPB publishes CEF report on the right to erasure* [Legal commentary]. Matheson LLP. https://www.matheson.com/insights/edpb-publishes-cef-report-on-the-right-to-erasure/ `[Ch2]`
