@@ -1,5 +1,12 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patches P04 and P05 (Chapter 4 core: M1, M2a, M5c)
+
+| ID | Change | Verification |
+|---|---|---|
+| P04-01 to P04-16 | §4.2 example and claim: payload is what the record carries beyond accountability (demographic query; document content only where a deployment keeps it). §4.3: m(a) = m_acc ∪ m_subj; p(a) defined per record class, cross-border grounded in IHE ITI-55; new variable β (subject link), confined to the SPE case. §4.4 C3: Art 68(12) quoted verbatim; extends to β where the subject fields are electronic health data. §4.5 Semantics II (i) over m_acc, (iii) covers β. §4.6: Corollary 1.2 conditional on log granularity; the textual case rebuilt on Art 68(12)'s object ("electronic health data"), Art 2(2)(a),(c), Art 73(1)(a),(c); contextual case strengthened from the paragraph's own text; "adopts the broad reading" withdrawn; Theorem 2 resolves both readings. §4.7: trajectory removes the subject link at the ceiling. §4.8 SPE application rewritten (the supervisor showed the old conclusion did not follow on the broad reading); open joint stated. New reference IHE International (2024), ITI TF-2 Rev 20.1 | Sources retrieved 3 Oct: Art 68(12), 2(2), 73(1) (streamlex mirror of OJ L 2025/327); ITI-55 §3.55.4.1.2.1, §3.55.5.1 (profiles.ihe.net, Rev 20.1, 12 Dec 2024). patch.py: gained Arts 2(2)(a), 68(12), 73(1), 73(1)(e) and the Regulation citation; one declared loss ("narrower", in a dropped clause about the Regulation's usage elsewhere that was never verified). "Broad reading" kept as the term. Word build: 209 equations, no LaTeX leakage. Bibliography 66 → 67 |
+| P05-01, P05-02 | Gap in P04's proof found on re-reading before commit: when an erasure request fixes t^I before the ceiling, nothing removed the subject fields at t_π + 6, yet the C3 argument said they were gone. Step 4 added to the trajectory; C3 argument cites it | Proof re-read in full after the patch |
+
 ## 3 October 2026 — supervisor review, patch P03 (EHDS dates)
 
 | ID | Change | Verification |

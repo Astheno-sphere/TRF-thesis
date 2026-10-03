@@ -53,3 +53,21 @@
 2026-10-03 00:22 | P02_salt_ciphertext.py | P02-08 | Chapter5_Demonstration_v1.md | cd0cbb51845d -> 856a60416066 | M3a: §5.6 now describes what the code does (rec.salt = None)
 2026-10-03 00:24 | P03_ehds_dates.py | P03-01 | Chapter2_LitReview_v2_FINAL.md | 3a0b8c0b6b0e -> 04d3c5c10fa9 | M5d: dates verified against Arts 19(1) and 105(1)(a); EY law alert dropped as a source
 2026-10-03 00:24 | P03_ehds_dates.py | P03-02 | Chapter2_LitReview_v2_FINAL.md | 3a0b8c0b6b0e -> 04d3c5c10fa9 | M5d: reference entry removed with its only citation
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-01 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M1: the payload is what the record carries beyond accountability, grounded per class in §4.3
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-02 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M1: example aligned with what an ITI-55 audit record actually holds
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-03 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M1: p(a) defined per record class and grounded in ITI-55 (verified 3 Oct); D-16 partition of m(a)
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-04 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | D-16: second state variable for the subject link, confined to the case that needs it
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-05 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M5c verbatim; D-16: C3 reaches m_subj where the subject fields are electronic health data (supervisor's option 1)
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-06 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | D-16: accountability rests on the accessor fields; removing the subject link is an accounted event
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-07 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M2a: Corollary 1.2 restated conditional on log granularity (D-16)
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-08 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M2a: conditional
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-09 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M5c verbatim; M2a: the textual case rebuilt on Art 68(12)'s actual object and Art 2(2), 73(1)(a),(c) (D-16)
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-10 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M2a: the contextual case strengthened from the paragraph's own text; the thesis no longer 'adopts the broad reading'
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-11 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M2a: the result now holds on both readings via the partition (supervisor's table: broad reading no longer 'fails' for Theorem 2)
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-12 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | D-16: the constructive trajectory removes the subject link at the ceiling where C3 reaches it
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-13 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | D-16: C3 over beta satisfied, including when an erasure request fixed t^I earlier
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-14 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | D-16: C1 under Semantics II rests on the accessor fields
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-15 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M2a: supervisor showed the old sentence did not follow on the broad reading; the claim now matches the partition and states its open joint
+2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-16 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M1: new primary source
+2026-10-03 00:31 | P05_trajectory_gap.py | P05-01 | Chapter4_TRF_Model_v1.md | 8fdbb0528bb7 -> ad1766c1eb79 | P04 gap: explicit step for the subject link when Art 17 fixed t^I earlier
+2026-10-03 00:31 | P05_trajectory_gap.py | P05-02 | Chapter4_TRF_Model_v1.md | 8fdbb0528bb7 -> ad1766c1eb79 | P04 gap: the C3 argument now cites the step that does the work
