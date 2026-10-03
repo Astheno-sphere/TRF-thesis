@@ -54,7 +54,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | a7efcb90a8d7 | 14,474 | 3 Oct 17:19 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | ab7915cfaa7b | 14,563 | 3 Oct 17:22 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | cead1eb0079f | 173 | 3 Oct 16:56 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
@@ -74,7 +74,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | handoff_tools/trail_check.py | dcf6645d6963 | — | 3 Oct 17:02 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
 | HANDOFF | handoff_tools/guards.json | a707db51712f | 24 guards | 3 Oct 15:22 | Regression patterns held at 0 and review targets that may only fall, with baselines |
 | HANDOFF | handoff_tools/register_sync.py | c7c87a4d9a76 | — | 3 Oct | Recomputes register rows whose file changed; run before each commit |
-| HANDOFF | handoff_tools/commit.sh | 7bb22664d37e | — | 3 Oct | Gated commit: refuses on any trail_check FAIL. The only way to commit |
+| HANDOFF | handoff_tools/commit.sh | eb8828fc6bea | — | 3 Oct 17:22 | Gated commit: refuses on any trail_check FAIL. The only way to commit |
 | HANDOFF | handoff_tools/README.md | fd8a88632157 | — | 2 Oct 23:48 | How to run each tool |
 | HANDOFF | patches/D0_rebase_to_draft.py | f90ab76b04b8 | 29 edits | 2 Oct 05:32 | The rebase onto the reviewed draft (commit 0438daf) |
 | HANDOFF | patches/P01_minor_batch.py | 32207655f4cf | 16 edits | 3 Oct | Minor issues MIN-01, -02, -03, -04, -08, -09, -11, -12 |
@@ -99,9 +99,10 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P17_rename_code.py | 507a7c730904 | 20 edits | 3 Oct 16:58 | Same rename in the code |
 | HANDOFF | patches/P18_appendixA_propositions.py | bb74086c45f5 | 9 edits | 3 Oct 16:59 | Appendix A synced and renamed |
 | HANDOFF | patches/P19_appendixC_A1.py | a186ab378d82 | 4 edits | 3 Oct | M6b A1 reworded |
-| HANDOFF | patches/P20_table21_bands.py | 78b36ba70f44 | 2 edits | 3 Oct | M5e Table 2.1 bands |
+| HANDOFF | patches/P20_table21_bands.py | cc8009d0d113 | 2 edits | 3 Oct 17:22 | M5e Table 2.1 bands |
 | HANDOFF | patches/P21_frequency_window.py | c87f392533d0 | 4 edits | 3 Oct | MIN-05, MIN-06 |
 | HANDOFF | patches/P22_traceability_matrix.py | 5fd822699302 | 1 edit | 3 Oct | M6a Table 4.1 traceability matrix |
+| HANDOFF | patches/P20_table21_bands.edits.json | 25b693fdc52f | 2 edits | 3 Oct | Frozen edits of P20 |
 | HANDOFF | handoff_tools/appendix_sync.py | 291a2d434aac | — | 3 Oct 16:58 | Appendix A listings regenerated from and checked against their files |
 | HANDOFF | patches/frozen.py | c92ba8189e82 | — | 3 Oct | Freezes generated patch edits to JSON; rebuilds them from git |
 | HANDOFF | patches/P12_code_wave.edits.json | 74fdc62f5464 | 4 edits | 3 Oct | Frozen edits of P12 |
