@@ -76,3 +76,11 @@
 2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-03 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | M2b: Rival 6 added
 2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-04 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | M1, M2b: Rival 3 no longer claims Art 17 targets the pseudonym (contradicted §4.2); dataset-level logging conceded as a real alternative for the ceiling
 2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-05 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | M2b: Rival 6 answered; Proposition L stated and proved (D-16, D-18)
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-01 | Chapter1_Introduction_v2.md | 1870f6938506 -> 67d19d4524e4 | M5c verbatim; M2a: the reading as now argued in §4.6 (D-16)
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-02 | Chapter2_LitReview_v2_FINAL.md | 04d3c5c10fa9 -> f2968e6a73f3 | M5c verbatim; M2a
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-03 | Chapter2_LitReview_v2_FINAL.md | 04d3c5c10fa9 -> f2968e6a73f3 | M2a: conditional
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-04 | Chapter6_Discussion_v1.md | cd67df56b103 -> c2ce137fe0f2 | M2c: §6.1 leads with the robust result; Proposition L; the SPE instance stated conditionally and after
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-05 | Chapter6_Discussion_v1.md | cd67df56b103 -> c2ce137fe0f2 | M2a; unverified claim about the Regulation's usage elsewhere removed
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-06 | Chapter7_Conclusion_v1.md | cd5f2b9c2585 -> e94d22c9e7f1 | M5c verbatim; M2a; unverified claim removed; the open joint named in §4.8 is now posed here
+2026-10-03 14:58 | P07_reading_carried_through.py | P07-07 | Chapter7_Conclusion_v1.md | cd5f2b9c2585 -> e94d22c9e7f1 | M2a: the request to the authorities asks the questions the thesis now depends on
+2026-10-03 14:58 | P08_appendixC_verbatim.py | P08-01 | Appendix_C_Evaluation_Instrument.md | b0facda1a8cd -> 20f5bd2517c8 | M5c: verbatim; item aligned with D-16 and §7.4

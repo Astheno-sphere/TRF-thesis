@@ -236,6 +236,15 @@
    "item": "PRES1",
    "baseline": 19,
    "goal": 9
+  },
+  {
+   "kind": "regression",
+   "name": "unverified claim: Regulation uses 'made available under the data permit' elsewhere",
+   "pattern": "formulation (freely )?elsewhere",
+   "scope": "prose",
+   "item": null,
+   "baseline": 0,
+   "goal": 0
   }
  ]
 }

@@ -30,6 +30,7 @@ fetch and is flagged where the fetches disagreed.
 | 18 | search | tehdas.eu D7.4 technical specification … pdf | TEHDAS news item, 5 June 2026, with the final PDF link | D7.4 |
 | 19 | fetch | tehdas.eu M7.4 draft (2025/09) PDF | Draft: EHDSR-6/7/8; OPR-5 deletion "or rendered unrecoverable … including any backups"; OPR-16 log every access, processing, viewing and output; OPR-17 one year minimum, five years recommended | context only |
 | 20 | fetch ×4 | tehdas.eu D7.4 final (2026/06) PDF | v1.2 final, 24 Feb 2026. EHDSR-7 "All SPE logs MUST identify the actor" (Table 5.1, p. 31); EHDSR-8 one year (p. 31); OPR-6 "deleted or rendered unrecoverable within six months of permit expiry, including any backups or redundant copies" (Table 5.2, p. 43; two fetches agree, a third gave a different OPR-6 text); Annex 7 / p. 19 "User action logs are seen to be covered by user privacy…" (two fetches agree). No record-level logging requirement found and no five-year recommendation, per the fetches: a negative from a summariser, so worded "in the version inspected" | P06 |
+| 21 | search | "made available under the data permit" OR "made available pursuant to the data permit" regulation 2025/327 | No instance found; EUR-Lex HTML listed but not searched in full. The claim in Ch6/Ch7 was removed rather than kept unverified | P07 |
 
 **To confirm by opening the PDF yourself:** the D7.4 page numbers above, the OPR-6 wording, and the
 absence of a record-level logging requirement. The shell cannot reach tehdas.eu or zenodo.org
