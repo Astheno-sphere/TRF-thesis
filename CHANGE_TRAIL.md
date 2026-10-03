@@ -1,5 +1,12 @@
 # Change trail
 
+## 4 October 2026 — Word build and tracked-changes comparison (B-39, B-40)
+
+| ID | Change | Verification |
+|---|---|---|
+| B-39 | `handoff_tools/build_docx.py` replaces the bare pandoc call (Tiger: tables unruled, code unreadable, no page structure). Title page; every chapter, appendix and front-matter part on a new page; contents and list of tables with clickable entries and PAGEREF page numbers; tables with thin rules, shaded repeating header row, 10 pt, rows not split; captions bold-labelled, kept with their table, bookmarked; 446 clickable cross-references (Table X.Y, Section N.M, §N.M, Chapter N; the Joint Action's own tables excluded); code in bordered shaded Consolas 8.5 pt with token colours; references with hanging indent; A4, 2.5 cm margins, page numbers in the footer, none on the title page. Text unchanged | OOXML validation clean (pandoc's math and numbering ordering faults repaired); rendered to PDF (LibreOffice Math installed so equations render) and pages inspected: title, contents, Table 4.1, Table 5.3, Proposition 3, code listing |
+| B-40 | `handoff_tools/build_tracked.py`: `VERA-SNARK_Thesis_TRACKED_vs_30Sept.docx`, the front matter and Chapters 1–7 against the draft he reviewed, as word-level tracked insertions and deletions under the author's name | OOXML validation clean; 319 paragraphs unchanged, 267 revised, 79 new, 93 removed (before the fix round); rendered and inspected |
+
 ## 4 October 2026 — independent audit against the 30 Sept review
 
 | ID | Change | Verification |
