@@ -455,3 +455,144 @@
 2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-11 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | log and optional module in the method; the solver was never used, exhaustive search was
 2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-12 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | Table 4.1 as the instrument of external validity
 2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-13 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | conditional statement as in Ch4 §4.6
+2026-10-03 20:59 | P38_renumber.py | P38-001 | Chapter2_LitReview_v2_FINAL.md | faa3f345d3ce -> 34cddfb31b94 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-002 | Chapter3_Methodology_v1.md | a177a17a320d -> ede6fcdb0750 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-003 | Chapter3_Methodology_v1.md | a177a17a320d -> ede6fcdb0750 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-004 | Chapter3_Methodology_v1.md | a177a17a320d -> ede6fcdb0750 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-005 | Chapter4_TRF_Model_v1.md | ef08be47a144 -> e5df2776a1d5 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-006 | Chapter4_TRF_Model_v1.md | ef08be47a144 -> e5df2776a1d5 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-007 | Chapter4_TRF_Model_v1.md | ef08be47a144 -> e5df2776a1d5 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-008 | Chapter4_TRF_Model_v1.md | ef08be47a144 -> e5df2776a1d5 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-009 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-010 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-011 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-012 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-013 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-014 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-015 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-016 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-017 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-018 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-019 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-020 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-021 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-022 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-023 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-024 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-025 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-026 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-027 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-028 | Chapter5_Demonstration_v1.md | d20ef2a24ada -> d11657231678 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-029 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-030 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-031 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-032 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-033 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-034 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-035 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-036 | Chapter6_Discussion_v1.md | 5f787b6d202b -> 298329d3ad12 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-037 | Chapter7_Conclusion_v1.md | acfcbf9bae9d -> 8ef1fad5773e | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-038 | Chapter7_Conclusion_v1.md | acfcbf9bae9d -> 8ef1fad5773e | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-039 | Chapter7_Conclusion_v1.md | acfcbf9bae9d -> 8ef1fad5773e | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-040 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-041 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-042 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-043 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-044 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-045 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-046 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-047 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-048 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-049 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-050 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-051 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-052 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-053 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-054 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-055 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-056 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-057 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-058 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-059 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-060 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-061 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-062 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-063 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-064 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-065 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-066 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-067 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-068 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-069 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-070 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-071 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-072 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-073 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-074 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-075 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-076 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-077 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-078 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-079 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-080 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-081 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-082 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-083 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-084 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-085 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-086 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-087 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-088 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-089 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-090 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-091 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-092 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-093 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-094 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-095 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-096 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-097 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-098 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-099 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-100 | code_artefacts/README_Appendix_A.md | 4c51649d84e9 -> 8e670f68d6b7 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-101 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-102 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-103 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-104 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-105 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-106 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-107 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-108 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-109 | demo_app/app.py | dd801d14a6c5 -> 3efefe9cbc04 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-110 | demo_app/trf_checker.py | cf1822dffd35 -> 07a9ef328e1d | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-111 | demo_app/trf_checker.py | cf1822dffd35 -> 07a9ef328e1d | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-112 | repro_package/trf_checker.py | cf1822dffd35 -> 07a9ef328e1d | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-113 | repro_package/trf_checker.py | cf1822dffd35 -> 07a9ef328e1d | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-114 | code_artefacts/trf_checker.py | cf1822dffd35 -> 07a9ef328e1d | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-115 | code_artefacts/trf_checker.py | cf1822dffd35 -> 07a9ef328e1d | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-116 | demo_app/README_repo.md | b15679678845 -> 4b623e6f4896 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-117 | demo_app/README_repo.md | b15679678845 -> 4b623e6f4896 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-118 | demo_app/README_repo.md | b15679678845 -> 4b623e6f4896 | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-119 | repro_package/run_all.sh | 70dd99521feb -> 8ebee4feb7bc | MIN-13 renumbering
+2026-10-03 20:59 | P38_renumber.py | P38-120 | repro_package/run_all.sh | 70dd99521feb -> 8ebee4feb7bc | MIN-13 renumbering
+2026-10-03 21:01 | P39_app_update.py | P39-01 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | caption
+2026-10-03 21:01 | P39_app_update.py | P39-02 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | sixth tab
+2026-10-03 21:01 | P39_app_update.py | P39-03 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | precise references
+2026-10-03 21:01 | P39_app_update.py | P39-04 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | conditional statement as in the thesis
+2026-10-03 21:01 | P39_app_update.py | P39-05 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | integrity and tamper tests visible; included in the match check
+2026-10-03 21:01 | P39_app_update.py | P39-06 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | success message
+2026-10-03 21:01 | P39_app_update.py | P39-07 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | label was wrong (§5.4 is Corollary 1.2)
+2026-10-03 21:01 | P39_app_update.py | P39-08 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | comment
+2026-10-03 21:01 | P39_app_update.py | P39-09 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | optional module visible
+2026-10-03 21:01 | P39_app_update.py | P39-10 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | limits stated as in Ch5/Ch6
+2026-10-03 21:01 | P39_app_update.py | P39-11 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | Proposition 3 explorer
+2026-10-03 21:01 | P39_app_update.py | P39-12 | demo_app/app.py | 3efefe9cbc04 -> 40ff50d1dba8 | footer
+2026-10-03 21:02 | P39b_app_width.py | P39b-01 | demo_app/app.py | 40ff50d1dba8 -> 6379f2671244 | deprecated parameter
+2026-10-03 21:02 | P39b_app_width.py | P39b-02 | demo_app/requirements.txt | 944269ad914f -> b362ad3cdf66 | requirements
+2026-10-03 21:02 | P40_appendixA_app.py | P40-B05 | code_artefacts/README_Appendix_A.md | 8e670f68d6b7 -> 02d2da6d1a15 | Appendix A A.14 synced to demo_app/app.py
+2026-10-03 21:02 | P40_appendixA_app.py | P40-01 | code_artefacts/README_Appendix_A.md | 8e670f68d6b7 -> 02d2da6d1a15 | six tabs
+2026-10-03 21:02 | P40_appendixA_app.py | P40-02 | code_artefacts/README_Appendix_A.md | 8e670f68d6b7 -> 02d2da6d1a15 | tab 5 label corrected; tab 6
+2026-10-03 21:02 | P40_appendixA_app.py | P40-03 | code_artefacts/README_Appendix_A.md | 8e670f68d6b7 -> 02d2da6d1a15 | line count
+2026-10-03 21:02 | P40_appendixA_app.py | P40-04 | Chapter5_Demonstration_v1.md | d11657231678 -> 88c33a2fcc1d | line count
+2026-10-03 21:02 | P40_appendixA_app.py | P40-05 | demo_app/README_repo.md | 4b623e6f4896 -> e17c6aa6a9d4 | repo README
+2026-10-03 21:03 | P41_toc.py | P41-01 | Front_Matter_v1.md | fcabceb8783a -> fb2490cebe1a | MIN-13: TOC regenerated from headings

@@ -45,7 +45,7 @@ passage by passage when the patch for that passage is written.
 | MIN-10 | §5.3, §5.4, §5.6: witness lines in a code block, one per line | CLOSED | P14, P25 | §5.3, §5.4, §5.6 verbatim code blocks |
 | MIN-11 | §6.1 "thirty-nine concrete witnesses" → "witnesses in the model" | CLOSED | P01 |  |
 | MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | CLOSED | P01 |  |
-| MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | OPEN |  |  |
+| MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | CLOSED | P38, P41 | §5.6, §6.10; Chapter 5 tables 5.1–5.7; Appendix A.1–A.22 in order; TOC lists every section |
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |

@@ -142,16 +142,127 @@ Two declarations are made explicitly because the first version of this project, 
 
 ## Table of Contents
 
-1. *Introduction*: background, problem statement, research questions, significance, scope, methodological approach, structure
-2. *Literature Review and Theoretical Foundation*: review strategy; cross-border landscape; the audit-retention versus erasure tension; cryptographic approaches; formal approaches to compliance verification; Norwegian secondary-use infrastructure; information-logistics framing; comparative analysis; research gaps; conceptual positioning
-3. *Methodology and Research Design*: design science paradigm; the adopted cycle; specification-and-demonstration with formal modelling; formal-modelling methodology; synthetic data; sandbox approach; validity, reliability and limitations; ethics
-4. *The Tri-Lateral Retention Feasibility Model and the Crypto-Erasure by Invalidation Mechanism*: necessity analysis; model and notation; constraints; two semantics; Proposition 1 and corollaries; Proposition 2; mechanism specification; residue analysis; rival designs; Norwegian integration
-5. *Demonstration*: implementation; results under each semantics; Corollary 1.2 witnesses; independent cross-check; payload-provenance comparison; what is and is not established
-6. *Discussion*: what the thesis establishes; the authority problems; key destruction and assurance; the cost objection; synthetic data; practice and policy; theoretical implications; boundaries as contribution
-7. *Conclusion*: problem and answer; contributions; limitations; open questions of authority; future work
+**Chapter 1. Introduction**
 
-*Appendix A*: Code artefacts, reproduction commands, data provenance, integrity record, full source of all five modules and the recorded console run of every command
+- 1.1 Background and Context
+- 1.2 Problem Statement
+- 1.3 Research Objectives and Questions
+- 1.4 Significance and Relevance
+- 1.5 Scope and Out-of-Scope
+- 1.6 Methodological Approach
+- 1.7 Thesis Structure
 
-*Appendix B*: Search query log: 59 queries across four dated search rounds, a fifth round of 18 locator verifications, round purposes and coverage notes
+**Chapter 2. Literature Review and Theoretical Foundation**
 
-*Appendix C*: Expert evaluation instrument: panel composition, session structure, demonstration script, semi-structured interview guide, closed-response questionnaire, analysis plan
+- 2.1 Review Protocol
+- 2.2 The Cross-Border Health Data Exchange Landscape
+- 2.3 The Audit-Retention versus Right-to-Erasure Tension
+- 2.4 Cryptographic Approaches to Audit Compliance
+- 2.5 Formal Approaches to Regulatory-Compliance Verification
+- 2.6 Norwegian Secondary-Use Infrastructure
+- 2.7 Information Logistics Framing
+- 2.8 Comparative Analysis
+- 2.9 Identified Research Gaps
+- 2.10 Conceptual Positioning of the Thesis
+
+**Chapter 3. Methodology and Research Design**
+
+- 3.1 Research Paradigm
+- 3.2 The Design Science Cycle Adopted
+- 3.3 The Specification-and-Demonstration Variant, Extended with Formal Modelling
+- 3.4 Formal-Modelling Methodology
+- 3.5 Synthetic Data
+- 3.6 Sandbox Implementation Approach
+- 3.7 Validity, Reliability, and Limitations
+- 3.8 Evaluation Design for the Next Cycle
+- 3.9 Ethical Considerations
+
+**Chapter 4. The Tri-Lateral Retention Feasibility Model and the Crypto-Erasure by Invalidation Mechanism**
+
+- 4.1 Purpose and Structure of the Chapter
+- 4.2 What Must Be Retained: The Necessity Analysis
+- 4.3 The Model: Objects and Notation
+- 4.4 The Three Constraints
+- 4.5 Two Semantics of Verifiability
+- 4.6 Proposition 1: Infeasibility under Plaintext Verifiability
+- 4.7 Proposition 2: Feasibility under Accountability-Preserving Verifiability
+- 4.8 The Mechanism: Crypto-Erasure by Invalidation
+- 4.9 Residue Analysis
+- 4.10 Rival Designs
+- 4.11 Integration with the Norwegian Infrastructure
+- 4.12 Summary
+
+**Chapter 5. Demonstration**
+
+- 5.1 Purpose and Claim
+- 5.2 Implementation
+- 5.3 Results under Semantics I
+- 5.4 Corollary 1.2: Infeasibility Without an Erasure Request
+- 5.5 Independent Cross-Check
+- 5.6 Witness at the Extended Response Period
+- 5.7 Results under Semantics II
+- 5.8 What the Demonstration Establishes, and What It Does Not
+
+**Chapter 6. Discussion**
+
+- 6.1 What the Thesis Establishes
+- 6.2 The Authority Problem
+- 6.3 Key Destruction and the Limits of Assurance
+- 6.4 The Cost Objection
+- 6.5 Scalability
+- 6.6 Evaluation Design and the Role of Stakeholder Assessment
+- 6.7 Synthetic Data and the Limits of the Demonstration
+- 6.8 Implications for Practice and Policy
+- 6.9 Theoretical Implications
+- 6.10 Where the Ceiling Is Anchored: a Cross-Sector Test
+- 6.11 Boundaries as Contribution
+- 6.12 Summary
+
+**Chapter 7. Conclusion**
+
+- 7.1 The Problem and the Answer
+- 7.2 Contributions
+- 7.3 What the Thesis Does Not Establish
+- 7.4 The Two Open Questions of Authority
+- 7.5 Future Work
+- 7.6 Closing
+
+**References**
+
+**Appendix A. Code Artefacts and Reproduction Record**
+
+- A.1 Availability
+- A.2 Contents
+- A.3 Environment and generation provenance
+- A.4 Software environment
+- A.5 Exact commands
+- A.6 What the code does
+- A.7 Data provenance
+- A.8 Integrity record
+- A.9 Known limitations of the artefact
+- A.10 Source listing: `trf_checker.py`
+- A.11 Source listing: `synthea_layer.py`
+- A.12 Source listing: `norwegian_layer.py`
+- A.13 Source listing: `cross_sector_check.py`
+- A.14 Source listing: `app.py`
+- A.15 Source listing: `crypto_envelope.py`
+- A.16 Console output of the reported run
+- A.17 Console output of the payload-provenance comparison, full cohort
+- A.18 Console output of the erasure-response-period witness
+- A.19 Console output of the Norwegian context module
+- A.20 Console output of the cross-sector instance
+- A.21 Console output of the payload-provenance comparison, committed subset
+- A.22 Console output of the envelope-encryption module
+
+**Appendix B. Search Query Log**
+
+**Appendix C. Expert Evaluation Instrument**
+
+- C.1 Purpose and status
+- C.2 Panel composition
+- C.3 Session structure
+- C.4 Demonstration script
+- C.5 Semi-structured interview guide
+- C.6 Closed-response questionnaire
+- C.7 Analysis
+- C.8 Data protection, if executed

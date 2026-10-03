@@ -10,7 +10,7 @@ echo "=== 1/4  TRF feasibility checker (Theorems 1 and 2) ==="
 python3 trf_checker.py | tee results/trf_output_rerun.txt
 
 echo
-echo "=== 2/4  Extended erasure response period (Chapter 5, Section 5.5a) ==="
+echo "=== 2/4  Extended erasure response period (Chapter 5, Section 5.6) ==="
 python3 trf_checker.py --delta-witness | tee results/delta_witness_rerun.txt
 
 echo
@@ -18,7 +18,7 @@ echo "=== 3/4  Synthea realism layer (payload-provenance comparison) ==="
 python3 synthea_layer.py | tee results/synthea_comparison_rerun.txt
 echo
 echo "Mean payload is 891 bytes against the eight-bundle subset shipped here and"
-echo "1,006 bytes against the full 98-bundle cohort. Chapter 5, Section 5.7 reports"
+echo "1,006 bytes against the full 98-bundle cohort. Chapter 5, Section 5.8 reports"
 echo "both. Every other figure is identical under either cohort."
 echo
 echo "To run against the full cohort instead, which needs Java 17 or later:"
