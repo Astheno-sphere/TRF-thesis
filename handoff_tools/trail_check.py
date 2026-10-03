@@ -178,7 +178,7 @@ def main():
         for a, b in plain_pairs:  # replay every logged edit on the closest draft line
             if a and a in replayed:
                 replayed = replayed.replace(a, b)
-        if replayed == ours:
+        if verify_base.norm(replayed) == ours:  # deletions leave double spaces; compare normalised
             continue
         w = ours.split()  # fallback: a new sentence that has no draft counterpart
         shingles = [" ".join(w[i:i + 6]) for i in range(0, max(1, len(w) - 5))]

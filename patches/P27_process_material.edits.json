@@ -1,0 +1,65 @@
+[
+ {
+  "id": "P27-01",
+  "file": "Front_Matter_v1.md",
+  "old": " Any claim to the contrary appearing in earlier drafts of this project is withdrawn.",
+  "new": "",
+  "why": "PRES-3: merged into the single statement below"
+ },
+ {
+  "id": "P27-02",
+  "file": "Front_Matter_v1.md",
+  "old": "An audit conducted in May 2026 identified citations in the earlier draft to works that do not exist; that draft has been discarded in its entirety and every citation in the present work has been checked against a primary or retrievable source.",
+  "new": "An earlier draft of this project, discarded in May 2026, contained citations to works that do not exist and a statement of ethics approval that was never obtained; every citation in the present work has been checked against a primary or retrievable source.",
+  "why": "PRES-3: the one statement about the earlier draft"
+ },
+ {
+  "id": "P27-03",
+  "file": "Front_Matter_v1.md",
+  "old": "## Version and Change Record\n\nThis thesis and its artefact are versioned together. The table records what changed, when, and what verified it, so that a reader comparing the document against the published repository can tell which of the two moved if a figure disagrees. The full trail, with an identifier for every individual change, is maintained alongside the artefact.\n\n*Table F.1. Document and artefact versions*\n\n| Date | Document | Artefact | What changed | Verification |\n|---|---|---|---|---|\n| 16 Sept 2026 | Chapters 1–7 assembled | `trf_checker.py`, `synthea_layer.py` | First complete draft; the checker and the realism layer written and run | Checker output recorded |\n| 18 Sept 2026 | Appendix A written | — | Provenance of the synthetic cohort established by inspecting the bundles rather than by recollection | Six Synthea markers confirmed in every bundle |\n| 19 Sept 2026 | §5.5a added | `--delta-witness` added | The erasure response period tested at δ = 3 rather than asserted | Table 5.2a produced by execution |\n| 21 Sept 2026 | §4.8 terminal transition; mathematics to LaTeX | Salt destroyed with the key | A reviewer-found gap at the end of the record's life closed; 159 equations converted | Checker output unchanged, byte for byte |\n| 23 Sept 2026 | — | Repository published | Code and documents pushed to GitHub; demonstration deployed | — |\n| 28 Sept 2026 | §5.2 line counts corrected; §6.9a added; Appendix A extended | Eight-bundle subset committed; Tab 5 added; five recorded runs committed | The dataset the thesis reports on made obtainable; the two robustness results given a viewer; the cross-sector instance carried into the discussion | Verified from a fresh clone: checker byte-identical to its recorded run, realism layer 891 bytes and six identical measures |\n| 28 Sept 2026 | Bibliography linked | — | Every entry given a DOI or URL that was fetched; two entries removed as documents that do not exist as cited; six citations corrected on year, title or author | 67 of 67 entries carry a locator |\n\n*Table F.2. The artefact at the date of submission*\n\n| Module | Lines | Reports a thesis figure? |\n|---|---|---|\n| `trf_checker.py` | 533 | Yes — Tables 5.1, 5.2a, 5.3 |\n| `synthea_layer.py` | 152 | Yes — Table 5.4 |\n| `norwegian_layer.py` | 135 | No — illustrative |\n| `cross_sector_check.py` | 110 | No — illustrative, discussed at §6.9a |\n| `app.py` | 526 | No — a viewer, never a source |\n\nRepository: https://github.com/Astheno-sphere/TRF · Demonstration: https://trfhimolde.streamlit.app/\n\nPublished commits, most recent first:\n\n```text\n  0d855a7  28 Sep 2026  Add Tab 5 robustness checks and a recorded run per command\n  88840a6  28 Sep 2026  Record R-09 to R-11 and refresh checksums\n  cc0d7f3  28 Sep 2026  Appendix A: drop the norwegian/ path prefix\n  d79b96f  28 Sep 2026  Ship the Synthea subset and repair the flattened upload\n  03048f2  23 Sep 2026  Add files via upload\n```\n\nTwo corrections are recorded here because they were made against the thesis's own earlier claims rather than in response to a reviewer. An inference dating a source from the age of its web page was withdrawn, the page being updated in place and its age therefore saying nothing about its contents. And a statement that the artefact's code carried a comment recommending a cryptographically secure random source was removed, no such comment existing; the salt's reproducibility-only status is now stated directly instead.\n\n",
+  "new": "",
+  "why": "PRES-3: Version and Change Record moved to the repository (docs/VERSION_RECORD.md)"
+ },
+ {
+  "id": "P27-04",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Round 0 requires explanation. An exploratory phase preceded the documented rounds and produced a full draft dated 24 May 2026, which survives as an artifact and is the reason the rebuild occurred. That draft contains no search strings, no inclusion criteria, no screening account, and no reference to any review protocol: a fact established by inspection of the file rather than by recollection. Its queries are not recoverable and are not reconstructed here. Round 0 is therefore reported at artifact level rather than query level, and contributes nothing to the absence claim of Section 2.9, which rests entirely on the four documented rounds.",
+  "new": "Round 0 is the exploratory reading that preceded the documented rounds. Its queries were not recorded, and it contributes nothing to the absence claim of Section 2.9, which rests on the four documented search rounds.",
+  "why": "PRES-3: Round 0 reduced to what the search record needs"
+ },
+ {
+  "id": "P27-05",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": " The last of these was applied to the thesis's own earlier draft. That draft carried twenty-eight distinct citations, of which approximately fourteen could not be verified against any primary or publisher record; the draft was discarded rather than repaired, and the verification audit that established this is recorded in the project's working log of 25 May 2026.",
+  "new": "",
+  "why": "PRES-3: stated once, in the Declaration"
+ },
+ {
+  "id": "P27-06",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "The exploratory phase preceding the documented rounds is acknowledged but not claimed as evidence, because its queries were never recorded; only the resulting draft survives, and it is used in this chapter solely as an artifact demonstrating the absence of a protocol.",
+  "new": "The exploratory phase before round 1 is not claimed as evidence, because its queries were never recorded.",
+  "why": "PRES-3"
+ },
+ {
+  "id": "P27-07",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Round 2 tested the claims of an earlier draft and led to its abandonment.",
+  "new": "Round 2 tested the claims carried forward from the exploratory phase.",
+  "why": "PRES-3"
+ },
+ {
+  "id": "P27-08",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": " This is stated explicitly because an earlier draft of this project asserted an institutional review board approval that did not exist; the correction is recorded here as a matter of research integrity.",
+  "new": "",
+  "why": "PRES-3: stated once, in the Declaration"
+ },
+ {
+  "id": "P27-09",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": " These commitments respond directly to the failures identified in the earlier draft of this project, and their explicit statement here is intended to make them checkable by the examiner rather than merely asserted.",
+  "new": "",
+  "why": "PRES-3"
+ }
+]
