@@ -1,5 +1,12 @@
 # Change trail
 
+## 3 October 2026 — patch P25 (witness lines)
+
+| ID | Change | Verification |
+|---|---|---|
+| P25-01, P25-02 | MIN-10: §5.3 and §5.4 witness lines were quotation lines labelled "verbatim" but typographically altered (⇒, α, →). Now code blocks, one line per witness, copied from the recorded run | Lines 17–19 and 22–24 of `repro_package/results/trf_output.txt` |
+| B-32 | T-10 (German Art 68(12)) attempted: streamlex has no German page; the Council's German PDF arrived truncated. Left to Tiger (EUR-Lex multilingual display) | Research log row 38 |
+
 ## 3 October 2026 — D7.4 and the Union Customs Code read in full (Tiger's T-1, T-2), patch P24
 
 | ID | Change | Verification |
