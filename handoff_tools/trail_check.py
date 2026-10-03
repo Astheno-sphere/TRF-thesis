@@ -117,7 +117,7 @@ def main():
     report(3, f"every logged edit has a CHANGE_TRAIL row ({len({r['id'] for r in log})} IDs)", "FAIL" if missing else "PASS", missing)
 
     # 4 commits
-    msgs = sh("git", "log", "--format=%s", BRANCH)
+    msgs = sh("git", "log", "--format=%B", BRANCH)  # full message: one commit may carry two patch lines
     nocommit = []
     for pf in sorted({r["patch"] for r in log}):
         pid = pf.split("_")[0]
