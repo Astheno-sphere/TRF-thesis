@@ -148,11 +148,11 @@
   },
   {
    "kind": "target",
-   "name": "'accumulator-based' (s1.6)",
-   "pattern": "accumulator-based",
+   "name": "'accumulator-based invalidation suffice' (s1.6)",
+   "pattern": "accumulator-based invalidation",
    "scope": "prose",
    "item": "MIN",
-   "baseline": 2,
+   "baseline": 1,
    "goal": 0
   },
   {

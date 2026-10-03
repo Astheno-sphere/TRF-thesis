@@ -43,10 +43,10 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 | HANDOFF | HANDOFF_READ_FIRST.md | 9e354bece4a9 | 3,833 | 2 Oct 05:40 | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
 | CONTROL | SUPERVISOR_REVIEW_2026-09-30_Ferreira.md | 3924dc7b50d5 | 2,962 | 2 Oct 05:36 | Supervisor peer review, 30 Sept. THE LIVE WORK. Each major item verified against the files; sequencing note overrides his numbering |
-| CONTROL | PATCHES.md | 42f6e033f307 | 15,562c | 2 Oct 05:35 | The working patch list for Joao Round 3. Wave −1 (work done on the wrong base, queued for re-application), seven waves, three gating decisions, cascade map. Nothing of the supervisor review applied yet |
+| CONTROL | PATCHES.md | 757487bd875a | 15,562c | 3 Oct 00:17 | The working patch list for Joao Round 3. Wave −1 (work done on the wrong base, queued for re-application), seven waves, three gating decisions, cascade map. Nothing of the supervisor review applied yet |
 | CONTROL | SUPERVISOR_FEEDBACK_HISTORY.md | b0052ac4a404 | 8,151c | 2 Oct 05:36 | Every supervisory round and what it changed. Patterns across rounds |
 | CONTROL | supervisor_review/supervisor_review_RAW_2026-09-30.txt | bb280bd623ae | 3,127 | 30 Sep | The review exactly as received, unedited, so nothing rests on my paraphrase |
-| CONTROL | DECISION_RECORD.md | 962c4618d4a8 | 1,614 | 2 Oct 05:34 | Settled decisions with alternatives rejected; ten open decisions, O-01 blocking |
+| CONTROL | DECISION_RECORD.md | 8cf90f861726 | 2,372 | 3 Oct 00:17 | Settled decisions with alternatives rejected; ten open decisions, O-01 blocking |
 | CONTROL | FAILURE_LEDGER.md | 586ab203f202 | 1,508 | 2 Oct 05:34 | Every failure mode and the rule from it; the five false trail entries |
 | CONTROL | NUANCES.md | 4102be608b9d | 1,255 | 2 Oct 05:35 | How Tiger works, standing rules, reversed decisions, false-positive errors |
 | CONTROL | CONVERSATION_LINEAGE.md | 22e003f72408 | 791 | 2 Oct 05:34 | Seven sessions mapped; this session's identifier for future reference |
@@ -54,7 +54,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 589b14d3edfb | 11,191 | 2 Oct 23:48 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | b163c4333a50 | 11,304 | 3 Oct 00:17 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | fdfc17f22984 | 216 | 2 Oct 23:47 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
@@ -68,9 +68,10 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | supervisor_review/review_email_text_2026-09-30.txt | 71a963f94788 | 3,112 | 2 Oct 05:34 | The emailed review text. His authority is this text |
 | HANDOFF | handoff_tools/patch.py | ee54315d88bc | — | 2 Oct 23:48 | All-or-nothing exact-match patcher; logs to patches/APPLIED.log |
 | HANDOFF | handoff_tools/verify_base.py | afbaedb3d18a | — | 2 Oct 23:45 | Chapters vs reviewed draft, prose line by line. Base: 0 differences |
-| CONTROL | REVIEW_TRACKER.md | 6d1beb3f1166 | 40 items | 2 Oct 23:45 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
+| CONTROL | REVIEW_TRACKER.md | 0f6e9d50add8 | 40 items | 3 Oct 00:17 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
 | HANDOFF | handoff_tools/trail_check.py | 6eff79782e0f | — | 2 Oct 23:47 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
-| HANDOFF | handoff_tools/guards.json | e736db22eb97 | 24 guards | 2 Oct 23:44 | Regression patterns held at 0 and review targets that may only fall, with baselines |
+| HANDOFF | handoff_tools/guards.json | a5289948716f | 24 guards | 3 Oct 00:17 | Regression patterns held at 0 and review targets that may only fall, with baselines |
+| HANDOFF | handoff_tools/register_sync.py | c7c87a4d9a76 | — | 3 Oct | Recomputes register rows whose file changed; run before each commit |
 | HANDOFF | handoff_tools/README.md | fd8a88632157 | — | 2 Oct 23:48 | How to run each tool |
 | HANDOFF | patches/D0_rebase_to_draft.py | f90ab76b04b8 | 29 edits | 2 Oct 05:32 | The rebase onto the reviewed draft (commit 0438daf) |
 | HANDOFF | patches/APPLIED.log | 09eef8138ebd | 554 | 2 Oct 05:32 | Every applied edit with before/after md5 |
