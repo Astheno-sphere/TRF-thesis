@@ -71,3 +71,8 @@
 2026-10-03 00:30 | P04_ch4_partition_reading.py | P04-16 | Chapter4_TRF_Model_v1.md | b8c72a3689d4 -> 8fdbb0528bb7 | M1: new primary source
 2026-10-03 00:31 | P05_trajectory_gap.py | P05-01 | Chapter4_TRF_Model_v1.md | 8fdbb0528bb7 -> ad1766c1eb79 | P04 gap: explicit step for the subject link when Art 17 fixed t^I earlier
 2026-10-03 00:31 | P05_trajectory_gap.py | P05-02 | Chapter4_TRF_Model_v1.md | 8fdbb0528bb7 -> ad1766c1eb79 | P04 gap: the C3 argument now cites the step that does the work
+2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-01 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | D-16 evidence: the SPE specification ties log identifiability to the actor
+2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-02 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | D-17 evidence: D7.4 OPR-6 accepts 'rendered unrecoverable' including backups
+2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-03 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | M2b: Rival 6 added
+2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-04 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | M1, M2b: Rival 3 no longer claims Art 17 targets the pseudonym (contradicted §4.2); dataset-level logging conceded as a real alternative for the ceiling
+2026-10-03 14:55 | P06_rival6_propL_d74.py | P06-05 | Chapter4_TRF_Model_v1.md | ad1766c1eb79 -> e6572937841c | M2b: Rival 6 answered; Proposition L stated and proved (D-16, D-18)
