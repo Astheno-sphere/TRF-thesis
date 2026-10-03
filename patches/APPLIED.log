@@ -127,3 +127,7 @@
 2026-10-03 15:07 | P10_spuhin_as_inspected.py | P10-17 | Chapter7_Conclusion_v1.md | 0c87832e3f4b -> dd98dc0f6b7d | M5b
 2026-10-03 15:07 | P10b_spuhin_table.py | P10-18 | Chapter2_LitReview_v2_FINAL.md | e567a3106b2e -> 8537fac2a525 | M5b
 2026-10-03 15:07 | P10b_spuhin_table.py | P10-19 | Chapter2_LitReview_v2_FINAL.md | e567a3106b2e -> 8537fac2a525 | M5b
+2026-10-03 15:11 | P11_logistics_anchor.py | P11-01 | Chapter1_Introduction_v2.md | 654344ccfe63 -> 437363c0af1b | M7a: §1.4 overreach replaced by the specific, verified correspondence
+2026-10-03 15:11 | P11_logistics_anchor.py | P11-02 | Chapter1_Introduction_v2.md | 654344ccfe63 -> 437363c0af1b | M7b: one honest sentence on programme fit
+2026-10-03 15:11 | P11_logistics_anchor.py | P11-03 | Chapter2_LitReview_v2_FINAL.md | 8537fac2a525 -> bdef79451f51 | M7a: verified UCC anchor; unsourced 'destruction-of-records requirements' claim removed; tested against §6.9a; limit stated
+2026-10-03 15:11 | P11_logistics_anchor.py | P11-04 | Chapter2_LitReview_v2_FINAL.md | 8537fac2a525 -> bdef79451f51 | M7a: new reference

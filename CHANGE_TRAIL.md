@@ -1,5 +1,11 @@
 # Change trail
 
+## 3 October 2026 — supervisor review, patch P11 (logistics anchor, programme fit)
+
+| ID | Change | Verification |
+|---|---|---|
+| P11-01 to P11-04 | M7a. §2.7: the unsourced analogy ("destruction-of-records requirements that apply to perishable or sensitive physical goods") replaced by Union Customs Code Art 51 (records ≥ 3 years from declaration or discharge, extended for appeals) and Art 197 (destruction of goods). Finding: they do not collide, because destruction reaches the goods and record-keeping the documents; the record outlives the thing recorded, which is Semantics II in physical form. Tested against §6.9a (external anchor, different object) and the analogy's limit stated. §1.4 "imports a solution structure that logistics has operated for decades" replaced by that specific correspondence. M7b. §1.5: one sentence on the programme fit (logistics of information, not of energy). New reference: Regulation (EU) No 952/2013 | UCC Arts 51, 197 verbatim from legislation.gov.uk "as adopted" (RESEARCH_LOG rows 34–35). patch.py: one declared loss ("not yet", inside the overreach removed); Article 17 kept in §2.7 after the gate flagged it. Bibliography 68 → 69 |
+
 ## 3 October 2026 — supervisor review, patch P10 (SPUHiN as inspected)
 
 | ID | Change | Verification |
