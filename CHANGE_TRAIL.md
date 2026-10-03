@@ -1,5 +1,14 @@
 # Change trail
 
+## 4 October 2026 — patches P28–P31 (repetition, front matter, Chapter 5)
+
+| ID | Change | Verification |
+|---|---|---|
+| P28-01 to P28-06 | PRES-4 (part 1): NCPeH pilot details (dates, scope, DPIA) said once, in §2.2; §1.1, §1.4, §2.6, §4.11, §6.8 cite (Helsedirektoratet, 2026) and point to §2.2 | patch.py inspector: no citation, number, article or hedge lost |
+| P29-01 to P29-02 | PRES-4 (part 2): the Art 68(12) broad/narrow grounds argued once, in §4.6; §6.2 and §7.4 state the question and point there | inspector: lost 0 |
+| P30-01 to P30-07 | Front matter level with the body: Sammendrag "teorem 1/2" → "proposisjon 1/2" (D-18); Abstract, Sammendrag and Statement of Contribution add Propositions 3–4, the accessor/patient-link partition (D-16), the tamper-evident log; Corollary 1.2 stated with both conditions (broad reading, patient-record granularity) | inspector: lost 0; figures 95/90/39/138 checked against repro_package/results |
+| P31-01 to P31-14 | M4d + PRES-3 in Ch5: meta commentary cut; rate disclaimer said once (§5.3); §5.4 no longer says the reading is "adopted" (now conditional, as §4.6); Proposition 3(ii) linked where its condition is computed; "no cryptographic library" confined to the checker (crypto_envelope.py exists); closing bridge to Ch6 | inspector: lost 0, gained Art 68(12) mention |
+
 ## 3 October 2026 — patch P27 (process material)
 
 | ID | Change | Verification |
