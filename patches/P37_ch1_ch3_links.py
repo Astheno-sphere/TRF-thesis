@@ -1,0 +1,63 @@
+# P37 — Chapters 1 and 3 brought level with Chapters 4-7: four propositions, the accessor/patient
+# partition, the tamper-evident log, the optional envelope-encryption module, Table 4.1 as the
+# instrument of external validity, the exhaustive cross-check (Ch3 still said a solver "may" be
+# used), and forward links (zk-SNARK future work, cross-sector test). Ch1 §1.7 roadmap corrected
+# (Ch2 covers six domains, not five).
+C1, C3 = "Chapter1_Introduction_v2.md", "Chapter3_Methodology_v1.md"
+EDITS = [
+    # ---- Chapter 1
+    dict(id="P37-01", file=C1,
+         old="The model decomposes each cross-border audit record into an event-metadata component and a personal-data payload bound by a cryptographic commitment,",
+         new="The model decomposes each cross-border audit record into an event-metadata component, itself divided into the accessor's fields and the link to the patient, and a personal-data payload bound by a cryptographic commitment,",
+         why="D-16 partition announced"),
+    dict(id="P37-02", file=C1,
+         old="the key binding a record to its payload is destroyed, while the invalidation event itself is appended to the audit trail. The mechanism is thus the constructive witness of the model's feasibility result, not an independently posited design.",
+         new="the key binding a record to its payload is destroyed, while the invalidation event itself is appended to a tamper-evident audit log. The mechanism is thus the constructive witness of the model's feasibility result, not an independently posited design. Two further results locate the conflict: a deletion ceiling collides with a retention floor exactly when it is no longer than the floor, and the event it is anchored to decides whether the collision can be read from the text (Proposition 3); and moving a record out of the regulated environment meets the ceiling but not the right to erasure (Proposition 4).",
+         why="log; Props 3-4"),
+    dict(id="P37-03", file=C1,
+         old="First, it does not build a working zero-knowledge SNARK circuit; no component of the mechanism requires one, and the cryptographic machinery that an earlier design iteration envisaged is treated as future work.",
+         new="First, it does not build a working zero-knowledge SNARK circuit; no component of the mechanism requires one, and the cryptographic machinery that an earlier design iteration envisaged is treated as future work, at the one point where it becomes necessary (Chapter 7, Section 7.5).",
+         why="forward link"),
+    dict(id="P37-04", file=C1,
+         old="the two feasibility propositions are proved informally at the level of rigour standard for design-science work,",
+         new="the four propositions are proved informally at the level of rigour standard for design-science work,",
+         why="four propositions"),
+    dict(id="P37-05", file=C1,
+         old="*Chapter 2* reviews the literature in five domains: the cross-border health data exchange landscape under EHDS; the audit-retention versus right-to-erasure tension, including the Article 17(3)(b) exemption argument; cryptographic approaches to audit compliance; formal approaches to regulatory-compliance verification; and the Norwegian secondary-use infrastructure. It identifies the research gaps and positions the contribution.",
+         new="*Chapter 2* reviews the literature in six domains: the cross-border health data exchange landscape under EHDS; the audit-retention versus right-to-erasure tension, including the Article 17(3)(b) exemption argument; cryptographic approaches to audit compliance, including secure deletion and tamper-evident logging; formal approaches to regulatory-compliance verification; the Norwegian secondary-use infrastructure; and the information-logistics framing. It identifies the research gaps and positions the contribution.",
+         why="roadmap matches Ch2"),
+    dict(id="P37-06", file=C1,
+         old="*Chapter 4* develops the TRF Model, covering its sets, decomposition, constraints, the two verifiability semantics, and the infeasibility and feasibility propositions. It then specifies the Crypto-Erasure by Invalidation mechanism derived from it, including the invalidation registry, audit-trail behaviour, a comparison against rival designs, and integration analysis with Norwegian NCPeH and NORTRE infrastructure.",
+         new="*Chapter 4* develops the TRF Model, covering its sets, decomposition, constraints, the two verifiability semantics, the infeasibility and feasibility propositions, and the anchoring proposition. It then specifies the Crypto-Erasure by Invalidation mechanism derived from it, including the key hierarchy, the invalidation registry and the tamper-evident log, analyses its residue, compares it against six rival designs with the location proposition, and traces it requirement by requirement to the regulation, the Joint Action's specification for Secure Processing Environments, and the Norwegian NCPeH and NORTRE infrastructure (Table 4.1).",
+         why="roadmap matches Ch4"),
+    dict(id="P37-07", file=C1,
+         old="*Chapter 5* presents the sandbox demonstration, including the executable feasibility check. *Chapter 6* discusses findings and their implications for practice, theory, and policy, and engages the principal counter-positions.",
+         new="*Chapter 5* presents the sandbox demonstration: the executable feasibility check, the independent exhaustive cross-check, the audit-log integrity and tamper tests, and the optional run with real envelope encryption. *Chapter 6* discusses findings and their implications for practice, theory, and policy, engages the principal counter-positions, and tests the model on a statute outside health.",
+         why="roadmap matches Ch5, Ch6"),
+    # ---- Chapter 3
+    dict(id="P37-08", file=C3,
+         old="The personal-data payload comprises the content of the exchanged clinical document.",
+         new="Within the metadata, the accessor's fields are separated from the link to the patient, because the two are reached by different obligations (Chapter 4, Section 4.3). The personal-data payload comprises the content of the exchanged clinical document.",
+         why="D-16 partition in the method"),
+    dict(id="P37-09", file=C3,
+         old="Both are argued informally at the level of rigour standard for design-science work rather than machine-checked; Section 3.7 records what that means for the strength of the claim.",
+         new="Two further results are obtained by the same method from the constraints rather than from the semantics: Proposition 3 states the exact condition under which a ceiling and a floor collide, and Proposition 4 states what relocating a record does to the ceiling and to the right. All four are argued informally at the level of rigour standard for design-science work rather than machine-checked; Section 3.7 records what that means for the strength of the claim.",
+         why="Props 3-4 in the method"),
+    dict(id="P37-10", file=C3,
+         old="The sandbox is implemented in Python and has two layers, separated so that the load-bearing claim rests on the smaller and more inspectable component.",
+         new="The sandbox is implemented in Python and has two layers, separated so that the load-bearing claim rests on the smaller and more inspectable component, and one optional module that reports no thesis figure.",
+         why="optional module named"),
+    dict(id="P37-11", file=C3,
+         old="*No zero-knowledge proof system is implemented at any point*, and none is required. The mechanism's verifiability rests on commitments and on the recorded invalidation event, not on succinct arguments.\n\nA satisfiability solver may optionally be used to cross-check the constraint system on small instances, as an independent confirmation that the hand-written checker implements the constraints as stated. This is a robustness measure rather than a component of the contribution, and the thesis does not depend on it.",
+         new="Every access event, invalidation and subject-link removal is appended to an append-only Merkle log, so that the verifiability condition can be checked as an inclusion proof that fails if an entry is altered. *No zero-knowledge proof system is implemented at any point*, and none is required. The mechanism's verifiability rests on commitments, on the recorded invalidation event and on the log, not on succinct arguments. The optional module repeats the record lifecycle with real AES-256-GCM envelope encryption, to show that unreadability follows from key destruction rather than being asserted.\n\nThe constraint system is cross-checked on small instances by a separately written exhaustive search over every assignment of the accessibility variable, as an independent confirmation that the hand-written checker implements the constraints as stated (Chapter 5, Section 5.5). This is a robustness measure rather than a component of the contribution.",
+         why="log and optional module in the method; the solver was never used, exhaustive search was"),
+    dict(id="P37-12", file=C3,
+         old="Compatibility analysis is weaker evidence than deployment, and is not presented as equivalent to it.",
+         new="The analysis is recorded requirement by requirement in Table 4.1, each row naming its source, what the mechanism does, and whether the artefact executes it or meets it by specification. Compatibility analysis is weaker evidence than deployment, and is not presented as equivalent to it.",
+         why="Table 4.1 as the instrument of external validity"),
+    dict(id="P37-13", file=C3,
+         old="and that Article 68(12) reaches the access logs a Secure Processing Environment generates.",
+         new="and that Article 68(12) reaches the access logs a Secure Processing Environment generates where they are kept at patient-record granularity.",
+         why="conditional statement as in Ch4 §4.6"),
+]
+LOST_OK = ["hedge does not", "hedge may "]   # the solver sentence ("may optionally be used", "does not depend on it") replaced by what was done

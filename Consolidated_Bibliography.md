@@ -27,11 +27,15 @@ Albalwy, F. (2026). Zero-knowledge-based policy enforcement for privacy-preservi
 
 Bai, T., Hu, Y., He, J., Fan, H., & An, Z. (2022). Health-zkIDM: A healthcare identity system based on Fabric blockchain and zero-knowledge proof. *Sensors*, *22*(20), 7716. https://doi.org/10.3390/s22207716 `[Ch1] [Ch2]`
 
+Barker, E. (2020). *Recommendation for key management: Part 1 – General* (NIST Special Publication 800-57 Part 1, Rev. 5). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-57pt1r5 `[Ch4] [Ch6]`
+
 Belen-Saglam, R., Altuncu, E., Lu, Y., & Li, S. (2023). A systematic literature review of the tension between the GDPR and public blockchain systems. *Blockchain: Research and Applications*, *4*(2), 100129. https://doi.org/10.1016/j.bcra.2023.100129 `[Ch2]`
 
 Benaloh, J., & de Mare, M. (1994). One-way accumulators: A decentralized alternative to digital signatures. In T. Helleseth (Ed.), *Advances in Cryptology — EUROCRYPT '93* (LNCS 765, pp. 274–285). Springer. https://doi.org/10.1007/3-540-48285-7_24 `[Ch2]`
 
 Berngaard. (2024). *Ivaretar din teknologiske tjeneste kravet til innebygd personvern?* [Legal commentary]. Advokatfirmaet Berngaard. https://www.berngaard.no/aktuelt/ivaretar-deres-teknologiske-tjeneste-kravene-til-innebygd-personvern-etter-gdpr-gwd56 `[Ch2]`
+
+Boneh, D., & Lipton, R. J. (1996). A revocable backup system. In *Proceedings of the 6th USENIX Security Symposium* (pp. 91–96). USENIX Association. https://www.usenix.org/legacy/publications/library/proceedings/sec96/boneh.html `[Ch2]`
 
 Broadbent, A., & Islam, R. (2020). Quantum encryption with certified deletion. In *Theory of Cryptography (TCC 2020)* (LNCS 12552, pp. 92–122). Springer. https://doi.org/10.1007/978-3-030-64381-2_4 `[Ch2] [Ch6] [Ch7]`
 
@@ -45,19 +49,23 @@ Chakraborty, V., Kaminsky, Y., Mehrotra, S., Naumann, F., Nawab, F., Pappachan, 
 
 Chen, J., Chun, D., Patel, M., Chiang, E., & James, J. (2019). The validity of synthetic clinical data: A validation study of a leading synthetic data generator (Synthea) using clinical quality measures. *BMC Medical Informatics and Decision Making*, *19*, 44. https://doi.org/10.1186/s12911-019-0793-0 `[Ch3] [Ch6]`
 
-Datatilsynet. (2015). *Anonymisering av personopplysninger: veileder*. Norwegian Data Protection Authority. https://www.datatilsynet.no/globalassets/global/dokumenter-pdfer-skjema-ol/regelverk/veiledere/anonymisering-veileder-041115.pdf `[Ch2] [Ch4]`
-
-Datatilsynet. (2021, 11 May). *Vedtak om overtredelsesgebyr til Norges idrettsforbund for mangelfull testing* [Administrative decision]. Norwegian Data Protection Authority. https://www.datatilsynet.no/regelverk-og-verktoy/lover-og-regler/avgjorelser-fra-datatilsynet/2021/vedtak-om-overtredelsesgebyr-til-norges-idrettsforbund-for-mangelfull-testing/ `[Ch3]`
+Crosby, S. A., & Wallach, D. S. (2009). Efficient data structures for tamper-evident logging. In *Proceedings of the 18th USENIX Security Symposium* (pp. 317–334). USENIX Association. https://www.usenix.org/legacy/events/sec09/tech/full_papers/crosby.pdf `[Ch2] [Ch4]`
 
 Datatilsynet. (n.d.-a). *Etablere internkontroll* [Guidance]. Norwegian Data Protection Authority. https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/informasjonssikkerhet-internkontroll/etablere-internkontroll/ `[Ch2] [Ch4] [Ch6]`
 
 Datatilsynet. (n.d.-b). *Innebygd personvern og personvern som standard* [Guidance]. Norwegian Data Protection Authority. https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/innebygd-personvern-og-personvern-som-standard/ `[Ch2] [Ch4] [Ch6]`
+
+Datatilsynet. (2015). *Anonymisering av personopplysninger: veileder*. Norwegian Data Protection Authority. https://www.datatilsynet.no/globalassets/global/dokumenter-pdfer-skjema-ol/regelverk/veiledere/anonymisering-veileder-041115.pdf `[Ch2] [Ch4]`
+
+Datatilsynet. (2021, 11 May). *Vedtak om overtredelsesgebyr til Norges idrettsforbund for mangelfull testing* [Administrative decision]. Norwegian Data Protection Authority. https://www.datatilsynet.no/regelverk-og-verktoy/lover-og-regler/avgjorelser-fra-datatilsynet/2021/vedtak-om-overtredelsesgebyr-til-norges-idrettsforbund-for-mangelfull-testing/ `[Ch3]`
 
 Deloitte Advokatfirma. (2020). *Syntetiske testdata eller personopplysninger ved testing?* [Legal commentary]. Deloitte. https://www.deloitte.com/no/no/services/legal/perspectives/syntetiske-testdata-eller-personopplysninger-i-test.html `[Ch3]`
 
 Dhandala, N. (2026, 17 February). *How to set up crypto-shredding for GDPR right-to-erasure compliance in Google Cloud* [Implementation commentary]. OneUptime. https://oneuptime.com/blog/post/2026-02-17-how-to-set-up-crypto-shredding-for-gdpr-right-to-erasure-compliance-in-google-cloud/view `[Ch2]`
 
 Diamantopoulos, S., Karlsson, L., Karkaletsis, G., Tsoumas, V., Berler, A., Karkaletsis, K., et al. (2019). Secure cross-border exchange of health related data: The KONFIDO approach. In *Computer Security: ESORICS 2019 International Workshops* (pp. 318–333). Springer. https://doi.org/10.1007/978-3-030-34914-1_30 `[Ch2]`
+
+Dworkin, M. J. (2007). *Recommendation for block cipher modes of operation: Galois/Counter Mode (GCM) and GMAC* (NIST Special Publication 800-38D). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-38D `[Ch4]`
 
 eHealth Network. (2017). *Agreement between National Authorities or National Organisations responsible for National Contact Points for eHealth on the Criteria required for the participation in Cross-Border eHealth Information Services* (adopted 9 May 2017). European Commission. https://health.ec.europa.eu/system/files/2017-07/ev_20170509_co06_en_0.pdf `[Ch2] [Ch4]`
 
@@ -77,25 +85,29 @@ European Parliament and Council of the European Union. (2025). Regulation (EU) 2
 
 Feng, N., Marsso, L., Sabetzadeh, M., & Chechik, M. (2023). Early verification of legal compliance via bounded satisfiability checking. In *Computer Aided Verification (CAV 2023)* (LNCS 13966, pp. 374–396). Springer. https://doi.org/10.1007/978-3-031-37709-9_18 `[Ch1] [Ch2] [Ch3] [Ch6] [Ch7]`
 
-Finck, M. (2019). *Blockchain and the General Data Protection Regulation: Can distributed ledgers be squared with European data protection law?* (PE 634.445). European Parliament, Panel for the Future of Science and Technology (STOA), EPRS. https://doi.org/10.2861/535 `[Ch2] [Ch4]`
-
 Finck, M. (2018). Blockchains and data protection in the European Union. *European Data Protection Law Review*, *4*(1), 17–35. https://doi.org/10.21552/edpl/2018/1/6 `[Ch2] [Ch4]`
+
+Finck, M. (2019). *Blockchain and the General Data Protection Regulation: Can distributed ledgers be squared with European data protection law?* (PE 634.445). European Parliament, Panel for the Future of Science and Technology (STOA), EPRS. https://doi.org/10.2861/535 `[Ch2] [Ch4]`
 
 Folkehelseinstituttet. (2024). *Helsedata* [Department page describing Helsedataservice, the national health data access body]. Norwegian Institute of Public Health. https://www.fhi.no/om/organisasjon/helsedata/ `[Ch1] [Ch2] [Ch4]`
 
 Forskningsetikk. (2023). *Helsedataservice takes over authority to process applications and grant access to health data*. Norwegian National Research Ethics Committees. https://www.forskningsetikk.no/en/news-archive/helsedataservice-takes-over-authority-to-process-applications-and-grant-access-to-health-data/ `[Ch2]`
 
+Gabizon, A., Williamson, Z. J., & Ciobotaru, O. (2019). *PLONK: Permutations over Lagrange-bases for oecumenical noninteractive arguments of knowledge* (Cryptology ePrint Archive, Paper 2019/953). https://eprint.iacr.org/2019/953 `[Ch7]`
+
+Groth, J. (2016). On the size of pairing-based non-interactive arguments. In *Advances in Cryptology — EUROCRYPT 2016* (LNCS 9666, pp. 305–326). Springer. https://doi.org/10.1007/978-3-662-49896-5_11 `[Ch7]`
+
 Healthy Europe. (2026, 12 February). *EHDS progress report: Where does Europe's Health Data Space stand?* https://healthyeurope.eu/european-health-data-space/ `[Ch2]`
 
 Helsedataservice. (n.d.). *Fees and processing times*. helsedata.no. Retrieved 28 September 2026, from https://helsedata.no/en/fees-and-processing-times/ `[Ch2]`
 
-Helsedirektoratet. (2025). *FAIR Secure provision and use of health data in Norway (SPUHiN)* [Project page]. Norwegian Directorate of Health. https://www.helsedirektoratet.no/om-oss/forsoksordninger-og-prosjekter/fair-secure-provision-and-use-of-health-data-in-norway-spuhin `[Ch2]`
+Helsedirektoratet. (n.d.). *Det europeiske helsedataområdet (EHDS)*. Norwegian Directorate of Health. Retrieved 28 September 2026, from https://www.helsedirektoratet.no/digitalisering-og-e-helse/det-europeiske-helsedataomradet-ehds `[Ch1] [Ch2]`
 
 Helsedirektoratet. (2024). *Helsedirektoratets årsrapport 2023* [Annual report; records the Direktoratet for e-helse merger in the chapter *Styring og kontroll i virksomheten*]. Norwegian Directorate of Health. https://www.helsedirektoratet.no/rapporter/helsedirektoratets-arsrapport-2023/styring-og-kontroll-i-virksomheten `[Ch2]`
 
-Helsedirektoratet. (2026). *MyHealth@EU, Helsedirektoratet* [National e-health portfolio measure]. Norwegian Directorate of Health. https://www.helsedirektoratet.no/digitalisering-og-e-helse/nasjonal-e-helseportefolje/tiltak-i-nasjonal-e-helseportefolje/myhealth-eu-helsedirektoratet `[Ch1] [Ch2] [Ch4] [Ch6]`
+Helsedirektoratet. (2025). *FAIR Secure provision and use of health data in Norway (SPUHiN)* [Project page]. Norwegian Directorate of Health. https://www.helsedirektoratet.no/om-oss/forsoksordninger-og-prosjekter/fair-secure-provision-and-use-of-health-data-in-norway-spuhin `[Ch2]`
 
-Helsedirektoratet. (n.d.). *Det europeiske helsedataområdet (EHDS)*. Norwegian Directorate of Health. Retrieved 28 September 2026, from https://www.helsedirektoratet.no/digitalisering-og-e-helse/det-europeiske-helsedataomradet-ehds `[Ch1] [Ch2]`
+Helsedirektoratet. (2026). *MyHealth@EU, Helsedirektoratet* [National e-health portfolio measure]. Norwegian Directorate of Health. https://www.helsedirektoratet.no/digitalisering-og-e-helse/nasjonal-e-helseportefolje/tiltak-i-nasjonal-e-helseportefolje/myhealth-eu-helsedirektoratet `[Ch1] [Ch2] [Ch4] [Ch6]`
 
 Helse- og omsorgsdepartementet. (2020). *Prop. 63 L (2019–2020): Endringer i helseregisterloven m.m. (tilgjengeliggjøring av helsedata)*. Norwegian Ministry of Health and Care Services. https://www.regjeringen.no/no/dokumenter/prop.-63-l-20192020/id2696220/ `[Ch2]`
 
@@ -109,7 +121,15 @@ IHE International. (2024). *IT Infrastructure (ITI) Technical Framework, Volume 
 
 International Chamber of Commerce. (2025). *Data flows in supply chains: Practical realities and policy implications*. ICC. https://iccwbo.org/news-publications/policies-reports/data-flows-in-supply-chains-practical-realities-and-policy-implications/ `[Ch2]`
 
+Laurie, B. (2014). Certificate transparency. *Communications of the ACM, 57*(10), 40–46. https://doi.org/10.1145/2659897 `[Ch2]`
+
+Laurie, B., Langley, A., & Kasper, E. (2013). *Certificate Transparency* (RFC 6962). RFC Editor. https://doi.org/10.17487/RFC6962 `[Ch2] [Ch4] [Ch6]`
+
 Matheson. (2026). *EDPB publishes CEF report on the right to erasure* [Legal commentary]. Matheson LLP. https://www.matheson.com/insights/edpb-publishes-cef-report-on-the-right-to-erasure/ `[Ch2]`
+
+Merkle, R. C. (1988). A digital signature based on a conventional encryption function. In C. Pomerance (Ed.), *Advances in Cryptology — CRYPTO '87* (LNCS 293, pp. 369–378). Springer. https://doi.org/10.1007/3-540-48184-2_32 `[Ch2] [Ch4]`
+
+National Institute of Standards and Technology. (2019). *Security requirements for cryptographic modules* (Federal Information Processing Standards Publication 140-3). U.S. Department of Commerce. https://doi.org/10.6028/NIST.FIPS.140-3 `[Ch6]`
 
 National Institute of Standards and Technology. (2025). *Special Publication 800-88 Revision 2: Guidelines for media sanitization* (R. Chandramouli & E. Hibbard). NIST. https://doi.org/10.6028/NIST.SP.800-88r2 `[Ch1] [Ch2] [Ch4] [Ch7]`
 
@@ -129,6 +149,8 @@ Reardon, J., Basin, D., & Capkun, S. (2013). SoK: Secure data deletion. In *2013
 
 Ren, J. (2022). Cryptographic accumulator and its application: A survey. *Security and Communication Networks*, Article 5429195. https://doi.org/10.1155/2022/5429195 `[Ch2]`
 
+Schneier, B., & Kelsey, J. (1999). Secure audit logs to support computer forensics. *ACM Transactions on Information and System Security, 2*(2), 159–176. https://doi.org/10.1145/317087.317089 `[Ch2] [Ch4]`
+
 Scope, N. C., & Rasin, A. (2025). *Systems and methods for data retention and purging* (U.S. Patent No. 12,425,209 B2, granted 23 September 2025). U.S. Patent and Trademark Office. https://patents.google.com/patent/US12425209B2/en `[Ch2] [Ch4]`
 
 Scope, N., Rasin, A., Lenard, B., Heart, K., & Wagner, J. (2022). Harmonizing privacy regarding data retention and purging. In *Proceedings of the 34th International Conference on Scientific and Statistical Database Management (SSDBM 2022)* (pp. 1–12). ACM. https://doi.org/10.1145/3538712.3538718 `[Ch2] [Ch4]`
@@ -141,9 +163,9 @@ Sharma, S., Petrovic, G., & Kaushik, S. (2025). *zkFL-Health: Blockchain-enabled
 
 Simjanoska Misheva, M., Shahpaski, D., Dobreva, J., Bukovec, D., Gjorgjioski, B., Nikolov, M., … Gams, M. (2025). AI Act compliance within the MyHealth@EU framework: Tutorial. *Journal of Medical Internet Research*, *27*, e81184. https://doi.org/10.2196/81184 `[Ch1] [Ch2]`
 
-SPUHiN. (2025). *Recommendations for minimum requirements for Secure Processing Environments in Norway* (Deliverable D5.2, project 101128232; version issued for public hearing, July–October 2025) [Project deliverable]. Helsedirektoratet & Folkehelseinstituttet. The hearing page has since been withdrawn and no stable public locator for this version could be established; the deliverable number and the hearing window are confirmed on the project page at https://www.helsedirektoratet.no/om-oss/forsoksordninger-og-prosjekter/fair-secure-provision-and-use-of-health-data-in-norway-spuhin `[Ch1] [Ch2] [Ch4] [Ch6]`
-
 SPUHiN. (2024). *Recommendations for minimum requirements for Secure Processing Environments in Norway* (Draft, 29 November 2024; project 101128232, Milestone M10). Helsedirektoratet & Folkehelseinstituttet. https://helsedata.no/contentassets/bdc68d971f1343ed92fb3d3673fb9905/helsedataradet/utkast---recommendations-for-minimum-requirements-for-secure-processing-environments-in-norway_29.11.2024-1.pdf `[Ch1] [Ch2] [Ch4]`
+
+SPUHiN. (2025). *Recommendations for minimum requirements for Secure Processing Environments in Norway* (Deliverable D5.2, project 101128232; version issued for public hearing, July–October 2025) [Project deliverable]. Helsedirektoratet & Folkehelseinstituttet. The hearing page has since been withdrawn and no stable public locator for this version could be established; the deliverable number and the hearing window are confirmed on the project page at https://www.helsedirektoratet.no/om-oss/forsoksordninger-og-prosjekter/fair-secure-provision-and-use-of-health-data-in-norway-spuhin `[Ch1] [Ch2] [Ch4] [Ch6]`
 
 Staffa, M., Coppolino, L., Sgaglione, L., Gelenbe, E., Komnios, I., Grivas, E., Stan, O., & Castaldo, L. (2018). KONFIDO: An OpenNCP-based secure eHealth data exchange system. In *Security in Computer and Information Sciences — Euro-CYBERSEC 2018* (CCIS 821, pp. 11–27). Springer. https://doi.org/10.1007/978-3-319-95189-8_2 `[Ch2]`
 
@@ -151,7 +173,7 @@ Stortinget. (2025). *Innst. 71 L (2025–2026): Innstilling fra helse- og omsorg
 
 TEHDAS2. (2025). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 1.5, final draft, 17 September 2025). TEHDAS2 Joint Action. https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf `[Ch1] [Ch2] [Ch4]`
 
-TEHDAS2. (2026). *Technical specification for Health Data Access Bodies on the implementation of secure processing environments* (D7.4, Version 1.2, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20266473 `[Ch2] [Ch4] [Ch6]`
+TEHDAS2. (2026). *Technical specification for Health Data Access Bodies on the implementation of secure processing environments* (D7.4, Version 1.2, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20266473 `[Ch2] [Ch4] [Ch6] [Ch7]`
 
 VeritasChain. (2026, 18 January). *Crypto-shredding: The technical foundation for reconciling GDPR and financial record-keeping obligations* [Industry analysis, published under the name VeritasChain Standards Organization — a self-declared standards initiative founded 24 November 2025, operationally supported by VeritasChain Inc. and not accredited by any recognised standards body]. https://veritaschain.org/blog/posts/2026-01-18-crypto-shredding-gdpr-mifid-ii-reconciliation/ `[Ch2]`
 

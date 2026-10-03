@@ -1,5 +1,17 @@
 # Change trail
 
+## 4 October 2026 — patches P32–P37 (D7.4 pages, cross-chapter links, references) and B-35
+
+| ID | Change | Verification |
+|---|---|---|
+| P32-01 to P32-10 | D7.4 page numbers made the printed page throughout (EHDSR-6/7/8 p. 31; OPR-8 p. 46; OPR-17/18 p. 51; Annex 7 p. 96; OPR-6 p. 43 unchanged). The earlier p. 32/47/52/97 were PDF indices | Each passage located in the uploaded PDF (`sources/TEHDAS2_D7.4_v1.2.pdf`, added) with pdftotext; printed number read from the page header |
+| P33-01 to P33-18 | Ch4: four propositions announced (§4.1); key hierarchy anchored in NIST SP 800-57 and SP 800-38D and tied to `crypto_envelope.py`; SP 800-57 §7.6 for the invalidation record; new *Tamper evidence* paragraph (Schneier & Kelsey 1999, Merkle 1988, Crosby & Wallach 2009, RFC 6962) with the design point that the log never holds what erasure reaches; auditor's view adds integrity; §4.9 leaf-hash residue and per-entry nonce (new finding); consistency proofs named, not implemented; §4.11 placement in D7.4 Figure 5.13 (p. 60); Table 4.1 key-hierarchy row corrected; §4.12 six rivals, Props 3–4, the log | Inspector: lost 0, gained 5 citations. Leaf contents checked in `_creation_entry()`: accessor fields, t_a, commitment; no payload, no subject field. References verified by a separate agent against Crossref/RFC Editor/NIST/USENIX |
+| P34-01 to P34-08 | Ch2 §2.4: tamper-evident logging strand set against KONFIDO's immutability-vs-erasure tension; Boneh & Lipton (1996) as the origin of crypto-erasure; stray duplicated URL line removed | Inspector: lost 0, gained 6 citations |
+| P35-01 to P35-18 | Ch6: meta cut (6.1, 6.2, 6.10); §6.1 count conflation fixed; mechanism list and status level with Ch4; D7.4 OPR-6 and Annex 7 as corroboration (§6.2); §6.3 log, SP 800-57, FIPS 140-3, envelope-encryption result; §6.5 Merkle scaling and log-vs-accumulator; §6.7 repetition of Ch5 cut; §6.8 Proposition 3 as drafting test, TEHDAS2 paragraph updated; §6.10 shortened, abandoned-draft mention left to the Declaration; §6.11 conditional and complete | Inspector: 2 hedge false positives declared ("has not been raised by any reviewer", "May 2026") |
+| P36-01 to P36-12 | Ch7: Annex 7 open question; four propositions; mechanism as specified; contributions 2–4 level with the Statement of Contribution; zk-SNARK future work made concrete against the Merkle log (Groth 2016; PLONK 2019); generalisation updated to §6.9a and Proposition 3; closing meta cut | Inspector: 1 hedge declared (replaced sentence) |
+| P37-01 to P37-13 | Ch1 and Ch3: partition, log, Props 3–4, forward links; §1.7 roadmap matches the chapters; Ch3 solver sentence replaced by the exhaustive search actually used; Table 4.1 named as the instrument of external validity; sixth limitation stated conditionally | Inspector: 2 hedges declared (the replaced solver sentence) |
+| B-35 | `assemble.py`: bibliography sorted in APA 7 order (author, n.d. first, year, suffix). The old key sorted whole strings: Finck 2019 before 2018, SPUHiN 2025 before 2024, Datatilsynet n.d. after dated works | Rebuilt: 80 entries (69 before P33–P36); same-author runs checked |
+
 ## 4 October 2026 — patches P28–P31 (repetition, front matter, Chapter 5)
 
 | ID | Change | Verification |
