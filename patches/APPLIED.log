@@ -376,3 +376,82 @@
 2026-10-03 20:09 | P31_ch5_tighten.py | P31-12 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d
 2026-10-03 20:09 | P31_ch5_tighten.py | P31-13 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d
 2026-10-03 20:09 | P31_ch5_tighten.py | P31-14 | Chapter5_Demonstration_v1.md | b087472a8d18 -> d20ef2a24ada | M4d/PRES-3; bridge to Ch6
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-01 | Chapter1_Introduction_v2.md | 20ba6a736e93 -> d04ac4fb1413 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-02 | Chapter2_LitReview_v2_FINAL.md | 495e5be568ab -> 32a221bcd751 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-03 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-04 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-05 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-06 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-07 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-08 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-09 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:47 | P32_d74_printed_pages.py | P32-10 | Chapter4_TRF_Model_v1.md | c374ad7df035 -> 69dbb11511a8 | printed page
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-01 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | four propositions announced
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-02 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | key hierarchy anchored (SP 800-57, SP 800-38D) and tied to crypto_envelope.py
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-03 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | SP 800-57 §7.6; Merkle log in the body with its literature; link to Ch2 §2.4 (KONFIDO) and Ch5 §5.6
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-04 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | auditor's view includes integrity
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-05 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | leaf hashes are residue
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-06 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | research finding: leaf-hash guessing after the terminal transition; nonce specified
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-07 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | consistency proofs named; scope stated
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-08 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | placement in the D7.4 reference architecture
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-09 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | Table 4.1 corrected: the hierarchy is executed
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-10 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | consistency with P33-09; link to Ch3 §3.8
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-11 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | summary carries Props 3-4
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-12 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | summary carries the log
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-13 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | count corrected (six rivals since P05)
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-14 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | reference
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-15 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | reference
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-16 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | reference
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-17 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | references
+2026-10-03 20:49 | P33_ch4_log_keys_links.py | P33-18 | Chapter4_TRF_Model_v1.md | 69dbb11511a8 -> ef08be47a144 | reference
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-01 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | tamper-evident logging strand; link to KONFIDO and Ch4 §4.8
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-02 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | origin of the technique (Boneh & Lipton 1996)
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-03 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | reference (consolidated list is sorted by assemble.py)
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-04 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | reference
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-05 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | references
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-06 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | reference
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-07 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | reference
+2026-10-03 20:50 | P34_ch2_logging_strand.py | P34-08 | Chapter2_LitReview_v2_FINAL.md | 32a221bcd751 -> faa3f345d3ce | stray duplicated URL line
+2026-10-03 20:51 | P35_ch6_links.py | P35-01 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | PRES-1 meta
+2026-10-03 20:51 | P35_ch6_links.py | P35-02 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | 'the same conditions' conflated the two counts; Prop 3 linked
+2026-10-03 20:51 | P35_ch6_links.py | P35-03 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | mechanism list level with Ch4; status stated
+2026-10-03 20:51 | P35_ch6_links.py | P35-04 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | PRES-1 meta
+2026-10-03 20:51 | P35_ch6_links.py | P35-05 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | PRES-1: self-assessment cut
+2026-10-03 20:51 | P35_ch6_links.py | P35-06 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | D7.4 OPR-6 and Annex 7 as corroboration; link to Table 4.1
+2026-10-03 20:51 | P35_ch6_links.py | P35-07 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | the log as implemented; SP 800-57
+2026-10-03 20:51 | P35_ch6_links.py | P35-08 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | FIPS 140-3; crypto_envelope result linked
+2026-10-03 20:51 | P35_ch6_links.py | P35-09 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | Merkle scaling; RFC 6962
+2026-10-03 20:51 | P35_ch6_links.py | P35-10 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | relation of log and accumulator
+2026-10-03 20:51 | P35_ch6_links.py | P35-11 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | PRES-4: Ch5 result referred to, not restated
+2026-10-03 20:51 | P35_ch6_links.py | P35-12 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | Prop 3 as a drafting test
+2026-10-03 20:51 | P35_ch6_links.py | P35-13 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | updated against the full D7.4 text; link to Table 4.1
+2026-10-03 20:51 | P35_ch6_links.py | P35-14 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | PRES-1/PRES-3: meta and process material cut
+2026-10-03 20:51 | P35_ch6_links.py | P35-15 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | PRES-1; cross-references
+2026-10-03 20:51 | P35_ch6_links.py | P35-16 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | summary conditional and complete
+2026-10-03 20:51 | P35_ch6_links.py | P35-17 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | reference
+2026-10-03 20:51 | P35_ch6_links.py | P35-18 | Chapter6_Discussion_v1.md | 5cd8c2f3596b -> 5f787b6d202b | references
+2026-10-03 20:52 | P36_ch7_links.py | P36-01 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | accurate against the full D7.4 text
+2026-10-03 20:52 | P36_ch7_links.py | P36-02 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | four propositions
+2026-10-03 20:52 | P36_ch7_links.py | P36-03 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | Props 3-4
+2026-10-03 20:52 | P36_ch7_links.py | P36-04 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | mechanism as specified after P04-P33
+2026-10-03 20:52 | P36_ch7_links.py | P36-05 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | contribution 2 level with the Statement of Contribution
+2026-10-03 20:52 | P36_ch7_links.py | P36-06 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | contribution 3: log and key hierarchy
+2026-10-03 20:52 | P36_ch7_links.py | P36-07 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | contribution 4: Table 4.1 and D7.4 architecture
+2026-10-03 20:52 | P36_ch7_links.py | P36-08 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | zk-SNARK future work made concrete (Tiger's question, kept as future work)
+2026-10-03 20:52 | P36_ch7_links.py | P36-09 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | updated to §6.9a and Prop 3
+2026-10-03 20:52 | P36_ch7_links.py | P36-10 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | PRES-1 closing meta
+2026-10-03 20:52 | P36_ch7_links.py | P36-11 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | references
+2026-10-03 20:52 | P36_ch7_links.py | P36-12 | Chapter7_Conclusion_v1.md | 2d029aa89736 -> acfcbf9bae9d | reference
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-01 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | D-16 partition announced
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-02 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | log; Props 3-4
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-03 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | forward link
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-04 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | four propositions
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-05 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | roadmap matches Ch2
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-06 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | roadmap matches Ch4
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-07 | Chapter1_Introduction_v2.md | d04ac4fb1413 -> b607cd6c3efb | roadmap matches Ch5, Ch6
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-08 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | D-16 partition in the method
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-09 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | Props 3-4 in the method
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-10 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | optional module named
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-11 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | log and optional module in the method; the solver was never used, exhaustive search was
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-12 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | Table 4.1 as the instrument of external validity
+2026-10-03 20:53 | P37_ch1_ch3_links.py | P37-13 | Chapter3_Methodology_v1.md | c7509b0e6936 -> a177a17a320d | conditional statement as in Ch4 §4.6
