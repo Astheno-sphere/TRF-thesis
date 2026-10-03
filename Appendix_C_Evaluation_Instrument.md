@@ -26,11 +26,9 @@ The following are expected to change, and changing them would not constitute a d
 from the design:
 
 *Wording of the closed-response items.* The four dimensions and their anchor statements are
-reproduced as proposed in supervisory feedback, with one already known to overstate what
-the thesis claims: item A1 asserts that the mechanism gives auditors *full confidence*,
-which Chapter 6, Section 6.3 explicitly does not claim. It is retained verbatim because it
-was proposed as the anchor and because silently correcting a supervisor's wording would
-misrepresent the record. A pilot is the proper place to resolve it.
+reproduced as proposed in supervisory feedback, except item A1, reworded in October 2026 with the
+supervisor's agreement because the proposed wording ("full confidence that data was lawfully
+deleted") made a claim the thesis does not make (Chapter 6, Section 6.3).
 
 *The panel.* Eight participants across four perspectives is a target, not a recruitment
 outcome. Norwegian health-data governance is a small professional community and some of
@@ -175,7 +173,7 @@ Each dimension opens with the anchor statement proposed in supervisory feedback,
 
 | Item | Statement |
 |---|---|
-| A1 | *The cryptographic proof gives auditors full confidence that data was lawfully deleted at the required timestamp.* |
+| A1 | The mechanism lets an auditor verify that a record's invalidation was logged at the required month and has not been altered since. |
 | A2 | An attested invalidation entry, without hardware-backed proof of key destruction, is sufficient for audit purposes in my context. |
 | A3 | The mechanism provides stronger audit assurance than deleting the record and logging that a deletion occurred. |
 | A4 | An external auditor could establish, from the surviving record alone, what was invalidated and on what legal ground. |
@@ -188,7 +186,7 @@ Each dimension opens with the anchor statement proposed in supervisory feedback,
 | X2 | The assumption in the design you consider least safe. |
 | X3 | Anything the questions above did not ask about. |
 
-A note on item A1. The anchor statement asserts that the mechanism gives auditors *full confidence*, which the thesis itself does not claim: Chapter 6, Section 6.3 states that the invalidation entry is an attestation rather than a proof. The item is retained verbatim because it was proposed as the anchor and because disagreement with it would be an accurate response rather than a failure of the instrument. Item A2 exists to capture that distinction directly, and analysis would read A1 and A2 together rather than A1 alone.
+A note on items A1 and A2. A1 asks about what the mechanism lets an auditor verify: that the invalidation was logged and is unaltered, which the audit log's inclusion proofs establish. A2 asks whether that is enough without proof that the key was destroyed, which the mechanism does not provide: Chapter 6, Section 6.3 states that the invalidation entry is an attestation rather than a proof. Analysis reads the two together.
 
 ---
 
