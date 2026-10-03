@@ -6,9 +6,10 @@ set -uo pipefail
 cd "$(dirname "$0")/.."
 python3 handoff_tools/register_sync.py >/dev/null
 out=$(python3 handoff_tools/trail_check.py 2>&1)
-if echo "$out" | grep -q '^\[FAIL\]'; then
+if echo "$out" | grep -q '^\[FAIL\]' || ! echo "$out" | grep -q '^TRAIL INTACT'; then
+  echo "$out" | tail -5
   echo "$out" | grep -A6 '^\[FAIL\]'
-  echo "REFUSED: trail_check has FAILs; nothing committed."
+  echo "REFUSED: trail_check has FAILs or did not finish; nothing committed."
   exit 1
 fi
 git add -A
