@@ -31,8 +31,8 @@ passage by passage when the patch for that passage is written.
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | PARTIAL | P09 | Feng et al. now CAV 2023 (P09). Open: Table 2.1 practitioner/preprint band |
 | M6a | Traceability matrix against D7.4 and the SPUHiN checklist | OPEN |  | The evaluation step |
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | OPEN |  |  |
-| M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | OPEN |  | Check UCC Art 51 (3-year floor) against seized-goods destruction; test against the anchoring result |
-| M7b | One sentence in §1.5 on the programme fit | OPEN |  |  |
+| M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | CLOSED | P11 | UCC Arts 51 and 197: record outlives the destroyed goods; tested against §6.9a; §1.4 overreach removed. Seafarer and OECD material left for PRES trimming |
+| M7b | One sentence in §1.5 on the programme fit | CLOSED | P11 | One sentence in §1.5 |
 | MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | CLOSED | P01 | Prose now points to Table 5.0a; the code wave must update Table 5.0a, Table F.2 and Appendix A counts |
 | MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | CLOSED | P01 |  |
 | MIN-03 | §1.6 drop "accumulator-based" | CLOSED | P01 |  |

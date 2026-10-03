@@ -42,7 +42,10 @@ fetch and is flagged where the fetches disagreed.
 | 30 | search | Union Customs Code Article 51 … destruction of goods | UCC 952/2013 on EUR-Lex; Finnish Customs destruction page. Not yet read | M7a (open) |
 | 31 | fetch | helsedirektoratet.no … fair-secure-provision-and-use-of-health-data-in-norway-spuhin | Criteria "were on hearing July–October 2025" and are "included in SPUHiN-rapport D5.2"; D5.2 via EU Funding & Tenders portal; adaptation to the implementing act depends on the Commission. No final national publication date given | M5b, P10 |
 | 32 | fetch | legeforeningen.no hearing response 3 Oct 2025 | Responds to "Høring – Oversikt over kriterier til sikre analyserom …" (Helsedirektoratet); no mention of logging, retention or deletion | M5b |
+| 33 | fetch | eur-lex.europa.eu CELEX:02013R0952-20221212 (HTML) | Returned the Delegated Regulation 2015/2446 instead; not used | — |
+| 34 | fetch | legislation.gov.uk/eur/2013/952/article/51/adopted | UCC Art 51 verbatim as adopted: "at least three years", start of period by procedure; 51(2) extensions for corrections, appeals, court proceedings | M7a, P11 |
+| 35 | fetch | legislation.gov.uk/eur/2013/952/article/197/adopted | UCC Art 197 verbatim as adopted: customs "may require goods which have been presented to customs to be destroyed" | M7a, P11 |
 
-**To confirm by opening the PDF yourself:** the D7.4 page numbers above, the OPR-6 wording, and the
+**To confirm by opening the PDF yourself:** the UCC citations were read on legislation.gov.uk's "as adopted" text, because EUR-Lex returned another act; checking Arts 51 and 197 on EUR-Lex is advisable. Also: the D7.4 page numbers above, the OPR-6 wording, and the
 absence of a record-level logging requirement. The shell cannot reach tehdas.eu or zenodo.org
 (proxy policy), so the PDF could not be read locally.
