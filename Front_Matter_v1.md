@@ -57,7 +57,7 @@ This thesis makes four contributions, each stated at the level it can be defende
 
 *2. Feasibility results with an executable witness.* Proposition 1 establishes infeasibility under the semantics of an audit log that keeps its payload readable. Proposition 2 establishes satisfiability under an alternative and exhibits the trajectory achieving it. Both are proved informally and checked executably, with a separately written exhaustive cross-check and a bounded SMT check of Propositions 1–3. Proposition 3 states the exact condition under which a ceiling collides with a floor and shows that the ceiling's anchor decides whether the collision can be read from the text; Proposition 4 shows why relocating a record, the rival that removes it from the environment, does not dissolve the conflict.
 
-*3. A mechanism specification with its residue analysed against the applicable legal threshold.* Crypto-Erasure by Invalidation is specified in implementable detail, with each record's metadata partitioned into the accessor's fields, which accountability requires and the mechanism retains, and the link to the patient, which it removes, and with entries committed to a tamper-evident log whose inclusion proofs the demonstration checks. Its surviving residue is characterised as pseudonymised rather than anonymous by the Norwegian standard, and designed to the corridor established by the European Data Protection Board's finalised Guidelines 02/2025.
+*3. A mechanism specification with its residue analysed against the applicable legal threshold.* Crypto-Erasure by Invalidation is specified in implementable detail, with each record's metadata partitioned into the accessor's fields, which accountability requires and the mechanism retains, and the link to the patient, which it keeps on the cross-border path where the person's access-information right needs it and removes from Secure Processing Environment logs at the ceiling, and with entries committed to a tamper-evident log whose inclusion proofs the demonstration checks. Its surviving residue is characterised as pseudonymised rather than anonymous by the Norwegian standard, and designed to the corridor established by the European Data Protection Board's finalised Guidelines 02/2025.
 
 *4. An integration analysis against verified Norwegian infrastructure.* The mechanism is placed at the audit-repository step of the MyHealth@EU flow and the access-logging boundary of a Secure Processing Environment, and requires of the substrate nothing that the national criteria put to public hearing in 2025 do not already demand.
 
@@ -253,6 +253,8 @@ Two declarations are made explicitly.
 - A.20 Console output of the cross-sector instance
 - A.21 Console output of the payload-provenance comparison, committed subset
 - A.22 Console output of the envelope-encryption module
+- A.23 Source listing: `z3_check.py`
+- A.24 Console output of the bounded SMT check
 
 **Appendix B. Search Query Log**
 
