@@ -1,5 +1,18 @@
 # Change trail
 
+## 5 October 2026 — review of 4 Oct (Google Doc v3): P47–P51, B-43, B-44
+
+| ID | Change | Verification |
+|---|---|---|
+| P47-01 to P47-10 | His ten tracked changes applied verbatim (abstract ×3, §3.6, §4.6, §4.10 ×2, §5.7, §7.2, §7.5); docx export kept as `supervisor_review/review3_JF_2026-10-04.docx`, comments as `review3_gdoc_2026-10-04.json` | Each located uniquely in the source by its preceding context |
+| P48-01 to P48-13 | Sammendrag aligned; counts out of §6.1/§7.2, labelled in §5.1; ten-year permit note (§5.4); Corollary 1.2 a conditional extension in §1.2, §1.4, §2.9, §4.6, §6.1; Rival 4 restated on the log; 'status quo' out of §4.7 | Inspector: two losses declared |
+| P49-01 to P49-17 | Patient link kept and argued (Option A, EHDS Art 9(1)–(2), verified on a mirror of the OJ text, T-14 to confirm); payload by source, necessity per class, Corollary 2.3; Art 17(3)(d) and Art 71; Semantics I anchored in OpenNCP (khypponen/openncp c8a82d8; Sundhedsdatastyrelsen/ehdsi 61094e6, OpenNCP 9.1.0 schema); redactable/chameleon-hash prior art (7 references verified by a separate agent); unimplemented parts named in §4.12 and §7.1 | OpenNCP claims re-checked in the clones: schema columns, 'audit messages cannot be modified', no retention/purge in audit code |
+| B-43 | `z3_check.py` (bounded SMT check of Propositions 1–3) with copies, recorded output, run_all step 6, requirements; trail_check COPIES and appendix_sync BLOCKS extended | 9/9 checks unsat; sanity sat; off-by-one mutations of Proposition 3 refuted; 0.2 s |
+| P50-01 to P50-14 | Appendix A.23/A.24; the SMT result in §3.6, §5.5, Table 5.1, §5.8, §6.7, §7.2, Statement of Contribution, roadmap | appendix_sync 15/15 |
+| P50b-01 to P50b-01 | A.24 note: Z3 version as installed (5.1.0); sanity check described correctly | — |
+| P51-01 to P51-04 | Ch2 repetition of Ch1 cut (renumbering note, scenario, SecuPi); §6.11 limitations list replaced by a pointer to §3.7 | Inspector: losses declared (stated in §1.2, §1.4, §3.7) |
+| B-44 | `build_tracked.py --base <commit>`: tracked comparison against the version he reviewed (aa86290) | — |
+
 ## 4 October 2026 — fix round after the independent audit (P42–P46)
 
 | ID | Change | Verification |

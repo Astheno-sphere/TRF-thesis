@@ -45,8 +45,11 @@ def old_paragraphs():
     return out
 
 
-def new_paragraphs():
-    md = NEW.read_text(encoding="utf-8")
+BASE = None          # set by --base <commit>: compare against that commit's assembled submission (B-44)
+
+
+def new_paragraphs(md=None):
+    md = NEW.read_text(encoding="utf-8") if md is None else md
     md = md[md.index("## Abstract"):md.index("\n# References")]
     md = re.sub(r"^\\pagebreak\s*$|^---\s*$", "", md, flags=re.M)
     # drop the generated contents list (the old one is dropped too)
@@ -112,7 +115,12 @@ def word_diff(a, b):
 
 
 def build():
-    old = old_paragraphs()
+    if BASE:
+        base_md = subprocess.run(["git", "show", f"{BASE}:VERA-SNARK_Thesis_SUBMISSION.md"], cwd=ROOT,
+                                 capture_output=True, text=True, check=True).stdout
+        old = [t for _, t in new_paragraphs(base_md)]
+    else:
+        old = old_paragraphs()
     new = new_paragraphs()
     A = [norm(x) for x in old]
     B = [norm(t) for _, t in new]
@@ -153,6 +161,11 @@ def build():
 
 
 def main():
+    global BASE, OUT
+    import sys
+    if "--base" in sys.argv:
+        BASE = sys.argv[sys.argv.index("--base") + 1]
+        OUT = ROOT / sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else OUT
     body, stats = build()
     with tempfile.TemporaryDirectory() as td:
         p = os.path.join(td, "s.md"); d = os.path.join(td, "s.docx")
@@ -164,7 +177,8 @@ def main():
     sect = re.search(r"<w:sectPr.*?</w:sectPr>", doc, re.S)
     intro = ('<w:p><w:pPr><w:pStyle w:val="Title"/></w:pPr>%s</w:p>'
              '<w:p><w:pPr><w:pStyle w:val="BodyText"/></w:pPr>%s</w:p>') % (
-        r_plain("Revisions since the draft reviewed on 30 September 2026"),
+        r_plain("Revisions since the draft reviewed on 30 September 2026" if not BASE else
+                "Revisions since the version reviewed on 4 October 2026 (commit %s), including the reviewer's tracked changes" % BASE),
         r_plain("Every change to the front matter and Chapters 1–7 is shown as a tracked insertion or deletion "
                 "(Review → Track Changes → All Markup). Appendices and the reference list are regenerated from the "
                 "code and the chapter lists and are not compared here. Tables and equations are compared as text; "

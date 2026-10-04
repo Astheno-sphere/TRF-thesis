@@ -24,6 +24,8 @@ BLOCKS = {
     "## A.19 Console output": "repro_package/results/expected_norwegian_output.txt",
     "## A.20 Console output": "repro_package/results/expected_cross_sector_output.txt",
     "## A.22 Console output": "repro_package/results/crypto_envelope_output.txt",
+    "## A.23 Source listing": "demo_app/z3_check.py",
+    "## A.24 Console output": "repro_package/results/z3_check_output.txt",
 }
 
 

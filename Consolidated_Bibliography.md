@@ -25,6 +25,10 @@ Aikebaier, Y. (2026). *SoK: Cryptographic erasure on public ledgers: Application
 
 Albalwy, F. (2026). Zero-knowledge-based policy enforcement for privacy-preserving cross-institutional health data sharing on blockchain. *Systems*, *14*(4), 385. https://doi.org/10.3390/systems14040385 `[Ch1] [Ch2]`
 
+Ateniese, G., Chou, D. H., de Medeiros, B., & Tsudik, G. (2005). Sanitizable signatures. In S. de Capitani di Vimercati, P. Syverson, & D. Gollmann (Eds.), *Computer Security – ESORICS 2005* (LNCS 3679, pp. 159–177). Springer. https://doi.org/10.1007/11555827_10 `[Ch2]`
+
+Ateniese, G., Magri, B., Venturi, D., & Andrade, E. R. (2017). Redactable blockchain – or – rewriting history in Bitcoin and friends. In *2017 IEEE European Symposium on Security and Privacy (EuroS&P)* (pp. 111–126). IEEE. https://doi.org/10.1109/EuroSP.2017.37 `[Ch2]`
+
 Bai, T., Hu, Y., He, J., Fan, H., & An, Z. (2022). Health-zkIDM: A healthcare identity system based on Fabric blockchain and zero-knowledge proof. *Sensors*, *22*(20), 7716. https://doi.org/10.3390/s22207716 `[Ch1] [Ch2]`
 
 Barker, E. (2020). *Recommendation for key management: Part 1 – General* (NIST Special Publication 800-57 Part 1, Rev. 5). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-57pt1r5 `[Ch4] [Ch6]`
@@ -60,6 +64,10 @@ Datatilsynet. (2015). *Anonymisering av personopplysninger: veileder*. Norwegian
 Datatilsynet. (2021, 11 May). *Vedtak om overtredelsesgebyr til Norges idrettsforbund for mangelfull testing* [Administrative decision]. Norwegian Data Protection Authority. https://www.datatilsynet.no/regelverk-og-verktoy/lover-og-regler/avgjorelser-fra-datatilsynet/2021/vedtak-om-overtredelsesgebyr-til-norges-idrettsforbund-for-mangelfull-testing/ `[Ch3]`
 
 Deloitte Advokatfirma. (2020). *Syntetiske testdata eller personopplysninger ved testing?* [Legal commentary]. Deloitte. https://www.deloitte.com/no/no/services/legal/perspectives/syntetiske-testdata-eller-personopplysninger-i-test.html `[Ch3]`
+
+Derler, D., Samelin, K., Slamanig, D., & Striecks, C. (2019). Fine-grained and controlled rewriting in blockchains: Chameleon-hashing gone attribute-based. In *Network and Distributed System Security Symposium (NDSS 2019)*. Internet Society. https://doi.org/10.14722/ndss.2019.23066 `[Ch2]`
+
+Deuber, D., Magri, B., & Thyagarajan, S. A. K. (2019). Redactable blockchain in the permissionless setting. In *2019 IEEE Symposium on Security and Privacy (SP)* (pp. 124–138). IEEE. https://doi.org/10.1109/SP.2019.00039 `[Ch2]`
 
 Dhandala, N. (2026, 17 February). *How to set up crypto-shredding for GDPR right-to-erasure compliance in Google Cloud* [Implementation commentary]. OneUptime. https://oneuptime.com/blog/post/2026-02-17-how-to-set-up-crypto-shredding-for-gdpr-right-to-erasure-compliance-in-google-cloud/view `[Ch2]`
 
@@ -121,6 +129,10 @@ IHE International. (2024). *IT Infrastructure (ITI) Technical Framework, Volume 
 
 International Chamber of Commerce. (2025). *Data flows in supply chains: Practical realities and policy implications*. ICC. https://iccwbo.org/news-publications/policies-reports/data-flows-in-supply-chains-practical-realities-and-policy-implications/ `[Ch2]`
 
+Johnson, R., Molnar, D., Song, D., & Wagner, D. (2002). Homomorphic signature schemes. In B. Preneel (Ed.), *Topics in Cryptology – CT-RSA 2002* (LNCS 2271, pp. 244–262). Springer. https://doi.org/10.1007/3-540-45760-7_17 `[Ch2]`
+
+Krawczyk, H., & Rabin, T. (1998). *Chameleon hashing and signatures* (Cryptology ePrint Archive, Paper 1998/010; full version of the NDSS 2000 paper). https://eprint.iacr.org/1998/010 `[Ch2]`
+
 Laurie, B. (2014). Certificate transparency. *Communications of the ACM, 57*(10), 40–46. https://doi.org/10.1145/2659897 `[Ch2]`
 
 Laurie, B., Langley, A., & Kasper, E. (2013). *Certificate Transparency* (RFC 6962). RFC Editor. https://doi.org/10.17487/RFC6962 `[Ch2] [Ch4] [Ch6]`
@@ -139,9 +151,13 @@ Norsk forening for allmennmedisin. (2025, 3 October). *Høring — Oversikt over
 
 Norwegian Trusted Research Environments. (n.d.). *Norwegian Trusted Research Environments (NORTRE)* [A collaboration between TSD/UiO, SAFE/UiB and HUNT Cloud/NTNU]. Retrieved 28 September 2026, from https://nortre.no/ `[Ch1] [Ch2]`
 
+OpenNCP Project. (2017). *OpenNCP* [Computer software; GitHub mirror of the epSOS/eHDSI source, commit c8a82d8, 21 April 2017]. GitHub. https://github.com/khypponen/openncp `[Ch4]`
+
 Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45–77. https://doi.org/10.2753/MIS0742-1222240302 `[Ch1] [Ch3]`
 
 Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16 `[Ch6]`
+
+Politou, E., Casino, F., Alepis, E., & Patsakis, C. (2021). Blockchain mutability: Challenges and proposed solutions. *IEEE Transactions on Emerging Topics in Computing, 9*(4), 1972–1986. https://doi.org/10.1109/TETC.2019.2949510 `[Ch2]`
 
 Reardon, J., Basin, D., & Capkun, S. (2013). SoK: Secure data deletion. In *2013 IEEE Symposium on Security and Privacy* (pp. 301–315). IEEE. https://doi.org/10.1109/SP.2013.28 `[Ch2] [Ch6] [Ch7]`
 
@@ -168,6 +184,8 @@ SPUHiN. (2025). *Recommendations for minimum requirements for Secure Processing 
 Staffa, M., Coppolino, L., Sgaglione, L., Gelenbe, E., Komnios, I., Grivas, E., Stan, O., & Castaldo, L. (2018). KONFIDO: An OpenNCP-based secure eHealth data exchange system. In *Security in Computer and Information Sciences — Euro-CYBERSEC 2018* (CCIS 821, pp. 11–27). Springer. https://doi.org/10.1007/978-3-319-95189-8_2 `[Ch2]`
 
 Stortinget. (2025). *Innst. 71 L (2025–2026): Innstilling fra helse- og omsorgskomiteen om Endringer i helsepersonelloven og pasientjournalloven mv. (taushetsplikt og tilgjengeliggjøring av pasientopplysninger)*. Norwegian Parliament. https://www.stortinget.no/no/Saker-og-publikasjoner/Publikasjoner/Innstillinger/Stortinget/2025-2026/inns-202526-071l/ `[Ch1]`
+
+Sundhedsdatastyrelsen. (2026). *ehdsi* [Computer software; Danish NCPeH deployment of OpenNCP 9.1.0, commit 61094e6, 28 September 2026]. GitHub. https://github.com/Sundhedsdatastyrelsen/ehdsi `[Ch4]`
 
 TEHDAS2. (2025). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 1.5, final draft, 17 September 2025). TEHDAS2 Joint Action. https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf `[Ch1] [Ch2] [Ch4]`
 

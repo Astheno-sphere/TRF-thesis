@@ -10,3 +10,6 @@ openpyxl>=3.1
 #
 # The optional envelope-encryption module (crypto_envelope.py) requires:
 cryptography>=42
+#
+# The optional bounded SMT check (z3_check.py) requires:
+z3-solver>=4.12

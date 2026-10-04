@@ -44,6 +44,14 @@ else
 fi
 
 echo
+echo "=== 6 (optional)  Bounded SMT check of Propositions 1-3; needs the z3-solver package ==="
+if python3 -c "import z3" 2>/dev/null; then
+  python3 z3_check.py | tee results/z3_check_rerun.txt
+else
+  echo "skipped: pip install z3-solver to run it"
+fi
+
+echo
 echo "-----------------------------------------------------------------------"
 echo "Now diff each rerun against its recorded run. All six should be identical;"
 echo "a difference means a file changed, not that the result changed."
@@ -53,6 +61,7 @@ echo "  diff results/synthea_comparison_rerun.txt    results/synthea_comparison_
 echo "  diff results/norwegian_layer_rerun.txt       results/expected_norwegian_output.txt"
 echo "  diff results/cross_sector_rerun.txt          results/expected_cross_sector_output.txt"
 echo "  diff results/crypto_envelope_rerun.txt       results/crypto_envelope_output.txt"
+echo "  diff results/z3_check_rerun.txt              results/z3_check_output.txt"
 echo
 echo "results/synthea_comparison_full_cohort_output.txt records the same comparison"
 echo "against all 98 bundles, recorded on 28 September 2026 before the constructed"

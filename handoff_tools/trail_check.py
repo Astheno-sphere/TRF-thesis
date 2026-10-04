@@ -35,7 +35,8 @@ COPIES = {"demo_app/trf_checker.py": ["repro_package/trf_checker.py", "code_arte
           "demo_app/synthea_layer.py": ["repro_package/synthea_layer.py", "code_artefacts/synthea_layer.py"],
           "demo_app/norwegian_layer.py": ["repro_package/norwegian_layer.py", "code_artefacts/norwegian/norwegian_layer.py"],
           "demo_app/cross_sector_check.py": ["repro_package/cross_sector_check.py", "code_artefacts/norwegian/cross_sector_check.py"],
-          "demo_app/crypto_envelope.py": ["repro_package/crypto_envelope.py", "code_artefacts/crypto_envelope.py"]}
+          "demo_app/crypto_envelope.py": ["repro_package/crypto_envelope.py", "code_artefacts/crypto_envelope.py"],
+          "demo_app/z3_check.py": ["repro_package/z3_check.py", "code_artefacts/z3_check.py"]}   # B-43
 results = []
 
 
