@@ -694,3 +694,62 @@
 2026-10-03 22:36 | P46_synthea_once.py | P46-01 | Chapter5_Demonstration_v1.md | 399771b1ff3f -> 629d62797425 | PRES-4: said once in §3.5
 2026-10-03 22:36 | P46_synthea_once.py | P46-02 | Chapter6_Discussion_v1.md | d9f3393fa52e -> 0da3f5261d0e | PRES-1/PRES-4
 2026-10-03 22:36 | P46_synthea_once.py | P46-03 | Chapter6_Discussion_v1.md | d9f3393fa52e -> 0da3f5261d0e | PRES-4: said once in §3.5
+2026-10-04 21:47 | P47_jf_tracked.py | P47-01 | Front_Matter_v1.md | a7c9ed72997b -> dfd6debf0651 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-02 | Front_Matter_v1.md | a7c9ed72997b -> dfd6debf0651 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-03 | Front_Matter_v1.md | a7c9ed72997b -> dfd6debf0651 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-04 | Chapter3_Methodology_v1.md | a720935a9d52 -> e1724939fde9 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-05 | Chapter4_TRF_Model_v1.md | 5faa4cf4312a -> bf03a6fc78d5 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-06 | Chapter4_TRF_Model_v1.md | 5faa4cf4312a -> bf03a6fc78d5 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-07 | Chapter4_TRF_Model_v1.md | 5faa4cf4312a -> bf03a6fc78d5 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-08 | Chapter5_Demonstration_v1.md | 629d62797425 -> 90334ed42b43 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-09 | Chapter7_Conclusion_v1.md | e3af8c335c29 -> d0ece19ed476 | João 4 Oct tracked change, verbatim
+2026-10-04 21:47 | P47_jf_tracked.py | P47-10 | Chapter7_Conclusion_v1.md | e3af8c335c29 -> d0ece19ed476 | João 4 Oct tracked change, verbatim
+2026-10-04 21:49 | P48_alignment.py | P48-01 | Front_Matter_v1.md | dfd6debf0651 -> 777864d473a9 | Sammendrag aligned with the abstract (P47-01)
+2026-10-04 21:49 | P48_alignment.py | P48-02 | Front_Matter_v1.md | dfd6debf0651 -> 777864d473a9 | Sammendrag aligned with the abstract (P47-02/03)
+2026-10-04 21:49 | P48_alignment.py | P48-03 | Chapter5_Demonstration_v1.md | 90334ed42b43 -> 97ff09723308 | João M4
+2026-10-04 21:49 | P48_alignment.py | P48-04 | Chapter5_Demonstration_v1.md | 90334ed42b43 -> 97ff09723308 | João M4: permit cap
+2026-10-04 21:49 | P48_alignment.py | P48-05 | Chapter6_Discussion_v1.md | 0da3f5261d0e -> a9377b5ce036 | João: counts out of §6.1
+2026-10-04 21:49 | P48_alignment.py | P48-06 | Chapter7_Conclusion_v1.md | d0ece19ed476 -> 8716e80edddb | João: counts out of §7.2
+2026-10-04 21:49 | P48_alignment.py | P48-07 | Chapter4_TRF_Model_v1.md | bf03a6fc78d5 -> 39214e088b97 | Rival 4: the correct ground for the point João removed
+2026-10-04 21:49 | P48_alignment.py | P48-08 | Chapter4_TRF_Model_v1.md | bf03a6fc78d5 -> 39214e088b97 | M1b: no status-quo claim
+2026-10-04 21:49 | P48_alignment.py | P48-09 | Chapter4_TRF_Model_v1.md | bf03a6fc78d5 -> 39214e088b97 | João M5
+2026-10-04 21:49 | P48_alignment.py | P48-10 | Chapter1_Introduction_v2.md | c82d984af2ee -> 5c5249d2dbf8 | João M5: lead with the request-driven conflict
+2026-10-04 21:49 | P48_alignment.py | P48-11 | Chapter2_LitReview_v2_FINAL.md | 3c1218128378 -> 16defdf0860a | João M5
+2026-10-04 21:49 | P48_alignment.py | P48-12 | Chapter6_Discussion_v1.md | 0da3f5261d0e -> a9377b5ce036 | João M5
+2026-10-04 21:49 | P48_alignment.py | P48-13 | Chapter1_Introduction_v2.md | c82d984af2ee -> 5c5249d2dbf8 | João M5
+2026-10-04 21:51 | P49_substance.py | P49-01 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M2: Option A, with Art 9 EHDS; M1: necessity per class
+2026-10-04 21:51 | P49_substance.py | P49-02 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M1: no circular definition
+2026-10-04 21:51 | P49_substance.py | P49-03 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M1
+2026-10-04 21:51 | P49_substance.py | P49-04 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M1
+2026-10-04 21:51 | P49_substance.py | P49-05 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M5: Art 17(3)(d), Art 71
+2026-10-04 21:51 | P49_substance.py | P49-06 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M6: Semantics I anchored in OpenNCP
+2026-10-04 21:51 | P49_substance.py | P49-07 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João M1: sensitivity result
+2026-10-04 21:51 | P49_substance.py | P49-08 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | link to redactable literature
+2026-10-04 21:51 | P49_substance.py | P49-09 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | Option A carried into §4.8
+2026-10-04 21:51 | P49_substance.py | P49-10 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | João: unimplemented parts said in the summary
+2026-10-04 21:51 | P49_substance.py | P49-11 | Chapter5_Demonstration_v1.md | 97ff09723308 -> b0e9b43346d1 | Option A carried into §5.7
+2026-10-04 21:51 | P49_substance.py | P49-12 | Chapter7_Conclusion_v1.md | 8716e80edddb -> bae0b2099ab6 | Option A carried into §7.1
+2026-10-04 21:51 | P49_substance.py | P49-13 | Chapter7_Conclusion_v1.md | 8716e80edddb -> bae0b2099ab6 | João: unimplemented
+2026-10-04 21:51 | P49_substance.py | P49-14 | Chapter2_LitReview_v2_FINAL.md | 16defdf0860a -> 60e6872e9342 | João: redactable-log prior art
+2026-10-04 21:51 | P49_substance.py | P49-15 | Chapter2_LitReview_v2_FINAL.md | 16defdf0860a -> 60e6872e9342 | references
+2026-10-04 21:51 | P49_substance.py | P49-16 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | reference
+2026-10-04 21:51 | P49_substance.py | P49-17 | Chapter4_TRF_Model_v1.md | 39214e088b97 -> ac546de9d356 | reference
+2026-10-04 21:53 | P50_z3.py | P50-01 | repro_package/run_all.sh | 8ebee4feb7bc -> ceebe60edbca | run_all step
+2026-10-04 21:53 | P50_z3.py | P50-02 | repro_package/run_all.sh | 8ebee4feb7bc -> ceebe60edbca | run_all diff
+2026-10-04 21:53 | P50_z3.py | P50-03 | repro_package/requirements.txt | 1d0d75fba225 -> 4bd3d97aa2e0 | requirements
+2026-10-04 21:53 | P50_z3.py | P50-04 | code_artefacts/README_Appendix_A.md | e4a0d644ac5c -> f355e37c8e20 | contents
+2026-10-04 21:53 | P50_z3.py | P50-05 | code_artefacts/README_Appendix_A.md | e4a0d644ac5c -> f355e37c8e20 | count
+2026-10-04 21:53 | P50_z3.py | P50-06 | code_artefacts/README_Appendix_A.md | e4a0d644ac5c -> f355e37c8e20 | A.23, A.24
+2026-10-04 21:53 | P50_z3.py | P50-07 | Chapter5_Demonstration_v1.md | b0e9b43346d1 -> 8f1f88fcd130 | João M4: bounded SMT check
+2026-10-04 21:53 | P50_z3.py | P50-08 | Chapter5_Demonstration_v1.md | b0e9b43346d1 -> 8f1f88fcd130 | Table 5.1
+2026-10-04 21:53 | P50_z3.py | P50-09 | Chapter5_Demonstration_v1.md | b0e9b43346d1 -> 8f1f88fcd130 | §5.8
+2026-10-04 21:53 | P50_z3.py | P50-10 | Chapter6_Discussion_v1.md | a9377b5ce036 -> 9de5498df535 | §6.7
+2026-10-04 21:53 | P50_z3.py | P50-11 | Chapter3_Methodology_v1.md | e1724939fde9 -> 78c2f554a33e | §3.6
+2026-10-04 21:53 | P50_z3.py | P50-12 | Front_Matter_v1.md | 777864d473a9 -> 7ce49632e9da | Statement of Contribution
+2026-10-04 21:53 | P50_z3.py | P50-13 | Chapter1_Introduction_v2.md | 5c5249d2dbf8 -> 95b92fc4df29 | roadmap
+2026-10-04 21:53 | P50_z3.py | P50-14 | Chapter7_Conclusion_v1.md | bae0b2099ab6 -> 13b89665f225 | §7.2
+2026-10-04 21:54 | P50b_z3_text.py | P50b-01 | code_artefacts/README_Appendix_A.md | f355e37c8e20 -> ebec30f4ffe2 | accuracy
+2026-10-04 21:54 | P51_trim.py | P51-01 | Chapter2_LitReview_v2_FINAL.md | 60e6872e9342 -> c3fa0ddda7a9 | João: Ch2 trim; said in §1.4
+2026-10-04 21:54 | P51_trim.py | P51-02 | Chapter2_LitReview_v2_FINAL.md | 60e6872e9342 -> c3fa0ddda7a9 | João: Ch2 trim; scenario in §1.2
+2026-10-04 21:54 | P51_trim.py | P51-03 | Chapter2_LitReview_v2_FINAL.md | 60e6872e9342 -> c3fa0ddda7a9 | João: Ch2 trim
+2026-10-04 21:54 | P51_trim.py | P51-04 | Chapter6_Discussion_v1.md | 9de5498df535 -> e0ddc461f288 | João: repeated limitation statements

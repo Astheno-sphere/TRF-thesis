@@ -1,0 +1,100 @@
+[
+ {
+  "id": "P50-01",
+  "file": "repro_package/run_all.sh",
+  "old": "  echo \"skipped: pip install cryptography to run it; no thesis figure depends on it\"\nfi\n",
+  "new": "  echo \"skipped: pip install cryptography to run it; no thesis figure depends on it\"\nfi\n\necho\necho \"=== 6 (optional)  Bounded SMT check of Propositions 1-3; needs the z3-solver package ===\"\nif python3 -c \"import z3\" 2>/dev/null; then\n  python3 z3_check.py | tee results/z3_check_rerun.txt\nelse\n  echo \"skipped: pip install z3-solver to run it\"\nfi\n",
+  "why": "run_all step"
+ },
+ {
+  "id": "P50-02",
+  "file": "repro_package/run_all.sh",
+  "old": "echo \"  diff results/crypto_envelope_rerun.txt       results/crypto_envelope_output.txt\"",
+  "new": "echo \"  diff results/crypto_envelope_rerun.txt       results/crypto_envelope_output.txt\"\necho \"  diff results/z3_check_rerun.txt              results/z3_check_output.txt\"",
+  "why": "run_all diff"
+ },
+ {
+  "id": "P50-03",
+  "file": "repro_package/requirements.txt",
+  "old": "# The optional envelope-encryption module (crypto_envelope.py) requires:\ncryptography>=42\n",
+  "new": "# The optional envelope-encryption module (crypto_envelope.py) requires:\ncryptography>=42\n#\n# The optional bounded SMT check (z3_check.py) requires:\nz3-solver>=4.12\n",
+  "why": "requirements"
+ },
+ {
+  "id": "P50-04",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |",
+  "new": "| `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |\n| `z3_check.py` | Optional: bounded SMT check of Propositions 1–3 with the Z3 solver; needs the `z3-solver` package | 135 |",
+  "why": "contents"
+ },
+ {
+  "id": "P50-05",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "It contains six Python modules,",
+  "new": "It contains seven Python modules,",
+  "why": "count"
+ },
+ {
+  "id": "P50-06",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "RESULT: every invalidated record is unrecoverable; every other record reads\n==========================================================================\n```",
+  "new": "RESULT: every invalidated record is unrecoverable; every other record reads\n==========================================================================\n```\n\n## A.23 Source listing: `z3_check.py`\n\nOptional module. It poses each of Propositions 1–3 to the Z3 SMT solver as a request for a counterexample within stated bounds, and checks that deliberately wrong versions of Proposition 3 are refuted (Chapter 5, Section 5.5). It reports no thesis figure from the generated population.\n\n```python\n\"\"\"\nBounded SMT check of Propositions 1-3 (optional module)\n========================================================\nAn independent check of the TRF Model's propositions in a different formalism from the\nchecker. trf_checker.py evaluates 200 generated records; this module asks the Z3 SMT solver\nwhether ANY record, with ANY parameter values inside the stated bounds, contradicts a\nproposition. Every check is posed as \"find a counterexample\"; the expected answer is\n\"unsat\" (no counterexample exists within the bounds).\n\nModel (Chapter 4, Sections 4.3-4.6), one record, months t = 0..H:\n  alpha_t        payload accessible at month t (free Boolean per month)\n  C1 floor       alpha_t for t in [t_a, t_a + F]                       (Semantics I: V = alpha)\n  C2 right       not alpha_t for t >= t_r + delta, if a request arrives\n  C3 ceiling     not alpha_t for t >= e + L, if a ceiling applies (e: its anchor event)\nSemantics II (Proposition 2) adds the accountability state: the accessor fields and the\ncommitment are kept, and an invalidation entry exists from the invalidation month on.\n\nBounds: t_a in [0, 12], F in [1, 24], delta in [1, 3], request month and anchor event in\n[t_a, H], L in [1, 24], H = 64 (large enough that every window and deadline fits).\nThis is a bounded check: it covers every combination within the bounds, not all integers.\nIt checks that the propositions follow from the constraints as encoded here; like the\nchecker, it does not check that the constraints translate the law (Section 4.2 does that).\n\nRun:  pip install z3-solver   then   python3 z3_check.py\n\"\"\"\n\nfrom z3 import And, Bool, If, Implies, Int, Not, Or, Solver, sat, unsat\n\nH = 64\nT = range(H + 1)\n\n\ndef record():\n    \"\"\"Symbolic parameters and constraints common to every check.\"\"\"\n    ta, F, d = Int(\"t_a\"), Int(\"F\"), Int(\"delta\")\n    tr, e, L = Int(\"t_r\"), Int(\"e\"), Int(\"L\")\n    req, ceil = Bool(\"request\"), Bool(\"ceiling\")\n    alpha = [Bool(f\"alpha_{t}\") for t in T]\n    bounds = And(ta >= 0, ta <= 12, F >= 1, F <= 24, d >= 1, d <= 3,\n                 tr >= ta, tr <= H, e >= ta, e <= H, L >= 1, L <= 24)\n    return ta, F, d, tr, e, L, req, ceil, alpha, bounds\n\n\ndef C1(alpha, ta, F):\n    return And([Implies(And(ta <= t, t <= ta + F), alpha[t]) for t in T])\n\n\ndef C2(alpha, req, tr, d):\n    return And([Implies(And(req, t >= tr + d), Not(alpha[t])) for t in T])\n\n\ndef C3(alpha, ceil, e, L):\n    return And([Implies(And(ceil, t >= e + L), Not(alpha[t])) for t in T])\n\n\ndef check(name, formula):\n    s = Solver()\n    s.add(formula)\n    r = s.check()\n    print(f\"{name:<74} {'unsat (no counterexample)' if r == unsat else 'SAT: ' + str(s.model())}\")\n    return r == unsat\n\n\ndef main():\n    print(\"=\" * 100)\n    print(\"BOUNDED SMT CHECK OF PROPOSITIONS 1-3 (Z3)\".center(100))\n    print(\"=\" * 100)\n    print(f\"bounds: t_a 0..12, F 1..24, delta 1..3, t_r and e in [t_a, {H}], L 1..24, horizon {H}\")\n    ok = []\n    ta, F, d, tr, e, L, req, ceil, alpha, B = record()\n\n    # Proposition 1, infeasibility direction: if a deadline falls inside the window,\n    # no accessibility trajectory satisfies C1, C2 and C3 under Semantics I.\n    inside = Or(And(req, tr + d <= ta + F), And(ceil, e + L <= ta + F))\n    ok.append(check(\"P1  deadline inside window => no trajectory satisfies C1-C3 (Sem I)\",\n                    And(B, inside, C1(alpha, ta, F), C2(alpha, req, tr, d), C3(alpha, ceil, e, L))))\n\n    # Proposition 1, boundary: if no deadline falls inside the window, the trajectory\n    # \"accessible until the earliest deadline\" satisfies all three. Counterexample = it fails.\n    dl = If(req, If(ceil, If(tr + d < e + L, tr + d, e + L), tr + d), If(ceil, e + L, H + 1))\n    witness = [t < dl for t in T]\n    ok.append(check(\"P1  no deadline inside window => witness trajectory satisfies C1-C3\",\n                    And(B, Not(inside),\n                        Not(And(C1(witness, ta, F), C2(witness, req, tr, d), C3(witness, ceil, e, L))))))\n\n    # Proposition 2: under Semantics II the constructive trajectory (accessible until\n    # t_I = earliest deadline, then an invalidation entry) satisfies C1, C2 and C3 for\n    # every arrival pattern and floor. V_II(t) = kept(m_acc) and kept(c) and\n    # (alpha_t or logged_t); the construction never removes m_acc or c.\n    tI = dl\n    traj = [t < tI for t in T]\n    logged = [t >= tI for t in T]\n    V2 = [And(True, True, Or(traj[t], logged[t])) for t in T]\n    C1_II = And([Implies(And(ta <= t, t <= ta + F), V2[t]) for t in T])\n    ok.append(check(\"P2  constructive trajectory satisfies C1 (Sem II), C2, C3 for all inputs\",\n                    And(B, Not(And(C1_II, C2(traj, req, tr, d), C3(traj, ceil, e, L))))))\n\n    # Proposition 3: floor F from t_a, ceiling L from e >= t_a, Semantics I.\n    # (a) collision whenever e + L <= t_a + F: no trajectory satisfies floor and ceiling.\n    both = And(C1(alpha, ta, F), C3(alpha, True, e, L))\n    ok.append(check(\"P3  e + L <= t_a + F => floor and ceiling not jointly satisfiable\",\n                    And(B, e + L <= ta + F, both)))\n    # (b) no collision whenever e + L > t_a + F: accessible-until-(e+L) satisfies both.\n    w3 = [t < e + L for t in T]\n    ok.append(check(\"P3  e + L > t_a + F => witness satisfies floor and ceiling\",\n                    And(B, e + L > ta + F, Not(And(C1(w3, ta, F), C3(w3, True, e, L))))))\n    # (i) same anchor (e = t_a): satisfiable for the record iff L > F.\n    ok.append(check(\"P3(i)  e = t_a: jointly satisfiable only if L > F\",\n                    And(B, e == ta, L <= F, both)))\n    ok.append(check(\"P3(i)  e = t_a and L > F: witness satisfies floor and ceiling\",\n                    And(B, e == ta, L > F, Not(And(C1(w3, ta, F), C3(w3, True, e, L))))))\n    # (ii) external anchor with L <= F: collision exactly when e - t_a <= F - L.\n    ok.append(check(\"P3(ii) L <= F, e - t_a <= F - L => collision\",\n                    And(B, L <= F, e - ta <= F - L, both)))\n    ok.append(check(\"P3(ii) L <= F, e - t_a >  F - L => witness satisfies both\",\n                    And(B, L <= F, e - ta > F - L, Not(And(C1(w3, ta, F), C3(w3, True, e, L))))))\n\n    # Sanity: the encoding can return sat, so unsat above is not an artefact of a broken model.\n    s = Solver(); s.add(B, Not(req), Not(ceil), C1(alpha, ta, F))\n    sanity = s.check() == sat\n    print(f\"{'sanity: no request, no ceiling => some trajectory satisfies C1':<74} {'sat (as expected)' if sanity else 'UNSAT: encoding broken'}\")\n    # Mutation checks: deliberately wrong versions of Proposition 3 must be refuted (sat),\n    # showing the checks are sensitive to an off-by-one in the condition.\n    m1 = Solver(); m1.add(B, e + L <= ta + F + 1, both)       # claims collision one month too late\n    m2 = Solver(); m2.add(B, e + L > ta + F - 1, Not(And(C1(w3, ta, F), C3(w3, True, e, L))))\n    mut = m1.check() == sat and m2.check() == sat\n    print(f\"{'mutation: Proposition 3 with an off-by-one condition is refuted':<74} {'sat, counterexample found (as expected)' if mut else 'UNSAT: checks insensitive'}\")\n    sanity = sanity and mut\n    print(\"=\" * 100)\n    print(f\"RESULT: {sum(ok)}/{len(ok)} checks found no counterexample; sanity and mutation checks {'passed' if sanity else 'FAILED'}\")\n    print(\"=\" * 100)\n\n\nif __name__ == \"__main__\":\n    main()\n```\n\n## A.24 Console output of the bounded SMT check\n\nVerbatim output of `python3 z3_check.py` (Z3 4.15). Nine checks find no counterexample; the sanity check and the mutation check return counterexamples, as they must.\n\n```text\n====================================================================================================\n                             BOUNDED SMT CHECK OF PROPOSITIONS 1-3 (Z3)                             \n====================================================================================================\nbounds: t_a 0..12, F 1..24, delta 1..3, t_r and e in [t_a, 64], L 1..24, horizon 64\nP1  deadline inside window => no trajectory satisfies C1-C3 (Sem I)        unsat (no counterexample)\nP1  no deadline inside window => witness trajectory satisfies C1-C3        unsat (no counterexample)\nP2  constructive trajectory satisfies C1 (Sem II), C2, C3 for all inputs   unsat (no counterexample)\nP3  e + L <= t_a + F => floor and ceiling not jointly satisfiable          unsat (no counterexample)\nP3  e + L > t_a + F => witness satisfies floor and ceiling                 unsat (no counterexample)\nP3(i)  e = t_a: jointly satisfiable only if L > F                          unsat (no counterexample)\nP3(i)  e = t_a and L > F: witness satisfies floor and ceiling              unsat (no counterexample)\nP3(ii) L <= F, e - t_a <= F - L => collision                               unsat (no counterexample)\nP3(ii) L <= F, e - t_a >  F - L => witness satisfies both                  unsat (no counterexample)\nsanity: no request, no ceiling => some trajectory satisfies C1             sat (as expected)\nmutation: Proposition 3 with an off-by-one condition is refuted            sat, counterexample found (as expected)\n====================================================================================================\nRESULT: 9/9 checks found no counterexample; sanity and mutation checks passed\n====================================================================================================\n```",
+  "why": "A.23, A.24"
+ },
+ {
+  "id": "P50-07",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "so it guards against implementation error in the checker and not against error in the model.",
+  "new": "so it guards against implementation error in the checker and not against error in the model.\n\nA bounded check in a different formalism narrows that limitation. An optional module poses each proposition to the Z3 SMT solver as a request for a counterexample: a record with any parameter values inside stated bounds (creation month 0–12, floor 1–24 months, response period 1–3 months, request month and ceiling anchor anywhere up to a 64-month horizon, ceiling 1–24 months) that contradicts either direction of Proposition 1, the constructive trajectory of Proposition 2, or either direction of Proposition 3 and its two cases. The solver finds none in any of the nine checks. It does find counterexamples to deliberately wrong versions of Proposition 3 shifted by one month, which shows the checks can fail (Appendix A, A.23 and A.24). The check covers every parameter combination within the bounds rather than a sample, and it shares no code with the checker; it takes the constraint definitions from Section 4.4, so it checks that the propositions follow from the constraints, not that the constraints translate the law, and it is bounded rather than general.",
+  "why": "João M4: bounded SMT check"
+ },
+ {
+  "id": "P50-08",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "| `crypto_envelope.py` | 118 | Optional: the same lifecycle with real AES-256-GCM envelope encryption (needs `cryptography`) | No |",
+  "new": "| `crypto_envelope.py` | 118 | Optional: the same lifecycle with real AES-256-GCM envelope encryption (needs `cryptography`) | No |\n| `z3_check.py` | 135 | Optional: bounded SMT check of Propositions 1–3 (needs `z3-solver`) | No |",
+  "why": "Table 5.1"
+ },
+ {
+  "id": "P50-09",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "The infeasibility results survive a separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines.",
+  "new": "The infeasibility results survive a separately written exhaustive search that considers every possible accessibility assignment rather than only the trajectory the main checker examines, and Propositions 1–3 survive a bounded SMT check over every parameter combination within its bounds.",
+  "why": "§5.8"
+ },
+ {
+  "id": "P50-10",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "The executable check and the exhaustive cross-check reduce the probability that an error in the proofs has gone unnoticed; they do not eliminate it.",
+  "new": "The executable check, the exhaustive cross-check and the bounded SMT check reduce the probability that an error in the proofs has gone unnoticed; they do not eliminate it, and none of them can show that the constraints translate the law.",
+  "why": "§6.7"
+ },
+ {
+  "id": "P50-11",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "This is a robustness measure rather than a component of the contribution.",
+  "new": "A bounded SMT check with the Z3 solver poses each proposition as a request for a counterexample over every parameter combination within stated bounds (Chapter 5, Section 5.5). Both are robustness measures rather than components of the contribution.",
+  "why": "§3.6"
+ },
+ {
+  "id": "P50-12",
+  "file": "Front_Matter_v1.md",
+  "old": "Both are proved informally and demonstrated executably, with an independent exhaustive cross-check.",
+  "new": "Both are proved informally and checked executably, with a separately written exhaustive cross-check and a bounded SMT check of Propositions 1–3.",
+  "why": "Statement of Contribution"
+ },
+ {
+  "id": "P50-13",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "the independent exhaustive cross-check, the audit-log integrity and tamper tests",
+  "new": "the independent exhaustive cross-check, a bounded SMT check of Propositions 1–3, the audit-log integrity and tamper tests",
+  "why": "roadmap"
+ },
+ {
+  "id": "P50-14",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "and a separately written exhaustive search confirmed that under the first semantics no assignment of payload accessibility succeeds in the cases it covers.",
+  "new": "a separately written exhaustive search confirmed that under the first semantics no assignment of payload accessibility succeeds in the cases it covers, and a bounded SMT check found no counterexample to Propositions 1–3 within its bounds.",
+  "why": "§7.2"
+ }
+]

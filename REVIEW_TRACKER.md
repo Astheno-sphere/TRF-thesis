@@ -53,3 +53,16 @@ passage by passage when the patch for that passage is written.
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27, P43, P44 | Process residue removed from §2.1.4, §2.9, §5.7, §6.8, the Declaration (one statement), the checker header (P43, P44) |
 | PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | CLOSED | P28, P29, P43, P46 | Pilot detail in §2.2 only (§1.1 now points there); §2.3 points to §4.6; Synthea limitations once in §3.5 (P43, P46) |
 | PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |
+| R3-T | Review of 4 Oct (Google Doc v3): ten tracked wording changes | CLOSED | P47, P48 | Applied verbatim (P47); Sammendrag, §5.1, §6.1, §7.2 aligned with the abstract; Rival 4 point restated on the log (P48) |
+| R3-M1 | Circular metadata/payload split; necessity per class; sensitivity result | CLOSED | P49 | Payload defined by source; necessity argued per class in §4.2; Corollary 2.3 with proof sketch |
+| R3-M2 | Patient link on the cross-border path: argue necessity or remove | CLOSED | P49 | Option A (Tiger 5 Oct): kept and argued under Art 17(3)(b) with EHDS Art 9(1)-(2); carried into §4.8, §5.7, §7.1 |
+| R3-M4 | Counts are generator-determined; independent bounded check (Z3/Alloy) | CLOSED | P47, P48, P50, P50b | Counts out of abstract, §6.1, §7.2, labelled in §5.1; ten-year permit note in §5.4; z3_check.py: 9 checks unsat, mutation refuted |
+| R3-M5 | Art 68(12) reading; Cor 1.2 conditional throughout; Art 17(3)(d) and opt-out | CLOSED | P47, P48, P49 | 'conditional extension' in §1.2, §1.4, §2.9, §4.6, §6.1; Art 17(3)(d) and Art 71 in §4.4 |
+| R3-M6 | Semantics I without a real system: check OpenNCP | CLOSED | P49 | OpenNCP source (2017) and Danish 9.1.0 deployment schema inspected: readable message content and patient ID, no retention or purge logic, modification refused |
+| R3-LIT | Redactable signatures / chameleon-hash blockchains | CLOSED | P49 | Paragraph in §2.4 with seven verified references; pointer from §4.8 |
+| R3-TT | Unimplemented terminal transition, nonce, consistency proofs, accumulator: say so in the summaries | CLOSED | P49 | §4.12 and §7.1 |
+| R3-RS | Restructuring: trim Ch2; cut repeated limitation statements | PARTIAL | P51 | Ch2 repetition of Ch1 cut; §6.11 points to §3.7. Ch2 remains ~12,000 words pending the programme length limit (T-8) |
+| R3-F10 | Ten-year floor source thin: ask Helsedirektoratet | OPEN |  | Tiger T-11 (draft email ready) |
+| R3-PRL | Verify politiregisterloven § 17 wording | OPEN |  | Bill text verified (Ot.prp. nr. 108 (2008–2009)); current lovdata text: Tiger T-12 |
+| R3-FIT | Programme fit beyond the customs analogy | OPEN |  | Draft paragraph for Tiger in TIGER_DRAFTS_2026-10-05.md |
+| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | OPEN |  | Tiger T-13 |
