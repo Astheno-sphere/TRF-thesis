@@ -34,7 +34,7 @@ A note on durability. Hosted applications are not archival objects: the live dem
 | `cross_sector_check.py` | Cross-sector instance drawn from politiregisterloven § 17 | 110 |
 | `app.py` | Six-tab demonstration viewer over the artefact, never a source of results | 671 |
 | `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |
-| `z3_check.py` | Optional: bounded SMT check of Propositions 1–3 with the Z3 solver; needs the `z3-solver` package | 135 |
+| `z3_check.py` | Optional: bounded SMT check of Propositions 1–3 with the Z3 solver; needs the `z3-solver` package | 153 |
 | `data/synthea_subset/` | Eight untrimmed Synthea bundles from the reported cohort, so a reader can run the realism layer without regenerating it | 8 files, 40 MB |
 | `docs/expected_trf_output.txt` | Recorded console run of the checker | — |
 | `docs/expected_delta_witness_output.txt` | Recorded run at δ = 1 and δ = 3 | — |
@@ -2319,11 +2319,13 @@ Model (Chapter 4, Sections 4.3-4.6), one record, months t = 0..H:
   C1 floor       alpha_t for t in [t_a, t_a + F]                       (Semantics I: V = alpha)
   C2 right       not alpha_t for t >= t_r + delta, if a request arrives
   C3 ceiling     not alpha_t for t >= e + L, if a ceiling applies (e: its anchor event)
-Semantics II (Proposition 2) adds the accountability state: the accessor fields and the
-commitment are kept, and an invalidation entry exists from the invalidation month on.
+Semantics II (Proposition 2) adds the accountability state per month: m_acc kept, c kept,
+an invalidation entry iota present, the subject link beta readable, and a subject-link
+entry iota_subj present. V_II = m_acc and c and (alpha or iota) and (beta or iota_subj),
+and C3 also requires beta = 0 from the ceiling where it reaches the subject fields.
 
-Bounds: t_a in [0, 12], F in [1, 24], delta in [1, 3], request month and anchor event in
-[t_a, H], L in [1, 24], H = 64 (large enough that every window and deadline fits).
+Bounds: t_a in [0, 12], F in [1, 120] (so the 120-month cross-border floor is covered),
+delta in [1, 3], request month and anchor event in [t_a, H], L in [1, 120], H = 140.
 This is a bounded check: it covers every combination within the bounds, not all integers.
 It checks that the propositions follow from the constraints as encoded here; like the
 checker, it does not check that the constraints translate the law (Section 4.2 does that).
@@ -2333,7 +2335,7 @@ Run:  pip install z3-solver   then   python3 z3_check.py
 
 from z3 import And, Bool, If, Implies, Int, Not, Or, Solver, sat, unsat
 
-H = 64
+H = 140
 T = range(H + 1)
 
 
@@ -2343,8 +2345,8 @@ def record():
     tr, e, L = Int("t_r"), Int("e"), Int("L")
     req, ceil = Bool("request"), Bool("ceiling")
     alpha = [Bool(f"alpha_{t}") for t in T]
-    bounds = And(ta >= 0, ta <= 12, F >= 1, F <= 24, d >= 1, d <= 3,
-                 tr >= ta, tr <= H, e >= ta, e <= H, L >= 1, L <= 24)
+    bounds = And(ta >= 0, ta <= 12, F >= 1, F <= 120, d >= 1, d <= 3,
+                 tr >= ta, tr <= H, e >= ta, e <= H, L >= 1, L <= 120)
     return ta, F, d, tr, e, L, req, ceil, alpha, bounds
 
 
@@ -2372,7 +2374,7 @@ def main():
     print("=" * 100)
     print("BOUNDED SMT CHECK OF PROPOSITIONS 1-3 (Z3)".center(100))
     print("=" * 100)
-    print(f"bounds: t_a 0..12, F 1..24, delta 1..3, t_r and e in [t_a, {H}], L 1..24, horizon {H}")
+    print(f"bounds: t_a 0..12, F 1..120, delta 1..3, t_r and e in [t_a, {H}], L 1..120, horizon {H}")
     ok = []
     ta, F, d, tr, e, L, req, ceil, alpha, B = record()
 
@@ -2390,17 +2392,33 @@ def main():
                     And(B, Not(inside),
                         Not(And(C1(witness, ta, F), C2(witness, req, tr, d), C3(witness, ceil, e, L))))))
 
-    # Proposition 2: under Semantics II the constructive trajectory (accessible until
-    # t_I = earliest deadline, then an invalidation entry) satisfies C1, C2 and C3 for
-    # every arrival pattern and floor. V_II(t) = kept(m_acc) and kept(c) and
-    # (alpha_t or logged_t); the construction never removes m_acc or c.
+    # Proposition 2: under Semantics II the constructive trajectory satisfies C1, C2 and C3
+    # for every arrival pattern and floor. The construction keeps m_acc and c, sets alpha = 0
+    # and logs iota from t_I = earliest deadline, and, where a ceiling applies (SPE records
+    # whose subject fields it reaches), sets beta = 0 and logs iota_subj from the ceiling.
     tI = dl
     traj = [t < tI for t in T]
-    logged = [t >= tI for t in T]
-    V2 = [And(True, True, Or(traj[t], logged[t])) for t in T]
-    C1_II = And([Implies(And(ta <= t, t <= ta + F), V2[t]) for t in T])
+
+    def sem2(macc, c, iota, beta, iota_s):
+        V2 = [And(macc[t], c[t], Or(traj[t], iota[t]), Or(beta[t], iota_s[t])) for t in T]
+        c1 = And([Implies(And(ta <= t, t <= ta + F), V2[t]) for t in T])
+        c3b = And([Implies(And(ceil, t >= e + L), Not(beta[t])) for t in T])
+        return And(c1, C2(traj, req, tr, d), C3(traj, ceil, e, L), c3b)
+
+    keep = [True for t in T]
+    iota = [t >= tI for t in T]
+    beta = [Or(Not(ceil), t < e + L) for t in T]
+    iota_s = [And(ceil, t >= e + L) for t in T]
     ok.append(check("P2  constructive trajectory satisfies C1 (Sem II), C2, C3 for all inputs",
-                    And(B, Not(And(C1_II, C2(traj, req, tr, d), C3(traj, ceil, e, L))))))
+                    And(B, Not(sem2(keep, keep, iota, beta, iota_s)))))
+    # Mutations of the construction must be refuted (sat): no invalidation entry; the
+    # commitment removed at t_I; the subject link removed without its entry.
+    mut2 = [Solver() for _ in range(3)]
+    mut2[0].add(B, Not(sem2(keep, keep, [False for t in T], beta, iota_s)))
+    mut2[1].add(B, Not(sem2(keep, [t < tI for t in T], iota, beta, iota_s)))
+    mut2[2].add(B, Not(sem2(keep, keep, iota, beta, [False for t in T])))
+    m2ok = all(m.check() == sat for m in mut2)
+    print(f"{'mutation: construction without iota / without c / without iota_subj refuted':<74} {'sat, counterexamples found (as expected)' if m2ok else 'UNSAT: check insensitive'}")
 
     # Proposition 3: floor F from t_a, ceiling L from e >= t_a, Semantics I.
     # (a) collision whenever e + L <= t_a + F: no trajectory satisfies floor and ceiling.
@@ -2432,7 +2450,7 @@ def main():
     m2 = Solver(); m2.add(B, e + L > ta + F - 1, Not(And(C1(w3, ta, F), C3(w3, True, e, L))))
     mut = m1.check() == sat and m2.check() == sat
     print(f"{'mutation: Proposition 3 with an off-by-one condition is refuted':<74} {'sat, counterexample found (as expected)' if mut else 'UNSAT: checks insensitive'}")
-    sanity = sanity and mut
+    sanity = sanity and mut and m2ok
     print("=" * 100)
     print(f"RESULT: {sum(ok)}/{len(ok)} checks found no counterexample; sanity and mutation checks {'passed' if sanity else 'FAILED'}")
     print("=" * 100)
@@ -2450,10 +2468,11 @@ Verbatim output of `python3 z3_check.py` (Z3 5.1.0). Nine checks find no counter
 ====================================================================================================
                              BOUNDED SMT CHECK OF PROPOSITIONS 1-3 (Z3)                             
 ====================================================================================================
-bounds: t_a 0..12, F 1..24, delta 1..3, t_r and e in [t_a, 64], L 1..24, horizon 64
+bounds: t_a 0..12, F 1..120, delta 1..3, t_r and e in [t_a, 140], L 1..120, horizon 140
 P1  deadline inside window => no trajectory satisfies C1-C3 (Sem I)        unsat (no counterexample)
 P1  no deadline inside window => witness trajectory satisfies C1-C3        unsat (no counterexample)
 P2  constructive trajectory satisfies C1 (Sem II), C2, C3 for all inputs   unsat (no counterexample)
+mutation: construction without iota / without c / without iota_subj refuted sat, counterexamples found (as expected)
 P3  e + L <= t_a + F => floor and ceiling not jointly satisfiable          unsat (no counterexample)
 P3  e + L > t_a + F => witness satisfies floor and ceiling                 unsat (no counterexample)
 P3(i)  e = t_a: jointly satisfiable only if L > F                          unsat (no counterexample)

@@ -99,7 +99,7 @@ The regulation places a retention floor on that same environment. Article 73(1)(
 
 The standard practitioner heuristic for conflicting retention obligations cannot resolve this. Guidance for multi-framework environments routinely advises applying the longest applicable retention period across all frameworks: a rule that works when every obligation is a floor, and fails entirely when one obligation is a ceiling, since extending retention to satisfy the longer floor is precisely what the ceiling forbids. The absence of an applicable heuristic is one reason the conflict has remained open in practice as well as in the literature.
 
-The renumbering of these obligations between the 2022 proposal and the adopted text, from Articles 46 and 50 to Articles 68 and 73, is one reason the commentary has treated them apart (Chapter 1, Section 1.4).
+The renumbering of these obligations between the 2022 proposal and the adopted text, from Articles 46 and 50 to Articles 68 and 73, may be one reason the commentary has treated them apart (Chapter 1, Section 1.4).
 
 In the cross-border pathway the conflict takes the form Chapter 1, Section 1.2 describes: a granted erasure request leaves an audit record pointing at data that no longer exist, and a refused one must be justified as necessary for a specific legal obligation, as the European Data Protection Board recommended in February 2026 (Matheson, 2026). Practitioner and supervisory commentary reads the erasure obligation as extending to all storage locations of the personal data, backups and logs included (see, e.g., the Norwegian legal commentary summarised in Berngaard, 2024), which is why the audit trail cannot be carved out of the conflict.
 

@@ -12,17 +12,17 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 41721f369e81 | 71,004 | 4 Oct 21:56 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 25087f7957c2 | 176 eq, 25 tbl | 4 Oct 21:56 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
-| THESIS | Front_Matter_v1.md | 7ce49632e9da | 2,777 | 4 Oct 21:53 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
-| THESIS | Chapter1_Introduction_v2.md | 95b92fc4df29 | 4,967 | 4 Oct 21:53 | Chapter 1 |
-| THESIS | Chapter2_LitReview_v2_FINAL.md | c3fa0ddda7a9 | 13,902 | 4 Oct 21:54 | Chapter 2 incl. review protocol §2.1 |
-| THESIS | Chapter3_Methodology_v1.md | 78c2f554a33e | 5,353 | 4 Oct 21:53 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
-| THESIS | Chapter4_TRF_Model_v1.md | ac546de9d356 | 13,223 | 4 Oct 21:51 | Chapter 4 — all math in LaTeX (159 equations) |
-| THESIS | Chapter5_Demonstration_v1.md | 8f1f88fcd130 | 4,364 | 4 Oct 21:53 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
-| THESIS | Chapter6_Discussion_v1.md | e0ddc461f288 | 5,911 | 4 Oct 21:54 | Chapter 6, 11 sections |
-| THESIS | Chapter7_Conclusion_v1.md | 13b89665f225 | 2,630 | 4 Oct 21:53 | Chapter 7 |
-| APPENDIX | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 | 15,196 | 4 Oct 21:54 | Appendix A: provenance, commands, full source, console output |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 0ea804cce58d | 71,717 | 4 Oct 22:14 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 836f60f6870e | 176 eq, 25 tbl | 4 Oct 22:14 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | Front_Matter_v1.md | 2dfe9ac6be56 | 2,812 | 4 Oct 22:13 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
+| THESIS | Chapter1_Introduction_v2.md | 21c87e4eb72a | 4,989 | 4 Oct 22:13 | Chapter 1 |
+| THESIS | Chapter2_LitReview_v2_FINAL.md | 0f595af280bc | 13,903 | 4 Oct 22:13 | Chapter 2 incl. review protocol §2.1 |
+| THESIS | Chapter3_Methodology_v1.md | 6525ec477bc2 | 5,395 | 4 Oct 22:13 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
+| THESIS | Chapter4_TRF_Model_v1.md | 85026d714420 | 13,473 | 4 Oct 22:13 | Chapter 4 — all math in LaTeX (159 equations) |
+| THESIS | Chapter5_Demonstration_v1.md | f1eaba80786e | 4,436 | 4 Oct 22:13 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
+| THESIS | Chapter6_Discussion_v1.md | a2f0082bb806 | 5,937 | 4 Oct 22:13 | Chapter 6, 11 sections |
+| THESIS | Chapter7_Conclusion_v1.md | 4d9452ec7084 | 2,677 | 4 Oct 22:13 | Chapter 7 |
+| APPENDIX | code_artefacts/README_Appendix_A.md | ace814957a3b | 15,414 | 4 Oct 22:13 | Appendix A: provenance, commands, full source, console output |
 | APPENDIX | Appendix_B_Search_Log.md | 535856d92083 | 1,737 | 29 Sep 12:35 | Appendix B: 59 queries, 4 rounds |
 | APPENDIX | Appendix_C_Evaluation_Instrument.md | 57d72bb62224 | 2,822 | 3 Oct 22:34 | Appendix C: evaluation instrument (designed, not executed) |
 | BIBLIO | Consolidated_Bibliography.md | 2e9fe7ee2531 | 2,601 | 4 Oct 21:56 | 69 entries, chapter-tagged — READ this |
@@ -55,7 +55,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | f3c5908e13fa | 17,488 | 4 Oct 21:58 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 17a2a8800d61 | 17,742 | 4 Oct 22:14 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | 85c3349853aa | 194 | 3 Oct 22:43 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
@@ -151,6 +151,9 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/supervisor_review/review3_JF_2026-10-04.docx | - | source | 5 Oct | His tracked export |
 | HANDOFF | patches/supervisor_review/review3_gdoc_2026-10-04.json | - | source | 5 Oct | His comments |
 | HANDOFF | patches/TIGER_DRAFTS_2026-10-05.md | - | drafts | 5 Oct | Email, programme fit |
+| HANDOFF | patches/P52_audit_fixes.py | - | 38 edits | 5 Oct | Independent-check fixes |
+| HANDOFF | patches/P52b_appendix_z3.py | - | 3 edits | 5 Oct | Appendix Z3 sync |
+| HANDOFF | patches/P52b_appendix_z3.edits.json | - | 3 edits | 5 Oct | Frozen |
 | HANDOFF | patches/handoff_tools/build_docx.py | - | tool | 4 Oct | Formatted Word build |
 | HANDOFF | patches/handoff_tools/build_tracked.py | - | tool | 4 Oct | Tracked-changes comparison |
 | SOURCE | sources/TEHDAS2_D7.4_v1.2.pdf | - | 136 pp | 4 Oct | D7.4 PDF supplied by Tiger |
@@ -163,7 +166,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P16_rename_propositions.edits.json | 77e1509c187d | 58 edits | 3 Oct | Frozen edits of P16 |
 | HANDOFF | patches/P17_rename_code.edits.json | 1c4ae096d145 | 20 edits | 3 Oct | Frozen edits of P17 |
 | HANDOFF | patches/P18_appendixA_propositions.edits.json | d00fd3d3b5ca | 9 edits | 3 Oct | Frozen edits of P18 |
-| HANDOFF | patches/APPLIED.log | d3e40435b698 | 13,241 | 4 Oct 21:54 | Every applied edit with before/after md5 |
+| HANDOFF | patches/APPLIED.log | 63c3e3167c65 | 13,939 | 4 Oct 22:13 | Every applied edit with before/after md5 |
 | HANDOFF | conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies

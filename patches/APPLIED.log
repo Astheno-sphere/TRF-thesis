@@ -753,3 +753,44 @@
 2026-10-04 21:54 | P51_trim.py | P51-02 | Chapter2_LitReview_v2_FINAL.md | 60e6872e9342 -> c3fa0ddda7a9 | João: Ch2 trim; scenario in §1.2
 2026-10-04 21:54 | P51_trim.py | P51-03 | Chapter2_LitReview_v2_FINAL.md | 60e6872e9342 -> c3fa0ddda7a9 | João: Ch2 trim
 2026-10-04 21:54 | P51_trim.py | P51-04 | Chapter6_Discussion_v1.md | 9de5498df535 -> e0ddc461f288 | João: repeated limitation statements
+2026-10-04 22:13 | P52_audit_fixes.py | P52-01 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | his P47 Rival 4 text restored verbatim (audit 5 Oct)
+2026-10-04 22:13 | P52_audit_fixes.py | P52-02 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | patient-link argument: holder of the obligation, years beyond Art 9, SPE (audit 5 Oct)
+2026-10-04 22:13 | P52_audit_fixes.py | P52-03 | Front_Matter_v1.md | 7ce49632e9da -> 2dfe9ac6be56 | Option A in the Statement of Contribution
+2026-10-04 22:13 | P52_audit_fixes.py | P52-04 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | §7.1 softened to match §4.2
+2026-10-04 22:13 | P52_audit_fixes.py | P52-05 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | §7.5 consistent with Option A
+2026-10-04 22:13 | P52_audit_fixes.py | P52-06 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | consistent with his §7.5 hedge
+2026-10-04 22:13 | P52_audit_fixes.py | P52-07 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | Cor 2.3 stated as an extension (audit)
+2026-10-04 22:13 | P52_audit_fixes.py | P52-08 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | Cor 2.3 precise (audit)
+2026-10-04 22:13 | P52_audit_fixes.py | P52-09 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | precise
+2026-10-04 22:13 | P52_audit_fixes.py | P52-10 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | precise
+2026-10-04 22:13 | P52_audit_fixes.py | P52-11 | Chapter3_Methodology_v1.md | 78c2f554a33e -> 6525ec477bc2 | §3.7 updated for Cor 2.3
+2026-10-04 22:13 | P52_audit_fixes.py | P52-12 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | consistency
+2026-10-04 22:13 | P52_audit_fixes.py | P52-13 | Chapter1_Introduction_v2.md | 95b92fc4df29 -> 21c87e4eb72a | Prop 2 premise; 'personal-data payload'
+2026-10-04 22:13 | P52_audit_fixes.py | P52-14 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | Prop 2 premise in §4.12
+2026-10-04 22:13 | P52_audit_fixes.py | P52-15 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | §7.4 accurate
+2026-10-04 22:13 | P52_audit_fixes.py | P52-16 | Chapter6_Discussion_v1.md | e0ddc461f288 -> a2f0082bb806 | §6.2 accurate
+2026-10-04 22:13 | P52_audit_fixes.py | P52-17 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | OpenNCP claims tied to what was inspected; 'verification' answered (audit)
+2026-10-04 22:13 | P52_audit_fixes.py | P52-18 | Chapter6_Discussion_v1.md | e0ddc461f288 -> a2f0082bb806 | consistent with the OpenNCP finding
+2026-10-04 22:13 | P52_audit_fixes.py | P52-19 | Chapter5_Demonstration_v1.md | 8f1f88fcd130 -> f1eaba80786e | moved below
+2026-10-04 22:13 | P52_audit_fixes.py | P52-20 | Chapter5_Demonstration_v1.md | 8f1f88fcd130 -> f1eaba80786e | Z3 paragraph moved, accurate, covers F=120 and the full Semantics II encoding
+2026-10-04 22:13 | P52_audit_fixes.py | P52-21 | Chapter5_Demonstration_v1.md | 8f1f88fcd130 -> f1eaba80786e | consistency with §5.5
+2026-10-04 22:13 | P52_audit_fixes.py | P52-22 | Chapter5_Demonstration_v1.md | 8f1f88fcd130 -> f1eaba80786e | line count
+2026-10-04 22:13 | P52_audit_fixes.py | P52-23 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | comment 6 in Ch7
+2026-10-04 22:13 | P52_audit_fixes.py | P52-24 | Chapter6_Discussion_v1.md | e0ddc461f288 -> a2f0082bb806 | §6.1 complete
+2026-10-04 22:13 | P52_audit_fixes.py | P52-25 | Chapter5_Demonstration_v1.md | 8f1f88fcd130 -> f1eaba80786e | cross-reference in his inserted text
+2026-10-04 22:13 | P52_audit_fixes.py | P52-26 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | cross-reference
+2026-10-04 22:13 | P52_audit_fixes.py | P52-27 | Chapter4_TRF_Model_v1.md | ac546de9d356 -> 85026d714420 | cross-reference
+2026-10-04 22:13 | P52_audit_fixes.py | P52-28 | Chapter6_Discussion_v1.md | e0ddc461f288 -> a2f0082bb806 | cross-reference
+2026-10-04 22:13 | P52_audit_fixes.py | P52-29 | Front_Matter_v1.md | 7ce49632e9da -> 2dfe9ac6be56 | TOC
+2026-10-04 22:13 | P52_audit_fixes.py | P52-30 | Chapter6_Discussion_v1.md | e0ddc461f288 -> a2f0082bb806 | not 'independent'
+2026-10-04 22:13 | P52_audit_fixes.py | P52-31 | Chapter1_Introduction_v2.md | 95b92fc4df29 -> 21c87e4eb72a | not 'independent'
+2026-10-04 22:13 | P52_audit_fixes.py | P52-32 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | Proposition 3 stated correctly
+2026-10-04 22:13 | P52_audit_fixes.py | P52-33 | Chapter1_Introduction_v2.md | 95b92fc4df29 -> 21c87e4eb72a | terminology
+2026-10-04 22:13 | P52_audit_fixes.py | P52-34 | Chapter3_Methodology_v1.md | 78c2f554a33e -> 6525ec477bc2 | terminology; stale 'clinical document'
+2026-10-04 22:13 | P52_audit_fixes.py | P52-35 | Chapter3_Methodology_v1.md | 78c2f554a33e -> 6525ec477bc2 | terminology
+2026-10-04 22:13 | P52_audit_fixes.py | P52-36 | Chapter7_Conclusion_v1.md | 13b89665f225 -> 4d9452ec7084 | terminology
+2026-10-04 22:13 | P52_audit_fixes.py | P52-37 | Chapter2_LitReview_v2_FINAL.md | c3fa0ddda7a9 -> 0f595af280bc | hedge an unsupported causal claim
+2026-10-04 22:13 | P52_audit_fixes.py | P52-38 | Chapter3_Methodology_v1.md | 78c2f554a33e -> 6525ec477bc2 | no status-quo claim
+2026-10-04 22:13 | P52b_appendix_z3.py | P52b-B14 | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 -> ace814957a3b | Appendix A A.23 synced to demo_app/z3_check.py
+2026-10-04 22:13 | P52b_appendix_z3.py | P52b-B15 | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 -> ace814957a3b | Appendix A A.24 synced to repro_package/results/z3_check_output.txt
+2026-10-04 22:13 | P52b_appendix_z3.py | P52b-01 | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 -> ace814957a3b | line count
