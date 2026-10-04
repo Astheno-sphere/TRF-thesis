@@ -15,6 +15,7 @@
 | P52-01 to P52-38 | Independent check of 5 Oct: his Rival 4 text restored verbatim; patient-link argument bounded (who holds the Art 9 duty, the years beyond Art 9(2), SPE); Option A in the Statement of Contribution, §7.1, §7.5; Corollary 2.3 as an extension, 'argument of Proposition 3', other exits named, §3.7 updated; Proposition 2's SPE premise in §4.12, Ch1; §6.2/§7.4 dependency statement accurate; OpenNCP claims tied to the 2017 source and the 2026 schema, 'verification' answered (sender signs, repository does not verify); Z3 paragraph moved below the scaled-floor paragraph and rewritten; §5.1 consistency; Ch7 unimplemented list; cross-references; TOC A.23/A.24; 'independent' → 'separately written'; Proposition 3 'only if' in §7.1; 'personal-data payload' → 'payload'; Ch2 causal claim hedged; Ch3 status-quo wording | Signing and repository non-verification spot-checked in the 2017 clone (AuditTrailUtils.java:1048–1050; no signature validation in openatna) |
 | P52b-B01 to P52b-B24 | Appendix A.23/A.24 synced to the corrected module and output; A.2 line count (P52b-01) | appendix_sync 15/15 |
 | P52b-01 to P52b-01 | A.2 line count 153 | — |
+| B-46 | Public repo R-27 pushed (398d62b): z3_check.py, recorded output, Appendix A, README; CHECKSUMS copied back | GitHub API head 398d62b; Z3 output identical to the recorded run |
 | B-44 | `build_tracked.py --base <commit>`: tracked comparison against the version he reviewed (aa86290) | — |
 
 ## 4 October 2026 — fix round after the independent audit (P42–P46)
