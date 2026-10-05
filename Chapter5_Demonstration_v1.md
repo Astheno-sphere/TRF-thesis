@@ -16,7 +16,9 @@ A subsidiary claim is made for Corollary 1.2: that, on the broad reading of Arti
 
 The checker is a single Python module of 533 lines including documentation, the independent cross-check and the audit-log integrity check, of which 413 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check. The checker uses no cryptographic library, no solver, and no zero-knowledge proof system, consistent with the scope commitments of Chapter 1, Section 1.5; the optional envelope-encryption module below is the only component that imports one.
 
-Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A.
+Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
+
+![Figure 5.1. The artefact's modules and data path. Records enter from the generator or one of the optional layers, are invalidated on schedule, and are checked under both semantics; the optional cryptographic module and the bounded SMT check sit beside the checker and report separately.](figures/fig5_1_trf_artefact.png){width=6.3in}
 
 *Table 5.1. The artefact as published*
 

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
+    "sha256": "11d0d25023d52fcd68d5290299e8e914c97cf0d18b778bba18abe964452eeb7a",
+    "bytes": 4816
+  },
+  "artifact": {
+    "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
+    "sha256": "32aa527c277327456acbd7ebe0a346cf53416a3cd459b60aa627d0a34fc7a704",
+    "bytes": 768995
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/visual-check/cei-mechanism.finalize.json",
+    "summaryReceipt": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/visual-check/cei-mechanism.finalize-summary.json",
+    "browserCheckReceipt": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/visual-check/cei-mechanism.browser-check.json"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4392
+}

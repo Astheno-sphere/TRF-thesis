@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/candidate.json",
+    "sha256": "79231bf5c51b7419140b1e1cf0855b526a805d1c6783aa5ffba437a446d44ad3",
+    "bytes": 3759
+  },
+  "artifact": {
+    "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
+    "sha256": "05234647e429cd636eecf63543ade10d9053ddb8b1c1280e9e235153ca683fe1",
+    "bytes": 773923
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.finalize.json",
+    "summaryReceipt": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.finalize-summary.json",
+    "browserCheckReceipt": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.browser-check.json"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3334,
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 1,
+      "routesOverSuggestedBends": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "from": "sem1",
+            "to": "meas",
+            "label": "violations",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "right": {
+            "from": "crypto",
+            "to": "meas",
+            "label": "138/138 refuse",
+            "collectionIndex": 12,
+            "artifactIndex": 13
+          },
+          "point": [
+            1218,
+            594
+          ],
+          "sharedNode": "meas"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "from": "inv",
+            "to": "merkle",
+            "label": "append ι",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "from": "rec",
+            "to": "sem1",
+            "label": "V = α",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "sem1 → meas and crypto → meas cross next to meas: move node sem1 or crypto so the two reach meas from different sides (for example one level with it, one directly above or below it).",
+      "inv → merkle needs 3 bends: move node inv or merkle so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "rec → sem1 needs 3 bends: move node rec or sem1 so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}
