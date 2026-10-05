@@ -29,7 +29,7 @@ passage by passage when the patch for that passage is written.
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08, P42 | Art 68(12) and Art 73(1)(e) both verbatim from the OJ English text (P42). Open: one further language version (his 'ideally'; T-10) |
 | M5d | §2.2 EHDS dates fixed against Art 105; drop the EY source | CLOSED | P03 | Arts 19(1), 105(1)(a) verified 3 Oct |
 | M5e | Table 2.1: preprint/practitioner sources in a separate band; Feng et al. 2022 peer-reviewed version? | CLOSED | P09, P20 | Feng peer-reviewed (P09); Table 2.1 bands (P20) |
-| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | PARTIAL | P22, P24 | D7.4 traced row by row in Table 4.1. Open: the SPUHiN checklist row by row needs the hearing-version checklist file, which is not in the working sources |
+| M6a | Traceability matrix against D7.4 and the SPUHiN checklist | PARTIAL | P22, P24, P53 | D7.4 traced row by row in Table 4.1; SPUHiN draft (2024) logging/termination requirements P13, P14, P24, P31 added (P53-15/16). Hearing-version numbering not re-checked (attachment URL too long for the fetcher) |
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | CLOSED | P19 | A1 reworded; one-line record in Appendix C |
 | M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | CLOSED | P11, P43 | UCC anchor; seafarer and OECD material cut; §1.4 overreach rewritten (P43) |
 | M7b | One sentence in §1.5 on the programme fit | CLOSED | P11 | One sentence in §1.5 |
@@ -49,7 +49,7 @@ passage by passage when the patch for that passage is written.
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
 | MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
-| PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | OPEN |  | Tiger's own work (TIGER_TASKS T-7) |
+| PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | PARTIAL | P53 | Hooks and sentence splits in Ch4/Ch6 (P53-01..14, 17..23); final read in your own voice still yours (T-7) |
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27, P43, P44 | Process residue removed from §2.1.4, §2.9, §5.7, §6.8, the Declaration (one statement), the checker header (P43, P44) |
 | PRES-4 | Repetition: NCPeH pilot details and the 68(12) reading said once, then cross-referred | CLOSED | P28, P29, P43, P46 | Pilot detail in §2.2 only (§1.1 now points there); §2.3 points to §4.6; Synthea limitations once in §3.5 (P43, P46) |
 | PRES-5 | Length: check programme guidance; slim Appendix A to tag + SHA-256 + core functions | OPEN |  |  |
@@ -62,7 +62,7 @@ passage by passage when the patch for that passage is written.
 | R3-LIT | Redactable signatures / chameleon-hash blockchains | CLOSED | P49 | Paragraph in §2.4 with seven verified references; pointer from §4.8 |
 | R3-TT | Unimplemented terminal transition, nonce, consistency proofs, accumulator: say so in the summaries | CLOSED | P49 | §4.12 and §7.1 |
 | R3-RS | Restructuring: trim Ch2; cut repeated limitation statements | PARTIAL | P51 | Ch2 repetition of Ch1 cut; §6.11 points to §3.7. Ch2 remains ~12,000 words pending the programme length limit (T-8) |
-| R3-F10 | Ten-year floor source thin: ask Helsedirektoratet | OPEN |  | Tiger T-11 (draft email ready) |
-| R3-PRL | Verify politiregisterloven § 17 wording | OPEN |  | Bill text verified (Ot.prp. nr. 108 (2008–2009)); current lovdata text: Tiger T-12 |
-| R3-FIT | Programme fit beyond the customs analogy | OPEN |  | Draft paragraph for Tiger in TIGER_DRAFTS_2026-10-05.md |
-| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | OPEN |  | Tiger T-13 |
+| R3-F10 | Ten-year floor source thin: ask Helsedirektoratet | WAITING |  | Email sent by Tiger (5 Oct); awaiting reply |
+| R3-PRL | Verify politiregisterloven § 17 wording | OPEN |  | Bill text verified (Ot.prp. nr. 108 (2008–2009)); lovdata.no refuses automated reading (robots.txt, 5 Oct): Tiger T-12 by hand |
+| R3-FIT | Programme fit beyond the customs analogy | OPEN |  | Draft paragraph + seven checked anchors (CSCMP, perishable inventory, Elhub, IEA …) in TIGER_DRAFTS_2026-10-05.md §2, §4 |
+| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | OPEN |  | HiMolde page returns 403 to automated reading (5 Oct): Tiger T-13, paste the page text |

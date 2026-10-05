@@ -4,7 +4,7 @@
 
 ## 6.1 What the Thesis Establishes
 
-The thesis establishes that the conflict between audit-retention floors and the obligations to erase is not a property of the obligations but of an assumption about what satisfies them. Under plaintext-verifiability semantics, a record is verifiable while its payload is readable, and the constraint system has no solution for any record whose erasure deadline falls inside its retention window. Under a semantics in which a record is verifiable while its accountability content is intact and any loss of payload accessibility is itself logged, grounded, and attributed, the system is satisfiable for every arrival pattern of erasure requests and permit expiries, and for every retention floor. Chapter 4 proves both results; Chapter 5 witnesses them executably, and a separately written exhaustive search confirms that under the first semantics no assignment of payload accessibility whatsoever could succeed.
+Read one way, three obligations cannot be met together. Read another, they can. The thesis establishes that the conflict between audit-retention floors and the obligations to erase is not a property of the obligations but of an assumption about what satisfies them. Under plaintext-verifiability semantics, a record is verifiable while its payload is readable, and the constraint system has no solution for any record whose erasure deadline falls inside its retention window. Under a semantics in which a record is verifiable while its accountability content is intact and any loss of payload accessibility is itself logged, grounded, and attributed, the system is satisfiable for every arrival pattern of erasure requests and permit expiries, and for every retention floor. Chapter 4 proves both results; Chapter 5 witnesses them executably, and a separately written exhaustive search confirms that under the first semantics no assignment of payload accessibility whatsoever could succeed.
 
 The request-driven form of the conflict cannot be escaped by moving the record. A deletion ceiling anchored to a location yields to relocation, but the right to erasure attaches to whichever controller holds the data (Chapter 4, Section 4.10, Proposition 4). Cryptographic invalidation is therefore necessary where a data subject's request meets a retention floor, and in the cross-border pathway that is every request arriving inside the floor, because the IHE patient-discovery profile requires the patient's identifying query to be recorded in the audit message.
 
@@ -34,7 +34,7 @@ A second authority question sits beside the first and is narrower. Whether Artic
 
 ## 6.3 Key Destruction and the Limits of Assurance
 
-The second objection is the one the thesis has carried since Chapter 2, and it is the ceiling of the contribution.
+Nobody can watch a key being destroyed. That is the second objection, the one the thesis has carried since Chapter 2, and it is the ceiling of the contribution.
 
 The mechanism's guarantees are conditional on the irreversible destruction of key material. The canonical systematisation of secure deletion establishes that the further a deletion approach operates from the physical storage medium, the harder it becomes to assert that destruction actually occurred (Reardon, Basin, & Capkun, 2013). Cryptographic erasure is the limiting case: it operates entirely above the medium, reducing the deletion of arbitrary data to the deletion of a key, and inheriting in concentrated form the problem that key destruction cannot be confirmed by inspection.
 
@@ -46,7 +46,7 @@ One further consideration limits the practical weight of this objection. The alt
 
 ## 6.4 The Cost Objection
 
-SecuPi (2025) argues that cryptographic erasure introduces operational complexity in row-level encryption scenarios, that auditable key management adds rather than removes overhead, and that policy-based access control is a better answer to the right to erasure in heavily distributed systems. This critique is substantially correct on its own terms and must be engaged rather than dismissed.
+Per-record keys cost something, and the question is whether the cost is worth paying. SecuPi (2025) argues that cryptographic erasure introduces operational complexity in row-level encryption scenarios, that auditable key management adds rather than removes overhead, and that policy-based access control is a better answer to the right to erasure in heavily distributed systems. This critique is substantially correct on its own terms and must be engaged rather than dismissed.
 
 The mechanism specified in Chapter 4 requires per-record key granularity, and Section 4.8 explains why: invalidation events occur at record granularity, because a permit expiry invalidates the records of one permit while an erasure request invalidates the records relating to one data subject, and those sets intersect without nesting. Coarser granularity would make some invalidations impossible to perform without over-invalidating. Per-record keys in a high-volume audit repository are an operational burden, and the thesis does not pretend otherwise.
 
@@ -72,7 +72,7 @@ No measurement supports any of this. The demonstration made no performance claim
 
 ## 6.6 Evaluation Design and the Role of Stakeholder Assessment
 
-The evaluation reported in this thesis is analytical, and Section 3.7 states its criteria. That evaluation assesses whether the artefact is internally coherent, whether it fits the infrastructure it was designed against, and whether its results reproduce. It does not assess whether the people who would have to deploy it find it defensible, implementable, or trustworthy, and those are different questions that analytical evaluation cannot answer.
+A model can be right and still be refused by the people who would have to run it. The evaluation reported in this thesis is analytical, and Section 3.7 states its criteria. That evaluation assesses whether the artefact is internally coherent, whether it fits the infrastructure it was designed against, and whether its results reproduce. It does not assess whether the people who would have to deploy it find it defensible, implementable, or trustworthy, and those are different questions that analytical evaluation cannot answer.
 
 An instrument for answering them has been designed and is specified in full in Appendix C. It comprises an eight-person expert panel spanning data protection, health IT architecture, Secure Processing Environment operation, and information logistics, and a session structure in which participants describe current practice before being shown the mechanism. It also comprises a demonstration script that runs the artefact and states its limitations before participants are invited to find them, a semi-structured interview guide, and a sixteen-item closed-response instrument across perceived utility, regulatory alignment, operational viability, and audit integrity.
 
@@ -82,7 +82,7 @@ The instrument has not been executed, for the reasons given in Chapter 3, Sectio
 
 ## 6.7 Synthetic Data and the Limits of the Demonstration
 
-Substituting real FHIR R4 resources for constructed payload strings changed all two hundred commitments and no reported figure (Chapter 5, Section 5.8, Table 5.7), as it must, since no constraint in the TRF Model reads payload content.
+The patients in this thesis do not exist, and no result depends on who they are. Substituting real FHIR R4 resources for constructed payload strings changed all two hundred commitments and no reported figure (Chapter 5, Section 5.8, Table 5.7), as it must, since no constraint in the TRF Model reads payload content.
 
 The two limitations of the generated cohort, US Core rather than Norwegian profiles and the validity bounds found by Chen, Chun, Patel, Chiang and James (2019), are stated in Chapter 3, Section 3.5; both lie in dimensions the thesis does not use, because its claims concern the behaviour of audit records under constraint, not clinical content.
 
@@ -90,7 +90,7 @@ The deeper limitation is that a demonstration over generated instances is not a 
 
 ## 6.8 Implications for Practice and Policy
 
-The timing argument is the strongest claim to practical relevance this thesis makes.
+The provisions that create this collision do not yet apply, and that is the opportunity. The timing argument is the strongest claim to practical relevance this thesis makes.
 
 Regulation (EU) 2025/327 entered into force on 26 March 2025. Under Article 105 it applies generally from 26 March 2027, and the secondary-use provisions of Chapter IV, which contain both Article 68(12) and Article 73(1)(e), apply from 26 March 2029. Article 73(5) requires the Commission, by means of implementing acts and by 26 March 2027, to lay down the technical, organisational, information-security, confidentiality, data-protection, and interoperability requirements for Secure Processing Environments.
 
@@ -140,7 +140,7 @@ The limitations that bound the claim are stated once, in Chapter 3, Section 3.7,
 
 ## 6.12 Summary
 
-The thesis establishes that audit-retention floors, the right to erasure and the deletion ceiling conflict only under an assumption about verifiability, and not because of the obligations themselves; that, on the broad reading of Article 68(12) and for logs kept at patient-record granularity, the conflict arises inside the European Health Data Space Regulation with no data subject acting; that a ceiling collides with a floor exactly when Proposition 3 says, and that relocation escapes the ceiling but not the right (Proposition 4). It exhibits the mechanism that dissolves the conflict and checks Propositions 1 and 2 executably, with a separately written cross-check and a bounded SMT check.
+The thesis establishes four things. Audit-retention floors, the right to erasure and the deletion ceiling conflict only under an assumption about verifiability, and not because of the obligations themselves. On the broad reading of Article 68(12) and for logs kept at patient-record granularity, the conflict arises inside the European Health Data Space Regulation with no data subject acting. A ceiling collides with a floor exactly when Proposition 3 says. And relocation escapes the ceiling but not the right (Proposition 4). It exhibits the mechanism that dissolves the conflict and checks Propositions 1 and 2 executably, with a separately written cross-check and a bounded SMT check.
 
 Its principal vulnerability is that the interpretive move at its centre has no regulatory authority behind it, and resolving that is the most valuable next step available. Its ceiling is that attested key destruction is not proven key destruction, a boundary marked by an active research programme in proof-of-secure-erasure and certified deletion. Its principal cost is per-record key management, bounded and auditable where the alternative's residual-copy problem is neither. Its demonstration is a witness rather than a proof, and its synthetic records are structurally genuine but not Norwegian.
 
