@@ -13,7 +13,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
 | THESIS | VERA-SNARK_Thesis_SUBMISSION.md | ae135277592c | 69,520 | 5 Oct 15:30 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 90ed8c27f6ca | 176 eq, 25 tbl | 5 Oct 14:56 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 9b5fcc70b063 | 176 eq, 25 tbl | 5 Oct 15:37 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
 | THESIS | Front_Matter_v1.md | 2dfe9ac6be56 | 2,812 | 4 Oct 22:13 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
 | THESIS | Chapter1_Introduction_v2.md | 62b4d3428892 | 5,067 | 5 Oct 15:17 | Chapter 1 |
 | THESIS | Chapter2_LitReview_v2_FINAL.md | b14a98768835 | 14,297 | 5 Oct 15:13 | Chapter 2 incl. review protocol §2.1 |
@@ -55,8 +55,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 4d07802a4ef4 | 18,214 | 5 Oct 15:32 | Every change with an ID, reason and verification. Synced with the repository copy |
-| CONTROL | CHECKSUMS.md | c5cd8aea37fa | 208 | 4 Oct 22:18 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 0f4bccbb2eec | 18,258 | 5 Oct 15:41 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | e6b065842627 | 264 | 5 Oct 15:39 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
