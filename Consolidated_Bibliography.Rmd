@@ -66,6 +66,8 @@ Chakraborty, V., Kaminsky, Y., Mehrotra, S., Naumann, F., Nawab, F., Pappachan, 
 
 Chen, J., Chun, D., Patel, M., Chiang, E., & James, J. (2019). The validity of synthetic clinical data: A validation study of a leading synthetic data generator (Synthea) using clinical quality measures. *BMC Medical Informatics and Decision Making*, *19*, 44. https://doi.org/10.1186/s12911-019-0793-0 `[Ch3] [Ch6]`
 
+Council of Supply Chain Management Professionals. (n.d.). *Frequently asked questions* [Includes the CSCMP definition of logistics management]. Retrieved 5 October 2026, from https://cscmp.org/CSCMP/CSCMP/Develop/Starting_Your_Career/Frequently_Asked_Questions.aspx `[Ch2]`
+
 Crosby, S. A., & Wallach, D. S. (2009). Efficient data structures for tamper-evident logging. In *Proceedings of the 18th USENIX Security Symposium* (pp. 317–334). USENIX Association. https://www.usenix.org/legacy/events/sec09/tech/full_papers/crosby.pdf `[Ch2] [Ch4]`
 
 Datatilsynet. (n.d.-a). *Etablere internkontroll* [Guidance]. Norwegian Data Protection Authority. https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/informasjonssikkerhet-internkontroll/etablere-internkontroll/ `[Ch2] [Ch4] [Ch6]`
@@ -89,6 +91,8 @@ Diamantopoulos, S., Karlsson, L., Karkaletsis, G., Tsoumas, V., Berler, A., Kark
 Dworkin, M. J. (2007). *Recommendation for block cipher modes of operation: Galois/Counter Mode (GCM) and GMAC* (NIST Special Publication 800-38D). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-38D `[Ch4]`
 
 eHealth Network. (2017). *Agreement between National Authorities or National Organisations responsible for National Contact Points for eHealth on the Criteria required for the participation in Cross-Border eHealth Information Services* (adopted 9 May 2017). European Commission. https://health.ec.europa.eu/system/files/2017-07/ev_20170509_co06_en_0.pdf `[Ch2] [Ch4]`
+
+Elhub. (2026). *Elhubs personvernerklæring* [Privacy statement; last updated 31 March 2026]. Elhub AS. Retrieved 5 October 2026, from https://elhub.no/personvern-og-sikkerhet/elhubs-personvernerklaering `[Ch2]`
 
 European Commission. (2025a). *European Health Data Space Regulation (EHDS)*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en `[Ch2]`
 
@@ -142,6 +146,8 @@ IHE International. (2024). *IT Infrastructure (ITI) Technical Framework, Volume 
 
 International Chamber of Commerce. (2025). *Data flows in supply chains: Practical realities and policy implications*. ICC. https://iccwbo.org/news-publications/policies-reports/data-flows-in-supply-chains-practical-realities-and-policy-implications/ `[Ch2]`
 
+International Energy Agency. (2025). *Energy and AI* [Executive summary]. IEA. Retrieved 5 October 2026, from https://www.iea.org/reports/energy-and-ai/executive-summary `[Ch1]`
+
 Johnson, R., Molnar, D., Song, D., & Wagner, D. (2002). Homomorphic signature schemes. In B. Preneel (Ed.), *Topics in Cryptology – CT-RSA 2002* (LNCS 2271, pp. 244–262). Springer. https://doi.org/10.1007/3-540-45760-7_17 `[Ch2]`
 
 Krawczyk, H., & Rabin, T. (1998). *Chameleon hashing and signatures* (Cryptology ePrint Archive, Paper 1998/010; full version of the NDSS 2000 paper). https://eprint.iacr.org/1998/010 `[Ch2]`
@@ -153,6 +159,8 @@ Laurie, B., Langley, A., & Kasper, E. (2013). *Certificate Transparency* (RFC 69
 Matheson. (2026). *EDPB publishes CEF report on the right to erasure* [Legal commentary]. Matheson LLP. https://www.matheson.com/insights/edpb-publishes-cef-report-on-the-right-to-erasure/ `[Ch2]`
 
 Merkle, R. C. (1988). A digital signature based on a conventional encryption function. In C. Pomerance (Ed.), *Advances in Cryptology — CRYPTO '87* (LNCS 293, pp. 369–378). Springer. https://doi.org/10.1007/3-540-48184-2_32 `[Ch2] [Ch4]`
+
+Nahmias, S. (1982). Perishable inventory theory: A review. *Operations Research, 30*(4), 680–708. https://doi.org/10.1287/opre.30.4.680 `[Ch2]`
 
 National Institute of Standards and Technology. (2019). *Security requirements for cryptographic modules* (Federal Information Processing Standards Publication 140-3). U.S. Department of Commerce. https://doi.org/10.6028/NIST.FIPS.140-3 `[Ch6]`
 
@@ -168,7 +176,7 @@ OpenNCP Project. (2017). *OpenNCP* [Computer software; GitHub mirror of the epSO
 
 Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45–77. https://doi.org/10.2753/MIS0742-1222240302 `[Ch1] [Ch3]`
 
-Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16 `[Ch6]`
+Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet [Consolidated text as last amended by LOV-2026-06-19-49, in force 1 October 2026; § 17 unamended; read 5 October 2026]. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16 `[Ch6]`
 
 Politou, E., Casino, F., Alepis, E., & Patsakis, C. (2021). Blockchain mutability: Challenges and proposed solutions. *IEEE Transactions on Emerging Topics in Computing, 9*(4), 1972–1986. https://doi.org/10.1109/TETC.2019.2949510 `[Ch2]`
 
