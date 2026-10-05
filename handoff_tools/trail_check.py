@@ -207,7 +207,7 @@ def main():
     tr = pathlib.Path("REVIEW_TRACKER.md").read_text(encoding="utf-8")
     ids = {r["id"] for r in log} | {r["id"].split("-")[0] for r in log}
     tp, counts = [], {}
-    for m in re.finditer(r"^\| ([A-Z0-9]+-?[0-9a-z]*) \| (.+?) \| (OPEN|BLOCKED|PARTIAL|CLOSED|DECLINED) \| ([^|]*) \| ([^|]*) \|$", tr, re.M):
+    for m in re.finditer(r"^\| ([A-Z0-9]+[a-z]?(?:-[A-Za-z0-9]+)*) \| (.+?) \| (OPEN|BLOCKED|WAITING|PARTIAL|CLOSED|DECLINED) \| ([^|]*) \| ([^|]*) \|$", tr, re.M):
         item, _, st, pids, ev = [x.strip() for x in m.groups()]
         counts[st] = counts.get(st, 0) + 1
         pl = [x.strip() for x in re.split(r"[,\s]+", pids) if x.strip()]
@@ -220,6 +220,11 @@ def main():
                    for g in G["guards"] if g.get("item") and item.startswith(g["item"]) and g["now"] > g["goal"]]
         if st == "DECLINED" and not ev:
             tp.append(f"{item}: DECLINED without evidence")
+    # every ID-shaped row must carry a known status (audit 5 Oct: R3-* rows were invisible)
+    seen = {m.group(1) for m in re.finditer(r"^\| ([A-Z0-9]+[a-z]?(?:-[A-Za-z0-9]+)*) \| (.+?) \| (OPEN|BLOCKED|WAITING|PARTIAL|CLOSED|DECLINED) \|", tr, re.M)}
+    for m in re.finditer(r"^\| ([A-Z][A-Za-z0-9-]*) \| (?!What he asked)", tr, re.M):
+        if m.group(1) not in seen:
+            tp.append(f"{m.group(1)}: row not parsed (unknown status or malformed)")
     report(10, "tracker: " + ", ".join(f"{k} {v}" for k, v in sorted(counts.items())), "FAIL" if tp else "PASS", tp)
 
     # 11 optional

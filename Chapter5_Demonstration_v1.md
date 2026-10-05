@@ -14,9 +14,9 @@ A subsidiary claim is made for Corollary 1.2: that, on the broad reading of Arti
 
 ## 5.2 Implementation
 
-The checker is a single Python module of 533 lines including documentation, the independent cross-check and the audit-log integrity check, of which 413 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check. The checker uses no cryptographic library, no solver, and no zero-knowledge proof system, consistent with the scope commitments of Chapter 1, Section 1.5; the optional envelope-encryption module below is the only component that imports one.
+The checker is a single Python module of 534 lines including documentation, the independent cross-check and the audit-log integrity check, of which 414 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check. The checker uses no cryptographic library, no solver, and no zero-knowledge proof system, consistent with the scope commitments of Chapter 1, Section 1.5; the optional envelope-encryption module below is the only component that imports a cryptographic library.
 
-Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
+Six further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
 
 ![Figure 5.1. The artefact's modules and data path. Records enter from the generator or one of the optional layers, are invalidated on schedule, and are checked under both semantics; the optional cryptographic module and the bounded SMT check sit beside the checker and report separately.](figures/fig5_1_trf_artefact.png){width=6.3in}
 
@@ -24,7 +24,7 @@ Four further modules accompany it, none of which alters anything the checker rep
 
 | Module | Lines | What it does | Reports a thesis figure? |
 |---|---|---|---|
-| `trf_checker.py` | 533 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.3, 5.5, 5.6 |
+| `trf_checker.py` | 534 | Constraint evaluation under both semantics, plus the independent exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.3, 5.5, 5.6 |
 | `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.7 |
 | `norwegian_layer.py` | 135 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
 | `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10 | No |

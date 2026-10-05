@@ -6,11 +6,11 @@
   "status": "pass",
   "visualReview": "not-requested",
   "provenance": "current",
-  "deliveryReceiptId": "5d131aac-f4f9-4b22-ba34-cc2324bf4009",
+  "deliveryReceiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441",
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-    "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
-    "bytes": 768995
+    "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
+    "bytes": 769025
   },
   "state": {
     "detail": "read",

@@ -94,7 +94,7 @@
   {
    "id": "store",
    "type": "database",
-   "label": "Payload store",
+   "label": "Record store",
    "sublabel": "ciphertext, salt, m_subj",
    "pos": [
     580,
@@ -271,7 +271,7 @@
    "id": "e12",
    "from": "scheduler",
    "to": "store",
-   "label": "delete ct, salt, m_subj",
+   "label": "delete ct, salt; m_subj at ceiling (SPE)",
    "variant": "security",
    "fromSide": "top",
    "toSide": "bottom"

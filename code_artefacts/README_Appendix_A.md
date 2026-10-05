@@ -212,7 +212,7 @@ Stated here so that they are not inferred from silence:
 
 ## A.10 Source listing: `trf_checker.py`
 
-The complete source of the feasibility checker, reproduced as executed. It depends on the Python standard library only. Line count: 533.
+The complete source of the feasibility checker, reproduced as executed. It depends on the Python standard library only. Line count: 534.
 
 ```python
 """

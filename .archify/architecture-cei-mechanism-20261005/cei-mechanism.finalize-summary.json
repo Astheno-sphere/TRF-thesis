@@ -7,13 +7,13 @@
   "quality": "showcase",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
-    "sha256": "77efc94333a68df3b36c20804583caac572cc6b13fd9dc4a4321eaf1d955a5b7",
-    "bytes": 4822
+    "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
+    "bytes": 4838
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-    "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
-    "bytes": 768995
+    "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
+    "bytes": 769025
   },
   "gates": {
     "validate": "pass",
@@ -44,5 +44,5 @@
     "reason": "cache-valid"
   },
   "visualReview": "not-requested",
-  "durationMs": 3941
+  "durationMs": 4190
 }

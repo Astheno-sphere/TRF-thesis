@@ -826,3 +826,28 @@
 2026-10-05 14:47 | P54_sel_framing.py | P54-07 | Chapter6_Discussion_v1.md | 334bc0396538 -> cc284962184a | R3-PRL
 2026-10-05 14:55 | P55_figures.py | P55-01 | Chapter4_TRF_Model_v1.md | 730e8aa67d03 -> 3200af9ec155 | figure
 2026-10-05 14:55 | P55_figures.py | P55-02 | Chapter5_Demonstration_v1.md | f1eaba80786e -> b1a50fa42a9f | figure
+2026-10-05 15:13 | P56_audit_fixes.py | P56-01 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 2: no single record carries the ten-year floor and the ceiling
+2026-10-05 15:13 | P56_audit_fixes.py | P56-02 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 20
+2026-10-05 15:13 | P56_audit_fixes.py | P56-03 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 21
+2026-10-05 15:13 | P56_audit_fixes.py | P56-04 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 9
+2026-10-05 15:13 | P56_audit_fixes.py | P56-05 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 10
+2026-10-05 15:13 | P56_audit_fixes.py | P56-06 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 6, 18
+2026-10-05 15:13 | P56_audit_fixes.py | P56-07 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 7
+2026-10-05 15:13 | P56_audit_fixes.py | P56-08 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 6
+2026-10-05 15:13 | P56_audit_fixes.py | P56-09 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 19
+2026-10-05 15:13 | P56_audit_fixes.py | P56-10 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 19
+2026-10-05 15:13 | P56_audit_fixes.py | P56-11 | Chapter4_TRF_Model_v1.md | 3200af9ec155 -> bf2cb06ee14b | audit 11, 16
+2026-10-05 15:13 | P56_audit_fixes.py | P56-12 | Chapter5_Demonstration_v1.md | b1a50fa42a9f -> fe738fd3f9f3 | audit 4
+2026-10-05 15:13 | P56_audit_fixes.py | P56-13 | Chapter5_Demonstration_v1.md | b1a50fa42a9f -> fe738fd3f9f3 | audit 4
+2026-10-05 15:13 | P56_audit_fixes.py | P56-14 | Chapter5_Demonstration_v1.md | b1a50fa42a9f -> fe738fd3f9f3 | audit 4
+2026-10-05 15:13 | P56_audit_fixes.py | P56-15 | code_artefacts/README_Appendix_A.md | ace814957a3b -> 9c98e94aeb0e | audit 4
+2026-10-05 15:13 | P56_audit_fixes.py | P56-16 | Chapter5_Demonstration_v1.md | b1a50fa42a9f -> fe738fd3f9f3 | audit 3
+2026-10-05 15:13 | P56_audit_fixes.py | P56-17 | Chapter5_Demonstration_v1.md | b1a50fa42a9f -> fe738fd3f9f3 | audit 22
+2026-10-05 15:13 | P56_audit_fixes.py | P56-18 | Chapter2_LitReview_v2_FINAL.md | 5b718f6eed31 -> b14a98768835 | audit 14
+2026-10-05 15:13 | P56_audit_fixes.py | P56-19 | Chapter2_LitReview_v2_FINAL.md | 5b718f6eed31 -> b14a98768835 | audit 5, 8
+2026-10-05 15:13 | P56_audit_fixes.py | P56-20 | Chapter2_LitReview_v2_FINAL.md | 5b718f6eed31 -> b14a98768835 | audit 5
+2026-10-05 15:13 | P56_audit_fixes.py | P56-21 | Chapter2_LitReview_v2_FINAL.md | 5b718f6eed31 -> b14a98768835 | audit 12
+2026-10-05 15:13 | P56_audit_fixes.py | P56-22 | Chapter6_Discussion_v1.md | cc284962184a -> 48aac88da0d8 | audit 12
+2026-10-05 15:13 | P56_audit_fixes.py | P56-23 | Chapter6_Discussion_v1.md | cc284962184a -> 48aac88da0d8 | audit 13
+2026-10-05 15:13 | P56_audit_fixes.py | P56-24 | Chapter6_Discussion_v1.md | cc284962184a -> 48aac88da0d8 | audit 13
+2026-10-05 15:17 | P56b_tracker_text.py | P56b-01 | Chapter1_Introduction_v2.md | 0504da07e6e4 -> 62b4d3428892 | audit 17 / R3-M5

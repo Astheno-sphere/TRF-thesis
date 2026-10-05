@@ -5,16 +5,16 @@
   "status": "pass",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-05T14:54:20.390Z",
+  "startedAt": "2026-10-05T15:11:27.909Z",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
-    "sha256": "77efc94333a68df3b36c20804583caac572cc6b13fd9dc4a4321eaf1d955a5b7",
-    "bytes": 4822
+    "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
+    "bytes": 4838
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-    "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
-    "bytes": 768995
+    "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
+    "bytes": 769025
   },
   "stages": {
     "validate": {
@@ -38,8 +38,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "77efc94333a68df3b36c20804583caac572cc6b13fd9dc4a4321eaf1d955a5b7",
-          "bytes": 4822
+          "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
+          "bytes": 4838
         },
         "validation": {
           "checksPassed": 9,
@@ -54,7 +54,7 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 819,
+      "durationMs": 772,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -68,19 +68,19 @@
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "5d131aac-f4f9-4b22-ba34-cc2324bf4009",
+        "receiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
         "input": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
         "output": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
         "specification": {
-          "sha256": "77efc94333a68df3b36c20804583caac572cc6b13fd9dc4a4321eaf1d955a5b7",
-          "bytes": 4822
+          "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
+          "bytes": 4838
         },
         "artifact": {
-          "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
-          "bytes": 768995
+          "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
+          "bytes": 769025
         },
         "validation": {
           "checksPassed": 9,
@@ -106,7 +106,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 205,
+      "durationMs": 212,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -118,8 +118,8 @@
         "ok": true,
         "file": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
         "artifact": {
-          "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
-          "bytes": 768995
+          "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
+          "bytes": 769025
         },
         "checks": [
           {
@@ -247,13 +247,13 @@
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "5d131aac-f4f9-4b22-ba34-cc2324bf4009"
+        "deliveryReceiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441"
       }
     },
     "browser-check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 2764,
+      "durationMs": 3054,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -271,11 +271,11 @@
         "status": "pass",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "5d131aac-f4f9-4b22-ba34-cc2324bf4009",
+        "deliveryReceiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441",
         "artifact": {
           "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-          "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
-          "bytes": 768995
+          "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
+          "bytes": 769025
         },
         "state": {
           "detail": "read",
@@ -993,8 +993,8 @@
     "browserCheckReceipt": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.browser-check.json"
   },
   "visualReview": "not-requested",
-  "finishedAt": "2026-10-05T14:54:24.332Z",
-  "durationMs": 3941,
+  "finishedAt": "2026-10-05T15:11:32.100Z",
+  "durationMs": 4190,
   "update": {
     "status": "unavailable",
     "installedVersion": null,
