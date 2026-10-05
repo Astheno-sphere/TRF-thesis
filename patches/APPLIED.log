@@ -851,3 +851,11 @@
 2026-10-05 15:13 | P56_audit_fixes.py | P56-23 | Chapter6_Discussion_v1.md | cc284962184a -> 48aac88da0d8 | audit 13
 2026-10-05 15:13 | P56_audit_fixes.py | P56-24 | Chapter6_Discussion_v1.md | cc284962184a -> 48aac88da0d8 | audit 13
 2026-10-05 15:17 | P56b_tracker_text.py | P56b-01 | Chapter1_Introduction_v2.md | 0504da07e6e4 -> 62b4d3428892 | audit 17 / R3-M5
+2026-10-05 15:29 | P57_app_viewer.py | P57-01 | code_artefacts/README_Appendix_A.md | 9c98e94aeb0e -> 4b1f9b2d71a8 | A.14: viewer described, not listed
+2026-10-05 15:29 | P57_app_viewer.py | P57-02 | code_artefacts/README_Appendix_A.md | 9c98e94aeb0e -> 4b1f9b2d71a8 | eight pages
+2026-10-05 15:29 | P57_app_viewer.py | P57-03 | code_artefacts/README_Appendix_A.md | 9c98e94aeb0e -> 4b1f9b2d71a8 | pages
+2026-10-05 15:29 | P57_app_viewer.py | P57-04 | code_artefacts/README_Appendix_A.md | 9c98e94aeb0e -> 4b1f9b2d71a8 | counts
+2026-10-05 15:29 | P57_app_viewer.py | P57-05 | code_artefacts/README_Appendix_A.md | 9c98e94aeb0e -> 4b1f9b2d71a8 | matches file
+2026-10-05 15:29 | P57_app_viewer.py | P57-06 | Chapter5_Demonstration_v1.md | fe738fd3f9f3 -> 926715bcfca2 | counts
+2026-10-05 15:32 | P57b_app_code.py | P57b-01 | demo_app/app.py | 6379f2671244 -> 28b218f0f442 | viewer redesign (eight pages; presentation in ui.py)
+2026-10-05 15:32 | P57b_app_code.py | P57b-02 | demo_app/requirements.txt | b362ad3cdf66 -> c43ce2a550b5 | streamlit>=1.50 for width/height chart parameters
