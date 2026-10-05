@@ -794,3 +794,26 @@
 2026-10-04 22:13 | P52b_appendix_z3.py | P52b-B14 | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 -> ace814957a3b | Appendix A A.23 synced to demo_app/z3_check.py
 2026-10-04 22:13 | P52b_appendix_z3.py | P52b-B15 | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 -> ace814957a3b | Appendix A A.24 synced to repro_package/results/z3_check_output.txt
 2026-10-04 22:13 | P52b_appendix_z3.py | P52b-01 | code_artefacts/README_Appendix_A.md | ebec30f4ffe2 -> ace814957a3b | line count
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-01 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-02 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-03 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 split
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-04 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-05 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-06 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-07 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 split
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-08 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-09 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-10 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 split
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-11 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-12 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-13 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-14 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-15 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | M6a: SPUHiN draft logging requirements
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-16 | Chapter4_TRF_Model_v1.md | 85026d714420 -> 730e8aa67d03 | M6a: SPUHiN draft rows
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-17 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-18 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-19 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-20 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-21 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-22 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 hook
+2026-10-05 14:17 | P53_voice_ch4_ch6.py | P53-23 | Chapter6_Discussion_v1.md | a2f0082bb806 -> 334bc0396538 | PRES-2 split
