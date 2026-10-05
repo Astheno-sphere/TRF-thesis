@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "5d131aac-f4f9-4b22-ba34-cc2324bf4009",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
+  "output": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
+  "specification": {
+    "sha256": "77efc94333a68df3b36c20804583caac572cc6b13fd9dc4a4321eaf1d955a5b7",
+    "bytes": 4822
+  },
+  "artifact": {
+    "sha256": "efea228a8331f58b134505875d98110c0ca1964af63c372fa5540d7608777336",
+    "bytes": 768995
+  }
+}

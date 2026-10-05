@@ -824,3 +824,5 @@
 2026-10-05 14:47 | P54_sel_framing.py | P54-05 | Chapter1_Introduction_v2.md | 21c87e4eb72a -> 0504da07e6e4 | R3-FIT: energy stated honestly
 2026-10-05 14:47 | P54_sel_framing.py | P54-06 | Chapter1_Introduction_v2.md | 21c87e4eb72a -> 0504da07e6e4 | ref
 2026-10-05 14:47 | P54_sel_framing.py | P54-07 | Chapter6_Discussion_v1.md | 334bc0396538 -> cc284962184a | R3-PRL
+2026-10-05 14:55 | P55_figures.py | P55-01 | Chapter4_TRF_Model_v1.md | 730e8aa67d03 -> 3200af9ec155 | figure
+2026-10-05 14:55 | P55_figures.py | P55-02 | Chapter5_Demonstration_v1.md | f1eaba80786e -> b1a50fa42a9f | figure

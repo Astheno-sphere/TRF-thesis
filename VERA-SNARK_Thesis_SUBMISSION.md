@@ -1003,7 +1003,9 @@ Feasibility therefore survives any enlargement of what auditing needs, except an
 
 ## 4.8 The Mechanism: Crypto-Erasure by Invalidation
 
-The proof of Proposition 2 is also a build sheet: the trajectory it constructs is the specification of the mechanism. This section states it as an implementable design: what is encrypted, what is committed, what is destroyed, and what is logged when it is.
+The proof of Proposition 2 is also a build sheet: the trajectory it constructs is the specification of the mechanism. This section states it as an implementable design: what is encrypted, what is committed, what is destroyed, and what is logged when it is. Figure 4.1 shows the whole of it on one page.
+
+![Figure 4.1. Crypto-Erasure by Invalidation at the audit boundary. Solid arrows are writes at access time; red dashed arrows are the invalidation at the earlier of the erasure deadline and the deletion ceiling. The Merkle log holds accessor fields, commitments and invalidation entries, never the payload or the subject fields.](figures/fig4_1_cei_mechanism.png){width=6.3in}
 
 *Key hierarchy.* Each record's payload is encrypted under a per-record data key $k(a)$. Per-record rather than per-subject or per-dataset granularity is required because the invalidation events of Proposition 2 occur at record granularity: a permit expiry invalidates the records of one permit, while an erasure request invalidates the records relating to one data subject, and these sets intersect without nesting. Data keys are themselves held under a key-encrypting key in a hardware security module or equivalent custody boundary. Destruction of $k(a)$ is effected by destruction of the wrapped data key and any cached copies, within the documented custody boundary. This is the hierarchy that key-management guidance prescribes, in which data keys are protected by key-encrypting keys and destruction means removing "all traces of a cryptographic key so that it cannot be recovered by either physical or electronic means" (Barker, 2020, Section 2.1). The optional module of the artefact executes it: per-record 256-bit data keys under AES in Galois/Counter Mode (Dworkin, 2007), each wrapped under a key-encrypting key and destroyed at the record's invalidation month (Appendix A, A.15). The custody object stands in for a hardware security module, so destruction there is destruction in program memory.
 
@@ -1141,7 +1143,9 @@ A subsidiary claim is made for Corollary 1.2: that, on the broad reading of Arti
 
 The checker is a single Python module of 533 lines including documentation, the independent cross-check and the audit-log integrity check, of which 413 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check. The checker uses no cryptographic library, no solver, and no zero-knowledge proof system, consistent with the scope commitments of Chapter 1, Section 1.5; the optional envelope-encryption module below is the only component that imports one.
 
-Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A.
+Four further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
+
+![Figure 5.1. The artefact's modules and data path. Records enter from the generator or one of the optional layers, are invalidated on schedule, and are checked under both semantics; the optional cryptographic module and the bounded SMT check sit beside the checker and report separately.](figures/fig5_1_trf_artefact.png){width=6.3in}
 
 *Table 5.1. The artefact as published*
 
