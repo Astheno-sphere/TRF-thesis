@@ -63,6 +63,6 @@ passage by passage when the patch for that passage is written.
 | R3-TT | Unimplemented terminal transition, nonce, consistency proofs, accumulator: say so in the summaries | CLOSED | P49 | §4.12 and §7.1 |
 | R3-RS | Restructuring: trim Ch2; cut repeated limitation statements | PARTIAL | P51 | Ch2 repetition of Ch1 cut; §6.11 points to §3.7. Ch2 remains ~12,000 words pending the programme length limit (T-8) |
 | R3-F10 | Ten-year floor source thin: ask Helsedirektoratet | WAITING |  | Email sent by Tiger (5 Oct); awaiting reply |
-| R3-PRL | Verify politiregisterloven § 17 wording | OPEN |  | Bill text verified (Ot.prp. nr. 108 (2008–2009)); lovdata.no refuses automated reading (robots.txt, 5 Oct): Tiger T-12 by hand |
-| R3-FIT | Programme fit beyond the customs analogy | OPEN |  | Draft paragraph + seven checked anchors (CSCMP, perishable inventory, Elhub, IEA …) in TIGER_DRAFTS_2026-10-05.md §2, §4 |
-| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | OPEN |  | HiMolde page returns 403 to automated reading (5 Oct): Tiger T-13, paste the page text |
+| R3-PRL | Verify politiregisterloven § 17 wording | CLOSED | P54-07 | Consolidated Lovdata text supplied by Tiger (5 Oct; last amended LOV-2026-06-19-49): § 17 wording identical to §6.10; no amendment note on § 17 |
+| R3-FIT | Programme fit beyond the customs analogy | CLOSED | P54-01..06 | §2.7: CSCMP definition, perishable inventory (Nahmias, 1982), Elhub retention per data category; §1.5: IEA (2025) energy line, no saving claimed |
+| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | PARTIAL |  | Tiger confirms (5 Oct) HiMolde permits AI use under ethical use; Declaration names tool, uses and author's responsibility. Defence preparation remains Tiger's |

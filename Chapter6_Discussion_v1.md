@@ -178,7 +178,7 @@ Laurie, B., Langley, A., & Kasper, E. (2013). *Certificate Transparency* (RFC 69
 
 National Institute of Standards and Technology. (2019). *Security requirements for cryptographic modules* (Federal Information Processing Standards Publication 140-3). U.S. Department of Commerce. https://doi.org/10.6028/NIST.FIPS.140-3
 
-Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16
+Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet [Consolidated text as last amended by LOV-2026-06-19-49, in force 1 October 2026; § 17 unamended; read 5 October 2026]. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16
 
 Reardon, J., Basin, D., & Capkun, S. (2013). SoK: Secure data deletion. In *2013 IEEE Symposium on Security and Privacy* (pp. 301–315). IEEE. https://doi.org/10.1109/SP.2013.28
 
