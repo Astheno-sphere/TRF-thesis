@@ -15,15 +15,15 @@ passage by passage when the patch for that passage is written.
 |---|---|---|---|---|
 | M1 | Define p(a) per record class from the eHDSI audit spec and D7.4; revise the SPE record model in code | CLOSED | P04, P06, P12, P14, P42, P43 | SPE p(a) fields named and tied to D7.4 OPR-17; cross-border p(a) tied to ITI-55 and the patient-identification step, eHDSI audit spec stated as not obtained; Semantics I reframed as the semantics of a log that keeps its payload readable, no current-practice claim (P42); Synthea payloads stated as stand-ins (P43) |
 | M2a | One reading of Art 68(12) carried through Cor 1.2, Thm 2, §4.8 | CLOSED | P04, P05, P07, P42 | Ceiling = electronic health data at every site; §6.2 consistent with Rival 6; §5.4 notes relocation removes the 39 (P42) |
-| M2b | Rival 6: move the logs out of the SPE at permit closure | CLOSED | P06 | Rival 6 accepted for the ceiling and bounded by Proposition L (P06). Ch6/Ch7 echo in P07 |
-| M2c | Rewrite §6.1's opening; lead with the robust result | CLOSED | P07 | §6.1 leads with the robust result, then Proposition L, then the conditional SPE instance |
+| M2b | Rival 6: move the logs out of the SPE at permit closure | CLOSED | P06 | Rival 6 accepted for the ceiling and bounded by Proposition 4 (P06). Ch6/Ch7 echo in P07 |
+| M2c | Rewrite §6.1's opening; lead with the robust result | CLOSED | P07 | §6.1 leads with the robust result, then Proposition 4, then the conditional SPE instance |
 | M3a | Salt: text, code and change record agree | CLOSED | P02 | D-15: salt destroyed (Tiger, 22 Sept). Text in §4.8/§5.6/§4.9 must follow the code |
 | M3b | Ciphertext: delete at invalidation or justify | CLOSED | P02, P12 | Text (P02) and code (P12): ciphertext deleted at invalidation |
 | M3c | Remove the dead salt branch; seeded generator or `--reproducible` | CLOSED | P12 | make_salt() and --random-salts; dead branch gone (guard 1 → 0) |
 | M4a | Theorems renamed Propositions; weight on the §4.2 necessity analysis | CLOSED | P15, P16, P17, P18, P42, P44 | 'propositions rather than theorems' (P42); repo README Propositions (P44, public R-26) |
 | M4b | Promote the §6.9a anchoring result into Ch4 as a formal result | CLOSED | P15 | Proposition 3 in Ch4 §4.6, stated precisely (collision needs L ≤ F; anchor decides visibility); §6.9a corrected |
-| M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | CLOSED | P12, P14 | Merkle log (RFC 6962), inclusion proofs in V_II, two tamper tests fail V_II; reported in §5.6 |
-| M4d | Shorten Ch5; violation rates are generator artefacts | PARTIAL | P31, P43, P46 | Rate interpretation removed (§5.3, §5.4); repetition cut. Ch5 is about 4,000 words against 3,386 in the reviewed draft because of the integrity and envelope-encryption results he asked for in M4c/M3b |
+| M4c | V_II tests integrity: hash chain over m(a), ι(a); tamper test | CLOSED | P12, P14 | Merkle log (RFC 6962), inclusion proofs in V_II, two tamper tests fail V_II; reported in §5.7 |
+| M4d | Shorten Ch5; violation rates are generator artefacts | PARTIAL | P31, P43, P46 | Rate interpretation removed (§5.3, §5.4); repetition cut. Ch5 is about 4,400 words including tables against 3,386 in the reviewed draft because of the integrity and envelope-encryption results he asked for in M4c/M3b |
 | M5a | Ten-year floor: primary eHDSI source with section, or F=120 illustrative | CLOSED | P09, P42, P44 | Ten-year floor 'as reported' and illustrative at every site, code comment included |
 | M5b | SPUHiN "finalised" claims aligned to what was inspected | CLOSED | P10 | Every claim limited to the hearing version inspected (P10, P10b) |
 | M5c | Art 68(12) and Art 73(1)(e) quoted verbatim (OJ English); one more language version | PARTIAL | P04, P07, P08, P42 | Art 68(12) and Art 73(1)(e) both verbatim from the OJ English text (P42). Open: one further language version (his 'ideally'; T-10) |
@@ -33,7 +33,7 @@ passage by passage when the patch for that passage is written.
 | M6b | Reword Appendix C item A1 ("full confidence"), record in one line | CLOSED | P19 | A1 reworded; one-line record in Appendix C |
 | M7a | Logistics anchor (UCC customs record-keeping vs destruction orders); §1.4 overreach | CLOSED | P11, P43 | UCC anchor; seafarer and OECD material cut; §1.4 overreach rewritten (P43) |
 | M7b | One sentence in §1.5 on the programme fit | CLOSED | P11 | One sentence in §1.5 |
-| MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | CLOSED | P01 | Prose now points to Table 5.0a; the code wave must update Table 5.0a, Table F.2 and Appendix A counts |
+| MIN-01 | §3.6 line counts inverted (checker 363, layer 152) | CLOSED | P01 | Prose points to Table 5.1 (formerly 5.0a); counts in Table 5.1 and Appendix A (534 for the checker, P56) |
 | MIN-02 | §3.6 "tuples defined in Section 3.4" → 4.3 | CLOSED | P01 |  |
 | MIN-03 | §1.6 drop "accumulator-based" | CLOSED | P01 |  |
 | MIN-04 | §2.1.4 "four dated rounds" vs Appendix B five | CLOSED | P01 | Fork R1 merged rounds to 7 on the superseded branch; re-judge |
@@ -57,12 +57,12 @@ passage by passage when the patch for that passage is written.
 | R3-M1 | Circular metadata/payload split; necessity per class; sensitivity result | CLOSED | P49 | Payload defined by source; necessity argued per class in §4.2; Corollary 2.3 with proof sketch |
 | R3-M2 | Patient link on the cross-border path: argue necessity or remove | CLOSED | P49 | Option A (Tiger 5 Oct): kept and argued under Art 17(3)(b) with EHDS Art 9(1)-(2); carried into §4.8, §5.7, §7.1 |
 | R3-M4 | Counts are generator-determined; independent bounded check (Z3/Alloy) | CLOSED | P47, P48, P50, P50b | Counts out of abstract, §6.1, §7.2, labelled in §5.1; ten-year permit note in §5.4; z3_check.py: 9 checks unsat, mutation refuted |
-| R3-M5 | Art 68(12) reading; Cor 1.2 conditional throughout; Art 17(3)(d) and opt-out | CLOSED | P47, P48, P49 | 'conditional extension' in §1.2, §1.4, §2.9, §4.6, §6.1; Art 17(3)(d) and Art 71 in §4.4 |
+| R3-M5 | Art 68(12) reading; Cor 1.2 conditional throughout; Art 17(3)(d) and opt-out | CLOSED | P47, P48, P49, P56b-01 | 'conditional extension' in §1.2, §1.4, §2.9, §4.6, §6.1; Art 17(3)(d) and Art 71 in §4.4 |
 | R3-M6 | Semantics I without a real system: check OpenNCP | CLOSED | P49 | OpenNCP source (2017) and Danish 9.1.0 deployment schema inspected: readable message content and patient ID, no retention or purge logic, modification refused |
 | R3-LIT | Redactable signatures / chameleon-hash blockchains | CLOSED | P49 | Paragraph in §2.4 with seven verified references; pointer from §4.8 |
 | R3-TT | Unimplemented terminal transition, nonce, consistency proofs, accumulator: say so in the summaries | CLOSED | P49 | §4.12 and §7.1 |
 | R3-RS | Restructuring: trim Ch2; cut repeated limitation statements | PARTIAL | P51 | Ch2 repetition of Ch1 cut; §6.11 points to §3.7. Ch2 remains ~12,000 words pending the programme length limit (T-8) |
 | R3-F10 | Ten-year floor source thin: ask Helsedirektoratet | WAITING |  | Email sent by Tiger (5 Oct); awaiting reply |
 | R3-PRL | Verify politiregisterloven § 17 wording | CLOSED | P54-07 | Consolidated Lovdata text supplied by Tiger (5 Oct; last amended LOV-2026-06-19-49): § 17 wording identical to §6.10; no amendment note on § 17 |
-| R3-FIT | Programme fit beyond the customs analogy | CLOSED | P54-01..06 | §2.7: CSCMP definition, perishable inventory (Nahmias, 1982), Elhub retention per data category; §1.5: IEA (2025) energy line, no saving claimed |
-| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | PARTIAL |  | Tiger confirms (5 Oct) HiMolde permits AI use under ethical use; Declaration names tool, uses and author's responsibility. Defence preparation remains Tiger's |
+| R3-FIT | Programme fit beyond the customs analogy | CLOSED | P54-01, P54-02, P54-03, P54-04, P54-05, P54-06, P56-18, P56-19 | §2.7: CSCMP definition, perishable inventory (Nahmias, 1982), Elhub retention per data category; §1.5: IEA (2025) energy line, no saving claimed |
+| R3-AI | AI-use declaration matches HiMolde rules; defence preparation | OPEN |  | Tiger confirms (5 Oct) HiMolde permits AI use under ethical use; Declaration names tool, uses and author's responsibility. Defence preparation remains Tiger's |

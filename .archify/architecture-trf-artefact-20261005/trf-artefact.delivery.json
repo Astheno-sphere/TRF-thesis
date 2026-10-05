@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "receiptId": "fdd8a258-9a7e-4710-9886-448e2b60e228",
+  "receiptId": "690eb21b-1a88-4734-8a51-bab424f5d03c",
   "status": "current",
   "command": "deliver",
   "type": "architecture",
   "input": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/candidate.json",
   "output": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
   "specification": {
-    "sha256": "79231bf5c51b7419140b1e1cf0855b526a805d1c6783aa5ffba437a446d44ad3",
-    "bytes": 3759
+    "sha256": "279ffeca02f19d340660a0e47842df64adc4c1bf5ec831ecab050e1422234487",
+    "bytes": 4643
   },
   "artifact": {
-    "sha256": "05234647e429cd636eecf63543ade10d9053ddb8b1c1280e9e235153ca683fe1",
-    "bytes": 773923
+    "sha256": "db3ca69c6720d10417373a634de275f5c6cee79b01637bf0af21bfe47da3af94",
+    "bytes": 773720
   }
 }

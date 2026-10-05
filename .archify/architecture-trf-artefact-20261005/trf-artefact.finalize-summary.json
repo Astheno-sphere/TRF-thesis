@@ -7,13 +7,13 @@
   "quality": "showcase",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/candidate.json",
-    "sha256": "79231bf5c51b7419140b1e1cf0855b526a805d1c6783aa5ffba437a446d44ad3",
-    "bytes": 3759
+    "sha256": "279ffeca02f19d340660a0e47842df64adc4c1bf5ec831ecab050e1422234487",
+    "bytes": 4643
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
-    "sha256": "05234647e429cd636eecf63543ade10d9053ddb8b1c1280e9e235153ca683fe1",
-    "bytes": 773923
+    "sha256": "db3ca69c6720d10417373a634de275f5c6cee79b01637bf0af21bfe47da3af94",
+    "bytes": 773720
   },
   "gates": {
     "validate": "pass",
@@ -44,38 +44,15 @@
     "reason": "cache-valid"
   },
   "visualReview": "not-requested",
-  "durationMs": 3334,
+  "durationMs": 3864,
   "visualReviewRecommendation": {
     "action": "inspect-route-readability",
     "signals": {
-      "resolvedCrossovers": 1,
       "routesOverSuggestedBends": 2
     },
     "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
     "affectedRoutes": {
-      "crossings": [
-        {
-          "left": {
-            "from": "sem1",
-            "to": "meas",
-            "label": "violations",
-            "collectionIndex": 11,
-            "artifactIndex": 12
-          },
-          "right": {
-            "from": "crypto",
-            "to": "meas",
-            "label": "138/138 refuse",
-            "collectionIndex": 12,
-            "artifactIndex": 13
-          },
-          "point": [
-            1218,
-            594
-          ],
-          "sharedNode": "meas"
-        }
-      ],
+      "crossings": [],
       "detours": [
         {
           "relationship": {
@@ -103,7 +80,6 @@
       "truncated": false
     },
     "hints": [
-      "sem1 → meas and crypto → meas cross next to meas: move node sem1 or crypto so the two reach meas from different sides (for example one level with it, one directly above or below it).",
       "inv → merkle needs 3 bends: move node inv or merkle so they share a row or column with matching centers, or sit diagonally with a clear corner.",
       "rec → sem1 needs 3 bends: move node rec or sem1 so they share a row or column with matching centers, or sit diagonally with a clear corner."
     ],
