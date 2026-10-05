@@ -15,7 +15,6 @@ BLOCKS = {
     "## A.11 Source listing": "demo_app/synthea_layer.py",
     "## A.12 Source listing": "demo_app/norwegian_layer.py",
     "## A.13 Source listing": "demo_app/cross_sector_check.py",
-    "## A.14 Source listing": "demo_app/app.py",
     "## A.15 Source listing": "demo_app/crypto_envelope.py",
     "## A.16 Console output": "repro_package/results/trf_output.txt",
     "## A.17 Console output": "repro_package/results/synthea_comparison_full_cohort_output.txt",
