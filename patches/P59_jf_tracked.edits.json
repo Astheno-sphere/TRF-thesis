@@ -1,0 +1,646 @@
+[
+ {
+  "id": "P59-01",
+  "file": "Front_Matter_v1.md",
+  "old": "retention obligations at once: audit-retention floors (ten years as reported for MyHealth@EU audit repositories under the eHDSI deployment baseline, and one year for Secure",
+  "new": "retention obligations at once: audit-retention floors (one year for Secure",
+  "why": "João 6 Oct tracked change [2]"
+ },
+ {
+  "id": "P59-02",
+  "file": "Front_Matter_v1.md",
+  "old": "Processing Environment access logs under Article 73(1)(e)), the right to",
+  "new": "Processing Environment access logs under Article 73(1)(e) and, on a reported but unverified deployment baseline, ten years for MyHealth@EU audit repositories), the right to",
+  "why": "João 6 Oct tracked change [2]"
+ },
+ {
+  "id": "P59-03",
+  "file": "Front_Matter_v1.md",
+  "old": "samtidig: minstekrav til lagring av revisjonslogger (ti år slik det er rapportert for MyHealth@EU under eHDSI-baselinen og ett år for tilgangslogger",
+  "new": "samtidig: minstekrav til lagring av revisjonslogger (ett år for tilgangslogger",
+  "why": "João 6 Oct tracked change [3]"
+ },
+ {
+  "id": "P59-04",
+  "file": "Front_Matter_v1.md",
+  "old": "tilgangslogger i sikre analyserom etter artikkel 73(1)(e)), retten til sletting",
+  "new": "tilgangslogger i sikre analyserom etter artikkel 73(1)(e) og, etter en rapportert, men ikke verifisert, eHDSI-baseline, ti år for MyHealth@EU), retten til sletting",
+  "why": "João 6 Oct tracked change [3]"
+ },
+ {
+  "id": "P59-05",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "ePrescriptions becoming mandatory across the EU and EEA by March 2029,",
+  "new": "ePrescriptions becoming mandatory across the EU by March 2029,",
+  "why": "João 6 Oct tracked change [6]"
+ },
+ {
+  "id": "P59-06",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "across the EU by March 2029, and the remaining",
+  "new": "across the EU by March 2029, and in Norway and the other EEA states from the dates fixed on incorporation into the EEA Agreement, and the remaining",
+  "why": "João 6 Oct tracked change [6]"
+ },
+ {
+  "id": "P59-07",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "to be infeasible whenever an erasure request or permit expiry",
+  "new": "to be infeasible whenever an erasure deadline or permit expiry",
+  "why": "João 6 Oct tracked change [7]"
+ },
+ {
+  "id": "P59-08",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "infeasible whenever an erasure deadline or permit expiry falls within a",
+  "new": "infeasible whenever an erasure deadline or a deletion-ceiling deadline falls within a",
+  "why": "João 6 Oct tracked change [7]"
+ },
+ {
+  "id": "P59-09",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "EHDS become mandatory across the EU and EEA in March 2029,",
+  "new": "EHDS become mandatory across the EU in March 2029,",
+  "why": "João 6 Oct tracked change [10]"
+ },
+ {
+  "id": "P59-10",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "mandatory across the EU in March 2029, with Group Two",
+  "new": "mandatory across the EU in March 2029 (in Norway, subject to incorporation into the EEA Agreement), with Group Two",
+  "why": "João 6 Oct tracked change [10]"
+ },
+ {
+  "id": "P59-11",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "of treatment requests cross-border data, the source country NCPeH proceeds through six steps.",
+  "new": "of treatment requests cross-border data, the two National Contact Points proceed through six steps.",
+  "why": "João 6 Oct tracked change [11]"
+ },
+ {
+  "id": "P59-12",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Contact Points proceed through six steps. It performs service discovery",
+  "new": "Contact Points proceed through six steps. The contact point of the country of treatment performs service discovery",
+  "why": "João 6 Oct tracked change [11]"
+ },
+ {
+  "id": "P59-13",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "early national e-health standards work, was itself dissolved in May 2023, with its core functions absorbed into Helsedirektoratet from",
+  "new": "early national e-health standards work, was merged into Helsedirektoratet from",
+  "why": "João 6 Oct tracked change [12]"
+ },
+ {
+  "id": "P59-14",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "standards work, was merged into Helsedirektoratet from 2024 onwards",
+  "new": "standards work, was merged into Helsedirektoratet with effect from 2024 onwards",
+  "why": "João 6 Oct tracked change [12]"
+ },
+ {
+  "id": "P59-15",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "merged into Helsedirektoratet with effect from 2024 onwards (Helsedirektoratet,",
+  "new": "merged into Helsedirektoratet with effect from 1 January 2024 onwards (Helsedirektoratet,",
+  "why": "João 6 Oct tracked change [12]"
+ },
+ {
+  "id": "P59-16",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "with effect from 1 January 2024 onwards (Helsedirektoratet, 2024). The",
+  "new": "with effect from 1 January 2024 (Helsedirektoratet, 2024). The",
+  "why": "João 6 Oct tracked change [12]"
+ },
+ {
+  "id": "P59-17",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "baseline for cross-border NCPeH operations. The primary document this",
+  "new": "baseline for cross-border NCPeH operations. The tutorial gives no source for the figure. The primary document this",
+  "why": "João 6 Oct tracked change [13]"
+ },
+ {
+  "id": "P59-18",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "17(3) provides limited exemptions, of which two are directly relevant",
+  "new": "17(3) provides limited exemptions, of which three are directly relevant",
+  "why": "João 6 Oct tracked change [14]"
+ },
+ {
+  "id": "P59-19",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "by Union or Member State law. Article 17(3)(d) permits",
+  "new": "by Union or Member State law. Article 17(3)(c) permits refusal for reasons of public interest in the area of public health in accordance with points (h) and (i) of Article 9(2) and Article 9(3), a ground open to a health-sector controller for records of care given across a border. Article 17(3)(d) permits",
+  "why": "João 6 Oct tracked change [14]"
+ },
+ {
+  "id": "P59-20",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "it reaches only the permitted dataset. The reading is",
+  "new": "it reaches only the permitted dataset. Peer-reviewed commentary on the secondary-use provisions likewise treats the reach of “electronic health data” as unsettled (Rak, 2024). The reading is",
+  "why": "João 6 Oct tracked change [15]"
+ },
+ {
+  "id": "P59-21",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "conflicting retention obligations cannot resolve this. Guidance for multi-framework environments",
+  "new": "conflicting retention obligations cannot resolve this. A common practitioner heuristic for multi-framework environments",
+  "why": "João 6 Oct tracked change [16]"
+ },
+ {
+  "id": "P59-22",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "common practitioner heuristic for multi-framework environments routinely advises applying the longest applicable",
+  "new": "common practitioner heuristic for multi-framework environments is to apply the longest applicable",
+  "why": "João 6 Oct tracked change [16]"
+ },
+ {
+  "id": "P59-23",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "A second strand applies zero-knowledge",
+  "new": "A third strand applies zero-knowledge",
+  "why": "João 6 Oct tracked change [17]"
+ },
+ {
+  "id": "P59-24",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Within the Norwegian clinical",
+  "new": "The second strand, blockchain-anchored records adapted to healthcare, has a deployed precedent in the Norwegian clinical",
+  "why": "João 6 Oct tracked change [18]"
+ },
+ {
+  "id": "P59-25",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "deployed precedent in the Norwegian clinical context, the NewbornTime project",
+  "new": "deployed precedent in the Norwegian clinical context: the NewbornTime project",
+  "why": "João 6 Oct tracked change [18]"
+ },
+ {
+  "id": "P59-26",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "the Norwegian clinical context: the NewbornTime project provides a deployed precedent. Brunner et",
+  "new": "the Norwegian clinical context: the NewbornTime project. Brunner et",
+  "why": "João 6 Oct tracked change [18]"
+ },
+ {
+  "id": "P59-27",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Two adjacent bodies of",
+  "new": "Four adjacent bodies of",
+  "why": "João 6 Oct tracked change [19]"
+ },
+ {
+  "id": "P59-28",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "distinguished from the problem addressed here, one academic and one",
+  "new": "distinguished from the problem addressed here, three academic and one",
+  "why": "João 6 Oct tracked change [19]"
+ },
+ {
+  "id": "P59-29",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "three academic and one practitioner. The academic body is the extensive",
+  "new": "three academic and one practitioner. The first is the extensive",
+  "why": "João 6 Oct tracked change [19]"
+ },
+ {
+  "id": "P59-30",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "A third adjacent body is the closest",
+  "new": "A second is the closest",
+  "why": "João 6 Oct tracked change [20]"
+ },
+ {
+  "id": "P59-31",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "A fourth body concerns whether erasure",
+  "new": "A third concerns whether erasure",
+  "why": "João 6 Oct tracked change [21]"
+ },
+ {
+  "id": "P59-32",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "The practitioner body is",
+  "new": "The fourth, the practitioner body is",
+  "why": "João 6 Oct tracked change [22]"
+ },
+ {
+  "id": "P59-33",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "The fourth, the practitioner body is the rapidly",
+  "new": "The fourth, the practitioner body, is the rapidly",
+  "why": "João 6 Oct tracked change [22]"
+ },
+ {
+  "id": "P59-34",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "the cross-border European context. Third, the broader policy literature on privacy-enhancing technologies",
+  "new": "the cross-border European context. Third, the Joint Action drafting the Secure Processing Environment specification itself records that further guidance is needed on privacy-enhancing technologies",
+  "why": "João 6 Oct tracked change [23]"
+ },
+ {
+  "id": "P59-35",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "that further guidance is needed on privacy-enhancing technologies under the European Health Data Space explicitly identifies this kind of governance-and-technology integration as an open research category. The contribution of",
+  "new": "that further guidance is needed on how accountability and anonymisation obligations intersect (TEHDAS2, 2026, Annex 7, p. 96). The contribution of",
+  "why": "João 6 Oct tracked change [23]"
+ },
+ {
+  "id": "P59-36",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "to erasure have produced the machine-unlearning literature; these works formalise",
+  "new": "to erasure have produced the machine-unlearning literature (Cao & Yang, 2015; Bourtoule et al., 2021); these works formalise",
+  "why": "João 6 Oct tracked change [24]"
+ },
+ {
+  "id": "P59-37",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "operations-research methods to regulatory compliance itself. Mixed-integer and simulation models have been developed for supply-chain compliance under regulatory constraint sets, and compliance-management systems for cross-border",
+  "new": "operations-research methods to regulatory compliance itself. Compliance-management systems for cross-border",
+  "why": "João 6 Oct tracked change [25]"
+ },
+ {
+  "id": "P59-38",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "are submitted through the helsedata.no portal. Helsedataservice registers each",
+  "new": "are submitted through the helsedata.no portal. For the registries within its authority Helsedataservice registers each",
+  "why": "João 6 Oct tracked change [26]"
+ },
+ {
+  "id": "P59-39",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "the registries within its authority Helsedataservice registers each application",
+  "new": "the registries within its authority Helsedataservice decides on access itself; for other sources it registers each application",
+  "why": "João 6 Oct tracked change [26]"
+ },
+ {
+  "id": "P59-40",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "itself; for other sources it registers each application and forwards",
+  "new": "itself; for other sources it registers the application and forwards",
+  "why": "João 6 Oct tracked change [26]"
+ },
+ {
+  "id": "P59-41",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "of Health, or the Cancer Registry, and the custodian decides on access. A two-stage cost",
+  "new": "of Health, or the Cancer Registry, which decides. A two-stage cost",
+  "why": "João 6 Oct tracked change [26]"
+ },
+ {
+  "id": "P59-42",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "system is infeasible whenever an erasure request or a permit",
+  "new": "system is infeasible whenever an erasure deadline or a permit",
+  "why": "João 6 Oct tracked change [29]"
+ },
+ {
+  "id": "P59-43",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "whenever an erasure deadline or a permit expiry falls within a",
+  "new": "whenever an erasure deadline or a deletion-ceiling deadline falls within a",
+  "why": "João 6 Oct tracked change [29]"
+ },
+ {
+  "id": "P59-44",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "purpose can be achieved without it.",
+  "new": "purpose can be achieved without it. It follows that the payload need not, and should not, wait for an erasure request: once the short-lived purpose it serves has lapsed (resolving a disputed patient match, for instance), the controller should invalidate it on its own initiative. Section 4.8 provides for this as a payload retention period, which enters the model as a third trigger of the same invalidation.",
+  "why": "João 6 Oct tracked change [30]"
+ },
+ {
+  "id": "P59-45",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "only if this distinction is preserved.",
+  "new": "only if this distinction is preserved. A binding value is available from the Regulation itself once Article 9 applies: information on access to a person’s data must remain available “for at least three years from each date of access” (Article 9(2) EHDS), which gives F(a) = 36 wherever the audit record is what that information is produced from (Section 4.2).",
+  "why": "João 6 Oct tracked change [31]"
+ },
+ {
+  "id": "P59-46",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Chapter 5 but not the propositions. In the secondary-use",
+  "new": "Chapter 5 but not the propositions. Article 17(3)(c), which disapplies the right where processing is necessary for reasons of public interest in the area of public health, narrows C2 further, in the same direction, in both pathways. In the secondary-use",
+  "why": "João 6 Oct tracked change [32]"
+ },
+ {
+  "id": "P59-47",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "semantics, and none states the alternative.",
+  "new": "semantics, and none states the alternative. Semantics I is therefore best read as the de facto semantics of deployed audit repositories, of which the OpenNCP reference implementation is one instance, rather than as a legal requirement; Proposition 1 shows why a repository built on it cannot meet the three regimes together, and so why such repositories must change.",
+  "why": "João 6 Oct tracked change [33]"
+ },
+ {
+  "id": "P59-48",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "does not keep one for it. The scheme must",
+  "new": "does not keep one for it. Where a deployment wants the commitment to stay checkable after invalidation, the opening can be handed at write time to a party entitled to the payload, such as the data subject or the patient’s home National Contact Point; the audit store itself never holds one after tᴵ(a). Without such a party, the commitment fixes after invalidation only that some payload was bound at write time and has not since been substituted. The scheme must",
+  "why": "João 6 Oct tracked change [36]"
+ },
+ {
+  "id": "P59-49",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "ground, the authorising actor, and a commitment to the destroyed",
+  "new": "ground, the authorising actor, and a hash of the destroyed",
+  "why": "João 6 Oct tracked change [37]"
+ },
+ {
+  "id": "P59-50",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "identifier: not to the key itself.",
+  "new": "identifier: not of the key itself.",
+  "why": "João 6 Oct tracked change [37]"
+ },
+ {
+  "id": "P59-51",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "erasing: the accessor fields, the creation month and the commitment,",
+  "new": "erasing: the accessor fields, the creation month, the commitment to the payload and the commitment,",
+  "why": "João 6 Oct tracked change [38]"
+ },
+ {
+  "id": "P59-52",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "the commitment to the payload and the commitment, never",
+  "new": "the commitment to the payload and a salted commitment to the commitment, never",
+  "why": "João 6 Oct tracked change [38]"
+ },
+ {
+  "id": "P59-53",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "and a salted commitment to the commitment, never the payload",
+  "new": "and a salted commitment to the subject fields, never the payload",
+  "why": "João 6 Oct tracked change [38]"
+ },
+ {
+  "id": "P59-54",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "the payload and never the subject fields. The tension that",
+  "new": "the payload and never the subject fields themselves. The salt of the subject-field commitment is held with the subject fields and destroyed when they are removed, so the link to the patient, which a cross-border record keeps for the whole floor, is as tamper-evident as the accessor fields while it exists and confirms nothing once it is gone. The tension that",
+  "why": "João 6 Oct tracked change [38]"
+ },
+ {
+  "id": "P59-55",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": ". A specific payload was bound",
+  "new": ". Some payload was bound",
+  "why": "João 6 Oct tracked change [39]"
+ },
+ {
+  "id": "P59-56",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Some payload was bound to that event, which follows from",
+  "new": "Some payload was bound to that event at write time and has not since been substituted, which follows from",
+  "why": "João 6 Oct tracked change [39]"
+ },
+ {
+  "id": "P59-57",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "bound to that specific access event. The distinction matters in adversarial conditions. A controller who deletes records and logs deletions",
+  "new": "bound to that specific access event. That failure is by definition, since condition (ii) requires a commitment, so the real question is what the commitment adds. Before invalidation an auditor can open it against the payload and logs deletions",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-58",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "open it against the payload and logs deletions can conceal the substitution of",
+  "new": "open it against the payload and detect the substitution of",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-59",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "and detect the substitution of one record for another. A",
+  "new": "and detect the substitution of one record’s content for another. A",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-60",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "substitution of one record’s content for another. A commitment bound into the log at write time constrains this only for a",
+  "new": "substitution of one record’s content for another’s. After invalidation it can be opened only for a",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-61",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "invalidation it can be opened only for a party that",
+  "new": "invalidation it can be opened only by a party that",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-62",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "only by a party that kept its own opening; once the salt and payload are",
+  "new": "only by a party that kept an opening (Section 4.8), and payload are",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-63",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "kept an opening (Section 4.8), and payload are destroyed",
+  "new": "kept an opening (Section 4.8), and otherwise fixes only that some payload are destroyed",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-64",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "otherwise fixes only that some payload are destroyed no auditor can open it, so the advantage over this",
+  "new": "otherwise fixes only that some payload was bound at write time. The advantage over this",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-65",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The advantage over this rival is narrower than first stated. The",
+  "new": "The advantage over this rival is therefore real but bounded: it lies chiefly in the logged, attributed invalidation entry and in the tamper-evident binding of the access record, and only partly in the commitment. The",
+  "why": "João 6 Oct tracked change [40]"
+ },
+ {
+  "id": "P59-66",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Met in the artefact (both tamper tests",
+  "new": "Met in the artefact against alteration of an entry (both tamper tests",
+  "why": "João 6 Oct tracked change [41]"
+ },
+ {
+  "id": "P59-67",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The terminal transition, the per-entry nonce, consistency proofs and",
+  "new": "The terminal transition, the per-entry nonce, the subject-field commitment, proactive invalidation, consistency proofs and",
+  "why": "João 6 Oct tracked change [42]"
+ },
+ {
+  "id": "P59-68",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "ten would fall in the window. A longer horizon",
+  "new": "ten would fall in the window. The frequency is in any case secondary to a structural fact: an entry written in the last six months of a permit always has a floor that outlasts the ceiling, so every permit used in its final six months produces colliding entries, whatever the distribution of permit lengths. A longer horizon",
+  "why": "João 6 Oct tracked change [45]"
+ },
+ {
+  "id": "P59-69",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "floor (Chapter 4, Section 4.2). The binding to a specific payload",
+  "new": "floor (Chapter 4, Section 4.2). The commitment survives, fixing that some payload was bound at write time, though after invalidation no one without a specific payload",
+  "why": "João 6 Oct tracked change [46]"
+ },
+ {
+  "id": "P59-70",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "after invalidation no one without a specific payload survives in the commitment. The invalidation is",
+  "new": "after invalidation no one without a retained opening can check which. The invalidation is",
+  "why": "João 6 Oct tracked change [46]"
+ },
+ {
+  "id": "P59-71",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "it hold again (Appendix A, A.16). The Semantics II",
+  "new": "it hold again (Appendix A, A.16). Altering the record’s subject link is not detected by the artefact as published, because its leaves do not yet carry the subject-field commitment that Chapter 4, Section 4.8 specifies. The Semantics II",
+  "why": "João 6 Oct tracked change [47]"
+ },
+ {
+  "id": "P59-72",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "surviving leaf hashes from confirming guesses, or the consistency",
+  "new": "surviving leaf hashes from confirming guesses, the subject-field commitment that makes the patient link tamper-evident, proactive invalidation, or the consistency",
+  "why": "João 6 Oct tracked change [48]"
+ },
+ {
+  "id": "P59-73",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "an append-only Merkle log alongside a commitment to the destroyed",
+  "new": "an append-only Merkle log alongside a hash of the destroyed",
+  "why": "João 6 Oct tracked change [49]"
+ },
+ {
+  "id": "P59-74",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "less structure: there is no surviving commitment, so an auditor",
+  "new": "less structure: there is no surviving commitment and no tamper-evident binding of the deleted record, so an auditor",
+  "why": "João 6 Oct tracked change [50]"
+ },
+ {
+  "id": "P59-75",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "deleted record, so an auditor cannot even establish",
+  "new": "deleted record, so an auditor cannot establish",
+  "why": "João 6 Oct tracked change [50]"
+ },
+ {
+  "id": "P59-76",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "was destroyed. The mechanism does",
+  "new": "was destroyed. Under this mechanism too an auditor cannot read what was destroyed; what the commitment and the log add is that the record of the access and of its invalidation cannot be rewritten without detection. The mechanism does",
+  "why": "João 6 Oct tracked change [50]"
+ },
+ {
+  "id": "P59-77",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "residue; that transition, the per-entry nonce, consistency proofs and",
+  "new": "residue; that transition, the per-entry nonce, the subject-field commitment, proactive invalidation, consistency proofs and",
+  "why": "João 6 Oct tracked change [53]"
+ },
+ {
+  "id": "P59-78",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "Generators for the research-substrate patch workbooks; no thesis result depends on them",
+  "new": "",
+  "why": "João 6 Oct tracked change [62]"
+ },
+ {
+  "id": "P59-79",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "none for the checker; openpyxl for the substrate",
+  "new": "none for the checker; cryptography for the substrate",
+  "why": "João 6 Oct tracked change [64]"
+ },
+ {
+  "id": "P59-80",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "none for the checker; cryptography for the substrate patch generators",
+  "new": "none for the checker; cryptography for crypto_envelope.py and z3-solver for z3_check.py, both optional",
+  "why": "João 6 Oct tracked change [64]"
+ },
+ {
+  "id": "P59-81",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "The same form applies to each of the five recorded runs listed",
+  "new": "The same form applies to every recorded runs listed",
+  "why": "João 6 Oct tracked change [66]"
+ },
+ {
+  "id": "P59-82",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "same form applies to every recorded runs listed in A.2. A",
+  "new": "same form applies to every recorded run in A.2. A",
+  "why": "João 6 Oct tracked change [66]"
+ },
+ {
+  "id": "P59-83",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "applies to every recorded run in A.2. A difference means",
+  "new": "applies to every recorded run in docs/. A difference means",
+  "why": "João 6 Oct tracked change [66]"
+ },
+ {
+  "id": "P59-84",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "Act implementation Nkom DigDir consultation 2025 h\\u00f8ring Regulation 2024/1689",
+  "new": "Act implementation Nkom DigDir consultation 2025 høring Regulation 2024/1689",
+  "why": "João 6 Oct tracked change [68]"
+ },
+ {
+  "id": "P59-85",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "3 TRF model formal specification VERA-SNARK",
+  "new": "3 TRF model formal specification VERA-SNARK [not a literature search: retrieval of the author’s own drafts]",
+  "why": "João 6 Oct tracked change [69]"
+ },
+ {
+  "id": "P59-86",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "feasibility theorem crypto-erasure invalidation chapter 4",
+  "new": "feasibility theorem crypto-erasure invalidation chapter 4 [not a literature search: retrieval of the author’s own drafts]",
+  "why": "João 6 Oct tracked change [70]"
+ },
+ {
+  "id": "P59-87",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "Norge EHDS E\\u00d8S gjennomf\\u00f8ring helsedata juni 2026",
+  "new": "Norge EHDS EØS gjennomføring helsedata juni 2026",
+  "why": "João 6 Oct tracked change [71]"
+ },
+ {
+  "id": "P59-88",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "Google Drive read file content",
+  "new": "Google Drive read file content [not a literature search: retrieval of the author’s own drafts]",
+  "why": "João 6 Oct tracked change [72]"
+ },
+ {
+  "id": "P59-89",
+  "file": "Appendix_C_Evaluation_Instrument.md",
+  "old": "as proposed in supervisory feedback, except item A1, reworded",
+  "new": "as proposed in supervisory feedback, except the term “erasure ceilings” in item U1, corrected to “deletion ceilings”, and item A1, reworded",
+  "why": "João 6 Oct tracked change [74]"
+ },
+ {
+  "id": "P59-90",
+  "file": "Appendix_C_Evaluation_Instrument.md",
+  "old": "the conflict between retention floors and erasure ceilings.",
+  "new": "the conflict between retention floors and deletion ceilings.",
+  "why": "João 6 Oct tracked change [75]"
+ },
+ {
+  "id": "P59-91",
+  "file": "Appendix_C_Evaluation_Instrument.md",
+  "old": "the processing environment beyond what the finalised national criteria already",
+  "new": "the processing environment beyond what the national criteria already",
+  "why": "João 6 Oct tracked change [77]"
+ },
+ {
+  "id": "P59-92",
+  "file": "Appendix_C_Evaluation_Instrument.md",
+  "old": "environment beyond what the national criteria already demand.",
+  "new": "environment beyond what the national criteria (in the version put to hearing) already demand.",
+  "why": "João 6 Oct tracked change [77]"
+ }
+]

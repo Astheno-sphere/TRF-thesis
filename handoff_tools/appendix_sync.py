@@ -17,7 +17,7 @@ BLOCKS = {
     "## A.13 Source listing": "demo_app/cross_sector_check.py",
     "## A.15 Source listing": "demo_app/crypto_envelope.py",
     "## A.16 Console output": "repro_package/results/trf_output.txt",
-    "## A.17 Console output": "repro_package/results/synthea_comparison_full_cohort_output.txt",
+    "## A.17 Console output": "repro_package/results/synthea_comparison_full_cohort_rerun_2026-10-06.txt",
     "## A.21 Console output": "repro_package/results/synthea_comparison_subset_output.txt",
     "## A.18 Console output": "repro_package/results/expected_delta_witness_output.txt",
     "## A.19 Console output": "repro_package/results/expected_norwegian_output.txt",

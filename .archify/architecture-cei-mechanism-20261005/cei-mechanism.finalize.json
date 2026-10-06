@@ -5,16 +5,16 @@
   "status": "pass",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-05T15:11:27.909Z",
+  "startedAt": "2026-10-06T14:31:51.065Z",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
-    "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
-    "bytes": 4838
+    "sha256": "e25c780c7ba92e002d8ffd3f181cdf2ea92df703687655b6005b5e060ec85831",
+    "bytes": 5794
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-    "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
-    "bytes": 769025
+    "sha256": "6482080d4279a900c711fdca74d19323db55f5b5881bf6ddcb02e354578e778b",
+    "bytes": 773580
   },
   "stages": {
     "validate": {
@@ -38,8 +38,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
-          "bytes": 4838
+          "sha256": "e25c780c7ba92e002d8ffd3f181cdf2ea92df703687655b6005b5e060ec85831",
+          "bytes": 5794
         },
         "validation": {
           "checksPassed": 9,
@@ -54,7 +54,7 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 772,
+      "durationMs": 752,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -68,19 +68,19 @@
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441",
+        "receiptId": "88a16f49-4519-46c4-8a3e-8f4eed5c4c47",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
         "input": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
         "output": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
         "specification": {
-          "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
-          "bytes": 4838
+          "sha256": "e25c780c7ba92e002d8ffd3f181cdf2ea92df703687655b6005b5e060ec85831",
+          "bytes": 5794
         },
         "artifact": {
-          "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
-          "bytes": 769025
+          "sha256": "6482080d4279a900c711fdca74d19323db55f5b5881bf6ddcb02e354578e778b",
+          "bytes": 773580
         },
         "validation": {
           "checksPassed": 9,
@@ -106,7 +106,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 212,
+      "durationMs": 179,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -118,8 +118,8 @@
         "ok": true,
         "file": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
         "artifact": {
-          "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
-          "bytes": 769025
+          "sha256": "6482080d4279a900c711fdca74d19323db55f5b5881bf6ddcb02e354578e778b",
+          "bytes": 773580
         },
         "checks": [
           {
@@ -189,13 +189,13 @@
             "minLabelRouteClearance": 24,
             "desktopReadabilityIssues": 0,
             "viewportHeightIssues": 0,
-            "minProjectedNodeTextPx": 7.5,
-            "maxBends": 1,
-            "routesOverSuggestedBends": 0,
+            "minProjectedNodeTextPx": 6.048780487804878,
+            "maxBends": 3,
+            "routesOverSuggestedBends": 1,
             "maxStretch": 1,
             "routesOverSuggestedStretch": 0,
-            "minSegmentPx": 112,
-            "minInteriorSegmentPx": null,
+            "minSegmentPx": 24,
+            "minInteriorSegmentPx": 122,
             "shortSegmentCount": 0,
             "shortEndpointSegmentCount": 0,
             "shortInteriorSegmentCount": 0,
@@ -209,29 +209,39 @@
           },
           "routeReview": {
             "crossings": [],
-            "detours": []
+            "detours": [
+              {
+                "relationship": {
+                  "id": "e15",
+                  "from": "proactive",
+                  "to": "scheduler",
+                  "label": "t+P",
+                  "collectionIndex": 14,
+                  "artifactIndex": 15
+                },
+                "bends": 3,
+                "stretch": 1
+              }
+            ]
           },
           "leadingSpace": {
             "measured": true,
-            "emptyTopPx": 50,
-            "emptyTopRatio": 0.064,
-            "occupiedTop": 50,
+            "emptyTopPx": 20,
+            "emptyTopRatio": 0.021,
+            "occupiedTop": 20,
             "viewBoxTop": 0,
-            "canvasHeight": 776,
+            "canvasHeight": 946,
             "typicalNodeHeight": 68,
             "reviewSuggested": false
           },
           "desktopReadability": {
-            "budgetBasis": "recognized-declared-wide",
+            "budgetBasis": "legacy-930",
             "readerContract": "declared-wide-v1",
-            "availableDiagramWidth": 1228.125,
-            "actualBudgetPx": 1228.125,
-            "actualReaderWidth": 1258.125,
-            "desiredReaderWidth": 1258.125,
-            "viewportCap": 1376,
-            "limit": "source-size",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
             "requestedTargetPx": 7.5,
-            "requestedTargetMet": true,
+            "requestedTargetMet": false,
             "hardFloorPx": 6,
             "hardFloorMet": true,
             "minimumOwner": {
@@ -241,19 +251,19 @@
               "to": "writer"
             },
             "minimumSourceTextPx": 8,
-            "minimumProjectedTextPx": 7.5,
-            "semanticTextCount": 37
+            "minimumProjectedTextPx": 6.048780487804878,
+            "semanticTextCount": 43
           },
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441"
+        "deliveryReceiptId": "88a16f49-4519-46c4-8a3e-8f4eed5c4c47"
       }
     },
     "browser-check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 3054,
+      "durationMs": 2303,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -271,11 +281,11 @@
         "status": "pass",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "18237030-ab28-4e0d-b2ea-d9e40a0cf441",
+        "deliveryReceiptId": "88a16f49-4519-46c4-8a3e-8f4eed5c4c47",
         "artifact": {
           "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-          "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
-          "bytes": 769025
+          "sha256": "6482080d4279a900c711fdca74d19323db55f5b5881bf6ddcb02e354578e778b",
+          "bytes": 773580
         },
         "state": {
           "detail": "read",
@@ -297,29 +307,29 @@
               "innerWidth": 1440,
               "innerHeight": 900,
               "scrollWidth": 1440,
-              "scrollHeight": 900,
+              "scrollHeight": 975,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1289,
-              "diagramWidth": 1259,
+              "readerWidth": 1091,
+              "diagramWidth": 1061,
               "pageComposition": {
                 "bodyPaddingPx": 12,
-                "headerPx": 52,
+                "headerPx": 68,
                 "diagramChromePx": 78,
-                "svgPx": 746,
+                "svgPx": 816,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 7.688549618320611,
-              "minimumProjectedNonEdgeTextPx": 8.361297709923663,
-              "minimumProjectedEdgeTextPx": 7.688549618320611,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 6.900813008130081,
+              "minimumProjectedNonEdgeTextPx": 7.504634146341463,
+              "minimumProjectedEdgeTextPx": 6.900813008130081,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -349,29 +359,29 @@
               "innerWidth": 1600,
               "innerHeight": 1000,
               "scrollWidth": 1600,
-              "scrollHeight": 1000,
+              "scrollHeight": 1041,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1347,
-              "diagramWidth": 1317,
+              "readerWidth": 1091,
+              "diagramWidth": 1061,
               "pageComposition": {
                 "bodyPaddingPx": 64,
-                "headerPx": 60,
+                "headerPx": 76,
                 "diagramChromePx": 84,
-                "svgPx": 780,
+                "svgPx": 816,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 8,
-              "minimumProjectedNonEdgeTextPx": 8.7,
-              "minimumProjectedEdgeTextPx": 8,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 6.900813008130081,
+              "minimumProjectedNonEdgeTextPx": 7.504634146341463,
+              "minimumProjectedEdgeTextPx": 6.900813008130081,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -410,20 +420,20 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1482,
-              "diagramWidth": 1452,
+              "readerWidth": 1127,
+              "diagramWidth": 1097,
               "pageComposition": {
                 "bodyPaddingPx": 64,
-                "headerPx": 60,
+                "headerPx": 76,
                 "diagramChromePx": 84,
-                "svgPx": 860,
+                "svgPx": 844,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 8,
-              "minimumProjectedNonEdgeTextPx": 8.7,
-              "minimumProjectedEdgeTextPx": 8,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 7.134959349593496,
+              "minimumProjectedNonEdgeTextPx": 7.759268292682926,
+              "minimumProjectedEdgeTextPx": 7.134959349593496,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -462,17 +472,17 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1877,
-              "diagramWidth": 1827,
+              "readerWidth": 1457,
+              "diagramWidth": 1407,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
                 "diagramChromePx": 94,
                 "svgPx": 1082,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
+              "viewBoxWidth": 1230,
               "minimumProjectedNodeTextPx": 8,
               "minimumProjectedNonEdgeTextPx": 8.7,
               "minimumProjectedEdgeTextPx": 8,
@@ -558,29 +568,29 @@
               "innerWidth": 1440,
               "innerHeight": 900,
               "scrollWidth": 1440,
-              "scrollHeight": 900,
+              "scrollHeight": 975,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1289,
-              "diagramWidth": 1259,
+              "readerWidth": 1091,
+              "diagramWidth": 1061,
               "pageComposition": {
                 "bodyPaddingPx": 12,
-                "headerPx": 52,
+                "headerPx": 68,
                 "diagramChromePx": 78,
-                "svgPx": 746,
+                "svgPx": 816,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 7.688549618320611,
-              "minimumProjectedNonEdgeTextPx": 8.361297709923663,
-              "minimumProjectedEdgeTextPx": 7.688549618320611,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 6.900813008130081,
+              "minimumProjectedNonEdgeTextPx": 7.504634146341463,
+              "minimumProjectedEdgeTextPx": 6.900813008130081,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -610,29 +620,29 @@
               "innerWidth": 1600,
               "innerHeight": 1000,
               "scrollWidth": 1600,
-              "scrollHeight": 1000,
+              "scrollHeight": 1041,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1347,
-              "diagramWidth": 1317,
+              "readerWidth": 1091,
+              "diagramWidth": 1061,
               "pageComposition": {
                 "bodyPaddingPx": 64,
-                "headerPx": 60,
+                "headerPx": 76,
                 "diagramChromePx": 84,
-                "svgPx": 780,
+                "svgPx": 816,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 8,
-              "minimumProjectedNonEdgeTextPx": 8.7,
-              "minimumProjectedEdgeTextPx": 8,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 6.900813008130081,
+              "minimumProjectedNonEdgeTextPx": 7.504634146341463,
+              "minimumProjectedEdgeTextPx": 6.900813008130081,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -671,20 +681,20 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1482,
-              "diagramWidth": 1452,
+              "readerWidth": 1127,
+              "diagramWidth": 1097,
               "pageComposition": {
                 "bodyPaddingPx": 64,
-                "headerPx": 60,
+                "headerPx": 76,
                 "diagramChromePx": 84,
-                "svgPx": 860,
+                "svgPx": 844,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 8,
-              "minimumProjectedNonEdgeTextPx": 8.7,
-              "minimumProjectedEdgeTextPx": 8,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 7.134959349593496,
+              "minimumProjectedNonEdgeTextPx": 7.759268292682926,
+              "minimumProjectedEdgeTextPx": 7.134959349593496,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -723,17 +733,17 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1877,
-              "diagramWidth": 1827,
+              "readerWidth": 1457,
+              "diagramWidth": 1407,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
                 "diagramChromePx": 94,
                 "svgPx": 1082,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
+              "viewBoxWidth": 1230,
               "minimumProjectedNodeTextPx": 8,
               "minimumProjectedNonEdgeTextPx": 8.7,
               "minimumProjectedEdgeTextPx": 8,
@@ -771,29 +781,29 @@
               "innerWidth": 1440,
               "innerHeight": 900,
               "scrollWidth": 1440,
-              "scrollHeight": 900,
+              "scrollHeight": 975,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1289,
-              "diagramWidth": 1259,
+              "readerWidth": 1091,
+              "diagramWidth": 1061,
               "pageComposition": {
                 "bodyPaddingPx": 12,
-                "headerPx": 52,
+                "headerPx": 68,
                 "diagramChromePx": 78,
-                "svgPx": 746,
+                "svgPx": 816,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 7.688549618320611,
-              "minimumProjectedNonEdgeTextPx": 8.361297709923663,
-              "minimumProjectedEdgeTextPx": 7.688549618320611,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 6.900813008130081,
+              "minimumProjectedNonEdgeTextPx": 7.504634146341463,
+              "minimumProjectedEdgeTextPx": 6.900813008130081,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -823,29 +833,29 @@
               "innerWidth": 1600,
               "innerHeight": 1000,
               "scrollWidth": 1600,
-              "scrollHeight": 1000,
+              "scrollHeight": 1041,
               "overflowX": false,
-              "overflowY": false,
-              "verticalScrollAccepted": false,
-              "overflowDisposition": "contained",
+              "overflowY": true,
+              "verticalScrollAccepted": true,
+              "overflowDisposition": "readable-vertical-scroll",
               "readerLayout": "adaptive",
-              "readerOverflow": null,
+              "readerOverflow": "authored",
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1347,
-              "diagramWidth": 1317,
+              "readerWidth": 1091,
+              "diagramWidth": 1061,
               "pageComposition": {
                 "bodyPaddingPx": 64,
-                "headerPx": 60,
+                "headerPx": 76,
                 "diagramChromePx": 84,
-                "svgPx": 780,
+                "svgPx": 816,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 8,
-              "minimumProjectedNonEdgeTextPx": 8.7,
-              "minimumProjectedEdgeTextPx": 8,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 6.900813008130081,
+              "minimumProjectedNonEdgeTextPx": 7.504634146341463,
+              "minimumProjectedEdgeTextPx": 6.900813008130081,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -884,20 +894,20 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1482,
-              "diagramWidth": 1452,
+              "readerWidth": 1127,
+              "diagramWidth": 1097,
               "pageComposition": {
                 "bodyPaddingPx": 64,
-                "headerPx": 60,
+                "headerPx": 76,
                 "diagramChromePx": 84,
-                "svgPx": 860,
+                "svgPx": 844,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
-              "minimumProjectedNodeTextPx": 8,
-              "minimumProjectedNonEdgeTextPx": 8.7,
-              "minimumProjectedEdgeTextPx": 8,
+              "viewBoxWidth": 1230,
+              "minimumProjectedNodeTextPx": 7.134959349593496,
+              "minimumProjectedNonEdgeTextPx": 7.759268292682926,
+              "minimumProjectedEdgeTextPx": 7.134959349593496,
               "minimumProjectedNodeText": "access event",
               "minimumProjectedNodeTextDetail": "edge",
               "minimumProjectedNodeTextOwner": {
@@ -936,17 +946,17 @@
               "readerOverflow": null,
               "readerFit": "intrinsic-height",
               "ok": true,
-              "readerWidth": 1877,
-              "diagramWidth": 1827,
+              "readerWidth": 1457,
+              "diagramWidth": 1407,
               "pageComposition": {
                 "bodyPaddingPx": 64,
                 "headerPx": 68,
                 "diagramChromePx": 94,
                 "svgPx": 1082,
                 "cardsPx": 0,
-                "viewBoxHeight": 776
+                "viewBoxHeight": 946
               },
-              "viewBoxWidth": 1310,
+              "viewBoxWidth": 1230,
               "minimumProjectedNodeTextPx": 8,
               "minimumProjectedNonEdgeTextPx": 8.7,
               "minimumProjectedEdgeTextPx": 8,
@@ -993,8 +1003,8 @@
     "browserCheckReceipt": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.browser-check.json"
   },
   "visualReview": "not-requested",
-  "finishedAt": "2026-10-05T15:11:32.100Z",
-  "durationMs": 4190,
+  "finishedAt": "2026-10-06T14:31:54.464Z",
+  "durationMs": 3398,
   "update": {
     "status": "unavailable",
     "installedVersion": null,

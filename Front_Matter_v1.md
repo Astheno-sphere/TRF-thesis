@@ -21,7 +21,7 @@ Molde, November 2026
 
 ## Abstract
 
-The European Health Data Space Regulation (EU) 2025/327 subjects cross-border health data audit records to three retention obligations at once: audit-retention floors (ten years as reported for MyHealth@EU audit repositories under the eHDSI deployment baseline, and one year for Secure Processing Environment access logs under Article 73(1)(e)), the right to erasure under Article 17 GDPR, and the six-month deletion ceiling of Article 68(12). No instrument reconciles them, and the implementing acts that must specify Secure Processing Environment requirements are not due until 26 March 2027.
+The European Health Data Space Regulation (EU) 2025/327 subjects cross-border health data audit records to three retention obligations at once: audit-retention floors (one year for Secure Processing Environment access logs under Article 73(1)(e) and, on a reported but unverified deployment baseline, ten years for MyHealth@EU audit repositories), the right to erasure under Article 17 GDPR, and the six-month deletion ceiling of Article 68(12). No instrument reconciles them, and the implementing acts that must specify Secure Processing Environment requirements are not due until 26 March 2027.
 
 The thesis develops the Tri-Lateral Retention Feasibility (TRF) Model, a constraint-satisfaction formulation in which the semantics of audit verifiability is an explicit parameter. Under plaintext-verifiability semantics the constraints are infeasible whenever an erasure or deletion deadline falls inside a retention window (Proposition 1). Under accountability-preserving semantics they are jointly satisfiable for every arrival pattern of erasure requests and permit expiries and for every retention floor (Proposition 2). Two further results locate the conflict: a ceiling collides with a floor only if it is no longer than the floor, and the event the ceiling is anchored to decides whether the collision is visible in the text or only in each record's history (Proposition 3); moving a record out of the regulated environment satisfies the ceiling but not the right to erasure (Proposition 4). The witnessing mechanism, Crypto-Erasure by Invalidation, destroys a per-record payload key and, for Secure Processing Environment logs at the deletion ceiling, removes the record's link to the patient, while retaining the accessor's identity, event metadata, a hiding commitment and a logged invalidation entry in a tamper-evident log.
 
@@ -37,7 +37,7 @@ Supervisor: Prof. João Ferreira. Artefact: https://github.com/Astheno-sphere/TR
 
 ## Sammendrag
 
-Forordning (EU) 2025/327 om det europeiske helsedataområdet (EHDS) underlegger revisjonsspor for grensekryssende helsedata tre lagringsplikter samtidig: minstekrav til lagring av revisjonslogger (ti år slik det er rapportert for MyHealth@EU under eHDSI-baselinen og ett år for tilgangslogger i sikre analyserom etter artikkel 73(1)(e)), retten til sletting etter GDPR artikkel 17, og en sletteplikt på seks måneder etter artikkel 68(12). Ingen rettsakt forener disse, og gjennomføringsrettsaktene som skal fastsette kravene til sikre analyserom skal ikke foreligge før 26. mars 2027.
+Forordning (EU) 2025/327 om det europeiske helsedataområdet (EHDS) underlegger revisjonsspor for grensekryssende helsedata tre lagringsplikter samtidig: minstekrav til lagring av revisjonslogger (ett år for tilgangslogger i sikre analyserom etter artikkel 73(1)(e) og, etter en rapportert, men ikke verifisert, eHDSI-baseline, ti år for MyHealth@EU), retten til sletting etter GDPR artikkel 17, og en sletteplikt på seks måneder etter artikkel 68(12). Ingen rettsakt forener disse, og gjennomføringsrettsaktene som skal fastsette kravene til sikre analyserom skal ikke foreligge før 26. mars 2027.
 
 Oppgaven utvikler Tri-Lateral Retention Feasibility (TRF)-modellen, en betingelsesbasert formulering der semantikken for revisjonsverifiserbarhet er en eksplisitt parameter. Under semantikk der en post er verifiserbar bare så lenge innholdet er lesbart i klartekst, er kravene uforenlige så snart en slettefrist eller en sletteplikt faller innenfor lagringsperioden (proposisjon 1). Under semantikk som bevarer etterrettelighet, kan kravene tilfredsstilles samtidig for alle tidspunkter for slettebegjæringer og utløp av tillatelser og for alle lagringsminimum (proposisjon 2). To resultater til avgrenser konflikten: en øvre grense kolliderer med et lagringsminimum bare når den ikke er lengre enn minimumet, og hendelsen grensen regnes fra avgjør om kollisjonen kan ses i teksten eller bare i den enkelte postens historikk (proposisjon 3); å flytte en post ut av det regulerte miljøet oppfyller sletteplikten, men ikke retten til sletting (proposisjon 4). Mekanismen som viser dette, Crypto-Erasure by Invalidation, ødelegger nøkkelen til innholdet i hver enkelt post og fjerner, for tilgangslogger i sikre analyserom når sletteplikten inntreffer, postens kobling til pasienten, samtidig som identiteten til den som ga seg tilgang, hendelsesmetadata, en skjulende forpliktelse (commitment) og en logget ugyldiggjøringspost beholdes i en manipulasjonssikker logg.
 
@@ -97,7 +97,8 @@ Two declarations are made explicitly.
 | *σ*(*a*) | Pathway: primary or secondary |
 | *t*ᵣ(*a*) | Month an erasure request arrives (∞ if none) |
 | *t*π(*a*) | Month a data permit expires (∞ if not applicable) |
-| *t*ᴵ(*a*) | Invalidation month, min(*t*ᵣ + δ, *t*π + 6) |
+| *P*(*a*) | Payload retention period set by the controller (∞ if none; Section 4.8) |
+| *t*ᴵ(*a*) | Invalidation month, min(*t*ᵣ + δ, *t*π + 6, *t* + *P*) |
 | δ | Erasure response period, in months (GDPR Art. 12(3)) |
 | *α*(*a*, *t*) | Payload accessibility at month *t* — 1 if recoverable, 0 otherwise |
 | *V*(*a*, *t*) | Whether the record counts as verifiable at month *t* |
@@ -215,8 +216,7 @@ Two declarations are made explicitly.
 - 6.8 Implications for Practice and Policy
 - 6.9 Theoretical Implications
 - 6.10 Where the Ceiling Is Anchored: a Cross-Sector Test
-- 6.11 Boundaries as Contribution
-- 6.12 Summary
+- 6.11 Summary
 
 **Chapter 7. Conclusion**
 

@@ -5,16 +5,16 @@
   "status": "pass",
   "type": "architecture",
   "quality": "showcase",
-  "startedAt": "2026-10-06T13:54:06.058Z",
+  "startedAt": "2026-10-06T14:31:16.558Z",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/candidate.json",
-    "sha256": "9c0cd26f18c751c674e247de305571ac101e609f37995ad62b9c3615643a253e",
-    "bytes": 4660
+    "sha256": "6e54385504ddb447e385c5113afea26564e1adf68a8aa4eb26c86f68a0c0877b",
+    "bytes": 4971
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
-    "sha256": "09d3d965b5be4189706324b9ae900de8b5f5cb2b86e727cd32efbd65ed3cd7f9",
-    "bytes": 773788
+    "sha256": "d6f7ce91242b01c0542f75fbae58679aa5a6f7c922b3af8cc1303c60ea1189a3",
+    "bytes": 773839
   },
   "stages": {
     "validate": {
@@ -38,8 +38,8 @@
         "ok": true,
         "command": "validate",
         "specification": {
-          "sha256": "9c0cd26f18c751c674e247de305571ac101e609f37995ad62b9c3615643a253e",
-          "bytes": 4660
+          "sha256": "6e54385504ddb447e385c5113afea26564e1adf68a8aa4eb26c86f68a0c0877b",
+          "bytes": 4971
         },
         "validation": {
           "checksPassed": 9,
@@ -54,7 +54,7 @@
     "deliver": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 1519,
+      "durationMs": 995,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -68,19 +68,19 @@
       ],
       "receipt": {
         "schemaVersion": 1,
-        "receiptId": "ac83f14d-6825-417e-9a8b-ee3ddbd7fb02",
+        "receiptId": "4efbbb22-7eeb-498d-9379-85cefde4eeb8",
         "ok": true,
         "command": "deliver",
         "type": "architecture",
         "input": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/candidate.json",
         "output": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
         "specification": {
-          "sha256": "9c0cd26f18c751c674e247de305571ac101e609f37995ad62b9c3615643a253e",
-          "bytes": 4660
+          "sha256": "6e54385504ddb447e385c5113afea26564e1adf68a8aa4eb26c86f68a0c0877b",
+          "bytes": 4971
         },
         "artifact": {
-          "sha256": "09d3d965b5be4189706324b9ae900de8b5f5cb2b86e727cd32efbd65ed3cd7f9",
-          "bytes": 773788
+          "sha256": "d6f7ce91242b01c0542f75fbae58679aa5a6f7c922b3af8cc1303c60ea1189a3",
+          "bytes": 773839
         },
         "validation": {
           "checksPassed": 9,
@@ -106,7 +106,7 @@
     "check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 415,
+      "durationMs": 217,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -118,8 +118,8 @@
         "ok": true,
         "file": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
         "artifact": {
-          "sha256": "09d3d965b5be4189706324b9ae900de8b5f5cb2b86e727cd32efbd65ed3cd7f9",
-          "bytes": 773788
+          "sha256": "d6f7ce91242b01c0542f75fbae58679aa5a6f7c922b3af8cc1303c60ea1189a3",
+          "bytes": 773839
         },
         "checks": [
           {
@@ -270,13 +270,13 @@
           "issues": []
         },
         "provenance": "current",
-        "deliveryReceiptId": "ac83f14d-6825-417e-9a8b-ee3ddbd7fb02"
+        "deliveryReceiptId": "4efbbb22-7eeb-498d-9379-85cefde4eeb8"
       }
     },
     "browser-check": {
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 3174,
+      "durationMs": 2385,
       "command": [
         "/opt/node22/bin/node",
         "/tmp/claude-0/tools/archify/archify/bin/archify.mjs",
@@ -294,11 +294,11 @@
         "status": "pass",
         "visualReview": "not-requested",
         "provenance": "current",
-        "deliveryReceiptId": "ac83f14d-6825-417e-9a8b-ee3ddbd7fb02",
+        "deliveryReceiptId": "4efbbb22-7eeb-498d-9379-85cefde4eeb8",
         "artifact": {
           "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
-          "sha256": "09d3d965b5be4189706324b9ae900de8b5f5cb2b86e727cd32efbd65ed3cd7f9",
-          "bytes": 773788
+          "sha256": "d6f7ce91242b01c0542f75fbae58679aa5a6f7c922b3af8cc1303c60ea1189a3",
+          "bytes": 773839
         },
         "state": {
           "detail": "read",
@@ -1016,8 +1016,8 @@
     "browserCheckReceipt": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.browser-check.json"
   },
   "visualReview": "not-requested",
-  "finishedAt": "2026-10-06T13:54:11.455Z",
-  "durationMs": 5397,
+  "finishedAt": "2026-10-06T14:31:20.300Z",
+  "durationMs": 3742,
   "update": {
     "status": "unavailable",
     "installedVersion": null,
@@ -1027,6 +1027,6 @@
     "source": null,
     "noticeRequired": false,
     "noticeText": null,
-    "reason": "check-failed"
+    "reason": "cache-valid"
   }
 }

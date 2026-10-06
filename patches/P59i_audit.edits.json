@@ -1,0 +1,65 @@
+[
+ {
+  "id": "P59i-01",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "\n\nThe second strand, blockchain-anchored records adapted to healthcare, has a deployed precedent in the Norwegian clinical context: the NewbornTime project. Brunner et al. (2025) document the deployment of a Hyperledger-based digital consent platform at Stavanger University Hospital, used between November 2021 and June 2025 in the collection of 1,012 thermal videos of newborn resuscitation events. The platform stores consent status immutably on-chain while keeping personal data encrypted and off-chain, providing a protected API for authorised retrieval and a documented General Data Protection Regulation-compliant withdrawal mechanism. The clinical viability of blockchain-anchored consent infrastructure in a Norwegian regulated healthcare setting is therefore established, although the system addresses consent recording rather than the audit-trail erasure problem.\n",
+  "new": "\n",
+  "why": "audit 9: strand order (remove)"
+ },
+ {
+  "id": "P59i-02",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "\nA third strand applies zero-knowledge proofs",
+  "new": "\nThe second strand, blockchain-anchored records adapted to healthcare, has a deployed precedent in the Norwegian clinical context: the NewbornTime project. Brunner et al. (2025) document the deployment of a Hyperledger-based digital consent platform at Stavanger University Hospital, used between November 2021 and June 2025 in the collection of 1,012 thermal videos of newborn resuscitation events. The platform stores consent status immutably on-chain while keeping personal data encrypted and off-chain, providing a protected API for authorised retrieval and a documented General Data Protection Regulation-compliant withdrawal mechanism. The clinical viability of blockchain-anchored consent infrastructure in a Norwegian regulated healthcare setting is therefore established, although the system addresses consent recording rather than the audit-trail erasure problem.\n\nA third strand applies zero-knowledge proofs",
+  "why": "audit 9: strand order (insert before the third)"
+ },
+ {
+  "id": "P59i-03",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "not since been substituted, which follows from $c(a)$. The payload",
+  "new": "not since been substituted, which follows from $c(a)$ and its inclusion in the log; which payload it was can be checked only by a party that kept an opening (*Commitment*, above). The payload",
+  "why": "audit 1: JF [39] tail"
+ },
+ {
+  "id": "P59i-04",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "two tamper tests, an altered accessor field and an altered invalidation ground, under which `V_II` fails, and a restore after which it holds.",
+  "new": "three tamper tests, an altered accessor field and an altered invalidation ground of record 100 and an altered patient link of record 3, under each of which `V_II` fails, and a restore after which it holds.",
+  "why": "audit 2"
+ },
+ {
+  "id": "P59i-05",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "the mean payload is 891 bytes here against 1,006 for the full cohort",
+  "new": "the mean payload is 891 bytes here against 1,002 for the full cohort",
+  "why": "audit 3"
+ },
+ {
+  "id": "P59i-06",
+  "file": "Front_Matter_v1.md",
+  "old": "- 6.11 Boundaries as Contribution\n- 6.12 Summary",
+  "new": "- 6.11 Summary",
+  "why": "audit 4"
+ },
+ {
+  "id": "P59i-07",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "destroy the payload key at $t^{I} = \\min(t_r + \\delta,\\; t_\\pi + 6)$,",
+  "new": "destroy the payload key at $t^{I} = \\min(t_r + \\delta,\\; t_\\pi + 6)$ (the artefact runs with $P = \\infty$; Chapter 4, Section 4.8),",
+  "why": "audit 5"
+ },
+ {
+  "id": "P59i-08",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "delete the payload at `min(t_r + δ, t_π + 6)`;",
+  "new": "delete the payload at `min(t_r + δ, t_π + 6)`, the artefact running with no payload retention period;",
+  "why": "audit 5"
+ },
+ {
+  "id": "P59i-09",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "so that an erasure request fixed the invalidation month,",
+  "new": "so that an erasure request or the payload retention period fixed the invalidation month,",
+  "why": "audit 6"
+ }
+]

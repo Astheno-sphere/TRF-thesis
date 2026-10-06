@@ -6,11 +6,11 @@
   "status": "pass",
   "visualReview": "not-requested",
   "provenance": "current",
-  "deliveryReceiptId": "ac83f14d-6825-417e-9a8b-ee3ddbd7fb02",
+  "deliveryReceiptId": "4efbbb22-7eeb-498d-9379-85cefde4eeb8",
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
-    "sha256": "09d3d965b5be4189706324b9ae900de8b5f5cb2b86e727cd32efbd65ed3cd7f9",
-    "bytes": 773788
+    "sha256": "d6f7ce91242b01c0542f75fbae58679aa5a6f7c922b3af8cc1303c60ea1189a3",
+    "bytes": 773839
   },
   "state": {
     "detail": "read",

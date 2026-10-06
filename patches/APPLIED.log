@@ -886,3 +886,186 @@
 2026-10-06 13:52 | P58c_app_tamper.py | P58c-04 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | self-check
 2026-10-06 13:52 | P58c_app_tamper.py | P58c-05 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | banner
 2026-10-06 13:52 | P58d_app_text.py | P58d-01 | demo_app/app.py | 9875be97e82c -> 8d4723f192b5 | M2
+2026-10-06 14:24 | P59_jf_tracked.py | P59-01 | Front_Matter_v1.md | 2dfe9ac6be56 -> d9a8c906ed41 | João 6 Oct tracked change [2]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-02 | Front_Matter_v1.md | 2dfe9ac6be56 -> d9a8c906ed41 | João 6 Oct tracked change [2]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-03 | Front_Matter_v1.md | 2dfe9ac6be56 -> d9a8c906ed41 | João 6 Oct tracked change [3]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-04 | Front_Matter_v1.md | 2dfe9ac6be56 -> d9a8c906ed41 | João 6 Oct tracked change [3]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-05 | Chapter1_Introduction_v2.md | 62b4d3428892 -> e7b41c033060 | João 6 Oct tracked change [6]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-06 | Chapter1_Introduction_v2.md | 62b4d3428892 -> e7b41c033060 | João 6 Oct tracked change [6]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-07 | Chapter1_Introduction_v2.md | 62b4d3428892 -> e7b41c033060 | João 6 Oct tracked change [7]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-08 | Chapter1_Introduction_v2.md | 62b4d3428892 -> e7b41c033060 | João 6 Oct tracked change [7]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-09 | Chapter1_Introduction_v2.md | 62b4d3428892 -> e7b41c033060 | João 6 Oct tracked change [10]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-10 | Chapter1_Introduction_v2.md | 62b4d3428892 -> e7b41c033060 | João 6 Oct tracked change [10]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-11 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [11]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-12 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [11]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-13 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [12]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-14 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [12]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-15 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [12]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-16 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [12]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-17 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [13]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-18 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [14]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-19 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [14]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-20 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [15]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-21 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [16]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-22 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [16]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-23 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [17]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-24 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [18]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-25 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [18]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-26 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [18]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-27 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [19]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-28 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [19]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-29 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [19]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-30 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [20]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-31 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [21]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-32 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [22]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-33 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [22]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-34 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [23]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-35 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [23]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-36 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [24]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-37 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [25]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-38 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [26]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-39 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [26]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-40 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [26]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-41 | Chapter2_LitReview_v2_FINAL.md | b14a98768835 -> 211db1a39af4 | João 6 Oct tracked change [26]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-42 | Chapter3_Methodology_v1.md | 6525ec477bc2 -> 8f1d684680e6 | João 6 Oct tracked change [29]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-43 | Chapter3_Methodology_v1.md | 6525ec477bc2 -> 8f1d684680e6 | João 6 Oct tracked change [29]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-44 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [30]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-45 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [31]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-46 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [32]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-47 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [33]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-48 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [36]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-49 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [37]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-50 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [37]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-51 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [38]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-52 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [38]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-53 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [38]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-54 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [38]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-55 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [39]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-56 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [39]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-57 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-58 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-59 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-60 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-61 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-62 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-63 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-64 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-65 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [40]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-66 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [41]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-67 | Chapter4_TRF_Model_v1.md | bf2cb06ee14b -> 2a16ade1982c | João 6 Oct tracked change [42]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-68 | Chapter5_Demonstration_v1.md | 926715bcfca2 -> 66b29352778f | João 6 Oct tracked change [45]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-69 | Chapter5_Demonstration_v1.md | 926715bcfca2 -> 66b29352778f | João 6 Oct tracked change [46]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-70 | Chapter5_Demonstration_v1.md | 926715bcfca2 -> 66b29352778f | João 6 Oct tracked change [46]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-71 | Chapter5_Demonstration_v1.md | 926715bcfca2 -> 66b29352778f | João 6 Oct tracked change [47]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-72 | Chapter6_Discussion_v1.md | 48aac88da0d8 -> 62cef1406cb0 | João 6 Oct tracked change [48]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-73 | Chapter6_Discussion_v1.md | 48aac88da0d8 -> 62cef1406cb0 | João 6 Oct tracked change [49]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-74 | Chapter6_Discussion_v1.md | 48aac88da0d8 -> 62cef1406cb0 | João 6 Oct tracked change [50]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-75 | Chapter6_Discussion_v1.md | 48aac88da0d8 -> 62cef1406cb0 | João 6 Oct tracked change [50]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-76 | Chapter6_Discussion_v1.md | 48aac88da0d8 -> 62cef1406cb0 | João 6 Oct tracked change [50]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-77 | Chapter7_Conclusion_v1.md | 4d9452ec7084 -> 643c9298e5e9 | João 6 Oct tracked change [53]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-78 | code_artefacts/README_Appendix_A.md | 3da5df7c43a4 -> 2ffaa2f4b17e | João 6 Oct tracked change [62]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-79 | code_artefacts/README_Appendix_A.md | 3da5df7c43a4 -> 2ffaa2f4b17e | João 6 Oct tracked change [64]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-80 | code_artefacts/README_Appendix_A.md | 3da5df7c43a4 -> 2ffaa2f4b17e | João 6 Oct tracked change [64]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-81 | code_artefacts/README_Appendix_A.md | 3da5df7c43a4 -> 2ffaa2f4b17e | João 6 Oct tracked change [66]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-82 | code_artefacts/README_Appendix_A.md | 3da5df7c43a4 -> 2ffaa2f4b17e | João 6 Oct tracked change [66]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-83 | code_artefacts/README_Appendix_A.md | 3da5df7c43a4 -> 2ffaa2f4b17e | João 6 Oct tracked change [66]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-84 | Appendix_B_Search_Log.md | 535856d92083 -> 605e2475e836 | João 6 Oct tracked change [68]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-85 | Appendix_B_Search_Log.md | 535856d92083 -> 605e2475e836 | João 6 Oct tracked change [69]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-86 | Appendix_B_Search_Log.md | 535856d92083 -> 605e2475e836 | João 6 Oct tracked change [70]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-87 | Appendix_B_Search_Log.md | 535856d92083 -> 605e2475e836 | João 6 Oct tracked change [71]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-88 | Appendix_B_Search_Log.md | 535856d92083 -> 605e2475e836 | João 6 Oct tracked change [72]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-89 | Appendix_C_Evaluation_Instrument.md | 57d72bb62224 -> 0a0f02b10fe8 | João 6 Oct tracked change [74]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-90 | Appendix_C_Evaluation_Instrument.md | 57d72bb62224 -> 0a0f02b10fe8 | João 6 Oct tracked change [75]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-91 | Appendix_C_Evaluation_Instrument.md | 57d72bb62224 -> 0a0f02b10fe8 | João 6 Oct tracked change [77]
+2026-10-06 14:24 | P59_jf_tracked.py | P59-92 | Appendix_C_Evaluation_Instrument.md | 57d72bb62224 -> 0a0f02b10fe8 | João 6 Oct tracked change [77]
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-01 | Chapter1_Introduction_v2.md | e7b41c033060 -> 93ad80c40f40 | JF [8][9] RQ split
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-02 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | JF [27]
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-03 | Chapter3_Methodology_v1.md | 8f1d684680e6 -> d58e4b9f5618 | JF [28]
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-04 | Chapter3_Methodology_v1.md | 8f1d684680e6 -> d58e4b9f5618 | JF [57] ref
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-05 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | JF [55] ref
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-06 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | JF [56] ref
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-07 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | JF [58] ref
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-08 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C4: Rak limited to the abstract (full text paywalled, not read)
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-09 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | JF [35] (before Ciphertext so it precedes the uses of t_I there)
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-10 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C5: t_I with the third trigger
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-11 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C5
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-12 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C5 ground
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-13 | Front_Matter_v1.md | d9a8c906ed41 -> 887211072643 | C5 notation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-14 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | notation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-15 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | notation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-16 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | JF [41] with P58
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-17 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | P58
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-18 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | P58 implemented the subject-field commitment
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-19 | Chapter6_Discussion_v1.md | 62cef1406cb0 -> a152ab024ab9 | P58
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-20 | Chapter7_Conclusion_v1.md | 643c9298e5e9 -> 37ee73230ae4 | P58
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-21 | Chapter5_Demonstration_v1.md | 66b29352778f -> d0d46f6a7f82 | P58 / JF [47]
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-22 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | P58
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-23 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | P58
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-24 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-25 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C12: v2.0; two claims the guideline does not make removed
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-26 | Chapter1_Introduction_v2.md | e7b41c033060 -> 93ad80c40f40 | C12
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-27 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C12
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-28 | Chapter1_Introduction_v2.md | e7b41c033060 -> 93ad80c40f40 | C12 v2.0
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-29 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C12 v2.0
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-30 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C12 v2.0
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-31 | Chapter1_Introduction_v2.md | e7b41c033060 -> 93ad80c40f40 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-32 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-33 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-34 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-35 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-36 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-37 | Chapter4_TRF_Model_v1.md | 2a16ade1982c -> faeea70334b8 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-38 | Chapter6_Discussion_v1.md | 62cef1406cb0 -> a152ab024ab9 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-39 | Chapter6_Discussion_v1.md | 62cef1406cb0 -> a152ab024ab9 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-40 | Chapter7_Conclusion_v1.md | 643c9298e5e9 -> 37ee73230ae4 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-41 | Chapter7_Conclusion_v1.md | 643c9298e5e9 -> 37ee73230ae4 | C12 disambiguation
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-42 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C3: checked against helsedata.no 6 Oct
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-43 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C3
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-44 | Chapter2_LitReview_v2_FINAL.md | 211db1a39af4 -> 40d2d05c8f49 | C3 ref
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-45 | Chapter6_Discussion_v1.md | 62cef1406cb0 -> a152ab024ab9 | C16
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-46 | Chapter6_Discussion_v1.md | 62cef1406cb0 -> a152ab024ab9 | C16
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-47 | Chapter6_Discussion_v1.md | 62cef1406cb0 -> a152ab024ab9 | JF [51]
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-48 | Chapter7_Conclusion_v1.md | 643c9298e5e9 -> 37ee73230ae4 | C11
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-49 | Chapter5_Demonstration_v1.md | 66b29352778f -> d0d46f6a7f82 | C9
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-50 | Chapter5_Demonstration_v1.md | 66b29352778f -> d0d46f6a7f82 | C10
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-51 | Chapter5_Demonstration_v1.md | 66b29352778f -> d0d46f6a7f82 | C9 re-run
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-52 | Chapter5_Demonstration_v1.md | 66b29352778f -> d0d46f6a7f82 | C9
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-53 | Chapter5_Demonstration_v1.md | 66b29352778f -> d0d46f6a7f82 | C9
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-54 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | C9
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-55 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | C9
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-56 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | C10 pin
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-57 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | C10
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-58 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | date
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-59 | code_artefacts/README_Appendix_A.md | 2ffaa2f4b17e -> 5607ac4e6ef0 | JF [61]-[63]: row removed
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-60 | Appendix_B_Search_Log.md | 605e2475e836 -> d681a48301ed | C13
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-61 | Appendix_B_Search_Log.md | 605e2475e836 -> d681a48301ed | C13
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-62 | Appendix_B_Search_Log.md | 605e2475e836 -> d681a48301ed | C13
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-63 | Appendix_B_Search_Log.md | 605e2475e836 -> d681a48301ed | C14
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-64 | Appendix_B_Search_Log.md | 605e2475e836 -> d681a48301ed | C14
+2026-10-06 14:29 | P59b_jf_manual.py | P59b-65 | Appendix_C_Evaluation_Instrument.md | 0a0f02b10fe8 -> 9681e2f3e288 | C15
+2026-10-06 14:30 | P59c_a17.py | P59c-01 | code_artefacts/README_Appendix_A.md | 5607ac4e6ef0 -> c12e7a3fa63f | C9: one code version
+2026-10-06 14:30 | P59c_a17.py | P59c-B07 | code_artefacts/README_Appendix_A.md | 5607ac4e6ef0 -> c12e7a3fa63f | Appendix A A.17 synced to repro_package/results/synthea_comparison_full_cohort_rerun_2026-10-06.txt
+2026-10-06 14:30 | P59d_counts.py | P59d-01 | Chapter5_Demonstration_v1.md | d0d46f6a7f82 -> 994437170b1d | count
+2026-10-06 14:30 | P59d_counts.py | P59d-02 | Chapter5_Demonstration_v1.md | d0d46f6a7f82 -> 994437170b1d | count
+2026-10-06 14:30 | P59d_counts.py | P59d-03 | Chapter5_Demonstration_v1.md | d0d46f6a7f82 -> 994437170b1d | count
+2026-10-06 14:30 | P59d_counts.py | P59d-04 | Chapter5_Demonstration_v1.md | d0d46f6a7f82 -> 994437170b1d | count
+2026-10-06 14:30 | P59d_counts.py | P59d-05 | code_artefacts/README_Appendix_A.md | c12e7a3fa63f -> ecf1a95bae27 | count
+2026-10-06 14:30 | P59d_counts.py | P59d-06 | code_artefacts/README_Appendix_A.md | c12e7a3fa63f -> ecf1a95bae27 | count
+2026-10-06 14:30 | P59d_counts.py | P59d-07 | code_artefacts/README_Appendix_A.md | c12e7a3fa63f -> ecf1a95bae27 | count
+2026-10-06 14:30 | P59d_counts.py | P59d-08 | code_artefacts/README_Appendix_A.md | c12e7a3fa63f -> ecf1a95bae27 | count
+2026-10-06 14:32 | P59e_fig_caption.py | P59e-01 | Chapter4_TRF_Model_v1.md | faeea70334b8 -> 8c00183fb2a1 | C8
+2026-10-06 14:32 | P59f_app_diag.py | P59f-01 | demo_app/app.py | 8d4723f192b5 -> dbbf69751c4a | diagnosis
+2026-10-06 14:32 | P59g_counts.py | P59g-01 | Chapter5_Demonstration_v1.md | 994437170b1d -> 5a2e3dff4dfe | count
+2026-10-06 14:32 | P59g_counts.py | P59g-02 | code_artefacts/README_Appendix_A.md | ecf1a95bae27 -> f7160b622f49 | count
+2026-10-06 14:32 | P59g_counts.py | P59g-03 | code_artefacts/README_Appendix_A.md | ecf1a95bae27 -> f7160b622f49 | count
+2026-10-06 14:36 | P59h_fee_ref.py | P59h-01 | Chapter2_LitReview_v2_FINAL.md | 40d2d05c8f49 -> 25603f7b5291 | C3: page checked
+2026-10-06 14:46 | P59i_audit.py | P59i-01 | Chapter2_LitReview_v2_FINAL.md | 25603f7b5291 -> ad03c33ca445 | audit 9: strand order (remove)
+2026-10-06 14:46 | P59i_audit.py | P59i-02 | Chapter2_LitReview_v2_FINAL.md | 25603f7b5291 -> ad03c33ca445 | audit 9: strand order (insert before the third)
+2026-10-06 14:46 | P59i_audit.py | P59i-03 | Chapter4_TRF_Model_v1.md | 8c00183fb2a1 -> 7d334013617a | audit 1: JF [39] tail
+2026-10-06 14:46 | P59i_audit.py | P59i-04 | code_artefacts/README_Appendix_A.md | f7160b622f49 -> 2aee802213f9 | audit 2
+2026-10-06 14:46 | P59i_audit.py | P59i-05 | code_artefacts/README_Appendix_A.md | f7160b622f49 -> 2aee802213f9 | audit 3
+2026-10-06 14:46 | P59i_audit.py | P59i-06 | Front_Matter_v1.md | 887211072643 -> 01e80b1cb145 | audit 4
+2026-10-06 14:46 | P59i_audit.py | P59i-07 | Chapter5_Demonstration_v1.md | 5a2e3dff4dfe -> df27520fbef2 | audit 5
+2026-10-06 14:46 | P59i_audit.py | P59i-08 | code_artefacts/README_Appendix_A.md | f7160b622f49 -> 2aee802213f9 | audit 5
+2026-10-06 14:46 | P59i_audit.py | P59i-09 | Chapter4_TRF_Model_v1.md | 8c00183fb2a1 -> 7d334013617a | audit 6
+2026-10-06 14:47 | P59j_rq_para.py | P59j-01 | Chapter1_Introduction_v2.md | 93ad80c40f40 -> 3c392613cb2b | JF [9]

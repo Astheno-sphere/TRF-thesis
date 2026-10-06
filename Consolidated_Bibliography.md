@@ -41,6 +41,8 @@ Berngaard. (2024). *Ivaretar din teknologiske tjeneste kravet til innebygd perso
 
 Boneh, D., & Lipton, R. J. (1996). A revocable backup system. In *Proceedings of the 6th USENIX Security Symposium* (pp. 91–96). USENIX Association. https://www.usenix.org/legacy/publications/library/proceedings/sec96/boneh.html `[Ch2]`
 
+Bourtoule, L., Chandrasekaran, V., Choquette-Choo, C. A., Jia, H., Travers, A., Zhang, B., Lie, D., & Papernot, N. (2021). Machine unlearning. In *2021 IEEE Symposium on Security and Privacy (SP)* (pp. 141–159). IEEE. https://doi.org/10.1109/SP40001.2021.00019 `[Ch2]`
+
 Broadbent, A., & Islam, R. (2020). Quantum encryption with certified deletion. In *Theory of Cryptography (TCC 2020)* (LNCS 12552, pp. 92–122). Springer. https://doi.org/10.1007/978-3-030-64381-2_4 `[Ch2] [Ch6] [Ch7]`
 
 Brunner, S., Johannessen, A., García-Torres, J., Çatak, F. Ö., Meinich-Bache, Ø., Rettedal, S., & Engan, K. (2025). Consent-driven, semi-automated data collection during birth and newborn resuscitation: Insights from the NewbornTime study. *PLOS Digital Health*. https://doi.org/10.1371/journal.pdig.0000730 `[Ch2]`
@@ -48,6 +50,8 @@ Brunner, S., Johannessen, A., García-Torres, J., Çatak, F. Ö., Meinich-Bache,
 Bursuc, S., Gil-Pons, R., Mauw, S., & Trujillo-Rasua, R. (2024). *Software-based memory erasure with relaxed isolation requirements* (Extended version). arXiv. https://arxiv.org/abs/2401.06626 [Published version: 37th IEEE Computer Security Foundations Symposium (CSF 2024), Enschede, 8–12 July 2024] `[Ch2] [Ch6] [Ch7]`
 
 Camenisch, J., & Lysyanskaya, A. (2002). Dynamic accumulators and application to efficient revocation of anonymous credentials. In *Advances in Cryptology — CRYPTO 2002* (LNCS 2442, pp. 61–76). Springer. https://doi.org/10.1007/3-540-45708-9_5 `[Ch2] [Ch4]`
+
+Cao, Y., & Yang, J. (2015). Towards making systems forget with machine unlearning. In *2015 IEEE Symposium on Security and Privacy* (pp. 463–480). IEEE. https://doi.org/10.1109/SP.2015.35 `[Ch2]`
 
 Chakraborty, V., Kaminsky, Y., Mehrotra, S., Naumann, F., Nawab, F., Pappachan, P., Sadoghi, M., & Venkatasubramanian, N. (2025). Meaningful data erasure in the presence of dependencies. *Proceedings of the VLDB Endowment*, *18*(10), 3435–3448. https://doi.org/10.14778/3748191.3748206 `[Ch2]`
 
@@ -111,7 +115,9 @@ Groth, J. (2016). On the size of pairing-based non-interactive arguments. In *Ad
 
 Healthy Europe. (2026, 12 February). *EHDS progress report: Where does Europe's Health Data Space stand?* https://healthyeurope.eu/european-health-data-space/ `[Ch2]`
 
-Helsedataservice. (n.d.). *Fees and processing times*. helsedata.no. Retrieved 28 September 2026, from https://helsedata.no/en/fees-and-processing-times/ `[Ch2]`
+Helsedataservice. (n.d.-a). *Priser* [Prices]. helsedata.no. Retrieved 6 October 2026, from https://helsedata.no/no/priser/ `[Ch2]`
+
+Helsedataservice. (n.d.-b). *Vedtak hos Helsedataservice* [Decisions at Helsedataservice]. helsedata.no. Retrieved 6 October 2026, from https://helsedata.no/no/vedtak-hos-hds/ `[Ch2]`
 
 Helsedirektoratet. (n.d.). *Det europeiske helsedataområdet (EHDS)*. Norwegian Directorate of Health. Retrieved 28 September 2026, from https://www.helsedirektoratet.no/digitalisering-og-e-helse/det-europeiske-helsedataomradet-ehds `[Ch1] [Ch2]`
 
@@ -143,6 +149,8 @@ Laurie, B. (2014). Certificate transparency. *Communications of the ACM, 57*(10)
 
 Laurie, B., Langley, A., & Kasper, E. (2013). *Certificate Transparency* (RFC 6962). RFC Editor. https://doi.org/10.17487/RFC6962 `[Ch2] [Ch4] [Ch6]`
 
+March, S. T., & Smith, G. F. (1995). Design and natural science research on information technology. *Decision Support Systems*, *15*(4), 251–266. https://doi.org/10.1016/0167-9236(94)00041-2 `[Ch3]`
+
 Matheson. (2026). *EDPB publishes CEF report on the right to erasure* [Legal commentary]. Matheson LLP. https://www.matheson.com/insights/edpb-publishes-cef-report-on-the-right-to-erasure/ `[Ch2]`
 
 Merkle, R. C. (1988). A digital signature based on a conventional encryption function. In C. Pomerance (Ed.), *Advances in Cryptology — CRYPTO '87* (LNCS 293, pp. 369–378). Springer. https://doi.org/10.1007/3-540-48184-2_32 `[Ch2] [Ch4]`
@@ -166,6 +174,8 @@ Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A desig
 Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet [Consolidated text as last amended by LOV-2026-06-19-49, in force 1 October 2026; § 17 unamended; read 5 October 2026]. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16 `[Ch6]`
 
 Politou, E., Casino, F., Alepis, E., & Patsakis, C. (2021). Blockchain mutability: Challenges and proposed solutions. *IEEE Transactions on Emerging Topics in Computing, 9*(4), 1972–1986. https://doi.org/10.1109/TETC.2019.2949510 `[Ch2]`
+
+Rak, R. (2024). Anonymisation, pseudonymisation and secure processing environments relating to the secondary use of electronic health data in the European Health Data Space (EHDS). *European Journal of Risk Regulation*, *15*(4), 928–938. https://doi.org/10.1017/err.2024.67 `[Ch2]`
 
 Reardon, J., Basin, D., & Capkun, S. (2013). SoK: Secure data deletion. In *2013 IEEE Symposium on Security and Privacy* (pp. 301–315). IEEE. https://doi.org/10.1109/SP.2013.28 `[Ch2] [Ch6] [Ch7]`
 
@@ -195,9 +205,9 @@ Stortinget. (2025). *Innst. 71 L (2025–2026): Innstilling fra helse- og omsorg
 
 Sundhedsdatastyrelsen. (2026). *ehdsi* [Computer software; Danish NCPeH deployment of OpenNCP 9.1.0, commit 61094e6, 28 September 2026]. GitHub. https://github.com/Sundhedsdatastyrelsen/ehdsi `[Ch4]`
 
-TEHDAS2. (2025). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 1.5, final draft, 17 September 2025). TEHDAS2 Joint Action. https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf `[Ch1] [Ch2] [Ch4]`
+TEHDAS2. (2026a). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 2.0, final deliverable, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20199187 `[Ch1] [Ch2] [Ch4]`
 
-TEHDAS2. (2026). *Technical specification for Health Data Access Bodies on the implementation of secure processing environments* (D7.4, Version 1.2, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20266473 `[Ch2] [Ch4] [Ch6] [Ch7]`
+TEHDAS2. (2026b). *Technical specification for Health Data Access Bodies on the implementation of secure processing environments* (D7.4, Version 1.2, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20266473 `[Ch2] [Ch4] [Ch6] [Ch7]`
 
 VeritasChain. (2026, 18 January). *Crypto-shredding: The technical foundation for reconciling GDPR and financial record-keeping obligations* [Industry analysis, published under the name VeritasChain Standards Organization — a self-declared standards initiative founded 24 November 2025, operationally supported by VeritasChain Inc. and not accredited by any recognised standards body]. https://veritaschain.org/blog/posts/2026-01-18-crypto-shredding-gdpr-mifid-ii-reconciliation/ `[Ch2]`
 

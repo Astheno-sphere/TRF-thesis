@@ -1,5 +1,22 @@
 # Change trail
 
+## 6 October 2026 — João's review of 5 Oct draft (review4_JF_2026-10-06.docx): P59–P59g
+
+| ID | Change | Verification |
+|---|---|---|
+| P59-01 to P59-92 | His tracked changes, located word by word in the sources and applied verbatim (abstract and Sammendrag open with the one-year floor; Art 17(3)(c); EEA incorporation; NCPeH roles; Direktoratet for e-helse merger date; literature strands renumbered; Art 9(2) three-year binding value; Semantics I as de facto practice; opening handed to the patient or home NCP; Rival 4 bounded; §5.4 permits in their last six months; Appendix B/C wording) | Extraction `supervisor_review/review4_changes.txt`; inspector: losses declared (May 2023, A.2) |
+| P59b-01 to P59b-65 | His remaining changes placed by hand (RQ split, Table 2.1 cell, March & Smith 1995, four references, proactive invalidation paragraph, §6.9 logistics paragraph) and his comments: P(a) in notation and §4.7; 'not yet implemented' text adapted to P58; D6.3 cited at v2.0 (2026a; D7.4 now 2026b) with two claims the guideline does not make removed; Helsedataservice corrected against helsedata.no; Rak limited to the abstract (p. 928); §6.11 merged into §6.11 Summary; Datatilsynet enquiry sent; Table 5.7 on one code version (1,002 bytes; Synthea d9d07a6, -r 20260916); queries 12, 13, 17 restored from the session record; removed sources noted; R1 limitation | helsedata.no, Zenodo 10.5281/zenodo.20199187, Cambridge Core abstract read 6 Oct |
+| P59c-01 to P59c-01 | A.17 intro: re-run with final code and pinned cohort | appendix_sync |
+| P59c-B07 to P59c-B07 | A.17 listing synced to synthea_comparison_full_cohort_rerun_2026-10-06.txt | appendix_sync |
+| P59d-01 to P59d-08 | Line counts after P58: checker 551 (430 code lines), viewer 812 + 133 | wc -l |
+| P59e-01 to P59e-01 | Figure 4.1 caption for the redrawn figure (three triggers, opening holder, leaf contents) | Archify finalize pass; legend in thesis categories for both figures |
+| P59f-01 to P59f-01 | Viewer: on a mismatch, a table of which check failed and a stale-module warning (the live app showed 'does NOT match' after R-29: the cloud process kept the old trf_checker, which cannot see a changed link) | Local run: 'Matches the thesis' |
+| P59g-01 to P59g-03 | Viewer line count 825 | wc -l |
+| P59h-01 to P59h-01 | Fee reference re-pointed to helsedata.no/no/priser (read 6 Oct) | — |
+| P59i-01 to P59i-09 | Independent audit of the merge: JF [39] tail restored ('and its inclusion in the log; which payload … opening'); Appendix A three tamper tests; A.21 1,002; contents entries for Chapter 6 after the merge; P = ∞ noted in §5.6 and A.6; proof step 4 names the payload retention period; §2.4 strands in their stated order | Audit report (subagent, 6 Oct); Rak pinpoint p. 928 is the abstract page, full text not read |
+| P59j-01 to P59j-01 | JF [9]: the three requirements as their own paragraph | — |
+| B-52 | appendix_sync A.17 points at the 6 Oct re-run; Figures 4.1 and 5.1 redrawn (Archify, legend entries named for the thesis) | trail_check 13 |
+
 ## 5 October 2026 — review of 4 Oct (Google Doc v3): P47–P51, B-43, B-44
 
 | ID | Change | Verification |

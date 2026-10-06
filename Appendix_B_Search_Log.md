@@ -18,15 +18,15 @@ Some entries are document-retrieval or verification queries rather than discover
 9. `Norway MyHealth@EU national contact point eHealth go-live status 2025 2026`
 10. `Norway AI medical imaging research 2025 federated learning health data`
 11. `ZK-EHR zk-SNARK blockchain electronic health records MDPI Systems 2026`
-12. `MDPI Systems \`
-13. `KONFIDO project \`
+12. `MDPI Systems "14" "385" 2026 zero-knowledge health blockchain cross-institutional` [restored from the session record]
+13. `KONFIDO project "Health Informatics Journal" lessons learned patient summary exchange` [restored from the session record]
 14. `Helsedirektoratet EHDS European Health Data Space gap analysis Norway 2025`
 15. `OpenNCP github repository ehdsi.europa.eu source code documentation NCP gateway`
-16. `Norway AI Act implementation Nkom DigDir consultation 2025 h\u00f8ring Regulation 2024/1689`
+16. `Norway AI Act implementation Nkom DigDir consultation 2025 høring Regulation 2024/1689`
 
 ## Round 2: 29 May 2026 (verification and correction round)
 
-17. `SPUHiN \`
+17. `SPUHiN "minimum requirements" "secure processing environments" Norway 2024 helsedata` [restored from the session record]
 18. `EHDS implementation 2026 cross-border patient summary technical infrastructure Member State`
 19. `IHE ATNA Audit Trail Node Authentication integration profile retention requirement`
 20. `eHDSI MyHealth@EU audit log retention period years requirement`
@@ -45,10 +45,10 @@ Some entries are document-retrieval or verification queries rather than discover
 30. `formal model conflict audit log retention GDPR right to erasure constraint satisfaction`
 31. `formal verification regulatory compliance conflicting retention requirements temporal logic healthcare audit`
 32. `operations research optimization model data governance compliance reconciliation supply chain regulatory constraints`
-33. `thesis chapter 3 TRF model formal specification VERA-SNARK`
-34. `TRF model gate feasibility theorem crypto-erasure invalidation chapter 4`
-35. `Norge EHDS E\u00d8S gjennomf\u00f8ring helsedata juni 2026`
-36. `Google Drive read file content`
+33. `thesis chapter 3 TRF model formal specification VERA-SNARK [not a literature search: retrieval of the author’s own drafts]`
+34. `TRF model gate feasibility theorem crypto-erasure invalidation chapter 4 [not a literature search: retrieval of the author’s own drafts]`
+35. `Norge EHDS EØS gjennomføring helsedata juni 2026`
+36. `Google Drive read file content [not a literature search: retrieval of the author’s own drafts]`
 
 ## Round 4: 16 September 2026 (adversarial novelty, prior art, currency)
 
@@ -112,9 +112,9 @@ invented query strings would be worse than reporting none.
 | 72 | SPUHiN deliverable D5.2, public-hearing version | The consultation page has been withdrawn and returns 404. No stable locator established; the entry says so and cites the project page |
 | 73 | Deloitte Advokatfirma commentary, publication date | Published 24 August 2020. The citation's "n.d." was avoidable and was corrected |
 | 74 | Norsk forening for allmennmedisin consultation response | Retrieved. The citation read "analyserum"; the document reads "analyserom" |
-| 75 | Norwegian Maritime Authority 2023 amendment | The cited title was the regulations' name. The amending instrument is Circular RSR 2-2023 |
+| 75 | Norwegian Maritime Authority 2023 amendment | The cited title was the regulations' name. The amending instrument is Circular RSR 2-2023. Later removed from the bibliography with the seafarer material it supported, cut from Chapter 1 on 3 October 2026 |
 | 76 | EDPB documents 2026a and 2026b, official titles | Both titles corrected to the Board's own wording |
-| 77 | Remaining institutional and standards sources: Datatilsynet, Folkehelseinstituttet, Forskningsetikk, Helse- og omsorgsdepartementet, Stortinget, HL7 Norway, NORTRE, ICC, Berngaard, OneUptime, Healthy Europe, Ernst & Young, GDPR | Locators retrieved and matched against title, issuer and year |
+| 77 | Remaining institutional and standards sources: Datatilsynet, Folkehelseinstituttet, Forskningsetikk, Helse- og omsorgsdepartementet, Stortinget, HL7 Norway, NORTRE, ICC, Berngaard, OneUptime, Healthy Europe, Ernst & Young, GDPR | Locators retrieved and matched against title, issuer and year. Ernst & Young was later removed from the bibliography when the EHDS dates in Chapter 2, Section 2.2 were re-anchored on Article 105 of the Regulation (3 October 2026) |
 
 *Round 5 outcome: 68 entries with 41 locators became 67 entries with 67 locators. Two
 entries were removed as documents that do not exist as cited, and six citations were
