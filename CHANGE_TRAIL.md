@@ -15,6 +15,7 @@
 | P59h-01 to P59h-01 | Fee reference re-pointed to helsedata.no/no/priser (read 6 Oct) | — |
 | P59i-01 to P59i-09 | Independent audit of the merge: JF [39] tail restored ('and its inclusion in the log; which payload … opening'); Appendix A three tamper tests; A.21 1,002; contents entries for Chapter 6 after the merge; P = ∞ noted in §5.6 and A.6; proof step 4 names the payload retention period; §2.4 strands in their stated order | Audit report (subagent, 6 Oct); Rak pinpoint p. 928 is the abstract page, full text not read |
 | P59j-01 to P59j-01 | JF [9]: the three requirements as their own paragraph | — |
+| B-53 | Public repo R-30 pushed (viewer diagnostics, figures, Appendix A, README counts and three tamper tests); CHECKSUMS regenerated | trail_check --remote 12 |
 | B-52 | appendix_sync A.17 points at the 6 Oct re-run; Figures 4.1 and 5.1 redrawn (Archify, legend entries named for the thesis) | trail_check 13 |
 
 ## 5 October 2026 — review of 4 Oct (Google Doc v3): P47–P51, B-43, B-44
