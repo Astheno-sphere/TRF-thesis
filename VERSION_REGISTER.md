@@ -35,7 +35,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CODE | demo_app/crypto_envelope.py | e2191bdc0656 | 118 lines | 3 Oct | Optional: real AES-256-GCM envelope encryption of the lifecycle; pushed as 2b2dddb |
 | CODE | repro_package/run_all.sh | ceebe60edbca | 429 | 4 Oct 21:53 | Reproduces all four steps; self-verifies |
 | DATA | repro_package/data/synthea_subset/ | dir | 8 bundles + README | 28 Sep 06:29 | The only working-set copy of the eight untrimmed Synthea bundles. The second copy is on GitHub at the same path. The `repo_synthea_subset/` staging directory was removed on 28 Sept once the push completed; `code_artefacts/DATA_LOCATION.md` records where the data went |
-| SUPPORT | Data_Provenance_Statement.md | 36aeddac1f9c | 889 | 28 Sep 06:29 | Answer to Joao's data blocker; records the 28 Sep subset commit |
+| SUPPORT | Data_Provenance_Statement.md | 672daa32859b | 923 | 6 Oct 14:03 | Answer to Joao's data blocker; records the 28 Sep subset commit |
 | SUPPORT | thesis_yaml_header.yml | 4636c30b4882 | 47 | 29 Sep 12:35 | YAML: breezedark code, Word template hook |
 | SUPPORT | thesis_reference.docx | 2df421c0e4bd | A4, 12pt, 1.5 | 29 Sep 12:33 | Pandoc reference document: A4, 2.5 cm margins, Times New Roman 12 pt, 1.5 spacing, heading hierarchy, monospace code, no table shading or vertical rules |
 | SUPPORT | Substrate_ARTEFACT_PATCH_28Sept.xlsx | 1bca2c5e07cf | 6 tabs | 28 Sep 06:34 | Artefact-integrity patch for the substrate; uploaded to Drive alongside the master sheet |
@@ -55,8 +55,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 5e853540c00b | 18,460 | 6 Oct 13:59 | Every change with an ID, reason and verification. Synced with the repository copy |
-| CONTROL | CHECKSUMS.md | e6b065842627 | 264 | 5 Oct 15:39 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 00595572e199 | 18,546 | 6 Oct 14:03 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | d2fd1f2eff67 | 285 | 6 Oct 14:03 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
