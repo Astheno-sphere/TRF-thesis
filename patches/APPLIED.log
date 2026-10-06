@@ -859,3 +859,30 @@
 2026-10-05 15:29 | P57_app_viewer.py | P57-06 | Chapter5_Demonstration_v1.md | fe738fd3f9f3 -> 926715bcfca2 | counts
 2026-10-05 15:32 | P57b_app_code.py | P57b-01 | demo_app/app.py | 6379f2671244 -> 28b218f0f442 | viewer redesign (eight pages; presentation in ui.py)
 2026-10-05 15:32 | P57b_app_code.py | P57b-02 | demo_app/requirements.txt | b362ad3cdf66 -> c43ce2a550b5 | streamlit>=1.50 for width/height chart parameters
+2026-10-06 13:51 | P58_link_commitment.py | P58-01 | demo_app/trf_checker.py | feb283e8554e -> c838a68d7efa | header
+2026-10-06 13:51 | P58_link_commitment.py | P58-02 | demo_app/trf_checker.py | feb283e8554e -> c838a68d7efa | leaf carries c_subj
+2026-10-06 13:51 | P58_link_commitment.py | P58-03 | demo_app/trf_checker.py | feb283e8554e -> c838a68d7efa | integrity checks the link
+2026-10-06 13:51 | P58_link_commitment.py | P58-04 | demo_app/trf_checker.py | feb283e8554e -> c838a68d7efa | Record holds c_subj
+2026-10-06 13:51 | P58_link_commitment.py | P58-05 | demo_app/trf_checker.py | feb283e8554e -> c838a68d7efa | salt destroyed with the link
+2026-10-06 13:51 | P58_link_commitment.py | P58-06 | demo_app/trf_checker.py | feb283e8554e -> c838a68d7efa | third tamper test
+2026-10-06 13:51 | P58_link_commitment.py | P58-07 | repro_package/trf_checker.py | feb283e8554e -> c838a68d7efa | header
+2026-10-06 13:51 | P58_link_commitment.py | P58-08 | repro_package/trf_checker.py | feb283e8554e -> c838a68d7efa | leaf carries c_subj
+2026-10-06 13:51 | P58_link_commitment.py | P58-09 | repro_package/trf_checker.py | feb283e8554e -> c838a68d7efa | integrity checks the link
+2026-10-06 13:51 | P58_link_commitment.py | P58-10 | repro_package/trf_checker.py | feb283e8554e -> c838a68d7efa | Record holds c_subj
+2026-10-06 13:51 | P58_link_commitment.py | P58-11 | repro_package/trf_checker.py | feb283e8554e -> c838a68d7efa | salt destroyed with the link
+2026-10-06 13:51 | P58_link_commitment.py | P58-12 | repro_package/trf_checker.py | feb283e8554e -> c838a68d7efa | third tamper test
+2026-10-06 13:51 | P58_link_commitment.py | P58-13 | code_artefacts/trf_checker.py | feb283e8554e -> c838a68d7efa | header
+2026-10-06 13:51 | P58_link_commitment.py | P58-14 | code_artefacts/trf_checker.py | feb283e8554e -> c838a68d7efa | leaf carries c_subj
+2026-10-06 13:51 | P58_link_commitment.py | P58-15 | code_artefacts/trf_checker.py | feb283e8554e -> c838a68d7efa | integrity checks the link
+2026-10-06 13:51 | P58_link_commitment.py | P58-16 | code_artefacts/trf_checker.py | feb283e8554e -> c838a68d7efa | Record holds c_subj
+2026-10-06 13:51 | P58_link_commitment.py | P58-17 | code_artefacts/trf_checker.py | feb283e8554e -> c838a68d7efa | salt destroyed with the link
+2026-10-06 13:51 | P58_link_commitment.py | P58-18 | code_artefacts/trf_checker.py | feb283e8554e -> c838a68d7efa | third tamper test
+2026-10-06 13:52 | P58b_appendix_sync.py | P58b-B01 | code_artefacts/README_Appendix_A.md | 4b1f9b2d71a8 -> 3da5df7c43a4 | Appendix A A.10 synced to demo_app/trf_checker.py
+2026-10-06 13:52 | P58b_appendix_sync.py | P58b-B06 | code_artefacts/README_Appendix_A.md | 4b1f9b2d71a8 -> 3da5df7c43a4 | Appendix A A.16 synced to repro_package/results/trf_output.txt
+2026-10-06 13:52 | P58b_appendix_sync.py | P58b-B09 | code_artefacts/README_Appendix_A.md | 4b1f9b2d71a8 -> 3da5df7c43a4 | Appendix A A.18 synced to repro_package/results/expected_delta_witness_output.txt
+2026-10-06 13:52 | P58c_app_tamper.py | P58c-01 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | third tamper test
+2026-10-06 13:52 | P58c_app_tamper.py | P58c-02 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | metric
+2026-10-06 13:52 | P58c_app_tamper.py | P58c-03 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | console line
+2026-10-06 13:52 | P58c_app_tamper.py | P58c-04 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | self-check
+2026-10-06 13:52 | P58c_app_tamper.py | P58c-05 | demo_app/app.py | 28b218f0f442 -> 9875be97e82c | banner
+2026-10-06 13:52 | P58d_app_text.py | P58d-01 | demo_app/app.py | 9875be97e82c -> 8d4723f192b5 | M2
