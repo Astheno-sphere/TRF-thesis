@@ -26,7 +26,7 @@ The following are expected to change, and changing them would not constitute a d
 from the design:
 
 *Wording of the closed-response items.* The four dimensions and their anchor statements are
-reproduced as proposed in supervisory feedback, except item A1, reworded in October 2026 with the
+reproduced as proposed in supervisory feedback, except the term “erasure ceilings” in item U1, corrected to “deletion ceilings”, and item A1, reworded in October 2026 with the
 supervisor's agreement because the proposed wording ("full confidence that data was lawfully
 deleted") made a claim the thesis does not make (Chapter 6, Section 6.3).
 
@@ -146,7 +146,7 @@ Each dimension opens with the anchor statement proposed in supervisory feedback,
 
 | Item | Statement |
 |---|---|
-| U1 | *The key-invalidation mechanism effectively resolves the conflict between retention floors and erasure ceilings.* |
+| U1 | *The key-invalidation mechanism effectively resolves the conflict between retention floors and deletion ceilings.* |
 | U2 | The problem this mechanism addresses is one my institution will face in practice. |
 | U3 | The mechanism addresses the problem more effectively than the approach my institution currently uses or would default to. |
 | U4 | The distinction between plaintext verifiability and accountability-preserving verifiability is one I had not previously considered explicitly. |
@@ -166,7 +166,7 @@ Each dimension opens with the anchor statement proposed in supervisory feedback,
 |---|---|
 | O1 | *The proposed key registry structure is practical to implement within current Norwegian health data infrastructure (SPUHiN / NORTRE).* |
 | O2 | Per-record key granularity is operationally sustainable at the record volumes my institution handles. |
-| O3 | The mechanism requires nothing of the processing environment beyond what the finalised national criteria already demand. |
+| O3 | The mechanism requires nothing of the processing environment beyond what the national criteria (in the version put to hearing) already demand. |
 | O4 | Placing the mechanism at the audit-logging boundary, rather than inside the processing environment, is the right architectural choice. |
 
 ### Dimension 4: Audit integrity
@@ -195,6 +195,8 @@ A note on items A1 and A2. A1 asks about what the mechanism lets an auditor veri
 Closed responses would be reported as medians with full distributions rather than means, given ordinal data and a panel of eight; no inferential statistics would be computed, and none would be meaningful at this size. *Not able to judge* responses would be reported by item, since a concentration of them is itself a finding about which audiences can assess which dimensions.
 
 Open responses and interview transcripts would be analysed thematically following a coding frame derived from the three areas supervisory feedback identified (legal defensibility, key custody and trust assumptions, operational feasibility) with an open category for themes not anticipated. Coding by a single researcher would be stated as a limitation, as it is for the literature review in Chapter 2, Section 2.1.7.
+
+Item R1 is kept verbatim as the supervisor's anchor statement, although it asks about two standards at once, GDPR Article 17 and the EDPB guidelines. A respondent who accepts one and not the other cannot say so on the scale, so R1 would be read together with the open responses, and the double barrel would be stated as a limitation of the item.
 
 Integration into the thesis would follow the design science cycle rather than being appended to it:
 

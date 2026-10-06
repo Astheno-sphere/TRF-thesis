@@ -1,0 +1,7 @@
+# P59e — Figure 4.1 caption for the redrawn figure (João C8, M1–M3): three triggers, optional opening holder,
+# what the log leaves hold.
+EDITS=[dict(id='P59e-01',file='Chapter4_TRF_Model_v1.md',
+ old="Green arrows are writes at access time; purple dashed arrows are the two triggers; red dashed arrows are the destruction at the earlier of the erasure deadline and the deletion ceiling, which the invalidation entry then records in the registry and the log. The subject fields are removed only for patient-level Secure Processing Environment logs, at the ceiling. The Merkle log holds accessor fields, commitments and invalidation entries, never the payload or the subject fields.",
+ new="Green arrows are writes at access time. Purple dashed arrows are the three triggers (an erasure request, a permit expiry and, where the controller sets one, the payload retention period) and the optional hand-over of the opening to the patient or the home contact point. Red dashed arrows are the destruction at the earliest of the resulting deadlines, which the invalidation entry then records in the registry and the log. The subject fields and their salt are removed only for patient-level Secure Processing Environment logs, at the ceiling. The Merkle log's leaves hold the accessor fields, the payload commitment, a salted commitment to the subject fields and the invalidation entries, never the payload or the subject fields themselves.",
+ why="C8")]
+LOST_OK=[]

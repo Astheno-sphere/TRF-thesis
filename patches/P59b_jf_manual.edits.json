@@ -1,0 +1,522 @@
+[
+ {
+  "id": "P59b-01",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "under the European Health Data Space — specifically the tension between the audit-retention floors applying to the exchange, namely the ten-year minimum reported for IHE ATNA audit repositories under the eHDSI deployment baseline and the one-year minimum imposed on Secure Processing Environment access logs by Article 73(1)(e) EHDS, GDPR Article 17's right to erasure, and the six-month Secure Processing Environment deletion ceiling under Article 68(12) EHDS as operationalised by TEHDAS2 — while preserving audit integrity in a Norwegian implementation context?",
+  "new": "under the European Health Data Space, while preserving audit integrity in a Norwegian implementation context? The conflicting requirements are three: the audit-retention floors applying to the exchange (the one-year minimum imposed on Secure Processing Environment access logs by Article 73(1)(e) EHDS, and the ten-year minimum reported for IHE ATNA audit repositories under the eHDSI deployment baseline); GDPR Article 17's right to erasure; and the six-month deletion ceiling of Article 68(12) EHDS, as operationalised by TEHDAS2.",
+  "why": "JF [8][9] RQ split",
+  "count": 1
+ },
+ {
+  "id": "P59b-02",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "| **Cross-border** | **No — software only** |",
+  "new": "| **Cross-border** | **No mandatory hardware; HSM recommended for key custody** |",
+  "why": "JF [27]",
+  "count": 1
+ },
+ {
+  "id": "P59b-03",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "March and Smith's earlier typology",
+  "new": "March and Smith's (1995) earlier typology",
+  "why": "JF [28]",
+  "count": 1
+ },
+ {
+  "id": "P59b-04",
+  "file": "Chapter3_Methodology_v1.md",
+  "old": "\nHevner, A. R., March, S. T., Park, J., & Ram, S. (2004).",
+  "new": "\nMarch, S. T., & Smith, G. F. (1995). Design and natural science research on information technology. *Decision Support Systems*, *15*(4), 251–266. https://doi.org/10.1016/0167-9236(94)00041-2\n\nHevner, A. R., March, S. T., Park, J., & Ram, S. (2004).",
+  "why": "JF [57] ref",
+  "count": 1
+ },
+ {
+  "id": "P59b-05",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "\nBroadbent, A., & Islam, R.",
+  "new": "\nBourtoule, L., Chandrasekaran, V., Choquette-Choo, C. A., Jia, H., Travers, A., Zhang, B., Lie, D., & Papernot, N. (2021). Machine unlearning. In *2021 IEEE Symposium on Security and Privacy (SP)* (pp. 141–159). IEEE. https://doi.org/10.1109/SP40001.2021.00019\n\nBroadbent, A., & Islam, R.",
+  "why": "JF [55] ref",
+  "count": 1
+ },
+ {
+  "id": "P59b-06",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "\nCamenisch, J., & Lysyanska",
+  "new": "\nCao, Y., & Yang, J. (2015). Towards making systems forget with machine unlearning. In *2015 IEEE Symposium on Security and Privacy* (pp. 463–480). IEEE. https://doi.org/10.1109/SP.2015.35\n\nCamenisch, J., & Lysyanska",
+  "why": "JF [56] ref",
+  "count": 1
+ },
+ {
+  "id": "P59b-07",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "\nReardon, J., Basin, D., &",
+  "new": "\nRak, R. (2024). Anonymisation, pseudonymisation and secure processing environments relating to the secondary use of electronic health data in the European Health Data Space (EHDS). *European Journal of Risk Regulation*, *15*(4), 928–938. https://doi.org/10.1017/err.2024.67\n\nReardon, J., Basin, D., &",
+  "why": "JF [58] ref",
+  "count": 1
+ },
+ {
+  "id": "P59b-08",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Peer-reviewed commentary on the secondary-use provisions likewise treats the reach of “electronic health data” as unsettled (Rak, 2024).",
+  "new": "Peer-reviewed commentary on the secondary-use framework likewise finds the Regulation's definition of “electronic health data” ambiguously drafted, warning that this may produce inconsistent data-management practices (Rak, 2024, p. 928); it does not address the access-log question itself.",
+  "why": "C4: Rak limited to the abstract (full text paywalled, not read)",
+  "count": 1
+ },
+ {
+  "id": "P59b-09",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "*Ciphertext.* At $t^{I}(a)$",
+  "new": "*Proactive invalidation.* The necessity analysis of Section 4.2 means that the payload need not wait for a request. The specification therefore allows a payload retention period $P(a)$, set by the controller from the payload's own purpose, after which the payload is invalidated on the ground of Article 5(1)(c) and (e) GDPR. The invalidation month is then $t^{I}(a) = \\min(t_r(a) + \\delta,\\; t_\\pi(a) + 6,\\; t(a) + P(a))$, with $P(a) = \\infty$ where no period is set, as Section 4.7 defines it. Proposition 2's construction and proof are unchanged: C2 and C3 still hold because $t^{I}(a)$ can only move earlier, and C1 holds because nothing in its argument depends on which trigger fixed $t^{I}(a)$. The artefact runs with $P(a) = \\infty$, so every figure in Chapter 5 is the case without proactive invalidation.\n\n*Ciphertext.* At $t^{I}(a)$",
+  "why": "JF [35] (before Ciphertext so it precedes the uses of t_I there)",
+  "count": 1
+ },
+ {
+  "id": "P59b-10",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "t^{I}(a) = \\min\\big(\\, t_r(a) + \\delta,\\;\\; t_\\pi(a) + 6 \\,\\big)",
+  "new": "t^{I}(a) = \\min\\big(\\, t_r(a) + \\delta,\\;\\; t_\\pi(a) + 6,\\;\\; t(a) + P(a) \\,\\big)",
+  "why": "C5: t_I with the third trigger",
+  "count": 1
+ },
+ {
+  "id": "P59b-11",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "be the *invalidation month*, with the convention $\\min(\\infty, \\infty) = \\infty$.",
+  "new": "be the *invalidation month*, where $P(a)$ is the payload retention period of Section 4.8 ($P(a) = \\infty$ where none is set), with the convention that the minimum of infinite terms is $\\infty$.",
+  "why": "C5",
+  "count": 1
+ },
+ {
+  "id": "P59b-12",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "append to the audit trail an invalidation entry $\\iota(a)$ recording the month, the legal ground (Article 17(1) or Article 68(12) as applicable),",
+  "new": "append to the audit trail an invalidation entry $\\iota(a)$ recording the month, the legal ground (Article 17(1), Article 68(12), or Article 5(1)(c) and (e) where the payload retention period fixed the month),",
+  "why": "C5 ground",
+  "count": 1
+ },
+ {
+  "id": "P59b-13",
+  "file": "Front_Matter_v1.md",
+  "old": "| *t*ᴵ(*a*) | Invalidation month, min(*t*ᵣ + δ, *t*π + 6) |",
+  "new": "| *P*(*a*) | Payload retention period set by the controller (∞ if none; Section 4.8) |\n| *t*ᴵ(*a*) | Invalidation month, min(*t*ᵣ + δ, *t*π + 6, *t* + *P*) |",
+  "why": "C5 notation",
+  "count": 1
+ },
+ {
+  "id": "P59b-14",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "the audit store itself never holds one after tᴵ(a).",
+  "new": "the audit store itself never holds one after $t^{I}(a)$.",
+  "why": "notation",
+  "count": 1
+ },
+ {
+  "id": "P59b-15",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "which gives F(a) = 36 wherever",
+  "new": "which gives $F(a) = 36$ wherever",
+  "why": "notation",
+  "count": 1
+ },
+ {
+  "id": "P59b-16",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "Met in the artefact against alteration of an entry (both tamper tests fail $V^{II}$) |",
+  "new": "Met in the artefact against alteration of an entry or of the patient link (all three tamper tests fail $V^{II}$); a rewritten log is detected only with published roots and consistency proofs, specified and not implemented (§4.9) |",
+  "why": "JF [41] with P58",
+  "count": 1
+ },
+ {
+  "id": "P59b-17",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "($F = 12$; both tamper tests fail $V^{II}$)",
+  "new": "($F = 12$; all three tamper tests fail $V^{II}$)",
+  "why": "P58",
+  "count": 1
+ },
+ {
+  "id": "P59b-18",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "The terminal transition, the per-entry nonce, the subject-field commitment, proactive invalidation, consistency proofs",
+  "new": "The terminal transition, the per-entry nonce, proactive invalidation, consistency proofs",
+  "why": "P58 implemented the subject-field commitment",
+  "count": 1
+ },
+ {
+  "id": "P59b-19",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "from confirming guesses, the subject-field commitment that makes the patient link tamper-evident, proactive invalidation, or the consistency",
+  "new": "from confirming guesses, proactive invalidation, or the consistency",
+  "why": "P58",
+  "count": 1
+ },
+ {
+  "id": "P59b-20",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "the per-entry nonce, the subject-field commitment, proactive invalidation, consistency proofs",
+  "new": "the per-entry nonce, proactive invalidation, consistency proofs",
+  "why": "P58",
+  "count": 1
+ },
+ {
+  "id": "P59b-21",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail; restoring them makes it hold again (Appendix A, A.16). Altering the record’s subject link is not detected by the artefact as published, because its leaves do not yet carry the subject-field commitment that Chapter 4, Section 4.8 specifies.",
+  "new": "Altering one accessor field of record 100, or the legal ground of its invalidation entry, makes $V^{II}$ fail, and so does altering the patient link of a cross-border record that still holds it, record 3, because the link no longer opens the salted commitment its log leaf carries (Chapter 4, Section 4.8); restoring them makes it hold again (Appendix A, A.16). Before that commitment was added, a changed link went undetected, which is why the third test exists.",
+  "why": "P58 / JF [47]",
+  "count": 1
+ },
+ {
+  "id": "P59b-22",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "200 / 200 records verify; both tamper tests fail V_II",
+  "new": "200 / 200 records verify; all three tamper tests fail V_II",
+  "why": "P58",
+  "count": 1
+ },
+ {
+  "id": "P59b-23",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "the audit-log integrity check and both tamper tests of Section 5.7",
+  "new": "the audit-log integrity check and all three tamper tests of Section 5.7",
+  "why": "P58",
+  "count": 1
+ },
+ {
+  "id": "P59b-24",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "(TEHDAS2, 2025, 2026)",
+  "new": "(TEHDAS2, 2026a, 2026b)",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-25",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "The TEHDAS2 Joint Action's guideline for Health Data Access Bodies on procedures and formats for data access specifies a deletion deadline. Electronic health data must be deleted from a Secure Processing Environment within six months of the expiry of the data permit, under Article 68(12) of the European Health Data Space Regulation (TEHDAS2, 2025; European Parliament and Council of the European Union, 2025). This is a ceiling rather than a floor. After the six-month window, only anonymised analytical results may continue to exist outside the Secure Processing Environment, and the permitted data are not to remain within it. The same TEHDAS2 deliverable specifies a five-phase user journey for data access that ends in a deletion event marking the closure of the permitted processing.",
+  "new": "The TEHDAS2 Joint Action's guideline for Health Data Access Bodies on procedures and formats for data access carries the deletion deadline into its procedure: data are to be deleted from a Secure Processing Environment within six months of the expiry of the data permit, following Article 68(12) of the European Health Data Space Regulation (TEHDAS2, 2026a, Section 7.2; European Parliament and Council of the European Union, 2025). This is a ceiling rather than a floor.",
+  "why": "C12: v2.0; two claims the guideline does not make removed",
+  "count": 1
+ },
+ {
+  "id": "P59b-26",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "operationalising Article 68(12) of the EHDS Regulation (TEHDAS2, 2025).",
+  "new": "operationalising Article 68(12) of the EHDS Regulation (TEHDAS2, 2026a, Section 7.2).",
+  "why": "C12",
+  "count": 1
+ },
+ {
+  "id": "P59b-27",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "as operationalised by TEHDAS2 (2025).",
+  "new": "as operationalised by TEHDAS2 (2026a, Section 7.2).",
+  "why": "C12",
+  "count": 1
+ },
+ {
+  "id": "P59b-28",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "TEHDAS2. (2025). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 1.5, final draft, 17 September 2025). TEHDAS2 Joint Action. https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf",
+  "new": "TEHDAS2. (2026a). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 2.0, final deliverable, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20199187",
+  "why": "C12 v2.0",
+  "count": 1
+ },
+ {
+  "id": "P59b-29",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "TEHDAS2. (2025). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 1.5, final draft, 17 September 2025). TEHDAS2 Joint Action. https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf",
+  "new": "TEHDAS2. (2026a). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 2.0, final deliverable, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20199187",
+  "why": "C12 v2.0",
+  "count": 1
+ },
+ {
+  "id": "P59b-30",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "TEHDAS2. (2025). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 1.5, final draft, 17 September 2025). TEHDAS2 Joint Action. https://tehdas.eu/wp-content/uploads/2025/09/draft-guideline-for-health-data-access-bodies-on-the-procedures-and-formats-for-data-access.pdf",
+  "new": "TEHDAS2. (2026a). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 2.0, final deliverable, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20199187",
+  "why": "C12 v2.0",
+  "count": 1
+ },
+ {
+  "id": "P59b-31",
+  "file": "Chapter1_Introduction_v2.md",
+  "old": "TEHDAS2, 2026,",
+  "new": "TEHDAS2, 2026b,",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-32",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "TEHDAS2, 2026,",
+  "new": "TEHDAS2, 2026b,",
+  "why": "C12 disambiguation",
+  "count": 2
+ },
+ {
+  "id": "P59b-33",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "TEHDAS2, 2026)",
+  "new": "TEHDAS2, 2026b)",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-34",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "TEHDAS2. (2026). *Technical",
+  "new": "TEHDAS2. (2026b). *Technical",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-35",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "TEHDAS2, 2026,",
+  "new": "TEHDAS2, 2026b,",
+  "why": "C12 disambiguation",
+  "count": 6
+ },
+ {
+  "id": "P59b-36",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "TEHDAS2, 2026)",
+  "new": "TEHDAS2, 2026b)",
+  "why": "C12 disambiguation",
+  "count": 2
+ },
+ {
+  "id": "P59b-37",
+  "file": "Chapter4_TRF_Model_v1.md",
+  "old": "TEHDAS2. (2026). *Technical",
+  "new": "TEHDAS2. (2026b). *Technical",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-38",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "TEHDAS2, 2026,",
+  "new": "TEHDAS2, 2026b,",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-39",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "TEHDAS2. (2026). *Technical",
+  "new": "TEHDAS2. (2026b). *Technical",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-40",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "TEHDAS2, 2026,",
+  "new": "TEHDAS2, 2026b,",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-41",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "TEHDAS2. (2026). *Technical",
+  "new": "TEHDAS2. (2026b). *Technical",
+  "why": "C12 disambiguation",
+  "count": 1
+ },
+ {
+  "id": "P59b-42",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "Applications are submitted through the helsedata.no portal. For the registries within its authority Helsedataservice decides on access itself; for other sources it registers the application and forwards it to the relevant data custodian, such as the Norwegian Institute of Public Health, the Norwegian Directorate of Health, or the Cancer Registry, which decides. A two-stage cost structure mirrors this two-stage decision structure (Helsedataservice, n.d.).",
+  "new": "Helsedataservice is part of the Norwegian Institute of Public Health, to which it moved with the Directorate of e-health's health-data department on 1 January 2024. Applications are submitted through the helsedata.no portal. For the eleven registries within its authority, the Cancer Registry among them, Helsedataservice decides on access itself; in some cases the registry owners still decide, and applications for data on which the Directorate of Health decides go to the Directorate (Helsedataservice, n.d.-b). Costs follow the same division: Helsedataservice invoices applicants for case processing, and the registry owners invoice for preparing the data (Helsedataservice, n.d.-a, n.d.-b).",
+  "why": "C3: checked against helsedata.no 6 Oct",
+  "count": 1
+ },
+ {
+  "id": "P59b-43",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "\nHelsedataservice. (n.d.). *Fees and processing times*.",
+  "new": "\nHelsedataservice. (n.d.-a). *Fees and processing times*.",
+  "why": "C3",
+  "count": 1
+ },
+ {
+  "id": "P59b-44",
+  "file": "Chapter2_LitReview_v2_FINAL.md",
+  "old": "https://helsedata.no/en/fees-and-processing-times/\n",
+  "new": "https://helsedata.no/en/fees-and-processing-times/\n\nHelsedataservice. (n.d.-b). *Vedtak hos Helsedataservice* [Decisions at Helsedataservice]. helsedata.no. Retrieved 6 October 2026, from https://helsedata.no/no/vedtak-hos-hds/\n",
+  "why": "C3 ref",
+  "count": 1
+ },
+ {
+  "id": "P59b-45",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "## 6.11 Boundaries as Contribution\n\nThe limitations that bound the claim are stated once, in Chapter 3, Section 3.7, and engaged where they bite. None of them was claimed, so none of them reduces what was: a contribution that states its boundaries can be checked at them.\n\n## 6.12 Summary\n",
+  "new": "## 6.11 Summary\n",
+  "why": "C16",
+  "count": 1
+ },
+ {
+  "id": "P59b-46",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "Its demonstration is a witness rather than a proof, and its synthetic records are structurally genuine but not Norwegian.",
+  "new": "Its demonstration is a witness rather than a proof, and its synthetic records are structurally genuine but not Norwegian. These limitations are stated once, in Chapter 3, Section 3.7, and engaged where they bite; none of them was claimed, so none of them reduces what was, and a contribution that states its boundaries can be checked at them.",
+  "why": "C16",
+  "count": 1
+ },
+ {
+  "id": "P59b-47",
+  "file": "Chapter6_Discussion_v1.md",
+  "old": "is a problem this thesis creates rather than solves, and Chapter 7 treats it accordingly.\n",
+  "new": "is a problem this thesis creates rather than solves, and Chapter 7 treats it accordingly.\n\nFor the logistics discipline in which this thesis sits, the result carries over in a specific form. Any regulated consignment record held against a retention floor while a destruction or deletion duty runs from an external event, such as a release, a recall or the end of a contract, is a two-clock object of the kind Proposition 3 describes, and the diagnostic question of Section 6.10 applies to it unchanged. The customs case of Chapter 2, Section 2.7 keeps the two clocks apart by letting them act on different objects; the audit trail is the case in which they must be separated inside a single record.\n",
+  "why": "JF [51]",
+  "count": 1
+ },
+ {
+  "id": "P59b-48",
+  "file": "Chapter7_Conclusion_v1.md",
+  "old": "Either outcome is worth more than the present uncertainty, and neither requires further modelling to obtain.",
+  "new": "Either outcome is worth more than the present uncertainty, and neither requires further modelling to obtain. The enquiry to Datatilsynet on the GDPR-side questions has been sent, and its response is pending at the time of submission.",
+  "why": "C11",
+  "count": 1
+ },
+ {
+  "id": "P59b-49",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "executed under seed 20260915. The full-cohort comparison of Table 5.7 was recorded on 28 September with the code of that date; the committed-subset run (Appendix A, A.21) repeats it with the current code and gives the same figures.*",
+  "new": "executed under seed 20260915, with one code version throughout.*",
+  "why": "C9",
+  "count": 1
+ },
+ {
+  "id": "P59b-50",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "produced with `java -jar synthea.jar -s 20260915 -cs 20260915 -p 100` and yielding 98 usable bundles.",
+  "new": "produced with Synthea at commit `d9d07a6` (`java -jar synthea.jar -s 20260915 -cs 20260915 -r 20260916 -p 100`) and yielding 98 usable bundles.",
+  "why": "C10",
+  "count": 1
+ },
+ {
+  "id": "P59b-51",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "giving a mean payload of 1,006 bytes.",
+  "new": "giving a mean payload of 1,002 bytes.",
+  "why": "C9 re-run",
+  "count": 1
+ },
+ {
+  "id": "P59b-52",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "to 891 with the committed subset and to 1,006 with the full cohort, whose run was recorded before the constructed payloads were revised on 3 October 2026 and shows 35 bytes on the constructed side (Appendix A, A.17).",
+  "new": "to 891 with the committed subset and to 1,002 with the full cohort (Appendix A, A.17).",
+  "why": "C9",
+  "count": 1
+ },
+ {
+  "id": "P59b-53",
+  "file": "Chapter5_Demonstration_v1.md",
+  "old": "raises the mean payload to 891 bytes rather than 1,006,",
+  "new": "raises the mean payload to 891 bytes rather than 1,002,",
+  "why": "C9",
+  "count": 1
+ },
+ {
+  "id": "P59b-54",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "(to 1,006 with the full cohort, recorded on 28 September when the constructed payloads averaged 35 bytes; see A.17)",
+  "new": "(to 1,002 with the full cohort; see A.17)",
+  "why": "C9",
+  "count": 1
+ },
+ {
+  "id": "P59b-55",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "rather than the 1,006 bytes of the full cohort",
+  "new": "rather than the 1,002 bytes of the full cohort",
+  "why": "C9",
+  "count": 1
+ },
+ {
+  "id": "P59b-56",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "https://github.com/synthetichealth/synthea/releases/download/master-branch-latest/synthea-with-dependencies.jar\n```",
+  "new": "https://github.com/synthetichealth/synthea/releases/download/master-branch-latest/synthea-with-dependencies.jar\nunzip -p synthea.jar version.txt   # must print d9d07a6\nsha256sum synthea.jar              # 018ad7f04f7aacb995804d7d4781c76d5fc714f7f23257ba50daa9eefae224ac on 6 Oct 2026\n```\n\n`master-branch-latest` is a moving release. The cohort was generated with Synthea commit `d9d07a6eef91ee5144293b42ab64224d84d124f8`, the version every bundle records; if the jar's `version.txt` prints anything else, build that commit from source.",
+  "why": "C10 pin",
+  "count": 1
+ },
+ {
+  "id": "P59b-57",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "  -s 20260915 -cs 20260915 -p 100 \\\n  --exporter.fhir.export=true \\\n  --exporter.hospital.fhir.export=false \\\n  --exporter.practitioner.fhir.export=false \\\n  --generate.only_alive_patients=true\n```\n\n`-s` sets the population seed and `-cs` the clinician seed; both are fixed to the thesis seed so the cohort is reproducible.",
+  "new": "  -s 20260915 -cs 20260915 -r 20260916 -p 100 \\\n  --exporter.fhir.export=true \\\n  --exporter.hospital.fhir.export=false \\\n  --exporter.practitioner.fhir.export=false \\\n  --generate.only_alive_patients=true\n```\n\n`-s` sets the population seed and `-cs` the clinician seed; both are fixed to the thesis seed. `-r` fixes the reference date. Synthea anchors the simulated timeline to the clock time of the run, so a regeneration reproduces the patients and their clinical events but not byte-identical files: regenerated on 6 October 2026, seven of the eight committed patients reappeared with the same events and timestamps shifted by a constant time of day, and every measure of Table 5.7 was unchanged.",
+  "why": "C10",
+  "count": 1
+ },
+ {
+  "id": "P59b-58",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "*Artefact date:* 18 September 2026; revised 3–4 October 2026",
+  "new": "*Artefact date:* 18 September 2026; revised 3–6 October 2026",
+  "why": "date",
+  "count": 1
+ },
+ {
+  "id": "P59b-59",
+  "file": "code_artefacts/README_Appendix_A.md",
+  "old": "| `build_substrate_patch1.py`, `build_substrate_patch2.py` |  | — |\n",
+  "new": "",
+  "why": "JF [61]-[63]: row removed",
+  "count": 1
+ },
+ {
+  "id": "P59b-60",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "12. `MDPI Systems \\`",
+  "new": "12. `MDPI Systems \"14\" \"385\" 2026 zero-knowledge health blockchain cross-institutional` [restored from the session record]",
+  "why": "C13",
+  "count": 1
+ },
+ {
+  "id": "P59b-61",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "13. `KONFIDO project \\`",
+  "new": "13. `KONFIDO project \"Health Informatics Journal\" lessons learned patient summary exchange` [restored from the session record]",
+  "why": "C13",
+  "count": 1
+ },
+ {
+  "id": "P59b-62",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "17. `SPUHiN \\`",
+  "new": "17. `SPUHiN \"minimum requirements\" \"secure processing environments\" Norway 2024 helsedata` [restored from the session record]",
+  "why": "C13",
+  "count": 1
+ },
+ {
+  "id": "P59b-63",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "The amending instrument is Circular RSR 2-2023 |",
+  "new": "The amending instrument is Circular RSR 2-2023. Later removed from the bibliography with the seafarer material it supported, cut from Chapter 1 on 3 October 2026 |",
+  "why": "C14",
+  "count": 1
+ },
+ {
+  "id": "P59b-64",
+  "file": "Appendix_B_Search_Log.md",
+  "old": "Healthy Europe, Ernst & Young, GDPR | Locators retrieved and matched against title, issuer and year |",
+  "new": "Healthy Europe, Ernst & Young, GDPR | Locators retrieved and matched against title, issuer and year. Ernst & Young was later removed from the bibliography when the EHDS dates in Chapter 2, Section 2.2 were re-anchored on Article 105 of the Regulation (3 October 2026) |",
+  "why": "C14",
+  "count": 1
+ },
+ {
+  "id": "P59b-65",
+  "file": "Appendix_C_Evaluation_Instrument.md",
+  "old": "Integration into the thesis would follow the design science cycle rather than being appended to it:",
+  "new": "Item R1 is kept verbatim as the supervisor's anchor statement, although it asks about two standards at once, GDPR Article 17 and the EDPB guidelines. A respondent who accepts one and not the other cannot say so on the scale, so R1 would be read together with the open responses, and the double barrel would be stated as a limitation of the item.\n\nIntegration into the thesis would follow the design science cycle rather than being appended to it:",
+  "why": "C15",
+  "count": 1
+ }
+]

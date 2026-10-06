@@ -7,13 +7,13 @@
   "quality": "showcase",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/candidate.json",
-    "sha256": "3d47635b2e951a0006d788ba045248d77c8f2a46439fb977fabeb90e9e50013c",
-    "bytes": 4838
+    "sha256": "e25c780c7ba92e002d8ffd3f181cdf2ea92df703687655b6005b5e060ec85831",
+    "bytes": 5794
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
-    "sha256": "2839d432308097272e441397d1611ef0756faade7a7242a2784c3d4f4f16aa43",
-    "bytes": 769025
+    "sha256": "6482080d4279a900c711fdca74d19323db55f5b5881bf6ddcb02e354578e778b",
+    "bytes": 773580
   },
   "gates": {
     "validate": "pass",
@@ -44,5 +44,34 @@
     "reason": "cache-valid"
   },
   "visualReview": "not-requested",
-  "durationMs": 4190
+  "durationMs": 3398,
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "e15",
+            "from": "proactive",
+            "to": "scheduler",
+            "label": "t+P",
+            "collectionIndex": 14,
+            "artifactIndex": 15
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "proactive → scheduler needs 3 bends: move node proactive or scheduler so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
 }

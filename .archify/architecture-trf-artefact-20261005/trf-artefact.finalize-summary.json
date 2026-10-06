@@ -7,13 +7,13 @@
   "quality": "showcase",
   "specification": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/candidate.json",
-    "sha256": "9c0cd26f18c751c674e247de305571ac101e609f37995ad62b9c3615643a253e",
-    "bytes": 4660
+    "sha256": "6e54385504ddb447e385c5113afea26564e1adf68a8aa4eb26c86f68a0c0877b",
+    "bytes": 4971
   },
   "artifact": {
     "path": "/home/claude/thesis/.archify/architecture-trf-artefact-20261005/trf-artefact.html",
-    "sha256": "09d3d965b5be4189706324b9ae900de8b5f5cb2b86e727cd32efbd65ed3cd7f9",
-    "bytes": 773788
+    "sha256": "d6f7ce91242b01c0542f75fbae58679aa5a6f7c922b3af8cc1303c60ea1189a3",
+    "bytes": 773839
   },
   "gates": {
     "validate": "pass",
@@ -41,10 +41,10 @@
     "source": null,
     "noticeRequired": false,
     "noticeText": null,
-    "reason": "check-failed"
+    "reason": "cache-valid"
   },
   "visualReview": "not-requested",
-  "durationMs": 5397,
+  "durationMs": 3742,
   "visualReviewRecommendation": {
     "action": "inspect-route-readability",
     "signals": {
