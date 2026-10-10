@@ -42,20 +42,20 @@ This register lists the single live copy of every deliverable. If a file is not 
 | SUPPORT | Substrate_FINAL_PATCH.xlsx | b78d09fbc53c | 1,640 | 16 Sep 03:22 | Research substrate patch (supersedes 1/2/3/Master) |
 | SUPPORT | Supervisor_Feedback_Action_Plan.Rmd | e318cfab1ca8 | 2,003 | 21 Sep 05:10 | Response plan to first feedback round |
 
-| HANDOFF | HANDOFF_READ_FIRST.md | 9e354bece4a9 | 3,833 | 2 Oct 05:40 | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
+| HANDOFF | HANDOFF_READ_FIRST.md | aeb1e4e4c7f6 | 5,113 | 10 Oct 02:41 | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
 | CONTROL | SUPERVISOR_REVIEW_2026-09-30_Ferreira.md | 3924dc7b50d5 | 2,962 | 2 Oct 05:36 | Supervisor peer review, 30 Sept. THE LIVE WORK. Each major item verified against the files; sequencing note overrides his numbering |
 | CONTROL | PATCHES.md | 757487bd875a | 15,562c | 3 Oct 00:17 | The working patch list for Joao Round 3. Wave −1 (work done on the wrong base, queued for re-application), seven waves, three gating decisions, cascade map. Nothing of the supervisor review applied yet |
-| CONTROL | SUPERVISOR_FEEDBACK_HISTORY.md | b0052ac4a404 | 8,151c | 2 Oct 05:36 | Every supervisory round and what it changed. Patterns across rounds |
+| CONTROL | SUPERVISOR_FEEDBACK_HISTORY.md | b64f80c647f1 | 8,151c | 10 Oct 02:43 | Every supervisory round and what it changed. Patterns across rounds |
 | CONTROL | supervisor_review/supervisor_review_RAW_2026-09-30.txt | bb280bd623ae | 3,127 | 30 Sep | The review exactly as received, unedited, so nothing rests on my paraphrase |
 | CONTROL | DECISION_RECORD.md | 8cf90f861726 | 2,372 | 3 Oct 00:17 | Settled decisions with alternatives rejected; ten open decisions, O-01 blocking |
 | CONTROL | FAILURE_LEDGER.md | 586ab203f202 | 1,508 | 2 Oct 05:34 | Every failure mode and the rule from it; the five false trail entries |
 | CONTROL | NUANCES.md | 4102be608b9d | 1,255 | 2 Oct 05:35 | How Tiger works, standing rules, reversed decisions, false-positive errors |
-| CONTROL | CONVERSATION_LINEAGE.md | 22e003f72408 | 791 | 2 Oct 05:34 | Seven sessions mapped; this session's identifier for future reference |
-| CONTROL | RESUME_PROMPT.md | 1a4d89ee5530 | 501 | 2 Oct 23:48 | Paste-ready resume prompt with verification commands |
+| CONTROL | CONVERSATION_LINEAGE.md | ffd26f07fbb0 | 1,448 | 10 Oct 02:42 | Seven sessions mapped; this session's identifier for future reference |
+| CONTROL | RESUME_PROMPT.md | ba4f42bf96b2 | 262 | 10 Oct 02:43 | Paste-ready resume prompt with verification commands |
 | CONTROL | MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 9de5a451c889 | 19,073 | 6 Oct 14:52 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 07dd8304ccd5 | 19,132 | 10 Oct 02:43 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | a5b8ae387737 | 285 | 6 Oct 14:52 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | PATCH_QUEUE.md | 944e0052c9c4 | 2,409 | 2 Oct 05:35 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
@@ -69,7 +69,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | supervisor_review/review_email_text_2026-09-30.txt | 71a963f94788 | 3,112 | 2 Oct 05:34 | The emailed review text. His authority is this text |
 | HANDOFF | handoff_tools/patch.py | ee54315d88bc | — | 2 Oct 23:48 | All-or-nothing exact-match patcher; logs to patches/APPLIED.log |
 | HANDOFF | handoff_tools/verify_base.py | afbaedb3d18a | — | 2 Oct 23:45 | Chapters vs reviewed draft, prose line by line. Base: 0 differences |
-| CONTROL | REVIEW_TRACKER.md | b0302725634f | 40 items | 5 Oct 15:17 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
+| CONTROL | REVIEW_TRACKER.md | 315dfe0c3b7e | 40 items | 10 Oct 02:38 | Every item of the 30 Sept review with status, patch IDs and evidence. Read by trail_check.py |
 | CONTROL | TIGER_TASKS.md | c0733bbb21ea | 10 tasks | 4 Oct 21:55 | Tasks only Tiger can do, with links and exactly what to check |
 | SOURCE | sources/TEHDAS2_D7.4_v1.2_2026-02-24.md | 8f2d41343f50 | 3,344 lines | 3 Oct | TEHDAS2 D7.4 v1.2 full text (supplied by Tiger); source for P06, P22, P24 |
 | SOURCE | sources/UCC_Regulation_952_2013_OJ_text.md | 13165c25f8ce | 6,158 lines | 3 Oct | UCC OJ text (supplied by Tiger); source for P11 |

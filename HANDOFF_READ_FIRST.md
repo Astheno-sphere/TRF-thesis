@@ -1,12 +1,91 @@
 # HANDOFF — READ THIS FIRST
 
 **Project:** MSc thesis, *Verifiable Crypto-Erasure for Cross-Border Health Data Audit Trails under the European Health Data Space*
-**Author:** Arshad Akhtar Abbasia ("Tiger"), MSc Sustainable Energy Logistics, Høgskolen i Molde
-**Supervisor:** Prof. João Ferreira
+**Author:** Arshad Akhtar Abbasia ("Tiger"), MSc Sustainable Energy Logistics, Høgskolen i Molde · **Supervisor:** Prof. João Ferreira
 **Submission:** 14 November 2026 · **Defence:** first week of December 2026
-**Handoff written:** 21 September 2026. Rebuilt 30 September 2026 after the supervisor's review. **Rebased 2 October 2026 onto the draft the supervisor reviewed — read §00 first.**
+**This section written 10 October 2026** at the end of Claude Code session `ba27033e` (https://claude.ai/code/session_01NcQq1nsLTRuJVxEX8DbgE6). Older sections (§00 onward, from 21 Sept – 2 Oct) are kept below as history; where they conflict with §000, §000 wins.
 
 ---
+
+## 000. STATE ON 10 OCTOBER 2026
+
+### 000.1 Where everything is
+
+| Thing | Location / identifier | State |
+|---|---|---|
+| Thesis working repo | this folder, git branch `joao-base`, HEAD after commit "B-54" (see `handoff/2026-10-10/VERSION_LOG.md`) | Trail intact (`python3 handoff_tools/trail_check.py --full --remote`) |
+| Portable copy of the repo | `TRF_thesis_repo_2026-10-10.bundle` (git bundle, all branches and tags) and `TRF_thesis_workspace_2026-10-10.zip` | Delivered to Tiger 10 Oct; upload to the next chat |
+| Public artefact repo | github.com/Astheno-sphere/TRF, `main` at `169c99a` (R-30) | Matches `CHECKSUMS.md` (check 12 passes) |
+| Private thesis repo | github.com/Astheno-sphere/trf-thesis | **Still PUBLIC — nothing pushed. Do not push until Tiger makes it private** |
+| Live app | https://trfhimolde.streamlit.app/ | Runs the new `app.py` with the OLD `trf_checker` held in memory → Thesis run shows "patient link altered PASSES / does NOT match". **Fix: Tiger reboots the app (Manage app → ⋮ → Reboot)**. Two code fixes proposed, not done (§000.4) |
+| Latest delivered documents | `VERA-SNARK_Thesis_SUBMISSION.docx` (sha256 `2ded452d…`), `VERA-SNARK_Thesis_TRACKED_vs_5Oct.docx` (vs commit `1983c11`, the draft João reviewed 5–6 Oct) | No PDF yet — Tiger asked not to make one until the content is final |
+| João's latest review | `supervisor_review/review4_JF_2026-10-06.docx` (sha256 `e7239d40…`), extraction `review4_changes.txt`, compact diff `review4_compact.txt` | Merged (P59–P59j); tracker rows R4-* |
+| Transcripts | `conversation_history/` (all earlier chats + this session, readable `.md` and raw `.jsonl.gz`) | See `CONVERSATION_LINEAGE.md` |
+
+### 000.2 What the thesis is now (numbers to know)
+
+- Seven chapters + Appendices A (code/reproduction), B (search log), C (evaluation instrument). Body ≈ 48,800 words incl. chapter reference lists (Ch2 12.5k, Ch4 14.0k); submission with appendices ≈ 75,500; abstract 421 words.
+- Model: TRF Model; Propositions 1–4, Corollaries 1.1, 1.2 (conditional extension: broad reading of Art 68(12), patient-record granularity), 2.1–2.3. Semantics I (plaintext) vs Semantics II (accountability-preserving: V_II = m_acc ∧ c ∧ (α ∨ ι) ∧ (β ∨ ι_subj)).
+- Mechanism: Crypto-Erasure by Invalidation; t_I = min(t_r+δ, t_π+6, t+P(a)) — P(a) (proactive invalidation, João M3) **specified, not implemented** (artefact runs with P = ∞).
+- Artefact results (seed 20260915, 200 records): Sem I 95 violations / 90 records (37 cross-border, 53 SPE); 39 Corollary 1.2 witnesses; Sem II 0; 138 invalidated (52 Art 17, 86 Art 68(12)); 200/200 records verify; **three** tamper tests fail (actor, ground — record 100; patient link — record 3); Z3 bounded check 9/9 unsat; envelope encryption 138/138 refuse; Synthea full cohort mean payload **1,002 bytes** (re-run 6 Oct, Synthea commit d9d07a6, `-r 20260916`), subset 891.
+- Code: `trf_checker.py` 551 lines (430 code lines), `app.py` 825 + `ui.py` 133 (eight-page viewer), `z3_check.py` 153, `crypto_envelope.py` 118, `synthea_layer.py` 152, `norwegian_layer.py` 135, `cross_sector_check.py` 110.
+- Figures: 4.1 (mechanism, §4.8) and 5.1 (artefact modules, §5.2), drawn with Archify; sources `.archify/*/candidate.json`; render with `handoff_tools/render_figure.py`.
+- Citations: TEHDAS2 D6.3 v2.0 = **2026a** (Section 7.2, page unverified); D7.4 v1.2 = **2026b**. Helsedataservice (n.d.-a) Priser, (n.d.-b) Vedtak hos HDS. Rak (2024) abstract-only, p. 928.
+
+### 000.3 Open items (as of 10 Oct) — see REVIEW_TRACKER.md for the full list
+
+**Tiger's to answer or do**
+1. Datatilsynet enquiry **send date** (Ch7 says "sent; response pending" without a date) — R4-C11.
+2. Rak (2024): get the full text through HiMolde library, or keep the abstract-only sentence and tell João — R4-C4.
+3. TEHDAS2 D6.3 v2.0: open the PDF (Zenodo 10.5281/zenodo.20199187) and give the page of the "within six months … Article 68(12)" sentence in §7.2 — R4-C12.
+4. Reboot the Streamlit app.
+5. AI-use declaration confirmed with the coordinator; consider naming Archify — R4-C2, R3-AI.
+6. Helsedirektoratet reply on the ten-year floor (email sent 5 Oct) — R3-F10.
+7. Last, by Tiger's decision: length (abstract 421; programme limits), release tag + Zenodo DOI cited in A.1, logos — R4-C1, R4-C10, MIN-14, MIN-15, PRES-5, M4d, R3-RS.
+
+**Code (proposed, not done — waiting for Tiger's go)**
+- `app.py`: reload `trf_checker` at start of each run (prevents stale-module mismatch).
+- `trf_checker.py`/`app.py`: per-run audit log instead of the global `AUDIT_LOG` (race between concurrent sessions can make proofs fail spuriously; log grows without bound on a long-lived server; proof cost O(n)).
+- Optional: proactive invalidation as an optional run (`--proactive P`); third trigger in `z3_check.py`.
+
+**Text/consistency (small, known)**
+- `repro_package/README.md` line ~94 still says the full cohort is "deterministic and regenerable" (disproved 6 Oct); `repro_package/data/synthea_subset/README.md` line ~76 still says 1,006 for the full cohort.
+- No List of Figures; "Figure 4.1/5.1" not hyperlinked (build_docx captions() handles tables only); two Ch2 tables (search rounds, Boolean protocol) uncaptioned.
+- ~11 sentences > 60 words in Ch4/Ch6 (one introduced in §4.11 by P53-15, since split by P56-06 — re-check).
+- Before any PDF: open in Word, update all fields (contents now carry cached page numbers from a LibreOffice render; Word recomputes).
+
+### 000.4 How to resume in a new chat (exact)
+
+1. Upload: the git bundle (or the workspace zip), João's newest .docx, and paste `RESUME_PROMPT.md`.
+2. Restore: `git clone TRF_thesis_repo_2026-10-10.bundle thesis && cd thesis && git checkout joao-base` (or unzip the workspace).
+3. Verify before touching anything: `python3 handoff_tools/trail_check.py --full` → must end `TRAIL INTACT`. Compare `handoff/2026-10-10/CHECKSUMS_SHA256.txt` with `sha256sum -c` (see that file's header).
+4. Read in this order: this §000 → `handoff/2026-10-10/AUDIT_STATUS.md` → `REVIEW_TRACKER.md` (rows OPEN/PARTIAL) → `NUANCES.md` (working style) → `DECISION_RECORD.md` → `CONVERSATION_LINEAGE.md` (landmarks + chat links).
+5. For a new supervisor docx, follow §000.5.
+
+### 000.5 Procedure for João's next reviewed .docx (Round 5)
+
+1. Save it as `supervisor_review/review5_JF_<date>.docx`; record its sha256 in `CHANGE_TRAIL.md`.
+2. Establish which version he reviewed: compare a few of his OLD texts with `git log` commits (`git show <commit>:VERA-SNARK_Thesis_SUBMISSION.md | grep`). Round 4 reviewed commit `1983c11`. Build his tracked comparison later with `build_tracked.py --base <that commit>`.
+3. `python3 handoff_tools/extract_review.py supervisor_review/review5_….docx supervisor_review/review5_changes.txt` → read every COMMENT and OLD/NEW.
+4. `python3 handoff_tools/locate_edits.py supervisor_review/review5_changes.txt patches/P60_jf_tracked.edits.json` → rename IDs, delete artefacts, wrap as a frozen patch (copy `patches/P59_jf_tracked.py`), declare intended losses in LOST_OK, `--dry`, apply.
+5. Place the manual items and answer each comment in a second patch (pattern: `patches/P59b_jf_manual.py`). Code changes go through patches too (pattern: P58 for checker + copies; P57b frozen for whole-file app changes), then re-run `bash repro_package/run_all.sh`, copy reruns to recorded outputs, sync Appendix A with `appendix_sync.block_edits` (pattern: P58b/P59c).
+6. Add CHANGE_TRAIL rows (one per ID range; exact IDs), REVIEW_TRACKER rows R5-*, `assemble.py`, `trail_check.py`, commit with one line per patch starting `Pnn:` via `bash handoff_tools/commit.sh`.
+7. Independent audit by a fresh agent (prompt pattern in `handoff/2026-10-10/AUDIT_STATUS.md`), fix, rebuild `build_docx.py --pages` and `build_tracked.py --base <reviewed commit>`.
+8. Public repo: copy changed code/docs to /home/claude/trf (clone of Astheno-sphere/TRF), add `CHANGE_TRAIL.md` R-row, regenerate CHECKSUMS (script in this session's transcript; see VERSION_LOG), push, copy CHECKSUMS back, `trail_check --remote`.
+
+### 000.6 Rules that hold (do not relearn them)
+
+- Chapter text changes only through `handoff_tools/patch.py` (inspector refuses undeclared loss of citations, numbers, hedges). Never edit chapters by hand.
+- Commit only through `handoff_tools/commit.sh` (refuses unless TRAIL INTACT; adds the Co-Authored-By/Claude-Session trailers). Commit identity in the public repo: default `Claude <noreply@anthropic.com>`. Never put Tiger's e-mail in a commit, header or payload.
+- Every factual claim verified at the source before it enters the text; if a source cannot be read, narrow the claim and say so (Rak, D6.3 pages, Elhub spelling were handled this way).
+- Supervisor's tracked wording is applied verbatim unless it is factually superseded; adaptations are logged.
+- An independent agent audits each round before delivery.
+- Tiger's style: compressed, direct, no flattery; "don't waste tokens"; decide-and-flag when the cost of a wrong guess is low; ask when it is a judgement only he can make.
+- Do not push to `Astheno-sphere/trf-thesis` while it is public.
+
+---
+
+# HISTORY (21 Sept – 2 Oct sections, superseded where §000 differs)
 
 ## 00. STATE ON 2 OCTOBER 2026 — the base was reset
 

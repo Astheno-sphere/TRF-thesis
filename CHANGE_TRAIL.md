@@ -1,5 +1,11 @@
 # Change trail
 
+## 10 October 2026 — handoff package
+
+| ID | Change | Verification |
+|---|---|---|
+| B-54 | Handoff: HANDOFF_READ_FIRST §000 (state, open items, rules, Round 5 procedure); CONVERSATION_LINEAGE chat trail + landmarks; RESUME_PROMPT; SUPERVISOR_FEEDBACK_HISTORY rounds 3–4; REVIEW_TRACKER R4-* rows; handoff/2026-10-10/ (AUDIT_STATUS, VERSION_LOG, CHECKSUMS_SHA256); session transcripts exported to conversation_history/; tools extract_review.py, locate_edits.py, render_figure.py | trail_check; extract_review.py reproduces review4_changes.txt |
+
 ## 6 October 2026 — João's review of 5 Oct draft (review4_JF_2026-10-06.docx): P59–P59g
 
 | ID | Change | Verification |
