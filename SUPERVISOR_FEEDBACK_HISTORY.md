@@ -155,3 +155,11 @@ strongest signal in the document.
   times and one of those was a hook he asked for.
 - If M2 is resolved by Option A, tell him it converts his objection into a finding rather
   than defending the original position. He is a reviewer who rewards that.
+
+## Round 3 — 4 October 2026 (Google Doc v3, tracked changes + comments)
+
+Asked: patient link decision (Option A chosen: kept on the cross-border path under GDPR Art 17(3)(b) via EHDS Art 9(1)–(2)); payload defined by source (circularity); Corollary 2.3; Semantics I anchored in OpenNCP; independent check (Z3, 9/9); Art 17(3)(d)/Art 71; redactable/chameleon-hash literature; not-implemented items stated; Ch2 trimmed. Delivered P47–P52, B-43…B-46. Open after the round: ten-year floor source (e-mail to Helsedirektoratet sent 5 Oct), politiregisterloven check (closed 5 Oct), AI rules, programme fit (closed 5 Oct), length.
+
+## Round 4 — 6 October 2026 (edited .docx to Tiger's school e-mail; `supervisor_review/review4_JF_2026-10-06.docx`)
+
+The file's tracked changes are authored "Claude" (the reviewer used an assistant); treated as João's review. Asked: commitment opening may be handed to the patient/home NCP (M1); salted subject-field commitment in each log leaf, implement + third tamper test (M2); proactive invalidation P(a) (M3); Art 17(3)(c); ten-year figure flagged, Art 9(2) three years as binding alternative; abstract/Sammendrag open with the one-year floor; RQ split; Table 4.1 tamper status qualified; §6.9 logistics paragraph; §5.4 last-six-months structural point; corrections; four new references (March & Smith 1995, Cao & Yang 2015, Bourtoule et al. 2021, Rak 2024). Comments C0–C16 (see REVIEW_TRACKER R4-*). Delivered P58–P59j, B-50…B-53 on 6 Oct. Open: length/tag/Zenodo (end), AI declaration, Rak full text, D6.3 page, Datatilsynet date.

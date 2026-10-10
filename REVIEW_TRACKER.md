@@ -66,3 +66,25 @@ passage by passage when the patch for that passage is written.
 | R3-PRL | Verify politiregisterloven § 17 wording | CLOSED | P54-07 | Consolidated Lovdata text supplied by Tiger (5 Oct; last amended LOV-2026-06-19-49): § 17 wording identical to §6.10; no amendment note on § 17 |
 | R3-FIT | Programme fit beyond the customs analogy | CLOSED | P54-01, P54-02, P54-03, P54-04, P54-05, P54-06, P56-18, P56-19 | §2.7: CSCMP definition, perishable inventory (Nahmias, 1982), Elhub retention per data category; §1.5: IEA (2025) energy line, no saving claimed |
 | R3-AI | AI-use declaration matches HiMolde rules; defence preparation | OPEN |  | Tiger confirms (5 Oct) HiMolde permits AI use under ethical use; Declaration names tool, uses and author's responsibility. Defence preparation remains Tiger's |
+
+## Round 4 — João's review of 6 Oct 2026 (`supervisor_review/review4_JF_2026-10-06.docx`, extraction `review4_changes.txt`)
+
+| Item | What he asked | Status | Patches | Evidence / note |
+|---|---|---|---|---|
+| R4-TT | His tracked changes (77 marked paragraphs) | CLOSED | P59, P59b, P59i, P59j | 53 verbatim, rest adapted (P58 implemented the link commitment); audit 6 Oct |
+| R4-C1 | Length: abstract and main text against programme limits; cut repeated authority-problem restatements; Appendix A listings to a tagged release | OPEN |  | Deferred by Tiger to the end. Abstract now 421 words |
+| R4-C2 | AI-use declaration and Sources disclosure confirmed with the coordinator | OPEN |  | Tiger's. Declaration does not yet name Archify (diagram tool) |
+| R4-C3 | Helsedataservice sentence against helsedata.no | CLOSED | P59b, P59h | FHI since 1 Jan 2024; 11 registries incl. Cancer Registry; forwarding claim removed; two fees |
+| R4-C4 | Rak (2024) supports the sentence; pinpoint page | PARTIAL | P59b | Full text paywalled; sentence limited to the abstract (p. 928). Get PDF via HiMolde library |
+| R4-C5 | P(a) in the notation table; t_I with the third trigger in §4.7 | CLOSED | P59b, P59i | Notation, §4.7 formula, proof steps 2 and 4 |
+| R4-C6 | Proactive invalidation paragraph; report P as optional run if implemented | PARTIAL | P59b | Specified in §4.8; not implemented (artefact runs with P = ∞); Z3 does not encode the third trigger |
+| R4-C7 | Implement subject-field commitment, third tamper test, re-record outputs, update §5.7, Table 4.1, Fig 4.1, not-implemented lists | CLOSED | P58, P58b, P58c, P58d, P59b | Third test fails as required; outputs re-recorded |
+| R4-C8 | Regenerate Figure 5.1 (eight pages), thesis legend categories; Figure 4.1 with m_acc storage and link commitment | CLOSED | P59e | Archify finalize pass (B-50, B-52) |
+| R4-C9 | Re-run full-cohort Table 5.7 with final code; simplify notes | CLOSED | P59b, P59c | 1,002 bytes; six measures identical |
+| R4-C10 | Pin Synthea; record jar SHA-256; tag the repository release and cite it in A.1 | PARTIAL | P59b | Commit d9d07a6 and SHA-256 recorded. Release tag and A.1 citation pending (end, with Zenodo) |
+| R4-C11 | Datatilsynet enquiry: date and status | PARTIAL | P59b | "Sent; response pending" in Ch7. Send date needed from Tiger |
+| R4-C12 | Cite TEHDAS2 D6.3 v2.0; re-check quotes and pages | PARTIAL | P59b | v2.0 cited as 2026a, Section 7.2; two unsupported claims removed. Page number unverified (PDF not downloadable here) |
+| R4-C13 | Restore truncated queries 12, 13, 17 | CLOSED | P59b | Restored from the 22 May chat record, marked |
+| R4-C14 | Note removed sources (#75, EY in #77) | CLOSED | P59b | Reasons stated |
+| R4-C15 | Appendix C R1 double-barrelled | CLOSED | P59b | Kept verbatim, limitation in C.7 |
+| R4-C16 | Merge §6.11 into the Summary | CLOSED | P59b, P59i | Contents entries updated |
