@@ -1074,3 +1074,6 @@
 2026-10-11 01:44 | P60_reframe_rigor.py | P60-03 | Chapter4_TRF_Model_v1.md | 7d334013617a -> 8f17038b02c1 | Jo R5[12]/A1: Props 1 and 3 are near-immediate from definitions; weight is the legal analysis and mechanism
 2026-10-11 01:44 | P60_reframe_rigor.py | P60-04 | Front_Matter_v1.md | 01e80b1cb145 -> 663a8b47f10e | A1/A2: state plainly that the formal results are elementary and reading-independent; weight on legal + mechanism
 2026-10-11 01:50 | P61_prop4_premise.py | P61-01 | Chapter4_TRF_Model_v1.md | 8f17038b02c1 -> 9a4ce9b3bb82 | Jo R5[14]: elevate the legal premise into the proposition statement as an explicit assumption
+2026-10-11 02:11 | P62_rival4_crosscheck.py | P62-01 | Chapter4_TRF_Model_v1.md | 9a4ce9b3bb82 -> 600f60b12fb8 | Jo R5[13]: state the commitment's real value; concede near-equivalence of delete+logged-deletion for cross-border
+2026-10-11 02:11 | P62_rival4_crosscheck.py | P62-02 | Chapter5_Demonstration_v1.md | df27520fbef2 -> f8c10f1a05ac | Jo R5[15]: exhaustive search as sanity check, SMT carries robustness, independence rationale kept (E2)
+2026-10-11 02:12 | P63_module_count.py | P63-01 | Chapter5_Demonstration_v1.md | f8c10f1a05ac -> 665a4473c6a9 | Jo R5[17]: align the module count with the eight .py files of Table 5.1 / Appendix Table A.2
