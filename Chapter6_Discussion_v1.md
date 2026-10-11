@@ -110,7 +110,7 @@ This thesis is a Master's dissertation proposing a design, not a regulatory impa
 
 ## 6.9 Theoretical Implications
 
-Three contributions to the scholarly conversation follow from the work, each modest and each stated at its actual size.
+Three theoretical implications follow from the work, each modest and each stated at its actual size. They are implications of the four contributions set out in Chapter 7, Section 7.2, not a competing list.
 
 The first is the formalisation itself. Treating a retention conflict as a constraint-satisfaction problem over a single binary accessibility variable per record, and making the semantics of verifiability an explicit parameter of the model rather than an unexamined assumption, is a way of stating retention problems that appears not to have been used before in this domain. The general method of formalising legal compliance as satisfiability is established (Feng, Marsso, Sabetzadeh, & Chechik, 2023); its application here is what is new, and the applicability of the formulation beyond health data is an open question the thesis does not settle. The structure (one or more floors, a subject-triggered right, a ceiling) is not obviously specific to health. Section 6.10 tests that expectation against a statute outside health and returns a negative result which revises it: what matters is not that a floor and a ceiling coexist but where the ceiling is anchored.
 

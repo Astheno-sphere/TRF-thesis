@@ -1069,3 +1069,7 @@
 2026-10-06 14:46 | P59i_audit.py | P59i-08 | code_artefacts/README_Appendix_A.md | f7160b622f49 -> 2aee802213f9 | audit 5
 2026-10-06 14:46 | P59i_audit.py | P59i-09 | Chapter4_TRF_Model_v1.md | 8c00183fb2a1 -> 7d334013617a | audit 6
 2026-10-06 14:47 | P59j_rq_para.py | P59j-01 | Chapter1_Introduction_v2.md | 93ad80c40f40 -> 3c392613cb2b | JF [9]
+2026-10-11 01:44 | P60_reframe_rigor.py | P60-01 | Chapter4_TRF_Model_v1.md | 7d334013617a -> 8f17038b02c1 | Jo R5[11]: state the second-disjunct assumption or the t(a) edge case
+2026-10-11 01:44 | P60_reframe_rigor.py | P60-02 | Chapter6_Discussion_v1.md | a152ab024ab9 -> f7aadc397817 | Jo R5[3]/H-3: remove the 3-vs-4 count clash; label implications, cross-refer the four contributions
+2026-10-11 01:44 | P60_reframe_rigor.py | P60-03 | Chapter4_TRF_Model_v1.md | 7d334013617a -> 8f17038b02c1 | Jo R5[12]/A1: Props 1 and 3 are near-immediate from definitions; weight is the legal analysis and mechanism
+2026-10-11 01:44 | P60_reframe_rigor.py | P60-04 | Front_Matter_v1.md | 01e80b1cb145 -> 663a8b47f10e | A1/A2: state plainly that the formal results are elementary and reading-independent; weight on legal + mechanism
