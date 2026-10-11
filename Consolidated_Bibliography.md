@@ -141,8 +141,6 @@ IHE International. (2024). *IT Infrastructure (ITI) Technical Framework, Volume 
 
 International Chamber of Commerce. (2025). *Data flows in supply chains: Practical realities and policy implications*. ICC. https://iccwbo.org/news-publications/policies-reports/data-flows-in-supply-chains-practical-realities-and-policy-implications/ `[Ch2]`
 
-International Energy Agency. (2025). *Energy and AI* [Executive summary]. IEA. Retrieved 5 October 2026, from https://www.iea.org/reports/energy-and-ai/executive-summary `[Ch1]`
-
 Johnson, R., Molnar, D., Song, D., & Wagner, D. (2002). Homomorphic signature schemes. In B. Preneel (Ed.), *Topics in Cryptology – CT-RSA 2002* (LNCS 2271, pp. 244–262). Springer. https://doi.org/10.1007/3-540-45760-7_17 `[Ch2]`
 
 Krawczyk, H., & Rabin, T. (1998). *Chameleon hashing and signatures* (Cryptology ePrint Archive, Paper 1998/010; full version of the NDSS 2000 paper). https://eprint.iacr.org/1998/010 `[Ch2]`
