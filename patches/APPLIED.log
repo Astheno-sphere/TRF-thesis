@@ -1097,3 +1097,7 @@
 2026-10-11 02:50 | P66_controller_accessor.py | P66-02 | Chapter4_TRF_Model_v1.md | a28f072a6369 -> 2001e963101f | bibliography entry for 2019/1765 (Ch4 list; assemble propagates to consolidated)
 2026-10-11 02:56 | P67_drop_iea.py | P67-01 | Chapter1_Introduction_v2.md | 3c392613cb2b -> 88778f91df01 | Jo R5[5]: drop the defensive IEA quote, keep the scope disclaimer and the information-logistics framing
 2026-10-11 02:56 | P67_drop_iea.py | P67-02 | Chapter1_Introduction_v2.md | 3c392613cb2b -> 88778f91df01 | Jo R5[5]: remove the now-uncited IEA reference
+2026-10-11 20:35 | P68_trim_ch1_a.py | P68-01 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | slop: unsupported superlative opener
+2026-10-11 20:35 | P68_trim_ch1_a.py | P68-02 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | editorial ranking removed (no downstream pointer)
+2026-10-11 20:35 | P68_trim_ch1_a.py | P68-03 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | intensifier
+2026-10-11 20:35 | P68_trim_ch1_a.py | P68-04 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | de-dup: the Art 73(1)(e) retention re-statement is cross-referenced to 1.1; Art 68(12)/TEHDAS2 kept (preservation agent catch)

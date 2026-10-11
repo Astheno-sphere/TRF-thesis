@@ -92,15 +92,32 @@ def line_safety(after_text):
             hits.append(f"L{i}: broken dash/colon pair (em-dash scar)")
     return hits
 
-def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md"):
+def floor_losses(A, B):
+    """Tokens that decreased A->B, in the same label form patch.py / LOST_OK use."""
+    lost = []
+    for lbl, ca, cb in [("citation", I.cites(A), I.cites(B)),
+                        ("number", I.numerals(A), I.numerals(B)),
+                        ("article", I.articles(A), I.articles(B))]:
+        for k, n in ca.items():
+            if cb.get(k, 0) < n: lost.append(f"{lbl} {k}")
+    ha, hb = I.hedges(A), I.hedges(B)
+    for k in ha:
+        if hb.get(k, 0) < ha[k]: lost.append(f"hedge {k}")
+    if I.refs_section(A) != I.refs_section(B): lost.append("reference list changed")
+    return lost
+
+def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md", lost_ok=None):
     A = pathlib.Path(before).read_text(encoding="utf-8")
     B = pathlib.Path(after).read_text(encoding="utf-8")
     ok = True; out = []
+    lost_ok = lost_ok or []
 
-    # 1. floor gate (reuse inspector)
-    floor = I.inspect(before, after, "floor")  # prints its own block; returns bool
+    # 1. floor gate (same measures as inspector.py / patch.py, honouring LOST_OK)
+    undeclared = [x for x in floor_losses(A, B) if x not in lost_ok]
+    floor = not undeclared
     if not floor: ok = False
-    out.append(f"  [{'PASS' if floor else 'FAIL'}] floor gate (claims/numbers/citations/articles/hedges/reflist)")
+    out.append(f"  [{'PASS' if floor else 'FAIL'}] floor gate (claims/numbers/citations/articles/hedges/reflist; LOST_OK honoured)")
+    for x in undeclared: out.append(f"         undeclared loss: {x}")
 
     # 2. defined-term floor
     da, db = defined_counts(A), defined_counts(B)
@@ -168,4 +185,5 @@ def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md"):
 
 if __name__ == "__main__":
     sub = sys.argv[3] if len(sys.argv) > 3 else "VERA-SNARK_Thesis_SUBMISSION.md"
-    sys.exit(0 if report(sys.argv[1], sys.argv[2], sub) else 1)
+    lost = sys.argv[4:]  # declared LOST_OK tokens, e.g. "article 68(12)" "number 68"
+    sys.exit(0 if report(sys.argv[1], sys.argv[2], sub, lost) else 1)
