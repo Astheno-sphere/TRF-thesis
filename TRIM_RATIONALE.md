@@ -109,3 +109,22 @@ Its MUST-FIX list is actioned before the chapter's patch is committed. A chapter
 6. Re-measure the running total. Stop when the band is reached with every protected element intact; do not cut further to chase a lower number.
 
 Order across the thesis, by earned budget (most padded first): Ch1 §1.1–1.2 and the collision restatements → Ch2 overlaps and the programme-fit duplication → the abstract/Sammendrag to 250–300 → light touches elsewhere. The proofs, §4.7, §6.2–6.3 and Ch7 are near-frozen.
+
+---
+
+## 9. Interconnectedness — the domino rule (the thesis is a web, not a stack)
+
+A trim in one chapter can break another it never opened: a cut behind a cross-referenced target strands its pointers; a cut to a *home* statement orphans every downstream site that relied on it; a cut to a definition breaks a term's use chapters later. The local inspectors and the per-chapter agent are structurally blind to this, so three mechanisms close it.
+
+**9.1 The dependency map.** `handoff_tools/concordance.py` generates `DEPENDENCY_MAP.md`: every cross-reference target and who points at it; every recurring claim with its **home** (first statement) and restatement sites; every defined term and where it lives. Regenerate it before each cutting session and read it before cutting a section. Rules it enforces:
+- **Never cut a home statement.** Only restatements are cuttable, and the map names which copy is the home. (E.g. the collision's home is Ch1; its restatements in Ch4/Ch7 are the candidates.)
+- **Before cutting content behind a cross-referenced target, consult its inbound list.** If pointers depend on it, either keep the content or update every pointer in the same patch.
+- A term or hedge that the map shows recurring is recurring *for a reason* (the conditionality must travel); recurrence is not licence to cut. "broad reading" appears seven times and is a protected hedge — frozen.
+
+**9.2 The global resolver.** After every section's trim, re-assemble the whole thesis and run `concordance.py --check`: every cross-reference in *every* file must still resolve, not just the trimmed file's. A newly dangling pointer anywhere fails the gate and blocks the commit. (It passed at 701/701 before the cut began; it must stay 701-clean or explain each delta.)
+
+**9.3 The agent runs globally, armed with the map (the "training").** The preservation agent is given `DEPENDENCY_MAP.md` and, for every cut, must trace the element to its dependents and confirm each still stands: the pointer's promise survives, the downstream argument stays motivated, the term keeps its definition somewhere. After a chapter's trim it runs a **whole-thesis ripple pass** — not a local read — reporting any downstream site left stranded or unmotivated by the cut. This is how the agent is trained for interconnectedness: the graph plus a ripple procedure plus global scope. Add to its brief, verbatim:
+
+> You are also given DEPENDENCY_MAP.md. For every cut, identify the element's home and its dependents. REJECT any cut that (9a) removes or guts a home statement; (9b) strands an inbound cross-reference (the target's promised content no longer there); (9c) removes a definition a later chapter relies on; (9d) leaves a downstream argument that assumed the cut text now unmotivated. Report the specific downstream file/section put at risk.
+
+**9.4 Commit per section, revertable.** Each section's cut is its own patch and commit, so a domino discovered two sections later is one revert away — never a tangled rollback.
