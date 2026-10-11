@@ -1091,3 +1091,7 @@
 2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-12 | Chapter5_Demonstration_v1.md | 665a4473c6a9 -> 86047e546ce3 | JF R5[34]/[7]
 2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-13 | code_artefacts/README_Appendix_A.md | 2aee802213f9 -> 0b46a0ab9afc | JF R5[40]: byte-identical overclaim corrected
 2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-14 | Front_Matter_v1.md | 663a8b47f10e -> 10f96d542c08 | JF R5[7]-[14]: notation rows for the symbols used in Ch4
+2026-10-11 02:43 | P65_datatilsynet_dates.py | P65-01 | Chapter7_Conclusion_v1.md | fc0135d91f67 -> 276d352ec94b | Jo R5[16]: send date supplied (23 Sep 2026); both enquiries unanswered at submission
+2026-10-11 02:43 | P65_datatilsynet_dates.py | P65-02 | Chapter2_LitReview_v2_FINAL.md | 91552e93ada7 -> 13c5f4e74aac | Jo R5[6]: anchor the staggered dates on Article 105 directly, not the news site
+2026-10-11 02:50 | P66_controller_accessor.py | P66-01 | Chapter4_TRF_Model_v1.md | a28f072a6369 -> 2001e963101f | Jo R5[9](1) accessor rights via Art 17(3)(b); (2) controller identified via Implementing Decision 2019/1765 Art 7
+2026-10-11 02:50 | P66_controller_accessor.py | P66-02 | Chapter4_TRF_Model_v1.md | a28f072a6369 -> 2001e963101f | bibliography entry for 2019/1765 (Ch4 list; assemble propagates to consolidated)

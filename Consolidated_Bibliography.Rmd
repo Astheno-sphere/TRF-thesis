@@ -98,6 +98,8 @@ eHealth Network. (2017). *Agreement between National Authorities or National Org
 
 Elhub. (2026). *Elhubs personvernerklæring* [Elhub's privacy statement; last updated 31 March 2026]. Elhub AS. Retrieved 5 October 2026, from https://elhub.no/personvern-og-sikkerhet/elhubs-personvernerklaering `[Ch2]`
 
+European Commission. (2019). *Commission Implementing Decision (EU) 2019/1765 of 22 October 2019 laying down the rules for the establishment, management and functioning of the network of national authorities responsible for eHealth, and repealing Implementing Decision (EU) 2015/1302*. Official Journal of the European Union, L 270, 83. http://data.europa.eu/eli/dec_impl/2019/1765/oj `[Ch4]`
+
 European Commission. (2025a). *European Health Data Space Regulation (EHDS)*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds_en `[Ch2]`
 
 European Commission. (2025b). *Electronic cross-border health services*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en `[Ch2]`
