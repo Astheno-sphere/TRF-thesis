@@ -1073,3 +1073,4 @@
 2026-10-11 01:44 | P60_reframe_rigor.py | P60-02 | Chapter6_Discussion_v1.md | a152ab024ab9 -> f7aadc397817 | Jo R5[3]/H-3: remove the 3-vs-4 count clash; label implications, cross-refer the four contributions
 2026-10-11 01:44 | P60_reframe_rigor.py | P60-03 | Chapter4_TRF_Model_v1.md | 7d334013617a -> 8f17038b02c1 | Jo R5[12]/A1: Props 1 and 3 are near-immediate from definitions; weight is the legal analysis and mechanism
 2026-10-11 01:44 | P60_reframe_rigor.py | P60-04 | Front_Matter_v1.md | 01e80b1cb145 -> 663a8b47f10e | A1/A2: state plainly that the formal results are elementary and reading-independent; weight on legal + mechanism
+2026-10-11 01:50 | P61_prop4_premise.py | P61-01 | Chapter4_TRF_Model_v1.md | 8f17038b02c1 -> 9a4ce9b3bb82 | Jo R5[14]: elevate the legal premise into the proposition statement as an explicit assumption
