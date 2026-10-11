@@ -1101,3 +1101,4 @@
 2026-10-11 20:35 | P68_trim_ch1_a.py | P68-02 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | editorial ranking removed (no downstream pointer)
 2026-10-11 20:35 | P68_trim_ch1_a.py | P68-03 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | intensifier
 2026-10-11 20:35 | P68_trim_ch1_a.py | P68-04 | Chapter1_Introduction_v2.md | 88778f91df01 -> 62cd04a52e10 | de-dup: the Art 73(1)(e) retention re-statement is cross-referenced to 1.1; Art 68(12)/TEHDAS2 kept (preservation agent catch)
+2026-10-11 20:53 | P69_trim_ch1_b.py | P69-01 | Chapter1_Introduction_v2.md | 62cd04a52e10 -> 718bc147f50e | de-dup: §1.3 re-derived the whole Ch4 model; compress to objective-level preview, Ch4 is the home

@@ -106,11 +106,12 @@ def floor_losses(A, B):
     if I.refs_section(A) != I.refs_section(B): lost.append("reference list changed")
     return lost
 
-def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md", lost_ok=None):
+def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md", lost_ok=None, defined_ok=None):
     A = pathlib.Path(before).read_text(encoding="utf-8")
     B = pathlib.Path(after).read_text(encoding="utf-8")
     ok = True; out = []
     lost_ok = lost_ok or []
+    defined_ok = defined_ok or []
 
     # 1. floor gate (same measures as inspector.py / patch.py, honouring LOST_OK)
     undeclared = [x for x in floor_losses(A, B) if x not in lost_ok]
@@ -119,12 +120,17 @@ def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md", lost_ok=
     out.append(f"  [{'PASS' if floor else 'FAIL'}] floor gate (claims/numbers/citations/articles/hedges/reflist; LOST_OK honoured)")
     for x in undeclared: out.append(f"         undeclared loss: {x}")
 
-    # 2. defined-term floor
+    # 2. defined-term floor. A drop is allowed only if declared in defined_ok (a term whose
+    # redundant MENTION was removed), never silently; the preservation agent is the backstop
+    # that a declared drop is redundancy-removal, not paraphrase into a synonym.
     da, db = defined_counts(A), defined_counts(B)
     dropped = {k: (da[k], db[k]) for k in da if db[k] < da[k]}
-    if dropped: ok = False
-    out.append(f"  [{'PASS' if not dropped else 'FAIL'}] defined terms not dropped")
-    for k, (x, y) in dropped.items(): out.append(f"         '{k}': {x} -> {y}")
+    undeclared_terms = {k: v for k, v in dropped.items() if k not in defined_ok}
+    if undeclared_terms: ok = False
+    out.append(f"  [{'PASS' if not undeclared_terms else 'FAIL'}] defined terms not dropped (undeclared)")
+    for k, (x, y) in undeclared_terms.items(): out.append(f"         UNDECLARED '{k}': {x} -> {y}")
+    for k, (x, y) in dropped.items():
+        if k in defined_ok: out.append(f"         [declared] '{k}': {x} -> {y} (mention removed, not paraphrased)")
 
     # 3. cross-reference resolver
     tgt = valid_targets(submission)
@@ -185,5 +191,9 @@ def report(before, after, submission="VERA-SNARK_Thesis_SUBMISSION.md", lost_ok=
 
 if __name__ == "__main__":
     sub = sys.argv[3] if len(sys.argv) > 3 else "VERA-SNARK_Thesis_SUBMISSION.md"
-    lost = sys.argv[4:]  # declared LOST_OK tokens, e.g. "article 68(12)" "number 68"
-    sys.exit(0 if report(sys.argv[1], sys.argv[2], sub, lost) else 1)
+    # argv[4:]: declared allowances. "term:<name>" -> defined_ok (a term mention removed, not
+    # paraphrased); everything else -> lost_ok, e.g. "article 68(12)" "number 68".
+    toks = sys.argv[4:]
+    defined = [t[5:] for t in toks if t.startswith("term:")]
+    lost = [t for t in toks if not t.startswith("term:")]
+    sys.exit(0 if report(sys.argv[1], sys.argv[2], sub, lost, defined) else 1)
