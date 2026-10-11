@@ -16,7 +16,7 @@ A subsidiary claim is made for Corollary 1.2: that, on the broad reading of Arti
 
 The checker is a single Python module of 551 lines including documentation, the independent cross-check and the audit-log integrity check, of which 430 are non-blank, non-comment lines and the constraint-evaluation logic proper occupies approximately one hundred. It depends only on the Python standard library: `hashlib` for commitments and the audit log, `json` for log entries, `random` for seeded generation, and `itertools` for the exhaustive cross-check. The checker uses no cryptographic library, no solver, and no zero-knowledge proof system, consistent with the scope commitments of Chapter 1, Section 1.5; the optional envelope-encryption module below is the only component that imports a cryptographic library.
 
-Six further modules accompany it, none of which alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
+Seven further modules accompany it, bringing the artefact to eight Python files in all; the eight-page viewer is split across `app.py` and `ui.py`, which Table 5.1 lists on a single row. None of the seven alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
 
 ![Figure 5.1. The artefact's modules and data path. Records enter from the generator or one of the optional layers, are invalidated on schedule, and are checked under both semantics; the optional cryptographic module and the bounded SMT check sit beside the checker and report separately.](figures/fig5_1_trf_artefact.png){width=6.3in}
 
@@ -109,7 +109,7 @@ The fifty per cent figure follows from the generator. The collision occurs when 
 
 ## 5.5 Independent Cross-Check
 
-A checker that implements the constraints incorrectly would produce violations that reflect the implementation rather than the model. To guard against this, the sandbox includes a second, separately written procedure that takes the constraint definitions directly. It searches exhaustively over every possible assignment of the accessibility variable across a fourteen-month horizon, 2¹⁴ = 16,384 assignments per case, and reports whether *any* assignment satisfies C1 under Semantics I together with C2 and C3.
+A checker that implements the constraints incorrectly would produce violations that reflect the implementation rather than the model. To guard against this, the sandbox includes a second, separately written procedure that takes the constraint definitions directly. It searches exhaustively over every possible assignment of the accessibility variable across a fourteen-month horizon, 2¹⁴ = 16,384 assignments per case, and reports whether *any* assignment satisfies C1 under Semantics I together with C2 and C3. Because every constraint is pointwise in time, enumerating all assignments is equivalent to checking each month in turn, so this search is best read as a sanity check rather than as independent evidential weight; the bounded SMT check described below carries the robustness argument. Its value is that it is written separately and shares no code with the main checker, so it can catch an implementation error that the checker and its own tests would share.
 
 *Table 5.4. Exhaustive search over $\alpha$ assignments (horizon = 14 months)*
 
