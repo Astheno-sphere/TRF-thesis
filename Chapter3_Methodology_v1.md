@@ -22,7 +22,7 @@ The Peffers et al. (2007) six-activity model structures the thesis and maps onto
 
 *Activity 4: Demonstration.* The model and mechanism are instantiated in a software sandbox operating over synthetic patient records, which exhibits the infeasibility result under plaintext semantics and the feasibility result under invalidation semantics. Chapter 5.
 
-*Activity 5, Evaluation.* The artefact is evaluated against the objectives of Activity 2 on three axes, internal consistency, external compatibility with verified infrastructure, and engagement with the principal counter-positions surfaced in Chapter 2. Chapters 5 and 6.
+*Activity 5: Evaluation.* The artefact is evaluated against the objectives of Activity 2 on three axes, internal consistency, external compatibility with verified infrastructure, and engagement with the principal counter-positions surfaced in Chapter 2. Chapters 5 and 6.
 
 *Activity 6: Communication.* The thesis itself. Chapters 6 and 7.
 
