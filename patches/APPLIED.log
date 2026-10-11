@@ -1077,3 +1077,17 @@
 2026-10-11 02:11 | P62_rival4_crosscheck.py | P62-01 | Chapter4_TRF_Model_v1.md | 9a4ce9b3bb82 -> 600f60b12fb8 | Jo R5[13]: state the commitment's real value; concede near-equivalence of delete+logged-deletion for cross-border
 2026-10-11 02:11 | P62_rival4_crosscheck.py | P62-02 | Chapter5_Demonstration_v1.md | df27520fbef2 -> f8c10f1a05ac | Jo R5[15]: exhaustive search as sanity check, SMT carries robustness, independence rationale kept (E2)
 2026-10-11 02:12 | P63_module_count.py | P63-01 | Chapter5_Demonstration_v1.md | f8c10f1a05ac -> 665a4473c6a9 | Jo R5[17]: align the module count with the eight .py files of Table 5.1 / Appendix Table A.2
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-01 | Front_Matter_v1.md | 663a8b47f10e -> 10f96d542c08 | JF R5[2]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-02 | Front_Matter_v1.md | 663a8b47f10e -> 10f96d542c08 | JF R5[4]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-03 | Chapter2_LitReview_v2_FINAL.md | ad03c33ca445 -> 91552e93ada7 | JF R5[18]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-04 | Chapter2_LitReview_v2_FINAL.md | ad03c33ca445 -> 91552e93ada7 | JF R5[19]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-05 | Chapter2_LitReview_v2_FINAL.md | ad03c33ca445 -> 91552e93ada7 | JF R5[20]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-06 | Chapter2_LitReview_v2_FINAL.md | ad03c33ca445 -> 91552e93ada7 | JF R5[21]: delete; renumbering point kept in 1.4
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-07 | Chapter2_LitReview_v2_FINAL.md | ad03c33ca445 -> 91552e93ada7 | JF R5[22]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-08 | Chapter3_Methodology_v1.md | d58e4b9f5618 -> ba6cb66e3cf2 | JF R5[23]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-09 | Chapter4_TRF_Model_v1.md | 600f60b12fb8 -> a28f072a6369 | JF R5[32]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-10 | Chapter7_Conclusion_v1.md | 37ee73230ae4 -> fc0135d91f67 | JF R5[37]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-11 | Chapter5_Demonstration_v1.md | 665a4473c6a9 -> 86047e546ce3 | JF R5[33]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-12 | Chapter5_Demonstration_v1.md | 665a4473c6a9 -> 86047e546ce3 | JF R5[34]/[7]
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-13 | code_artefacts/README_Appendix_A.md | 2aee802213f9 -> 0b46a0ab9afc | JF R5[40]: byte-identical overclaim corrected
+2026-10-11 02:37 | P64_jf_tracked_verbatim.py | P64-14 | Front_Matter_v1.md | 663a8b47f10e -> 10f96d542c08 | JF R5[7]-[14]: notation rows for the symbols used in Ch4
