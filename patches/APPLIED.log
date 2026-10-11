@@ -1095,3 +1095,5 @@
 2026-10-11 02:43 | P65_datatilsynet_dates.py | P65-02 | Chapter2_LitReview_v2_FINAL.md | 91552e93ada7 -> 13c5f4e74aac | Jo R5[6]: anchor the staggered dates on Article 105 directly, not the news site
 2026-10-11 02:50 | P66_controller_accessor.py | P66-01 | Chapter4_TRF_Model_v1.md | a28f072a6369 -> 2001e963101f | Jo R5[9](1) accessor rights via Art 17(3)(b); (2) controller identified via Implementing Decision 2019/1765 Art 7
 2026-10-11 02:50 | P66_controller_accessor.py | P66-02 | Chapter4_TRF_Model_v1.md | a28f072a6369 -> 2001e963101f | bibliography entry for 2019/1765 (Ch4 list; assemble propagates to consolidated)
+2026-10-11 02:56 | P67_drop_iea.py | P67-01 | Chapter1_Introduction_v2.md | 3c392613cb2b -> 88778f91df01 | Jo R5[5]: drop the defensive IEA quote, keep the scope disclaimer and the information-logistics framing
+2026-10-11 02:56 | P67_drop_iea.py | P67-02 | Chapter1_Introduction_v2.md | 3c392613cb2b -> 88778f91df01 | Jo R5[5]: remove the now-uncited IEA reference
