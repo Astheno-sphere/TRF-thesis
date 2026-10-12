@@ -447,18 +447,7 @@ Screening proceeded from query results through title and abstract assessment to 
 
 ### 2.1.6 Prospective Boolean protocol for replication
 
-The following strings are offered so that a researcher may test this review's conclusions against a systematic sweep of indexed databases. They were not the instrument used here, and are stated prospectively.
-
-| # | Target | String |
-|---|---|---|
-| B1 | Scopus, Web of Science | `TITLE-ABS-KEY(("crypto-shredding" OR "cryptographic erasure" OR "crypto erasure" OR "secure deletion" OR "data sanitization") AND ("GDPR" OR "right to erasure" OR "right to be forgotten"))` |
-| B2 | Scopus, IEEE Xplore | `TITLE-ABS-KEY(("audit log" OR "audit trail" OR "access log") AND ("retention" OR "retention period") AND ("erasure" OR "deletion") AND ("conflict" OR "tension" OR "reconcil*"))` |
-| B3 | Scopus, PubMed | `TITLE-ABS-KEY(("European Health Data Space" OR "EHDS" OR "MyHealth@EU" OR "eHDSI") AND ("secure processing environment" OR "audit" OR "retention" OR "erasure"))` |
-| B4 | Scopus, IEEE Xplore, ACM | `TITLE-ABS-KEY(("formal verification" OR "satisfiability" OR "temporal logic" OR "constraint satisfaction") AND ("regulatory compliance" OR "legal compliance" OR "GDPR"))` |
-| B5 | Scopus, Web of Science | `TITLE-ABS-KEY(("health data" OR "electronic health record") AND ("cross-border" OR "cross border") AND ("privacy" OR "data protection") AND ("Norway" OR "Nordic" OR "EEA"))` |
-| B6 | IACR ePrint, arXiv | `("certified deletion" OR "proof of secure erasure" OR "provable deletion") AND ("verifiab*" OR "attestation")` |
-
-Filters for replication: publication years 2018 to 2026 for B1, B2, B4 and B6; unrestricted for B3 and B5, since the relevant regulatory material predates the window. Document types: articles, conference papers, reviews, and preprints. Languages: English and Norwegian.
+A prospective Boolean protocol, offered so that a researcher may test this review's conclusions against a systematic sweep of indexed databases, is set out in Appendix B (Table B.1). It was not the instrument used here, and is stated prospectively.
 
 ### 2.1.7 Limitations of the protocol
 
@@ -3750,6 +3739,23 @@ The log records queries executed through the review's search tooling. Two catego
 Backward snowballing from reference lists supplied several sources, including the Camenisch and Lysyanskaya accumulator work and the Benaloh and de Mare original, which were reached from Ren's survey rather than by query.
 
 The closest prior art, the DePaul retention-and-purging programme and United States Patent 12,425,209, was located during the adversarial round 4 through patent-database searching, which sits outside the query tooling this log records. That search is noted here rather than omitted, because a log claiming completeness while containing no query capable of finding the most important prior-art item in the review would misrepresent itself.
+
+## Prospective Boolean protocol for replication
+
+The following strings are offered so that a researcher may test the review's conclusions (Chapter 2, Section 2.1.6) against a systematic sweep of indexed databases. They were not the instrument used in this thesis, and are stated prospectively.
+
+*Table B.1. Prospective Boolean search strings.*
+
+| # | Target | String |
+|---|---|---|
+| B1 | Scopus, Web of Science | `TITLE-ABS-KEY(("crypto-shredding" OR "cryptographic erasure" OR "crypto erasure" OR "secure deletion" OR "data sanitization") AND ("GDPR" OR "right to erasure" OR "right to be forgotten"))` |
+| B2 | Scopus, IEEE Xplore | `TITLE-ABS-KEY(("audit log" OR "audit trail" OR "access log") AND ("retention" OR "retention period") AND ("erasure" OR "deletion") AND ("conflict" OR "tension" OR "reconcil*"))` |
+| B3 | Scopus, PubMed | `TITLE-ABS-KEY(("European Health Data Space" OR "EHDS" OR "MyHealth@EU" OR "eHDSI") AND ("secure processing environment" OR "audit" OR "retention" OR "erasure"))` |
+| B4 | Scopus, IEEE Xplore, ACM | `TITLE-ABS-KEY(("formal verification" OR "satisfiability" OR "temporal logic" OR "constraint satisfaction") AND ("regulatory compliance" OR "legal compliance" OR "GDPR"))` |
+| B5 | Scopus, Web of Science | `TITLE-ABS-KEY(("health data" OR "electronic health record") AND ("cross-border" OR "cross border") AND ("privacy" OR "data protection") AND ("Norway" OR "Nordic" OR "EEA"))` |
+| B6 | IACR ePrint, arXiv | `("certified deletion" OR "proof of secure erasure" OR "provable deletion") AND ("verifiab*" OR "attestation")` |
+
+Filters for replication: publication years 2018 to 2026 for B1, B2, B4 and B6; unrestricted for B3 and B5, since the relevant regulatory material predates the window. Document types: articles, conference papers, reviews, and preprints. Languages: English and Norwegian.
 
 \pagebreak
 
