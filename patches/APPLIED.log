@@ -1105,3 +1105,5 @@
 2026-10-11 21:17 | P70_trim_ch2_a.py | P70-01 | Chapter2_LitReview_v2_FINAL.md | 13c5f4e74aac -> 56291198efe3 | scaffolding: compressed intro signpost (agent ADMIT)
 2026-10-11 21:36 | P71_trim_ch2_b.py | P71-01 | Chapter2_LitReview_v2_FINAL.md | 56291198efe3 -> 97ca390dd742 | de-dup: §2.10 opener re-derived the whole Ch4 model; compress to positioning + xref, Ch4/§2.3 are home
 2026-10-12 00:34 | P72_trim_ch2_c.py | P72-01 | Chapter2_LitReview_v2_FINAL.md | 97ca390dd742 -> 6a0f7c7e6a87 | de-dup: section-closing summary re-cited/re-named every system already discussed in §2.4; keep the three observations, drop the re-citation list (cites survive earlier) and TEHDAS2 close kept
+2026-10-12 00:59 | P73_trim_ch2_d.py | P73-01 | Chapter2_LitReview_v2_FINAL.md | 6a0f7c7e6a87 -> f964794e9fb4 | content cut: compress the six-step transmission narration to background essentials, keep eIDAS/ATNA/§2.3 hook
+2026-10-12 00:59 | P73_trim_ch2_d.py | P73-02 | Chapter2_LitReview_v2_FINAL.md | 6a0f7c7e6a87 -> f964794e9fb4 | content cut: compress primary-use calendar connective prose; keep all dates, Article 105, Article 19(1), both cites, category names
