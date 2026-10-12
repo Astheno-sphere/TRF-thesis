@@ -1110,3 +1110,5 @@
 2026-10-12 01:03 | P74_trim_ch2_e.py | P74-01 | Chapter2_LitReview_v2_FINAL.md | f964794e9fb4 -> 96cf3e96a9f1 | content cut: compress redaction-family survey, keep all cites + the opposite-route/§6.3 contrast
 2026-10-12 01:03 | P74_trim_ch2_e.py | P74-02 | Chapter2_LitReview_v2_FINAL.md | f964794e9fb4 -> 96cf3e96a9f1 | content cut: compress accumulator survey, keep all cites + the verifiable-membership machinery claim
 2026-10-12 01:03 | P74_trim_ch2_e.py | P74-03 | Chapter2_LitReview_v2_FINAL.md | f964794e9fb4 -> 96cf3e96a9f1 | content cut: compress audit-log-integrity survey, keep all cites + Merkle + the §4.8 resolution hook
+2026-10-12 01:09 | P75_trim_ch2_f.py | P75-01 | Chapter2_LitReview_v2_FINAL.md | 96cf3e96a9f1 -> c9ab4de9be7a | content cut: compress Norway-pilot operational detail; keep live/in-production claim, NCP-A, the low-volume caveat, EEA route, all dates + cites
+2026-10-12 01:09 | P75_trim_ch2_f.py | P75-02 | Chapter2_LitReview_v2_FINAL.md | 96cf3e96a9f1 -> c9ab4de9be7a | content cut: compress Helsedataservice decision/cost detail; keep the eleven-registry access-decision authority
