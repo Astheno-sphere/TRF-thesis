@@ -1117,3 +1117,4 @@
 2026-10-12 01:34 | P77_trim_ch2_boolean_to_appB.py | P77-02 | Appendix_B_Search_Log.md | d681a48301ed -> 5c665e80febb | structural move: receive the B1-B6 protocol table + filters into Appendix B as Table B.1, pointing back to §2.1.6
 2026-10-12 01:42 | P78_trim_ch4ch6_summaries.py | P78-01 | Chapter4_TRF_Model_v1.md | 2001e963101f -> 902ab9efc535 | proof-prose: tighten §4.12 mechanism recap (full form is in §4.8); keep all facts + §4.8 ref
 2026-10-12 01:42 | P78_trim_ch4ch6_summaries.py | P78-02 | Chapter6_Discussion_v1.md | f7aadc397817 -> 47fa3f183b93 | de-dup: §6.1 spelled out the not-implemented list verbatim from §4.8/§4.9; collapse to the list + pointer, keep the Prop 2 point
+2026-10-12 01:46 | P79_trim_ch3_eval.py | P79-01 | Chapter3_Methodology_v1.md | ba6cb66e3cf2 -> 7a5bb21cb2ba | low-value completeness: §3.8 defers to Appendix C (line 123); condense instrument enumeration to a summary + pointer, keep panel/perspectives/dimensions/analysis-plan
