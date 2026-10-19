@@ -73,7 +73,7 @@ passage by passage when the patch for that passage is written.
 |---|---|---|---|---|
 | R4-TT | His tracked changes (77 marked paragraphs) | CLOSED | P59, P59b, P59i, P59j | 53 verbatim, rest adapted (P58 implemented the link commitment); audit 6 Oct |
 | R4-C1 | Length: abstract and main text against programme limits; cut repeated authority-problem restatements; Appendix A listings to a tagged release | OPEN |  | Deferred by Tiger to the end. Abstract now 421 words |
-| R4-C2 | AI-use declaration and Sources disclosure confirmed with the coordinator | OPEN |  | Tiger's. Declaration does not yet name Archify (diagram tool) |
+| R4-C2 | AI-use declaration and Sources disclosure confirmed with the coordinator | PARTIAL | P84 | Declaration now names Archify as the diagram/figure generator (P84); Tiger confirmed (20 Oct) HiMolde permits Archify and other design/image tools. Formal confirmation with the coordinator remains Tiger's |
 | R4-C3 | Helsedataservice sentence against helsedata.no | CLOSED | P59b, P59h | FHI since 1 Jan 2024; 11 registries incl. Cancer Registry; forwarding claim removed; two fees |
 | R4-C4 | Rak (2024) supports the sentence; pinpoint page | PARTIAL | P59b | Full text paywalled; sentence limited to the abstract (p. 928). Get PDF via HiMolde library |
 | R4-C5 | P(a) in the notation table; t_I with the third trigger in §4.7 | CLOSED | P59b, P59i | Notation, §4.7 formula, proof steps 2 and 4 |
@@ -82,7 +82,7 @@ passage by passage when the patch for that passage is written.
 | R4-C8 | Regenerate Figure 5.1 (eight pages), thesis legend categories; Figure 4.1 with m_acc storage and link commitment | CLOSED | P59e | Archify finalize pass (B-50, B-52) |
 | R4-C9 | Re-run full-cohort Table 5.7 with final code; simplify notes | CLOSED | P59b, P59c | 1,002 bytes; six measures identical |
 | R4-C10 | Pin Synthea; record jar SHA-256; tag the repository release and cite it in A.1 | PARTIAL | P59b | Commit d9d07a6 and SHA-256 recorded. Release tag and A.1 citation pending (end, with Zenodo) |
-| R4-C11 | Datatilsynet enquiry: date and status | PARTIAL | P59b | "Sent; response pending" in Ch7. Send date needed from Tiger |
+| R4-C11 | Datatilsynet enquiry: date and status | CLOSED | P59b, P84 | Send date confirmed by Tiger (20 Oct): 23 September 2026, response pending at submission (Ch7 §7.4). Same sentence updated to record the Helsedirektoratet reply of 19 Oct (P84) |
 | R4-C12 | Cite TEHDAS2 D6.3 v2.0; re-check quotes and pages | PARTIAL | P59b | v2.0 cited as 2026a, Section 7.2; two unsupported claims removed. Page number unverified (PDF not downloadable here) |
 | R4-C13 | Restore truncated queries 12, 13, 17 | CLOSED | P59b | Restored from the 22 May chat record, marked |
 | R4-C14 | Note removed sources (#75, EY in #77) | CLOSED | P59b | Reasons stated |
