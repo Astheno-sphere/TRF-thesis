@@ -108,6 +108,8 @@ European Data Protection Board. (2026a). *Coordinated Enforcement Action, implem
 
 European Data Protection Board. (2026b). *Guidelines 02/2025 on processing of personal data through blockchain technologies* (Version 2.0, adopted 7 July 2026 following public consultation). EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202502_blockchain_v2_en.pdf `[Ch1] [Ch2] [Ch4] [Ch6]`
 
+European Data Protection Board. (2026c). *Guidelines 02/2026 on anonymisation* (Version 1.0, adopted 7 July 2026). EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202602_anonymisation_v1_en_0.pdf `[Ch4]`
+
 European Parliament and Council of the European Union. (2013). Regulation (EU) No 952/2013 of 9 October 2013 laying down the Union Customs Code. *Official Journal of the European Union*, L 269, 1–101. https://eur-lex.europa.eu/eli/reg/2013/952/oj `[Ch2]`
 
 European Parliament and Council of the European Union. (2016). Regulation (EU) 2016/679 of 27 April 2016 (General Data Protection Regulation). *Official Journal of the European Union, L 119*, 1–88. https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng `[Ch1] [Ch2] [Ch4]`
