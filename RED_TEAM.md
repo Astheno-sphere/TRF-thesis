@@ -6,7 +6,9 @@ drawn from what the thesis already says (section-cited), the residual risk, and 
 Run order for prep: internalise the **defence doctrine** (bottom) first, then drill R3 and R4 — the two
 live flanks — until the one-sentence answers are reflex.
 
-Anchor state: branch joao-base, HEAD 7e24eb7, body ~48,060, REVIEW_TRACKER ~90% closed.
+Anchor state: branch joao-base, body ~48k, REVIEW_TRACKER ~90% closed.
+
+**PATCH STATUS (28 Oct 2026).** R4 residue → P85 (EDPB 02/2026). Overclaim #1/#3 (§6.1 rhetoric>math, correlated checks) → P86. R3b/R3c/R3d + R5-energy-framing (B) → P87 (narrow-reading concession + verifiability-semantics recentre; necessity hedged; cross-border Cor 2.3 concession; energy application made explicit). R5 resolved as **B+C** (framing sentence + viva defence; no new worked case near submission — João's call on adequacy). R1/R2/R6/R7 assessed as already-defended in text (no edit). Remaining = viva drilling of R3b/R3d + R5, and the non-text submission items (João on length, Zenodo DOI, logos, coordinator AI sign-off).
 
 ---
 
