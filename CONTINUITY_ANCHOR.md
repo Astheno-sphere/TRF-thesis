@@ -12,9 +12,20 @@ git checkout joao-base && git tag -f joao-base-v1 184c91d
   and Chapter2 md5 f2694c7dfd13 at 184c91d match the D0 patch "before" hashes.
 
 ## Last verified state (update this when you hand off)
-- Branch **joao-base**, HEAD **760caa3** (P84), chapter body **48,060 words**.
-- `concordance.py --check` → all 711 cross-references resolve (current content sound).
-- REVIEW_TRACKER ~90% CLOSED; R3-F10 closed (Helsedirektoratet 19 Oct reply, floor now primary-sourced).
+- Branch **joao-base**, HEAD **d63ab94** (P87), origin == local (0/0 divergence), clean tree.
+- Tags: `joao-base-v1` → 184c91d (reviewed-draft base); `joao-base-v2` exists (later anchor).
+- Chapter body: raw `wc -w` of Front+Ch1–7 = **56,118**; project-tracked "body" figure was ~48k at P84
+  (the tracked counter strips reference lists/front — re-run the project counter if an exact figure is needed for João).
+- `concordance.py --check` → all cross-references resolve (711→716 after red-team additions); current content sound.
+- REVIEW_TRACKER ~90% CLOSED; R3-F10 closed (Helsedirektoratet 19 Oct reply, floor primary-sourced).
+- **Red team COMPLETE and committed:** P85 (EDPB 02/2026 anonymisation → §4.9, R4 residue), P86 (§6.1 overclaim
+  aligned to §4.7/§5.5 concessions), P87 (R3b narrow-reading honesty §4.6, R3c/R3d necessity hedges §4.2,
+  R5 energy framing §2.7, Parallel AI named in AI declaration). RED_TEAM.md holds the 7-persona panel + defence doctrine.
+- **zk-product question answered (29 Oct, text-only):** thesis mechanism does NOT need a zk-SNARK (§1.5 excl. #1);
+  a market product would help but not "solve" (provable key-destruction is an open problem); worth is highest as a
+  reference design + open implementation timed to the Art 73(5) implementing acts (due 26 Mar 2027), not a zk startup.
+- **PENDING (first next-session action):** statement-of-contribution paragraph — see NEXT_SESSION.md §A. Drafted,
+  NOT yet applied; must be checked against existing §1.4/§6.7/§7 to tighten-or-merge, not duplicate. Gated patch.
 
 ## Integrity note (honest)
 - `trail_check.py` replay reconstructs Ch1/2/3 cleanly from the base tag; Ch4/5/6/7/Front_Matter show
