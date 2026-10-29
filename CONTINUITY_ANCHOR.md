@@ -1,5 +1,7 @@
 # CONTINUITY ANCHOR — read first on any fresh clone
 
+**Clone from:** `https://github.com/Astheno-sphere/TRF-thesis.git` (repo renamed from `trf-thesis`; old URL redirects).
+
 The git repo is the permanent state across sessions. Tags do NOT push to this remote
 (repo policy hook rejects non-branch refs), so recreate the base tag locally each clone.
 

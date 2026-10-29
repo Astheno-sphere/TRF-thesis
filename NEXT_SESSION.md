@@ -8,6 +8,9 @@ Supersedes the dated §000 in `HANDOFF_READ_FIRST.md` where they conflict. Read 
 **Author:** Arshad Akhtar Abbasia ("Tiger"), MSc Sustainable Energy Logistics, HiMolde · **Supervisor:** Prof. João Ferreira
 **Submission:** 14 Nov 2026 · **Defence:** first week of Dec 2026 · **Today:** Thu 29 Oct 2026
 
+**CLONE URL (repo was renamed `trf-thesis` → `TRF-thesis`):** `https://github.com/Astheno-sphere/TRF-thesis.git`
+The old `trf-thesis` URL still redirects, but clone the new name. After cloning, re-anchor the base tag (CONTINUITY_ANCHOR.md). Everything through this handoff (`07c8071`) is on `origin/joao-base`.
+
 ---
 
 ## 0. ONE-LINE STATE
