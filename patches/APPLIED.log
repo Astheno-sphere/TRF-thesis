@@ -1137,3 +1137,7 @@
 2026-10-28 12:13 | P87_redteam_core_fixes.py | P87-04 | Chapter4_TRF_Model_v1.md | 5e7a3e3b64d8 -> fb65e40f7983 | F4/R3d: extend Corollary 2.3's concession to the cross-border payload so §4.2 is not self-sealing on purpose scope
 2026-10-28 12:13 | P87_redteam_core_fixes.py | P87-05 | Chapter2_LitReview_v2_FINAL.md | 1b048c7c86d2 -> dc504b81b230 | B/R5: make the energy-sector application of the model explicit (one sentence), shoring up programme fit
 2026-10-28 12:13 | P87_redteam_core_fixes.py | P87-06 | Front_Matter_v1.md | 3bc82212a220 -> 9b0f808f3627 | R4-C2: name Parallel AI in the Use-of-AI declaration (use description to be confirmed by Tiger)
+2026-10-29 20:41 | P88_contribution_type.py | P88-01 | Front_Matter_v1.md | 9b0f808f3627 -> 57b74e17f8d2 | §A move 1: state the contribution type; hedge 'not weakening' to the §4.2 necessity analysis (P87-03 register)
+2026-10-29 20:41 | P88_contribution_type.py | P88-02 | Front_Matter_v1.md | 9b0f808f3627 -> 57b74e17f8d2 | §A move 2: own Proposition 1 as a negative result (dead-end marker), pre-empting R1/R2
+2026-10-29 20:41 | P88_contribution_type.py | P88-03 | Chapter7_Conclusion_v1.md | f64df5c62d8c -> 2786aba7c42b | §A move 1 mirrored in §7.2 so the two contribution lists stay concordant
+2026-10-29 20:41 | P88_contribution_type.py | P88-04 | Chapter7_Conclusion_v1.md | f64df5c62d8c -> 2786aba7c42b | §A move 2 mirrored in §7.2; placed at paragraph end so 'Both were checked' keeps its antecedent (Props 1 and 2)
