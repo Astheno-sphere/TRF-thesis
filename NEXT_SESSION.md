@@ -122,6 +122,7 @@ Full table in `CONVERSATION_LINEAGE.md`. Key threads:
   zk-product question (answered text-only 29 Oct), contribution-novelty question (→ §A). Session link in commit trailers (§H).
 - To read an earlier chat from a new session: past-chats `read_conversation` with the chat id, or open the file in `conversation_history/`.
 - **Latest-state proof:** origin == local (0/0), and conversation history shows no parallel thesis-editing chat → this repo IS the authoritative latest.
+- **CHAT SWEEP (30 Oct 2026):** full past-chat search done. Repo is downstream of all thesis threads (main research to 30 Sep, reconciliation fork 23 Sep, Claude Code sessions). No thesis-editing chat exists after those. Recent "thesis" threads are job-search (d3e65eba) and UDI/return-plan (4235aa08) — they use the thesis as an asset, don't edit it — and TRANSPLAN PhD (b0344a67, separate project). All of João's feedback (30 Sep M1–M7, Reviews 3/4) is folded in. Supervisor = João Ferreira confirmed for TRF (the Arild/Lars Magnus "flux" was the separate EcoTrain idea). Nothing lives outside the repo. (Limit: chat search is semantic, not exhaustive.)
 
 ## G. OPEN WORK — NON-TEXT (Tiger's, not blocking the text)
 - João: sign off on length + whether R5 discipline-fit (energy framing, no new worked case) is adequate.
