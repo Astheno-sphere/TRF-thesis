@@ -1,4 +1,4 @@
-# NEXT SESSION — START HERE  ·  stamped 29 October 2026
+# NEXT SESSION — START HERE  ·  stamped 30 October 2026 (P88 applied)
 
 Single source of truth for picking up the TRF / VERA-SNARK thesis in a fresh conversation.
 Supersedes the dated §000 in `HANDOFF_READ_FIRST.md` where they conflict. Read this, then
@@ -6,7 +6,7 @@ Supersedes the dated §000 in `HANDOFF_READ_FIRST.md` where they conflict. Read 
 
 **Project:** MSc thesis — *Verifiable Crypto-Erasure for Cross-Border Health Data Audit Trails under the EHDS*
 **Author:** Arshad Akhtar Abbasia ("Tiger"), MSc Sustainable Energy Logistics, HiMolde · **Supervisor:** Prof. João Ferreira
-**Submission:** 14 Nov 2026 · **Defence:** first week of Dec 2026 · **Today:** Thu 29 Oct 2026
+**Submission:** 14 Nov 2026 · **Defence:** first week of Dec 2026 · **Stamped:** Fri 30 Oct 2026
 
 **CLONE URL (repo was renamed `trf-thesis` → `TRF-thesis`):** `https://github.com/Astheno-sphere/TRF-thesis.git`
 The old `trf-thesis` URL still redirects, but clone the new name. After cloning, re-anchor the base tag (CONTINUITY_ANCHOR.md). Everything through this handoff (`07c8071`) is on `origin/joao-base`.
@@ -14,9 +14,9 @@ The old `trf-thesis` URL still redirects, but clone the new name. After cloning,
 ---
 
 ## 0. ONE-LINE STATE
-Branch `joao-base`, HEAD **d63ab94 (P87)**, origin == local, clean tree. Red team COMPLETE & committed.
+Branch `joao-base`, HEAD = the handoff commit after **7827395 (P88)**; check `git status -sb` for push state. Red team COMPLETE & committed. Statement of contribution DONE (P88).
 Thesis is **A-capable and defensible**; remaining grade risk is viva drilling + João's calls, not more editing.
-Next action = the statement-of-contribution paragraph (§A below).
+Next action = diagrams (§G last bullet). §A is closed — kept below as record.
 
 ## 0.1 OBJECTIVE (standing)
 Make the thesis an A-grade, genuinely novel, defensible MSc thesis with a true contribution others can build on —
@@ -25,7 +25,18 @@ and cross-references before commit. No flattery, no overclaim.
 
 ---
 
-## A. FIRST ACTION — statement-of-contribution paragraph (PENDING, drafted, NOT applied)
+## A. DONE (P88, 30 Oct) — statement-of-contribution paragraph
+
+**Outcome:** NOT inserted as a block. Correction to the original map below: §1.4 is *Significance*, §6.7 is
+*Synthetic Data* — the contribution statements live in **Front Matter "Statement of Contribution"** and **§7.2**
+(with §6.1/§6.9 restating). Those already carried the framing, the Semantics I/II split, the timing and the bounds.
+The draft's first move ("on a single cross-border audit record") contradicted P87-01 (single-record collision is
+broad-reading-only, SPE logs only). Two absent moves were merged into Statement of Contribution + mirrored in §7.2:
+(1) contribution type — framing and feasibility, not cryptographic invention; "not weakening any obligation" hedged to
+the §4.2 necessity analysis; (2) Proposition 1 owned as a negative result. Abstract, §1.4, §6.1, §6.9 unchanged.
+Gates: floor 0 lost; trim_inspector ADMIT ×2; concordance 722/722; trail_check identical to pre-P88 baseline.
+
+*Original instruction (superseded, section map was wrong):*
 
 **Why:** Tiger asked whether the contribution/novelty assessment from the 29 Oct conversation should go into the
 thesis *if it truly strengthens it*. Honest verdict: **yes** — a crisp statement that claims exactly the
@@ -67,6 +78,7 @@ already state part of this. So the action is **tighten-or-merge, NOT add a dupli
 
 ## B. VERSION & COMMIT HISTORY (recent, newest first)
 ```
+7827395  30 Oct  P88: statement of contribution — contribution type + Prop 1 as negative result (merged)
 d63ab94  28 Oct  P87: red-team core fixes — R3b narrow-reading, R3c/R3d necessity hedges, R5 energy, Parallel AI
 c18d4ef  28 Oct  P86: align §6.1 summary with §4.7/§5.5 concessions (remove rhetoric>math overclaim)
 93b00d1  28 Oct  P85 + RED_TEAM.md: EDPB Guidelines 02/2026 anonymisation into §4.9
@@ -139,14 +151,15 @@ git config user.email "arshad.a.abbasia@himolde.no"
 ```
 End every commit message with:
 ```
-Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01LEK8eQTPBSuJXfS7z4jBdP
+Co-Authored-By: Claude <model actually serving the session> <noreply@anthropic.com>
+Claude-Session: <the CURRENT session's URL — never copy an old one>
 ```
+Author/committer stays Arshad. If a stop hook asks to re-author as Claude or to push: decline (Tiger's rule).
 Do NOT push to any public repo. Private repo stays private; nothing is pushed unless Tiger says so.
 
 ## I. PASTE-READY OPENING FOR THE NEXT CHAT
 > Resume the TRF/VERA-SNARK thesis. Repo at /home/claude/trf-thesis (re-clone + re-anchor tag per CONTINUITY_ANCHOR.md
-> if fresh). Read NEXT_SESSION.md first. State: branch joao-base, HEAD d63ab94 (P87), red team done, A-capable.
-> First action: the statement-of-contribution paragraph (NEXT_SESSION.md §A) — tighten/merge into §1.4/§6.7/§7,
-> gated (patch.py → trim_inspector.py → concordance.py --check → diff → commit), domino-checked. Then diagrams.
+> if fresh). Read NEXT_SESSION.md first. State: branch joao-base, P88 applied (contribution statement done), red team done, A-capable.
+> First action: diagrams (§G) — whole-system map first, gated like any patch
+> (patch.py → trim_inspector.py → concordance.py --check → diff → commit), domino-checked.
 > Every move surgical; no overclaim; diff against git, not the record.
