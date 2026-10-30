@@ -14,7 +14,7 @@ git checkout joao-base && git tag -f joao-base-v1 184c91d
   and Chapter2 md5 f2694c7dfd13 at 184c91d match the D0 patch "before" hashes.
 
 ## Last verified state (update this when you hand off)
-- Branch **joao-base**, P88 = **7827395** (30 Oct) + handoff refresh commit; check `git status -sb` for push state.
+- Branch **joao-base**, P88 = **e8311c4** (30 Oct) + handoff refresh commit; check `git status -sb` for push state.
 - Tags: `joao-base-v1` → 184c91d (reviewed-draft base); `joao-base-v2` exists (later anchor).
 - Chapter body: raw `wc -w` of Front+Ch1–7 = **56,118**; project-tracked "body" figure was ~48k at P84
   (the tracked counter strips reference lists/front — re-run the project counter if an exact figure is needed for João).
@@ -29,6 +29,8 @@ git checkout joao-base && git tag -f joao-base-v1 184c91d
 - **DONE (P88, 30 Oct):** statement of contribution merged into Front Matter Statement of Contribution + §7.2
   (contribution type; Prop 1 as negative result). `concordance.py --check` → 722 xrefs resolve.
 - **NEXT:** diagrams — whole-system map (priority), optional mechanism hero figure. See NEXT_SESSION.md §G.
+
+**AUTHOR REWRITE (30 Oct 2026, Tiger-approved):** the 76 Claude-authored thesis-text commits after the base were re-authored to Arshad (code-only commit `8815bf9` stays Claude; Claude remains Co-Authored-By). Trees are byte-identical; only hashes changed. Hashes in this file are current; historical records (patches/, handoff/, VERSION_LOG, CHANGE_TRAIL, transcripts) keep the old hashes — translate via `HASH_MAP_2026-10-30_author_rewrite.tsv`. Base `184c91d` unchanged.
 
 ## Integrity note (honest)
 - `trail_check.py` replay reconstructs Ch1/2/3 cleanly from the base tag; Ch4/5/6/7/Front_Matter show

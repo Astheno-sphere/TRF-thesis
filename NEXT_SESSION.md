@@ -9,14 +9,16 @@ Supersedes the dated §000 in `HANDOFF_READ_FIRST.md` where they conflict. Read 
 **Submission:** 14 Nov 2026 · **Defence:** first week of Dec 2026 · **Stamped:** Fri 30 Oct 2026
 
 **CLONE URL (repo was renamed `trf-thesis` → `TRF-thesis`):** `https://github.com/Astheno-sphere/TRF-thesis.git`
-The old `trf-thesis` URL still redirects, but clone the new name. After cloning, re-anchor the base tag (CONTINUITY_ANCHOR.md). Everything through this handoff (`07c8071`) is on `origin/joao-base`.
+The old `trf-thesis` URL still redirects, but clone the new name. After cloning, re-anchor the base tag (CONTINUITY_ANCHOR.md). Everything through this handoff (`7e4e5b0`) is on `origin/joao-base`.
 
 ---
 
 ## 0. ONE-LINE STATE
-Branch `joao-base`, HEAD = the handoff commit after **7827395 (P88)**; check `git status -sb` for push state. Red team COMPLETE & committed. Statement of contribution DONE (P88).
+Branch `joao-base`, HEAD = the handoff commit after **e8311c4 (P88)**; check `git status -sb` for push state. Red team COMPLETE & committed. Statement of contribution DONE (P88).
 Thesis is **A-capable and defensible**; remaining grade risk is viva drilling + João's calls, not more editing.
 Next action = diagrams (§G last bullet). §A is closed — kept below as record.
+
+**AUTHOR REWRITE (30 Oct 2026, Tiger-approved):** the 76 Claude-authored thesis-text commits after the base were re-authored to Arshad (code-only commit `8815bf9` stays Claude; Claude remains Co-Authored-By). Trees are byte-identical; only hashes changed. Hashes in this file are current; historical records (patches/, handoff/, VERSION_LOG, CHANGE_TRAIL, transcripts) keep the old hashes — translate via `HASH_MAP_2026-10-30_author_rewrite.tsv`. Base `184c91d` unchanged.
 
 ## 0.1 OBJECTIVE (standing)
 Make the thesis an A-grade, genuinely novel, defensible MSc thesis with a true contribution others can build on —
@@ -78,16 +80,16 @@ already state part of this. So the action is **tighten-or-merge, NOT add a dupli
 
 ## B. VERSION & COMMIT HISTORY (recent, newest first)
 ```
-7827395  30 Oct  P88: statement of contribution — contribution type + Prop 1 as negative result (merged)
-d63ab94  28 Oct  P87: red-team core fixes — R3b narrow-reading, R3c/R3d necessity hedges, R5 energy, Parallel AI
-c18d4ef  28 Oct  P86: align §6.1 summary with §4.7/§5.5 concessions (remove rhetoric>math overclaim)
-93b00d1  28 Oct  P85 + RED_TEAM.md: EDPB Guidelines 02/2026 anonymisation into §4.9
-7e24eb7  28 Oct  continuity anchor: base-tag SHA + re-anchor command + integrity note
-760caa3  19 Oct  P84: Datatilsynet date (23 Sep), Helsedir reply in Ch7, Archify in AI declaration
-81b6a5a  19 Oct  cover note: Helsedir 19 Oct reply (ten-year floor primary-sourced, R3-F10 closed)
-c65cac4  19 Oct  P83: fold Helsedir reply into §2.3
-9f7b711  12 Oct  R5 cover note to João
-ddae048  12 Oct  P82: length cut Ch3/Ch4 roadmap — content-preserving floor reached
+e8311c4  30 Oct  P88: statement of contribution — contribution type + Prop 1 as negative result (merged)
+eec0bac  28 Oct  P87: red-team core fixes — R3b narrow-reading, R3c/R3d necessity hedges, R5 energy, Parallel AI
+f0b534f  28 Oct  P86: align §6.1 summary with §4.7/§5.5 concessions (remove rhetoric>math overclaim)
+3f807e4  28 Oct  P85 + RED_TEAM.md: EDPB Guidelines 02/2026 anonymisation into §4.9
+0c8ea89  28 Oct  continuity anchor: base-tag SHA + re-anchor command + integrity note
+7b6420c  19 Oct  P84: Datatilsynet date (23 Sep), Helsedir reply in Ch7, Archify in AI declaration
+3eeffe3  19 Oct  cover note: Helsedir 19 Oct reply (ten-year floor primary-sourced, R3-F10 closed)
+91d8b0a  19 Oct  P83: fold Helsedir reply into §2.3
+f54c576  12 Oct  R5 cover note to João
+1009bc9  12 Oct  P82: length cut Ch3/Ch4 roadmap — content-preserving floor reached
 ```
 Full chain: `git log` and `PATCH_LOG.md` / `PATCHES.md`. Patch scripts P01–P87 in `patches/` (APPLIED.log records order).
 
