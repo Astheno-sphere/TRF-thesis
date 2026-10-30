@@ -1144,3 +1144,5 @@
 2026-10-30 20:35 | P89_zenodo_doi.py | P89-01 | code_artefacts/README_Appendix_A.md | 0b46a0ab9afc -> 24a006e5c13b | A.1: add the Zenodo DOI of the frozen release
 2026-10-30 20:35 | P89_zenodo_doi.py | P89-02 | code_artefacts/README_Appendix_A.md | 0b46a0ab9afc -> 24a006e5c13b | A.1: replace the moving-branch citation with the frozen release
 2026-10-30 20:35 | P89_zenodo_doi.py | P89-03 | Front_Matter_v1.md | 57b74e17f8d2 -> ee0bcfa9de8a | Abstract footer: add the DOI next to the repository link
+2026-10-30 20:45 | P90_app_walk_pages.py | P90-01 | code_artefacts/README_Appendix_A.md | 24a006e5c13b -> 30fce3dd4b77 | A.1: describe the three new pages so the appendix stays true to the live demonstration
+2026-10-30 20:45 | P90_app_walk_pages.py | P90-02 | code_artefacts/README_Appendix_A.md | 24a006e5c13b -> 30fce3dd4b77 | A.1: Thesis run now executes on opening rather than on a button
