@@ -1141,3 +1141,6 @@
 2026-10-29 20:41 | P88_contribution_type.py | P88-02 | Front_Matter_v1.md | 9b0f808f3627 -> 57b74e17f8d2 | §A move 2: own Proposition 1 as a negative result (dead-end marker), pre-empting R1/R2
 2026-10-29 20:41 | P88_contribution_type.py | P88-03 | Chapter7_Conclusion_v1.md | f64df5c62d8c -> 2786aba7c42b | §A move 1 mirrored in §7.2 so the two contribution lists stay concordant
 2026-10-29 20:41 | P88_contribution_type.py | P88-04 | Chapter7_Conclusion_v1.md | f64df5c62d8c -> 2786aba7c42b | §A move 2 mirrored in §7.2; placed at paragraph end so 'Both were checked' keeps its antecedent (Props 1 and 2)
+2026-10-30 20:35 | P89_zenodo_doi.py | P89-01 | code_artefacts/README_Appendix_A.md | 0b46a0ab9afc -> 24a006e5c13b | A.1: add the Zenodo DOI of the frozen release
+2026-10-30 20:35 | P89_zenodo_doi.py | P89-02 | code_artefacts/README_Appendix_A.md | 0b46a0ab9afc -> 24a006e5c13b | A.1: replace the moving-branch citation with the frozen release
+2026-10-30 20:35 | P89_zenodo_doi.py | P89-03 | Front_Matter_v1.md | 57b74e17f8d2 -> ee0bcfa9de8a | Abstract footer: add the DOI next to the repository link

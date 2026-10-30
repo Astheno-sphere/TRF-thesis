@@ -212,7 +212,7 @@ the Declaration in HiMolde's required form.
 the core functions of `trf_checker.py` only.
 **Blocked by P-22** — needs the tag to exist first.
 
-### P-22 · Tag the repository and mint a Zenodo DOI · OPEN
+### P-22 · Tag the repository and mint a Zenodo DOI · CLOSED 30 Oct 2026 (P89: TRF v1.0.1, DOI 10.5281/zenodo.23819275)
 The thesis cites a moving `main`. Tag at `dba9c56` or later, archive on Zenodo, cite the DOI.
 **Cascade:** every repository citation in the thesis · Appendix A · the README.
 

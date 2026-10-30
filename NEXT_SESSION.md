@@ -140,7 +140,7 @@ Full table in `CONVERSATION_LINEAGE.md`. Key threads:
 
 ## G. OPEN WORK — NON-TEXT (Tiger's, not blocking the text)
 - João: sign off on length + whether R5 discipline-fit (energy framing, no new worked case) is adequate.
-- Zenodo DOI + release tag + Appendix A.1 citation (pending).
+- ~~Zenodo DOI + release tag + Appendix A.1 citation~~ **DONE 30 Oct (P89):** TRF made public; release v1.0.1 (0ad3865, code = v1.0.0 ddd4041) archived, DOI **10.5281/zenodo.23819275** (https://zenodo.org/records/23819275); cited in A.1 + abstract footer. TRF also has MIT LICENSE, CITATION.cff, .zenodo.json; Zenodo switch is ON, so every future GitHub release mints a new version DOI.
 - Title-page logos; coordinator AI-declaration sign-off; **confirm Parallel AI use-description** in Front_Matter (P87 flagged it for confirmation — declaration must be exactly true).
 - Streamlit app reboot (stale-checker mismatch) if demoing live.
 - Optional strengthening located but not applied: EDPB Guidelines 1/2026 scientific research (draft) → §4.4 Art 17(3)(d) if desired.

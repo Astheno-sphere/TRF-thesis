@@ -28,6 +28,7 @@ git checkout joao-base && git tag -f joao-base-v1 184c91d
   reference design + open implementation timed to the Art 73(5) implementing acts (due 26 Mar 2027), not a zk startup.
 - **DONE (P88, 30 Oct):** statement of contribution merged into Front Matter Statement of Contribution + §7.2
   (contribution type; Prop 1 as negative result). `concordance.py --check` → 722 xrefs resolve.
+- **DONE (P89, 30 Oct):** Zenodo DOI 10.5281/zenodo.23819275 (TRF v1.0.1) cited in A.1 + abstract footer.
 - **NEXT:** diagrams — whole-system map (priority), optional mechanism hero figure. See NEXT_SESSION.md §G.
 
 **AUTHOR REWRITE (30 Oct 2026, Tiger-approved):** the 76 Claude-authored thesis-text commits after the base were re-authored to Arshad (code-only commit `8815bf9` stays Claude; Claude remains Co-Authored-By). Trees are byte-identical; only hashes changed. Hashes in this file are current; historical records (patches/, handoff/, VERSION_LOG, CHANGE_TRAIL, transcripts) keep the old hashes — translate via `HASH_MAP_2026-10-30_author_rewrite.tsv`. Base `184c91d` unchanged.
