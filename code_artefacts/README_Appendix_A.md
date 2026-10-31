@@ -33,7 +33,7 @@ A note on durability. Hosted applications are not archival objects: the live dem
 | `synthea_layer.py` | Realism layer — substitutes Synthea-generated FHIR R4 payloads and compares every reported figure against the constructed-payload run | 152 |
 | `norwegian_layer.py` | Three Norwegian record classes, parallel to the thesis and reporting no thesis figure | 135 |
 | `cross_sector_check.py` | Cross-sector instance drawn from politiregisterloven § 17 | 110 |
-| `app.py`, `ui.py` | Eight-page demonstration viewer with live architecture diagrams (Figures 4.1 and 5.1), never a source of results | 825 + 133 |
+| `app.py`, `ui.py` | Eleven-page demonstration viewer with live architecture diagrams (Figures 4.1 and 5.1), never a source of results | 1108 + 133 |
 | `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |
 | `z3_check.py` | Optional: bounded SMT check of Propositions 1–3 with the Z3 solver; needs the `z3-solver` package | 153 |
 | `data/synthea_subset/` | Eight untrimmed Synthea bundles from the reported cohort, so a reader can run the realism layer without regenerating it | 8 files, 40 MB |

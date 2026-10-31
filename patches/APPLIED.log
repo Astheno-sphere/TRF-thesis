@@ -1146,3 +1146,7 @@
 2026-10-30 20:35 | P89_zenodo_doi.py | P89-03 | Front_Matter_v1.md | 57b74e17f8d2 -> ee0bcfa9de8a | Abstract footer: add the DOI next to the repository link
 2026-10-30 20:45 | P90_app_walk_pages.py | P90-01 | code_artefacts/README_Appendix_A.md | 24a006e5c13b -> 30fce3dd4b77 | A.1: describe the three new pages so the appendix stays true to the live demonstration
 2026-10-30 20:45 | P90_app_walk_pages.py | P90-02 | code_artefacts/README_Appendix_A.md | 24a006e5c13b -> 30fce3dd4b77 | A.1: Thesis run now executes on opening rather than on a button
+2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-01 | Chapter5_Demonstration_v1.md | 86047e546ce3 -> d3cf35e00c9b | §5.2: viewer now has eleven pages (P90 domino)
+2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-02 | Chapter5_Demonstration_v1.md | 86047e546ce3 -> d3cf35e00c9b | Table 5.1: current line count and page count
+2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-03 | code_artefacts/README_Appendix_A.md | 30fce3dd4b77 -> bbbe4eae18c1 | A.2: current line count and page count
+2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-04 | Chapter4_TRF_Model_v1.md | fb65e40f7983 -> a1f17657148f | Fig 4.1 caption: mark the proactive trigger as specified-not-implemented, matching §4.8 and the redrawn figure
