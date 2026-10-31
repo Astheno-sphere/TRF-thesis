@@ -1275,3 +1275,10 @@
 2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-08 | Chapter2_LitReview_v2_FINAL.md | deba74b978f4 -> c2ccf6e89adf | M-8: formal GDPR monitoring prior art placed
 2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-09 | Chapter2_LitReview_v2_FINAL.md | deba74b978f4 -> c2ccf6e89adf | M-8: reference entries, each verified
 2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-10 | Chapter6_Discussion_v1.md | 53c11ff533e9 -> 837e3b3d0805 | M-11: reference entry, verified
+2026-10-31 02:15 | P99_release_110.py | P99-01 | code_artefacts/README_Appendix_A.md | 21a52c19d41e -> f64a0ceef5ac | M4: cite the release that contains the viewer A.1 describes
+2026-10-31 02:15 | P99_release_110.py | P99-02 | code_artefacts/README_Appendix_A.md | 21a52c19d41e -> f64a0ceef5ac | M4
+2026-10-31 02:15 | P99_release_110.py | P99-03 | code_artefacts/README_Appendix_A.md | 21a52c19d41e -> f64a0ceef5ac | A.2 line count
+2026-10-31 02:15 | P99_release_110.py | P99-04 | code_artefacts/README_Appendix_A.md | 21a52c19d41e -> f64a0ceef5ac | examiner m-4: A.14 line count
+2026-10-31 02:15 | P99_release_110.py | P99-05 | Chapter5_Demonstration_v1.md | f89ee06d60fd -> ffc9c111e901 | Table 5.1 line count
+2026-10-31 02:15 | P99_release_110.py | P99-06 | Front_Matter_v1.md | b7fb2f2f51fd -> 370039af818b | abstract footer cites the concept DOI and release 1.1.0
+2026-10-31 02:16 | P100_demo_app_110.py | P100-01 | demo_app/app.py | 4790848b9e92 -> 18bd7e246e4b | sync demo_app/app.py to TRF release 1.1.0

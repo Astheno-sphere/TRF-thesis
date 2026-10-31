@@ -39,9 +39,10 @@ issuing legal interpretations the EDPB has not."
 1. *The thesis never asserts the broad reading as settled.* §2.3 and §4.6 give both sides; Corollary 1.2
    is explicitly conditional; the headline is the *feasibility reframing* (semantics), which does not depend
    on the broad reading at all.
-2. *The structural tri-lateral result survives the narrow reading.* Even narrowly, the cross-border floor +
-   Article 17 right + the ceiling on the permitted dataset stand; Proposition 1 needs only that some valid
-   erasure request fall inside a retention window.
+2. *[CORRECTED 31 Oct, round 2 V-3]* Do NOT claim the tri-lateral single-record collision survives the narrow
+   reading: since P87 the text concedes it does not. Say instead: on the narrow reading Corollary 1.2 lapses, and
+   Propositions 1–4, the mechanism and the verifiability semantics remain (§4.6, last two paragraphs); Proposition 1
+   needs only that some valid erasure request fall inside a retention window.
 3. *The interpretive steps are flagged as interpretive, with a route to settle them* — the Datatilsynet
    enquiry (sent 23 Sep 2026) and the now-answered Helsedirektoratet enquiry (19 Oct 2026). The thesis
    argues from primary instruments + Norwegian DPA guidance; it claims no authority it lacks.
@@ -110,3 +111,53 @@ already in live pilot, so the cross-border audit stream is beginning now.
 - The EHDS↔GDPR retention/erasure tension is treated as real and open across 2026 professional and peer-reviewed
   commentary (law-firm analyses; a 2026 peer-reviewed study of the EHDS/GDPR interplay) → corroborates the
   conflict premise against R3's "you invented it." Verify each before citing.
+
+
+---
+
+# ROUND 2 (31 Oct 2026) — independent agents on the post-P93 text
+
+Two agents that had not seen the work: an eight-examiner panel (`red_team_round2/RT2_examiner_panel.md`) and a
+consistency + citation auditor that checked 30 quotations against their sources (`red_team_round2/RT2_consistency_citations.md`).
+Verdict before fixes: **B as it stood, A reachable, no fatal text defect.** Every finding below was checked by hand
+before patching; new sources were verified before citing. Patches P94–P99.
+
+| Finding | Fix |
+|---|---|
+| EDPB 02/2025 v2.0 does **not** say key deletion serves erasure (para 51: unintelligible, yet encrypted personal data still personal data; para 50; para 125) | P94: restated in 11 places; mechanism rests on deleting the payload; key destruction covers copies only, a stated residue; new "not claimed" line |
+| Model cannot distinguish key destruction from deletion ("crypto" unmotivated) | P94: said in §4.8; crypto justified by copies the store cannot delete at once (OPR-6) |
+| Per-record keys "required" — false | P94: simplest, not required; key-share alternative (Cachin et al. 2013) |
+| Verifiability overclaimed as what is new | P94: §6.3, §7.2 matched to the Rival 4 concession |
+| Annex 7 quote out of context (project logbooks) | P94/P95: quoted in context; the gap rests on OPR-6 |
+| Ten-year floor still the "reported baseline" after Helsedir's answer; Art 17(3)(b) needs a legal obligation | P95: carried through abstract, Sammendrag, Ch1–5, Ch7; §4.2 tied to Union or Member State law |
+| Abstract implied the run used Synthea payloads; §3.6 metadata claim false | P95 |
+| Abstract contributions ≠ the four of SoC/§7.2; Ch1 misstated Prop 3 | P95 |
+| SQ1–SQ3 never answered; §7.1 answer without the authority caveat | P96 |
+| Runtime claims false (0.43 s, not 0.019 s) and contradicted "no timing" | P96: removed |
+| §5.4 arithmetic (44 lapse, not 39); A.1 module count; draft/preprint labels; ethics/sources wording; overclaims; xref slips | P96 |
+| C3 did not carry Corollary 1.2's legal condition | P97: reach predicate rho(a); granularity sufficient, not necessary |
+| Edge cases (t_r >= t, delta >= 1, infinity; record written after its own deadline; e < t) | P97 |
+| Proposition 4 not in the model | P97: described as a legal argument in propositional form |
+| Harmonising reading of 68(12)/73(1)(e) missing; Rival 1 "decisively" | P98: stated (D7.4 p. 39); moves the question to §4.2 |
+| Evaluation "falsifiable" though Prop 2 holds by construction; utility unevaluated | P98: §3.3 split; FEDS classification (Venable et al. 2016) |
+| Energy transfer "without modification" untested | P98: Prop 3 test named as not run; energy hub first in §7.5 |
+| Missing prior art | P98: Arfelt et al. 2019, Perlman 2005, Geambasu et al. 2009, Cachin et al. 2013 |
+| A.1 described a viewer not in the cited release | P99: release 1.1.0, concept DOI 10.5281/zenodo.23819274 |
+
+**Still Tiger's (not text):** coordinator's written sign-off on the AI declaration (F-0, the one fatal-if-open item);
+confirm the Parallel AI sentence; voice pass; logos; length limit; Lovdata check of § 17.
+
+## Viva drill, round 2 (text defensible; answer well)
+- V-1 "Prop 1 trivial, Prop 2 by construction." Agreed and stated; Prop 1 is a negative result; weight is in §4.2.
+- V-2 "Semantics I is a straw man." It is the de facto semantics of the reference gateway (§4.5).
+- V-3 "On the narrow reading, what is left?" Props 1–4, mechanism, verifiability semantics; Cor 1.2 lapses (see corrected move 2 above).
+- V-4 "Which Norwegian law fixes the NCPeH log retention?" The specifications defer to national law; the pilot uses six years; none identified — say so.
+- V-5 "Explain this function." Walk check_semantics_II, apply_invalidation, MerkleLog.proof line by line. Highest-risk item.
+- V-6 "Is attestation enough?" No, never claimed; improves on unlogged deletion; against logged deletion the edge is the commitment.
+- V-7 "Monthly discretisation makes collisions." C1 closed (conservative); boundary months can be artefacts; propositions are about the discrete model.
+- V-8 "What logistics method?" Constraint modelling, per-consignment parameter, two-clock reading of Prop 3; energy hub as the programme-native next test.
+- V-9 "§ 17: are both periods anchored at the entry?" A reading of the sentence's syntax; bring the Lovdata text.
+- V-10 "Your ten-year source is a tutorial." Yes; superseded by the controller's answer; no result depends on F.
+- V-11 "Why an accumulator needing a trusted manager?" Optional, not load-bearing; willing to drop it.
+- V-12 "Does key deletion count as erasure?" Not by the EDPB's text; the mechanism deletes the payload and uses keys only for copies, which remain personal data until rotation — stated as a limit.
+- V-13 "Why keys at all, if the model can't tell?" Backups and replicas the store cannot delete at once; OPR-6 reaches them expressly.

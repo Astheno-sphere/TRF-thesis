@@ -44,7 +44,7 @@ The contribution is bounded: no novel cryptographic primitive or formal method, 
 
 *Keywords:* European Health Data Space; GDPR Article 17; cryptographic erasure; audit trail; data retention; design science research; Secure Processing Environment; MyHealth@EU; information logistics; Norway
 
-Artefact: https://github.com/Astheno-sphere/TRF (archived release 1.0.1: https://doi.org/10.5281/zenodo.23819275). Demonstration: https://trfhimolde.streamlit.app/
+Artefact: https://github.com/Astheno-sphere/TRF (archived release 1.1.0: https://doi.org/10.5281/zenodo.23819274). Demonstration: https://trfhimolde.streamlit.app/
 
 ---
 
@@ -1168,7 +1168,7 @@ Seven further modules accompany it, bringing the artefact to eight Python files 
 | `synthea_layer.py` | 152 | Substitutes real FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.7 |
 | `norwegian_layer.py` | 135 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
 | `cross_sector_check.py` | 110 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10 | No |
-| `app.py`, `ui.py` | 1108 + 133 | Eleven-page viewer over the artefact, with the live architecture diagrams of Figures 4.1 and 5.1; never a source of results | No |
+| `app.py`, `ui.py` | 1122 + 133 | Eleven-page viewer over the artefact, with the live architecture diagrams of Figures 4.1 and 5.1; never a source of results | No |
 | `crypto_envelope.py` | 118 | Optional: the same lifecycle with real AES-256-GCM envelope encryption (needs `cryptography`) | No |
 | `z3_check.py` | 153 | Optional: bounded SMT check of Propositions 1–3 (needs `z3-solver`) | No |
 
@@ -1813,11 +1813,11 @@ The artefact is publicly available in two forms.
 
 | Form | Location |
 |---|---|
-| Archived release (cite this) | Version 1.0.1, Zenodo, https://doi.org/10.5281/zenodo.23819275 |
+| Archived release (cite this) | Version 1.1.0, Zenodo, https://doi.org/10.5281/zenodo.23819274 (resolves to the latest version; version 1.0.1, https://doi.org/10.5281/zenodo.23819275, has the same result modules) |
 | Source repository | https://github.com/Astheno-sphere/TRF |
 | Live demonstration | https://trfhimolde.streamlit.app/ |
 
-The archived release is the citable artefact: version 1.0.1 of the repository, deposited on Zenodo, is the exact code whose outputs this thesis reports, whereas the repository's default branch may change after submission. It contains eight Python files, the checker and seven further modules as Chapter 5, Section 5.2 counts them, the viewer among them split across `app.py` and `ui.py`, together with the eight-bundle Synthea subset the realism layer reads, a recorded console run for every command, and this appendix. The live application is a convenience for readers who prefer not to clone and run: it executes the same unmodified source, and its Thesis run page asserts that the run reproduces the figures reported in Chapter 5, displaying a failure notice rather than results if it does not.
+The archived release is the citable artefact: version 1.1.0 of the repository, deposited on Zenodo, is the exact code whose outputs this thesis reports and the viewer described below, and its result modules are identical to those of version 1.0.1, whereas the repository's default branch may change after submission. It contains eight Python files, the checker and seven further modules as Chapter 5, Section 5.2 counts them, the viewer among them split across `app.py` and `ui.py`, together with the eight-bundle Synthea subset the realism layer reads, a recorded console run for every command, and this appendix. The live application is a convenience for readers who prefer not to clone and run: it executes the same unmodified source, and its Thesis run page asserts that the run reproduces the figures reported in Chapter 5, displaying a failure notice rather than results if it does not.
 
 The demonstration has eleven pages. *Start here* states the problem and sets out a walk through the remaining pages in the order of the thesis. *The four propositions* quotes each proposition from Chapter 4 with the limits the thesis states for it, shows the corresponding figures from the checker, and runs the bounded SMT check of Section 5.5, including the deliberately broken variants it must refute; Proposition 4, which rests on a legal premise, is marked as argued and not executed. *Claim ledger* sets each figure reported in Chapter 5 beside the same figure recomputed when the page opens. *Witness a record* draws one record of the thesis population through its months, showing where Semantics I contradicts itself and where Semantics II holds, and lights the components of Figure 4.1 that act in each month. *How it is built* embeds Figures 4.1 and 5.1 as interactive diagrams. *Thesis run* reproduces, on opening, Tables 5.3 and 5.6 and shows the audit-log integrity check and all three tamper tests of Section 5.7. *Where the ceiling is anchored* evaluates the condition of Proposition 3 for any floor and ceiling, with Article 68(12) and politiregisterloven § 17 as presets. *Robustness and cross-checks* runs the independent exhaustive cross-check of Section 5.5, the erasure-response-period witness of Section 5.6 and the optional envelope-encryption module of Section 5.8. *Synthea realism* reproduces Table 5.7. *Norwegian context* runs the illustrative Norwegian modules, and *Explore* varies population parameters as a teaching aid; neither reports a thesis figure.
 
@@ -1831,7 +1831,7 @@ A note on durability. Hosted applications are not archival objects: the live dem
 | `synthea_layer.py` | Realism layer — substitutes Synthea-generated FHIR R4 payloads and compares every reported figure against the constructed-payload run | 152 |
 | `norwegian_layer.py` | Three Norwegian record classes, parallel to the thesis and reporting no thesis figure | 135 |
 | `cross_sector_check.py` | Cross-sector instance drawn from politiregisterloven § 17 | 110 |
-| `app.py`, `ui.py` | Eleven-page demonstration viewer with live architecture diagrams (Figures 4.1 and 5.1), never a source of results | 1108 + 133 |
+| `app.py`, `ui.py` | Eleven-page demonstration viewer with live architecture diagrams (Figures 4.1 and 5.1), never a source of results | 1122 + 133 |
 | `crypto_envelope.py` | Optional: the same lifecycle with real AES-256-GCM envelope encryption; needs the `cryptography` package and reports no thesis figure | 118 |
 | `z3_check.py` | Optional: bounded SMT check of Propositions 1–3 with the Z3 solver; needs the `z3-solver` package | 153 |
 | `data/synthea_subset/` | Eight untrimmed Synthea bundles from the reported cohort, so a reader can run the realism layer without regenerating it | 8 files, 40 MB |
@@ -2994,7 +2994,7 @@ if __name__ == "__main__":
 
 ## A.14 The demonstration viewer: `app.py` and `ui.py`
 
-Not reproduced here, because the viewer is never a source of results: every figure it displays comes from executing one of the modules listed in this appendix, unmodified. `app.py` (825 lines) holds the pages and the self-checks; `ui.py` (133 lines) holds only presentation: the theme, the record life strip and the embedding of the two Archify diagrams. The Thesis run page asserts the reported figures and shows a failure notice rather than results if the run disagrees with Chapter 5. Both files are in the repository (https://github.com/Astheno-sphere/TRF).
+Not reproduced here, because the viewer is never a source of results: every figure it displays comes from executing one of the modules listed in this appendix, unmodified. `app.py` (1122 lines) holds the pages and the self-checks; `ui.py` (133 lines) holds only presentation: the theme, the record life strip and the embedding of the two Archify diagrams. The Thesis run page asserts the reported figures and shows a failure notice rather than results if the run disagrees with Chapter 5. Both files are in the repository (https://github.com/Astheno-sphere/TRF).
 
 ## A.15 Source listing: `crypto_envelope.py`
 
