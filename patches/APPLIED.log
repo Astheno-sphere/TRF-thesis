@@ -1282,3 +1282,23 @@
 2026-10-31 02:15 | P99_release_110.py | P99-05 | Chapter5_Demonstration_v1.md | f89ee06d60fd -> ffc9c111e901 | Table 5.1 line count
 2026-10-31 02:15 | P99_release_110.py | P99-06 | Front_Matter_v1.md | b7fb2f2f51fd -> 370039af818b | abstract footer cites the concept DOI and release 1.1.0
 2026-10-31 02:16 | P100_demo_app_110.py | P100-01 | demo_app/app.py | 4790848b9e92 -> 18bd7e246e4b | sync demo_app/app.py to TRF release 1.1.0
+2026-10-31 02:19 | P101_voice_first_person.py | P101-01 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-02 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-03 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-04 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-05 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-06 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-07 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-08 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice + motivation from stated background (Tiger to confirm)
+2026-10-31 02:19 | P101_voice_first_person.py | P101-09 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-10 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-11 | Chapter1_Introduction_v2.md | 87d5052e38ca -> 2439843c270e | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-12 | Chapter6_Discussion_v1.md | 837e3b3d0805 -> 17ac811588a1 | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-13 | Chapter6_Discussion_v1.md | 837e3b3d0805 -> 17ac811588a1 | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-14 | Chapter6_Discussion_v1.md | 837e3b3d0805 -> 17ac811588a1 | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-15 | Chapter6_Discussion_v1.md | 837e3b3d0805 -> 17ac811588a1 | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-16 | Chapter6_Discussion_v1.md | 837e3b3d0805 -> 17ac811588a1 | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-17 | Chapter6_Discussion_v1.md | 837e3b3d0805 -> 17ac811588a1 | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-18 | Chapter7_Conclusion_v1.md | 6f7f57f441d4 -> 11ae8abef9de | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-19 | Chapter7_Conclusion_v1.md | 6f7f57f441d4 -> 11ae8abef9de | voice
+2026-10-31 02:19 | P101_voice_first_person.py | P101-20 | Chapter7_Conclusion_v1.md | 6f7f57f441d4 -> 11ae8abef9de | voice; true: Datatilsynet enquiry sent 23 Sep, Helsedirektoratet answered 19 Oct (§7.4)

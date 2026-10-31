@@ -29,7 +29,9 @@ git checkout joao-base && git tag -f joao-base-v1 184c91d
 - **DONE (P88, 30 Oct):** statement of contribution merged into Front Matter Statement of Contribution + §7.2
   (contribution type; Prop 1 as negative result). `concordance.py --check` → 722 xrefs resolve.
 - **DONE (P89, 30 Oct):** Zenodo DOI 10.5281/zenodo.23819275 (TRF v1.0.1) cited in A.1 + abstract footer.
-- **NEXT:** diagrams — whole-system map (priority), optional mechanism hero figure. See NEXT_SESSION.md §G.
+- **DONE (31 Oct):** figures (P91, P93: Fig 1.1 system map, Fig 5.2 record 100); red team round 2 (P94–P99; RED_TEAM.md + red_team_round2/); TRF release 1.1.0 (concept DOI 10.5281/zenodo.23819274, version DOI 10.5281/zenodo.23826911); app walk + claim ledger + tests/CI; first-person framing voice (P101).
+- **NEXT (Tiger):** coordinator sign-off on AI declaration (fatal if open); voice read Ch4/Ch6; confirm P101-08 motivation sentence; logos; length limit; Lovdata § 17.
+- **SUPERSEDED:** diagrams — whole-system map (priority), optional mechanism hero figure. See NEXT_SESSION.md §G.
 
 **AUTHOR REWRITE (30 Oct 2026, Tiger-approved):** the 76 Claude-authored thesis-text commits after the base were re-authored to Arshad (code-only commit `8815bf9` stays Claude; Claude remains Co-Authored-By). Trees are byte-identical; only hashes changed. Hashes in this file are current; historical records (patches/, handoff/, VERSION_LOG, CHANGE_TRAIL, transcripts) keep the old hashes — translate via `HASH_MAP_2026-10-30_author_rewrite.tsv`. Base `184c91d` unchanged.
 

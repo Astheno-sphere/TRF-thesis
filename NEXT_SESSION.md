@@ -16,7 +16,7 @@ The old `trf-thesis` URL still redirects, but clone the new name. After cloning,
 ## 0. ONE-LINE STATE
 Branch `joao-base`, HEAD = the handoff commit after **e8311c4 (P88)**; check `git status -sb` for push state. Red team COMPLETE & committed. Statement of contribution DONE (P88).
 Thesis is **A-capable and defensible**; remaining grade risk is viva drilling + João's calls, not more editing.
-Next action = diagrams (§G last bullet). §A is closed — kept below as record.
+Next action = Tiger's items only (F-0 coordinator sign-off on the AI declaration; voice read of Ch4/Ch6; confirm the Ch1 motivation sentence (P101-08); logos; length limit; Lovdata § 17). §A closed; diagrams done (P91, P93); red team round 2 done (P94–P99, RED_TEAM.md); release 1.1.0 cited via concept DOI 10.5281/zenodo.23819274; first-person framing voice P101.
 
 **AUTHOR REWRITE (30 Oct 2026, Tiger-approved):** the 76 Claude-authored thesis-text commits after the base were re-authored to Arshad (code-only commit `8815bf9` stays Claude; Claude remains Co-Authored-By). Trees are byte-identical; only hashes changed. Hashes in this file are current; historical records (patches/, handoff/, VERSION_LOG, CHANGE_TRAIL, transcripts) keep the old hashes — translate via `HASH_MAP_2026-10-30_author_rewrite.tsv`. Base `184c91d` unchanged.
 
