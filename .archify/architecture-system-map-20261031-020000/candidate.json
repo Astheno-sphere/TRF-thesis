@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Where Crypto-Erasure by Invalidation attaches in the EHDS infrastructure",
+    "output": ".archify/architecture-system-map-20261031-020000/system-map.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "external": {
+          "label": "People and data sources"
+        },
+        "backend": {
+          "label": "EHDS infrastructure"
+        },
+        "database": {
+          "label": "Audit logs under a floor"
+        },
+        "security": {
+          "label": "The mechanism (Figure 4.1)"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "hp",
+      "type": "external",
+      "label": "Health professional",
+      "sublabel": "country of treatment",
+      "pos": [
+        40,
+        100
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "ncpb",
+      "type": "backend",
+      "label": "NCPeH B",
+      "sublabel": "country of treatment",
+      "pos": [
+        340,
+        100
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "ncpa",
+      "type": "backend",
+      "label": "NCPeH A",
+      "sublabel": "country of affiliation",
+      "pos": [
+        640,
+        100
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "ehr",
+      "type": "external",
+      "label": "National EHR source",
+      "sublabel": "patient summary",
+      "pos": [
+        940,
+        100
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "audit",
+      "type": "database",
+      "label": "NCPeH audit repositories",
+      "sublabel": "one per NCPeH, ATNA step 6",
+      "pos": [
+        480,
+        250
+      ],
+      "size": [
+        190,
+        68
+      ]
+    },
+    {
+      "id": "subject",
+      "type": "external",
+      "label": "Data subject",
+      "sublabel": "the patient",
+      "pos": [
+        40,
+        400
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "cei",
+      "type": "security",
+      "label": "Crypto-Erasure by Invalidation",
+      "sublabel": "per-record key, commitment, log",
+      "pos": [
+        470,
+        400
+      ],
+      "size": [
+        210,
+        68
+      ]
+    },
+    {
+      "id": "auditor",
+      "type": "external",
+      "label": "Auditor",
+      "sublabel": "supervisory authority",
+      "pos": [
+        940,
+        400
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "splog",
+      "type": "database",
+      "label": "SPE access log",
+      "sublabel": "floor 73(1)(e), ceiling 68(12)",
+      "pos": [
+        480,
+        550
+      ],
+      "size": [
+        190,
+        68
+      ]
+    },
+    {
+      "id": "user",
+      "type": "external",
+      "label": "Data user",
+      "sublabel": "researcher",
+      "pos": [
+        40,
+        700
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "hdab",
+      "type": "backend",
+      "label": "Health data access body",
+      "sublabel": "Helsedataservice",
+      "pos": [
+        340,
+        700
+      ],
+      "size": [
+        170,
+        68
+      ]
+    },
+    {
+      "id": "spe",
+      "type": "backend",
+      "label": "Secure Processing Env.",
+      "sublabel": "activity monitoring",
+      "pos": [
+        640,
+        700
+      ],
+      "size": [
+        170,
+        68
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Primary use: MyHealth@EU",
+      "wraps": [
+        "ncpb",
+        "ncpa",
+        "audit"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Secondary use: data permit",
+      "wraps": [
+        "hdab",
+        "spe",
+        "splog"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "hp",
+      "to": "ncpb",
+      "label": "request",
+      "variant": "emphasis"
+    },
+    {
+      "from": "ncpb",
+      "to": "ncpa",
+      "label": "ITI-55 query",
+      "variant": "emphasis"
+    },
+    {
+      "from": "ncpa",
+      "to": "ehr",
+      "label": "retrieve",
+      "variant": "emphasis"
+    },
+    {
+      "from": "ncpb",
+      "to": "audit",
+      "label": "audit record"
+    },
+    {
+      "from": "ncpa",
+      "to": "audit",
+      "label": "audit record"
+    },
+    {
+      "from": "audit",
+      "to": "cei",
+      "label": "attaches here",
+      "variant": "emphasis"
+    },
+    {
+      "from": "subject",
+      "to": "cei",
+      "label": "erasure, Art 17",
+      "variant": "dashed"
+    },
+    {
+      "from": "cei",
+      "to": "auditor",
+      "label": "inclusion proofs"
+    },
+    {
+      "from": "user",
+      "to": "hdab",
+      "label": "application"
+    },
+    {
+      "from": "hdab",
+      "to": "spe",
+      "label": "data permit"
+    },
+    {
+      "from": "spe",
+      "to": "splog",
+      "label": "access entry"
+    },
+    {
+      "from": "splog",
+      "to": "cei",
+      "label": "attaches here",
+      "variant": "emphasis"
+    },
+    {
+      "from": "hdab",
+      "to": "cei",
+      "label": "permit expiry",
+      "variant": "dashed"
+    }
+  ]
+}

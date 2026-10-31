@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "eaab4e56-fb4a-4cfb-a3d2-95e8a71e6ef4",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/candidate.json",
+  "output": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/system-map.html",
+  "specification": {
+    "sha256": "ba93e238fc1c7f27ac9bec12c01715c93012508834aa6664105588afe1709e84",
+    "bytes": 5113
+  },
+  "artifact": {
+    "sha256": "46c37e8ff9968bc16afa0600f2e515fe18cd19c41c02b731f49e3261f2c7e36a",
+    "bytes": 852710
+  }
+}

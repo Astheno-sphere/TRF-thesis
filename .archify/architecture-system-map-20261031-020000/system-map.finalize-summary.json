@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/candidate.json",
+    "sha256": "ba93e238fc1c7f27ac9bec12c01715c93012508834aa6664105588afe1709e84",
+    "bytes": 5113
+  },
+  "artifact": {
+    "path": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/system-map.html",
+    "sha256": "46c37e8ff9968bc16afa0600f2e515fe18cd19c41c02b731f49e3261f2c7e36a",
+    "bytes": 852710
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/system-map.finalize.json",
+    "summaryReceipt": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/system-map.finalize-summary.json",
+    "browserCheckReceipt": "/home/claude/trf-thesis/.archify/architecture-system-map-20261031-020000/system-map.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 5006,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}
