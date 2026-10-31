@@ -39,7 +39,7 @@ Records are represented exactly as the model specifies. Each carries metadata `m
 Two record classes are generated, implementing the two floor instances that Chapter 4 absorbed into one parameterised constraint:
 
 - *Cross-border audit records*, `F = 120` months, primary pathway. Erasure requests arrive for a given record with probability 0.40, at a uniformly distributed offset of one to one hundred and thirty months after creation. The offset range deliberately exceeds the window so that some requests fall outside it and the checker is not rigged to find violations.
-- *Secure Processing Environment access-log records*, `F = 12` months, secondary pathway. Each carries a permit expiry at a uniformly distributed one to twelve months after creation. Erasure requests arrive with probability 0.25.
+- *Secure Processing Environment access-log records*, `F = 12` months, secondary pathway. Each carries a permit expiry at a uniformly distributed one to twelve months after creation. Erasure requests arrive with probability 0.25. Every such record is treated as reached by the ceiling ($\rho(a) = 1$), which models the broad reading of Article 68(12) (Chapter 4, Section 4.4).
 
 One hundred records of each class are generated, a scale in keeping with the cohort of about one hundred synthetic patients fixed in Chapter 3, Section 3.5. Requests are drawn per record, not per data subject, and pseudonyms repeat across the two classes; every proposition is stated per record, so no reported figure depends on this, but the generator does not model a request that reaches all of one person's records. Seed 20260915 is fixed and reported; the run is deterministic and reproduces identically.
 

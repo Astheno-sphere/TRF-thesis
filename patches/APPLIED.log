@@ -1255,3 +1255,13 @@
 2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-30 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | RT2 m3: preprint label
 2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-31 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m3: preprint label
 2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-32 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m3: preprint label
+2026-10-31 02:06 | P97_formal_model.py | P97-01 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | M-1: the legal condition of Corollary 1.2 enters the model as the reach predicate rho
+2026-10-31 02:06 | P97_formal_model.py | P97-02 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | M-1: granularity is sufficient, not necessary
+2026-10-31 02:06 | P97_formal_model.py | P97-03 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | M-1: Rival 3 no longer says 'on either reading'
+2026-10-31 02:06 | P97_formal_model.py | P97-04 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | m-1: assumptions the proofs use, now stated in §4.3
+2026-10-31 02:06 | P97_formal_model.py | P97-05 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | m-1: Prop 2 construction for a record written after its own deadline
+2026-10-31 02:06 | P97_formal_model.py | P97-06 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | m-1: Prop 3 for e(a) < t(a)
+2026-10-31 02:06 | P97_formal_model.py | P97-07 | Chapter4_TRF_Model_v1.md | 58378ef9ddde -> 6a91c4d726e6 | m-2: say what kind of result Proposition 4 is
+2026-10-31 02:06 | P97_formal_model.py | P97-08 | Chapter5_Demonstration_v1.md | 52d482c24b25 -> f89ee06d60fd | M-1: the run's reach assumption stated
+2026-10-31 02:06 | P97_formal_model.py | P97-09 | Front_Matter_v1.md | 21e793369526 -> b7fb2f2f51fd | M-1: abstract states the condition the model now carries
+2026-10-31 02:06 | P97_formal_model.py | P97-10 | Front_Matter_v1.md | 21e793369526 -> b7fb2f2f51fd | M-1: Sammendrag matches the abstract
