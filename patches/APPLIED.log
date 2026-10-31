@@ -1150,3 +1150,4 @@
 2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-02 | Chapter5_Demonstration_v1.md | 86047e546ce3 -> d3cf35e00c9b | Table 5.1: current line count and page count
 2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-03 | code_artefacts/README_Appendix_A.md | 30fce3dd4b77 -> bbbe4eae18c1 | A.2: current line count and page count
 2026-10-31 01:39 | P91_figures_viewer_counts.py | P91-04 | Chapter4_TRF_Model_v1.md | fb65e40f7983 -> a1f17657148f | Fig 4.1 caption: mark the proactive trigger as specified-not-implemented, matching §4.8 and the redrawn figure
+2026-10-31 01:43 | P92_demo_app_sync.py | P92-01 | demo_app/app.py | dbbf69751c4a -> 4790848b9e92 | sync demo_app/app.py to TRF 46a3fcd (walk pages, claim ledger, thesis run on open)

@@ -47,7 +47,7 @@ passage by passage when the patch for that passage is written.
 | MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | CLOSED | P01 |  |
 | MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | CLOSED | P38, P41, P43 | Also C.1a folded into C.1 (P43) |
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
-| MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | CLOSED |  | P89 (30 Oct): TRF v1.0.1, DOI 10.5281/zenodo.23819275, cited in A.1 + abstract footer. |
+| MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | CLOSED | P89 | P89 (30 Oct): TRF v1.0.1, DOI 10.5281/zenodo.23819275, cited in A.1 + abstract footer. |
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
 | PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | PARTIAL | P53 | Hooks and sentence splits in Ch4/Ch6 (P53-01..14, 17..23); final read in your own voice still yours (T-7) |
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27, P43, P44 | Process residue removed from §2.1.4, §2.9, §5.7, §6.8, the Declaration (one statement), the checker header (P43, P44) |
