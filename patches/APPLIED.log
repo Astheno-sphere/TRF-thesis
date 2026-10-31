@@ -1153,3 +1153,36 @@
 2026-10-31 01:43 | P92_demo_app_sync.py | P92-01 | demo_app/app.py | dbbf69751c4a -> 4790848b9e92 | sync demo_app/app.py to TRF 46a3fcd (walk pages, claim ledger, thesis run on open)
 2026-10-31 01:48 | P93_two_figures.py | P93-01 | Chapter1_Introduction_v2.md | 718bc147f50e -> d5f8fa594dbd | Figure 1.1: whole-system map so the reader sees both logs and the attachment points before the argument
 2026-10-31 01:48 | P93_two_figures.py | P93-02 | Chapter5_Demonstration_v1.md | d3cf35e00c9b -> 5c9b511f63a8 | Figure 5.2: the Corollary 1.2 witness drawn, so Propositions 1 and 2 can be seen on one record
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-01 | Front_Matter_v1.md | ee0bcfa9de8a -> bb8e07707e92 | RT2-M1: SoC #3 no longer claims an EDPB 'corridor' for key deletion as erasure
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-02 | Front_Matter_v1.md | ee0bcfa9de8a -> bb8e07707e92 | m-11: the criteria do not demand per-record keys; claim restated at the level that holds
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-03 | Front_Matter_v1.md | ee0bcfa9de8a -> bb8e07707e92 | RT2-M1: name the key-deletion question among what is not claimed
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-04 | Chapter1_Introduction_v2.md | d5f8fa594dbd -> 4cb15313a8b6 | RT2-M1 + m-8: accurate EDPB statement with paragraphs; drop 'first time at Union level'
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-05 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | RT2-M1: §2.3 EDPB statement matched to paras 50, 51, 125
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-06 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | RT2-M1: the corridor as the Guidelines actually define it
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-07 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | m-9 components actually used; RT2-M3 'eHDSI-mandated'; RT2-M2 Annex 7 in context, gap rests on OPR-6
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-08 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | RT2-M1 + m5: no 'foundation ... as Article 17 erasure'; preprint described as proposed
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-09 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | RT2-M1: Table 2.1 row
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-10 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | RT2-M1: fourth gap
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-11 | Chapter2_LitReview_v2_FINAL.md | dc504b81b230 -> 777c7c82cae0 | RT2-M9: §2.9 no longer promises what §4.9 concludes against
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-12 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | M-6: per-record keys simplest, not required; name the alternative
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-13 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | M-2 + RT2-M1: model is indifferent between key destruction and deletion; crypto is for copies
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-14 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | m-3: the terminal transition removes accessor fields from the store, so 'erasing' overstated
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-15 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | m-3: terminal residue anonymity asserted, not tested
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-16 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | RT2-M1: §4.9 rests defensibility on deletion; key-destroyed copies a stated residue
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-17 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | RT2-M1: scope of the threat-model condition
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-18 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | RT2-M1: the threat-model condition is Aikebaier's, adopted here, not the Board's
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-19 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | M-2: Prop 4 shows relocation fails, not that cryptography is needed
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-20 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | m11: the partition is defined in §4.3
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-21 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | RT2-M1: Table 4.1 row restated to what the Guidelines say
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-22 | Chapter5_Demonstration_v1.md | 5c9b511f63a8 -> 59afed8f79ea | m-10: say what the AES refusal is and which check is cryptographic
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-23 | Chapter6_Discussion_v1.md | af99ebf9bb15 -> 520b670eb929 | M-2 / m5: §6.1 matched to what Prop 4 shows
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-24 | Chapter6_Discussion_v1.md | af99ebf9bb15 -> 520b670eb929 | RT2-M1: §6.2 no longer reads a 'functional reading of erasure' into the Guidelines
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-25 | Chapter6_Discussion_v1.md | af99ebf9bb15 -> 520b670eb929 | RT2-M2: Annex 7 quoted in its context
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-26 | Chapter6_Discussion_v1.md | af99ebf9bb15 -> 520b670eb929 | M-7: §6.3 matched to the Rival 4 concession
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-27 | Chapter6_Discussion_v1.md | af99ebf9bb15 -> 520b670eb929 | M-6: §6.4
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-28 | Chapter6_Discussion_v1.md | af99ebf9bb15 -> 520b670eb929 | M-6: §6.4
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-29 | Chapter7_Conclusion_v1.md | 2786aba7c42b -> 78866995ece4 | M-7: §7.2 no longer claims verifiability as such is new
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-30 | Chapter7_Conclusion_v1.md | 2786aba7c42b -> 78866995ece4 | RT2-M1: §7.2
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-31 | Chapter7_Conclusion_v1.md | 2786aba7c42b -> 78866995ece4 | m-11: §7.2
+2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-32 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | M-6: reference entry, verified against the CCS'13 first page and ePrint 2013/152
+2026-10-31 01:56 | P94b_merkle_term.py | P94b-01 | Chapter7_Conclusion_v1.md | 78866995ece4 -> b3b62318510e | restore defined term 'Merkle' in §7.2

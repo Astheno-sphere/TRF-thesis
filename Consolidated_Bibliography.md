@@ -49,6 +49,8 @@ Brunner, S., Johannessen, A., García-Torres, J., Çatak, F. Ö., Meinich-Bache,
 
 Bursuc, S., Gil-Pons, R., Mauw, S., & Trujillo-Rasua, R. (2024). *Software-based memory erasure with relaxed isolation requirements* (Extended version). arXiv. https://arxiv.org/abs/2401.06626 [Published version: 37th IEEE Computer Security Foundations Symposium (CSF 2024), Enschede, 8–12 July 2024] `[Ch2] [Ch6] [Ch7]`
 
+Cachin, C., Haralambiev, K., Hsiao, H.-C., & Sorniotti, A. (2013). Policy-based secure deletion. In *Proceedings of the 2013 ACM SIGSAC Conference on Computer and Communications Security (CCS '13)* (pp. 259–270). ACM. https://eprint.iacr.org/2013/152 `[Ch4]`
+
 Camenisch, J., & Lysyanskaya, A. (2002). Dynamic accumulators and application to efficient revocation of anonymous credentials. In *Advances in Cryptology — CRYPTO 2002* (LNCS 2442, pp. 61–76). Springer. https://doi.org/10.1007/3-540-45708-9_5 `[Ch2] [Ch4]`
 
 Cao, Y., & Yang, J. (2015). Towards making systems forget with machine unlearning. In *2015 IEEE Symposium on Security and Privacy* (pp. 463–480). IEEE. https://doi.org/10.1109/SP.2015.35 `[Ch2]`
