@@ -47,7 +47,7 @@ passage by passage when the patch for that passage is written.
 | MIN-12 | §1.5 "addendum to the thesis supervisor": remove or make an appendix | CLOSED | P01 |  |
 | MIN-13 | Numbering: §5.5a, §6.9a, Appendix A sequence; regenerate TOC | CLOSED | P38, P41, P43 | Also C.1a folded into C.1 (P43) |
 | MIN-14 | Title page logo placeholders must render | OPEN |  | Embed the logos; check in the PDF |
-| MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | OPEN |  |  |
+| MIN-15 | Cite a repository tag or commit, archive on Zenodo with a DOI | CLOSED |  | P89 (30 Oct): TRF v1.0.1, DOI 10.5281/zenodo.23819275, cited in A.1 + abstract footer. |
 | PRES-1 | Cut defensive meta-commentary by at least half | CLOSED | P26 | 84 → 31 matches (−63%) with the widened detector; remaining hits carry argument or are PRES-3 process material |
 | PRES-2 | Voice: prose in the candidate's own voice, esp. Ch4 and Ch6 | PARTIAL | P53 | Hooks and sentence splits in Ch4/Ch6 (P53-01..14, 17..23); final read in your own voice still yours (T-7) |
 | PRES-3 | Process material: one statement in the Declaration; Version and Change Record to the repository | CLOSED | P27, P43, P44 | Process residue removed from §2.1.4, §2.9, §5.7, §6.8, the Declaration (one statement), the checker header (P43, P44) |
@@ -81,7 +81,7 @@ passage by passage when the patch for that passage is written.
 | R4-C7 | Implement subject-field commitment, third tamper test, re-record outputs, update §5.7, Table 4.1, Fig 4.1, not-implemented lists | CLOSED | P58, P58b, P58c, P58d, P59b | Third test fails as required; outputs re-recorded |
 | R4-C8 | Regenerate Figure 5.1 (eight pages), thesis legend categories; Figure 4.1 with m_acc storage and link commitment | CLOSED | P59e | Archify finalize pass (B-50, B-52) |
 | R4-C9 | Re-run full-cohort Table 5.7 with final code; simplify notes | CLOSED | P59b, P59c | 1,002 bytes; six measures identical |
-| R4-C10 | Pin Synthea; record jar SHA-256; tag the repository release and cite it in A.1 | PARTIAL | P59b | Commit d9d07a6 and SHA-256 recorded. Release tag and A.1 citation pending (end, with Zenodo) |
+| R4-C10 | Pin Synthea; record jar SHA-256; tag the repository release and cite it in A.1 | CLOSED | P59b | Commit d9d07a6 and SHA-256 recorded. Release tag and A.1 citation pending (end, with Zenodo) Release tag v1.0.1 + DOI cited in A.1 (P89). |
 | R4-C11 | Datatilsynet enquiry: date and status | CLOSED | P59b, P84 | Send date confirmed by Tiger (20 Oct): 23 September 2026, response pending at submission (Ch7 §7.4). Same sentence updated to record the Helsedirektoratet reply of 19 Oct (P84) |
 | R4-C12 | Cite TEHDAS2 D6.3 v2.0; re-check quotes and pages | PARTIAL | P59b | v2.0 cited as 2026a, Section 7.2; two unsupported claims removed. Page number unverified (PDF not downloadable here) |
 | R4-C13 | Restore truncated queries 12, 13, 17 | CLOSED | P59b | Restored from the 22 May chat record, marked |
