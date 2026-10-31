@@ -1223,3 +1223,35 @@
 2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-35 | Chapter7_Conclusion_v1.md | b3b62318510e -> 3e92d66594bf | M-3: §7.1
 2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-36 | Chapter7_Conclusion_v1.md | b3b62318510e -> 3e92d66594bf | RT2-M2: §7.1 rests on OPR-6, which says it
 2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-37 | Chapter7_Conclusion_v1.md | b3b62318510e -> 3e92d66594bf | M-3: §7.1
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-01 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | examiner M-4 / RT2 M7, M11: SQ1-SQ3 answered by name; headline answer carries the authority caveat
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-02 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | RT2 m6: 'two interpretive steps' against three questions
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-03 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | RT2 m7: single seed and US Core profiles are in §3.5, not §3.7
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-04 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | RT2 m8: one description of the audit stream, §2.2's
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-05 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | RT2 M6: runtime claim false (0.43 s measured) and contradicted §3.6/§5.8
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-06 | Chapter5_Demonstration_v1.md | b66f1da7e1b7 -> 52d482c24b25 | RT2 M6: §5.8 says no timing appears anywhere
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-07 | code_artefacts/README_Appendix_A.md | bbbe4eae18c1 -> 21a52c19d41e | RT2 M6: stale runtime (predates the Merkle log)
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-08 | code_artefacts/README_Appendix_A.md | bbbe4eae18c1 -> 21a52c19d41e | RT2 M5: module count agrees with §5.2 and Table 5.1
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-09 | code_artefacts/README_Appendix_A.md | bbbe4eae18c1 -> 21a52c19d41e | RT2 m9: §5.6 needs the flag
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-10 | Front_Matter_v1.md | 730e772cfc32 -> 21e793369526 | RT2 m9: TOC matches the heading
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-11 | Chapter5_Demonstration_v1.md | b66f1da7e1b7 -> 52d482c24b25 | examiner m-6: 53 -> 9 means 44 lapse (recomputed from the checker)
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-12 | Chapter5_Demonstration_v1.md | b66f1da7e1b7 -> 52d482c24b25 | RT2 m11 + examiner m-5: what §3.5 fixes; per-record requests disclosed
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-13 | Chapter5_Demonstration_v1.md | b66f1da7e1b7 -> 52d482c24b25 | examiner m-2: the Prop 2 SMT check is near-tautological; say so
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-14 | Front_Matter_v1.md | 730e772cfc32 -> 21e793369526 | examiner m-7: §2.3 names a Helsedirektoratet official
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-15 | Chapter3_Methodology_v1.md | 9910fcf33ca2 -> 1e6647d6226b | examiner m-7: §3.9 consistent with §2.3
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-16 | Front_Matter_v1.md | 730e772cfc32 -> 21e793369526 | RT2 m3: retrievability claim matches the two non-retrievable sources
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-17 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m3: inclusion criterion names its exceptions
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-18 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m5: matches §6.9 and §7.2
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-19 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m5: a single-author preprint proposes; it does not demonstrate
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-20 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m8: one description of the audit stream
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-21 | Chapter1_Introduction_v2.md | 3680d246cc9e -> 87d5052e38ca | RT2 m8: one description of the audit stream
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-22 | Chapter6_Discussion_v1.md | 305b34cd189a -> 53c11ff533e9 | RT2 m8
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-23 | Chapter6_Discussion_v1.md | 305b34cd189a -> 53c11ff533e9 | RT2 m8
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-24 | Chapter6_Discussion_v1.md | 305b34cd189a -> 53c11ff533e9 | RT2 m5: scope the establishment claim to the model
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-25 | Chapter6_Discussion_v1.md | 305b34cd189a -> 53c11ff533e9 | RT2 m11: the enquiry had already been sent
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-26 | Chapter6_Discussion_v1.md | 305b34cd189a -> 53c11ff533e9 | RT2 m11: §6.9 lists three implications
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-27 | Chapter6_Discussion_v1.md | 305b34cd189a -> 53c11ff533e9 | RT2 m7
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-28 | Chapter4_TRF_Model_v1.md | d3e8372bfe2b -> 58378ef9ddde | RT2 m1: draft status; 'may be regarded as anonymous where' is the Guidelines' wording (para 52)
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-29 | Chapter4_TRF_Model_v1.md | d3e8372bfe2b -> 58378ef9ddde | RT2 m1: label the consultation draft
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-30 | Chapter7_Conclusion_v1.md | 3e92d66594bf -> d7c0ca0630f2 | RT2 m3: preprint label
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-31 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m3: preprint label
+2026-10-31 02:03 | P96_ch7_answers_and_consistency.py | P96-32 | Chapter2_LitReview_v2_FINAL.md | 0e1778c0a815 -> deba74b978f4 | RT2 m3: preprint label

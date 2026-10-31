@@ -97,7 +97,7 @@ European Data Protection Board. (2026a). *Coordinated Enforcement Action, implem
 
 European Data Protection Board. (2026b). *Guidelines 02/2025 on processing of personal data through blockchain technologies* (Version 2.0, adopted 7 July 2026 following public consultation). EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202502_blockchain_v2_en.pdf `[Ch1] [Ch2] [Ch4] [Ch6]`
 
-European Data Protection Board. (2026c). *Guidelines 02/2026 on anonymisation* (Version 1.0, adopted 7 July 2026). EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202602_anonymisation_v1_en_0.pdf `[Ch4]`
+European Data Protection Board. (2026c). *Guidelines 02/2026 on anonymisation* (Version 1.0, adopted 7 July 2026, for public consultation) [Draft]. EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202602_anonymisation_v1_en_0.pdf `[Ch4]`
 
 European Parliament and Council of the European Union. (2013). Regulation (EU) No 952/2013 of 9 October 2013 laying down the Union Customs Code. *Official Journal of the European Union*, L 269, 1–101. https://eur-lex.europa.eu/eli/reg/2013/952/oj `[Ch2]`
 
@@ -115,7 +115,7 @@ Folkehelseinstituttet. (2024). *Helsedata* [Department page describing Helsedata
 
 Forskningsetikk. (2023). *Helsedataservice takes over authority to process applications and grant access to health data*. Norwegian National Research Ethics Committees. https://www.forskningsetikk.no/en/news-archive/helsedataservice-takes-over-authority-to-process-applications-and-grant-access-to-health-data/ `[Ch2]`
 
-Gabizon, A., Williamson, Z. J., & Ciobotaru, O. (2019). *PLONK: Permutations over Lagrange-bases for oecumenical noninteractive arguments of knowledge* (Cryptology ePrint Archive, Paper 2019/953). https://eprint.iacr.org/2019/953 `[Ch7]`
+Gabizon, A., Williamson, Z. J., & Ciobotaru, O. (2019). *PLONK: Permutations over Lagrange-bases for oecumenical noninteractive arguments of knowledge* (Cryptology ePrint Archive, Paper 2019/953) [Preprint]. https://eprint.iacr.org/2019/953 `[Ch7]`
 
 Groth, J. (2016). On the size of pairing-based non-interactive arguments. In *Advances in Cryptology — EUROCRYPT 2016* (LNCS 9666, pp. 305–326). Springer. https://doi.org/10.1007/978-3-662-49896-5_11 `[Ch7]`
 
@@ -195,7 +195,7 @@ Scope, N., Rasin, A., Lenard, B., Wagner, J., & Heart, K. (2022). Purging compli
 
 SecuPi. (2025). *Crypto-shredding is not nirvana for right of erasure or RTBF compliance* [Industry commentary]. https://secupi.com/crypto-shredding-is-not-nirvana-for-right-of-erasure-or-rtbf-compliance/ `[Ch4] [Ch6]`
 
-Sharma, S., Petrovic, G., & Kaushik, S. (2025). *zkFL-Health: Blockchain-enabled zero-knowledge federated learning for medical AI privacy*. arXiv. https://doi.org/10.48550/arXiv.2512.21048 `[Ch2]`
+Sharma, S., Petrovic, G., & Kaushik, S. (2025). *zkFL-Health: Blockchain-enabled zero-knowledge federated learning for medical AI privacy* [Preprint; not peer-reviewed]. arXiv. https://doi.org/10.48550/arXiv.2512.21048 `[Ch2]`
 
 Simjanoska Misheva, M., Shahpaski, D., Dobreva, J., Bukovec, D., Gjorgjioski, B., Nikolov, M., … Gams, M. (2025). AI Act compliance within the MyHealth@EU framework: Tutorial. *Journal of Medical Internet Research*, *27*, e81184. https://doi.org/10.2196/81184 `[Ch1] [Ch2]`
 
@@ -217,5 +217,5 @@ VeritasChain. (2026, 18 January). *Crypto-shredding: The technical foundation fo
 
 Walonoski, J., Kramer, M., Nichols, J., Quina, A., Moesel, C., Hall, D., Duffett, C., Dube, K., Gallagher, T., & McLachlan, S. (2018). Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record. *Journal of the American Medical Informatics Association*, *25*(3), 230–238. https://doi.org/10.1093/jamia/ocx079 `[Ch3] [Ch5]`
 
-Zhuang, Z., Lee, X., Wei, J., Fu, Y., & Zhang, A. (2024). *CBCMS: A compliance management system for cross-border data transfer*. arXiv. https://doi.org/10.48550/arXiv.2412.08993 `[Ch2]`
+Zhuang, Z., Lee, X., Wei, J., Fu, Y., & Zhang, A. (2024). *CBCMS: A compliance management system for cross-border data transfer* [Preprint; not peer-reviewed]. arXiv. https://doi.org/10.48550/arXiv.2412.08993 `[Ch2]`
 
