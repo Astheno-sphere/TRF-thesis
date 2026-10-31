@@ -38,7 +38,7 @@ The extension particular to this thesis is the insertion of a formal-modelling s
 
 Three consequences follow from taking this step, and they shape the remainder of the methodology.
 
-First, the design becomes falsifiable in a way that an asserted architecture is not. If the constraint system is satisfiable under the proposed semantics, the mechanism follows; if it is not, the mechanism fails, and the failure is visible in the model rather than only in deployment.
+First, the infeasibility claim becomes falsifiable in a way that an asserted architecture is not, and the feasibility claim, being constructive, is verified rather than tested (Chapter 4, Section 4.7). If the constraint system is satisfiable under the proposed semantics, the mechanism follows; if it is not, the mechanism fails, and the failure is visible in the model rather than only in deployment.
 
 Second, the evaluation criteria are fixed in advance by the model rather than chosen afterwards to suit the artefact. The mechanism succeeds exactly when it renders the three constraints jointly satisfiable while preserving the accountability content of the audit record; no other success criterion is admitted.
 

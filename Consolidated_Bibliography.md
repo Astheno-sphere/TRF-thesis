@@ -25,6 +25,8 @@ Aikebaier, Y. (2026). *SoK: Cryptographic erasure on public ledgers: Application
 
 Albalwy, F. (2026). Zero-knowledge-based policy enforcement for privacy-preserving cross-institutional health data sharing on blockchain. *Systems*, *14*(4), 385. https://doi.org/10.3390/systems14040385 `[Ch1] [Ch2]`
 
+Arfelt, E., Basin, D., & Debois, S. (2019). Monitoring the GDPR. In *Computer Security – ESORICS 2019* (Lecture Notes in Computer Science, pp. 681–699). Springer. https://doi.org/10.1007/978-3-030-29959-0_33 `[Ch2]`
+
 Ateniese, G., Chou, D. H., de Medeiros, B., & Tsudik, G. (2005). Sanitizable signatures. In S. de Capitani di Vimercati, P. Syverson, & D. Gollmann (Eds.), *Computer Security – ESORICS 2005* (LNCS 3679, pp. 159–177). Springer. https://doi.org/10.1007/11555827_10 `[Ch2]`
 
 Ateniese, G., Magri, B., Venturi, D., & Andrade, E. R. (2017). Redactable blockchain – or – rewriting history in Bitcoin and friends. In *2017 IEEE European Symposium on Security and Privacy (EuroS&P)* (pp. 111–126). IEEE. https://doi.org/10.1109/EuroSP.2017.37 `[Ch2]`
@@ -49,7 +51,7 @@ Brunner, S., Johannessen, A., García-Torres, J., Çatak, F. Ö., Meinich-Bache,
 
 Bursuc, S., Gil-Pons, R., Mauw, S., & Trujillo-Rasua, R. (2024). *Software-based memory erasure with relaxed isolation requirements* (Extended version). arXiv. https://arxiv.org/abs/2401.06626 [Published version: 37th IEEE Computer Security Foundations Symposium (CSF 2024), Enschede, 8–12 July 2024] `[Ch2] [Ch6] [Ch7]`
 
-Cachin, C., Haralambiev, K., Hsiao, H.-C., & Sorniotti, A. (2013). Policy-based secure deletion. In *Proceedings of the 2013 ACM SIGSAC Conference on Computer and Communications Security (CCS '13)* (pp. 259–270). ACM. https://eprint.iacr.org/2013/152 `[Ch4]`
+Cachin, C., Haralambiev, K., Hsiao, H.-C., & Sorniotti, A. (2013). Policy-based secure deletion. In *Proceedings of the 2013 ACM SIGSAC Conference on Computer and Communications Security (CCS '13)* (pp. 259–270). ACM. https://eprint.iacr.org/2013/152 `[Ch2] [Ch4]`
 
 Camenisch, J., & Lysyanskaya, A. (2002). Dynamic accumulators and application to efficient revocation of anonymous credentials. In *Advances in Cryptology — CRYPTO 2002* (LNCS 2442, pp. 61–76). Springer. https://doi.org/10.1007/3-540-45708-9_5 `[Ch2] [Ch4]`
 
@@ -117,6 +119,8 @@ Forskningsetikk. (2023). *Helsedataservice takes over authority to process appli
 
 Gabizon, A., Williamson, Z. J., & Ciobotaru, O. (2019). *PLONK: Permutations over Lagrange-bases for oecumenical noninteractive arguments of knowledge* (Cryptology ePrint Archive, Paper 2019/953) [Preprint]. https://eprint.iacr.org/2019/953 `[Ch7]`
 
+Geambasu, R., Kohno, T., Levy, A. A., & Levy, H. M. (2009). Vanish: Increasing data privacy with self-destructing data. In *Proceedings of the 18th USENIX Security Symposium*. USENIX Association. https://www.usenix.org/conference/usenixsecurity09/technical-sessions/presentation/vanish-increasing-data-privacy-self `[Ch2]`
+
 Groth, J. (2016). On the size of pairing-based non-interactive arguments. In *Advances in Cryptology — EUROCRYPT 2016* (LNCS 9666, pp. 305–326). Springer. https://doi.org/10.1007/978-3-662-49896-5_11 `[Ch7]`
 
 Healthy Europe. (2026, 12 February). *EHDS progress report: Where does Europe's Health Data Space stand?* https://healthyeurope.eu/european-health-data-space/ `[Ch2]`
@@ -175,6 +179,8 @@ OpenNCP Project. (2017). *OpenNCP* [Computer software; GitHub mirror of the epSO
 
 Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45–77. https://doi.org/10.2753/MIS0742-1222240302 `[Ch1] [Ch3]`
 
+Perlman, R. (2005). The Ephemerizer: Making data disappear. *Journal of Information Systems Security*, *1*(1), 51–68. https://jissec.org/Contents/V1/N1/V1N1-Perlman.html `[Ch2]`
+
 Politiregisterloven. (2010). *Lov om behandling av opplysninger i politiet og påtalemyndigheten* (LOV-2010-05-28-16), § 17 Kravet til sporbarhet [Consolidated text as last amended by LOV-2026-06-19-49, in force 1 October 2026; § 17 unamended; read 5 October 2026]. Norwegian Ministry of Justice and Public Security. https://lovdata.no/lov/2010-05-28-16 `[Ch6]`
 
 Politou, E., Casino, F., Alepis, E., & Patsakis, C. (2021). Blockchain mutability: Challenges and proposed solutions. *IEEE Transactions on Emerging Topics in Computing, 9*(4), 1972–1986. https://doi.org/10.1109/TETC.2019.2949510 `[Ch2]`
@@ -212,6 +218,8 @@ Sundhedsdatastyrelsen. (2026). *ehdsi* [Computer software; Danish NCPeH deployme
 TEHDAS2. (2026a). *Guideline for Health Data Access Bodies on the procedures and formats for data access* (D6.3, Version 2.0, final deliverable, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20199187 `[Ch1] [Ch2] [Ch4]`
 
 TEHDAS2. (2026b). *Technical specification for Health Data Access Bodies on the implementation of secure processing environments* (D7.4, Version 1.2, 24 February 2026). TEHDAS2 Joint Action. https://doi.org/10.5281/zenodo.20266473 `[Ch2] [Ch4] [Ch6] [Ch7]`
+
+Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: A framework for evaluation in design science research. *European Journal of Information Systems*, *25*(1), 77–89. https://doi.org/10.1057/ejis.2014.36 `[Ch6]`
 
 VeritasChain. (2026, 18 January). *Crypto-shredding: The technical foundation for reconciling GDPR and financial record-keeping obligations* [Industry analysis, published under the name VeritasChain Standards Organization — a self-declared standards initiative founded 24 November 2025, operationally supported by VeritasChain Inc. and not accredited by any recognised standards body]. https://veritaschain.org/blog/posts/2026-01-18-crypto-shredding-gdpr-mifid-ii-reconciliation/ `[Ch2]`
 

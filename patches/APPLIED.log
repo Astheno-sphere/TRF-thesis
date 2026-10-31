@@ -1265,3 +1265,13 @@
 2026-10-31 02:06 | P97_formal_model.py | P97-08 | Chapter5_Demonstration_v1.md | 52d482c24b25 -> f89ee06d60fd | M-1: the run's reach assumption stated
 2026-10-31 02:06 | P97_formal_model.py | P97-09 | Front_Matter_v1.md | 21e793369526 -> b7fb2f2f51fd | M-1: abstract states the condition the model now carries
 2026-10-31 02:06 | P97_formal_model.py | P97-10 | Front_Matter_v1.md | 21e793369526 -> b7fb2f2f51fd | M-1: Sammendrag matches the abstract
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-01 | Chapter4_TRF_Model_v1.md | 6a91c4d726e6 -> 3ecb4bc59b59 | M-10: the harmonising reading stated, and where it leaves the argument
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-02 | Chapter4_TRF_Model_v1.md | 6a91c4d726e6 -> 3ecb4bc59b59 | M-10: Rival 1 no longer says 'decisively'
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-03 | Chapter3_Methodology_v1.md | 1e6647d6226b -> 3a262ee7084d | M-11: §3.3 no longer says a by-construction result is falsifiable
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-04 | Chapter6_Discussion_v1.md | 53c11ff533e9 -> 837e3b3d0805 | M-11: classify the evaluation; name what is unevaluated
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-05 | Chapter2_LitReview_v2_FINAL.md | deba74b978f4 -> c2ccf6e89adf | M-9: no untested 'without modification' transfer claim
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-06 | Chapter7_Conclusion_v1.md | d7c0ca0630f2 -> 6f7f57f441d4 | M-9: the programme-native application first
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-07 | Chapter2_LitReview_v2_FINAL.md | deba74b978f4 -> c2ccf6e89adf | M-8: deadline/policy-driven key destruction prior art placed
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-08 | Chapter2_LitReview_v2_FINAL.md | deba74b978f4 -> c2ccf6e89adf | M-8: formal GDPR monitoring prior art placed
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-09 | Chapter2_LitReview_v2_FINAL.md | deba74b978f4 -> c2ccf6e89adf | M-8: reference entries, each verified
+2026-10-31 02:11 | P98_law_method_fit_priorart.py | P98-10 | Chapter6_Discussion_v1.md | 53c11ff533e9 -> 837e3b3d0805 | M-11: reference entry, verified

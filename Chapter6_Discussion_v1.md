@@ -72,7 +72,7 @@ No measurement supports any of this. The demonstration made no performance claim
 
 ## 6.6 Evaluation Design and the Role of Stakeholder Assessment
 
-A model can be right and still be refused by the people who would have to run it. The evaluation reported in this thesis is analytical, and Section 3.7 states its criteria. That evaluation assesses whether the artefact is internally coherent, whether it fits the infrastructure it was designed against, and whether its results reproduce. It does not assess whether the people who would have to deploy it find it defensible, implementable, or trustworthy, and those are different questions that analytical evaluation cannot answer.
+A model can be right and still be refused by the people who would have to run it. The evaluation reported in this thesis is analytical, and Section 3.7 states its criteria. That evaluation assesses whether the artefact is internally coherent, whether it fits the infrastructure it was designed against, and whether its results reproduce. It does not assess whether the people who would have to deploy it find it defensible, implementable, or trustworthy, and those are different questions that analytical evaluation cannot answer. In the terms of Venable, Pries-Heje and Baskerville's (2016) framework for evaluation in design science research, the evaluation reported here is artificial rather than naturalistic: it tests the design against a formal model, an infrastructure analysis and generated data, not in use. Utility, efficacy in operation and acceptance by those who would run the mechanism are therefore not evaluated, and naturalistic evaluation is the purpose of the instrument described next.
 
 An instrument for answering them has been designed and is specified in full in Appendix C: an eight-person expert panel spanning data protection, health IT architecture, Secure Processing Environment operation, and information logistics, a demonstration-led session structure, a semi-structured interview guide, and a sixteen-item closed-response instrument across perceived utility, regulatory alignment, operational viability, and audit integrity.
 
@@ -147,6 +147,8 @@ Against those, the collision is textual and, on the narrow reading of Article 68
 ---
 
 ## References (Chapter 6)
+
+Venable, J., Pries-Heje, J., & Baskerville, R. (2016). FEDS: A framework for evaluation in design science research. *European Journal of Information Systems*, *25*(1), 77–89. https://doi.org/10.1057/ejis.2014.36
 
 Aikebaier, Y. (2026). *SoK: Cryptographic erasure on public ledgers: Application-layer architectures, key-lifecycle adversaries, and GDPR Art. 17 equivalence* (Cryptology ePrint Archive, Paper 2026/1109). https://eprint.iacr.org/2026/1109 [Preprint; not peer-reviewed]
 
