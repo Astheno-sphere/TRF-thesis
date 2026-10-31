@@ -1186,3 +1186,40 @@
 2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-31 | Chapter7_Conclusion_v1.md | 2786aba7c42b -> 78866995ece4 | m-11: §7.2
 2026-10-31 01:55 | P94_key_deletion_and_edpb.py | P94-32 | Chapter4_TRF_Model_v1.md | a1f17657148f -> 742f00ad169a | M-6: reference entry, verified against the CCS'13 first page and ePrint 2013/152
 2026-10-31 01:56 | P94b_merkle_term.py | P94b-01 | Chapter7_Conclusion_v1.md | 78866995ece4 -> b3b62318510e | restore defined term 'Merkle' in §7.2
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-01 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | M-3: abstract carries the Helsedirektoratet answer
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-02 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | M-5: the reported run uses constructed payloads; Synthea substitution changes nothing
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-03 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | m10: 'carries the argument' sat awkwardly beside 'the weight lies ... not in the proofs'
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-04 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | RT2-M10: abstract contributions match the Statement of Contribution and §7.2
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-05 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | M-3: Sammendrag matches the abstract
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-06 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | M-5: Sammendrag matches the abstract
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-07 | Front_Matter_v1.md | bb8e07707e92 -> 730e772cfc32 | m10 + RT2-M10: Sammendrag gains the self-limitation sentence and the four contributions
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-08 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | M-3: §1.1
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-09 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | M-3: §1.1
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-10 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | M-3: §1.2
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-11 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | M-3: §1.3
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-12 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | RT2-M8: Prop 3 makes L <= F necessary, sufficient only with a shared anchor
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-13 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | M-3: RQ gloss
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-14 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | RT2-M2: Annex 7 in its context
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-15 | Chapter1_Introduction_v2.md | 4cb15313a8b6 -> 3680d246cc9e | prior-art hunter: hedge the one unhedged novelty sentence
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-16 | Chapter2_LitReview_v2_FINAL.md | 777c7c82cae0 -> 0e1778c0a815 | M-3: §2.2
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-17 | Chapter2_LitReview_v2_FINAL.md | 777c7c82cae0 -> 0e1778c0a815 | M-3: §2.3
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-18 | Chapter2_LitReview_v2_FINAL.md | 777c7c82cae0 -> 0e1778c0a815 | M-3: §2.7
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-19 | Chapter2_LitReview_v2_FINAL.md | 777c7c82cae0 -> 0e1778c0a815 | M-3: §2.10
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-20 | Chapter2_LitReview_v2_FINAL.md | 777c7c82cae0 -> 0e1778c0a815 | RT2-M2: §2.9 Annex 7 in context
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-21 | Chapter2_LitReview_v2_FINAL.md | 777c7c82cae0 -> 0e1778c0a815 | m4: no representativeness claim (A.7 denies one)
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-22 | Chapter3_Methodology_v1.md | 49c6dd9baa97 -> 9910fcf33ca2 | M-3: §3.4
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-23 | Chapter3_Methodology_v1.md | 49c6dd9baa97 -> 9910fcf33ca2 | m4 + M-5: §3.5 says what the synthetic cohort is used for
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-24 | Chapter3_Methodology_v1.md | 49c6dd9baa97 -> 9910fcf33ca2 | M-5: audit records are not generated from encounter events
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-25 | Chapter3_Methodology_v1.md | 49c6dd9baa97 -> 9910fcf33ca2 | M-3: §3.6
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-26 | Chapter3_Methodology_v1.md | 49c6dd9baa97 -> 9910fcf33ca2 | M-5 / RT2 m11: what synthea_layer.py does
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-27 | Chapter4_TRF_Model_v1.md | 742f00ad169a -> d3e8372bfe2b | M-3: §4.2 patient link after Art 9(2)
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-28 | Chapter4_TRF_Model_v1.md | 742f00ad169a -> d3e8372bfe2b | M-3: Art 17(3)(b) needs an obligation under Union or Member State law
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-29 | Chapter4_TRF_Model_v1.md | 742f00ad169a -> d3e8372bfe2b | M-3: §4.3
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-30 | Chapter4_TRF_Model_v1.md | 742f00ad169a -> d3e8372bfe2b | M-3: §4.4
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-31 | Chapter4_TRF_Model_v1.md | 742f00ad169a -> d3e8372bfe2b | M-3: Corollary 2.2
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-32 | Chapter4_TRF_Model_v1.md | 742f00ad169a -> d3e8372bfe2b | M-3: §4.12
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-33 | Chapter5_Demonstration_v1.md | 59afed8f79ea -> b66f1da7e1b7 | M-3: Table 5.2
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-34 | Chapter6_Discussion_v1.md | 520b670eb929 -> 305b34cd189a | RT2-M8: §6.10 condition stated as Prop 3 states it
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-35 | Chapter7_Conclusion_v1.md | b3b62318510e -> 3e92d66594bf | M-3: §7.1
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-36 | Chapter7_Conclusion_v1.md | b3b62318510e -> 3e92d66594bf | RT2-M2: §7.1 rests on OPR-6, which says it
+2026-10-31 02:00 | P95_helsedir_annex7_abstract.py | P95-37 | Chapter7_Conclusion_v1.md | b3b62318510e -> 3e92d66594bf | M-3: §7.1

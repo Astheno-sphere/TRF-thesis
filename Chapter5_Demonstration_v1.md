@@ -48,7 +48,7 @@ One hundred records of each class are generated, matching the population scale f
 | Parameter | Cross-border audit | SPE access log |
 |---|---|---|
 | Records generated | 100 | 100 |
-| Retention floor *F* | 120 months (eHDSI baseline as reported; illustrative) | 12 months (Art 73(1)(e)) |
+| Retention floor *F* | 120 months (illustrative long floor; Norwegian pilot: 72) | 12 months (Art 73(1)(e)) |
 | Pathway $\sigma$ | primary | secondary |
 | Creation month *t_a* | uniform [0, 11] | uniform [0, 11] |
 | Erasure-request probability | 0.40 | 0.25 |
