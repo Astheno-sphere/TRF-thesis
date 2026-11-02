@@ -193,3 +193,30 @@ available to you that most candidates do not have.
 Know the four figures cold: 95 violations across 90 of 200 records, 39 Corollary 1.2
 witnesses that received no erasure request at all, 138 invalidations, zero violations under
 Semantics II.
+
+---
+
+## End-check additions (2 Nov 2026): what an examiner found after round 2
+
+These come from an independent examiner-style attack on the submitted text. The answers point to sections; say them in your own words.
+
+**The hardest one.** *"Art. 17(3)(b) already settles floor against erasure. Your cross-border floor rests on no statute, and Corollary 1.2 on a contested reading. What legal conflict is left?"*
+Concede the first half. Art. 17(3)(b) says necessary content survives; it does not say what that content is. The contribution is the necessity boundary (§4.2) and a mechanism that implements it. Proposition 1 targets repositories that keep everything readable by default (OpenNCP, §4.5): those cannot honour the boundary. Art. 9(2) gives a binding 36-month floor from 2029 (§4.3). Corollary 1.2 is conditional, and on the harmonising reading the question returns to §4.2 (§4.6). The authority question is open and has been put to the authorities (§7.4, Appendix D).
+
+**Points the examiner raised that the text has not fully settled (decide whether to fix or defend):**
+1. *Proposition 1 and Art. 17(3)(b).* If the floor really required plaintext (Semantics I), 17(3)(b) would exempt the payload and C2 would never fire. Defence: Proposition 1's request-driven case holds for payload that §4.2 shows is not necessary; say so plainly.
+2. *The six-year pilot floor has no statute behind it.* It is the controller's decision (Appendix D). Before Art. 9 applies (26 March 2029), and for months 37 to 72 after, keeping the patient link after a request has no 17(3)(b) basis. Defence: the floor is a parameter (Corollary 2.2); the gap is a finding for Helsedirektoratet, not a flaw in the model.
+3. *Corollary 1.2 links subject fields to payload.* A log entry is health data because of its subject fields, yet C3 deletes the payload. If activity content is not itself health data, keep the payload readable and delete the subject fields. Defence: patient-level activity content is itself electronic health data; state it as the premise.
+4. *ITI-55 identifier case.* With identifier-based patient discovery the payload is just the identifier, which the mechanism keeps as the subject link, so cross-border erasure removes little. Concede: the demographic-matching case is the one that bites (§4.3).
+5. *"Verifiable" in the title.* An auditor cannot verify that a key is gone (§4.9). "Verifiable" qualifies the invalidation record, not the erasure. Be ready to say exactly that.
+6. *External-auditor verifiability* is set as a DSR objective in §3.2 and not reported against in Chapter 7. Answer: §6.3 and §4.9: the auditor verifies the attributed invalidation entry and its inclusion proof, not the destruction.
+7. *Logistics fit.* No objective function, no optimisation. Answer: information is part of logistics flow and storage (§2.7); the floor works as a per-consignment chain-of-custody parameter (§4.3); Proposition 3 is a two-clock perishability result. Concede there is no optimisation.
+
+**Likely questions, short answers.**
+- *Proposition 2 holds by construction; what did the sandbox test?* That the code implements the model (abstract, §5.5). The Z3 mutation refutations and the new boundary test are the discriminating evidence; the weight sits in §4.2.
+- *Can an auditor verify erasure?* No (§4.9, §6.3). They can verify that an attributed invalidation entry is in the Merkle log. The store deletes the payload; key destruction covers copies only (§4.8).
+- *Is the residue anonymous?* No. For the repository controller it remains personal data (EDPS v SRB, C-413/23 P, paras 73, 76-77, now in §4.9): it identifies the accessor and is pseudonymised as to the patient.
+- *What does the cross-check prove?* It is a sanity check, a separate function sharing only two constants; tests now compare it with the checker at every boundary month (§5.5). The bounded Z3 check carries the robustness argument.
+- *Code: "key destruction" in a Python program?* Simulated: a reference is removed. Attested, not proven (§5.8, A.15).
+
+**Note.** This file is in the public repository. Examiners can read it. Make the repository private before the defence or move this file out.
