@@ -1,34 +1,113 @@
 # Verifiable Crypto-Erasure for Cross-Border Health Data Audit Trails under the EHDS
 
-MSc thesis, Sustainable Energy Logistics, Høgskolen i Molde (2026) · Arshad Akhtar Abbasia · Supervisor: Prof. João Ferreira
+**A design science study of the Tri-Lateral Retention Feasibility (TRF) problem in the Norwegian implementation context.**
+MSc thesis, Master of Science in Sustainable Energy Logistics, Faculty of Logistics, Høgskolen i Molde, November 2026.
+Arshad Akhtar Abbasia · Supervisor: Prof. João Ferreira
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23819274.svg)](https://doi.org/10.5281/zenodo.23819274) · **Live demonstration:** https://trfhimolde.streamlit.app/ · **Code:** https://github.com/Astheno-sphere/TRF
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23819274.svg)](https://doi.org/10.5281/zenodo.23819274)
+[![Live demo](https://img.shields.io/badge/live%20demo-Streamlit-FF4B4B)](https://trfhimolde.streamlit.app/)
+[![Code](https://img.shields.io/badge/code-Astheno--sphere%2FTRF-181717?logo=github)](https://github.com/Astheno-sphere/TRF)
+[![Tests](https://github.com/Astheno-sphere/TRF/actions/workflows/tests.yml/badge.svg)](https://github.com/Astheno-sphere/TRF/actions/workflows/tests.yml)
 
-## The problem
-One cross-border health audit record is bound by three obligations at once: a retention floor (keep it verifiable), the GDPR Article 17 right to erasure, and the six-month deletion ceiling of EHDS Article 68(12). No instrument reconciles them.
+![Figure 1.1. The two audit logs this thesis concerns and where the mechanism attaches](figures/fig1_1_system_map.png)
 
-## The result
-- **Proposition 1:** if *verifiable* means *readable*, the three cannot be met together whenever a deadline falls inside the retention window.
-- **Proposition 2:** if *verifiable* means *accountable* (who acted, when, a commitment, a logged invalidation entry), they can always be met together.
-- **Propositions 3–4:** a ceiling collides with a floor only if it is no longer than the floor, and its anchor decides whether the collision is visible; relocating a record meets the ceiling but not the right.
-- **Mechanism:** Crypto-Erasure by Invalidation, placed at the NCPeH audit repository and the SPE access-logging boundary, analysed against Norwegian infrastructure.
+## The problem, in one record
 
-Bounded by design: no new cryptographic primitive, informal proofs checked by code and a bounded Z3 check, synthetic data, key destruction attested not proven, residue pseudonymised not anonymous.
+One audit record from cross-border health data exchange is bound by three obligations at once:
 
-## Read
-| What | Where |
+| Obligation | Source | Pulls toward |
+|---|---|---|
+| Retention floor | Art. 73(1)(e) EHDS (one year, SPE access logs); national law for the MyHealth@EU audit repository (six years in the Norwegian pilot, Appendix D) | keep it, verifiable |
+| Right to erasure | Art. 17 GDPR | remove it |
+| Deletion ceiling | Art. 68(12) EHDS (six months) | remove it by a deadline |
+
+No instrument reconciles them. The implementing acts that must specify Secure Processing Environment requirements are not due until 26 March 2027.
+
+## What the thesis shows
+
+The TRF Model writes the three obligations as constraints and makes one thing explicit that the law leaves implicit: **what "verifiable" means**.
+
+- **Proposition 1.** If *verifiable* means *readable in plaintext*, the constraints are infeasible whenever an erasure or deletion deadline falls inside the retention window.
+- **Proposition 2.** If *verifiable* means *accountable* (who acted, when, a hiding commitment, a logged invalidation entry), they are jointly satisfiable for every arrival pattern of requests and every retention floor.
+- **Proposition 3.** A ceiling collides with a floor only if it is no longer than the floor; the event it is anchored to decides whether the collision is visible in the text or only in each record's history.
+- **Proposition 4.** Moving a record out of the regulated environment meets the ceiling but not the right to erasure.
+
+![Figure 4.1. Crypto-Erasure by Invalidation at the audit boundary](figures/fig4_1_cei_mechanism.png)
+
+The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-record payload key and keeps the accessor, event metadata, a commitment and a logged invalidation entry in a tamper-evident Merkle log.
+
+**What is not claimed.** No novel cryptographic primitive or formal method. Informal proofs, checked by code and a bounded Z3 check. Synthetic data; the counts are not estimates of real frequency. Key destruction is *attested, not proven*. The retained residue is *pseudonymised, not anonymous*. Two principal interpretive steps, and four subsidiary premises (Chapter 3, Section 3.7), have no regulatory authority yet; Chapter 7 says how to settle them.
+
+## Read it
+
+**Ten minutes:** [Abstract and Statement of Contribution](Front_Matter_v1.md) → [Chapter 4, the model and propositions](Chapter4_TRF_Model_v1.md) → [Chapter 7, conclusion](Chapter7_Conclusion_v1.md).
+**Hands on:** open the [live demonstration](https://trfhimolde.streamlit.app/) and follow the examiner's walk.
+
+| | |
 |---|---|
-| Full thesis (Word) | [`VERA-SNARK_Thesis_SUBMISSION.docx`](VERA-SNARK_Thesis_SUBMISSION.docx) |
-| Full thesis (one file) | [`VERA-SNARK_Thesis_SUBMISSION.md`](VERA-SNARK_Thesis_SUBMISSION.md) |
-| Chapters | [Front](Front_Matter_v1.md) · [1](Chapter1_Introduction_v2.md) · [2](Chapter2_LitReview_v2_FINAL.md) · [3](Chapter3_Methodology_v1.md) · [4](Chapter4_TRF_Model_v1.md) · [5](Chapter5_Demonstration_v1.md) · [6](Chapter6_Discussion_v1.md) · [7](Chapter7_Conclusion_v1.md) · [App. A](code_artefacts/README_Appendix_A.md) |
-| Adversarial review | [`RED_TEAM.md`](RED_TEAM.md), [`red_team_round2/`](red_team_round2/) |
+| Whole thesis | [Word](VERA-SNARK_Thesis_SUBMISSION.docx) · [one Markdown file](VERA-SNARK_Thesis_SUBMISSION.md) |
+| Front matter | [Abstract, Sammendrag, Statement of Contribution, declarations](Front_Matter_v1.md) |
+| 1 Introduction | [Chapter 1](Chapter1_Introduction_v2.md) |
+| 2 Literature and regulatory review | [Chapter 2](Chapter2_LitReview_v2_FINAL.md) |
+| 3 Methodology (design science) | [Chapter 3](Chapter3_Methodology_v1.md) |
+| 4 The TRF Model | [Chapter 4](Chapter4_TRF_Model_v1.md) |
+| 5 Demonstration | [Chapter 5](Chapter5_Demonstration_v1.md) |
+| 6 Discussion | [Chapter 6](Chapter6_Discussion_v1.md) |
+| 7 Conclusion | [Chapter 7](Chapter7_Conclusion_v1.md) |
+| Appendix A, code and outputs | [Appendix A](code_artefacts/README_Appendix_A.md) |
+| Appendix B, search log | [Appendix B](Appendix_B_Search_Log.md) |
+| Appendix C, evaluation instrument | [Appendix C](Appendix_C_Evaluation_Instrument.md) |
+| Appendix D, correspondence with public authorities | [Appendix D](Appendix_D_Correspondence.md) |
+| References | [Bibliography](Consolidated_Bibliography.md) |
 
 ## Reproduce
+
+![Figure 5.1. The artefact's modules and data path](figures/fig5_1_trf_artefact.png)
+
 ```bash
 git clone https://github.com/Astheno-sphere/TRF && cd TRF
-python3 trf_checker.py          # Semantics I: 95 violations / 90 of 200 records; Semantics II: 0
-python3 -m pytest -q tests/     # 23 checks, incl. every Chapter 5 figure
+pip install -r requirements.txt
+python3 trf_checker.py          # Semantics I: 95 violations across 90 of 200 records; Semantics II: 0
+python3 -m pytest -q tests/     # 23 checks, including every Chapter 5 figure
 ```
 
+A self-contained copy with recorded outputs is in [`repro_package/`](repro_package/). The archived release is on Zenodo: [10.5281/zenodo.23819274](https://doi.org/10.5281/zenodo.23819274).
+
 ## How this repository is kept
-Every change to the thesis text goes through a gated patch (`patches/`, `handoff_tools/patch.py`): citations, numbers, legal articles and hedges cannot change silently, and every cross-reference is re-checked (`handoff_tools/concordance.py`). Each edit is logged in `CHANGE_TRAIL.md`. AI assistance is declared in the Front Matter.
+
+The thesis text changes only through gated patches ([`patches/`](patches/), [`handoff_tools/patch.py`](handoff_tools/patch.py)): a patch that would silently drop a citation, number, legal article or hedge is refused, and every cross-reference is re-checked ([`handoff_tools/concordance.py`](handoff_tools/concordance.py)). Each edit has a row in [`CHANGE_TRAIL.md`](CHANGE_TRAIL.md). Adversarial reviews are in [`RED_TEAM.md`](RED_TEAM.md) and [`red_team_round2/`](red_team_round2/). AI assistance is declared in the Front Matter.
+
+| Folder | Holds |
+|---|---|
+| top level | the thesis: chapters, appendices, bibliography, assembled submission |
+| `code_artefacts/`, `repro_package/`, `figures/` | Appendix A, the reproduction package, figures |
+| `patches/`, `handoff_tools/`, `CHANGE_TRAIL.md` | how every change was made and checked |
+| `sources/` | primary sources the thesis relies on |
+| `process/` | working records: decisions, plans, handoffs, viva preparation |
+| `archive/` | superseded drafts, earlier tracked versions, supervisor correspondence, session transcripts |
+
+## Norsk sammendrag
+
+Masteroppgave ved Høgskolen i Molde om hvordan revisjonslogger for grensekryssende helsedata kan oppbevares, slettes og etterprøves samtidig under forordningen om det europeiske helsedataområdet (EHDS, forordning (EU) 2025/327) og personvernforordningen (GDPR artikkel 17). Oppgaven viser at kravene er uforenlige dersom en logg bare er etterprøvbar så lenge innholdet kan leses, og forenlige dersom etterprøvbarhet betyr etterrettelighet. Analysen er gjort mot norsk infrastruktur: Helsedirektoratet som nasjonalt kontaktpunkt for e-helse (NCPeH), Helsedataservice og sikre analyserom. Hele sammendraget står i [Front Matter](Front_Matter_v1.md#sammendrag).
+
+**Keywords:** European Health Data Space · EHDS · GDPR Article 17 · right to erasure · cryptographic erasure · crypto-shredding · audit trail · data retention · Secure Processing Environment · MyHealth@EU · NCPeH · design science research · information logistics · Norway · Helsedataservice · helsedata · personvern
+
+## Cite
+
+```bibtex
+@mastersthesis{abbasia2026trf,
+  author = {Abbasia, Arshad Akhtar},
+  title  = {Verifiable Crypto-Erasure for Cross-Border Health Data Audit Trails under the European Health Data Space},
+  school = {H{\o}gskolen i Molde},
+  year   = {2026},
+  type   = {MSc thesis},
+  url    = {https://github.com/Astheno-sphere/TRF-thesis}
+}
+@software{abbasia2026trf_code,
+  author = {Abbasia, Arshad Akhtar},
+  title  = {TRF: Tri-Lateral Retention Feasibility Model},
+  year   = {2026},
+  doi    = {10.5281/zenodo.23819274},
+  url    = {https://github.com/Astheno-sphere/TRF}
+}
+```
