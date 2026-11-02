@@ -1345,3 +1345,4 @@
 2026-11-02 14:31 | P103_joao_should_fix.py | P103-19 | Chapter5_Demonstration_v1.md | 361bcdd40666 -> f4719ef75514 | João 14: an implementation check, as the abstract says
 2026-11-02 14:35 | P104_appendix_d.py | P104-01 | Chapter2_LitReview_v2_FINAL.md | 3816c5363aa8 -> 006aae3cd806 | back-reference to the reproduced primary record
 2026-11-02 14:35 | P104_appendix_d.py | P104-02 | Front_Matter_v1.md | a8cd4630174d -> cb3d29c396a2 | TOC entry
+2026-11-02 14:38 | P105_demo_sync_4d3ee63.py | P105-01 | demo_app/app.py | 18bd7e246e4b -> b2104db7987e | sync demo_app/app.py to TRF 4d3ee63
