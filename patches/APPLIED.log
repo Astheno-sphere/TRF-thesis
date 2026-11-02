@@ -1358,3 +1358,53 @@
 2026-11-02 15:00 | P106_whipper_round.py | P106-10 | Appendix_D_Correspondence.md | 7f85e8b02a4e -> abbcdd928a5f | whipper 3
 2026-11-02 15:00 | P106_whipper_round.py | P106-11 | Appendix_D_Correspondence.md | 7f85e8b02a4e -> abbcdd928a5f | whipper 6
 2026-11-02 15:00 | P106_whipper_round.py | P106-12 | Appendix_D_Correspondence.md | 7f85e8b02a4e -> abbcdd928a5f | whipper 10: a submitted appendix cannot promise later content
+2026-11-02 17:35 | P107_code_sync.py | P107-01 | demo_app/trf_checker.py | c838a68d7efa -> 2b9309c464a8 | sync demo_app/trf_checker.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-02 | repro_package/trf_checker.py | c838a68d7efa -> 2b9309c464a8 | sync repro_package/trf_checker.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-03 | code_artefacts/trf_checker.py | c838a68d7efa -> 2b9309c464a8 | sync code_artefacts/trf_checker.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-04 | demo_app/z3_check.py | 077ad0c92739 -> a9faab2469b4 | sync demo_app/z3_check.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-05 | repro_package/z3_check.py | 077ad0c92739 -> a9faab2469b4 | sync repro_package/z3_check.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-06 | code_artefacts/z3_check.py | 077ad0c92739 -> a9faab2469b4 | sync code_artefacts/z3_check.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-07 | demo_app/crypto_envelope.py | e2191bdc0656 -> b8f9ce7b8cbb | sync demo_app/crypto_envelope.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-08 | repro_package/crypto_envelope.py | e2191bdc0656 -> b8f9ce7b8cbb | sync repro_package/crypto_envelope.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-09 | code_artefacts/crypto_envelope.py | e2191bdc0656 -> b8f9ce7b8cbb | sync code_artefacts/crypto_envelope.py to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-10 | repro_package/results/crypto_envelope_output.txt | 4647ce0fcff9 -> 4ad480942a75 | sync repro_package/results/crypto_envelope_output.txt to TRF
+2026-11-02 17:35 | P107_code_sync.py | P107-11 | demo_app/requirements.txt | c43ce2a550b5 -> e53d86d42c41 | sync demo_app/requirements.txt to TRF
+2026-11-02 17:35 | P108_appendix_sync.py | P108-B01 | code_artefacts/README_Appendix_A.md | fea7d6a71724 -> aea3ea349eb1 | Appendix A A.10 synced to demo_app/trf_checker.py
+2026-11-02 17:35 | P108_appendix_sync.py | P108-B05 | code_artefacts/README_Appendix_A.md | fea7d6a71724 -> aea3ea349eb1 | Appendix A A.15 synced to demo_app/crypto_envelope.py
+2026-11-02 17:35 | P108_appendix_sync.py | P108-B12 | code_artefacts/README_Appendix_A.md | fea7d6a71724 -> aea3ea349eb1 | Appendix A A.22 synced to repro_package/results/crypto_envelope_output.txt
+2026-11-02 17:35 | P108_appendix_sync.py | P108-B13 | code_artefacts/README_Appendix_A.md | fea7d6a71724 -> aea3ea349eb1 | Appendix A A.23 synced to demo_app/z3_check.py
+2026-11-02 17:37 | P109_end_check.py | P109-01 | Chapter5_Demonstration_v1.md | f4719ef75514 -> 31ead3f8a2fe | code audit A3: the checker breaks at the first colliding month
+2026-11-02 17:37 | P109_end_check.py | P109-02 | Chapter5_Demonstration_v1.md | f4719ef75514 -> 31ead3f8a2fe | code audit A2: it shared constants and was never compared; now compared by tests/test_props.py
+2026-11-02 17:37 | P109_end_check.py | P109-03 | Chapter5_Demonstration_v1.md | f4719ef75514 -> 31ead3f8a2fe | code audit B: destruction attested, not proven
+2026-11-02 17:37 | P109_end_check.py | P109-04 | Chapter5_Demonstration_v1.md | f4719ef75514 -> 31ead3f8a2fe | code audit A4
+2026-11-02 17:37 | P109_end_check.py | P109-05 | Chapter5_Demonstration_v1.md | f4719ef75514 -> 31ead3f8a2fe | red team B1: synthetic counts used as evidence
+2026-11-02 17:37 | P109_end_check.py | P109-06 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | red team B2
+2026-11-02 17:37 | P109_end_check.py | P109-07 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | red team B2
+2026-11-02 17:37 | P109_end_check.py | P109-08 | Chapter7_Conclusion_v1.md | 52ab355fb6ef -> 8361b57e50a4 | red team B2
+2026-11-02 17:37 | P109_end_check.py | P109-09 | Front_Matter_v1.md | fcac29a41f50 -> 9f45942af2d4 | red team M4: Semantics II without the commitment is weaker and also feasible (Rival 4)
+2026-11-02 17:37 | P109_end_check.py | P109-10 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | red team M4
+2026-11-02 17:37 | P109_end_check.py | P109-11 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | red team M3, verified against the OJ text quoted in §2.2
+2026-11-02 17:37 | P109_end_check.py | P109-12 | Chapter6_Discussion_v1.md | 17ac811588a1 -> d18a36361bb1 | red team M3
+2026-11-02 17:37 | P109_end_check.py | P109-13 | Chapter6_Discussion_v1.md | 17ac811588a1 -> d18a36361bb1 | red team minor 4
+2026-11-02 17:37 | P109_end_check.py | P109-14 | Chapter6_Discussion_v1.md | 17ac811588a1 -> d18a36361bb1 | red team minor 2
+2026-11-02 17:37 | P109_end_check.py | P109-15 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | red team minor 1: the window is closed, so 72 request months collide
+2026-11-02 17:37 | P109_end_check.py | P109-16 | Chapter1_Introduction_v2.md | f793a68f9a17 -> 55111ef49f84 | red team M2 / whipper 1
+2026-11-02 17:37 | P109_end_check.py | P109-17 | Chapter1_Introduction_v2.md | f793a68f9a17 -> 55111ef49f84 | red team minor 8
+2026-11-02 17:37 | P109_end_check.py | P109-18 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | red team minor 5
+2026-11-02 17:37 | P109_end_check.py | P109-19 | Appendix_C_Evaluation_Instrument.md | 0d9a090de927 -> 3754efa8b6de | red team minor 7: §4.9 says it does not clear the threshold
+2026-11-02 17:37 | P109_end_check.py | P109-20 | Front_Matter_v1.md | fcac29a41f50 -> 9f45942af2d4 | red team minor 6: since P94 the store deletes the payload; key destruction covers copies
+2026-11-02 17:37 | P109_end_check.py | P109-21 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | novelty sweep: EDPS v SRB, verified on EUR-Lex (CELEX 62023CJ0413)
+2026-11-02 17:37 | P109_end_check.py | P109-22 | Chapter4_TRF_Model_v1.md | b00f1008b95d -> a8ff4ed5599f | reference
+2026-11-02 17:37 | P109_end_check.py | P109-23 | Chapter2_LitReview_v2_FINAL.md | 1c77d188a407 -> 977748fc55f3 | novelty sweep: 2026/2083, read on EUR-Lex (OJ L 2026/2083, 21.9.2026)
+2026-11-02 17:37 | P109_end_check.py | P109-24 | Chapter2_LitReview_v2_FINAL.md | 1c77d188a407 -> 977748fc55f3 | reference
+2026-11-02 17:37 | P109_end_check.py | P109-26 | Chapter2_LitReview_v2_FINAL.md | 1c77d188a407 -> 977748fc55f3 | reference
+2026-11-02 17:37 | P109_end_check.py | P109-25 | Chapter2_LitReview_v2_FINAL.md | 1c77d188a407 -> 977748fc55f3 | novelty sweep: FHI page 19 Oct 2026, read
+2026-11-02 17:39 | P110_code_fix.py | P110-01 | demo_app/trf_checker.py | 2b9309c464a8 -> 2a17df9bbf79 | exit status set after the optional delta witness
+2026-11-02 17:39 | P110_code_fix.py | P110-02 | repro_package/trf_checker.py | 2b9309c464a8 -> 2a17df9bbf79 | exit status set after the optional delta witness
+2026-11-02 17:39 | P110_code_fix.py | P110-03 | code_artefacts/trf_checker.py | 2b9309c464a8 -> 2a17df9bbf79 | exit status set after the optional delta witness
+2026-11-02 17:39 | P110_code_fix.py | P110-04 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2
+2026-11-02 17:39 | P110_code_fix.py | P110-05 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2
+2026-11-02 17:39 | P110_code_fix.py | P110-06 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2
+2026-11-02 17:39 | P110_code_fix.py | P110-07 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2: test_props.py
+2026-11-02 17:39 | P110_code_fix.py | P110-08 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2: pinned
+2026-11-02 17:39 | P111_appendix_sync.py | P111-B01 | code_artefacts/README_Appendix_A.md | 271020dc8ea8 -> 4e7fdd84d915 | Appendix A A.10 synced to demo_app/trf_checker.py

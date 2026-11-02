@@ -62,7 +62,7 @@ Eight participants across four perspectives, two in each, chosen so that no sing
 
 | # | Perspective | Profile sought | Assesses |
 |---|---|---|---|
-| P1, P2 | Data protection | Data Protection Officer or privacy counsel in a Norwegian health or research institution | Whether invalidation is defensible as satisfying retention; whether the surviving residue clears the anonymity threshold; the Article 68(12) scope question |
+| P1, P2 | Data protection | Data Protection Officer or privacy counsel in a Norwegian health or research institution | Whether invalidation is defensible as satisfying retention; whether the surviving residue is personal data, and for whom; the Article 68(12) scope question |
 | P3, P4 | Health IT architecture | Architect or senior engineer at Norsk Helsenett or Helsedataservice with NCPeH or HDAB exposure | Whether the mechanism attaches at the right boundary; interoperability consequences; effect on the OpenNCP transmission flow |
 | P5, P6 | Secure Processing Environment operation | Operator or technical lead at a NORTRE node (TSD, SAFE, or HUNT Cloud) | Key custody in practice; operational burden of per-record granularity; single-point-of-failure risk absent hardware security modules |
 | P7, P8 | Information logistics | Academic or practitioner in logistics or supply-chain compliance | Whether the customs-ledger framing holds; transferability of the tri-lateral structure to other regulated flows |

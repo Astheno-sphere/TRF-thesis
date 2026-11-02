@@ -76,6 +76,8 @@ Chen, J., Chun, D., Patel, M., Chiang, E., & James, J. (2019). The validity of s
 
 Council of Supply Chain Management Professionals. (n.d.). *Frequently asked questions* [Includes the CSCMP definition of logistics management]. Retrieved 5 October 2026, from https://cscmp.org/CSCMP/CSCMP/Develop/Starting_Your_Career/Frequently_Asked_Questions.aspx `[Ch2]`
 
+Court of Justice of the European Union. (2025). *European Data Protection Supervisor v Single Resolution Board* (Case C‑413/23 P, judgment of 4 September 2025). https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62023CJ0413 `[Ch4]`
+
 Crosby, S. A., & Wallach, D. S. (2009). Efficient data structures for tamper-evident logging. In *Proceedings of the 18th USENIX Security Symposium* (pp. 317–334). USENIX Association. https://www.usenix.org/legacy/events/sec09/tech/full_papers/crosby.pdf `[Ch2] [Ch4]`
 
 Datatilsynet. (n.d.-a). *Etablere internkontroll* [Guidance]. Norwegian Data Protection Authority. https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/informasjonssikkerhet-internkontroll/etablere-internkontroll/ `[Ch2] [Ch4] [Ch6]`
@@ -108,6 +110,8 @@ European Commission. (2025a). *European Health Data Space Regulation (EHDS)*. Di
 
 European Commission. (2025b). *Electronic cross-border health services*. Directorate-General for Health and Food Safety. https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/electronic-cross-border-health-services_en `[Ch2]`
 
+European Commission. (2026). Commission Implementing Regulation (EU) 2026/2083 of 18 September 2026 on MyHealth@EU. *Official Journal of the European Union*, L 2026/2083. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202602083 `[Ch2]`
+
 European Data Protection Board. (2026a). *Coordinated Enforcement Action, implementation of the right to erasure by controllers* (18 February 2026). EDPB. https://www.edpb.europa.eu/our-work-tools/our-documents/other/coordinated-enforcement-action-implementation-right-erasure_en `[Ch1] [Ch2] [Ch6]`
 
 European Data Protection Board. (2026b). *Guidelines 02/2025 on processing of personal data through blockchain technologies* (Version 2.0, adopted 7 July 2026 following public consultation). EDPB. https://www.edpb.europa.eu/system/files/2026-07/edpb_guidelines_202502_blockchain_v2_en.pdf `[Ch1] [Ch2] [Ch4] [Ch6]`
@@ -127,6 +131,8 @@ Finck, M. (2018). Blockchains and data protection in the European Union. *Europe
 Finck, M. (2019). *Blockchain and the General Data Protection Regulation: Can distributed ledgers be squared with European data protection law?* (PE 634.445). European Parliament, Panel for the Future of Science and Technology (STOA), EPRS. https://doi.org/10.2861/535 `[Ch2] [Ch4]`
 
 Folkehelseinstituttet. (2024). *Helsedata* [Department page describing Helsedataservice, the national health data access body]. Norwegian Institute of Public Health. https://www.fhi.no/om/organisasjon/helsedata/ `[Ch1] [Ch2] [Ch4]`
+
+Folkehelseinstituttet. (2026, October 19). *FHIs rolle og oppdrag i EHDS*. Norwegian Institute of Public Health. https://www.fhi.no/hd/det-europeiske-helsedataomradet/fhis-rolle-og-oppdrag-i-ehds/ `[Ch2]`
 
 Forskningsetikk. (2023). *Helsedataservice takes over authority to process applications and grant access to health data*. Norwegian National Research Ethics Committees. https://www.forskningsetikk.no/en/news-archive/helsedataservice-takes-over-authority-to-process-applications-and-grant-access-to-health-data/ `[Ch2]`
 
