@@ -1,0 +1,4 @@
+.archify/** linguist-generated
+demo_app/assets/*.html linguist-generated
+process/artifact/** linguist-generated
+archive/** linguist-documentation
