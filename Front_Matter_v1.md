@@ -27,7 +27,7 @@ The thesis develops the Tri-Lateral Retention Feasibility (TRF) Model, a constra
 
 Both results are checked in a Python sandbox over two hundred generated records; replacing their payloads with Synthea-generated FHIR R4 resources changes no figure. The counts depend on the generator parameters and are not estimates of real frequency; the sandbox validates the artefact's implementation of the model and is not independent evidence for the propositions. The collision that needs no erasure request arises only on a contestable broad reading of Article 68(12), and only for log entries that are themselves electronic health data, as entries kept at patient-record granularity are.
 
-The contribution is bounded: no novel cryptographic primitive or formal method, informal proofs, simulated key destruction, and two interpretive steps without regulatory authority. The formal results are deliberately elementary: Proposition 1, that some departure from plaintext verifiability is unavoidable, carries the formal argument, while Proposition 2 verifies that a minimal principled departure suffices. The weight lies in the legal necessity analysis and the mechanism design, not in the proofs. The thesis offers four contributions: a formal model of the conflict, feasibility results with an executable witness, a mechanism specification with its residue analysed, and an integration analysis against Norwegian infrastructure.
+The contribution is bounded: no novel cryptographic primitive or formal method, informal proofs, simulated key destruction, and two principal interpretive steps without regulatory authority. The formal results are deliberately elementary: Proposition 1, that some departure from plaintext verifiability is unavoidable, carries the formal argument, while Proposition 2 verifies that a minimal principled departure suffices. The weight lies in the legal necessity analysis and the mechanism design, not in the proofs. The thesis offers four contributions: a formal model of the conflict, feasibility results with an executable witness, a mechanism specification with its residue analysed, and an integration analysis against Norwegian infrastructure.
 
 *Keywords:* European Health Data Space; GDPR Article 17; cryptographic erasure; audit trail; data retention; design science research; Secure Processing Environment; MyHealth@EU; information logistics; Norway
 
@@ -43,7 +43,7 @@ Oppgaven utvikler Tri-Lateral Retention Feasibility (TRF)-modellen, en betingels
 
 Begge resultatene kontrolleres i en Python-sandkasse med to hundre genererte poster; å erstatte innholdet deres med syntetiske FHIR R4-data generert med Synthea endrer ingen tall. Antallene avhenger av parameterne i generatoren og er ikke anslag over reell hyppighet; sandkassen kontrollerer at artefakten implementerer modellen riktig og er ikke uavhengig belegg for proposisjonene. Kollisjonen som ikke krever noen slettebegjæring, oppstår bare under en omstridt, vid lesing av artikkel 68(12), og bare for loggposter som selv er elektroniske helsedata, slik poster som føres på nivå med den enkelte pasientjournal, er.
 
-Bidraget er avgrenset: ingen nye kryptografiske primitiver eller formelle metoder, uformelle bevis, simulert nøkkelødeleggelse og to tolkningssteg uten støtte i rettskilder. De formelle resultatene er bevisst elementære: vekten ligger i den rettslige nødvendighetsanalysen og i utformingen av mekanismen, ikke i bevisene. Oppgaven gir fire bidrag: en formell modell av konflikten, gjennomførbarhetsresultater med et kjørbart vitnebyrd, en spesifikasjon av mekanismen med analyse av det som blir igjen, og en analyse av hvordan mekanismen kan integreres i norsk infrastruktur.
+Bidraget er avgrenset: ingen nye kryptografiske primitiver eller formelle metoder, uformelle bevis, simulert nøkkelødeleggelse og to sentrale tolkningssteg uten støtte i rettskilder. De formelle resultatene er bevisst elementære: vekten ligger i den rettslige nødvendighetsanalysen og i utformingen av mekanismen, ikke i bevisene. Oppgaven gir fire bidrag: en formell modell av konflikten, gjennomførbarhetsresultater med et kjørbart vitnebyrd, en spesifikasjon av mekanismen med analyse av det som blir igjen, og en analyse av hvordan mekanismen kan integreres i norsk infrastruktur.
 
 *Nøkkelord:* europeisk helsedataområde; GDPR artikkel 17; kryptografisk sletting; revisjonsspor; lagringstid; design science-forskning; sikkert analyserom; MyHealth@EU; informasjonslogistikk; Norge
 
@@ -61,7 +61,7 @@ This thesis makes four contributions, each stated at the level it can be defende
 
 *4. An integration analysis against verified Norwegian infrastructure.* The mechanism is placed at the audit-repository step of the MyHealth@EU flow and the access-logging boundary of a Secure Processing Environment, and adds no requirement of a new kind to the Norwegian criteria put to public hearing in 2025 and their 2024 draft: key custody falls under their mandatory information-security management system, and the log under their requirement of tamper-proof access logs.
 
-*What is not claimed.* No novel cryptographic primitive or construction. No novel formal method. No first-ever framework for anything. No deployed system, no performance result, no connection to any National Contact Point. No proof that key destruction occurred, as distinct from an attestation that it did. No authority that key destruction discharges the erasure obligation for copies that cannot be deleted at once. No empirical estimate of how often the conflict arises in practice. No regulatory authority for either of the two interpretive steps the argument depends upon, both of which are identified in Chapter 6 and proposed for resolution in Chapter 7.
+*What is not claimed.* No novel cryptographic primitive or construction. No novel formal method. No first-ever framework for anything. No deployed system, no performance result, no connection to any National Contact Point. No proof that key destruction occurred, as distinct from an attestation that it did. No authority that key destruction discharges the erasure obligation for copies that cannot be deleted at once. No empirical estimate of how often the conflict arises in practice. No regulatory authority for either of the two principal interpretive steps the argument depends upon, both of which are identified in Chapter 6 and proposed for resolution in Chapter 7, or for the four subsidiary premises listed in Chapter 3, Section 3.7.
 
 ---
 
@@ -93,7 +93,7 @@ Two declarations are made explicitly.
 | *k*(*a*) | Payload key |
 | *ι*(*a*) | Invalidation entry — month, legal ground, authorising actor |
 | *t*(*a*) | Month in which the access event occurred |
-| *F*(*a*) | Retention floor, in months (120 cross-border; 12 for SPE access logs) |
+| *F*(*a*) | Retention floor, in months (72 in the Norwegian cross-border pilot, 120 illustrative in Chapter 5, 36 under Article 9(2); 12 for SPE access logs) |
 | *σ*(*a*) | Pathway: primary or secondary |
 | *t*ᵣ(*a*) | Month an erasure request arrives (∞ if none) |
 | *t*π(*a*) | Month a data permit expires (∞ if not applicable) |
@@ -227,7 +227,7 @@ Two declarations are made explicitly.
 - 7.1 The Problem and the Answer
 - 7.2 Contributions
 - 7.3 What the Thesis Does Not Establish
-- 7.4 The Two Open Questions of Authority
+- 7.4 The Two Principal Open Questions of Authority
 - 7.5 Future Work
 - 7.6 Closing
 
@@ -272,3 +272,8 @@ Two declarations are made explicitly.
 - C.6 Closed-response questionnaire
 - C.7 Analysis
 - C.8 Data protection, if executed
+
+**Appendix D. Correspondence with Public Authorities**
+
+- D.1 Helsedirektoratet, on the retention of the cross-border audit trail
+- D.2 Datatilsynet, on the two principal interpretive questions

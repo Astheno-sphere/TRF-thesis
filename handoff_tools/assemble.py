@@ -7,7 +7,7 @@ import re, os
 CHS = ["Chapter1_Introduction_v2.md", "Chapter2_LitReview_v2_FINAL.md", "Chapter3_Methodology_v1.md",
        "Chapter4_TRF_Model_v1.md", "Chapter5_Demonstration_v1.md", "Chapter6_Discussion_v1.md",
        "Chapter7_Conclusion_v1.md"]
-APPS = ["code_artefacts/README_Appendix_A.md", "Appendix_B_Search_Log.md", "Appendix_C_Evaluation_Instrument.md"]
+APPS = ["code_artefacts/README_Appendix_A.md", "Appendix_B_Search_Log.md", "Appendix_C_Evaluation_Instrument.md", "Appendix_D_Correspondence.md"]
 
 def apa_key(t):
     """APA 7 order (4 Oct 2026, B-35): author letters, then n.d. before dated works, then year,

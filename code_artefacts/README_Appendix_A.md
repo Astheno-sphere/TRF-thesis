@@ -15,11 +15,11 @@ The artefact is publicly available in two forms.
 
 | Form | Location |
 |---|---|
-| Archived release (cite this) | Version 1.1.0, Zenodo, https://doi.org/10.5281/zenodo.23819274 (resolves to the latest version; version 1.0.1, https://doi.org/10.5281/zenodo.23819275, has the same result modules) |
+| Archived release (cite this) | Version 1.1.0, Zenodo, https://doi.org/10.5281/zenodo.23826911 (this version) and https://doi.org/10.5281/zenodo.23819274 (all versions, resolving to the latest); version 1.0.1, https://doi.org/10.5281/zenodo.23819275, has the same result modules |
 | Source repository | https://github.com/Astheno-sphere/TRF |
 | Live demonstration | https://trfhimolde.streamlit.app/ |
 
-The archived release is the citable artefact: version 1.1.0 of the repository, deposited on Zenodo, is the exact code whose outputs this thesis reports and the viewer described below, and its result modules are identical to those of version 1.0.1, whereas the repository's default branch may change after submission. It contains eight Python files, the checker and seven further modules as Chapter 5, Section 5.2 counts them, the viewer among them split across `app.py` and `ui.py`, together with the eight-bundle Synthea subset the realism layer reads, a recorded console run for every command, and this appendix. The live application is a convenience for readers who prefer not to clone and run: it executes the same unmodified source, and its Thesis run page asserts that the run reproduces the figures reported in Chapter 5, displaying a failure notice rather than results if it does not.
+The archived release is the citable artefact: version 1.1.0 of the repository, deposited on Zenodo, is the exact code whose outputs this thesis reports and the viewer described below, and its result modules are identical to those of version 1.0.1, whereas the repository's default branch may change after submission. It contains eight Python files, the checker and seven further modules as Chapter 5, Section 5.2 counts them, the viewer among them split across `app.py` and `ui.py`, together with a test suite run on every change, the eight-bundle Synthea subset the realism layer reads, a recorded console run for every module (`docs/expected_*.txt`), and this appendix. The live application is a convenience for readers who prefer not to clone and run: it executes the same unmodified source, and its Thesis run page asserts that the run reproduces the figures reported in Chapter 5, displaying a failure notice rather than results if it does not.
 
 The demonstration has eleven pages. *Start here* states the problem and sets out a walk through the remaining pages in the order of the thesis. *The four propositions* quotes each proposition from Chapter 4 with the limits the thesis states for it, shows the corresponding figures from the checker, and runs the bounded SMT check of Section 5.5, including the deliberately broken variants it must refute; Proposition 4, which rests on a legal premise, is marked as argued and not executed. *Claim ledger* sets each figure reported in Chapter 5 beside the same figure recomputed when the page opens. *Witness a record* draws one record of the thesis population through its months, showing where Semantics I contradicts itself and where Semantics II holds, and lights the components of Figure 4.1 that act in each month. *How it is built* embeds Figures 4.1 and 5.1 as interactive diagrams. *Thesis run* reproduces, on opening, Tables 5.3 and 5.6 and shows the audit-log integrity check and all three tamper tests of Section 5.7. *Where the ceiling is anchored* evaluates the condition of Proposition 3 for any floor and ceiling, with Article 68(12) and politiregisterloven § 17 as presets. *Robustness and cross-checks* runs the independent exhaustive cross-check of Section 5.5, the erasure-response-period witness of Section 5.6 and the optional envelope-encryption module of Section 5.8. *Synthea realism* reproduces Table 5.7. *Norwegian context* runs the illustrative Norwegian modules, and *Explore* varies population parameters as a teaching aid; neither reports a thesis figure.
 
@@ -43,9 +43,14 @@ A note on durability. Hosted applications are not archival objects: the live dem
 | `docs/expected_norwegian_output.txt` | Recorded Norwegian-layer run | — |
 | `docs/expected_cross_sector_output.txt` | Recorded politiregisterloven § 17 run | — |
 | `docs/Data_Provenance_Statement.md` | Where the synthetic data came from, the six Synthea markers a reader can check for, and the cohort-size comparison | — |
-| `requirements.txt` | `streamlit>=1.50`, `cryptography>=42`; the checker itself needs nothing | 2 |
+| `docs/expected_crypto_envelope_output.txt`, `docs/expected_z3_check_output.txt` | Recorded runs of the two optional modules (A.22, A.24) | — |
+| `docs/expected_synthea_full_cohort_rerun_2026-10-06.txt` | Recorded full-cohort comparison (A.17) | — |
+| `tests/test_app.py`, `.github/workflows/tests.yml` | Automated checks run on every change: every recorded run reproduces byte for byte, every viewer page renders, and the viewer's claim ledger matches Chapter 5; they report no thesis figure | — |
+| `docs/architecture/`, `assets/` | Archify sources and renderings of Figures 4.1 and 5.1 | — |
+| `LICENSE`, `CITATION.cff`, `.zenodo.json`, `CHECKSUMS.md` | MIT licence, citation and archive metadata, file checksums | — |
+| `requirements.txt` | `streamlit>=1.50`, `cryptography>=42`, `z3-solver>=4.12`; the checker itself needs nothing | 3 |
 
-Every command has a recorded run committed beside it. A reader who executes a command and diffs the result against its recorded file can distinguish a changed file from a changed result, which is the distinction that matters when a figure disagrees with the text.
+Every module has a recorded run committed beside it. A reader who executes a command and diffs the result against its recorded file can distinguish a changed file from a changed result, which is the distinction that matters when a figure disagrees with the text.
 
 Two files are *not* included and the reason is stated rather than omitted: the full 98-bundle Synthea cohort (314 MB) and the Synthea jar (197 MB). Both are regenerable from the commands in A.5, deterministically, under the seeds given. The eight-bundle subset that is included is drawn from that cohort and is sufficient to run the realism layer; Chapter 5, Section 5.8 reports the comparison at both cohort sizes and finds every figure identical.
 
@@ -207,7 +212,7 @@ Stated here so that they are not inferred from silence:
 
 1. The demonstration checks the propositions on the instances generated under one seed. The general claims rest on the proofs in Chapter 4, not on this code.
 2. The exhaustive cross-check covers four small cases at a fourteen-month horizon. The cross-border floor is scaled from 120 months to 12 for that check because 2¹²⁰ assignments are not enumerable; Proposition 1's argument depends on the deadline falling inside the window, not on the window's length.
-3. No performance measurement is offered as a result. The runtime figure in Chapter 5 indicates only that reproduction is cheap.
+3. No performance measurement is offered as a result, and no execution time is reported.
 4. Key destruction is simulated in program state. The artefact demonstrates the mechanism's logic and says nothing about whether destruction can be assured in deployment.
 5. The checker does not connect to any National Contact Point, implement the OpenNCP transmission flow, evaluate consent policies, or implement any zero-knowledge proof system. None of these is claimed anywhere in the thesis.
 
@@ -1513,7 +1518,7 @@ RESULT  Semantics II: 0 violations across 0 records  -> FEASIBLE
 
 ## A.19 Console output of the Norwegian context module
 
-Produced by the first command in 6. Illustrative of the Norwegian setting; no figure here is a thesis claim, and the module states so in its own output.
+Produced by the first command in 6. Illustrative of the Norwegian setting; no figure here is a thesis claim, and the module states so in its own output. NO-XB uses the illustrative 120-month floor; the Norwegian pilot's six-year floor (F = 72) is a parameter change with no effect on the propositions (Chapter 4, Corollary 2.2).
 
 ```text
 ==========================================================================

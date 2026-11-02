@@ -1302,3 +1302,46 @@
 2026-10-31 02:19 | P101_voice_first_person.py | P101-18 | Chapter7_Conclusion_v1.md | 6f7f57f441d4 -> 11ae8abef9de | voice
 2026-10-31 02:19 | P101_voice_first_person.py | P101-19 | Chapter7_Conclusion_v1.md | 6f7f57f441d4 -> 11ae8abef9de | voice
 2026-10-31 02:19 | P101_voice_first_person.py | P101-20 | Chapter7_Conclusion_v1.md | 6f7f57f441d4 -> 11ae8abef9de | voice; true: Datatilsynet enquiry sent 23 Sep, Helsedirektoratet answered 19 Oct (§7.4)
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-01 | code_artefacts/README_Appendix_A.md | f64a0ceef5ac -> 81bc377bd727 | João 2 / A.9 stale
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-02 | Chapter5_Demonstration_v1.md | ffc9c111e901 -> 361bcdd40666 | verifier M1: §5.8 cited itself
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-03 | Appendix_C_Evaluation_Instrument.md | 9681e2f3e288 -> b7ed9d1b0fcc | João 5: nothing was registered
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-04 | Chapter1_Introduction_v2.md | 2439843c270e -> f793a68f9a17 | João 6: the fact is stated earlier in the paragraph
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-05 | Chapter1_Introduction_v2.md | 2439843c270e -> f793a68f9a17 | João 7: stray comma and comma splice
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-06 | Chapter7_Conclusion_v1.md | 11ae8abef9de -> a79d87ca9b05 | verifier: 'it' had no antecedent after the first-person sentence
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-07 | Front_Matter_v1.md | 370039af818b -> fe972d047277 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-08 | Front_Matter_v1.md | 370039af818b -> fe972d047277 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-09 | Front_Matter_v1.md | 370039af818b -> fe972d047277 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-10 | Front_Matter_v1.md | 370039af818b -> fe972d047277 | João 8: TOC follows heading
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-11 | Chapter3_Methodology_v1.md | 3a262ee7084d -> 22123185fd36 | João 8 + verifier: name all six; he missed the sixth
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-12 | Chapter7_Conclusion_v1.md | 11ae8abef9de -> a79d87ca9b05 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-13 | Chapter7_Conclusion_v1.md | 11ae8abef9de -> a79d87ca9b05 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-14 | Chapter7_Conclusion_v1.md | 11ae8abef9de -> a79d87ca9b05 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-15 | Chapter7_Conclusion_v1.md | 11ae8abef9de -> a79d87ca9b05 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-16 | Chapter7_Conclusion_v1.md | 11ae8abef9de -> a79d87ca9b05 | João 8
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-17 | Chapter3_Methodology_v1.md | 3a262ee7084d -> 22123185fd36 | verifier M2
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-18 | code_artefacts/README_Appendix_A.md | f64a0ceef5ac -> 81bc377bd727 | artefact audit: version DOI absent
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-19 | code_artefacts/README_Appendix_A.md | f64a0ceef5ac -> 81bc377bd727 | João 3 + audit: tests and recorded runs described
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-20 | code_artefacts/README_Appendix_A.md | f64a0ceef5ac -> 81bc377bd727 | João 3 + audit: A.2 matches the v1.1.0 tree
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-21 | code_artefacts/README_Appendix_A.md | f64a0ceef5ac -> 81bc377bd727 | audit: A.5 has no command line for the two optional modules
+2026-11-02 14:29 | P102_joao_must_fix.py | P102-22 | Chapter5_Demonstration_v1.md | ffc9c111e901 -> 361bcdd40666 | João 3: Fig 5.1 box relabelled from run_all.sh/results/ to the recorded runs that exist
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-01 | Chapter2_LitReview_v2_FINAL.md | c2ccf6e89adf -> 3816c5363aa8 | João 4
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-02 | Chapter2_LitReview_v2_FINAL.md | c2ccf6e89adf -> 3816c5363aa8 | João 4
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-03 | Appendix_B_Search_Log.md | 5c665e80febb -> 2ea7fe648d20 | João 4
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-04 | Appendix_B_Search_Log.md | 5c665e80febb -> 2ea7fe648d20 | verifier M4: the [R] marker was promised and never applied
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-05 | Appendix_B_Search_Log.md | 5c665e80febb -> 2ea7fe648d20 | verifier M3: 68 - 2 is not 67, and 41 locators contradicted 39 without one
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-06 | Chapter4_TRF_Model_v1.md | 3ecb4bc59b59 -> 4d9b1aaff213 | João 12: lead with the sourced floor
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-07 | Chapter3_Methodology_v1.md | 22123185fd36 -> 06754fc5cde4 | João 12
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-08 | Chapter4_TRF_Model_v1.md | 3ecb4bc59b59 -> 4d9b1aaff213 | João 12
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-09 | Front_Matter_v1.md | fe972d047277 -> a8cd4630174d | João 12
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-10 | code_artefacts/README_Appendix_A.md | 81bc377bd727 -> fea7d6a71724 | verifier M6
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-11 | Chapter4_TRF_Model_v1.md | 3ecb4bc59b59 -> 4d9b1aaff213 | João 17
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-12 | Chapter4_TRF_Model_v1.md | 3ecb4bc59b59 -> 4d9b1aaff213 | João 17
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-13 | Chapter4_TRF_Model_v1.md | 3ecb4bc59b59 -> 4d9b1aaff213 | verifier: antecedent unclear after the Aikebaier sentence
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-14 | Appendix_C_Evaluation_Instrument.md | b7ed9d1b0fcc -> 0d9a090de927 | verifier M5
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-15 | Appendix_C_Evaluation_Instrument.md | b7ed9d1b0fcc -> 0d9a090de927 | verifier M5
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-16 | Appendix_C_Evaluation_Instrument.md | b7ed9d1b0fcc -> 0d9a090de927 | verifier M5
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-17 | Chapter4_TRF_Model_v1.md | 3ecb4bc59b59 -> 4d9b1aaff213 | verifier M7
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-18 | Chapter2_LitReview_v2_FINAL.md | c2ccf6e89adf -> 3816c5363aa8 | verifier M8: five are listed
+2026-11-02 14:31 | P103_joao_should_fix.py | P103-19 | Chapter5_Demonstration_v1.md | 361bcdd40666 -> f4719ef75514 | João 14: an implementation check, as the abstract says
+2026-11-02 14:35 | P104_appendix_d.py | P104-01 | Chapter2_LitReview_v2_FINAL.md | 3816c5363aa8 -> 006aae3cd806 | back-reference to the reproduced primary record
+2026-11-02 14:35 | P104_appendix_d.py | P104-02 | Front_Matter_v1.md | a8cd4630174d -> cb3d29c396a2 | TOC entry

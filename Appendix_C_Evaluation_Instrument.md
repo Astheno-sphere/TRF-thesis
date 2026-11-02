@@ -1,6 +1,6 @@
 # Appendix C. Expert Evaluation Instrument
 
-*(v1.1, 18 September 2026; item A1 reworded October 2026. The instrument specified here was designed following supervisory feedback of September 2026 and constitutes the evaluation design for the next iteration of the design science cycle. Its execution status is stated in Chapter 3, Section 3.8. **This is a design, not a fielded instrument. Section C.1 states what is expected to change once it meets real respondents.**)*
+*(v1.1, 18 September 2026; item U1 corrected and item A1 reworded October 2026. The instrument specified here was designed following supervisory feedback of September 2026 and constitutes the evaluation design for the next iteration of the design science cycle. Its execution status is stated in Chapter 3, Section 3.8. **This is a design, not a fielded instrument. Section C.1 states what is expected to change once it meets real respondents.**)*
 
 ---
 
@@ -10,7 +10,7 @@ Chapter 3, Section 3.7 sets out the analytical evaluation strategy adopted for t
 
 It does not collect stakeholder input. Design Science Research as elaborated by Hevner, March, Park, and Ram (2004) and Peffers, Tuunanen, Rothenberger, and Chatterjee (2007) treats evaluation as an activity that may be conducted through several methods, of which expert assessment is one, and a specification-and-demonstration study of the kind reported here frequently designs the evaluation that a subsequent cycle executes. This appendix is that design.
 
-The instrument is specified in sufficient detail to be executed without further design work: panel composition and recruitment approach, session structure, demonstration script, semi-structured interview guide, a closed-response questionnaire, the analysis approach, and the data-protection arrangements execution would require. The four closed-response dimensions follow the structure proposed in supervisory feedback and are reproduced with their anchor statements intact.
+The instrument is specified in sufficient detail to be executed without further design work: panel composition and recruitment approach, session structure, demonstration script, semi-structured interview guide, a closed-response questionnaire, the analysis approach, and the data-protection arrangements execution would require. The four closed-response dimensions follow the structure proposed in supervisory feedback and are reproduced with their anchor statements as proposed, except for the two changes stated under *Status of this instrument*.
 
 ---
 
@@ -51,7 +51,7 @@ a result. Any revision made after piloting is to be recorded with its reason, an
 version of the instrument actually administered is to be reproduced in the thesis that
 reports it, rather than this one.
 
-Should the evaluation be executed, this appendix stands as the pre-registered design
+Should the evaluation be executed, this appendix stands as the design specified in advance,
 against which any subsequent version can be compared.
 
 ---
@@ -140,7 +140,7 @@ Question 7 is included because the thesis's sharpest result depends on the answe
 
 Five-point Likert scale throughout: 1 = strongly disagree, 2 = disagree, 3 = neither agree nor disagree, 4 = agree, 5 = strongly agree. A sixth option, *not able to judge*, is offered on every item and is reported separately rather than treated as a midpoint.
 
-Each dimension opens with the anchor statement proposed in supervisory feedback, reproduced verbatim, followed by items that decompose it.
+Each dimension opens with the anchor statement proposed in supervisory feedback, reproduced as proposed, with the two changes stated in Section C.1, followed by items that decompose it.
 
 ### Dimension 1: Perceived utility
 

@@ -8,7 +8,7 @@
 
 This chapter discharges Activity 4 of the design science cycle set out in Chapter 3, Section 3.2: demonstration. Its function is narrow.
 
-The chapter demonstrates that Propositions 1 and 2 of Chapter 4 hold on the instances examined; Proposition 4 is analytic and is not executed here; Section 5.4 computes the condition of Proposition 3 and Section 5.5 checks it. It does not verify them in the proof-assistant sense, it does not measure performance, and it does not deploy anything. Proposition 1 predicts that under plaintext-verifiability semantics the constraint system fails whenever an erasure deadline or a deletion-ceiling deadline falls inside a record's retention window. Proposition 2 predicts that under accountability-preserving semantics the invalidation trajectory satisfies all three constraints for every arrival pattern. The demonstration's job is to make both predictions checkable by execution rather than only by argument.
+The chapter checks that the artefact implements Propositions 1 and 2 of Chapter 4 on the instances examined; Proposition 4 is analytic and is not executed here; Section 5.4 computes the condition of Proposition 3 and Section 5.5 checks it. It does not verify them in the proof-assistant sense, it does not measure performance, and it does not deploy anything. Proposition 1 predicts that under plaintext-verifiability semantics the constraint system fails whenever an erasure deadline or a deletion-ceiling deadline falls inside a record's retention window. Proposition 2 predicts that under accountability-preserving semantics the invalidation trajectory satisfies all three constraints for every arrival pattern. The demonstration's job is to make both predictions checkable by execution rather than only by argument.
 
 A subsidiary claim is made for Corollary 1.2: that, on the broad reading of Article 68(12) and for logs kept at patient-record granularity, Secure Processing Environment access-log records become infeasible under plaintext semantics *without any erasure request at all*, through the collision of the Article 73(1)(e) one-year retention floor with the Article 68(12) six-month deletion ceiling. The demonstration produces thirty-nine such witnesses, a number the generator determines (Section 5.4).
 
@@ -18,7 +18,7 @@ The checker is a single Python module of 551 lines including documentation, the 
 
 Seven further modules accompany it, bringing the artefact to eight Python files in all; the eleven-page viewer is split across `app.py` and `ui.py`, which Table 5.1 lists on a single row. None of the seven alters anything the checker reports. Their line counts, and the full source of each, are given in Appendix A. Figure 5.1 maps the modules and the path a record takes through them.
 
-![Figure 5.1. The artefact's modules and data path. Records enter from the generator or one of the optional layers, are invalidated on schedule, and are checked under both semantics; the optional cryptographic module and the bounded SMT check sit beside the checker and report separately.](figures/fig5_1_trf_artefact.png){width=6.3in}
+![Figure 5.1. The artefact's modules and data path. Records enter from the generator or one of the optional layers, are invalidated on schedule, and are checked under both semantics; the optional cryptographic module and the bounded SMT check sit beside the checker and report separately, and every run is recorded in `docs/expected_*.txt`.](figures/fig5_1_trf_artefact.png){width=6.3in}
 
 *Table 5.1. The artefact as published*
 
@@ -213,7 +213,7 @@ Repeating the comparison with an eight-bundle subset of the same generated cohor
 
 The generated records carry US Core profiles, not the Norwegian basisprofiler; Chapter 3, Section 3.5 states why that cannot affect any figure here, and the invariance above confirms it.
 
-The complete run includes the exhaustive cross-check over 65,536 assignments; no timing is reported, consistently with Section 5.8.
+The exhaustive cross-check of Section 5.5 covers 65,536 assignments in all.
 
 The source repository and a hosted demonstration are listed in Appendix A. The hosted application executes the same unmodified source, checks at execution that its run reproduces the figures in this chapter, and shows a failure notice rather than results if it does not. No claim depends on the hosting remaining available; the repository is the artefact. The demonstration thus supports the claim Chapter 1 made for it: the artefact behaves as specified, and Propositions 1 and 2 are checkable by a reader who declines to take the proofs on trust. Chapter 6 takes up what follows from them.
 

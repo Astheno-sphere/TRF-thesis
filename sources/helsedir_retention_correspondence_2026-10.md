@@ -13,7 +13,7 @@ Simjanoska Misheva et al., 2025).
 
 ## Reply (received)
 - From: Hans Löwe Larsen, Avdelingsdirektør, divisjon informasjonsforvaltning og metode, Helsedirektoratet
-  (+47 4000 5444; Vitaminveien 4, 0277 Oslo)
+  (direct contact details omitted)
 - Received: Monday 19 October 2026
 
 Verbatim (Norwegian):

@@ -28,7 +28,7 @@ import trim_inspector as T
 # Section/Table/Figure numbers are N.N exactly — the negative lookahead (?!\.?\d) rejects
 # external multi-dot numbering such as IHE ITI-55 "Section 3.55.4.1.2.1".
 REF = re.compile(r"(?:Section|§)\s?(\d+\.\d+)(?!\.?\d)|Chapter\s+(\d+)|Table\s+(\d+\.\d+)(?!\.?\d)|"
-                 r"Figure\s+(\d+\.\d+)(?!\.?\d)|Proposition\s+(\d+)|Corollary\s+(\d+\.\d+)(?!\.?\d)|Appendix\s+([A-C])")
+                 r"Figure\s+(\d+\.\d+)(?!\.?\d)|Proposition\s+(\d+)|Corollary\s+(\d+\.\d+)(?!\.?\d)|Appendix\s+([A-D])")
 
 def load():
     d = {}
@@ -48,7 +48,7 @@ def targets_present(texts):
         for m in re.findall(r">\s*\*?Proposition\s+(\d+)", s): present.add(("Proposition", m))
         for m in re.findall(r"Proposition\s+(\d+)", s): present.add(("Proposition", m))
         for m in re.findall(r"Corollary\s+(\d+\.\d+)", s): present.add(("Corollary", m))
-        for m in re.findall(r"Appendix\s+([A-C])", s): present.add(("Appendix", m))
+        for m in re.findall(r"Appendix\s+([A-D])", s): present.add(("Appendix", m))
     return present
 
 def inbound(texts):

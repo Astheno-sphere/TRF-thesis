@@ -2,7 +2,7 @@
 
 This log records every search query executed in the course of the literature review, recovered from the working record of each session. Queries are reproduced as run, including those that produced nothing usable, since a curated log would be less credible than a complete one.
 
-Some entries are document-retrieval or verification queries rather than discovery queries: targeting a known citation, a regulation's text, or a specific document's status. These are marked *[R]*. Discovery queries, which sought literature not already known to the review, are unmarked. Both are reported because the distinction matters for interpreting what the log evidences: only discovery queries bear on the absence claim of Chapter 2, Section 2.9. They are natural-language queries rather than Boolean strings, which is what the review actually used; Chapter 2, Section 2.1 states this and gives a Boolean replication protocol separately.
+Some entries are document-retrieval or verification queries rather than discovery queries: targeting a known citation, a regulation's text, or a specific document's status. Entries 33, 34 and 36, which retrieved the author's own drafts, are marked as such and excluded from the counts; other retrieval queries are not individually marked, so the counts combine discovery queries, which sought literature not already known to the review, with retrieval queries. Both are reported because the distinction matters for interpreting what the log evidences: only discovery queries bear on the absence claim of Chapter 2, Section 2.9. They are natural-language queries rather than Boolean strings, which is what the review actually used; Chapter 2, Section 2.1 states this and gives a Boolean replication protocol separately.
 
 
 ## Round 1: 25 May 2026 (landscape, infrastructure, regulatory baseline)
@@ -116,13 +116,13 @@ invented query strings would be worse than reporting none.
 | 76 | EDPB documents 2026a and 2026b, official titles | Both titles corrected to the Board's own wording |
 | 77 | Remaining institutional and standards sources: Datatilsynet, Folkehelseinstituttet, Forskningsetikk, Helse- og omsorgsdepartementet, Stortinget, HL7 Norway, NORTRE, ICC, Berngaard, OneUptime, Healthy Europe, Ernst & Young, GDPR | Locators retrieved and matched against title, issuer and year. Ernst & Young was later removed from the bibliography when the EHDS dates in Chapter 2, Section 2.2 were re-anchored on Article 105 of the Regulation (3 October 2026) |
 
-*Round 5 outcome: 68 entries with 41 locators became 67 entries with 67 locators. Two
+*Round 5 outcome: every entry left in the bibliography carried a verified locator. Two
 entries were removed as documents that do not exist as cited, and six citations were
 corrected on year, title or author. Nothing was linked that was not retrieved.*
 
 ---
 
-*Total distinct queries logged: 59 discovery and verification queries across four rounds, plus 18 locator verifications in round 5.*
+*Total distinct queries logged: 56 discovery and verification queries across four rounds, three retrievals of the author's own drafts (entries 33, 34 and 36), and 18 locator verifications in round 5.*
 
 ## Note on coverage
 
