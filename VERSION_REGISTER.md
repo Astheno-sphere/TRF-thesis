@@ -42,7 +42,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | SUPPORT | process/Substrate_FINAL_PATCH.xlsx | b78d09fbc53c | 1,640 | 16 Sep 03:22 | Research substrate patch (supersedes 1/2/3/Master) |
 | SUPPORT | process/Supervisor_Feedback_Action_Plan.Rmd | e318cfab1ca8 | 2,003 | 21 Sep 05:10 | Response plan to first feedback round |
 
-| HANDOFF | process/HANDOFF_READ_FIRST.md | aeb1e4e4c7f6 | 5,113 | 10 Oct 02:41 | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
+| HANDOFF | process/HANDOFF_READ_FIRST.md | 3ec5d0541eed | 5,113 | 2 Nov 14:52 | Master handoff: locked decisions, corrections never to reintroduce, failure modes, open work |
 | CONTROL | archive/SUPERVISOR_REVIEW_2026-09-30_Ferreira.md | 3924dc7b50d5 | 2,962 | 2 Oct 05:36 | Supervisor peer review, 30 Sept. THE LIVE WORK. Each major item verified against the files; sequencing note overrides his numbering |
 | CONTROL | process/PATCHES.md | 757487bd875a | 15,562c | 3 Oct 00:17 | The working patch list for Joao Round 3. Wave −1 (work done on the wrong base, queued for re-application), seven waves, three gating decisions, cascade map. Nothing of the supervisor review applied yet |
 | CONTROL | archive/SUPERVISOR_FEEDBACK_HISTORY.md | b64f80c647f1 | 8,151c | 10 Oct 02:43 | Every supervisory round and what it changed. Patterns across rounds |
@@ -51,7 +51,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | process/FAILURE_LEDGER.md | 586ab203f202 | 1,508 | 2 Oct 05:34 | Every failure mode and the rule from it; the five false trail entries |
 | CONTROL | process/NUANCES.md | 4102be608b9d | 1,255 | 2 Oct 05:35 | How Tiger works, standing rules, reversed decisions, false-positive errors |
 | CONTROL | process/CONVERSATION_LINEAGE.md | ffd26f07fbb0 | 1,448 | 10 Oct 02:42 | Seven sessions mapped; this session's identifier for future reference |
-| CONTROL | process/RESUME_PROMPT.md | ba4f42bf96b2 | 262 | 10 Oct 02:43 | Paste-ready resume prompt with verification commands |
+| CONTROL | process/RESUME_PROMPT.md | c27abec3ba7b | 262 | 2 Nov 14:52 | Paste-ready resume prompt with verification commands |
 | CONTROL | process/MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | process/Viva_Preparation_Notes.md | bf98f2a7ada4 | 1,767 | 29 Sep 13:08 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
@@ -74,7 +74,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | SOURCE | sources/TEHDAS2_D7.4_v1.2_2026-02-24.md | 8f2d41343f50 | 3,344 lines | 3 Oct | TEHDAS2 D7.4 v1.2 full text (supplied by Tiger); source for P06, P22, P24 |
 | SOURCE | sources/UCC_Regulation_952_2013_OJ_text.md | 13165c25f8ce | 6,158 lines | 3 Oct | UCC OJ text (supplied by Tiger); source for P11 |
 | CONTROL | process/RESEARCH_LOG_2026-10.md | 282492c93204 | 20 rows | 3 Oct 18:14 | Every search and fetch since 3 Oct; candidate round for Appendix B |
-| HANDOFF | handoff_tools/trail_check.py | 424d0ebd1783 | — | 5 Oct 15:17 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
+| HANDOFF | handoff_tools/trail_check.py | eb947fbc019a | — | 2 Nov 14:52 | Trail inspector, 12 checks; must end TRAIL INTACT before any commit or package |
 | HANDOFF | handoff_tools/guards.json | f65310b02be7 | 24 guards | 3 Oct 18:26 | Regression patterns held at 0 and review targets that may only fall, with baselines |
 | HANDOFF | handoff_tools/register_sync.py | c7c87a4d9a76 | — | 3 Oct | Recomputes register rows whose file changed; run before each commit |
 | HANDOFF | handoff_tools/commit.sh | eb8828fc6bea | — | 3 Oct 17:22 | Gated commit: refuses on any trail_check FAIL. The only way to commit |

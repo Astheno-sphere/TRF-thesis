@@ -7,14 +7,14 @@ The git repo is the permanent state across sessions. Tags do NOT push to this re
 
 ## Re-anchor in one line
 ```
-git checkout joao-base && git tag -f joao-base-v1 184c91d
+git checkout main && git tag -f joao-base-v1 184c91d
 ```
 - `joao-base-v1` → commit **184c91d** ("Baseline: 30 Sept migration package") — the reviewed-draft
   base the trail_check replay and verify_base measure from. Verified: Front_Matter md5 e3afa723b46f
   and Chapter2 md5 f2694c7dfd13 at 184c91d match the D0 patch "before" hashes.
 
 ## Last verified state (update this when you hand off)
-- Branch **joao-base**, P88 = **e8311c4** (30 Oct) + handoff refresh commit; check `git status -sb` for push state.
+- Branch **main**, P88 = **e8311c4** (30 Oct) + handoff refresh commit; check `git status -sb` for push state.
 - Tags: `joao-base-v1` → 184c91d (reviewed-draft base); `joao-base-v2` exists (later anchor).
 - Chapter body: raw `wc -w` of Front+Ch1–7 = **56,118**; project-tracked "body" figure was ~48k at P84
   (the tracked counter strips reference lists/front — re-run the project counter if an exact figure is needed for João).

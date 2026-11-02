@@ -9,7 +9,7 @@ It answers one question: is every change to the thesis on the record, and has no
 Exit 0 only if no check FAILs. WARN does not block; read it anyway.
 
 Checks
-  1  git          on branch joao-base; uncommitted files listed
+  1  git          on branch main; uncommitted files listed
   2  md5 chain    every watched file's current md5 equals the last "after" md5 in patches/APPLIED.log,
                   the chain of before/after md5s has no gap, and a file with no log entry is
                   unchanged since tag joao-base-v1. A gap or mismatch is an edit nobody logged.
@@ -30,7 +30,7 @@ import hashlib, json, os, pathlib, re, shutil, subprocess, sys, tempfile
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 os.chdir(ROOT)
 sys.path.insert(0, str(ROOT / "handoff_tools"))
-TAG, BRANCH = "joao-base-v1", "joao-base"
+TAG, BRANCH = "joao-base-v1", "main"  # joao-base was renamed main on 2 Nov 2026
 COPIES = {"demo_app/trf_checker.py": ["repro_package/trf_checker.py", "code_artefacts/trf_checker.py"],
           "demo_app/synthea_layer.py": ["repro_package/synthea_layer.py", "code_artefacts/synthea_layer.py"],
           "demo_app/norwegian_layer.py": ["repro_package/norwegian_layer.py", "code_artefacts/norwegian/norwegian_layer.py"],

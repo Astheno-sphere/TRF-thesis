@@ -13,7 +13,7 @@
 
 | Thing | Location / identifier | State |
 |---|---|---|
-| Thesis working repo | this folder, git branch `joao-base`, HEAD after commit "B-54" (see `handoff/2026-10-10/VERSION_LOG.md`) | Trail intact (`python3 handoff_tools/trail_check.py --full --remote`) |
+| Thesis working repo | this folder, git branch `main`, HEAD after commit "B-54" (see `handoff/2026-10-10/VERSION_LOG.md`) | Trail intact (`python3 handoff_tools/trail_check.py --full --remote`) |
 | Portable copy of the repo | `TRF_thesis_repo_2026-10-10.bundle` (git bundle, all branches and tags) and `TRF_thesis_workspace_2026-10-10.zip` | Delivered to Tiger 10 Oct; upload to the next chat |
 | Public artefact repo | github.com/Astheno-sphere/TRF, `main` at `169c99a` (R-30) | Matches `CHECKSUMS.md` (check 12 passes) |
 | Private thesis repo | github.com/Astheno-sphere/trf-thesis | **Still PUBLIC — nothing pushed. Do not push until Tiger makes it private** |
@@ -57,7 +57,7 @@
 ### 000.4 How to resume in a new chat (exact)
 
 1. Upload: the git bundle (or the workspace zip), João's newest .docx, and paste `RESUME_PROMPT.md`.
-2. Restore: `git clone TRF_thesis_repo_2026-10-10.bundle thesis && cd thesis && git checkout joao-base` (or unzip the workspace).
+2. Restore: `git clone TRF_thesis_repo_2026-10-10.bundle thesis && cd thesis && git checkout main` (or unzip the workspace).
 3. Verify before touching anything: `python3 handoff_tools/trail_check.py --full` → must end `TRAIL INTACT`. Compare `handoff/2026-10-10/CHECKSUMS_SHA256.txt` with `sha256sum -c` (see that file's header).
 4. Read in this order: this §000 → `handoff/2026-10-10/AUDIT_STATUS.md` → `REVIEW_TRACKER.md` (rows OPEN/PARTIAL) → `NUANCES.md` (working style) → `DECISION_RECORD.md` → `CONVERSATION_LINEAGE.md` (landmarks + chat links).
 5. For a new supervisor docx, follow §000.5.
@@ -91,7 +91,7 @@
 
 **The working copy is now the draft Prof. Ferreira reviewed**, not the 30 Sept migration zip.
 The two differed in 29 content edits; the zip also carried the Bodø opening (H-01), added after
-the draft was sent. Commit `0438daf`, tag `joao-base-v1`, branch `joao-base`. The returned file
+the draft was sent. Commit `0438daf`, tag `joao-base-v1`, branch `main`. The returned file
 and its text are in `supervisor_review/`. See `DECISION_RECORD.md` D-14 and `FAILURE_LEDGER.md`
 F-0.
 

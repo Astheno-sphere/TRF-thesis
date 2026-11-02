@@ -9,12 +9,12 @@ Supersedes the dated §000 in `HANDOFF_READ_FIRST.md` where they conflict. Read 
 **Submission:** 14 Nov 2026 · **Defence:** first week of Dec 2026 · **Stamped:** Fri 30 Oct 2026
 
 **CLONE URL (repo was renamed `trf-thesis` → `TRF-thesis`):** `https://github.com/Astheno-sphere/TRF-thesis.git`
-The old `trf-thesis` URL still redirects, but clone the new name. After cloning, re-anchor the base tag (CONTINUITY_ANCHOR.md). Everything through this handoff (`7e4e5b0`) is on `origin/joao-base`.
+The old `trf-thesis` URL still redirects, but clone the new name. After cloning, re-anchor the base tag (CONTINUITY_ANCHOR.md). Everything through this handoff (`7e4e5b0`) is on `origin/main`.
 
 ---
 
 ## 0. ONE-LINE STATE
-Branch `joao-base`, HEAD = the handoff commit after **e8311c4 (P88)**; check `git status -sb` for push state. Red team COMPLETE & committed. Statement of contribution DONE (P88).
+Branch `main`, HEAD = the handoff commit after **e8311c4 (P88)**; check `git status -sb` for push state. Red team COMPLETE & committed. Statement of contribution DONE (P88).
 Thesis is **A-capable and defensible**; remaining grade risk is viva drilling + João's calls, not more editing.
 Next action = Tiger's items only (F-0 coordinator sign-off on the AI declaration; voice read of Ch4/Ch6; confirm the Ch1 motivation sentence (P101-08); logos; length limit; Lovdata § 17). §A closed; diagrams done (P91, P93); red team round 2 done (P94–P99, RED_TEAM.md); release 1.1.0 cited via concept DOI 10.5281/zenodo.23819274; first-person framing voice P101.
 
@@ -95,7 +95,7 @@ Full chain: `git log` and `PATCH_LOG.md` / `PATCHES.md`. Patch scripts P01–P87
 
 **Tags:** `joao-base-v1` = 184c91d (reviewed-draft base, trail/verify measure from here); `joao-base-v2` (later anchor).
 Tags do NOT push to this remote (policy rejects non-branch refs) → recreate on any fresh clone:
-`git checkout joao-base && git tag -f joao-base-v1 184c91d`
+`git checkout main && git tag -f joao-base-v1 184c91d`
 
 ## C. INSPECTOR / "WHIPLASHER" STATE (the gated-patch discipline)
 Forward edits are gated per-edit; none of these need the historical replay:
@@ -161,7 +161,7 @@ Do NOT push to any public repo. Private repo stays private; nothing is pushed un
 
 ## I. PASTE-READY OPENING FOR THE NEXT CHAT
 > Resume the TRF/VERA-SNARK thesis. Repo at /home/claude/trf-thesis (re-clone + re-anchor tag per CONTINUITY_ANCHOR.md
-> if fresh). Read NEXT_SESSION.md first. State: branch joao-base, P88 applied (contribution statement done), red team done, A-capable.
+> if fresh). Read NEXT_SESSION.md first. State: branch main, P88 applied (contribution statement done), red team done, A-capable.
 > First action: diagrams (§G) — whole-system map first, gated like any patch
 > (patch.py → trim_inspector.py → concordance.py --check → diff → commit), domino-checked.
 > Every move surgical; no overclaim; diff against git, not the record.
