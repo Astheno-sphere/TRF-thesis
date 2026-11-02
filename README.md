@@ -71,7 +71,7 @@ python3 trf_checker.py          # Semantics I: 95 violations across 90 of 200 re
 python3 -m pytest -q tests/     # 54 checks: recorded runs, viewer pages, claim ledger against Chapter 5, cross-check vs checker
 ```
 
-A self-contained copy with recorded outputs is in [`repro_package/`](repro_package/). Archived on Zenodo: all versions [10.5281/zenodo.23819274](https://doi.org/10.5281/zenodo.23819274); version 1.1.0 cited in the thesis [10.5281/zenodo.23826911](https://doi.org/10.5281/zenodo.23826911).
+A self-contained copy with recorded outputs is in [`repro_package/`](repro_package/). Archived on Zenodo: all versions [10.5281/zenodo.23819274](https://doi.org/10.5281/zenodo.23819274); version 1.2.0 cited in the thesis [10.5281/zenodo.23827275](https://doi.org/10.5281/zenodo.23827275).
 
 ## How this repository is kept
 

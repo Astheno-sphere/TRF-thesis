@@ -1408,3 +1408,16 @@
 2026-11-02 17:39 | P110_code_fix.py | P110-07 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2: test_props.py
 2026-11-02 17:39 | P110_code_fix.py | P110-08 | code_artefacts/README_Appendix_A.md | aea3ea349eb1 -> 271020dc8ea8 | A.2: pinned
 2026-11-02 17:39 | P111_appendix_sync.py | P111-B01 | code_artefacts/README_Appendix_A.md | 271020dc8ea8 -> 4e7fdd84d915 | Appendix A A.10 synced to demo_app/trf_checker.py
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-01 | Chapter4_TRF_Model_v1.md | a8ff4ed5599f -> c7cb462ae1de | D1
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-02 | Front_Matter_v1.md | 9f45942af2d4 -> cf5202661c7c | D1: the cross-border floor is a requirement, not shown to be a legal obligation
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-03 | Chapter4_TRF_Model_v1.md | a8ff4ed5599f -> c7cb462ae1de | D2
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-04 | Chapter3_Methodology_v1.md | 06754fc5cde4 -> 15a98abbe03e | D2, folded into principal step 1
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-05 | Chapter4_TRF_Model_v1.md | a8ff4ed5599f -> c7cb462ae1de | D3
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-06 | Chapter4_TRF_Model_v1.md | a8ff4ed5599f -> c7cb462ae1de | D4
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-07 | Chapter6_Discussion_v1.md | d18a36361bb1 -> b887f03a3cf7 | D4
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-08 | Chapter1_Introduction_v2.md | 55111ef49f84 -> 290db558fef9 | D5
+2026-11-02 18:50 | P112_decisions_d1_d5_g1.py | P112-09 | Chapter7_Conclusion_v1.md | 8361b57e50a4 -> f2b7a55a4b57 | G1
+2026-11-02 18:50 | P113_sammendrag_d1.py | P113-01 | Front_Matter_v1.md | cf5202661c7c -> 9ada739713e1 | D1, Norwegian abstract
+2026-11-02 18:51 | P114_release_120.py | P114-01 | Front_Matter_v1.md | 9ada739713e1 -> 06c59fc5bf66 | release 1.2.0
+2026-11-02 18:51 | P114_release_120.py | P114-02 | code_artefacts/README_Appendix_A.md | 4e7fdd84d915 -> e7099007608f | release 1.2.0
+2026-11-02 18:51 | P114_release_120.py | P114-03 | code_artefacts/README_Appendix_A.md | 4e7fdd84d915 -> e7099007608f | release 1.2.0
