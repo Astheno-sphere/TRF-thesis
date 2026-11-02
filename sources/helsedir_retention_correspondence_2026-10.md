@@ -38,7 +38,7 @@ Verbatim (Norwegian):
    Architecture, NCPeH Architecture, Audit Trail Profile) fix NO retention method or period; they
    defer to national legislation. → The reported "ten years" (Simjanoska Misheva et al., 2025) is not
    an established requirement; it confirms, from the controller, that no catalogue figure exists.
-2. For the pilot, Hdir has provisionally set a six-year retention; the full-production figure is
+2. For the pilot, Hdir has decided on a six-year retention; the full-production figure is
    undecided and reserved to Hdir as data controller (dataansvarlig).
 3. "Hdir is controller and decides" corroborates the §4.2 controllership analysis (Commission
    Implementing Decision (EU) 2019/1765, Art 7: the Member-State authority is the controller).
@@ -46,3 +46,6 @@ Verbatim (Norwegian):
 Design consequence: the TRF Model treats the retention floor as a parameter, not a constant; the
 demonstration uses F = 120 months (illustrative long floor) and Corollary 2.2 shows no result depends
 on the value. The six-year pilot figure is now the live Norwegian data point.
+
+## Permission
+Permission to reproduce the reply in the thesis (Appendix D) was obtained from the sender; recorded on the author's confirmation, 2 November 2026.

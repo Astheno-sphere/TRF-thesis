@@ -32,8 +32,8 @@
 > I hope this answers your questions; do get in touch if you need further information.
 > Kind regards, Hans Löwe Larsen
 
-**What the thesis takes from it.** No eHDSI specification fixes a retention period for the cross-border audit repository; the period is left to national law; the Norwegian pilot uses six years, with the production figure undecided and reserved to Helsedirektoratet as data controller (Chapter 2, Section 2.3). The thesis therefore treats the cross-border floor as a parameter (Chapter 4, Section 4.3) and uses ten years only as an illustrative long value.
+**What the thesis takes from it.** The directorate finds no retention period in the eHDSI requirements catalogue or the specifications it names; they refer the matter to national law; for the Norwegian pilot the directorate, as controller, has decided on six years, with the production figure undecided and reserved to Helsedirektoratet as data controller (Chapter 2, Section 2.3). The thesis therefore treats the cross-border floor as a parameter (Chapter 4, Section 4.3) and uses ten years only as an illustrative long value.
 
-## D.2 Datatilsynet, on the two principal interpretive questions
+## D.2 Datatilsynet, on the GDPR-side questions
 
-An enquiry to Datatilsynet on the GDPR-side questions of Chapter 7, Section 7.4 was sent on 23 September 2026. No reply had been received at the time of writing. Its text is held by the author and will be added here, with the reply, if one is received before the defence.
+An enquiry to Datatilsynet on the GDPR-side questions of Chapter 7, Section 7.4 was sent on 23 September 2026. No reply had been received at the time of submission.

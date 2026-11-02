@@ -1346,3 +1346,15 @@
 2026-11-02 14:35 | P104_appendix_d.py | P104-01 | Chapter2_LitReview_v2_FINAL.md | 3816c5363aa8 -> 006aae3cd806 | back-reference to the reproduced primary record
 2026-11-02 14:35 | P104_appendix_d.py | P104-02 | Front_Matter_v1.md | a8cd4630174d -> cb3d29c396a2 | TOC entry
 2026-11-02 14:38 | P105_demo_sync_4d3ee63.py | P105-01 | demo_app/app.py | 18bd7e246e4b -> b2104db7987e | sync demo_app/app.py to TRF 4d3ee63
+2026-11-02 15:00 | P106_whipper_round.py | P106-01 | Chapter4_TRF_Model_v1.md | 4d9b1aaff213 -> b00f1008b95d | whipper 1
+2026-11-02 15:00 | P106_whipper_round.py | P106-02 | Chapter7_Conclusion_v1.md | a79d87ca9b05 -> 52ab355fb6ef | whipper 1
+2026-11-02 15:00 | P106_whipper_round.py | P106-03 | Chapter2_LitReview_v2_FINAL.md | 006aae3cd806 -> 1c77d188a407 | whipper 2: 'besluttet' = decided
+2026-11-02 15:00 | P106_whipper_round.py | P106-04 | Chapter4_TRF_Model_v1.md | 4d9b1aaff213 -> b00f1008b95d | whipper 10
+2026-11-02 15:00 | P106_whipper_round.py | P106-05 | Front_Matter_v1.md | cb3d29c396a2 -> fcac29a41f50 | whipper 10
+2026-11-02 15:00 | P106_whipper_round.py | P106-06 | Front_Matter_v1.md | cb3d29c396a2 -> fcac29a41f50 | whipper 7: abstract matches SoC
+2026-11-02 15:00 | P106_whipper_round.py | P106-07 | Front_Matter_v1.md | cb3d29c396a2 -> fcac29a41f50 | whipper 7
+2026-11-02 15:00 | P106_whipper_round.py | P106-08 | Front_Matter_v1.md | cb3d29c396a2 -> fcac29a41f50 | whipper 6
+2026-11-02 15:00 | P106_whipper_round.py | P106-09 | Chapter7_Conclusion_v1.md | a79d87ca9b05 -> 52ab355fb6ef | whipper 5
+2026-11-02 15:00 | P106_whipper_round.py | P106-10 | Appendix_D_Correspondence.md | 7f85e8b02a4e -> abbcdd928a5f | whipper 3
+2026-11-02 15:00 | P106_whipper_round.py | P106-11 | Appendix_D_Correspondence.md | 7f85e8b02a4e -> abbcdd928a5f | whipper 6
+2026-11-02 15:00 | P106_whipper_round.py | P106-12 | Appendix_D_Correspondence.md | 7f85e8b02a4e -> abbcdd928a5f | whipper 10: a submitted appendix cannot promise later content

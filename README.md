@@ -17,7 +17,7 @@ One audit record from cross-border health data exchange is bound by three obliga
 
 | Obligation | Source | Pulls toward |
 |---|---|---|
-| Retention floor | Art. 73(1)(e) EHDS (one year, SPE access logs); national law for the MyHealth@EU audit repository (six years in the Norwegian pilot, Appendix D) | keep it, verifiable |
+| Retention floor | Art. 73(1)(e) EHDS (one year, SPE access logs); for the MyHealth@EU audit repository a period left to national law (six years in the Norwegian pilot, set by Helsedirektoratet as controller; Appendix D) | keep it, verifiable |
 | Right to erasure | Art. 17 GDPR | remove it |
 | Deletion ceiling | Art. 68(12) EHDS (six months) | remove it by a deadline |
 
@@ -30,13 +30,13 @@ The TRF Model writes the three obligations as constraints and makes one thing ex
 - **Proposition 1.** If *verifiable* means *readable in plaintext*, the constraints are infeasible whenever an erasure or deletion deadline falls inside the retention window.
 - **Proposition 2.** If *verifiable* means *accountable* (who acted, when, a hiding commitment, a logged invalidation entry), they are jointly satisfiable for every arrival pattern of requests and every retention floor.
 - **Proposition 3.** A ceiling collides with a floor only if it is no longer than the floor; the event it is anchored to decides whether the collision is visible in the text or only in each record's history.
-- **Proposition 4.** Moving a record out of the regulated environment meets the ceiling but not the right to erasure.
+- **Proposition 4.** Under Semantics I, and assuming a controller that receives a relocated record receives the Article 17 obligation with it, moving the record out of the regulated environment meets the ceiling but not the right to erasure.
 
 ![Figure 4.1. Crypto-Erasure by Invalidation at the audit boundary](figures/fig4_1_cei_mechanism.png)
 
 The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-record payload key and keeps the accessor, event metadata, a commitment and a logged invalidation entry in a tamper-evident Merkle log.
 
-**What is not claimed.** No novel cryptographic primitive or formal method. Informal proofs, checked by code and a bounded Z3 check. Synthetic data; the counts are not estimates of real frequency. Key destruction is *attested, not proven*. The retained residue is *pseudonymised, not anonymous*. Two principal interpretive steps, and four subsidiary premises (Chapter 3, Section 3.7), have no regulatory authority yet; Chapter 7 says how to settle them.
+**What is not claimed.** No novel cryptographic primitive or formal method. Informal proofs, checked by code and a bounded Z3 check. Synthetic data; the counts are not estimates of real frequency. Key destruction is *attested, not proven*. The retained residue is *pseudonymised, not anonymous*. Two principal interpretive steps, and four subsidiary premises (Chapter 3, Section 3.7), have no regulatory authority yet; Chapter 7, Section 7.4 says how the two principal steps would be settled.
 
 ## Read it
 
@@ -45,7 +45,7 @@ The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-rec
 
 | | |
 |---|---|
-| Whole thesis | [Word](VERA-SNARK_Thesis_SUBMISSION.docx) · [one Markdown file](VERA-SNARK_Thesis_SUBMISSION.md) |
+| Whole thesis (VERA-SNARK is the project's working title) | [Word](VERA-SNARK_Thesis_SUBMISSION.docx) · [one Markdown file](VERA-SNARK_Thesis_SUBMISSION.md) |
 | Front matter | [Abstract, Sammendrag, Statement of Contribution, declarations](Front_Matter_v1.md) |
 | 1 Introduction | [Chapter 1](Chapter1_Introduction_v2.md) |
 | 2 Literature and regulatory review | [Chapter 2](Chapter2_LitReview_v2_FINAL.md) |
@@ -68,10 +68,10 @@ The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-rec
 git clone https://github.com/Astheno-sphere/TRF && cd TRF
 pip install -r requirements.txt
 python3 trf_checker.py          # Semantics I: 95 violations across 90 of 200 records; Semantics II: 0
-python3 -m pytest -q tests/     # 23 checks, including every Chapter 5 figure
+python3 -m pytest -q tests/     # 23 checks: recorded runs, viewer pages, claim ledger against Chapter 5
 ```
 
-A self-contained copy with recorded outputs is in [`repro_package/`](repro_package/). The archived release is on Zenodo: [10.5281/zenodo.23819274](https://doi.org/10.5281/zenodo.23819274).
+A self-contained copy with recorded outputs is in [`repro_package/`](repro_package/). Archived on Zenodo: all versions [10.5281/zenodo.23819274](https://doi.org/10.5281/zenodo.23819274); version 1.1.0 cited in the thesis [10.5281/zenodo.23826911](https://doi.org/10.5281/zenodo.23826911).
 
 ## How this repository is kept
 
@@ -88,7 +88,7 @@ The thesis text changes only through gated patches ([`patches/`](patches/), [`ha
 
 ## Norsk sammendrag
 
-Masteroppgave ved Høgskolen i Molde om hvordan revisjonslogger for grensekryssende helsedata kan oppbevares, slettes og etterprøves samtidig under forordningen om det europeiske helsedataområdet (EHDS, forordning (EU) 2025/327) og personvernforordningen (GDPR artikkel 17). Oppgaven viser at kravene er uforenlige dersom en logg bare er etterprøvbar så lenge innholdet kan leses, og forenlige dersom etterprøvbarhet betyr etterrettelighet. Analysen er gjort mot norsk infrastruktur: Helsedirektoratet som nasjonalt kontaktpunkt for e-helse (NCPeH), Helsedataservice og sikre analyserom. Hele sammendraget står i [Front Matter](Front_Matter_v1.md#sammendrag).
+Masteroppgave ved Høgskolen i Molde om hvordan revisjonslogger for grensekryssende helsedata kan oppbevares, slettes og etterprøves samtidig under forordningen om det europeiske helsedataområdet (EHDS, forordning (EU) 2025/327) og personvernforordningen (GDPR artikkel 17). Oppgaven viser at kravene i modellen er uforenlige når en slettefrist faller innenfor lagringsperioden, dersom en logg bare er etterprøvbar så lenge innholdet kan leses, og forenlige dersom etterprøvbarhet betyr etterrettelighet. Analysen er gjort mot norsk infrastruktur: Helsedirektoratet som nasjonalt kontaktpunkt for e-helse (NCPeH), Helsedataservice og sikre analyserom. Hele sammendraget står i [Front Matter](Front_Matter_v1.md#sammendrag).
 
 **Keywords:** European Health Data Space · EHDS · GDPR Article 17 · right to erasure · cryptographic erasure · crypto-shredding · audit trail · data retention · Secure Processing Environment · MyHealth@EU · NCPeH · design science research · information logistics · Norway · Helsedataservice · helsedata · personvern
 
