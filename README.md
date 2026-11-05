@@ -68,14 +68,14 @@ The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-rec
 git clone https://github.com/Astheno-sphere/TRF && cd TRF
 pip install -r requirements.txt
 python3 trf_checker.py          # Semantics I: 95 violations across 90 of 200 records; Semantics II: 0
-python3 -m pytest -q tests/     # 54 checks: recorded runs, viewer pages, claim ledger against Chapter 5, cross-check vs checker
+python3 -m pytest -q tests/     # 56 checks: recorded runs, viewer pages, claim ledger, cross-check vs checker
 ```
 
 A self-contained copy with recorded outputs is in [`repro_package/`](repro_package/). Archived on Zenodo: all versions [10.5281/zenodo.23819274](https://doi.org/10.5281/zenodo.23819274); version 1.2.0 cited in the thesis [10.5281/zenodo.23827275](https://doi.org/10.5281/zenodo.23827275).
 
 ## How this repository is kept
 
-The thesis text changes only through gated patches ([`patches/`](patches/), [`handoff_tools/patch.py`](handoff_tools/patch.py)): a patch that would silently drop a citation, number, legal article or hedge is refused, and every cross-reference is re-checked ([`handoff_tools/concordance.py`](handoff_tools/concordance.py)). Each edit has a row in [`CHANGE_TRAIL.md`](CHANGE_TRAIL.md). Adversarial reviews are in [`RED_TEAM.md`](RED_TEAM.md) and [`red_team_round2/`](red_team_round2/). AI assistance is declared in the Front Matter.
+The thesis text changes only through gated patches ([`patches/`](patches/), [`handoff_tools/patch.py`](handoff_tools/patch.py)): a patch that would silently drop a citation, number, legal article or hedge is refused, and every cross-reference is re-checked ([`handoff_tools/concordance.py`](handoff_tools/concordance.py)). Each edit has a row in [`CHANGE_TRAIL.md`](CHANGE_TRAIL.md). Adversarial reviews are in [`RED_TEAM.md`](RED_TEAM.md) and [`red_team_round2/`](red_team_round2/); the code review and every resolution are in [`CODE_REVIEW.md`](CODE_REVIEW.md). From this repository, `repro_package/run_all.sh` reproduces every figure and `demo_app/` runs the viewer and the tests. AI assistance is declared in the Front Matter.
 
 | Folder | Holds |
 |---|---|

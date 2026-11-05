@@ -1,15 +1,10 @@
-# The feasibility checker and the Synthea realism layer use the Python standard
-# library only. No installation is required to reproduce any result in the thesis.
+# The feasibility checker, the Synthea realism layer and the Norwegian modules use the
+# Python standard library only. No installation is needed to reproduce a thesis result:
 #
-#   python3 src/trf_checker.py
-#   python3 src/synthea_layer.py
+#   python3 trf_checker.py
+#   python3 synthea_layer.py
 #
-# The optional substrate-patch generators (research bookkeeping, not thesis results)
-# require:
-openpyxl>=3.1
-#
-# The optional envelope-encryption module (crypto_envelope.py) requires:
-cryptography>=42
-#
-# The optional bounded SMT check (z3_check.py) requires:
-z3-solver>=4.12
+# Optional modules, pinned to the tested versions (same pins as demo_app/ and the release):
+cryptography==50.0.1   # crypto_envelope.py
+z3-solver==5.3.3.0     # z3_check.py
+# The bookkeeping scripts in src/ (no thesis result) also need: openpyxl>=3.1

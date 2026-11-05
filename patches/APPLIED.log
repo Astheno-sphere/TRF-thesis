@@ -1421,3 +1421,63 @@
 2026-11-02 18:51 | P114_release_120.py | P114-01 | Front_Matter_v1.md | 9ada739713e1 -> 06c59fc5bf66 | release 1.2.0
 2026-11-02 18:51 | P114_release_120.py | P114-02 | code_artefacts/README_Appendix_A.md | 4e7fdd84d915 -> e7099007608f | release 1.2.0
 2026-11-02 18:51 | P114_release_120.py | P114-03 | code_artefacts/README_Appendix_A.md | 4e7fdd84d915 -> e7099007608f | release 1.2.0
+2026-11-05 19:52 | P115_code_review_sync.py | P115-01 | CHECKSUMS.md | a5b8ae387737 -> 181d49e08c10 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-02 | Data_Provenance_Statement.md | 672daa32859b -> 54f9a12197c4 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-03 | code_artefacts/DATA_LOCATION.md | cc6163282194 -> c46fd5806300 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-04 | code_artefacts/crypto_envelope.py | b8f9ce7b8cbb -> 041627b58210 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-05 | code_artefacts/norwegian/cross_sector_check.py | 86deaf873464 -> 65130c3758e6 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-06 | code_artefacts/norwegian/norwegian_layer.py | 3e2ff91225ac -> 75fd53a06f54 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-07 | code_artefacts/synthea_layer.py | 2b4a53730227 -> 1b2389fce34b | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-08 | code_artefacts/trf_checker.py | 2a17df9bbf79 -> 5655e159e5be | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-09 | code_artefacts/z3_check.py | a9faab2469b4 -> 3342a7f3a160 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-10 | demo_app/README.md | 044b8f200f1f -> 0ec04b39fd75 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-11 | demo_app/README_repo.md | 2ab1f2771226 -> 6d3ff6f3edfa | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-12 | demo_app/app.py | b2104db7987e -> 66ee46465f10 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-13 | demo_app/cross_sector_check.py | 86deaf873464 -> 65130c3758e6 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-14 | demo_app/crypto_envelope.py | b8f9ce7b8cbb -> 041627b58210 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-15 | demo_app/norwegian_layer.py | 3e2ff91225ac -> 75fd53a06f54 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-16 | demo_app/synthea_layer.py | 2b4a53730227 -> 1b2389fce34b | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-17 | demo_app/trf_checker.py | 2a17df9bbf79 -> 5655e159e5be | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-18 | demo_app/ui.py | 04935bdab1be -> d9929909f561 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-19 | demo_app/z3_check.py | a9faab2469b4 -> 3342a7f3a160 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-20 | repro_package/README.md | acfc7f872bf5 -> 6faf16d271a7 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-21 | repro_package/cross_sector_check.py | 86deaf873464 -> 65130c3758e6 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-22 | repro_package/crypto_envelope.py | b8f9ce7b8cbb -> 041627b58210 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-23 | repro_package/data/synthea_subset/README.md | 1db0ff176680 -> 7c0efc975898 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-24 | repro_package/norwegian_layer.py | 3e2ff91225ac -> 75fd53a06f54 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-25 | repro_package/requirements.txt | 4bd3d97aa2e0 -> 4ecb7800056e | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-26 | repro_package/results/crypto_envelope_rerun.txt | 4647ce0fcff9 -> 4ad480942a75 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-27 | repro_package/results/expected_norwegian_output.txt | 5c45219369b7 -> 31bf8fc03d99 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-28 | repro_package/results/norwegian_layer_rerun.txt | 5c45219369b7 -> 31bf8fc03d99 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-29 | repro_package/results/synthea_comparison_rerun.txt | f6eacf54972c -> 89775273c278 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-30 | repro_package/results/synthea_comparison_subset_output.txt | f6eacf54972c -> 89775273c278 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-31 | repro_package/run_all.sh | ceebe60edbca -> 14c263111ad3 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-32 | repro_package/synthea_layer.py | 2b4a53730227 -> 1b2389fce34b | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-33 | repro_package/trf_checker.py | 2a17df9bbf79 -> 5655e159e5be | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P115_code_review_sync.py | P115-34 | repro_package/z3_check.py | a9faab2469b4 -> 3342a7f3a160 | code review 6 Nov: sync to TRF 067baec / packaging fix
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B01 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.10 synced to demo_app/trf_checker.py
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B02 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.11 synced to demo_app/synthea_layer.py
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B03 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.12 synced to demo_app/norwegian_layer.py
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B04 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.13 synced to demo_app/cross_sector_check.py
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B05 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.15 synced to demo_app/crypto_envelope.py
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B08 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.21 synced to repro_package/results/synthea_comparison_subset_output.txt
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B10 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.19 synced to repro_package/results/expected_norwegian_output.txt
+2026-11-05 19:52 | P116_appendix_sync.py | P116-B13 | code_artefacts/README_Appendix_A.md | e7099007608f -> 6877bee21ca5 | Appendix A A.23 synced to demo_app/z3_check.py
+2026-11-05 19:53 | P117_code_review_text.py | P117-01 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | line counts at TRF 067baec
+2026-11-05 19:53 | P117_code_review_text.py | P117-02 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | imports
+2026-11-05 19:53 | P117_code_review_text.py | P117-03 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | Table 5.1 at TRF 067baec
+2026-11-05 19:53 | P117_code_review_text.py | P117-04 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | review: the reported run does not use Synthea payloads
+2026-11-05 19:53 | P117_code_review_text.py | P117-05 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | review M3, M4
+2026-11-05 19:53 | P117_code_review_text.py | P117-06 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | review: the page shows results and then the notice
+2026-11-05 19:53 | P117_code_review_text.py | P117-07 | Chapter5_Demonstration_v1.md | 31ead3f8a2fe -> 47f3e6f9d5b5 | house rule: synthetic
+2026-11-05 19:53 | P117_code_review_text.py | P117-08 | Chapter6_Discussion_v1.md | b887f03a3cf7 -> 7f1da0955562 | review: cross-sector C3 covers payload and link only
+2026-11-05 19:53 | P117_code_review_text.py | P117-09 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A.2
+2026-11-05 19:53 | P117_code_review_text.py | P117-10 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A.2
+2026-11-05 19:53 | P117_code_review_text.py | P117-11 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A.2
+2026-11-05 19:53 | P117_code_review_text.py | P117-12 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A.2
+2026-11-05 19:53 | P117_code_review_text.py | P117-13 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A.2: tests
+2026-11-05 19:53 | P117_code_review_text.py | P117-14 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A.4
+2026-11-05 19:53 | P117_code_review_text.py | P117-15 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | review M2: where the commands run
+2026-11-05 19:53 | P117_code_review_text.py | P117-16 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A viewer note
+2026-11-05 19:53 | P117_code_review_text.py | P117-17 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | as P117-06
+2026-11-05 20:04 | P118_checksums.py | P118-01 | CHECKSUMS.md | 181d49e08c10 -> dd664a3762e8 | checksums at the final code

@@ -58,7 +58,7 @@ def encrypt(custody, rid, payload):
     dek = custody.new_data_key(rid)
     nonce = os.urandom(12)
     ct = AESGCM(dek).encrypt(nonce, payload, f"rec:{rid}".encode())
-    del dek                                            # only the wrapped copy survives
+    del dek                                            # unbinds the plaintext key; Python gives no guarantee it is erased from memory
     return nonce, ct
 
 
@@ -87,7 +87,7 @@ def main():
         try:
             decrypt(custody, r.rid, *store[r.rid])
             readable += 1
-        except KeyError:
+        except (KeyError, InvalidTag):    # no wrapped key in custody, or a ciphertext that fails authentication
             refused += 1
     print(f"decryptable after invalidation        : {readable}  (expected {len(records) - len(invalidated)})")
     print(f"refused, key destroyed                : {refused}  (expected {len(invalidated)})")

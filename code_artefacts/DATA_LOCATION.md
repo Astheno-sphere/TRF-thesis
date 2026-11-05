@@ -12,3 +12,10 @@ GitHub was pending. That push completed on 28 September 2026, so the staging
 copy was removed rather than left to drift. Provenance for the bundles is in
 `repro_package/data/synthea_subset/README.md` and in
 `Data_Provenance_Statement.md`.
+
+## Running the code
+
+`code_artefacts/` holds the source files as Appendix A lists them, for reading beside the
+appendix; the Norwegian modules sit in `norwegian/` here. To run them, use `repro_package/`
+(`./run_all.sh`) or `demo_app/` (viewer and tests), whose layout matches the archived release,
+or a clone of the code repository. Appendix A, A.5 gives the commands for that layout.

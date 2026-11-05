@@ -1,1 +1,7 @@
 __pycache__/
+*.pyc
+.pytest_cache/
+# a regenerated Synthea cohort (314 MB) or downloaded generator never belongs in git
+synthea_run/
+synthea.jar
+*.docx.tmp
