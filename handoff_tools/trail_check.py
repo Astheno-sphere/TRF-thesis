@@ -175,7 +175,7 @@ def main():
     import verify_base
     _, diffs, _ = verify_base.collect()
     pairs = []
-    for pf in sorted({r["patch"] for r in log}):
+    for pf in dict.fromkeys(r["patch"] for r in log):   # log order: filename order puts P120 before P12
         p = pathlib.Path("patches") / pf
         if p.exists():
             import importlib.util
