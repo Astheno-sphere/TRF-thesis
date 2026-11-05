@@ -12,7 +12,7 @@ bibliography), equation spacing, and the hand-written contents list that Word's 
 On the base (tag joao-base-v1) the expected result is: 0 wording differences.
 After patching, every difference listed should correspond to a logged patch.
 """
-import difflib, re, subprocess, sys
+import difflib, re, shutil, subprocess, sys
 
 DRAFT = "supervisor_review/draft_as_reviewed_tracked_rejected.txt"
 FILES = ["Front_Matter_v1.md", "Chapter1_Introduction_v2.md", "Chapter2_LitReview_v2_FINAL.md",
@@ -42,6 +42,8 @@ def is_artefact(f, s):
 
 
 def collect():
+    if not shutil.which("pandoc"):
+        raise SystemExit("verify_base: pandoc is required (apt install pandoc)")
     """Return (prose lines checked, differences as (file, ours, closest draft line), missing draft lines)."""
     md_lines = []
     for f in FILES:

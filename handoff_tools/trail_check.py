@@ -24,6 +24,8 @@ Checks
  11  full/remote  optional, see above
  13  appendix     every source listing and console output in Appendix A equals its file
  14  replay       every patch since the tag, replayed in log order from the tag, reproduces the files
+ 15  docx         the submission .docx exists, passes its CRC check, is newer than the assembled .md and
+                  carries chapter headings, tables and page references (build_docx.py is otherwise ungated)
 """
 import hashlib, json, os, pathlib, re, shutil, subprocess, sys, tempfile
 
@@ -49,7 +51,19 @@ def fmd5(p):
 
 
 def sh(*a):
-    return subprocess.run(a, capture_output=True, text=True).stdout
+    r = subprocess.run(a, capture_output=True, text=True)
+    if r.returncode != 0:                      # fail loudly: an empty stdout is not an empty answer
+        sys.exit(f"trail_check: command failed ({r.returncode}): {' '.join(a)}\n{r.stderr.strip()}")
+    return r.stdout
+
+
+def _in_range(pid, msgs):
+    """True if a commit line such as 'P107-P111: ...' covers this patch."""
+    m = re.match(r"P(\d+)", pid)
+    if not m:
+        return False
+    k = int(m.group(1))
+    return any(int(a) <= k <= int(b) for a, b in re.findall(r"^P(\d+)-P(\d+):", msgs, re.M))
 
 
 def report(n, name, status, lines=()):
@@ -128,7 +142,7 @@ def main():
     nocommit = []
     for pf in sorted({r["patch"] for r in log}):
         pid = pf.split("_")[0]
-        if not re.search(rf"^{re.escape(pid)}:", msgs, re.M):
+        if not re.search(rf"^{re.escape(pid)}:", msgs, re.M) and not _in_range(pid, msgs):
             nocommit.append(f"{pf}: no commit message starting '{pid}:'")
     report(4, "every applied patch has its own commit", "WARN" if nocommit else "PASS", nocommit)
 
@@ -246,7 +260,7 @@ def main():
         else:
             subprocess.run(["git", "-C", str(clone), "pull", "-q", "--ff-only"], capture_output=True)
         head = sh("git", "-C", str(clone), "log", "--format=%h %s", "-1").strip()
-        cs = pathlib.Path("CHECKSUMS.md").read_text(encoding="utf-8")
+        cs = (clone / "CHECKSUMS.md").read_text(encoding="utf-8")   # the code repository's own record
         bad = [f"{f}: repo {fmd5(clone / f) if (clone / f).exists() else 'missing'} != CHECKSUMS {h}"
                for f, h in re.findall(r"^\| `([^`]+)` \| ([0-9a-f]{12}) \|", cs, re.M)
                if not (clone / f).exists() or fmd5(clone / f) != h]
@@ -264,19 +278,36 @@ def main():
 
     # 14 full replay: every patch since the tag, in log order, reproduces the files on disk
     import importlib.util, json as _json
-    state, bad, order = {}, [], []
+    # Each file is replayed from the state its first logged patch started from: the tag's copy when
+    # their md5s agree, otherwise the committed blob whose md5 equals that first "before" md5. Files
+    # that gained content outside the patch log before their first patch (new files, code synced
+    # from the code repository) are thereby replayed from where the log takes them over, and D0,
+    # the rebase whose wording P01 is written against, is replayed like any other patch.
+    state, bad, order, first_before = {}, [], [], {}
     for r in log:
-        if r["patch"].startswith("D0_"):
-            continue
+        first_before.setdefault(r["file"], r["before"])
         if (r["ts"], r["patch"]) not in order:
             order.append((r["ts"], r["patch"]))
+
+    def start_state(f):
+        want = first_before.get(f)
+        tag_text = subprocess.run(["git", "show", f"{TAG}:{f}"], capture_output=True, text=True).stdout
+        if want is None or md5(tag_text) == want:
+            return tag_text
+        for c in subprocess.run(["git", "log", "--all", "--format=%H", "--", f],
+                                capture_output=True, text=True).stdout.split():
+            t = subprocess.run(["git", "show", f"{c}:{f}"], capture_output=True, text=True).stdout
+            if md5(t) == want:
+                return t
+        bad.append(f"{f}: no committed state matches its first logged 'before' md5 {want}")
+        return tag_text
     for ts, pf in order:
         spec = importlib.util.spec_from_file_location(pf, pathlib.Path("patches") / pf)
         mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
         for e in mod.EDITS:
             f = e["file"]
             if f not in state:
-                state[f] = subprocess.run(["git", "show", f"{TAG}:{f}"], capture_output=True, text=True).stdout
+                state[f] = start_state(f)
             if state[f].count(e["old"]) != e.get("count", 1):
                 bad.append(f"{pf} {e['id']}: anchor does not match the replayed state of {f}")
                 continue
@@ -286,12 +317,32 @@ def main():
             bad.append(f"{f}: replay gives {md5(t)}, file is {fmd5(f)}")
     report(14, f"full replay of {len(order)} patch runs from {TAG}: {len(state)} files", "FAIL" if bad else "PASS", bad)
 
+    # 15 the submission .docx: present, newer than the assembled text, and carrying its content
+    import zipfile
+    dx, mdx = ROOT / "VERA-SNARK_Thesis_SUBMISSION.docx", ROOT / "VERA-SNARK_Thesis_SUBMISSION.md"
+    bad = []
+    if not dx.exists():
+        bad.append("submission .docx missing")
+    else:
+        with zipfile.ZipFile(dx) as z:
+            xml = z.read("word/document.xml")
+            if z.testzip() is not None:
+                bad.append("docx fails its CRC check")
+        heads, tbls, links = xml.count(b'w:val="Heading1"'), xml.count(b"<w:tbl>"), xml.count(b"PAGEREF")
+        if not (heads and tbls and links):
+            bad.append(f"docx content thin: {heads} chapter headings, {tbls} tables, {links} page references")
+        if mdx.exists() and dx.stat().st_mtime < mdx.stat().st_mtime:
+            bad.append("docx is older than the assembled .md: rebuild with handoff_tools/build_docx.py")
+    report(15, "submission .docx present, current and populated", "FAIL" if bad else "PASS", bad)
+
     n_fail = results.count("FAIL")
     print(f"\nTRAIL {'BROKEN' if n_fail else 'INTACT'}: {n_fail} fail, {results.count('WARN')} warn")
     sys.exit(1 if n_fail else 0)
 
 
 def sh_in(text):
+    if not shutil.which("pandoc"):
+        sys.exit("trail_check: pandoc is required for checks 8 to 14; install it (apt install pandoc)")
     return subprocess.run(["pandoc", "-f", "markdown", "-t", "plain", "--wrap=none"], input=text,
                           capture_output=True, text=True).stdout.replace("\n", " ")
 

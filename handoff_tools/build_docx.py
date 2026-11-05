@@ -428,10 +428,18 @@ def page_map(docx, toc, tables):
     '#' (João, 6 Oct). Pages come from a LibreOffice render; Word recomputes them when fields update."""
     import shutil
     with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", td, str(docx)],
-                       capture_output=True, timeout=900)
+        for tool in ("soffice", "pdftotext"):
+            if not shutil.which(tool):
+                raise SystemExit(f"build_docx: {tool} is required for page numbers (or pass --no-pages)")
+        r = subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", td, str(docx)],
+                           capture_output=True, timeout=900)
         pdf = os.path.join(td, docx.stem + ".pdf")
-        txt = subprocess.run(["pdftotext", "-layout", pdf, "-"], capture_output=True, text=True).stdout
+        if r.returncode != 0 or not os.path.exists(pdf):
+            raise SystemExit(f"build_docx: LibreOffice render failed ({r.returncode}): {r.stderr.decode(errors='replace')[-400:]}")
+        r = subprocess.run(["pdftotext", "-layout", pdf, "-"], capture_output=True, text=True)
+        if r.returncode != 0 or not r.stdout.strip():
+            raise SystemExit("build_docx: pdftotext produced no text")
+        txt = r.stdout
     pages = txt.split("\f")
     norm = lambda x: re.sub(r"\s+", " ", x).strip()
     lines = [[norm(l) for l in pg.split("\n") if l.strip()] for pg in pages]
@@ -594,15 +602,22 @@ def main():
             for o in e.findall("{%s}sty" % M) + e.findall("{%s}scr" % M): e.remove(o)
     files["word/document.xml"] = etree.tostring(doc, xml_declaration=True, encoding="UTF-8", standalone=True)
 
-    with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:
+    if not (tables and toc and nlinks):              # a build that silently drops content must not pass
+        raise SystemExit(f"build_docx: refusing to write: {len(tables)} tables, {len(toc)} contents entries, {nlinks} links")
+    tmp = OUT.with_name(OUT.name + ".tmp")           # atomic: the submission file is never half-written
+    with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as z:
         for n, b in files.items():
             z.writestr(n, b)
+    with zipfile.ZipFile(tmp) as z:
+        if z.testzip() is not None:
+            raise SystemExit("build_docx: written archive fails its CRC check")
+    os.replace(tmp, OUT)
     print(f"{OUT.name}: {len(tables)} captioned tables, {len(toc)} contents entries, {nlinks} cross-reference links")
 
 
 if __name__ == "__main__":
     main()
-    if "--pages" in sys.argv:                      # second pass with cached page numbers
+    if "--no-pages" not in sys.argv:               # second pass with cached page numbers (default since 6 Nov)
         import json as _j
         doc_ = etree.fromstring(zipfile.ZipFile(OUT).read("word/document.xml"))
         toc_ = [(1, ptext(p).strip(), p.find(".//w:bookmarkStart", NS).get(q("name")))
@@ -611,3 +626,8 @@ if __name__ == "__main__":
         PAGES.update(page_map(OUT, toc_, []))
         main()
         print(f"page numbers cached for {len(PAGES)} of {len(toc_)} entries")
+        if not PAGES:
+            raise SystemExit("build_docx: no page numbers found; the contents would show '#'")
+        left = zipfile.ZipFile(OUT).read("word/document.xml").count(b">#<")
+        if left:
+            print(f"WARNING: {left} contents entries still show '#' (Word fills them when fields update)")

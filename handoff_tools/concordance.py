@@ -30,11 +30,17 @@ import trim_inspector as T
 REF = re.compile(r"(?:Section|§)\s?(\d+\.\d+)(?!\.?\d)|Chapter\s+(\d+)|Table\s+(\d+\.\d+)(?!\.?\d)|"
                  r"Figure\s+(\d+\.\d+)(?!\.?\d)|Proposition\s+(\d+)|Corollary\s+(\d+\.\d+)(?!\.?\d)|Appendix\s+([A-D])")
 
+ROOT = pathlib.Path(__file__).resolve().parent.parent   # the repository, whatever the working directory
+
+
 def load():
-    d = {}
+    d, missing = {}, []
     for f in FILES:
-        p = pathlib.Path(f)
+        p = ROOT / f
         if p.exists(): d[f] = p.read_text(encoding="utf-8")
+        else: missing.append(f)
+    if missing:
+        sys.exit(f"concordance: expected files missing under {ROOT}: {', '.join(missing)}")
     return d
 
 def targets_present(texts):
@@ -74,7 +80,11 @@ def check(texts):
         print("DANGLING CROSS-REFERENCES (target content absent):")
         for key, srcs in bad: print(f"  {key[0]} {key[1]}  <- referenced by {', '.join(srcs)}")
         return False
-    print(f"GLOBAL XREF CHECK: all {sum(len(v) for v in inb.values())} cross-references resolve.")
+    n = sum(len(v) for v in inb.values())
+    if n == 0:
+        print("GLOBAL XREF CHECK: no cross-references found; refusing to pass vacuously.")
+        return False
+    print(f"GLOBAL XREF CHECK: all {n} cross-references resolve.")
     return True
 
 def recurring(texts):
