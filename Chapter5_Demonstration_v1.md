@@ -28,7 +28,7 @@ Seven further modules accompany it, bringing the artefact to eight Python files 
 | `synthea_layer.py` | 156 | Substitutes Synthea-generated (synthetic) FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.7 |
 | `norwegian_layer.py` | 136 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
 | `cross_sector_check.py` | 113 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10 | No |
-| `app.py`, `ui.py` | 1125 + 136 | Eleven-page viewer over the artefact, with the live architecture diagrams of Figures 4.1 and 5.1; never a source of results | No |
+| `app.py`, `ui.py` | 1124 + 217 | Eleven-page viewer over the artefact, with the live architecture diagrams of Figures 4.1 and 5.1; never a source of results | No |
 | `crypto_envelope.py` | 122 | Optional: the same lifecycle with AES-256-GCM envelope encryption (needs `cryptography`) | No |
 | `z3_check.py` | 160 | Optional: bounded SMT check of Propositions 1–3 (needs `z3-solver`) | No |
 

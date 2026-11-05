@@ -7,8 +7,8 @@
 | Pass 1 | External review in the style of CodeRabbit, on a fresh clone of branch `joao-base` at `9d69d7c` (2 Nov). Three readers: core logic; demo app and reproducibility; tooling and hygiene. |
 | Pass 2 | A deeper read-only hunt for what pass 1 missed, run against `main` while the pass-1 fixes were being made, so it also caught a flaw in one of those fixes. |
 | Rule applied | Every finding was reproduced or checked against the code before anything changed. A finding that did not hold is marked as such. No result-producing number was allowed to move. |
-| Code repository | https://github.com/Astheno-sphere/TRF, commits `fb2650e`, `dc9d4c0`, `067baec` (CHANGE_TRAIL rows R-33 to R-35) |
-| Thesis repository | patches P115 (code and packaging sync), P116 (Appendix A listings), P117 (thesis text); CHANGE_TRAIL rows P115 to P117 |
+| Code repository | https://github.com/Astheno-sphere/TRF, commits `fb2650e`, `dc9d4c0`, `067baec`, `8f785e3` (CHANGE_TRAIL rows R-33 to R-36); release 1.3.0 |
+| Thesis repository | patches P115 (code and packaging sync), P116 (Appendix A listings), P117 (thesis text), P118 (checksums), P119 (viewer), P120 (release 1.3.0 cited); CHANGE_TRAIL rows P115 to P120 |
 
 ## 1. Verdict
 
@@ -110,7 +110,7 @@ The check now includes D0 and starts each file from the state its first logged p
 
 ## 7. Release
 
-The code reviewed here is in the code repository at `067baec`. The thesis currently cites release 1.2.0 (https://doi.org/10.5281/zenodo.23827275), which produces the same figures but predates these fixes; Appendix A's listings now reproduce the newer code. Publishing release 1.3.0 and citing it would bring the two back into line.
+The reviewed code, with the viewer design pass that followed it, is release 1.3.0 (https://doi.org/10.5281/zenodo.23989242, code repository commit `8f785e3`), which the thesis now cites in the abstract footer and Appendix A.1. It produces the same figures as releases 1.0.1 to 1.2.0.
 
 ## 8. How to check this yourself
 
@@ -132,3 +132,7 @@ for p in fs:
     b = p.read_bytes(); print(f"| `{p}` | {hashlib.md5(b).hexdigest()[:12]} | {b.count(b'\n')} |")
 EOF
 ```
+
+## 9. After the review: viewer design pass (release 1.3.0)
+
+A presentation-only pass on the viewer, so that it reads as one walk rather than a list of pages: navigation grouped into the seven numbered steps of the walk, then full runs, then context that is not a thesis claim; the selected page marked by a rule instead of a radio dot; a brand mark of three bands in the diagram palette (retention floor, deadline, accountable); fact cards ruled in the colour of what each quantity is in the model; alerts in the palette instead of the framework's blue; a progress strip for the walk that names the next step; the framework's deploy toolbar hidden. No computation changed, and the 56 tests pass. Code repository commit `8f785e3`, thesis patches P119 and P121.

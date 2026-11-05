@@ -1481,3 +1481,12 @@
 2026-11-05 19:53 | P117_code_review_text.py | P117-16 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | A viewer note
 2026-11-05 19:53 | P117_code_review_text.py | P117-17 | code_artefacts/README_Appendix_A.md | 6877bee21ca5 -> e17ab03126d3 | as P117-06
 2026-11-05 20:04 | P118_checksums.py | P118-01 | CHECKSUMS.md | 181d49e08c10 -> dd664a3762e8 | checksums at the final code
+2026-11-05 20:25 | P119_viewer_design.py | P119-01 | demo_app/app.py | 66ee46465f10 -> 1388d35fcd2c | viewer design pass, TRF 8f785e3
+2026-11-05 20:25 | P119_viewer_design.py | P119-02 | demo_app/ui.py | d9929909f561 -> ad7f69534eb4 | viewer design pass, TRF 8f785e3
+2026-11-05 20:26 | P120_release_130.py | P120-01 | Front_Matter_v1.md | 06c59fc5bf66 -> d11dfbea9194 | release 1.3.0
+2026-11-05 20:26 | P120_release_130.py | P120-02 | code_artefacts/README_Appendix_A.md | e17ab03126d3 -> 8590ab1589de | release 1.3.0
+2026-11-05 20:26 | P120_release_130.py | P120-03 | code_artefacts/README_Appendix_A.md | e17ab03126d3 -> 8590ab1589de | release 1.3.0
+2026-11-05 20:26 | P121_viewer_counts.py | P121-01 | Chapter5_Demonstration_v1.md | 47f3e6f9d5b5 -> ad39dfe63d27 | Table 5.1
+2026-11-05 20:26 | P121_viewer_counts.py | P121-02 | code_artefacts/README_Appendix_A.md | 8590ab1589de -> de2ef1a7b728 | A.2
+2026-11-05 20:26 | P121_viewer_counts.py | P121-03 | code_artefacts/README_Appendix_A.md | 8590ab1589de -> de2ef1a7b728 | viewer note
+2026-11-05 20:26 | P122_checksums.py | P122-01 | CHECKSUMS.md | dd664a3762e8 -> dd85516637aa | checksums after the viewer sync
