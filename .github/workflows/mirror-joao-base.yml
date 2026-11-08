@@ -1,0 +1,15 @@
+# Keeps joao-base identical to main, so links shared with the supervisor always show the latest thesis.
+name: mirror main to joao-base
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git push origin HEAD:refs/heads/joao-base --force
