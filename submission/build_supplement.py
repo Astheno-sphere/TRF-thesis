@@ -13,55 +13,55 @@ def face(name, file, style="normal", weight="100 900"):
             f"src:url(data:font/ttf;base64,{b}) format('truetype');}}")
 
 
-FACES = "".join([face("Montserrat", "Montserrat.ttf"), face("Source Serif 4", "SourceSerif4.ttf"),
+FACES = "".join([face("Plex Sans", "PlexSans.ttf", weight="100 700"), face("Source Serif 4", "SourceSerif4.ttf"),
                  face("Source Serif 4", "SourceSerif4-Italic.ttf", "italic"),
                  face("Plex Mono", "PlexMono.ttf", weight="400")])
 
 CSS = """
-:root{--char:#1E1F23;--char2:#2B2C31;--ox:#6E1F26;--gold:#C9A23A;--orange:#C8662B;--cream:#E8DCC4;
---ink:#1E1F23;--mute:#5E5F66;--rule:#DCD3C2;--paper:#FFFFFF;--tint:#F6F2EA}
+:root{--char:#1B1C20;--char2:#33343A;--ox:#5E1C23;--gold:#A9863B;--orange:#B0592B;--cream:#E9E0CE;
+--ink:#1B1C20;--mute:#6A6B72;--rule:#E3DCCD;--paper:#FFFFFF;--tint:#F8F6F1}
 @page{size:A4;margin:20mm 18mm 18mm 20mm}
 @page cover{margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
-html{font-family:'Source Serif 4',serif;font-size:10.4pt;line-height:1.5;color:var(--ink);
+html{font-family:'Source Serif 4',serif;font-size:10.2pt;line-height:1.55;font-optical-sizing:auto;color:var(--ink);
      font-variant-numeric:oldstyle-nums proportional-nums;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-h1,h2,h3,.sans{font-family:'Montserrat',sans-serif;font-variant-numeric:lining-nums}
-h2{font-size:19pt;font-weight:700;line-height:1.15;color:var(--ox);margin:0 0 3mm}
+h1,h2,h3,.sans{font-family:'Plex Sans',sans-serif;font-variant-numeric:lining-nums}
+h2{font-size:20pt;font-weight:600;line-height:1.12;letter-spacing:-.01em;color:var(--ink);margin:0 0 3mm}
 h3{font-size:10.5pt;font-weight:700;margin:5mm 0 1.5mm}
 p{margin:0 0 2.6mm;max-width:158mm}
 .lede{font-size:11.2pt;line-height:1.48;color:var(--char2);margin-bottom:6mm;max-width:150mm}
 .part{break-before:page}
 .cover + .part,body > .part:first-child{break-before:auto}
-.kicker{font-family:'Montserrat';font-size:8.5pt;font-weight:600;color:var(--mute);margin-bottom:1.5mm}
-.rule{height:2px;background:var(--gold);width:22mm;margin:0 0 6mm}
+.kicker{font-family:'Plex Sans';font-size:8.5pt;font-weight:500;color:var(--ox);margin-bottom:1.5mm}
+.rule{height:1.5px;background:var(--gold);width:18mm;margin:0 0 6mm}
 table{border-collapse:collapse;width:100%;font-size:9.4pt;line-height:1.42}
-th{font-family:'Montserrat';font-size:8pt;font-weight:600;text-align:left;color:var(--mute);
+th{font-family:'Plex Sans';font-size:8pt;font-weight:600;text-align:left;color:var(--mute);
    border-bottom:1.2px solid var(--char);padding:0 3mm 1.6mm 0}
 td{border-bottom:.6px solid var(--rule);padding:2mm 3mm 2mm 0;vertical-align:top}
-td.num{font-family:'Montserrat';font-weight:600;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
-td.where{font-family:'Montserrat';font-size:8.2pt;color:var(--mute);white-space:nowrap}
+td.num{font-family:'Plex Sans';font-weight:600;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+td.where{font-family:'Plex Sans';font-size:8.2pt;color:var(--mute);white-space:nowrap}
 code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 /* cover */
 .cover{page:cover;height:297mm;width:210mm;background:var(--char);color:var(--cream);position:relative;
        padding:30mm 22mm 24mm 26mm;display:flex;flex-direction:column}
 .cover .band{position:absolute;left:0;top:0;bottom:0;width:9mm;background:var(--ox)}
-.cover .what{font-family:'Montserrat';font-weight:600;font-size:10pt;color:var(--gold);margin-bottom:9mm}
-.cover h1{font-size:25pt;font-weight:700;line-height:1.14;color:#F4EEE2;max-width:150mm;margin-bottom:9mm}
+.cover .what{font-family:'Plex Sans';font-weight:600;font-size:10pt;color:var(--gold);margin-bottom:9mm}
+.cover h1{font-size:26pt;font-weight:600;letter-spacing:-.012em;line-height:1.14;color:#F4EEE2;max-width:150mm;margin-bottom:9mm}
 .cover .gold{height:2px;width:30mm;background:var(--gold);margin:0 0 9mm}
 .cover .who{font-size:11pt;line-height:1.6;color:var(--cream)}
-.cover .who b{font-family:'Montserrat';font-weight:600;color:#F4EEE2}
+.cover .who b{font-family:'Plex Sans';font-weight:600;color:#F4EEE2}
 .cover .contents{margin-top:auto;border-top:.6px solid #4A4B52;padding-top:6mm}
 .cover .contents div{display:grid;grid-template-columns:9mm 1fr;font-size:9.6pt;line-height:1.45;margin-bottom:2.6mm;color:#CFC6B4}
-.cover .contents span{font-family:'Montserrat';font-weight:600;color:var(--gold)}
-.cover .contents b{font-family:'Montserrat';font-weight:600;color:#F4EEE2;font-size:9.4pt}
+.cover .contents span{font-family:'Plex Sans';font-weight:600;color:var(--gold)}
+.cover .contents b{font-family:'Plex Sans';font-weight:600;color:#F4EEE2;font-size:9.4pt}
 /* index */
-.idx td:first-child{font-family:'Montserrat';font-weight:600;width:32mm}
-.idx td:nth-child(2){width:62mm;color:var(--ox);font-family:'Montserrat';font-size:8.8pt;font-weight:500}
+.idx td:first-child{font-family:'Plex Sans';font-weight:600;width:32mm}
+.idx td:nth-child(2){width:62mm;color:var(--ox);font-family:'Plex Sans';font-size:8.8pt;font-weight:500}
 /* reproduce */
 .steps{counter-reset:s;margin:0 0 4mm}
 .step{display:grid;grid-template-columns:9mm 1fr;border-bottom:.6px solid var(--rule);padding:1.8mm 0}
-.step:before{counter-increment:s;content:counter(s);font-family:'Montserrat';font-weight:700;color:var(--ox);font-size:12pt}
-.step .t{font-family:'Montserrat';font-weight:600;font-size:9.4pt}
+.step:before{counter-increment:s;content:counter(s);font-family:'Plex Sans';font-weight:700;color:var(--ox);font-size:12pt}
+.step .t{font-family:'Plex Sans';font-weight:600;font-size:9.4pt}
 .step code{display:block;background:var(--tint);padding:1.2mm 2.4mm;margin:.9mm 0 .5mm;border-left:2px solid var(--char)}
 .step .n{font-size:8.8pt;color:var(--mute)}
 .exp td{padding:1.5mm 3mm 1.5mm 0}
@@ -70,28 +70,40 @@ code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 .finger .v{font-family:'Plex Mono';font-size:13pt;color:var(--gold);letter-spacing:.02em}
 /* dossier */
 .rounds{font-size:9pt;line-height:1.38}.rounds td{padding:1.6mm 3mm 1.6mm 0}
-.rounds td:first-child{font-family:'Montserrat';font-weight:600;width:34mm}
+.rounds td:first-child{font-family:'Plex Sans';font-weight:600;width:34mm}
 .rounds td:first-child small{display:block;font-weight:500;color:var(--mute);font-size:7.8pt;margin-top:.6mm}
 .find{display:grid;grid-template-columns:21mm 1fr;border-top:.6px solid var(--rule);padding:3.2mm 0;break-inside:avoid}
-.find .id{font-family:'Montserrat';font-weight:700;font-size:9pt}
-.find .sev{display:block;font-family:'Montserrat';font-size:7.6pt;font-weight:600;margin-top:.8mm}
+.find .id{font-family:'Plex Sans';font-weight:700;font-size:9pt}
+.find .sev{display:block;font-family:'Plex Sans';font-size:7.6pt;font-weight:600;margin-top:.8mm}
 .sev.Critical{color:var(--ox)}.sev.Major{color:var(--orange)}.sev.open{color:#fff;background:var(--orange);display:inline-block;padding:.2mm 1.6mm;margin-top:1mm;border-radius:1px}
 .find .f{font-weight:600;margin-bottom:1.2mm}
 .find dl{display:grid;grid-template-columns:20mm 1fr;gap:.6mm 3mm;font-size:9.1pt;line-height:1.42}
-.find dt{font-family:'Montserrat';font-size:7.8pt;font-weight:600;color:var(--mute);padding-top:.5mm}
-.held{margin:5mm 0 0;padding:4mm 5mm;border-left:3px solid var(--gold);background:var(--tint);font-size:9.8pt}
+.find dt{font-family:'Plex Sans';font-size:7.8pt;font-weight:600;color:var(--mute);padding-top:.5mm}
+.held{margin:5mm 0 0;padding:.5mm 0 .5mm 5mm;border-left:2px solid var(--gold);font-size:9.8pt;color:var(--char2);max-width:150mm}
+/* audit table */
+.aud{font-size:8.9pt;line-height:1.38}.aud td{padding:1.6mm 2.6mm 1.6mm 0}
+.aud td:first-child{font-family:'Plex Sans';font-weight:600;width:17mm;white-space:nowrap}
+.aud td:nth-child(2){width:16mm;font-size:8.2pt}.aud td:nth-child(3) b{font-weight:600}
+/* code exhibits */
+.ex{break-inside:avoid;border-top:.6px solid var(--rule);padding:3.4mm 0 2mm}
+.ex .h{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
+.ex .h b{font-family:'Plex Sans';font-weight:600;font-size:10pt}
+.ex .h span{font-family:'Plex Mono';font-size:7.6pt;color:var(--mute);white-space:nowrap}
+.diff{font-family:'Plex Mono';font-size:7.7pt;line-height:1.5;background:var(--tint);margin:2mm 0 1.6mm;padding:2mm 3mm;white-space:pre-wrap}
+.diff .m{color:#8E3A41}.diff .p{color:var(--ink)}.diff .m:before{content:"− ";color:#B07479}.diff .p:before{content:"+ ";color:var(--gold)}
+.ex p{font-size:9.2pt;margin:0 0 .6mm}.ex .g{font-family:'Plex Sans';font-size:7.9pt;color:var(--mute)}
 /* evidence */
 .ev{font-size:8.9pt;line-height:1.36}.ev td{padding:1.5mm 2.6mm 1.5mm 0}
-.ev td:first-child{font-family:'Montserrat';font-weight:700;width:28mm;font-size:8.6pt}
+.ev td:first-child{font-family:'Plex Sans';font-weight:700;width:28mm;font-size:8.6pt}
 .ev td:nth-child(4){font-family:'Plex Mono';font-size:7.6pt;width:40mm}
 .ev td:nth-child(5){font-size:8.6pt;color:var(--char2);width:36mm}
 /* brief */
-.brief .to{font-family:'Montserrat';font-size:8.6pt;color:var(--mute);margin-bottom:5mm}
+.brief .to{font-family:'Plex Sans';font-size:8.6pt;color:var(--mute);margin-bottom:5mm}
 .brief h2{font-size:17pt}
 .brief{font-size:9.9pt;line-height:1.46}.brief .lede{font-size:10.6pt;margin-bottom:4mm}
 .brief .fd{display:grid;grid-template-columns:9mm 1fr;margin:2.6mm 0}
-.brief .fd span{font-family:'Montserrat';font-weight:700;color:var(--ox);font-size:13pt;line-height:1.2}
-.brief .fd b{font-family:'Montserrat';font-weight:700;display:block;margin-bottom:1.2mm;font-size:10pt}
+.brief .fd span{font-family:'Plex Sans';font-weight:700;color:var(--ox);font-size:13pt;line-height:1.2}
+.brief .fd b{font-family:'Plex Sans';font-weight:700;display:block;margin-bottom:1.2mm;font-size:10pt}
 .brief .ask{border-top:1.2px solid var(--char);margin-top:3.5mm;padding-top:2mm}
 .brief .ask li{margin:0 0 1.6mm 4.5mm;padding-left:1mm}
 .brief .ask li::marker{color:var(--gold);content:"■  "}
@@ -139,9 +151,13 @@ commitment. If it matches, you are running the reported code and seed; the seven
 def page_dossier():
     rounds = "".join(f"<tr><td>{e(a)}<small>{e(b)}</small></td><td>{e(c)}</td><td>{e(d)}</td></tr>"
                      for a, b, c, d in C.DOSSIER_ROUNDS)
-    finds = "".join(f"""<div class="find"><div><span class="id">{e(i)}</span><span class="sev {s}">{s}</span>{'<span class="sev open">Open</span>' if v == "Open" else ""}</div>
-<div><div class="f">{e(f)}</div><dl><dt>Evidence</dt><dd>{e(ev)}</dd><dt>Fix</dt><dd>{e(fx)}</dd><dt>Verified</dt><dd>{e(v)}</dd></dl></div></div>"""
-                    for i, s, f, ev, fx, v in C.AUDIT)
+    sev = lambda s, v: s + (', <b style="color:var(--orange)">open</b>' if v == "Open" else "")
+    aud = "".join(f'<tr><td>{e(i)}</td><td><span class="sev {s}">{sev(s, v)}</span></td><td><b>{e(f)}</b><br>{e(fx)}</td></tr>'
+                  for i, s, f, ev, fx, v in C.AUDIT)
+    ex = "".join(f"""<div class="ex"><div class="h"><b>{e(i)}. {e(tl)}</b><span>{e(fl)}, {e(cm)}</span></div>
+<div class="diff">{"".join(f'<div class="m">{e(x)}</div>' for x in b4)}{"".join(f'<div class="p">{e(x) if x else " "}</div>' for x in af)}</div>
+<p>{e(wd)}</p><div class="g">Guarded by {e(gd)}</div></div>"""
+                 for i, tl, fl, cm, b4, af, wd, gd in C.EXHIBITS)
     return f"""<section class="part"><div class="kicker">Part 2</div><h2>Verification dossier</h2><div class="rule"></div>
 <p class="lede">Six reviews between 28 October and 6 November 2026: three by AI agents set to attack the thesis, one by the
 supervisor, one search of the literature and law, and an AI audit of the code in two passes. Every finding was
@@ -149,12 +165,15 @@ checked against its source before anything changed, and every change went throug
 thesis repository's change trail.</p>
 <table class="rounds"><tr><th>Review</th><th>What it attacked</th><th>What changed</th></tr>{rounds}</table>
 <div class="held">What held throughout: the four propositions, every result figure in Chapter 5, and the novelty of modelling
-the retention floor, the right to erasure and the deletion ceiling together.</div>
-<section class="part"><div class="kicker">Part 2, continued</div><h2>The code audit, finding by finding</h2><div class="rule"></div>
-<p class="lede">The critical and major findings of both passes, in the order fault, evidence, fix, and how the fix was verified;
-the one left open is marked.
-The full report, with every minor finding, is CODE_REVIEW.md in the thesis repository.</p>
-{finds}<p class="held">{e(C.AUDIT_MINOR)}</p></section></section>"""
+the retention floor, the right to erasure and the deletion ceiling together.</div></section>
+<section class="part"><div class="kicker">Part 2, continued</div><h2>The code audit</h2><div class="rule"></div>
+<p class="lede">The critical and major findings of both passes and how each was resolved. Evidence and verification for every
+row are in CODE_REVIEW.md in the thesis repository; the next pages show the changes themselves.</p>
+<table class="aud"><tr><th>Finding</th><th>Severity</th><th>Fault, then fix</th></tr>{aud}</table>
+<p class="held">{e(C.AUDIT_MINOR)}</p></section>
+<section class="part"><div class="kicker">Part 2, continued</div><h2>The fixes, in the code</h2><div class="rule"></div>
+<p class="lede">Six of the changes as they stand in git: the lines before, the lines after, what the change does, and the
+test or check that fails if it is undone. Releases 1.2.0 and 1.3.0 of the code bracket them.</p>{ex}</section>"""
 
 
 def page_evidence():
