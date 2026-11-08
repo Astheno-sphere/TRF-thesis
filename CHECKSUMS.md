@@ -36,7 +36,7 @@ Regenerate after any change with the snippet at the end of `CODE_REVIEW.md`.
 | `demo_app/tests/test_app.py` | 9ecd1f050963 | 116 |
 | `demo_app/tests/test_props.py` | 2b5edca06e4d | 45 |
 | `demo_app/trf_checker.py` | 5655e159e5be | 601 |
-| `demo_app/ui.py` | ad7f69534eb4 | 217 |
+| `demo_app/ui.py` | 8cc1d5a15bb1 | 217 |
 | `demo_app/z3_check.py` | 3342a7f3a160 | 160 |
 | `repro_package/README.md` | 6faf16d271a7 | 130 |
 | `repro_package/cross_sector_check.py` | 65130c3758e6 | 113 |

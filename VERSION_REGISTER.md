@@ -55,8 +55,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | process/MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | process/Viva_Preparation_Notes.md | f8db73b3413a | 2,455 | 2 Nov 18:51 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 4bf189d45485 | 24,819 | 5 Nov 20:26 | Every change with an ID, reason and verification. Synced with the repository copy |
-| CONTROL | CHECKSUMS.md | dd85516637aa | 387 | 5 Nov 20:26 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | f17c10ad604f | 24,866 | 8 Nov 23:30 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | b211756fdbda | 387 | 8 Nov 23:30 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | process/PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | process/PATCH_QUEUE.md | 8ceed5b20a27 | 2,417 | 30 Oct 20:37 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
@@ -166,7 +166,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P16_rename_propositions.edits.json | 77e1509c187d | 58 edits | 3 Oct | Frozen edits of P16 |
 | HANDOFF | patches/P17_rename_code.edits.json | 1c4ae096d145 | 20 edits | 3 Oct | Frozen edits of P17 |
 | HANDOFF | patches/P18_appendixA_propositions.edits.json | d00fd3d3b5ca | 9 edits | 3 Oct | Frozen edits of P18 |
-| HANDOFF | patches/APPLIED.log | 17d2afbec241 | 27,145 | 5 Nov 20:26 | Every applied edit with before/after md5 |
+| HANDOFF | patches/APPLIED.log | ca4581ea11e1 | 27,180 | 8 Nov 23:30 | Every applied edit with before/after md5 |
 | HANDOFF | archive/conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies

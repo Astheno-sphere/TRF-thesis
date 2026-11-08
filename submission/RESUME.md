@@ -22,7 +22,7 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - [x] whipper review (accuracy, em dashes, slop, overclaims), 16 findings fixed: briefs legally corrected (C3 is SPE-only; 17(3)(b) includes public task; claims scoped to model), P2-M1 and P2-M5 (open) added, counts from CODE_REVIEW, AI reviewers named, asks as questions
 - [x] code exhibits added (real before/after lines from git, with commit and guard), audit as compact table (9 Nov)
 - [x] joao-base mirrors main via .github/workflows/mirror-joao-base.yml
-- [ ] app UX pass in the same type system (Plex Sans), restrained
+- [x] app UX pass in the same type system (Plex Sans, Source Serif lede), restrained (TRF 7e70bfe, P123)
 - [ ] link supplement from README
 - [ ] deck (Slides type), same system
 - [ ] thesis: HiMolde title page (blocked on Tiger's upload), freeze check chapters vs code

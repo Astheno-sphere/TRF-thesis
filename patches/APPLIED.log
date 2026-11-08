@@ -1490,3 +1490,5 @@
 2026-11-05 20:26 | P121_viewer_counts.py | P121-02 | code_artefacts/README_Appendix_A.md | 8590ab1589de -> de2ef1a7b728 | A.2
 2026-11-05 20:26 | P121_viewer_counts.py | P121-03 | code_artefacts/README_Appendix_A.md | 8590ab1589de -> de2ef1a7b728 | viewer note
 2026-11-05 20:26 | P122_checksums.py | P122-01 | CHECKSUMS.md | dd664a3762e8 -> dd85516637aa | checksums after the viewer sync
+2026-11-08 23:30 | P123_viewer_type.py | P123-01 | demo_app/ui.py | ad7f69534eb4 -> 8cc1d5a15bb1 | viewer type, TRF 7e70bfe
+2026-11-08 23:30 | P123_viewer_type.py | P123-02 | CHECKSUMS.md | dd85516637aa -> b211756fdbda | checksums after the viewer sync
