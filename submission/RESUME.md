@@ -19,7 +19,7 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 ## Steps
 - [x] content drafted (supplement_content.py)
 - [x] build_supplement.py, render, look at every page (10 pages, layout fits)
-- [ ] whipper review (accuracy, em dashes, slop, overclaims), fix
+- [x] whipper review (accuracy, em dashes, slop, overclaims), 16 findings fixed: briefs legally corrected (C3 is SPE-only; 17(3)(b) includes public task; claims scoped to model), P2-M1 and P2-M5 (open) added, counts from CODE_REVIEW, AI reviewers named, asks as questions
 - [ ] commit; link from README
 - [ ] deck (Slides type), same system
 - [ ] thesis: HiMolde title page (blocked on Tiger's upload), freeze check chapters vs code

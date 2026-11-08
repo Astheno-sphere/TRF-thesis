@@ -64,16 +64,18 @@ code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 .step .t{font-family:'Montserrat';font-weight:600;font-size:9.4pt}
 .step code{display:block;background:var(--tint);padding:1.2mm 2.4mm;margin:.9mm 0 .5mm;border-left:2px solid var(--char)}
 .step .n{font-size:8.8pt;color:var(--mute)}
-.finger{margin:2mm 0 4mm;background:var(--char);color:var(--cream);padding:5mm 6mm;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6mm}
+.exp td{padding:1.5mm 3mm 1.5mm 0}
+.finger{margin:1mm 0 2mm;background:var(--char);color:var(--cream);padding:5mm 6mm;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6mm}
 .finger .k{font-size:9.6pt;line-height:1.45}
 .finger .v{font-family:'Plex Mono';font-size:13pt;color:var(--gold);letter-spacing:.02em}
 /* dossier */
-.rounds td:first-child{font-family:'Montserrat';font-weight:600;width:36mm}
+.rounds{font-size:9pt;line-height:1.38}.rounds td{padding:1.6mm 3mm 1.6mm 0}
+.rounds td:first-child{font-family:'Montserrat';font-weight:600;width:34mm}
 .rounds td:first-child small{display:block;font-weight:500;color:var(--mute);font-size:7.8pt;margin-top:.6mm}
 .find{display:grid;grid-template-columns:21mm 1fr;border-top:.6px solid var(--rule);padding:3.2mm 0;break-inside:avoid}
 .find .id{font-family:'Montserrat';font-weight:700;font-size:9pt}
 .find .sev{display:block;font-family:'Montserrat';font-size:7.6pt;font-weight:600;margin-top:.8mm}
-.sev.Critical{color:var(--ox)}.sev.Major{color:var(--orange)}
+.sev.Critical{color:var(--ox)}.sev.Major{color:var(--orange)}.sev.open{color:#fff;background:var(--orange);display:inline-block;padding:.2mm 1.6mm;margin-top:1mm;border-radius:1px}
 .find .f{font-weight:600;margin-bottom:1.2mm}
 .find dl{display:grid;grid-template-columns:20mm 1fr;gap:.6mm 3mm;font-size:9.1pt;line-height:1.42}
 .find dt{font-family:'Montserrat';font-size:7.8pt;font-weight:600;color:var(--mute);padding-top:.5mm}
@@ -86,14 +88,15 @@ code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 /* brief */
 .brief .to{font-family:'Montserrat';font-size:8.6pt;color:var(--mute);margin-bottom:5mm}
 .brief h2{font-size:17pt}
-.brief .fd{display:grid;grid-template-columns:9mm 1fr;margin:3.5mm 0}
+.brief{font-size:9.9pt;line-height:1.46}.brief .lede{font-size:10.6pt;margin-bottom:4mm}
+.brief .fd{display:grid;grid-template-columns:9mm 1fr;margin:2.6mm 0}
 .brief .fd span{font-family:'Montserrat';font-weight:700;color:var(--ox);font-size:13pt;line-height:1.2}
 .brief .fd b{font-family:'Montserrat';font-weight:700;display:block;margin-bottom:1.2mm;font-size:10pt}
-.brief .ask{border-top:1.2px solid var(--char);margin-top:5mm;padding-top:3mm}
+.brief .ask{border-top:1.2px solid var(--char);margin-top:3.5mm;padding-top:2mm}
 .brief .ask li{margin:0 0 1.6mm 4.5mm;padding-left:1mm}
 .brief .ask li::marker{color:var(--gold);content:"■  "}
-.brief .lim{margin-top:5mm;font-size:8.8pt;color:var(--mute);border-top:.6px solid var(--rule);padding-top:2.6mm}
-.sig{margin-top:6mm;font-size:9pt;color:var(--char2)}
+.brief .lim{margin-top:3mm;font-size:8.8pt;color:var(--mute);border-top:.6px solid var(--rule);padding-top:2.6mm}
+.sig{margin-top:3mm;font-size:9pt;color:var(--char2)}
 """
 
 
@@ -128,26 +131,28 @@ def page_repro():
 20260915, so your output matches the thesis byte for byte.</p>
 <div class="steps">{steps}</div>
 <div class="finger"><div class="k"><b class="sans">The fastest single check.</b> The auditor view of record 100 prints its
-commitment. If it matches, your run is the reported run.</div><div class="v">{C.REPRO_FINGERPRINT}…</div></div>
+commitment. If it matches, you are running the reported code and seed; the seven diffs of step 4 check the rest.</div><div class="v">{C.REPRO_FINGERPRINT}…</div></div>
 <h3>What you should see</h3>
-<table><tr><th>Result</th><th>Value</th><th>Thesis</th></tr>{rows}</table></section>"""
+<table class="exp"><tr><th>Result</th><th>Value</th><th>Thesis</th></tr>{rows}</table></section>"""
 
 
 def page_dossier():
     rounds = "".join(f"<tr><td>{e(a)}<small>{e(b)}</small></td><td>{e(c)}</td><td>{e(d)}</td></tr>"
                      for a, b, c, d in C.DOSSIER_ROUNDS)
-    finds = "".join(f"""<div class="find"><div><span class="id">{e(i)}</span><span class="sev {s}">{s}</span></div>
+    finds = "".join(f"""<div class="find"><div><span class="id">{e(i)}</span><span class="sev {s}">{s}</span>{'<span class="sev open">Open</span>' if v == "Open" else ""}</div>
 <div><div class="f">{e(f)}</div><dl><dt>Evidence</dt><dd>{e(ev)}</dd><dt>Fix</dt><dd>{e(fx)}</dd><dt>Verified</dt><dd>{e(v)}</dd></dl></div></div>"""
                     for i, s, f, ev, fx, v in C.AUDIT)
     return f"""<section class="part"><div class="kicker">Part 2</div><h2>Verification dossier</h2><div class="rule"></div>
-<p class="lede">Six reviews between 28 October and 6 November 2026, each built to find faults rather than confirm the work.
-Every finding was reproduced or checked against its source before anything changed, and every change went
-through a gated patch whose record is in the thesis repository's change trail.</p>
+<p class="lede">Six reviews between 28 October and 6 November 2026: three by AI agents set to attack the thesis, one by the
+supervisor, one search of the literature and law, and an AI audit of the code in two passes. Every finding was
+checked against its source before anything changed, and every change went through a gated patch recorded in the
+thesis repository's change trail.</p>
 <table class="rounds"><tr><th>Review</th><th>What it attacked</th><th>What changed</th></tr>{rounds}</table>
-<div class="held">What held throughout: the four propositions, every figure in Chapter 5, and the novelty of modelling the
-retention floor, the right to erasure and the deletion ceiling together.</div>
+<div class="held">What held throughout: the four propositions, every result figure in Chapter 5, and the novelty of modelling
+the retention floor, the right to erasure and the deletion ceiling together.</div>
 <section class="part"><div class="kicker">Part 2, continued</div><h2>The code audit, finding by finding</h2><div class="rule"></div>
-<p class="lede">The critical and major findings of both passes, in the order fault, evidence, fix, and how the fix was verified.
+<p class="lede">The critical and major findings of both passes, in the order fault, evidence, fix, and how the fix was verified;
+the one left open is marked.
 The full report, with every minor finding, is CODE_REVIEW.md in the thesis repository.</p>
 {finds}<p class="held">{e(C.AUDIT_MINOR)}</p></section></section>"""
 
@@ -198,8 +203,8 @@ def build():
     from pypdf import PdfWriter
     cover = render(page_cover(), "_cover", False)
     rest = render(page_index() + page_repro() + page_dossier() + page_evidence()
-                  + page_brief(C.POLICY_EN, "Part 4, policy brief", "Limits.", "Three things to decide")
-                  + page_brief(C.POLICY_NO, "Del 5, notat", "Begrensninger.", "Tre ting å avklare"),
+                  + page_brief(C.POLICY_EN, "Part 4, policy brief", "Limits.", "Questions put to the authorities (Chapter 7, §7.4)")
+                  + page_brief(C.POLICY_NO, "Del 5, notat", "Begrensninger.", "Spørsmål til myndighetene (kapittel 7, avsnitt 7.4)"),
                   "_rest", True)
     w = PdfWriter()
     for f in (cover, rest):
