@@ -12,7 +12,7 @@ This package reproduces every numerical result reported in the thesis. The check
 | Folder in this repository | Holds | Use it to |
 |---|---|---|
 | `repro_package/` (this folder) | the result modules, the recorded runs in `results/`, the one copy of the Synthea subset in `data/` | reproduce the numbers with `./run_all.sh` |
-| `demo_app/` | the same modules plus the viewer, its tests and the recorded runs in `docs/` | run the viewer and the 55 automated tests |
+| `demo_app/` | the same modules plus the viewer, its tests and the recorded runs in `docs/` | run the viewer and the 56 automated tests |
 | `code_artefacts/` | the source files as Appendix A lists them | read the code beside the appendix |
 
 The modules are byte-identical across the three folders and with the archived release. The citable artefact is the release on Zenodo: https://doi.org/10.5281/zenodo.23819274 (all versions).
@@ -39,7 +39,7 @@ python3 trf_checker.py
 Python 3 (tested 3.11 to 3.13). Java 17 or later only if you regenerate the full Synthea cohort. The automated tests run from `demo_app/`:
 
 ```bash
-cd ../demo_app && pip install -r requirements.txt pytest && python3 -m pytest -q tests/   # 55 passed
+cd ../demo_app && pip install -r requirements.txt pytest && python3 -m pytest -q tests/   # 56 passed
 ```
 
 ---

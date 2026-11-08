@@ -10,7 +10,7 @@ A viewer over the verified artefact of Chapter 5, with the automated tests. The 
 
 ```bash
 pip install -r requirements.txt pytest
-python3 -m pytest -q tests/        # 55 passed
+python3 -m pytest -q tests/        # 56 passed
 ```
 
 The tests check that every recorded run in `docs/` reproduces byte for byte, that every page of the viewer renders, that the claim ledger matches Chapter 5, that the exhaustive cross-check agrees with the checker at every boundary month, and that the propositions and the "not claimed" paragraph the viewer quotes are verbatim from the thesis one folder up.
