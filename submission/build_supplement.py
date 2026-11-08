@@ -62,9 +62,9 @@ code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 .step{display:grid;grid-template-columns:9mm 1fr;border-bottom:.6px solid var(--rule);padding:1.8mm 0}
 .step:before{counter-increment:s;content:counter(s);font-family:'Montserrat';font-weight:700;color:var(--ox);font-size:12pt}
 .step .t{font-family:'Montserrat';font-weight:600;font-size:9.4pt}
-.step code{display:block;background:var(--tint);padding:1.6mm 2.4mm;margin:1.2mm 0 .8mm;border-left:2px solid var(--char)}
+.step code{display:block;background:var(--tint);padding:1.2mm 2.4mm;margin:.9mm 0 .5mm;border-left:2px solid var(--char)}
 .step .n{font-size:8.8pt;color:var(--mute)}
-.finger{margin-top:4mm;background:var(--char);color:var(--cream);padding:5mm 6mm;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6mm}
+.finger{margin:2mm 0 4mm;background:var(--char);color:var(--cream);padding:5mm 6mm;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6mm}
 .finger .k{font-size:9.6pt;line-height:1.45}
 .finger .v{font-family:'Plex Mono';font-size:13pt;color:var(--gold);letter-spacing:.02em}
 /* dossier */
@@ -124,13 +124,13 @@ def page_repro():
     rows = "".join(f'<tr><td>{e(a)}</td><td class="num">{e(b)}</td><td class="where">{e(c)}</td></tr>'
                    for a, b, c in C.REPRO_EXPECT)
     return f"""<section class="part"><div class="kicker">Part 1</div><h2>Reproduce in five minutes</h2><div class="rule"></div>
-<p class="lede">Python 3.11 to 3.13. The checker needs nothing beyond the standard library; the run is deterministic
-under seed 20260915, so your output is byte-identical to the one the thesis reports.</p>
+<p class="lede">Python 3.11 to 3.13; the checker needs only the standard library. The run is deterministic under seed
+20260915, so your output matches the thesis byte for byte.</p>
 <div class="steps">{steps}</div>
-<h3>What you should see</h3>
-<table><tr><th>Result</th><th>Value</th><th>Thesis</th></tr>{rows}</table>
 <div class="finger"><div class="k"><b class="sans">The fastest single check.</b> The auditor view of record 100 prints its
-commitment. If it matches, your run is the reported run.</div><div class="v">{C.REPRO_FINGERPRINT}…</div></div></section>"""
+commitment. If it matches, your run is the reported run.</div><div class="v">{C.REPRO_FINGERPRINT}…</div></div>
+<h3>What you should see</h3>
+<table><tr><th>Result</th><th>Value</th><th>Thesis</th></tr>{rows}</table></section>"""
 
 
 def page_dossier():

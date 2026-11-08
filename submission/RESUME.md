@@ -18,7 +18,7 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 
 ## Steps
 - [x] content drafted (supplement_content.py)
-- [ ] build_supplement.py, render, look at every page
+- [x] build_supplement.py, render, look at every page (10 pages, layout fits)
 - [ ] whipper review (accuracy, em dashes, slop, overclaims), fix
 - [ ] commit; link from README
 - [ ] deck (Slides type), same system
