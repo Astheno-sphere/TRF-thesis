@@ -25,4 +25,14 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - [x] app UX pass in the same type system (Plex Sans, Source Serif lede), restrained (TRF 7e70bfe, P123)
 - [ ] link supplement from README
 - [ ] deck (Slides type), same system
-- [ ] thesis: HiMolde title page (blocked on Tiger's upload), freeze check chapters vs code
+- [ ] thesis final assembly (9 Nov): HiMolde template uploaded (document_template-masters_thesis.dotx).
+  - [x] build_docx.py: template title page transplanted (LOG953, logos), Calibri/TNR, oxblood accents, roman front
+        matter + arabic from Ch1, contents after Sammendrag, list of figures, figure labels/bookmarks/links,
+        TableText style for cells, wide tables 9 pt; Fig 5.2 re-rendered 4x from ui.life_strip (record 100)
+  - [x] libreoffice-math installed in container (needed to see equations in renders)
+  - [ ] sync audit agent -> scratchpad/sync_audit.md ; citation agent -> scratchpad/citation_audit.md
+  - [ ] whipper round 1 -> scratchpad/whipper_round1.md ; fix; re-render; round 2
+  - [ ] patches for blunders/stale facts (thesis + supplement + READMEs + TRF), trail_check, commit, push
+  - [ ] em dashes: 77 in assembled md (refs/code keep); decide targeted patch for prose/tables
+  - [ ] Zenodo: decide 1.3.1 (needs Tiger's yes), discoverability metadata
+  - [ ] deck

@@ -32,7 +32,15 @@ def q(t): return "{%s}%s" % (W, t)
 
 FRONT = ["Abstract", "Sammendrag", "Statement of Contribution", "Declaration of Originality",
          "Nomenclature and Abbreviations"]
-NAVY, RULE, HEAD_FILL, CODE_FILL, CODE_RULE = "1F3864", "7F8C9A", "E8EDF4", "F6F8FA", "C9D1D9"
+# HiMolde master's template (document_template-masters_thesis.dotx): its title page, A4, its margins,
+# Times New Roman 12 pt at 1.5 lines, Calibri headings. Accents follow the submission supplement:
+# charcoal text, oxblood rules and labels, warm hairlines. No filled boxes except table heads and code.
+TEMPLATE = ROOT / "document_template-masters_thesis.dotx"
+SUBJECT = "LOG953 Sustainable Energy Logistics"
+INK, OX, BRASS = "1B1C20", "5E1C23", "A9863B"
+NAVY = OX                                   # legacy name used for labels
+RULE, HEAD_FILL, CODE_FILL, CODE_RULE = "D9D2C3", "F3EFE6", "F8F6F1", "E3DCCD"
+TEXT_W = 11907 - 1728 - 1411                # template body section: A4, left 1728, right 1411 twips
 
 
 # ---------------------------------------------------------------- markdown preprocessing
@@ -78,8 +86,9 @@ def el(tag, **attrs):
 def sub(parent, tag, **attrs):
     e = el(tag, **attrs); parent.append(e); return e
 
+MT = "{http://schemas.openxmlformats.org/officeDocument/2006/math}t"
 def ptext(p):
-    return "".join(t.text or "" for t in p.iter(q("t")))
+    return "".join(t.text or "" for t in p.iter(q("t"), MT))
 
 def pstyle(p):
     s = p.find("w:pPr/w:pStyle", NS)
@@ -202,18 +211,35 @@ def fix_styles(styles):
         if old is not None: s.remove(old)
         s.append(etree.fromstring('<w:rPr xmlns:w="%s">%s</w:rPr>' % (W, xml)))
 
-    head = '<w:rFonts w:ascii="Cambria" w:hAnsi="Cambria" w:cs="Cambria"/><w:b/><w:bCs/><w:color w:val="%s"/>' % NAVY
-    set_ppr(style("Heading1"), '<w:keepNext/><w:keepLines/><w:pageBreakBefore/><w:pBdr><w:bottom w:val="single" w:sz="8" w:space="6" w:color="%s"/></w:pBdr><w:spacing w:before="0" w:after="360" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="0"/>' % NAVY)
-    set_rpr(style("Heading1"), head + '<w:sz w:val="34"/><w:szCs w:val="34"/>')
-    set_ppr(style("Heading2"), '<w:keepNext/><w:keepLines/><w:spacing w:before="360" w:after="120" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="1"/>')
-    set_rpr(style("Heading2"), head + '<w:sz w:val="27"/><w:szCs w:val="27"/>')
-    set_ppr(style("Heading3"), '<w:keepNext/><w:keepLines/><w:spacing w:before="240" w:after="80" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="2"/>')
-    set_rpr(style("Heading3"), head + '<w:i/><w:sz w:val="24"/><w:szCs w:val="24"/>')
+    # template heading family (Calibri), charcoal; the chapter heading carries the one oxblood rule
+    head = '<w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:cs="Calibri"/><w:b/><w:bCs/><w:color w:val="%s"/>' % INK
+    for sid in ("Heading1", "Heading2", "Heading3", "Heading4"):
+        s = style(sid)
+        for o in s.findall("w:basedOn", NS): o.set(q("val"), "Normal")
+    set_ppr(style("Heading1"), '<w:keepNext/><w:keepLines/><w:pageBreakBefore/><w:pBdr><w:bottom w:val="single" w:sz="8" w:space="8" w:color="%s"/></w:pBdr><w:spacing w:before="0" w:after="420" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="0"/>' % OX)
+    set_rpr(style("Heading1"), head + '<w:sz w:val="36"/><w:szCs w:val="36"/>')
+    set_ppr(style("Heading2"), '<w:keepNext/><w:keepLines/><w:spacing w:before="420" w:after="140" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="1"/>')
+    set_rpr(style("Heading2"), head + '<w:sz w:val="28"/><w:szCs w:val="28"/>')
+    set_ppr(style("Heading3"), '<w:keepNext/><w:keepLines/><w:spacing w:before="300" w:after="100" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="2"/>')
+    set_rpr(style("Heading3"), head + '<w:sz w:val="24"/><w:szCs w:val="24"/>')
+    set_ppr(style("Heading4"), '<w:keepNext/><w:keepLines/><w:spacing w:before="240" w:after="80" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/><w:outlineLvl w:val="3"/>')
+    set_rpr(style("Heading4"), head.replace("<w:b/><w:bCs/>", "<w:b/><w:bCs/><w:i/>") + '<w:sz w:val="24"/><w:szCs w:val="24"/>')
+    set_rpr(style("Normal"), '<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman"/><w:color w:val="%s"/><w:sz w:val="24"/><w:szCs w:val="24"/><w:lang w:val="en-GB"/>' % INK)
     for sid in ("BodyText", "FirstParagraph"):
-        set_ppr(style(sid), '<w:spacing w:before="0" w:after="160" w:line="360" w:lineRule="auto"/><w:jc w:val="both"/>')
-    set_ppr(style("Compact"), '<w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/>')
-    set_rpr(style("Compact"), '<w:sz w:val="20"/><w:szCs w:val="20"/>')
-    set_ppr(style("BlockText"), '<w:pBdr><w:left w:val="single" w:sz="18" w:space="8" w:color="%s"/></w:pBdr><w:shd w:val="clear" w:color="auto" w:fill="F3F5F9"/><w:spacing w:before="120" w:after="200" w:line="300" w:lineRule="auto"/><w:ind w:left="340" w:right="340"/><w:jc w:val="both"/>' % NAVY)
+        set_ppr(style(sid), '<w:widowControl/><w:spacing w:before="0" w:after="160" w:line="360" w:lineRule="auto"/><w:jc w:val="both"/>')
+    # tight lists in the body keep the body size; table cells get their own smaller style
+    set_ppr(style("Compact"), '<w:spacing w:before="40" w:after="80" w:line="300" w:lineRule="auto"/><w:jc w:val="left"/>')
+    tt = style("TableText"); tt.find("w:name", NS).set(q("val"), "Table Text")
+    set_ppr(tt, '<w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/>')
+    set_rpr(tt, '<w:sz w:val="20"/><w:szCs w:val="20"/>')
+    # quoted law and definitions: a left rule, no fill
+    set_ppr(style("BlockText"), '<w:pBdr><w:left w:val="single" w:sz="12" w:space="10" w:color="%s"/></w:pBdr><w:spacing w:before="120" w:after="200" w:line="300" w:lineRule="auto"/><w:ind w:left="400" w:right="400"/><w:jc w:val="both"/>' % OX)
+    set_rpr(style("BlockText"), '<w:sz w:val="22"/><w:szCs w:val="22"/>')
+    # figures: centred image, caption under it in the table-caption voice
+    set_ppr(style("CaptionedFigure"), '<w:keepNext/><w:spacing w:before="240" w:after="60" w:line="240" w:lineRule="auto"/><w:jc w:val="center"/>')
+    for sid in ("ImageCaption", "Caption"):
+        set_ppr(style(sid), '<w:spacing w:before="60" w:after="280" w:line="252" w:lineRule="auto"/><w:jc w:val="both"/>')
+        set_rpr(style(sid), '<w:i/><w:color w:val="333333"/><w:sz w:val="20"/><w:szCs w:val="20"/>')
     # code
     code_ppr = ('<w:pBdr><w:top w:val="single" w:sz="4" w:space="4" w:color="{c}"/><w:left w:val="single" w:sz="4" w:space="6" w:color="{c}"/>'
                 '<w:bottom w:val="single" w:sz="4" w:space="4" w:color="{c}"/><w:right w:val="single" w:sz="4" w:space="6" w:color="{c}"/></w:pBdr>'
@@ -223,7 +249,7 @@ def fix_styles(styles):
     set_rpr(s, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="24292F"/><w:sz w:val="17"/><w:szCs w:val="17"/>')
     vc = root.find("w:style[@w:styleId='VerbatimChar']", NS)
     if vc is not None:
-        set_rpr(vc, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="24292F"/><w:sz w:val="20"/><w:szCs w:val="20"/><w:shd w:val="clear" w:color="auto" w:fill="F0F2F5"/>')
+        set_rpr(vc, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="24292F"/><w:sz w:val="20"/><w:szCs w:val="20"/><w:shd w:val="clear" w:color="auto" w:fill="F3EFE6"/>')
     tok = {"KeywordTok": "CF222E", "ControlFlowTok": "CF222E", "ImportTok": "CF222E", "BuiltInTok": "8250DF",
            "FunctionTok": "8250DF", "StringTok": "0A3069", "VerbatimStringTok": "0A3069", "SpecialStringTok": "0A3069",
            "CharTok": "0A3069", "CommentTok": "6E7781", "DocumentationTok": "6E7781", "CommentVarTok": "6E7781",
@@ -242,11 +268,11 @@ def fix_styles(styles):
     set_rpr(cap, '<w:i/><w:color w:val="333333"/><w:sz w:val="21"/><w:szCs w:val="21"/>')
     hl = root.find("w:style[@w:styleId='Hyperlink']", NS)
     if hl is not None:
-        set_rpr(hl, '<w:color w:val="1F4E79"/>')
+        set_rpr(hl, '<w:color w:val="%s"/>' % OX)
     bib = style("Bibliography")
     set_ppr(bib, '<w:spacing w:before="0" w:after="120" w:line="276" w:lineRule="auto"/><w:ind w:left="567" w:hanging="567"/><w:jc w:val="left"/>')
-    for sid, xml in (("TOC1", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="9060"/></w:tabs><w:spacing w:before="160" w:after="40" w:line="240" w:lineRule="auto"/>'),
-                     ("TOC2", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="9060"/></w:tabs><w:spacing w:before="0" w:after="30" w:line="240" w:lineRule="auto"/><w:ind w:left="440"/>')):
+    for sid, xml in (("TOC1", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="160"' % TEXT_W + ' w:after="40" w:line="240" w:lineRule="auto"/>'),
+                     ("TOC2", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="0"' % TEXT_W + ' w:after="30" w:line="240" w:lineRule="auto"/><w:ind w:left="440"/>')):
         s = style(sid); s.find("w:name", NS).set(q("val"), sid.replace("TOC", "toc "))
         set_ppr(s, xml)
         set_rpr(s, ('<w:b/>' if sid == "TOC1" else '') + '<w:sz w:val="22"/><w:szCs w:val="22"/>')
@@ -263,7 +289,7 @@ def style_tables(body):
         tp.append(el("jc", val="center"))
         b = sub(tp, "tblBorders")
         for side, sz in (("top", 12), ("left", 4), ("bottom", 12), ("right", 4), ("insideH", 4), ("insideV", 4)):
-            sub(b, side, val="single", sz=sz, space=0, color=RULE if sz == 4 else "333333")
+            sub(b, side, val="single", sz=sz, space=0, color=RULE if sz == 4 else INK)
         m = sub(tp, "tblCellMar")
         for side, v in (("top", 50), ("left", 100), ("bottom", 50), ("right", 100)):
             sub(m, side, w=v, type="dxa")
@@ -271,6 +297,8 @@ def style_tables(body):
         look = tp.find("w:tblLook", NS)
         if look is not None: tp.remove(look); tp.append(look)
         rows = tbl.findall("w:tr", NS)
+        ncol = max((len(tr.findall("w:tc", NS)) for tr in rows), default=0)
+        fsz = 18 if ncol >= 6 else 20               # wide tables one point smaller, so headers do not break words
         for i, tr in enumerate(rows):
             trp = tr.find("w:trPr", NS)
             if trp is None:
@@ -285,18 +313,18 @@ def style_tables(body):
                     sh = el("shd", val="clear", color="auto", fill=HEAD_FILL)
                     va = tcp.find("w:vAlign", NS)
                     (va.addprevious(sh) if va is not None else tcp.append(sh))
-                    bd = el("tcBorders"); sub(bd, "bottom", val="single", sz=8, space=0, color="333333")
+                    bd = el("tcBorders"); sub(bd, "bottom", val="single", sz=8, space=0, color=INK)
                     sh.addprevious(bd)
                 for p in tc.iter(q("p")):
                     pp = ensure(p, "pPr", first=True)
                     if pp.find("w:pStyle", NS) is None:
-                        pp.insert(0, el("pStyle", val="Compact"))
+                        pp.insert(0, el("pStyle", val="TableText"))
                     else:
-                        pp.find("w:pStyle", NS).set(q("val"), "Compact")
+                        pp.find("w:pStyle", NS).set(q("val"), "TableText")
                     for r in p.iter(q("r")):
                         rp = rpr_of(r)
                         if rp.find("w:sz", NS) is None:
-                            sub(rp, "sz", val=20); sub(rp, "szCs", val=20)
+                            sub(rp, "sz", val=fsz); sub(rp, "szCs", val=fsz)
                         if i == 0 and rp.find("w:b", NS) is None:
                             rp.insert(0, el("b"))
 
@@ -336,6 +364,35 @@ def captions(body):
     return found
 
 
+def figures(body):
+    """'Figure X.Y.' label in bold oxblood, bookmarked; the image is kept with its caption."""
+    found = []
+    for p in body.iter(q("p")):
+        if pstyle(p) not in ("ImageCaption", "Caption"):
+            continue
+        txt = ptext(p)
+        m = re.match(r"Figure ([A-Z0-9]+)\.(\d+)\.", txt)
+        if not m:
+            continue
+        name = "fig_%s_%s" % m.groups()
+        lab = m.group(0)
+        r0 = p.find("w:r", NS); t0 = r0.find("w:t", NS) if r0 is not None else None
+        if t0 is not None and t0.text and t0.text.startswith(lab):
+            t0.text = t0.text[len(lab):]
+            t0.set("{http://www.w3.org/XML/1998/namespace}space", "preserve")
+            lr = copy.deepcopy(r0); lr.find("w:t", NS).text = lab
+            rp = rpr_of(lr); rp.insert(0, el("b"))
+            for o in rp.findall("w:i", NS): rp.remove(o)
+            rp.append(el("color", val=OX))
+            r0.addprevious(lr)
+        prev = p.getprevious()                      # the image paragraph: keep with the caption
+        if prev is not None and prev.tag == q("p"):
+            ensure(ensure(prev, "pPr", first=True), "keepNext")
+        bookmark(p, name)
+        found.append((name, re.sub(r"^(Figure [A-Z0-9]+\.\d+\. [^.]+\.).*", r"\1", txt)))
+    return found
+
+
 def headings(body):
     toc = []
     for p in body.iter(q("p")):
@@ -358,14 +415,16 @@ def headings(body):
     return toc
 
 
-LINK = re.compile(r"(Tables? [A-Z0-9]+\.\d+[a-z]?)|(Sections? \d+\.\d+)|(§ ?\d+\.\d+)|(Chapter \d)(?![\d.])")
+LINK = re.compile(r"(Tables? [A-Z0-9]+\.\d+[a-z]?)|(Sections? \d+\.\d+)|(§ ?\d+\.\d+)|(Chapter \d)(?![\d.])|(Figures? \d+\.\d+)")
 
 def link_targets(text, known):
     out = []
     for m in LINK.finditer(text):
         s = m.group(0)
         n = re.search(r"([A-Z0-9]+)\.(\d+[a-z]?)", s) if not m.group(4) else None
-        if m.group(1):
+        if m.group(5):
+            name = "fig_%s_%s" % n.groups()
+        elif m.group(1):
             name = "tbl_%s_%s" % n.groups()
         elif m.group(4):
             name = "ch_%s" % s.split()[-1]
@@ -382,7 +441,7 @@ def link_targets(text, known):
 def crosslinks(body, known):
     n = 0
     for p in list(body.iter(q("p"))):
-        if pstyle(p) in ("Heading1", "Heading2", "Heading3", "TableCaption", "SourceCode", "TOC1", "TOC2"):
+        if pstyle(p) in ("Heading1", "Heading2", "Heading3", "TableCaption", "ImageCaption", "SourceCode", "TOC1", "TOC2"):
             continue
         for r in list(p.findall("w:r", NS)):       # direct runs only (not inside hyperlinks or fields)
             t = r.find("w:t", NS)
@@ -420,6 +479,7 @@ def bibliography(body):
             p.find("w:pPr/w:pStyle", NS).set(q("val"), "Bibliography")
 
 
+FIGS = []    # (bookmark, caption head), filled in main()
 PAGES = {}   # bookmark -> page number, filled by --pages from a LibreOffice render (B-50)
 
 
@@ -443,22 +503,31 @@ def page_map(docx, toc, tables):
     pages = txt.split("\f")
     norm = lambda x: re.sub(r"\s+", " ", x).strip()
     lines = [[norm(l) for l in pg.split("\n") if l.strip()] for pg in pages]
-    lt = [i for i, pg in enumerate(lines) if any(l.startswith("List of Tables") for l in pg)]
+    lt = [i for i, pg in enumerate(lines) if any(l.startswith("List of Tables") for l in pg)]   # contents end
     start = (lt[-1] + 1) if lt else 0
     while start < len(lines) and any(re.search(r"\s#$", l) for l in lines[start]):
         start += 1                                   # list of tables may run over a page
     out = {}
+    cpages = {i for i, pg in enumerate(lines) if any(l.startswith(("Contents", "List of Figures", "List of Tables")) for l in pg)}
+    order = list(range(start, len(lines))) + [i for i in range(1, start) if i not in cpages]   # front matter precedes the contents
     for _, txt_, name in toc:
         key = norm(txt_)[:35]
-        for i in range(start, len(lines)):
+        for i in order:
             if any(l.startswith(key) for l in lines[i]):
                 out[name] = str(i + 1); break
-    for name, txt_ in tables:
+    for name, txt_ in list(tables) + list(FIGS):
         key = norm(txt_)[:35]
         for i in range(start, len(lines)):
             if any(key in l for l in lines[i]):
                 out[name] = str(i + 1); break
-    return out
+    # physical page -> printed label: title page unnumbered, front matter roman, Chapter 1 starts at 1
+    ch1 = int(out.get("ch_1", 0))
+    def roman(n):
+        r = ""
+        for v, c in ((40, "xl"), (10, "x"), (9, "ix"), (5, "v"), (4, "iv"), (1, "i")):
+            while n >= v: r += c; n -= v
+        return r
+    return {k: (str(int(v) - ch1 + 1) if ch1 and int(v) >= ch1 else roman(int(v) - 1)) for k, v in out.items()}
 
 
 def contents_block(toc, tables):
@@ -472,48 +541,114 @@ def contents_block(toc, tables):
         r = sub(hl, "r"); sub(r, "tab")
         fld(hl, "PAGEREF %s \\h" % name, PAGES.get(name, "#"))
         ps.append(p)
-    h = para("Heading1"); h.append(run("List of Tables")); ps.append(h)
-    for name, txt in tables:
-        p = para("TOC2")
-        p.find("w:pPr/w:ind", NS).set(q("left"), "0") if p.find("w:pPr/w:ind", NS) is not None else None
-        hl = sub(p, "hyperlink", anchor=name, history=1)
-        hl.append(run(txt))
-        r = sub(hl, "r"); sub(r, "tab")
-        fld(hl, "PAGEREF %s \\h" % name, PAGES.get(name, "#"))
-        ps.append(p)
+    for title, items in (("List of Figures", FIGS), ("List of Tables", tables)):
+        if not items:
+            continue
+        h = para("Heading2"); h.append(run(title)); ps.append(h)
+        for name, txt in items:
+            p = para("TOC2")
+            ind = p.find("w:pPr/w:ind", NS)
+            if ind is None:
+                ind = sub(p.find("w:pPr", NS), "ind")
+            ind.set(q("left"), "0")
+            hl = sub(p, "hyperlink", anchor=name, history=1)
+            hl.append(run(txt))
+            r = sub(hl, "r"); sub(r, "tab")
+            fld(hl, "PAGEREF %s \\h" % name, PAGES.get(name, "#"))
+            ps.append(p)
     return ps
 
 
-def title_page(fm_text):
+def title_page(fm_text, files, rels):
+    """HiMolde's own title page, transplanted from the template: its logos, frame and type, with the
+    subject code, title, author and place/date filled in as plain text (no form fields left)."""
     tp = fm_text.split("## Title Page", 1)[1].split("\n---", 1)[0]
     ls = [l.strip() for l in tp.strip().split("\n") if l.strip()]
-    title, subtitle = ls[0].strip("*"), ls[1].strip("*")
-    author = ls[2]
-    rest = ls[3:]
-    ps = []
-    p = para(jc="center", before=1800, after=0); p.append(run("HØGSKOLEN I MOLDE", bold=True, size=22, color=NAVY)); ps.append(p)
-    p = para(jc="center", before=0, after=1400); p.append(run("Vitenskapelig høgskole i logistikk", size=20, color="555555")); ps.append(p)
-    p = para(jc="center", before=0, after=360)
-    p.find("w:pPr", NS).append(el("pBdr"));
-    p.append(run(title, bold=True, size=40, color=NAVY, font="Cambria")); ps.append(p)
-    p = para(jc="center", before=0, after=1200); p.append(run(subtitle, italic=True, size=26, color="333333", font="Cambria")); ps.append(p)
-    p = para(jc="center", before=0, after=120); p.append(run(author, bold=True, size=28)); ps.append(p)
-    for l in rest:
-        p = para(jc="center", before=0, after=80); p.append(run(l, size=22)); ps.append(p)
-    p = para(jc="center", before=600, after=0)
-    p.append(run("Artefact: github.com/Astheno-sphere/TRF  ·  Demonstration: trfhimolde.streamlit.app", size=18, color="555555"))
-    ps.append(p)
-    return ps
+    title, subtitle, author = ls[0].strip("*"), ls[1].strip("*"), ls[2]
+    sup = next(l for l in ls if l.startswith("Supervisor"))
+    date = next(l for l in ls if l.startswith("Molde"))
+    z = zipfile.ZipFile(TEMPLATE)
+    tdoc = etree.fromstring(z.read("word/document.xml"))
+    trels = etree.fromstring(z.read("word/_rels/document.xml.rels"))
+    PR = "{http://schemas.openxmlformats.org/package/2006/relationships}Relationship"
+    remap = {}
+    for rel in trels.findall(PR):
+        if rel.get("Type").endswith("/image"):
+            tgt = rel.get("Target"); new_t = "media/himolde_" + tgt.split("/")[-1]
+            files["word/" + new_t] = z.read("word/" + tgt)
+            nid = "rIdHiM" + rel.get("Id")[3:]
+            n = etree.SubElement(rels, PR); n.set("Id", nid); n.set("Type", rel.get("Type")); n.set("Target", new_t)
+            remap[rel.get("Id")] = nid
+    tbody = tdoc.find("w:body", NS)
+    kids = list(tbody)
+    end = next(i for i, e in enumerate(kids) if i > 6 and e.find(".//w:sectPr", NS) is not None)
+    block = [copy.deepcopy(e) for e in kids[:end + 1]]
+    RID = "{%s}" % R
+    for e in block:
+        for x in e.iter():
+            for a in list(x.attrib):
+                if a.startswith(RID) and x.get(a) in remap:
+                    x.set(a, remap[x.get(a)])
+                if "/office/word/2010/" in a:
+                    del x.attrib[a]
+        for sp in e.iter(q("sectPr")):
+            for o in sp.findall("w:footerReference", NS) + sp.findall("w:headerReference", NS): sp.remove(o)
+            for o in sp.findall("w:formProt", NS): sp.remove(o)
+    def fill(p, text, extra=None):
+        """replace a form field paragraph's runs with plain runs in the field's own formatting"""
+        runs = p.findall("w:r", NS)
+        rpr = None
+        for r in runs:
+            if r.find("w:t", NS) is not None or r.find("w:fldChar", NS) is not None:
+                rpr = copy.deepcopy(r.find("w:rPr", NS)); break
+        for r in runs: p.remove(r)
+        for o in p.findall("w:bookmarkStart", NS) + p.findall("w:bookmarkEnd", NS): p.remove(o)
+        return rpr
+    def put(p, parts):
+        rpr = fill(p, "")
+        pp = ensure(p, "pPr", first=True)
+        for o in pp.findall("w:jc", NS): pp.remove(o)
+        pp.append(el("jc", val="left"))
+        for k, (t, size, bold) in enumerate(parts):
+            r = el("r")
+            if rpr is not None:
+                rp = copy.deepcopy(rpr)
+                for o in rp.findall("w:noProof", NS): rp.remove(o)
+                if size:
+                    for tag in ("sz", "szCs"):
+                        for o in rp.findall("w:" + tag, NS): o.set(q("val"), str(size))
+                if bold is False:
+                    for o in rp.findall("w:b", NS) + rp.findall("w:bCs", NS): rp.remove(o)
+                r.append(rp)
+            if k:
+                r.append(el("br"))
+            t_ = sub(r, "t"); t_.text = t; t_.set("{http://www.w3.org/XML/1998/namespace}space", "preserve")
+            p.append(r)
+    for e in block:
+        if e.tag != q("p"):
+            continue
+        txt = ptext(e)
+        instr = "".join(x.text or "" for x in e.iter(q("instrText")))
+        if "FORMDROPDOWN" in instr:
+            put(e, [(SUBJECT, None, None)])
+        elif "FORMTEXT" in instr and "Title" in txt:
+            put(e, [(title, None, None), (subtitle, 24, False)])
+        elif "FORMTEXT" in instr and "Author" in txt:
+            put(e, [(author, None, None), (sup, 22, None)])
+        elif "FORMTEXT" in instr and "Molde" in txt:
+            put(e, [(date, None, None)])
+    block = [e for e in block if e.tag != q("bookmarkStart")]
+    return block
 
 
 def footer_xml():
     return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
-            '<w:ftr xmlns:w="%s"><w:p><w:pPr><w:jc w:val="center"/></w:pPr>'
-            '<w:r><w:rPr><w:sz w:val="20"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r>'
-            '<w:r><w:rPr><w:sz w:val="20"/></w:rPr><w:instrText xml:space="preserve"> PAGE </w:instrText></w:r>'
-            '<w:r><w:rPr><w:sz w:val="20"/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r>'
-            '<w:r><w:rPr><w:sz w:val="20"/></w:rPr><w:t>1</w:t></w:r>'
-            '<w:r><w:rPr><w:sz w:val="20"/></w:rPr><w:fldChar w:fldCharType="end"/></w:r></w:p></w:ftr>' % W)
+            '<w:ftr xmlns:w="%s"><w:p><w:pPr><w:jc w:val="right"/></w:pPr>'
+            '<w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/><w:color w:val="555555"/><w:sz w:val="20"/></w:rPr><w:fldChar w:fldCharType="begin"/></w:r>'
+            '<w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/><w:color w:val="555555"/><w:sz w:val="20"/></w:rPr><w:instrText xml:space="preserve"> PAGE </w:instrText></w:r>'
+            '<w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/><w:color w:val="555555"/><w:sz w:val="20"/></w:rPr><w:fldChar w:fldCharType="separate"/></w:r>'
+            '<w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/><w:color w:val="555555"/><w:sz w:val="20"/></w:rPr><w:t>1</w:t></w:r>'
+            '<w:r><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri"/><w:color w:val="555555"/><w:sz w:val="20"/></w:rPr><w:fldChar w:fldCharType="end"/></w:r></w:p></w:ftr>' % W)
 
 
 def main():
@@ -532,50 +667,61 @@ def main():
     style_tables(body)
     space_after_tables(body)
     tables = captions(body)
+    figs = figures(body)
     toc = headings(body)
-    known = {n for n, _ in tables} | {n for _, _, n in toc}
+    known = {n for n, _ in tables} | {n for n, _ in figs} | {n for _, _, n in toc}
     nlinks = crosslinks(body, known)
     bibliography(body)
+    for p in body.iter(q("p")):                      # link-heavy short paragraphs: ragged right, not stretched
+        t = ptext(p)
+        if pstyle(p) in ("BodyText", "FirstParagraph", "Compact", "TableText") and t.count("https://") >= 1 and len(t) < 600:
+            pp = ensure(p, "pPr", first=True)
+            for o in pp.findall("w:jc", NS): pp.remove(o)
+            pp.append(el("jc", val="left"))
 
-    # first heading ("Abstract") must not add a blank page after the title page: title page ends with a break
-    marker = None
-    for p in body.iter(q("p")):
-        if "<!--CONTENTS-->" in etree.tostring(p, encoding="unicode") or ptext(p).strip() == "<!--CONTENTS-->":
-            marker = p; break
-    # raw openxml comment becomes nothing; find the paragraph after Nomenclature section instead
-    first = body[0]
-    for e in title_page(fm):
-        first.addprevious(e)
-    cont = contents_block(toc, tables)
-    # place contents before the first chapter heading
-    ch1 = next(p for p in body.iter(q("p")) if pstyle(p) == "Heading1" and ptext(p).startswith("Chapter 1"))
-    for e in cont:
-        ch1.addprevious(e)
-
-    # footer, title page without number
-    sect = body.find("w:sectPr", NS)
-    if sect is None:
-        sect = sub(body, "sectPr")
+    FIGS[:] = figs
     rels = etree.fromstring(files["word/_rels/document.xml.rels"])
-    rid = "rIdFtr1"
-    rel = etree.SubElement(rels, "{http://schemas.openxmlformats.org/package/2006/relationships}Relationship")
-    rel.set("Id", rid); rel.set("Type", R.replace("relationships", "relationships/footer")); rel.set("Target", "footer1.xml")
-    for o in sect.findall("w:footerReference", NS): sect.remove(o)
-    fr = el("footerReference"); fr.set(q("type"), "default"); fr.set("{%s}id" % R, rid); sect.insert(0, fr)
-    for o in sect.findall("w:titlePg", NS): sect.remove(o)
-    tpg = el("titlePg")
-    pgsz = sect.find("w:pgSz", NS)
-    # A4, 2.5 cm margins
-    for tag in ("pgSz", "pgMar"):
-        for o in sect.findall("w:" + tag, NS): sect.remove(o)
-    sect.append(el("pgSz", w=11906, h=16838))
-    sect.append(el("pgMar", top=1418, right=1418, bottom=1418, left=1418, header=709, footer=709, gutter=0))
-    sect.append(tpg)
+    first = body[0]
+    for e in title_page(fm, files, rels):
+        first.addprevious(e)
+    # Abstract opens the new section: no page break of its own (it would leave a blank page)
+    def no_break(p):
+        pp = ensure(p, "pPr", first=True)
+        for o in pp.findall("w:pageBreakBefore", NS): pp.remove(o)
+        pp.append(el("pageBreakBefore", val="0"))
+    no_break(first)
+    # contents after Sammendrag, as in the template
+    soc = next(p for p in body.iter(q("p")) if pstyle(p) == "Heading1" and ptext(p).strip() == "Statement of Contribution")
+    for e in contents_block(toc, tables):
+        soc.addprevious(e)
+
+    # footers: page number at the right, as in the template
+    PR = "{http://schemas.openxmlformats.org/package/2006/relationships}Relationship"
+    rel = etree.SubElement(rels, PR)
+    rel.set("Id", "rIdFtr1"); rel.set("Type", R.replace("relationships", "relationships/footer")); rel.set("Target", "footer1.xml")
+    def section(fmt):
+        sp = el("sectPr")
+        fr = el("footerReference"); fr.set(q("type"), "default"); fr.set("{%s}id" % R, "rIdFtr1"); sp.append(fr)
+        sp.append(el("pgSz", w=11907, h=16840))
+        sp.append(el("pgMar", top=1411, right=1411, bottom=1411, left=1728, header=720, footer=403, gutter=0))
+        sp.append(el("pgNumType", fmt=fmt, start=1))
+        return sp
+    # front matter (roman) ends just before Chapter 1, which starts arabic page 1
+    ch1 = next(p for p in body.iter(q("p")) if pstyle(p) == "Heading1" and ptext(p).startswith("Chapter 1"))
+    brk = para(); brk.find("w:pPr", NS).append(section("lowerRoman"))
+    ch1.addprevious(brk)
+    no_break(ch1)
+    old = body.find("w:sectPr", NS)
+    if old is not None: body.remove(old)
+    body.append(section("decimal"))
     files["word/_rels/document.xml.rels"] = etree.tostring(rels, xml_declaration=True, encoding="UTF-8", standalone=True)
     files["word/footer1.xml"] = footer_xml().encode()
     ct = files["[Content_Types].xml"].decode()
     if "footer1.xml" not in ct:
         ct = ct.replace("</Types>", '<Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>')
+    for ext, mime in (("jpeg", "image/jpeg"), ("png", "image/png")):
+        if 'Extension="%s"' % ext not in ct:
+            ct = ct.replace("</Types>", '<Default Extension="%s" ContentType="%s"/></Types>' % (ext, mime))
     files["[Content_Types].xml"] = ct.encode()
 
     files["word/styles.xml"] = fix_styles(files["word/styles.xml"])

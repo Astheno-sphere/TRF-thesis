@@ -5,6 +5,7 @@
 | ID | Change | Verification |
 |---|---|---|
 | B-55 | handoff/2026-10-10/CHECKSUMS_SHA256.txt: SHA-256 of every tracked file at B-54 plus every file of Astheno-sphere/TRF at 169c99a | `sha256sum -c` all verify |
+| B-56 | `handoff_tools/build_docx.py` on the HiMolde master's template (`document_template-masters_thesis.dotx`): the template's own title page with both logos and subject code LOG953 Sustainable Energy Logistics; Abstract, Sammendrag, Contents in the template's order; A4 and the template's body margins; Times New Roman 12 pt at 1.5 lines, Calibri headings; roman page numbers in the front matter, arabic from Chapter 1; list of figures; figure labels bookmarked and linked; table cells in their own style, wide tables 9 pt. `figures/fig5_2_record_100_life_strip.png` re-rendered at 4x from `ui.life_strip()` for record 100 (same quantities: created month 7, floor to 19, ceiling from 16). Presentation only; the .md is unchanged | concordance 816/816; trail intact |
 | B-54 | Handoff: HANDOFF_READ_FIRST §000 (state, open items, rules, Round 5 procedure); CONVERSATION_LINEAGE chat trail + landmarks; RESUME_PROMPT; SUPERVISOR_FEEDBACK_HISTORY rounds 3–4; REVIEW_TRACKER R4-* rows; handoff/2026-10-10/ (AUDIT_STATUS, VERSION_LOG, CHECKSUMS_SHA256); session transcripts exported to conversation_history/; tools extract_review.py, locate_edits.py, render_figure.py | trail_check; extract_review.py reproduces review4_changes.txt |
 
 ## 6 October 2026 — João's review of 5 Oct draft (review4_JF_2026-10-06.docx): P59–P59g
