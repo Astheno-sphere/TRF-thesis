@@ -8,7 +8,7 @@
 
 Chapter 3, Section 3.7 sets out the analytical evaluation strategy adopted for this thesis: internal validity through logical consistency and executable checking, external validity through compatibility analysis against verified infrastructure, and reliability through deterministic execution. That strategy evaluates the artefact against the objectives stated in Chapter 1, Section 1.3, and it is the evaluation the thesis reports.
 
-It does not collect stakeholder input. Design Science Research as elaborated by Hevner, March, Park, and Ram (2004) and Peffers, Tuunanen, Rothenberger, and Chatterjee (2007) treats evaluation as an activity that may be conducted through several methods, of which expert assessment is one, and a specification-and-demonstration study of the kind reported here frequently designs the evaluation that a subsequent cycle executes. This appendix is that design.
+It does not collect stakeholder input. Design Science Research as elaborated by Hevner et al. (2004) and Peffers et al. (2007) treats evaluation as an activity that may be conducted through several methods, of which expert assessment is one, and a specification-and-demonstration study of the kind reported here frequently designs the evaluation that a subsequent cycle executes. This appendix is that design.
 
 The instrument is specified in sufficient detail to be executed without further design work: panel composition and recruitment approach, session structure, demonstration script, semi-structured interview guide, a closed-response questionnaire, the analysis approach, and the data-protection arrangements execution would require. The four closed-response dimensions follow the structure proposed in supervisory feedback and are reproduced with their anchor statements as proposed, except for the two changes stated under *Status of this instrument*.
 
@@ -217,11 +217,3 @@ Execution would process personal data about identifiable professionals and would
 The arrangements would be: written information and consent obtained before each session; audio recording only with consent, transcribed and the recording deleted on transcription; participants identified in reporting by perspective and number only (P1 through P8), with institutions named only where a participant expressly agrees; no special-category data collected; storage on institutional infrastructure for the duration of the project and deletion on completion; and withdrawal permitted at any point up to the completion of analysis.
 
 Executing this instrument would change the thesis's ethics position materially. Chapter 1, Section 1.5, Chapter 3, Section 3.9, and the Declaration of Originality each state that this research involves no human participants and required no ethical approval. Those statements are accurate for the thesis as submitted and would require revision if the instrument were executed. This appendix does not revise them.
-
----
-
-## References (Appendix C)
-
-Hevner, A. R., March, S. T., Park, J., & Ram, S. (2004). Design science in information systems research. *MIS Quarterly*, *28*(1), 75–105.
-
-Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A design science research methodology for information systems research. *Journal of Management Information Systems*, *24*(3), 45–77.

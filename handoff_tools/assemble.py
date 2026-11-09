@@ -9,15 +9,21 @@ CHS = ["Chapter1_Introduction_v2.md", "Chapter2_LitReview_v2_FINAL.md", "Chapter
        "Chapter7_Conclusion_v1.md"]
 APPS = ["code_artefacts/README_Appendix_A.md", "Appendix_B_Search_Log.md", "Appendix_C_Evaluation_Instrument.md", "Appendix_D_Correspondence.md"]
 
+def _akey(s):
+    """Author sort string. Word boundaries are kept (hyphens and spaces become one space), so APA's
+    "nothing precedes something" holds: "Helse- og omsorgsdepartementet" sorts before "Helsedataservice"
+    (P126 / audit M-1; until then the key dropped all non-letters and put it after Helsedirektoratet)."""
+    return re.sub(r" +", " ", re.sub(r"[^a-z ]", "", re.sub(r"[-\s]+", " ", s.lower()))).strip()
+
 def apa_key(t):
     """APA 7 order (4 Oct 2026, B-35): author letters, then n.d. before dated works, then year,
     then the a/b suffix. The earlier key sorted the whole string, which put Finck 2019 before
     2018 and SPUHiN 2025 before 2024."""
     m = re.match(r"^(.*?)\((n\.d\.|\d{4})(?:-?([a-z]))?[^)]*\)", t)
     if not m:
-        return (re.sub(r"[^A-Za-z]", "", t).lower(), 0, 0, "")
+        return (_akey(t), 0, 0, "")
     author, year, suf = m.group(1), m.group(2), m.group(3) or ""
-    return (re.sub(r"[^A-Za-z]", "", author).lower(), 0 if year == "n.d." else 1,
+    return (_akey(author), 0 if year == "n.d." else 1,
             0 if year == "n.d." else int(year), suf)
 
 def bibliography():

@@ -1549,3 +1549,104 @@
 2026-11-09 02:38 | P127_sync_outside_text.py | P127-02 | Data_Provenance_Statement.md | 54f9a12197c4 -> 8b964e9758c0 | 1,002 bytes for the October cohort; subset 40 MB
 2026-11-09 02:38 | P127_sync_outside_text.py | P127-03 | repro_package/README.md | ea93cff112c4 -> a7b24dfda313 | cite release 1.3.0 with the all-versions DOI
 2026-11-09 02:38 | P127_sync_outside_text.py | P127-04 | CHECKSUMS.md | f4e4faaa3c60 -> d8c8cba66c8a | checksums after P125 and the copies
+2026-11-09 02:43 | P126_citations.py | P126-01 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | W-1: DOI venue is IDCS 2019 (LNCS 11874, pp. 318-327); 22 authors per IITiS BibTeX, APA 7 first 19 + ellipsis + last
+2026-11-09 02:43 | P126_citations.py | P126-02 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | W-2/I-5: current ePrint title (sufficiency, rev. 4 Nov 2026); copy made identical to Ch2 incl. affiliation
+2026-11-09 02:43 | P126_citations.py | P126-03 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | W-2: current ePrint title (sufficiency, rev. 4 Nov 2026)
+2026-11-09 02:43 | P126_citations.py | P126-04 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | W-2/I-5: current ePrint title; copy made identical to Ch2
+2026-11-09 02:43 | P126_citations.py | P126-05 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | W-2/I-5: current ePrint title; copy made identical to Ch2
+2026-11-09 02:43 | P126_citations.py | P126-06 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | W-2/I-5: current ePrint title; copy made identical to Ch2
+2026-11-09 02:43 | P126_citations.py | P126-07 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | W-2 Option B: the revised ePrint replaces the equivalence claim with one-directional sufficiency; notion is Destruction-IND-CCA
+2026-11-09 02:43 | P126_citations.py | P126-08 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | W-2 Option B: sufficiency, not equivalence; 'the formal foundation' softened to match a one-directional preprint result
+2026-11-09 02:43 | P126_citations.py | P126-09 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | W-2 Option B: sufficiency, not equivalence; Destruction-IND-CCA
+2026-11-09 02:43 | P126_citations.py | P126-10 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-3: NIST SP under its personal authors, as Barker (2020) and Dworkin (2007)
+2026-11-09 02:43 | P126_citations.py | P126-11 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-3: NIST SP under its personal authors, as Barker (2020) and Dworkin (2007)
+2026-11-09 02:43 | P126_citations.py | P126-12 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-3: NIST SP under its personal authors, as Barker (2020) and Dworkin (2007)
+2026-11-09 02:43 | P126_citations.py | P126-13 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | I-3: NIST SP under its personal authors, as Barker (2020) and Dworkin (2007)
+2026-11-09 02:43 | P126_citations.py | P126-14 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-3 in-text
+2026-11-09 02:43 | P126_citations.py | P126-15 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-3 in-text
+2026-11-09 02:43 | P126_citations.py | P126-16 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-4/M-5: OJ italics end before the series; https eur-lex ELI as the 2013 entry
+2026-11-09 02:43 | P126_citations.py | P126-17 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-4/I-5: identical to the Ch1 copy; one EU-legislation pattern
+2026-11-09 02:43 | P126_citations.py | P126-18 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-4/I-5: identical to the Ch1 copy; one EU-legislation pattern
+2026-11-09 02:43 | P126_citations.py | P126-19 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-4: full short title, OJ series and number, https eur-lex ELI (audit text)
+2026-11-09 02:43 | P126_citations.py | P126-20 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-4: full short title, OJ series and number, https eur-lex ELI (audit text)
+2026-11-09 02:43 | P126_citations.py | P126-21 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-4: full short title, OJ series and number, https eur-lex ELI (audit text)
+2026-11-09 02:43 | P126_citations.py | P126-22 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-4: full short title, OJ series and number, https eur-lex ELI (audit text)
+2026-11-09 02:43 | P126_citations.py | P126-23 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-4: title roman, OJ italic, https eur-lex ELI; end page not verified, start page kept as in the entry
+2026-11-09 02:43 | P126_citations.py | P126-24 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-4: OJ L series written as for post-2023 acts; URL kept (ELI not verified)
+2026-11-09 02:43 | P126_citations.py | P126-25 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-5: identical to the Ch2 copy
+2026-11-09 02:43 | P126_citations.py | P126-26 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-5: identical to the Ch2 copy (venue and arXiv DOI no longer mixed)
+2026-11-09 02:43 | P126_citations.py | P126-27 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | I-5: identical to the Ch2 copy (venue and arXiv DOI no longer mixed)
+2026-11-09 02:43 | P126_citations.py | P126-28 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-6: same author and year lettered by title (APA 7 9.47); Electronic... = 2025a, listed first
+2026-11-09 02:43 | P126_citations.py | P126-29 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-6: EHDS page is now 2025b
+2026-11-09 02:43 | P126_citations.py | P126-30 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-6: EHDS page is now 2025b
+2026-11-09 02:43 | P126_citations.py | P126-31 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-6: EHDS page is now 2025b
+2026-11-09 02:43 | P126_citations.py | P126-32 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-6: EHDS page is now 2025b
+2026-11-09 02:43 | P126_citations.py | P126-33 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-6: cross-border services page is now 2025a
+2026-11-09 02:43 | P126_citations.py | P126-34 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-6: cross-border services page is now 2025a
+2026-11-09 02:43 | P126_citations.py | P126-35 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-1: APA 7 8.17 et al. for 3+ authors
+2026-11-09 02:43 | P126_citations.py | P126-36 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-37 | Chapter3_Methodology_v1.md | be56be8dab19 -> 0d3b2327a073 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-38 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-39 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-40 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-41 | Chapter3_Methodology_v1.md | be56be8dab19 -> 0d3b2327a073 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-42 | Chapter3_Methodology_v1.md | be56be8dab19 -> 0d3b2327a073 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-43 | Chapter3_Methodology_v1.md | be56be8dab19 -> 0d3b2327a073 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-44 | Appendix_C_Evaluation_Instrument.md | 0770d691afdd -> 54dbee22ab66 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-45 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1 (Laurie 2013 only)
+2026-11-09 02:43 | P126_citations.py | P126-46 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-1
+2026-11-09 02:43 | P126_citations.py | P126-47 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-1
+2026-11-09 02:43 | P126_citations.py | P126-48 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-49 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-50 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-51 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-52 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-53 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-54 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-55 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-56 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-57 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-58 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-59 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-60 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-1
+2026-11-09 02:43 | P126_citations.py | P126-61 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-62 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-63 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-64 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-65 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-1 (also removes the missing serial comma)
+2026-11-09 02:43 | P126_citations.py | P126-66 | Chapter3_Methodology_v1.md | be56be8dab19 -> 0d3b2327a073 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-67 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-1 (also removes the missing serial comma)
+2026-11-09 02:43 | P126_citations.py | P126-68 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | I-1 (also removes the missing serial comma)
+2026-11-09 02:43 | P126_citations.py | P126-69 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | I-1
+2026-11-09 02:43 | P126_citations.py | P126-70 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-7: author once, years in order (APA 7 8.19)
+2026-11-09 02:43 | P126_citations.py | P126-71 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-7: author once, years in order (APA 7 8.19)
+2026-11-09 02:43 | P126_citations.py | P126-72 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | I-8: reference-list order (APA 7 8.12)
+2026-11-09 02:43 | P126_citations.py | P126-73 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-8
+2026-11-09 02:43 | P126_citations.py | P126-74 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-8
+2026-11-09 02:43 | P126_citations.py | P126-75 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | I-8
+2026-11-09 02:43 | P126_citations.py | P126-76 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | I-8 KONFIDO row order; table cells use ': ' instead of em-dash separators
+2026-11-09 02:43 | P126_citations.py | P126-77 | Appendix_C_Evaluation_Instrument.md | 0770d691afdd -> 54dbee22ab66 | I-10: one reference list; Hevner (2004) and Peffers (2007) are in the main list with DOIs
+2026-11-09 02:43 | P126_citations.py | P126-78 | Chapter5_Demonstration_v1.md | 47e489c9b581 -> 4757ef58eb6e | I-15: author-date citation of the archived release at the first artefact mention
+2026-11-09 02:43 | P126_citations.py | P126-79 | Chapter5_Demonstration_v1.md | 47e489c9b581 -> 4757ef58eb6e | I-15: reference entry for the thesis software (Zenodo version DOI 1.3.0)
+2026-11-09 02:43 | P126_citations.py | P126-80 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-4: sentence case
+2026-11-09 02:43 | P126_citations.py | P126-81 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | M-4: sentence case
+2026-11-09 02:43 | P126_citations.py | P126-82 | Chapter6_Discussion_v1.md | e69b12f0f891 -> 6d4a40217012 | M-4: sentence case
+2026-11-09 02:43 | P126_citations.py | P126-83 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-5
+2026-11-09 02:43 | P126_citations.py | P126-84 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-5
+2026-11-09 02:43 | P126_citations.py | P126-85 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-5
+2026-11-09 02:43 | P126_citations.py | P126-86 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-5
+2026-11-09 02:43 | P126_citations.py | P126-87 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | M-5
+2026-11-09 02:43 | P126_citations.py | P126-88 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-6: en dash in conference name
+2026-11-09 02:43 | P126_citations.py | P126-89 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-6
+2026-11-09 02:43 | P126_citations.py | P126-90 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-6
+2026-11-09 02:43 | P126_citations.py | P126-91 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | M-6
+2026-11-09 02:43 | P126_citations.py | P126-92 | Chapter4_TRF_Model_v1.md | 1068ff81294e -> 351cefc9fc6a | M-6
+2026-11-09 02:43 | P126_citations.py | P126-93 | Chapter7_Conclusion_v1.md | f2b7a55a4b57 -> 9dfcec600055 | M-6
+2026-11-09 02:43 | P126_citations.py | P126-94 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-6
+2026-11-09 02:43 | P126_citations.py | P126-95 | Chapter1_Introduction_v2.md | 290db558fef9 -> 0cba91115e43 | M-6: em-dash separator after the title (not part of the title) becomes a comma
+2026-11-09 02:43 | P126_citations.py | P126-96 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-6: em-dash separator after the title (not part of the title) becomes a comma
+2026-11-09 02:43 | P126_citations.py | P126-97 | Chapter2_LitReview_v2_FINAL.md | 5dddc0d50ee8 -> 895ac9ccabd4 | M-6: em dash in bracketed note becomes a comma
+2026-11-09 02:43 | P128_aikebaier_followups.py | P128-01 | Chapter2_LitReview_v2_FINAL.md | 895ac9ccabd4 -> 876f72657146 | preprint, sufficiency only
+2026-11-09 02:43 | P128_aikebaier_followups.py | P128-02 | Chapter2_LitReview_v2_FINAL.md | 895ac9ccabd4 -> 876f72657146 | preprint, sufficiency only
+2026-11-09 02:43 | P128_aikebaier_followups.py | P128-03 | Chapter2_LitReview_v2_FINAL.md | 895ac9ccabd4 -> 876f72657146 | preprint, sufficiency only
+2026-11-09 02:43 | P128_aikebaier_followups.py | P128-04 | Chapter4_TRF_Model_v1.md | 351cefc9fc6a -> 0078008821f8 | v2 notion and direction
