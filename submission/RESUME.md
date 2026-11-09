@@ -33,7 +33,7 @@ Read this first if a session ends mid-task. Updated as each step finishes.
   - [x] sync audit (6 blunders, 8 stale) -> P125, P127, B-57; TRF R-38 (Appendix A, provenance, .zenodo.json ORCID/keywords)
   - [x] citation audit -> P126 (agent-built, 97 edits), P128 Aikebaier follow-ups, B-58 apa_key
   - [x] whipper round 1 (8 MUST) -> B-59 build + P129 source; committed 21817eb
-  - [ ] whipper round 2 -> scratchpad/whipper_round2.md; open: S2 note placement, S6 figure label size (needs re-layout), S10 App D quote, M7
+  - [x] whipper round 2 (3 MUST) -> P130, B-60; committed 9df2579. Open (minor): S6 figure label size needs Archify re-layout; S10 App D quote rule gaps; S13 check math in Word (t*, subscripts); uncaptioned appendix tables
   - [x] em dashes: none left outside cited titles and code
   - [ ] left for Tiger: citation I-2, I-9 (retrieval dates), I-11..I-14, M-2, M-3, M-7; Rak/TEHDAS pages; Springer check Martinez/Voss-Knude
   - [ ] Zenodo: decide 1.3.1 (needs Tiger's yes), discoverability metadata
