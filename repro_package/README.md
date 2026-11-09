@@ -21,7 +21,7 @@ The modules are byte-identical across the three folders and with the archived re
 
 | Form | Location |
 |---|---|
-| Source repository | https://github.com/Astheno-sphere/TRF |
+| Source repository | https://github.com/Astheno-sphere/TRF-thesis, branch `joao-base` |
 | Live demonstration | https://trfhimolde.streamlit.app/ |
 
 ## Quick start

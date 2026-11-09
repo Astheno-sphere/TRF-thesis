@@ -1,0 +1,124 @@
+% Pandoc template for the thesis PDF (xelatex). Built by handoff_tools/build_pdf.py.
+% Typography: Libertinus Serif / Sans / Math, IBM Plex Mono. Ink text, one quiet accent.
+\documentclass[11pt,a4paper,oneside,openany]{book}
+\usepackage[a4paper,inner=30mm,outer=25mm,top=28mm,bottom=30mm,headsep=9mm,footskip=13mm]{geometry}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{LibertinusSerif}[Path=fonts/, Extension=.otf,
+  UprightFont=*-Regular, ItalicFont=*-Italic, BoldFont=*-Semibold, BoldItalicFont=*-SemiboldItalic]
+\setsansfont{LibertinusSans}[Path=fonts/, Extension=.otf,
+  UprightFont=*-Regular, ItalicFont=*-Italic, BoldFont=*-Bold]
+\setmonofont{DejaVu Sans Mono}[Scale=0.76]
+\setmathfont{LibertinusMath-Regular.otf}[Path=fonts/]
+\newfontfamily\titlefont{LibertinusSans}[Path=fonts/, Extension=.otf, UprightFont=*-Regular, BoldFont=*-Bold]
+\usepackage[final,protrusion=true]{microtype}
+\usepackage{setspace}\setstretch{1.18}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.62em plus 0.15em minus 0.05em}
+\usepackage[dvipsnames,table]{xcolor}
+\definecolor{ink}{HTML}{1B1C20}
+\definecolor{ox}{HTML}{5E1C23}
+\definecolor{mute}{HTML}{6A6A70}
+\definecolor{hair}{HTML}{D9D3C7}
+\definecolor{codebg}{HTML}{F6F5F1}
+\definecolor{link}{HTML}{2C3E5C}
+\color{ink}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>0.82\textheight 0.82\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{booktabs,longtable,array,calc,multirow}
+\setlength{\LTpre}{0.6em}\setlength{\LTpost}{0.4em}
+\renewcommand{\arraystretch}{1.28}
+\setlength{\tabcolsep}{5pt}
+\AtBeginEnvironment{longtable}{\small\setstretch{1.05}}
+\setlength{\heavyrulewidth}{0.9pt}\setlength{\lightrulewidth}{0.45pt}
+\usepackage{etoolbox}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setlist{itemsep=0.25em, topsep=0.3em, parsep=0.1em, leftmargin=1.6em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0.15em}\setlength{\parskip}{0pt}}
+% quotations: a thin rule at the left, no fill
+\usepackage{mdframed}
+\renewenvironment{quote}{\begin{mdframed}[topline=false,bottomline=false,rightline=false,
+  linewidth=0.8pt,linecolor=ox!70,leftmargin=0.6em,rightmargin=1.2em,innerleftmargin=0.9em,
+  innertopmargin=0.15em,innerbottommargin=0.15em,skipabove=0.5em,skipbelow=0.5em]\small\setstretch{1.12}}{\end{mdframed}}
+% code: pandoc highlighting in fvextra, wrapped lines keep their indentation
+\usepackage{fvextra}
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},breaklines,breakanywhere,breaknonspaceingroup,
+  breakautoindent=true,breaksymbolleft={},breakindent=1.8em,fontsize=\footnotesize,baselinestretch=1.0}
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines,breakanywhere,breaksymbolleft={},
+  breakindent=1.8em,fontsize=\footnotesize,baselinestretch=1.0}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+\renewenvironment{Shaded}{\begin{tcolorbox}[breakable,enhanced,colback=codebg,colframe=codebg,
+  boxrule=0pt,arc=0pt,left=6pt,right=6pt,top=4pt,bottom=4pt,before skip=0.5em,after skip=0.8em,
+  borderline west={1.2pt}{0pt}{hair}]}{\end{tcolorbox}}
+% inline code a touch smaller, no box
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{{\small\oldtexttt{#1}}}
+% headings
+\usepackage[explicit]{titlesec}
+\newcommand{\chaptitle}[1]{\begin{minipage}{\linewidth}\raggedright\fontsize{21}{26}\selectfont #1\par\vspace{9pt}{\color{ox}\rule{3.2em}{1.1pt}}\end{minipage}}
+\titleformat{\chapter}[block]{\titlefont\bfseries\color{ink}}{}{0pt}{\chaptitle{#1}}
+\titlespacing*{\chapter}{0pt}{8mm}{11mm}
+\titleformat{\section}{\titlefont\bfseries\Large\raggedright}{}{0pt}{#1}
+\titlespacing*{\section}{0pt}{1.6em}{0.5em}
+\titleformat{\subsection}{\titlefont\bfseries\large\raggedright}{}{0pt}{#1}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.35em}
+\titleformat{\subsubsection}{\titlefont\bfseries\normalsize\raggedright}{}{0pt}{#1}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.25em}
+\setcounter{secnumdepth}{-\maxdimen}
+\setcounter{tocdepth}{1}
+% contents
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\titlefont\bfseries\fontsize{21}{26}\selectfont}
+\renewcommand{\cftloftitlefont}{\titlefont\bfseries\fontsize{21}{26}\selectfont}
+\renewcommand{\cftlottitlefont}{\titlefont\bfseries\fontsize{21}{26}\selectfont}
+\renewcommand{\cftchapfont}{\bfseries}\renewcommand{\cftchappagefont}{\bfseries}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforechapskip}{0.55em}
+\setlength{\cftsecindent}{1.4em}\setlength{\cftsecnumwidth}{0pt}
+\setlength{\cftfignumwidth}{0pt}\setlength{\cfttabnumwidth}{0pt}
+\setlength{\cftbeforefigskip}{0.35em}\setlength{\cftbeforetabskip}{0.35em}
+\renewcommand{\cftdotsep}{2.5}
+\cftsetpnumwidth{2.2em}\cftsetrmarg{3em}
+\setlength{\cftafterloftitleskip}{1.4em}\setlength{\cftafterlottitleskip}{1.4em}\setlength{\cftaftertoctitleskip}{1.4em}
+% captions: the label is part of the text ("Table 5.3."), set bold by the build
+\usepackage{caption}
+\captionsetup{labelformat=empty,labelsep=none,font={small,stretch=1.08},justification=raggedright,
+  singlelinecheck=false,skip=5pt}
+\captionsetup[table]{position=top}
+% running heads
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancyhead[L]{\footnotesize\color{mute}\nouppercase{\leftmark}}
+\fancyhead[R]{\footnotesize\color{mute}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}\renewcommand{\headrule}{{\color{hair}\hrule height\headrulewidth}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\footnotesize\color{mute}\thepage}\renewcommand{\headrulewidth}{0pt}}
+\usepackage{xurl}
+\usepackage[hidelinks=false,colorlinks=true,linkcolor=link,urlcolor=link,citecolor=link,
+  bookmarksnumbered=false,bookmarksopen=true,bookmarksopenlevel=1,pdfstartview=FitH,
+  pdftitle={$title$},pdfauthor={$author$},pdfsubject={MSc thesis, Høgskolen i Molde},
+  pdfkeywords={EHDS, GDPR Article 17, crypto-erasure, audit trail, retention}]{hyperref}
+\usepackage{bookmark}
+\usepackage{eso-pic,tikz}
+\raggedbottom
+\widowpenalty=10000 \clubpenalty=10000 \displaywidowpenalty=10000
+\emergencystretch=1.5em
+\begin{document}
+\frontmatter
+\pagestyle{empty}
+\input{titlepage.tex}
+\pagestyle{fancy}
+$body$
+\end{document}

@@ -6,8 +6,7 @@ Arshad Akhtar Abbasia · Supervisor: Prof. João Ferreira
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23819274.svg)](https://doi.org/10.5281/zenodo.23819274)
 [![Live demo](https://img.shields.io/badge/live%20demo-Streamlit-FF4B4B)](https://trfhimolde.streamlit.app/)
-[![Code](https://img.shields.io/badge/code-Astheno--sphere%2FTRF-181717?logo=github)](https://github.com/Astheno-sphere/TRF)
-[![Tests](https://github.com/Astheno-sphere/TRF/actions/workflows/tests.yml/badge.svg)](https://github.com/Astheno-sphere/TRF/actions/workflows/tests.yml)
+[![Code](https://img.shields.io/badge/code-demo__app%2F-181717?logo=github)](demo_app/)
 
 ![Figure 1.1. The two audit logs this thesis concerns and where the mechanism attaches](figures/fig1_1_system_map.png)
 
@@ -65,7 +64,7 @@ The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-rec
 ![Figure 5.1. The artefact's modules and data path](figures/fig5_1_trf_artefact.png)
 
 ```bash
-git clone https://github.com/Astheno-sphere/TRF && cd TRF
+git clone -b joao-base https://github.com/Astheno-sphere/TRF-thesis && cd TRF-thesis/demo_app
 pip install -r requirements.txt
 python3 trf_checker.py          # Semantics I: 95 violations across 90 of 200 records; Semantics II: 0
 python3 -m pytest -q tests/     # 56 checks: recorded runs, viewer pages, claim ledger, cross-check vs checker
@@ -110,6 +109,6 @@ Masteroppgave ved Høgskolen i Molde om hvordan revisjonslogger for grensekrysse
   version = {1.3.0},
   doi    = {10.5281/zenodo.23989242},
   note   = {All versions: 10.5281/zenodo.23819274},
-  url    = {https://github.com/Astheno-sphere/TRF}
+  url    = {https://github.com/Astheno-sphere/TRF-thesis/tree/joao-base/demo_app}
 }
 ```

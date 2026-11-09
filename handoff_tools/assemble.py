@@ -54,7 +54,7 @@ def submission():
     parts = ["# Verifiable Crypto-Erasure for Cross-Border Health Data Audit Trails under the European Health Data Space\n",
              "Arshad Akhtar Abbasia, MSc Sustainable Energy Logistics, Høgskolen i Molde\n",
              "Supervisor: Prof. João Ferreira.\n",
-             "Artefact: https://github.com/Astheno-sphere/TRF\n",
+             "Artefact: https://github.com/Astheno-sphere/TRF-thesis (branch joao-base)\n",
              "Demonstration: https://trfhimolde.streamlit.app/\n", "\n---\n",
              open("Front_Matter_v1.md").read(), "\n\\pagebreak\n\n---\n"]
     for f in CHS:

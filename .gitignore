@@ -5,3 +5,4 @@ __pycache__/
 synthea_run/
 synthea.jar
 *.docx.tmp
+thesis_pdf/build/

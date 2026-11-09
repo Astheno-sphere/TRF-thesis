@@ -31,7 +31,7 @@ The contribution is bounded: no novel cryptographic primitive or formal method, 
 
 *Keywords:* European Health Data Space; GDPR Article 17; cryptographic erasure; audit trail; data retention; design science research; Secure Processing Environment; MyHealth@EU; information logistics; Norway
 
-Artefact: https://github.com/Astheno-sphere/TRF (archived release 1.3.0: https://doi.org/10.5281/zenodo.23989242; all versions: https://doi.org/10.5281/zenodo.23819274). Demonstration: https://trfhimolde.streamlit.app/
+Artefact: https://github.com/Astheno-sphere/TRF-thesis, branch `joao-base`, code in `demo_app/` (archived release 1.3.0: https://doi.org/10.5281/zenodo.23989242; all versions: https://doi.org/10.5281/zenodo.23819274). Demonstration: https://trfhimolde.streamlit.app/
 
 ---
 

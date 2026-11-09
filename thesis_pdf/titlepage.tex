@@ -1,0 +1,22 @@
+% HiMolde master's thesis front page, after document_template-masters_thesis.dotx:
+% circle mark top left, "Master's degree thesis", subject code, title, author, place and date, wordmark.
+\begin{titlepage}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,inner sep=0] at ([xshift=4mm,yshift=-8mm]current page.north west)
+    {\includegraphics[width=72mm]{assets/himolde_circle.png}};
+  \node[anchor=north west,inner sep=0,text width=150mm,align=left] at ([xshift=25mm,yshift=-112mm]current page.north west)
+    {\titlefont\bfseries\fontsize{30}{36}\selectfont Master's degree thesis};
+  \node[anchor=north west,inner sep=0,text width=150mm,align=left] at ([xshift=25mm,yshift=-140mm]current page.north west)
+    {\titlefont\bfseries\fontsize{14}{18}\selectfont LOG953 Sustainable Energy Logistics};
+  \node[anchor=north west,inner sep=0,text width=140mm,align=left] at ([xshift=25mm,yshift=-162mm]current page.north west)
+    {\titlefont\bfseries\fontsize{17}{23}\selectfont Verifiable Crypto-Erasure for Cross-Border\\Health Data Audit Trails under the\\European Health Data Space\par
+     \vspace{5mm}\normalfont\titlefont\fontsize{11.5}{15}\selectfont A Design Science Study of the Tri-Lateral Retention Feasibility\\Problem in the Norwegian Implementation Context};
+  \node[anchor=north west,inner sep=0,text width=100mm,align=left] at ([xshift=25mm,yshift=-232mm]current page.north west)
+    {\titlefont\fontsize{15}{19}\selectfont Arshad Akhtar Abbasia\par\vspace{1.5mm}
+     \fontsize{10.5}{13}\selectfont Supervisor: Prof.\ João Ferreira};
+  \node[anchor=north west,inner sep=0,text width=100mm,align=left] at ([xshift=25mm,yshift=-262mm]current page.north west)
+    {\titlefont\fontsize{13}{16}\selectfont Molde, November 2026};
+  \node[anchor=south east,inner sep=0] at ([xshift=-22mm,yshift=26mm]current page.south east)
+    {\includegraphics[width=55mm]{assets/himolde_wordmark.jpeg}};
+\end{tikzpicture}
+\end{titlepage}

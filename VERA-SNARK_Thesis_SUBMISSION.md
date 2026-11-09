@@ -4,7 +4,7 @@ Arshad Akhtar Abbasia, MSc Sustainable Energy Logistics, Høgskolen i Molde
 
 Supervisor: Prof. João Ferreira.
 
-Artefact: https://github.com/Astheno-sphere/TRF
+Artefact: https://github.com/Astheno-sphere/TRF-thesis (branch joao-base)
 
 Demonstration: https://trfhimolde.streamlit.app/
 
@@ -44,7 +44,7 @@ The contribution is bounded: no novel cryptographic primitive or formal method, 
 
 *Keywords:* European Health Data Space; GDPR Article 17; cryptographic erasure; audit trail; data retention; design science research; Secure Processing Environment; MyHealth@EU; information logistics; Norway
 
-Artefact: https://github.com/Astheno-sphere/TRF (archived release 1.3.0: https://doi.org/10.5281/zenodo.23989242; all versions: https://doi.org/10.5281/zenodo.23819274). Demonstration: https://trfhimolde.streamlit.app/
+Artefact: https://github.com/Astheno-sphere/TRF-thesis, branch `joao-base`, code in `demo_app/` (archived release 1.3.0: https://doi.org/10.5281/zenodo.23989242; all versions: https://doi.org/10.5281/zenodo.23819274). Demonstration: https://trfhimolde.streamlit.app/
 
 ---
 
@@ -1829,7 +1829,7 @@ The artefact is publicly available in two forms.
 | Form | Location |
 |---|---|
 | Archived release (cite this) | Version 1.3.0, Zenodo, https://doi.org/10.5281/zenodo.23989242 (this version) and https://doi.org/10.5281/zenodo.23819274 (all versions, resolving to the latest); versions 1.0.1 to 1.2.0 produce the same figures |
-| Source repository | https://github.com/Astheno-sphere/TRF |
+| Source repository | https://github.com/Astheno-sphere/TRF-thesis, branch `joao-base` (code in `demo_app/`, reproduction package in `repro_package/`) |
 | Live demonstration | https://trfhimolde.streamlit.app/ |
 
 The archived release is the citable artefact: version 1.3.0 of the repository, deposited on Zenodo, is the exact code whose outputs this thesis reports and the viewer described below; its result modules produce the same figures as versions 1.0.1 to 1.2.0 and differ from them in the corrections of the code review (an audit log per population, fuller exit codes, two reworded output lines), recorded in `CODE_REVIEW.md` of the thesis repository, whereas the repository's default branch may change after submission. It contains eight Python files, the checker and seven further modules as Chapter 5, Section 5.2 counts them, the viewer among them split across `app.py` and `ui.py`, together with a test suite run on every change, the eight-bundle Synthea subset the realism layer reads, a recorded console run for every module (`docs/expected_*.txt`), and an earlier copy of this appendix; the current copy is the one in this thesis and on the repository's default branch. The live application is a convenience for readers who prefer not to clone and run: it executes the same unmodified source, and its Thesis run page asserts that the run reproduces the figures reported in Chapter 5, displaying a failure notice, with the expected and the computed values, beside the results if it does not.
@@ -3074,7 +3074,7 @@ if __name__ == "__main__":
 
 ## A.14 The demonstration viewer: `app.py` and `ui.py`
 
-Not reproduced here, because the viewer is never a source of results: every figure it displays comes from executing one of the modules listed in this appendix, unmodified. `app.py` (1124 lines) holds the pages and the self-checks; `ui.py` (217 lines) holds presentation: the theme and navigation, the record life strip, whose Semantics II row it computes from $V^{II}$, and the embedding of the two Archify diagrams. The Thesis run page asserts the reported figures and shows a failure notice, with the expected and the computed values, beside the results if the run disagrees with Chapter 5. Both files are in the repository (https://github.com/Astheno-sphere/TRF).
+Not reproduced here, because the viewer is never a source of results: every figure it displays comes from executing one of the modules listed in this appendix, unmodified. `app.py` (1124 lines) holds the pages and the self-checks; `ui.py` (217 lines) holds presentation: the theme and navigation, the record life strip, whose Semantics II row it computes from $V^{II}$, and the embedding of the two Archify diagrams. The Thesis run page asserts the reported figures and shows a failure notice, with the expected and the computed values, beside the results if the run disagrees with Chapter 5. Both files are in the repository (https://github.com/Astheno-sphere/TRF-thesis, `demo_app/`).
 
 ## A.15 Source listing: `crypto_envelope.py`
 

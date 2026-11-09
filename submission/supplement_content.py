@@ -16,8 +16,8 @@ INDEX = [
      "Release 1.3.0, the code Appendix A reproduces. All versions: doi.org/10.5281/zenodo.23819274."),
     ("This supplement", "Five parts, listed on the cover",
      "Material that supports the examination without being part of the examined text."),
-    ("Repositories", "Astheno-sphere/TRF and Astheno-sphere/TRF-thesis",
-     "Full history, change trail and inspector. Public on GitHub."),
+    ("Repository", "github.com/Astheno-sphere/TRF-thesis, branch joao-base",
+     "Thesis, code (demo_app/), reproduction package, full history, change trail and inspector."),
 ]
 
 PARTS = [
@@ -29,14 +29,14 @@ PARTS = [
 ]
 
 REPRO_STEPS = [
-    ("Get the code", "git clone https://github.com/Astheno-sphere/TRF && cd TRF",
+    ("Get the code", "git clone -b joao-base https://github.com/Astheno-sphere/TRF-thesis && cd TRF-thesis/demo_app",
      "or download release 1.3.0 from Zenodo"),
     ("Run the checker", "python3 trf_checker.py",
      "standard library only, under a second"),
     ("Run the tests", "pip install -r requirements.txt pytest && python3 -m pytest -q tests/",
      "56 passed"),
-    ("Run everything", "cd TRF-thesis/repro_package && ./run_all.sh",
-     "after git clone https://github.com/Astheno-sphere/TRF-thesis; seven diffs, all empty"),
+    ("Run everything", "cd ../repro_package && ./run_all.sh",
+     "seven diffs, all empty"),
 ]
 
 REPRO_EXPECT = [
