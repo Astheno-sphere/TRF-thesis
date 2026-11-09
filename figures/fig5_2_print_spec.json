@@ -1,0 +1,825 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+  "config": {
+    "axis": {
+      "labelColor": "#1B1C20",
+      "labelFont": "IBM Plex Sans, Helvetica, Arial, sans-serif",
+      "titleColor": "#1B1C20",
+      "titleFont": "IBM Plex Sans, Helvetica, Arial, sans-serif"
+    },
+    "legend": {
+      "labelFont": "IBM Plex Sans, Helvetica, Arial, sans-serif",
+      "labelFontSize": 12
+    },
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300,
+      "stroke": null
+    }
+  },
+  "height": 230,
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 0,
+            "t2": 1
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 0,
+            "t2": 1
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 0,
+            "t2": 1
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 0,
+            "t2": 1
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 0,
+            "t2": 1
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 1,
+            "t2": 2
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 1,
+            "t2": 2
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 1,
+            "t2": 2
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 1,
+            "t2": 2
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 1,
+            "t2": 2
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 2,
+            "t2": 3
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 2,
+            "t2": 3
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 2,
+            "t2": 3
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 2,
+            "t2": 3
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 2,
+            "t2": 3
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 3,
+            "t2": 4
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 3,
+            "t2": 4
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 3,
+            "t2": 4
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 3,
+            "t2": 4
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 3,
+            "t2": 4
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 4,
+            "t2": 5
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 4,
+            "t2": 5
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 4,
+            "t2": 5
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 4,
+            "t2": 5
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 4,
+            "t2": 5
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 5,
+            "t2": 6
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 5,
+            "t2": 6
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 5,
+            "t2": 6
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 5,
+            "t2": 6
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 5,
+            "t2": 6
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 6,
+            "t2": 7
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 6,
+            "t2": 7
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 6,
+            "t2": 7
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "not required",
+            "t": 6,
+            "t2": 7
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 6,
+            "t2": 7
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 7,
+            "t2": 8
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 7,
+            "t2": 8
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 7,
+            "t2": 8
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 7,
+            "t2": 8
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 7,
+            "t2": 8
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 8,
+            "t2": 9
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 8,
+            "t2": 9
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 8,
+            "t2": 9
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 8,
+            "t2": 9
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 8,
+            "t2": 9
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 9,
+            "t2": 10
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 9,
+            "t2": 10
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 9,
+            "t2": 10
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 9,
+            "t2": 10
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 9,
+            "t2": 10
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 10,
+            "t2": 11
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 10,
+            "t2": 11
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 10,
+            "t2": 11
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 10,
+            "t2": 11
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 10,
+            "t2": 11
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 11,
+            "t2": 12
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 11,
+            "t2": 12
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 11,
+            "t2": 12
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 11,
+            "t2": 12
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 11,
+            "t2": 12
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 12,
+            "t2": 13
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 12,
+            "t2": 13
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 12,
+            "t2": 13
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 12,
+            "t2": 13
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 12,
+            "t2": 13
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 13,
+            "t2": 14
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 13,
+            "t2": 14
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 13,
+            "t2": 14
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 13,
+            "t2": 14
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 13,
+            "t2": 14
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 14,
+            "t2": 15
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 14,
+            "t2": 15
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 14,
+            "t2": 15
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 14,
+            "t2": 15
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 14,
+            "t2": 15
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 15,
+            "t2": 16
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "not required",
+            "t": 15,
+            "t2": 16
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "readable",
+            "t": 15,
+            "t2": 16
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "readable",
+            "t": 15,
+            "t2": 16
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 15,
+            "t2": 16
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 16,
+            "t2": 17
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 16,
+            "t2": 17
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "contradiction",
+            "t": 16,
+            "t2": 17
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 16,
+            "t2": 17
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 16,
+            "t2": 17
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 17,
+            "t2": 18
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 17,
+            "t2": 18
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "contradiction",
+            "t": 17,
+            "t2": 18
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 17,
+            "t2": 18
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 17,
+            "t2": 18
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 18,
+            "t2": 19
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 18,
+            "t2": 19
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "contradiction",
+            "t": 18,
+            "t2": 19
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 18,
+            "t2": 19
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 18,
+            "t2": 19
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "required",
+            "t": 19,
+            "t2": 20
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 19,
+            "t2": 20
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "contradiction",
+            "t": 19,
+            "t2": 20
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 19,
+            "t2": 20
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "verifiable",
+            "t": 19,
+            "t2": 20
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 20,
+            "t2": 21
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 20,
+            "t2": 21
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 20,
+            "t2": 21
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 20,
+            "t2": 21
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 20,
+            "t2": 21
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 21,
+            "t2": 22
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 21,
+            "t2": 22
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 21,
+            "t2": 22
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 21,
+            "t2": 22
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 21,
+            "t2": 22
+          },
+          {
+            "row": "C1 floor: must stay verifiable",
+            "state": "not required",
+            "t": 22,
+            "t2": 23
+          },
+          {
+            "row": "C2 / C3: payload must be gone",
+            "state": "must be gone",
+            "t": 22,
+            "t2": 23
+          },
+          {
+            "row": "Semantics I: verifiable = readable",
+            "state": "not required",
+            "t": 22,
+            "t2": 23
+          },
+          {
+            "row": "Semantics II: payload readable",
+            "state": "destroyed, entry logged",
+            "t": 22,
+            "t2": 23
+          },
+          {
+            "row": "Semantics II: record verifiable",
+            "state": "not required",
+            "t": 22,
+            "t2": 23
+          }
+        ]
+      },
+      "encoding": {
+        "color": {
+          "field": "state",
+          "legend": {
+            "columns": 4,
+            "orient": "bottom",
+            "title": null
+          },
+          "scale": {
+            "domain": [
+              "required",
+              "must be gone",
+              "contradiction",
+              "readable",
+              "destroyed, entry logged",
+              "verifiable",
+              "not required",
+              "fails its check"
+            ],
+            "range": [
+              "#B49A62",
+              "#7D7499",
+              "#94505A",
+              "#A9C8C0",
+              "#5A6F7C",
+              "#4E7C72",
+              "#DCE3E1",
+              "#A0745A"
+            ]
+          },
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "row",
+            "title": "row",
+            "type": "nominal"
+          },
+          {
+            "field": "t",
+            "title": "month",
+            "type": "quantitative"
+          },
+          {
+            "field": "state",
+            "title": "state",
+            "type": "nominal"
+          }
+        ],
+        "x": {
+          "field": "t",
+          "scale": {
+            "domain": [
+              0,
+              23
+            ]
+          },
+          "title": "month",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "t2"
+        },
+        "y": {
+          "axis": {
+            "labelFontSize": 12,
+            "labelLimit": 260
+          },
+          "field": "row",
+          "sort": [
+            "C1 floor: must stay verifiable",
+            "C2 / C3: payload must be gone",
+            "Semantics I: verifiable = readable",
+            "Semantics II: payload readable",
+            "Semantics II: record verifiable"
+          ],
+          "title": null,
+          "type": "nominal"
+        }
+      },
+      "mark": {
+        "stroke": "white",
+        "strokeWidth": 0.6,
+        "type": "rect"
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "t": 16.5
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "t",
+          "type": "quantitative"
+        }
+      },
+      "mark": {
+        "color": "#1B1C20",
+        "strokeWidth": 2,
+        "type": "rule"
+      }
+    }
+  ],
+  "width": 900
+}

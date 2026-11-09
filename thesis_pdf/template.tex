@@ -9,7 +9,7 @@
   UprightFont=*-Regular, ItalicFont=*-Italic, BoldFont=*-Semibold, BoldItalicFont=*-SemiboldItalic]
 \setsansfont{LibertinusSans}[Path=fonts/, Extension=.otf,
   UprightFont=*-Regular, ItalicFont=*-Italic, BoldFont=*-Bold]
-\setmonofont{DejaVu Sans Mono}[Scale=0.76]
+\setmonofont{DejaVu Sans Mono}[Scale=0.76,Ligatures=ResetAll]
 \setmathfont{LibertinusMath-Regular.otf}[Path=fonts/]
 \newfontfamily\titlefont{LibertinusSans}[Path=fonts/, Extension=.otf, UprightFont=*-Regular, BoldFont=*-Bold]
 \usepackage[final,protrusion=true]{microtype}
@@ -40,6 +40,7 @@
 \setlength{\heavyrulewidth}{0.9pt}\setlength{\lightrulewidth}{0.45pt}
 \usepackage{etoolbox}
 \usepackage{ragged2e}
+\usepackage{needspace}
 \usepackage{enumitem}
 \setlist{itemsep=0.25em, topsep=0.3em, parsep=0.1em, leftmargin=1.6em}
 \providecommand{\tightlist}{\setlength{\itemsep}{0.15em}\setlength{\parskip}{0pt}}
@@ -94,7 +95,7 @@ $endif$
 \setlength{\cftafterloftitleskip}{1.4em}\setlength{\cftafterlottitleskip}{1.4em}\setlength{\cftaftertoctitleskip}{1.4em}
 % captions: the label is part of the text ("Table 5.3."), set bold by the build
 \usepackage{caption}
-\captionsetup{labelformat=empty,labelsep=none,font={small,stretch=1.08},justification=raggedright,
+\captionsetup{labelformat=empty,labelsep=none,listformat=empty,font={small,stretch=1.08},justification=raggedright,
   singlelinecheck=false,skip=5pt}
 \captionsetup[table]{position=top}
 % running heads

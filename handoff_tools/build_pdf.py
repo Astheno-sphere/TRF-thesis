@@ -28,7 +28,7 @@ def col_widths(rows):
             t = re.sub(r"[*`$\\]", "", c).strip()
             if not t:
                 continue
-            maxw[j] = max(maxw[j], max(len(w) for w in re.split(r"[\s/]+", t)))
+            maxw[j] = max(maxw[j], max(len(w) for w in re.split(r"[\s/_]+", t)))
             mass[j] += min(len(t), 160)
     floor = [min(m + 2, 40) for m in maxw]
     total = 100.0
@@ -94,10 +94,12 @@ def preprocess(md):
             out += ["", "```{=latex}", "\\mainmatter", "```", ""]
         if s == "# References":
             out += [l, "", "```{=latex}", "\\begingroup\\small\\setstretch{1.08}\\setlength{\\parindent}{-1.5em}"
-                    "\\setlength{\\leftskip}{1.5em}\\setlength{\\parskip}{0.45em}\\RaggedRight", "```", ""]
+                    "\\setlength{\\leftskip}{1.5em}\\setlength{\\parskip}{0.45em}\\RaggedRight\\setlength{\\RaggedRightParindent}{-1.5em}", "```", ""]
             i += 1
             while i < len(lines) and not lines[i].startswith("# "):
-                out.append(autolink(lines[i])); i += 1
+                if lines[i].strip() not in ("\\pagebreak", "---"):
+                    out.append(autolink(lines[i]))
+                i += 1
             out += ["", "```{=latex}", "\\endgroup", "```", ""]
             continue
         # table caption line -> pandoc caption (before the table)
@@ -187,9 +189,28 @@ def postprocess(tex):
     tex = re.sub(r"\\toprule\\noalign\{\}\n.*?\\midrule", bold_head, tex, flags=re.S)
     tex = re.sub(r"\\toprule\n.*?\\midrule", bold_head, tex, flags=re.S)
     # cross-references in running text become links (not inside code, headings, captions)
-    ref = re.compile(r"(?<![\w{])((?:Tables?|Figures?) ([A-Z0-9]+\.\d+[a-z]?)|Sections? (\d+\.\d+|[A-D]\.\d+)|§ ?(\d+\.\d+)|Chapter (\d)(?![\d.]\d)|Appendix ([A-D])(?![\w.]\d))")
+    # anchors for propositions and corollaries at their statements
+    for kind, pat in (("prop", r"\\emph\{Proposition (\d)(?: |\.)"), ("cor", r"\\emph\{Corollary (\d\.\d)")):
+        seen = set()
+        def anchor(m):
+            k = m.group(1)
+            if k in seen:
+                return m.group(0)
+            seen.add(k); labels[("Proposition " if kind == "prop" else "Corollary ") + k] = "%s:%s" % (kind, k)
+            return "\\phantomsection\\label{%s:%s}" % (kind, k) + m.group(0)
+        tex = re.sub(pat, anchor, tex)
+    ref = re.compile(r"(?<![\w])((?:Tables?|Figures?) ([A-Z0-9]+\.\d+[a-z]?)|Sections? (\d+\.\d+|[A-D]\.\d+)|§ ?(\d+\.\d+)|Chapter (\d)(?![\d.]\d)|Appendix ([A-D])(?![\w.]\d)|Propositions? (\d)(?!\d)|Corollary (\d\.\d))")
+    CITED = re.compile(r"(\d{4}[a-z]?|D\d+\.\d+|n\.d\.(?:-[a-z])?|Annex \d+|p\. ?\d+|OPR-\d+),\s*$")
     def link(m):
         txt = m.group(0)
+        if CITED.search(m.string[max(0, m.start() - 24):m.start()]):
+            return txt                              # a table or section of a cited document, not of this thesis
+        if m.group(7):
+            key = "Proposition " + m.group(7)
+            return "\\hyperref[%s]{%s}" % (labels[key], txt) if key in labels else txt
+        if m.group(8):
+            key = "Corollary " + m.group(8)
+            return "\\hyperref[%s]{%s}" % (labels[key], txt) if key in labels else txt
         if m.group(2):
             key = ("Figure " if txt.startswith("Fig") else "Table ") + m.group(2)
         elif m.group(3):
@@ -216,6 +237,7 @@ def postprocess(tex):
     # unnumbered front-matter chapters: pandoc writes \chapter*{..}\addcontentsline; give them a running head
     tex = re.sub(r"(\\chapter\*\{([^}]+)\}(?:\\label\{[^}]+\})?)", lambda m: m.group(1) + "\\markboth{%s}{}" % m.group(2), tex)
     tex = re.sub(r"∎", r"\\ensuremath{∎}", tex)
+    tex = re.sub(r"(\\texttt\{[^{}]*\})", lambda m: m.group(1).replace("\\_", "\\_\\allowbreak{}").replace("-", "-\\allowbreak{}"), tex)
     tex = re.sub(r"\\includegraphics\[width=[\d.]+in(,height=\\textheight)?\]", r"\\includegraphics[width=\\linewidth]", tex)
     def sideways(m):
         f = m.group(0)
@@ -232,10 +254,21 @@ def postprocess(tex):
         def row(r):
             cells = re.split(r"(?<!\\)&", r.group(1))
             if len(cells) == ncol and cells[0].strip() and all(not c.strip() for c in cells[1:]):
-                return "\\multicolumn{%d}{@{}l}{\\rule{0pt}{1.1em}\\small\\itshape %s} \\\\" % (ncol, cells[0].strip())
+                lab = re.sub(r"\\(?:textbf|emph)\{", "", cells[0].strip()); lab = lab.rstrip("}") if lab.count("}") > lab.count("{") else lab
+                while lab.count("}") > lab.count("{"): lab = lab[:-1]
+                return "\\multicolumn{%d}{@{}l}{\\rule{0pt}{1.2em}\\itshape %s} \\\\*" % (ncol, lab)
             return r.group(0)
-        return re.sub(r"^(.*?) \\\\$", row, body, flags=re.M)
+        body = re.sub(r"^(.*?) \\\\$", row, body, flags=re.M)
+        if ncol >= 6:
+            body = "\\begingroup\\footnotesize\\hyphenpenalty=5000" + body + "\\endgroup"
+        return "\\par\\penalty-100\\vspace{0pt}" + body
     tex = re.sub(r"\\begin\{longtable\}\[\]\{@\{\}(.*?)@\{\}\}.*?\\end\{longtable\}", bands, tex, flags=re.S)
+    tex = re.sub(r"\n\n([^\n\\][^\n]{0,90})\n\n(\\par\\penalty-100)", r"\n\n\\needspace{12\\baselineskip}\1\\nopagebreak\n\n\2", tex)
+    # Chapter 1 would end with three lines on a page of their own: let its last page run three lines long
+    k = tex.find("tests the model on a statute outside health")
+    if k > 0:
+        par = tex.rfind("\n\n", 0, k)
+        tex = tex[:par] + "\n\n\\enlargethispage{3\\baselineskip}" + tex[par + 2:]
     return tex, labels, n
 
 

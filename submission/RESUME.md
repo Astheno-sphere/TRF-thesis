@@ -38,3 +38,11 @@ Read this first if a session ends mid-task. Updated as each step finishes.
   - [ ] left for Tiger: citation I-2, I-9 (retrieval dates), I-11..I-14, M-2, M-3, M-7; Rak/TEHDAS pages; Springer check Martinez/Voss-Knude
   - [ ] Zenodo: decide 1.3.1 (needs Tiger's yes), discoverability metadata
   - [ ] deck
+
+## 9 Nov evening: LaTeX PDF and one repository
+- [x] thesis PDF via xelatex: handoff_tools/build_pdf.py + thesis_pdf/ (B-62); docx kept as secondary
+- [x] links: TRF-thesis joao-base everywhere (P131, P132, README, supplement, BibTeX)
+- [x] Streamlit: new app trf-thesis-himolde.streamlit.app from TRF-thesis/joao-base/demo_app/app.py (Python 3.12), deployed
+- [ ] verify new app loads; ask Tiger: delete old trf app, rename new to trfhimolde (keeps thesis URL)
+- [ ] whipper round 3 on PDF -> scratchpad/whipper_round3.md; fix
+- [ ] send Tiger final PDF + package; package = thesis PDF, supplement PDF, Zenodo DOI, Streamlit link, GitHub link
