@@ -237,6 +237,14 @@ def fix_styles(styles):
     set_rpr(style("Normal"), '<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman"/><w:color w:val="%s"/><w:sz w:val="24"/><w:szCs w:val="24"/><w:lang w:val="en-GB"/>' % INK)
     for sid in ("BodyText", "FirstParagraph"):
         set_ppr(style(sid), '<w:widowControl/><w:spacing w:before="0" w:after="160" w:line="360" w:lineRule="auto"/><w:jc w:val="both"/>')
+    for sid, base, name in (("TOCHeading", "Heading1", "TOC Heading"), ("TOCHeading2", "Heading2", "TOC Heading 2")):
+        st_ = style(sid); st_.find("w:name", NS).set(q("val"), name)
+        src = style(base)
+        for tag in ("pPr", "rPr"):
+            for o in st_.findall("w:" + tag, NS): st_.remove(o)
+            if src.find("w:" + tag, NS) is not None: st_.append(copy.deepcopy(src.find("w:" + tag, NS)))
+        ol = st_.find("w:pPr/w:outlineLvl", NS)
+        if ol is not None: ol.set(q("val"), "9")
     # tight lists in the body keep the body size; table cells get their own smaller style
     set_ppr(style("Compact"), '<w:spacing w:before="40" w:after="80" w:line="360" w:lineRule="auto"/><w:jc w:val="left"/>')
     tt = style("TableText"); tt.find("w:name", NS).set(q("val"), "Table Text")
@@ -310,10 +318,14 @@ def style_tables(body):
         tw = el("tblW", w=TEXT_W, type="dxa"); tp.append(tw)
         tp.append(el("jc", val="center"))
         b = sub(tp, "tblBorders")
-        for side, sz in (("top", 12), ("left", 4), ("bottom", 12), ("right", 4), ("insideH", 4), ("insideV", 4)):
-            sub(b, side, val="single", sz=sz, space=0, color=RULE if sz == 4 else INK)
+        for side, sz, col in (("top", 12, INK), ("left", 0, None), ("bottom", 12, INK), ("right", 0, None),
+                              ("insideH", 2, "E6E0D4"), ("insideV", 0, None)):
+            if sz:
+                sub(b, side, val="single", sz=sz, space=0, color=col)
+            else:
+                sub(b, side, val="nil")
         m = sub(tp, "tblCellMar")
-        for side, v in (("top", 50), ("left", 100), ("bottom", 50), ("right", 100)):
+        for side, v in (("top", 70), ("left", 110), ("bottom", 70), ("right", 110)):
             sub(m, side, w=v, type="dxa")
         # tblLook must stay last-ish: move it to the end for schema order robustness
         look = tp.find("w:tblLook", NS)
@@ -681,18 +693,25 @@ def page_map(docx, toc, tables):
 def contents_block(toc, tables):
     """Static, clickable contents with PAGEREF page numbers (Word: F9 or on open)."""
     ps = []
-    h = para("Heading1"); h.append(run("Contents")); ps.append(h)
-    for lvl, txt, name in toc:
+    h = para("TOCHeading"); h.append(run("Contents")); ps.append(h)
+    for k, (lvl, txt, name) in enumerate(toc):
         p = para("TOC%d" % lvl)
+        if k == 0:                                   # a real TOC field: Word can update it (References > Update Table)
+            r = sub(p, "r"); sub(r, "fldChar", fldCharType="begin")
+            r = sub(p, "r"); t = sub(r, "instrText"); t.text = ' TOC \\o "1-2" \\h \\z '
+            t.set("{http://www.w3.org/XML/1998/namespace}space", "preserve")
+            r = sub(p, "r"); sub(r, "fldChar", fldCharType="separate")
         hl = sub(p, "hyperlink", anchor=name, history=1)
         hl.append(run(txt))
         r = sub(hl, "r"); sub(r, "tab")
         fld(hl, "PAGEREF %s \\h" % name, PAGES.get(name, "#"))
+        if k == len(toc) - 1:
+            r = sub(p, "r"); sub(r, "fldChar", fldCharType="end")
         ps.append(p)
     for title, items in (("List of Figures", FIGS), ("List of Tables", tables)):
         if not items:
             continue
-        h = para("Heading1" if title == "List of Figures" else "Heading2"); h.append(run(title)); ps.append(h)
+        h = para("TOCHeading" if title == "List of Figures" else "TOCHeading2"); h.append(run(title)); ps.append(h)
         for name, txt in items:
             p = para("TOC2")
             ind = p.find("w:pPr/w:ind", NS)
@@ -898,6 +917,9 @@ def main():
         sroot.append(el("updateFields", val="true"))
     for o in sroot.findall("w:autoHyphenation", NS): sroot.remove(o)
     sroot.append(el("autoHyphenation", val="true"))
+    for o in sroot.findall("w:compat", NS): sroot.remove(o)
+    tset = etree.fromstring(zipfile.ZipFile(TEMPLATE).read("word/settings.xml"))
+    sroot.append(copy.deepcopy(tset.find("w:compat", NS)))
     reorder(sroot, SETTINGS_ORDER)
     st = etree.tostring(sroot, xml_declaration=True, encoding="UTF-8", standalone=True).decode()
     if False:
