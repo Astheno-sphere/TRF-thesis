@@ -63,6 +63,8 @@ This thesis makes four contributions, each stated at the level it can be defende
 
 *What is not claimed.* No novel cryptographic primitive or construction. No novel formal method. No first-ever framework for anything. No deployed system, no performance result, no connection to any National Contact Point. No proof that key destruction occurred, as distinct from an attestation that it did. No authority that key destruction discharges the erasure obligation for copies that cannot be deleted at once. No empirical estimate of how often the conflict arises in practice. No regulatory authority for either of the two principal interpretive steps the argument depends upon, both of which are identified in Chapter 6 and proposed for resolution in Chapter 7, or for the four subsidiary premises listed in Chapter 3, Section 3.7.
 
+*A note on the project name.* This work has been presented in preliminary form under the name VERA-SNARK, which originates in an earlier design iteration that envisaged zero-knowledge succinct arguments as the enforcement machinery. The design-science process showed that the audit-trail retention problem requires no such machinery, and the mechanism specified here contains none. The name is retained for continuity with that earlier presentation, and the evolution is discussed in Chapter 1, Section 1.6. Chapter 7, Section 7.5 identifies the distinct problem for which zero-knowledge arguments do become necessary.
+
 ---
 
 ## Declaration of Originality
@@ -140,8 +142,6 @@ Two declarations are made explicitly.
 | TEHDAS2 | Towards European Health Data Space, Joint Action 2 |
 | TRF | Tri-Lateral Retention Feasibility (Model) |
 | zk-SNARK | Zero-Knowledge Succinct Non-Interactive Argument of Knowledge |
-
-*A note on the project name.* This work has been presented in preliminary form under the name VERA-SNARK, which originates in an earlier design iteration that envisaged zero-knowledge succinct arguments as the enforcement machinery. The design-science process showed that the audit-trail retention problem requires no such machinery, and the mechanism specified here contains none. The name is retained for continuity with that earlier presentation, and the evolution is discussed in Chapter 1, Section 1.6. Chapter 7, Section 7.5 identifies the distinct problem for which zero-knowledge arguments do become necessary.
 
 ---
 

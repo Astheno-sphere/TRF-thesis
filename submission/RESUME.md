@@ -30,9 +30,11 @@ Read this first if a session ends mid-task. Updated as each step finishes.
         matter + arabic from Ch1, contents after Sammendrag, list of figures, figure labels/bookmarks/links,
         TableText style for cells, wide tables 9 pt; Fig 5.2 re-rendered 4x from ui.life_strip (record 100)
   - [x] libreoffice-math installed in container (needed to see equations in renders)
-  - [ ] sync audit agent -> scratchpad/sync_audit.md ; citation agent -> scratchpad/citation_audit.md
-  - [ ] whipper round 1 -> scratchpad/whipper_round1.md ; fix; re-render; round 2
-  - [ ] patches for blunders/stale facts (thesis + supplement + READMEs + TRF), trail_check, commit, push
-  - [ ] em dashes: 77 in assembled md (refs/code keep); decide targeted patch for prose/tables
+  - [x] sync audit (6 blunders, 8 stale) -> P125, P127, B-57; TRF R-38 (Appendix A, provenance, .zenodo.json ORCID/keywords)
+  - [x] citation audit -> P126 (agent-built, 97 edits), P128 Aikebaier follow-ups, B-58 apa_key
+  - [x] whipper round 1 (8 MUST) -> B-59 build + P129 source; committed 21817eb
+  - [ ] whipper round 2 -> scratchpad/whipper_round2.md; open: S2 note placement, S6 figure label size (needs re-layout), S10 App D quote, M7
+  - [x] em dashes: none left outside cited titles and code
+  - [ ] left for Tiger: citation I-2, I-9 (retrieval dates), I-11..I-14, M-2, M-3, M-7; Rak/TEHDAS pages; Springer check Martinez/Voss-Knude
   - [ ] Zenodo: decide 1.3.1 (needs Tiger's yes), discoverability metadata
   - [ ] deck

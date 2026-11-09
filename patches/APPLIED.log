@@ -1653,3 +1653,7 @@
 2026-11-09 02:49 | P129_typesetting_source.py | P129-01 | Front_Matter_v1.md | 9e3953fd4bb1 -> 0c27000ee052 | nomenclature symbols as math, as in the body
 2026-11-09 02:49 | P129_typesetting_source.py | P129-02 | Chapter4_TRF_Model_v1.md | 0078008821f8 -> 4aeb1062bb1d | upright multi-letter subscripts; spaced 'or' in the display
 2026-11-09 02:49 | P129_typesetting_source.py | P129-03 | Appendix_B_Search_Log.md | 2ea7fe648d20 -> 5dea130c2027 | caption punctuation as in the other tables
+2026-11-09 03:00 | P130_whipper2_source.py | P130-01 | code_artefacts/README_Appendix_A.md | ebd96433615c -> 323a6bf4b051 | A.2 Lines column: n/a, not a stray colon (P125 dash replacement)
+2026-11-09 03:00 | P130_whipper2_source.py | P130-02 | repro_package/docs/Appendix_A.md | ebd96433615c -> 323a6bf4b051 | copy of Appendix A
+2026-11-09 03:00 | P130_whipper2_source.py | P130-03 | Front_Matter_v1.md | 0c27000ee052 -> 2bc1f1539da2 | note on the project name moved into the Statement of Contribution
+2026-11-09 03:00 | P130_whipper2_source.py | P130-04 | CHECKSUMS.md | d8c8cba66c8a -> 5190005123e1 | checksums

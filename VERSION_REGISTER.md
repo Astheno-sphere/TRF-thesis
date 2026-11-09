@@ -12,9 +12,9 @@ This register lists the single live copy of every deliverable. If a file is not 
 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 7f533bda7147 | 77,399 | 9 Nov 02:49 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | f1e3ccf9281c | 176 eq, 25 tbl | 9 Nov 02:50 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
-| THESIS | Front_Matter_v1.md | 0c27000ee052 | 3,291 | 9 Nov 02:49 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.md | 07e3336739e2 | 77,410 | 9 Nov 03:00 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | 7bd9cee0abb8 | 176 eq, 25 tbl | 9 Nov 03:01 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | Front_Matter_v1.md | 2bc1f1539da2 | 3,291 | 9 Nov 03:00 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
 | THESIS | Chapter1_Introduction_v2.md | 0cba91115e43 | 5,184 | 9 Nov 02:43 | Chapter 1 |
 | THESIS | Chapter2_LitReview_v2_FINAL.md | 876f72657146 | 14,571 | 9 Nov 02:43 | Chapter 2 incl. review protocol §2.1 |
 | THESIS | Chapter3_Methodology_v1.md | 0d3b2327a073 | 5,505 | 9 Nov 02:43 | Chapter 3 incl. canonical limitations register §3.7 (8 items) |
@@ -22,7 +22,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | THESIS | Chapter5_Demonstration_v1.md | 4757ef58eb6e | 5,155 | 9 Nov 02:43 | Chapter 5 incl. delta=3 witness §5.5a, Table 5.4 |
 | THESIS | Chapter6_Discussion_v1.md | 6d4a40217012 | 6,511 | 9 Nov 02:43 | Chapter 6, 11 sections |
 | THESIS | Chapter7_Conclusion_v1.md | 9dfcec600055 | 3,234 | 9 Nov 02:43 | Chapter 7 |
-| APPENDIX | code_artefacts/README_Appendix_A.md | ebd96433615c | 13,506 | 9 Nov 02:32 | Appendix A: provenance, commands, full source, console output |
+| APPENDIX | code_artefacts/README_Appendix_A.md | 323a6bf4b051 | 13,517 | 9 Nov 03:00 | Appendix A: provenance, commands, full source, console output |
 | APPENDIX | Appendix_B_Search_Log.md | 5dea130c2027 | 2,157 | 9 Nov 02:49 | Appendix B: 59 queries, 4 rounds |
 | APPENDIX | Appendix_C_Evaluation_Instrument.md | 54dbee22ab66 | 2,885 | 9 Nov 02:43 | Appendix C: evaluation instrument (designed, not executed) |
 | BIBLIO | Consolidated_Bibliography.md | e381821867ef | 3,169 | 9 Nov 02:43 | 69 entries, chapter-tagged — READ this |
@@ -55,8 +55,8 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | process/MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
 | SUPPORT | process/Viva_Preparation_Notes.md | f8db73b3413a | 2,455 | 2 Nov 18:51 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | 46b46fdebd29 | 25,702 | 9 Nov 02:50 | Every change with an ID, reason and verification. Synced with the repository copy |
-| CONTROL | CHECKSUMS.md | d8c8cba66c8a | 387 | 9 Nov 02:35 | Checksums of what is pushed to GitHub. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 6f9a5253bb77 | 25,818 | 9 Nov 03:01 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHECKSUMS.md | 5190005123e1 | 387 | 9 Nov 03:00 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | process/PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | process/PATCH_QUEUE.md | 8ceed5b20a27 | 2,417 | 30 Oct 20:37 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
 | HANDOFF | handoff_tools/inspector.py | 463739871d29 | — | 21 Sep 05:29 | Integrity inspector gating every rewrite |
@@ -166,7 +166,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | HANDOFF | patches/P16_rename_propositions.edits.json | 77e1509c187d | 58 edits | 3 Oct | Frozen edits of P16 |
 | HANDOFF | patches/P17_rename_code.edits.json | 1c4ae096d145 | 20 edits | 3 Oct | Frozen edits of P17 |
 | HANDOFF | patches/P18_appendixA_propositions.edits.json | d00fd3d3b5ca | 9 edits | 3 Oct | Frozen edits of P18 |
-| HANDOFF | patches/APPLIED.log | 9455e69f520d | 30,154 | 9 Nov 02:49 | Every applied edit with before/after md5 |
+| HANDOFF | patches/APPLIED.log | 29f2a3f52f57 | 30,233 | 9 Nov 03:00 | Every applied edit with before/after md5 |
 | HANDOFF | archive/conversation_history/2026-05-22_to_09-30_main_chat_Norwegian_health_records.txt | fafecf2841dc | 170,082 | 2 Oct 05:34 | Full export of the MAIN chat |
 
 ## Code copies

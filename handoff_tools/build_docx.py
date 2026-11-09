@@ -294,7 +294,7 @@ def fix_styles(styles):
     for sid, xml in (("TOC1", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="160"' % TEXT_W + ' w:after="40" w:line="240" w:lineRule="auto"/>'),
                      ("TOC2", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="0"' % TEXT_W + ' w:after="30" w:line="240" w:lineRule="auto"/><w:ind w:left="440" w:right="600"/>')):
         s = style(sid); s.find("w:name", NS).set(q("val"), sid.replace("TOC", "toc "))
-        set_ppr(s, xml)
+        set_ppr(s, xml + '<w:jc w:val="left"/>')
         set_rpr(s, ('<w:b/>' if sid == "TOC1" else '') + '<w:sz w:val="22"/><w:szCs w:val="22"/>')
     for rp in root.iter(q("rPr")):
         reorder(rp, RPR_ORDER)
@@ -326,7 +326,7 @@ def style_tables(body):
         band_rows(tbl)
         rows = tbl.findall("w:tr", NS)
         ncol = max((len(tr.findall("w:tc", NS)) for tr in rows), default=0)
-        short = len(rows) <= 12
+        short = len(rows) <= 8 and len(ptext(tbl)) < 1500
         fsz = 16 if ncol >= 7 else 18 if ncol >= 5 else 20   # wide tables smaller, so words fit their columns
         for i, tr in enumerate(rows):
             trp = tr.find("w:trPr", NS)
@@ -347,7 +347,7 @@ def style_tables(body):
                     sh.addprevious(bd)
                 for p in tc.iter(q("p")):
                     pp = ensure(p, "pPr", first=True)
-                    if short and i < len(rows) - 1 and pp.find("w:keepNext", NS) is None:
+                    if (short or i < 3) and i < len(rows) - 1 and pp.find("w:keepNext", NS) is None:
                         pp.append(el("keepNext"))
                     if pp.find("w:pStyle", NS) is None:
                         pp.insert(0, el("pStyle", val="TableText"))
@@ -395,7 +395,10 @@ def code_lines(body):
             np_ = el("p"); pp = copy.deepcopy(ppr) if ppr is not None else el("pPr"); np_.append(pp)
             for o in pp.findall("w:spacing", NS) + pp.findall("w:ind", NS): pp.remove(o)
             pp.append(el("spacing", before=120 if i == 0 else 0, after=200 if i == len(lines) - 1 else 0, line=228, lineRule="auto"))
-            pp.append(el("ind", left=480, right=120, hanging=360))
+            lead = "".join(t_.text or "" for k_ in ln for t_ in k_.iter(q("t")))
+            lead = len(lead) - len(lead.lstrip(" "))
+            hang = int((lead + 4) * (77 if console else 82))   # continuation sits under the line's own block
+            pp.append(el("ind", left=120 + hang, right=120, hanging=hang))
             if i < len(lines) - 1:
                 pp.append(el("keepLines"))
             if i >= len(lines) - 3 or i < 2:
@@ -432,7 +435,7 @@ def auto_widths(tbl, fsz=20):
             mass[j] += min(len(t), 160)
     total = TEXT_W
     # floor: longest word at ~95 twips per character (10 pt), capped so one column cannot take the table
-    cw = fsz * 5.0                                   # twips per character at this size (bold headers included)
+    cw = fsz * 5.4                                   # twips per character at this size (bold headers included)
     floor = [min(m * cw + 230, total * 0.45) for m in maxw]
     rest = total - sum(floor)
     if rest < 0:
@@ -473,6 +476,9 @@ def band_rows(tbl):
 
 def space_after_tables(body):
     for tbl in body.iter(q("tbl")):
+        prv = tbl.getprevious()
+        if prv is not None and prv.tag == q("p") and len(ptext(prv)) < 120:
+            ensure(ensure(prv, "pPr", first=True), "keepNext")
         nxt = tbl.getnext()
         if nxt is not None and nxt.tag == q("p"):
             pp = ensure(nxt, "pPr", first=True)
