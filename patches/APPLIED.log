@@ -1650,3 +1650,6 @@
 2026-11-09 02:43 | P128_aikebaier_followups.py | P128-02 | Chapter2_LitReview_v2_FINAL.md | 895ac9ccabd4 -> 876f72657146 | preprint, sufficiency only
 2026-11-09 02:43 | P128_aikebaier_followups.py | P128-03 | Chapter2_LitReview_v2_FINAL.md | 895ac9ccabd4 -> 876f72657146 | preprint, sufficiency only
 2026-11-09 02:43 | P128_aikebaier_followups.py | P128-04 | Chapter4_TRF_Model_v1.md | 351cefc9fc6a -> 0078008821f8 | v2 notion and direction
+2026-11-09 02:49 | P129_typesetting_source.py | P129-01 | Front_Matter_v1.md | 9e3953fd4bb1 -> 0c27000ee052 | nomenclature symbols as math, as in the body
+2026-11-09 02:49 | P129_typesetting_source.py | P129-02 | Chapter4_TRF_Model_v1.md | 0078008821f8 -> 4aeb1062bb1d | upright multi-letter subscripts; spaced 'or' in the display
+2026-11-09 02:49 | P129_typesetting_source.py | P129-03 | Appendix_B_Search_Log.md | 2ea7fe648d20 -> 5dea130c2027 | caption punctuation as in the other tables

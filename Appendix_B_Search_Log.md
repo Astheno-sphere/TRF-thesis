@@ -136,7 +136,7 @@ The closest prior art, the DePaul retention-and-purging programme and United Sta
 
 The following strings are offered so that a researcher may test the review's conclusions (Chapter 2, Section 2.1.6) against a systematic sweep of indexed databases. They were not the instrument used in this thesis, and are stated prospectively.
 
-*Table B.1. Prospective Boolean search strings.*
+*Table B.1. Prospective Boolean search strings*
 
 | # | Target | String |
 |---|---|---|

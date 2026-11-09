@@ -85,28 +85,28 @@ Two declarations are made explicitly.
 
 | Symbol | Meaning |
 |---|---|
-| *a* | An audit record |
-| *m*(*a*) | Event metadata: actor, contact point, patient pseudonym, document category, legal basis, outcome |
-| *p*(*a*) | Personal-data payload of the record |
-| *c*(*a*) | Hiding commitment to the payload, *c* = Commit(*p*, *r*) |
-| *r*(*a*) | Per-record commitment salt |
-| *k*(*a*) | Payload key |
-| *ι*(*a*) | Invalidation entry: month, legal ground, authorising actor |
-| *t*(*a*) | Month in which the access event occurred |
-| *F*(*a*) | Retention floor, in months (72 in the Norwegian cross-border pilot, 120 illustrative in Chapter 5, 36 under Article 9(2); 12 for SPE access logs) |
-| *σ*(*a*) | Pathway: primary or secondary |
-| *t*ᵣ(*a*) | Month an erasure request arrives (∞ if none) |
-| *t*π(*a*) | Month a data permit expires (∞ if not applicable) |
-| *P*(*a*) | Payload retention period set by the controller (∞ if none; Section 4.8) |
-| *t*ᴵ(*a*) | Invalidation month, min(*t*ᵣ + δ, *t*π + 6, *t* + *P*) |
-| δ | Erasure response period, in months (GDPR Art. 12(3)) |
-| *α*(*a*, *t*) | Payload accessibility at month *t*: 1 if recoverable, 0 otherwise |
-| *V*(*a*, *t*) | Whether the record counts as verifiable at month *t* |
-| *V*ᴵ, *V*ᴵᴵ | Verifiability under Semantics I (plaintext) and Semantics II (accountability-preserving) |
-| *m*_acc_(*a*), *m*_subj_(*a*) | Accessor fields and subject fields of the event metadata (Section 4.3) |
-| *β*(*a*, *t*) | Subject-link variable at month *t*: 1 if the subject fields are readable, 0 otherwise |
-| *p*_n_(*a*), *p*_r_(*a*) | Part of the payload that auditing needs, and the remainder (Corollary 2.3) |
-| *e*(*a*), *L* | Month of the event a ceiling is anchored to, and the ceiling length in months (Proposition 3) |
+| $a$ | An audit record |
+| $m(a)$ | Event metadata: actor, contact point, patient pseudonym, document category, legal basis, outcome |
+| $p(a)$ | Personal-data payload of the record |
+| $c(a)$ | Hiding commitment to the payload, $c = \mathrm{Commit}(p, r)$ |
+| $r(a)$ | Per-record commitment salt |
+| $k(a)$ | Payload key |
+| $\iota(a)$ | Invalidation entry: month, legal ground, authorising actor |
+| $t(a)$ | Month in which the access event occurred |
+| $F(a)$ | Retention floor, in months (72 in the Norwegian cross-border pilot, 120 illustrative in Chapter 5, 36 under Article 9(2); 12 for SPE access logs) |
+| $\sigma(a)$ | Pathway: primary or secondary |
+| $t_r(a)$ | Month an erasure request arrives (∞ if none) |
+| $t_\pi(a)$ | Month a data permit expires (∞ if not applicable) |
+| $P(a)$ | Payload retention period set by the controller (∞ if none; Section 4.8) |
+| $t^{I}(a)$ | Invalidation month, $\min(t_r + \delta,\ t_\pi + 6,\ t + P)$ |
+| $\delta$ | Erasure response period, in months (GDPR Art. 12(3)) |
+| $\alpha(a, t)$ | Payload accessibility at month $t$: 1 if recoverable, 0 otherwise |
+| $V(a, t)$ | Whether the record counts as verifiable at month $t$ |
+| $V^{\mathrm{I}}$, $V^{\mathrm{II}}$ | Verifiability under Semantics I (plaintext) and Semantics II (accountability-preserving) |
+| $m_{\mathrm{acc}}(a)$, $m_{\mathrm{subj}}(a)$ | Accessor fields and subject fields of the event metadata (Section 4.3) |
+| $\beta(a, t)$ | Subject-link variable at month $t$: 1 if the subject fields are readable, 0 otherwise |
+| $p_{\mathrm{n}}(a)$, $p_{\mathrm{r}}(a)$ | Part of the payload that auditing needs, and the remainder (Corollary 2.3) |
+| $e(a)$, $L$ | Month of the event a ceiling is anchored to, and the ceiling length in months (Proposition 3) |
 | C1, C2, C3 | Retention floor, erasure right, and deletion ceiling constraints |
 
 *Abbreviations*

@@ -154,6 +154,16 @@ PPR_ORDER = ["pStyle", "keepNext", "keepLines", "pageBreakBefore", "framePr", "w
              "snapToGrid", "spacing", "ind", "contextualSpacing", "mirrorIndents", "suppressOverlap", "jc",
              "textDirection", "textAlignment", "textboxTightWrap", "outlineLvl", "divId", "cnfStyle", "rPr",
              "sectPr", "pPrChange"]
+RPR_ORDER = ["rStyle", "rFonts", "b", "bCs", "i", "iCs", "caps", "smallCaps", "strike", "dstrike", "outline",
+             "shadow", "emboss", "imprint", "noProof", "snapToGrid", "vanish", "webHidden", "color", "spacing", "w",
+             "kern", "position", "sz", "szCs", "highlight", "u", "effect", "bdr", "shd", "fitText", "vertAlign",
+             "rtl", "cs", "em", "lang", "eastAsianLayout", "specVanish", "oMath", "rPrChange"]
+TBLPR_ORDER = ["tblStyle", "tblpPr", "tblOverlap", "bidiVisual", "tblStyleRowBandSize", "tblStyleColBandSize", "tblW",
+               "jc", "tblCellSpacing", "tblInd", "tblBorders", "shd", "tblLayout", "tblCellMar", "tblLook", "tblCaption", "tblDescription"]
+TCPR_ORDER = ["cnfStyle", "tcW", "gridSpan", "hMerge", "vMerge", "tcBorders", "shd", "noWrap", "tcMar", "textDirection",
+              "tcFitText", "vAlign", "hideMark"]
+TRPR_ORDER = ["cnfStyle", "divId", "gridBefore", "gridAfter", "wBefore", "wAfter", "cantSplit", "trHeight", "tblHeader",
+              "tblCellSpacing", "jc", "hidden"]
 SETTINGS_ORDER = ["writeProtection", "view", "zoom", "removePersonalInformation", "removeDateAndTime",
     "doNotDisplayPageBoundaries", "displayBackgroundShape", "printPostScriptOverText",
     "printFractionalCharacterWidth", "printFormsData", "embedTrueTypeFonts", "embedSystemFonts",
@@ -228,8 +238,18 @@ def fix_styles(styles):
     for sid in ("BodyText", "FirstParagraph"):
         set_ppr(style(sid), '<w:widowControl/><w:spacing w:before="0" w:after="160" w:line="360" w:lineRule="auto"/><w:jc w:val="both"/>')
     # tight lists in the body keep the body size; table cells get their own smaller style
-    set_ppr(style("Compact"), '<w:spacing w:before="40" w:after="80" w:line="300" w:lineRule="auto"/><w:jc w:val="left"/>')
+    set_ppr(style("Compact"), '<w:spacing w:before="40" w:after="80" w:line="360" w:lineRule="auto"/><w:jc w:val="left"/>')
     tt = style("TableText"); tt.find("w:name", NS).set(q("val"), "Table Text")
+    for sid in ("TableText", "TOC1", "TOC2", "Bibliography", "Compact", "TableCaption", "ImageCaption", "BlockText"):
+        st_ = style(sid)
+        for o in st_.findall("w:basedOn", NS): st_.remove(o)
+        bo = el("basedOn", val="Normal"); nm = st_.find("w:name", NS)
+        (nm.addnext(bo) if nm is not None else st_.insert(0, bo))
+    dd = root.find("w:docDefaults/w:rPrDefault/w:rPr", NS)
+    if dd is not None:
+        for o in dd.findall("w:rFonts", NS) + dd.findall("w:lang", NS): dd.remove(o)
+        dd.insert(0, etree.fromstring('<w:rFonts xmlns:w="%s" w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman" w:eastAsia="Times New Roman"/>' % W))
+        dd.append(etree.fromstring('<w:lang xmlns:w="%s" w:val="en-GB"/>' % W))
     set_ppr(tt, '<w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/>')
     set_rpr(tt, '<w:sz w:val="20"/><w:szCs w:val="20"/>')
     # quoted law and definitions: a left rule, no fill
@@ -238,7 +258,7 @@ def fix_styles(styles):
     # figures: centred image, caption under it in the table-caption voice
     set_ppr(style("CaptionedFigure"), '<w:keepNext/><w:spacing w:before="240" w:after="60" w:line="240" w:lineRule="auto"/><w:jc w:val="center"/>')
     for sid in ("ImageCaption", "Caption"):
-        set_ppr(style(sid), '<w:spacing w:before="60" w:after="280" w:line="252" w:lineRule="auto"/><w:jc w:val="both"/>')
+        set_ppr(style(sid), '<w:spacing w:before="60" w:after="280" w:line="252" w:lineRule="auto"/><w:jc w:val="left"/>')
         set_rpr(style(sid), '<w:i/><w:color w:val="333333"/><w:sz w:val="20"/><w:szCs w:val="20"/>')
     # code
     code_ppr = ('<w:pBdr><w:top w:val="single" w:sz="4" w:space="4" w:color="{c}"/><w:left w:val="single" w:sz="4" w:space="6" w:color="{c}"/>'
@@ -246,7 +266,7 @@ def fix_styles(styles):
                 '<w:shd w:val="clear" w:color="auto" w:fill="{f}"/><w:spacing w:before="120" w:after="200" w:line="240" w:lineRule="auto"/>'
                 '<w:ind w:left="120" w:right="120"/><w:jc w:val="left"/>').format(c=CODE_RULE, f=CODE_FILL)
     s = style("SourceCode"); set_ppr(s, code_ppr)
-    set_rpr(s, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="24292F"/><w:sz w:val="17"/><w:szCs w:val="17"/>')
+    set_rpr(s, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="24292F"/><w:sz w:val="15"/><w:szCs w:val="15"/>')
     vc = root.find("w:style[@w:styleId='VerbatimChar']", NS)
     if vc is not None:
         set_rpr(vc, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="24292F"/><w:sz w:val="20"/><w:szCs w:val="20"/><w:shd w:val="clear" w:color="auto" w:fill="F3EFE6"/>')
@@ -260,7 +280,7 @@ def fix_styles(styles):
         s = root.find("w:style[@w:styleId='%s']" % sid, NS)
         if s is not None:
             ital = "<w:i/>" if "Comment" in sid or sid == "DocumentationTok" else ""
-            set_rpr(s, '<w:color w:val="%s"/>%s' % (col, ital))
+            set_rpr(s, '<w:rFonts w:ascii="Consolas" w:hAnsi="Consolas" w:cs="Consolas"/><w:color w:val="%s"/>%s<w:sz w:val="15"/><w:szCs w:val="15"/><w:shd w:val="clear" w:color="auto" w:fill="auto"/>' % (col, ital))
     # caption
     cap = style("TableCaption")
     cap.find("w:name", NS).set(q("val"), "Table Caption")
@@ -272,10 +292,12 @@ def fix_styles(styles):
     bib = style("Bibliography")
     set_ppr(bib, '<w:spacing w:before="0" w:after="120" w:line="276" w:lineRule="auto"/><w:ind w:left="567" w:hanging="567"/><w:jc w:val="left"/>')
     for sid, xml in (("TOC1", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="160"' % TEXT_W + ' w:after="40" w:line="240" w:lineRule="auto"/>'),
-                     ("TOC2", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="0"' % TEXT_W + ' w:after="30" w:line="240" w:lineRule="auto"/><w:ind w:left="440"/>')):
+                     ("TOC2", '<w:tabs><w:tab w:val="right" w:leader="dot" w:pos="%d"/></w:tabs><w:spacing w:before="0"' % TEXT_W + ' w:after="30" w:line="240" w:lineRule="auto"/><w:ind w:left="440" w:right="600"/>')):
         s = style(sid); s.find("w:name", NS).set(q("val"), sid.replace("TOC", "toc "))
         set_ppr(s, xml)
         set_rpr(s, ('<w:b/>' if sid == "TOC1" else '') + '<w:sz w:val="22"/><w:szCs w:val="22"/>')
+    for rp in root.iter(q("rPr")):
+        reorder(rp, RPR_ORDER)
     return etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True)
 
 
@@ -285,7 +307,7 @@ def style_tables(body):
         tp = tbl.find("w:tblPr", NS)
         for tag in ("tblBorders", "tblCellMar", "tblW", "jc", "tblLayout"):
             for old in tp.findall("w:" + tag, NS): tp.remove(old)
-        tw = el("tblW", w=5000, type="pct"); tp.append(tw)
+        tw = el("tblW", w=TEXT_W, type="dxa"); tp.append(tw)
         tp.append(el("jc", val="center"))
         b = sub(tp, "tblBorders")
         for side, sz in (("top", 12), ("left", 4), ("bottom", 12), ("right", 4), ("insideH", 4), ("insideV", 4)):
@@ -296,14 +318,22 @@ def style_tables(body):
         # tblLook must stay last-ish: move it to the end for schema order robustness
         look = tp.find("w:tblLook", NS)
         if look is not None: tp.remove(look); tp.append(look)
+        tp.append(el("tblLayout", type="fixed"))
+        look = tp.find("w:tblLook", NS)
+        if look is not None: tp.remove(look); tp.append(look)
+        ncol0 = max(len(tr.findall("w:tc", NS)) for tr in tbl.findall("w:tr", NS))
+        auto_widths(tbl, 16 if ncol0 >= 7 else 18 if ncol0 >= 5 else 20)
+        band_rows(tbl)
         rows = tbl.findall("w:tr", NS)
         ncol = max((len(tr.findall("w:tc", NS)) for tr in rows), default=0)
-        fsz = 18 if ncol >= 6 else 20               # wide tables one point smaller, so headers do not break words
+        short = len(rows) <= 12
+        fsz = 16 if ncol >= 7 else 18 if ncol >= 5 else 20   # wide tables smaller, so words fit their columns
         for i, tr in enumerate(rows):
             trp = tr.find("w:trPr", NS)
             if trp is None:
                 trp = el("trPr"); tr.insert(0, trp)
-            sub(trp, "cantSplit")
+            if short or len(ptext(tr)) < 300:
+                sub(trp, "cantSplit")
             if i == 0:
                 sub(trp, "tblHeader")
             for tc in tr.findall("w:tc", NS):
@@ -317,16 +347,128 @@ def style_tables(body):
                     sh.addprevious(bd)
                 for p in tc.iter(q("p")):
                     pp = ensure(p, "pPr", first=True)
+                    if short and i < len(rows) - 1 and pp.find("w:keepNext", NS) is None:
+                        pp.append(el("keepNext"))
                     if pp.find("w:pStyle", NS) is None:
                         pp.insert(0, el("pStyle", val="TableText"))
                     else:
                         pp.find("w:pStyle", NS).set(q("val"), "TableText")
                     for r in p.iter(q("r")):
                         rp = rpr_of(r)
-                        if rp.find("w:sz", NS) is None:
+                        st_ = rp.find("w:rStyle", NS)
+                        if st_ is not None and st_.get(q("val")) == "VerbatimChar":
+                            for o in rp.findall("w:sz", NS) + rp.findall("w:szCs", NS) + rp.findall("w:shd", NS): rp.remove(o)
+                            sub(rp, "sz", val=fsz - 3); sub(rp, "szCs", val=fsz - 3)
+                        elif rp.find("w:sz", NS) is None:
                             sub(rp, "sz", val=fsz); sub(rp, "szCs", val=fsz)
                         if i == 0 and rp.find("w:b", NS) is None:
                             rp.insert(0, el("b"))
+
+
+
+def code_lines(body):
+    """One paragraph per code line, so a long line wraps with a hanging indent instead of back to
+    the margin. Identical borders on consecutive paragraphs draw as one box."""
+    n = 0
+    for p in list(body.iter(q("p"))):
+        if pstyle(p) != "SourceCode":
+            continue
+        kids = [k for k in p if k.tag != q("pPr")]
+        lines, cur = [], []
+        for k in kids:
+            if k.tag == q("r") and k.find("w:br", NS) is not None:
+                # a run holding a break: text before it ends the line
+                pre = copy.deepcopy(k)
+                for x in list(pre):
+                    if x.tag == q("br"): pre.remove(x)
+                if pre.find("w:t", NS) is not None: cur.append(pre)
+                lines.append(cur); cur = []
+            else:
+                cur.append(k)
+        lines.append(cur)
+        if len(lines) == 1:
+            continue
+        ppr = p.find("w:pPr", NS)
+        toks = {r_.find("w:rPr/w:rStyle", NS).get(q("val")) for r_ in p.iter(q("r")) if r_.find("w:rPr/w:rStyle", NS) is not None}
+        console = not (toks - {"NormalTok", "VerbatimChar", "OtherTok"})
+        for i, ln in enumerate(lines):
+            np_ = el("p"); pp = copy.deepcopy(ppr) if ppr is not None else el("pPr"); np_.append(pp)
+            for o in pp.findall("w:spacing", NS) + pp.findall("w:ind", NS): pp.remove(o)
+            pp.append(el("spacing", before=120 if i == 0 else 0, after=200 if i == len(lines) - 1 else 0, line=228, lineRule="auto"))
+            pp.append(el("ind", left=480, right=120, hanging=360))
+            if i < len(lines) - 1:
+                pp.append(el("keepLines"))
+            if i >= len(lines) - 3 or i < 2:
+                pp.append(el("keepNext")) if i < len(lines) - 1 else None
+            for k in ln: np_.append(k)
+            if console:
+                for r_ in np_.iter(q("r")):
+                    rp_ = rpr_of(r_)
+                    for o in rp_.findall("w:sz", NS) + rp_.findall("w:szCs", NS): rp_.remove(o)
+                    sub(rp_, "sz", val=14); sub(rp_, "szCs", val=14)
+            if not ln:
+                np_.append(run(""))
+            p.addprevious(np_)
+        p.getparent().remove(p); n += 1
+    return n
+
+
+def auto_widths(tbl, fsz=20):
+    """Column widths from content: no column narrower than its longest word, the rest by text mass."""
+    rows = tbl.findall("w:tr", NS)
+    ncol = max(len(r.findall("w:tc", NS)) for r in rows)
+    maxw, mass = [4] * ncol, [1.0] * ncol
+    for r in rows:
+        cells = r.findall("w:tc", NS)
+        if len(cells) != ncol:
+            continue
+        others_empty = all(not ptext(c).strip() for c in cells[1:])
+        for j, c in enumerate(cells):
+            t = ptext(c).strip()
+            if not t or (j == 0 and others_empty):
+                continue
+            words = re.split(r"[\s/]+", t)
+            maxw[j] = max(maxw[j], max(len(w) * (1.2 if re.search(r"[_.()]", w) else 1.0) for w in words))
+            mass[j] += min(len(t), 160)
+    total = TEXT_W
+    # floor: longest word at ~95 twips per character (10 pt), capped so one column cannot take the table
+    cw = fsz * 5.0                                   # twips per character at this size (bold headers included)
+    floor = [min(m * cw + 230, total * 0.45) for m in maxw]
+    rest = total - sum(floor)
+    if rest < 0:
+        w = [f * total / sum(floor) for f in floor]
+    else:
+        sm = sum(mass)
+        w = [f + rest * m / sm for f, m in zip(floor, mass)]
+    w = [int(x) for x in w]
+    grid = tbl.find("w:tblGrid", NS)
+    if grid is not None:
+        for g in list(grid): grid.remove(g)
+        for x in w: sub(grid, "gridCol", w=x)
+    for r in rows:
+        cells = r.findall("w:tc", NS)
+        if len(cells) != ncol:
+            continue
+        for x, c in zip(w, cells):
+            tcp = ensure(c, "tcPr", first=True)
+            for o in tcp.findall("w:tcW", NS): tcp.remove(o)
+            tcp.insert(0, el("tcW", w=x, type="dxa"))
+    return w
+
+
+def band_rows(tbl):
+    """A row whose only text is in its first cell is a group label: span it across the table."""
+    rows = tbl.findall("w:tr", NS)
+    ncol = max(len(r.findall("w:tc", NS)) for r in rows)
+    for r in rows[1:]:
+        cells = r.findall("w:tc", NS)
+        if len(cells) == ncol and ncol > 2 and ptext(cells[0]).strip() and all(not ptext(c).strip() for c in cells[1:]):
+            for c in cells[1:]: r.remove(c)
+            tcp = ensure(cells[0], "tcPr", first=True)
+            for o in tcp.findall("w:tcW", NS) + tcp.findall("w:gridSpan", NS): tcp.remove(o)
+            tcp.insert(0, el("gridSpan", val=ncol)); tcp.insert(0, el("tcW", w=TEXT_W, type="dxa"))
+            for o in tcp.findall("w:shd", NS): tcp.remove(o)
+            tcp.append(el("shd", val="clear", color="auto", fill="FAF8F3"))
 
 
 def space_after_tables(body):
@@ -357,7 +499,7 @@ def captions(body):
             lr = copy.deepcopy(r0); lr.find("w:t", NS).text = lab
             rp = rpr_of(lr); rp.insert(0, el("b"))
             for o in rp.findall("w:i", NS): rp.remove(o)
-            rpr_of(lr).append(el("color", val=NAVY))
+            rpr_of(lr).append(el("color", val=NAVY)); rpr_of(lr).append(el("i", val=0))
             r0.addprevious(lr)
         bookmark(p, name)
         found.append((name, txt))
@@ -383,7 +525,7 @@ def figures(body):
             lr = copy.deepcopy(r0); lr.find("w:t", NS).text = lab
             rp = rpr_of(lr); rp.insert(0, el("b"))
             for o in rp.findall("w:i", NS): rp.remove(o)
-            rp.append(el("color", val=OX))
+            rp.append(el("color", val=OX)); rp.append(el("i", val=0)); rp.append(el("iCs", val=0))
             r0.addprevious(lr)
         prev = p.getprevious()                      # the image paragraph: keep with the caption
         if prev is not None and prev.tag == q("p"):
@@ -544,7 +686,7 @@ def contents_block(toc, tables):
     for title, items in (("List of Figures", FIGS), ("List of Tables", tables)):
         if not items:
             continue
-        h = para("Heading2"); h.append(run(title)); ps.append(h)
+        h = para("Heading1" if title == "List of Figures" else "Heading2"); h.append(run(title)); ps.append(h)
         for name, txt in items:
             p = para("TOC2")
             ind = p.find("w:pPr/w:ind", NS)
@@ -632,12 +774,23 @@ def title_page(fm_text, files, rels):
         if "FORMDROPDOWN" in instr:
             put(e, [(SUBJECT, None, None)])
         elif "FORMTEXT" in instr and "Title" in txt:
-            put(e, [(title, None, None), (subtitle, 24, False)])
+            a_, b_ = title.find(" Health Data Audit"), title.find(" European Health Data Space")
+            parts = ([(title[:a_], None, None), (title[a_ + 1:b_], None, None), (title[b_ + 1:], None, None)]
+                     if 0 < a_ < b_ else [(title, None, None)])
+            put(e, parts + [("", 14, False), (subtitle, 24, False)])
         elif "FORMTEXT" in instr and "Author" in txt:
             put(e, [(author, None, None), (sup, 22, None)])
         elif "FORMTEXT" in instr and "Molde" in txt:
             put(e, [(date, None, None)])
     block = [e for e in block if e.tag != q("bookmarkStart")]
+    WP = "{http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing}"
+    for e in block:                                  # the wordmark: anchored to the page, not the moving paragraph
+        for anc in e.iter(WP + "anchor"):
+            ext = anc.find(WP + "extent")
+            pv = anc.find(WP + "positionV")
+            if ext is not None and ext.get("cx") == "2059305" and pv is not None and pv.get("relativeFrom") == "paragraph":
+                pv.set("relativeFrom", "page")
+                pv.find(WP + "posOffset").text = str(int(24.9 * 360000))
     return block
 
 
@@ -666,6 +819,7 @@ def main():
 
     style_tables(body)
     space_after_tables(body)
+    code_lines(body)
     tables = captions(body)
     figs = figures(body)
     toc = headings(body)
@@ -725,12 +879,19 @@ def main():
     files["[Content_Types].xml"] = ct.encode()
 
     files["word/styles.xml"] = fix_styles(files["word/styles.xml"])
+    if "word/theme/theme1.xml" in files:              # the reference theme's minor font was Cambria
+        th = files["word/theme/theme1.xml"].decode()
+        th = re.sub(r'(<a:minorFont>\s*<a:latin typeface=")[^"]*"', r'\1Times New Roman"', th)
+        th = re.sub(r'(<a:majorFont>\s*<a:latin typeface=")[^"]*"', r'\1Calibri"', th)
+        files["word/theme/theme1.xml"] = th.encode()
     if "word/numbering.xml" in files:                  # pandoc writes short nsid values; schema wants 8 hex digits
         files["word/numbering.xml"] = re.sub(rb'(w:nsid w:val=")([0-9A-Fa-f]{1,7})"',
                                              lambda m: m.group(1) + m.group(2).zfill(8) + b'"', files["word/numbering.xml"])
     sroot = etree.fromstring(files["word/settings.xml"])
     if sroot.find("w:updateFields", NS) is None:
         sroot.append(el("updateFields", val="true"))
+    for o in sroot.findall("w:autoHyphenation", NS): sroot.remove(o)
+    sroot.append(el("autoHyphenation", val="true"))
     reorder(sroot, SETTINGS_ORDER)
     st = etree.tostring(sroot, xml_declaration=True, encoding="UTF-8", standalone=True).decode()
     if False:
@@ -739,6 +900,11 @@ def main():
     files["word/settings.xml"] = st.encode()
     for ppr in doc.iter(q("pPr")):
         reorder(ppr, PPR_ORDER)
+    for rp in doc.iter(q("rPr")):
+        reorder(rp, RPR_ORDER)
+    for tag, order in (("tblPr", TBLPR_ORDER), ("tcPr", TCPR_ORDER), ("trPr", TRPR_ORDER)):
+        for e in doc.iter(q(tag)):
+            reorder(e, order)
     M = "http://schemas.openxmlformats.org/officeDocument/2006/math"
     for e in doc.iter("{%s}dPr" % M):
         reorder(e, ["begChr", "sepChr", "endChr", "grow", "shp", "ctrlPr"])
