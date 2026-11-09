@@ -70,7 +70,7 @@ DOSSIER_ROUNDS = [
      "No work found that models floor, right and ceiling together. Three updates written in: EDPS v SRB (C-413/23 P), Implementing Regulation (EU) 2026/2083, the designation of Folkehelseinstituttet."),
     ("Code audit, two passes", "6 Nov 2026",
      "An AI code review in the style of CodeRabbit, then a deeper read-only pass for what it missed.",
-     "First pass: 1 critical, 16 major, 14 minor. Second pass: 1 critical, 5 major, 7 minor. Each checked before acting; one left to the author; every recorded run still byte-identical; release 1.3.0."),
+     "First pass: 1 critical, 16 major, 14 minor. Second pass: 1 critical, 5 major, 7 minor. Each checked before acting; one left to the author; every re-runnable recorded run still byte-identical (the full-cohort record keeps its old result wording); release 1.3.0."),
 ]
 
 # Gauntlet-style findings: id, severity, fault, evidence, fix, verified by
@@ -80,7 +80,7 @@ AUDIT = [
      "Value corrected in both repositories; the integrity table rebuilt row by row from the recorded run.",
      "Fresh run compared with every value in the table."),
     ("P2-C1", "Critical", "The first fix for the growing audit log attached records to a log only when first invalidated.",
-     "Two populations generated before invalidation shared one log; on the server, the cached thesis log grew from 438 to 933 leaves after two other runs.",
+     "Two populations generated before invalidation shared one log; one Norwegian and one cross-sector run grew the thesis population's log from 438 to 933 leaves, and on the server they could have written into the cached thesis log.",
      "The log is bound to each record when it is created; every population starts its own.",
      "New test: an earlier population's log is untouched by later runs and still verifies."),
     ("M1", "Major", "The 54 tests cited by the thesis were not in the thesis repository.",
@@ -125,7 +125,7 @@ AUDIT = [
      "Run from a foreign directory: refuses."),
     ("P2-M1", "Major", "Line counts disagreed across Table 5.1, §5.2 and Appendix A.",
      "Stated counts against wc -l at the final code.",
-     "Regenerated from the files (P117, P121).",
+     "Regenerated from the files (P117, P121); four Appendix A listing headers missed then were corrected on 9 Nov (P125).",
      "Counts compared with the files."),
     ("P2-M2", "Major", "Chapter 5 said the reported run uses Synthea payloads.",
      "Tables 5.3 to 5.6 come from constructed payloads (43 bytes on average).",
@@ -139,9 +139,9 @@ AUDIT = [
      "After the three-year limit the accessor fields remain and the check returns true.",
      "§6.10 states the narrower zero.",
      "Reproduced at month 40."),
-    ("P2-M5", "Major", "Personal and process material is public: supervisor review files, the Helsedirektoratet letter, session transcripts.",
+    ("P2-M5", "Major", "Personal and process material is public: supervisor review files, the Helsedirektoratet correspondence, a hash map naming commit rewrites.",
      "Files present in the public thesis repository.",
-     "Not changed: the author's decision. The repositories are made private before the defence; Appendix D is reproduced with the sender's permission.",
+     "Not changed: the author's decision. The repositories stay public until the author makes them private; Appendix D is reproduced with the sender's permission.",
      "Open."),
 ]
 
@@ -156,7 +156,7 @@ EVIDENCE = [
     ("Proposition 2", "Under accountability-preserving verifiability they are jointly satisfiable for every record, request pattern and floor.",
      "§4.7", "check_semantics_II; V_II; integrity", "recorded run; 3 tamper tests; exit status"),
     ("Proposition 3", "A ceiling collides with a floor if and only if the ceiling ends no later than the floor.",
-     "§4.6", "z3_check P3; delta_witness", "Z3 with off-by-one mutation"),
+     "§4.6", "z3_check P3; cross_sector_check", "Z3 with off-by-one mutation"),
     ("Proposition 4", "Moving a record out of the regulated environment meets the ceiling but not the right (stated premise).",
      "§4.10", "argued, not executed", "premise listed in §3.7"),
     ("Corollary 1.2", "Infeasibility without any erasure request, on the broad reading of Art. 68(12), for logs kept at patient-record granularity.",

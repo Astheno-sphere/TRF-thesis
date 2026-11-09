@@ -125,6 +125,6 @@ Synthea's default export conforms to the US Core implementation guide with Unite
 
 ## Licence and citation
 
-MIT. Cite the archived release (https://doi.org/10.5281/zenodo.23819274) or the thesis.
+MIT. Cite release 1.3.0 (https://doi.org/10.5281/zenodo.23989242; all versions: https://doi.org/10.5281/zenodo.23819274) or the thesis.
 
 The salts in `trf_checker.py` are derived from record identifiers so that runs reproduce exactly. A deployment must use a cryptographically secure random source (`--random-salts` uses `os.urandom`).

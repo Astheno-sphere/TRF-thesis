@@ -39,7 +39,7 @@ Artefact: https://github.com/Astheno-sphere/TRF (archived release 1.3.0: https:/
 
 Forordning (EU) 2025/327 om det europeiske helsedataområdet (EHDS) underlegger revisjonsspor for grensekryssende helsedata tre lagringskrav samtidig: minstekrav til lagring av revisjonslogger (ett år for tilgangslogger i sikre analyserom etter artikkel 73(1)(e) og, for MyHealth@EU, en periode som eHDSI-spesifikasjonene overlater til nasjonal lovgivning: seks år i den norske utprøvingen, ti år i sekundærlitteraturen), retten til sletting etter GDPR artikkel 17, og en sletteplikt på seks måneder etter artikkel 68(12). Ingen rettsakt forener disse, og gjennomføringsrettsaktene som skal fastsette kravene til sikre analyserom skal ikke foreligge før 26. mars 2027.
 
-Oppgaven utvikler Tri-Lateral Retention Feasibility (TRF)-modellen, en betingelsesbasert formulering der semantikken for revisjonsverifiserbarhet er en eksplisitt parameter. Under semantikk der en post er verifiserbar bare så lenge innholdet er lesbart i klartekst, er kravene uforenlige så snart en slettefrist eller en sletteplikt faller innenfor lagringsperioden (proposisjon 1). Under semantikk som bevarer etterrettelighet, kan kravene tilfredsstilles samtidig for alle tidspunkter for slettebegjæringer og utløp av tillatelser og for alle lagringsminimum (proposisjon 2). To resultater til avgrenser konflikten: en øvre grense kolliderer med et lagringsminimum bare når den ikke er lengre enn minimumet, og hendelsen grensen regnes fra avgjør om kollisjonen kan ses i teksten eller bare i den enkelte postens historikk (proposisjon 3); å flytte en post ut av det regulerte miljøet oppfyller sletteplikten, men ikke retten til sletting (proposisjon 4). Mekanismen som viser dette, Crypto-Erasure by Invalidation, ødelegger nøkkelen til innholdet i hver enkelt post og fjerner, for tilgangslogger i sikre analyserom når sletteplikten inntreffer, postens kobling til pasienten, samtidig som identiteten til den som ga seg tilgang, hendelsesmetadata, en skjulende forpliktelse (commitment) og en logget ugyldiggjøringspost beholdes i en manipulasjonssikker logg.
+Oppgaven utvikler Tri-Lateral Retention Feasibility (TRF)-modellen, en betingelsesbasert formulering der semantikken for revisjonsverifiserbarhet er en eksplisitt parameter. Under semantikk der en post er verifiserbar bare så lenge innholdet er lesbart i klartekst, er kravene uforenlige så snart en slettefrist eller en sletteplikt faller innenfor lagringsperioden (proposisjon 1). Under semantikk som bevarer etterrettelighet, kan kravene tilfredsstilles samtidig for alle tidspunkter for slettebegjæringer og utløp av tillatelser og for alle lagringsminimum (proposisjon 2). To resultater til avgrenser konflikten: en øvre grense kolliderer med et lagringsminimum bare når den ikke er lengre enn minimumet, og hendelsen grensen regnes fra avgjør om kollisjonen kan ses i teksten eller bare i den enkelte postens historikk (proposisjon 3); å flytte en post ut av det regulerte miljøet oppfyller sletteplikten, men ikke retten til sletting (proposisjon 4). Mekanismen som viser dette, Crypto-Erasure by Invalidation, ødelegger nøkkelen til innholdet i hver enkelt post og fjerner, for tilgangslogger i sikre analyserom når sletteplikten inntreffer, postens kobling til pasienten, samtidig som identiteten til den som ga seg tilgang, hendelsesmetadata, en skjulende forpliktelse (commitment) og en logget ugyldiggjøringspost beholdes i en logg der endringer kan avsløres.
 
 Begge resultatene kontrolleres i en Python-sandkasse med to hundre genererte poster; å erstatte innholdet deres med syntetiske FHIR R4-data generert med Synthea endrer ingen tall. Antallene avhenger av parameterne i generatoren og er ikke anslag over reell hyppighet; sandkassen kontrollerer at artefakten implementerer modellen riktig og er ikke uavhengig belegg for proposisjonene. Kollisjonen som ikke krever noen slettebegjæring, oppstår bare under en omstridt, vid lesing av artikkel 68(12), og bare for loggposter som selv er elektroniske helsedata, slik poster som føres på nivå med den enkelte pasientjournal, er.
 
@@ -86,12 +86,12 @@ Two declarations are made explicitly.
 | Symbol | Meaning |
 |---|---|
 | *a* | An audit record |
-| *m*(*a*) | Event metadata — actor, contact point, patient pseudonym, document category, legal basis, outcome |
+| *m*(*a*) | Event metadata: actor, contact point, patient pseudonym, document category, legal basis, outcome |
 | *p*(*a*) | Personal-data payload of the record |
 | *c*(*a*) | Hiding commitment to the payload, *c* = Commit(*p*, *r*) |
 | *r*(*a*) | Per-record commitment salt |
 | *k*(*a*) | Payload key |
-| *ι*(*a*) | Invalidation entry — month, legal ground, authorising actor |
+| *ι*(*a*) | Invalidation entry: month, legal ground, authorising actor |
 | *t*(*a*) | Month in which the access event occurred |
 | *F*(*a*) | Retention floor, in months (72 in the Norwegian cross-border pilot, 120 illustrative in Chapter 5, 36 under Article 9(2); 12 for SPE access logs) |
 | *σ*(*a*) | Pathway: primary or secondary |
@@ -100,11 +100,11 @@ Two declarations are made explicitly.
 | *P*(*a*) | Payload retention period set by the controller (∞ if none; Section 4.8) |
 | *t*ᴵ(*a*) | Invalidation month, min(*t*ᵣ + δ, *t*π + 6, *t* + *P*) |
 | δ | Erasure response period, in months (GDPR Art. 12(3)) |
-| *α*(*a*, *t*) | Payload accessibility at month *t* — 1 if recoverable, 0 otherwise |
+| *α*(*a*, *t*) | Payload accessibility at month *t*: 1 if recoverable, 0 otherwise |
 | *V*(*a*, *t*) | Whether the record counts as verifiable at month *t* |
 | *V*ᴵ, *V*ᴵᴵ | Verifiability under Semantics I (plaintext) and Semantics II (accountability-preserving) |
 | *m*_acc_(*a*), *m*_subj_(*a*) | Accessor fields and subject fields of the event metadata (Section 4.3) |
-| *β*(*a*, *t*) | Subject-link variable at month *t* — 1 if the subject fields are readable, 0 otherwise |
+| *β*(*a*, *t*) | Subject-link variable at month *t*: 1 if the subject fields are readable, 0 otherwise |
 | *p*_n_(*a*), *p*_r_(*a*) | Part of the payload that auditing needs, and the remainder (Corollary 2.3) |
 | *e*(*a*), *L* | Month of the event a ceiling is anchored to, and the ceiling length in months (Proposition 3) |
 | C1, C2, C3 | Retention floor, erasure right, and deletion ceiling constraints |

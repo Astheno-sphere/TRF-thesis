@@ -107,7 +107,9 @@ Masteroppgave ved Høgskolen i Molde om hvordan revisjonslogger for grensekrysse
   author = {Abbasia, Arshad Akhtar},
   title  = {TRF: Tri-Lateral Retention Feasibility Model},
   year   = {2026},
-  doi    = {10.5281/zenodo.23819274},
+  version = {1.3.0},
+  doi    = {10.5281/zenodo.23989242},
+  note   = {All versions: 10.5281/zenodo.23819274},
   url    = {https://github.com/Astheno-sphere/TRF}
 }
 ```

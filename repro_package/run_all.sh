@@ -65,6 +65,7 @@ echo "  diff results/z3_check_rerun.txt              results/z3_check_output.txt
 echo
 echo "results/synthea_comparison_full_cohort_output.txt records the same comparison"
 echo "against all 98 bundles, recorded on 28 September 2026 before the constructed"
-echo "payloads were revised. Besides the bundle count and the mean payloads, no line"
-echo "differs from the subset run. Diff the two against each other to see that"
+echo "payloads were revised. Besides the bundle count, the mean payloads and the"
+echo "wording of the result line, no line differs from the subset run. Diff the two"
+echo "against each other to see that"
 echo "no reported measure moves with cohort size."

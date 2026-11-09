@@ -1495,3 +1495,57 @@
 2026-11-08 23:48 | P124_test_count.py | P124-01 | demo_app/README.md | 0ec04b39fd75 -> 37e5bc9dac83 | test count 56
 2026-11-08 23:48 | P124_test_count.py | P124-02 | repro_package/README.md | 6faf16d271a7 -> ea93cff112c4 | test count 56
 2026-11-08 23:48 | P124_test_count.py | P124-03 | CHECKSUMS.md | b211756fdbda -> f4e4faaa3c60 | test count 56
+2026-11-09 02:32 | P125_sync_audit.py | P125-01 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B1: listing header line count equals wc -l of the listed file (A.2, Table 5.1)
+2026-11-09 02:32 | P125_sync_audit.py | P125-02 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B1: listing header line count equals wc -l of the listed file (A.2, Table 5.1)
+2026-11-09 02:32 | P125_sync_audit.py | P125-03 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B1: listing header line count equals wc -l of the listed file (A.2, Table 5.1)
+2026-11-09 02:32 | P125_sync_audit.py | P125-04 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B1: A.15 header line count equals wc -l of crypto_envelope.py
+2026-11-09 02:32 | P125_sync_audit.py | P125-05 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B4: the 1.3.0 archive holds an older Appendix A
+2026-11-09 02:32 | P125_sync_audit.py | P125-06 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B5: apply_invalidation() applies the trajectory; check_semantics_II() checks
+2026-11-09 02:32 | P125_sync_audit.py | P125-07 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B5
+2026-11-09 02:32 | P125_sync_audit.py | P125-08 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | S2: synthetic, not real
+2026-11-09 02:32 | P125_sync_audit.py | P125-09 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | S2
+2026-11-09 02:32 | P125_sync_audit.py | P125-10 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | S1: artefact date includes the 1.3.0 review fixes
+2026-11-09 02:32 | P125_sync_audit.py | P125-11 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | B3: A.17 predates the reworded result line
+2026-11-09 02:32 | P125_sync_audit.py | P125-12 | Chapter6_Discussion_v1.md | 7f1da0955562 -> e69b12f0f891 | S7: the log detects alteration, not removal without a published root
+2026-11-09 02:32 | P125_sync_audit.py | P125-13 | Chapter6_Discussion_v1.md | 7f1da0955562 -> e69b12f0f891 | S2
+2026-11-09 02:32 | P125_sync_audit.py | P125-14 | Front_Matter_v1.md | d11dfbea9194 -> 9e3953fd4bb1 | S7: tamper-evident, as in the English abstract
+2026-11-09 02:32 | P125_sync_audit.py | P125-15 | Appendix_C_Evaluation_Instrument.md | 3754efa8b6de -> 0770d691afdd | S3: the subject link is removed at the ceiling
+2026-11-09 02:32 | P125_sync_audit.py | P125-16 | Chapter2_LitReview_v2_FINAL.md | 977748fc55f3 -> 5dddc0d50ee8 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-17 | Chapter3_Methodology_v1.md | 15a98abbe03e -> be56be8dab19 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-18 | Chapter4_TRF_Model_v1.md | c7cb462ae1de -> 1068ff81294e | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-19 | Chapter4_TRF_Model_v1.md | c7cb462ae1de -> 1068ff81294e | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-20 | Appendix_C_Evaluation_Instrument.md | 3754efa8b6de -> 0770d691afdd | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-21 | Chapter5_Demonstration_v1.md | ad39dfe63d27 -> 47e489c9b581 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-22 | Chapter5_Demonstration_v1.md | ad39dfe63d27 -> 47e489c9b581 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-23 | Chapter5_Demonstration_v1.md | ad39dfe63d27 -> 47e489c9b581 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-24 | Chapter5_Demonstration_v1.md | ad39dfe63d27 -> 47e489c9b581 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-25 | Chapter5_Demonstration_v1.md | ad39dfe63d27 -> 47e489c9b581 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-26 | Front_Matter_v1.md | d11dfbea9194 -> 9e3953fd4bb1 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-27 | Front_Matter_v1.md | d11dfbea9194 -> 9e3953fd4bb1 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-28 | Front_Matter_v1.md | d11dfbea9194 -> 9e3953fd4bb1 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-29 | Front_Matter_v1.md | d11dfbea9194 -> 9e3953fd4bb1 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-30 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-31 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-32 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-33 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-34 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-35 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-36 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-37 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-38 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-39 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-40 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-41 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-42 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-43 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-44 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-45 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-46 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-47 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-48 | code_artefacts/README_Appendix_A.md | de2ef1a7b728 -> ebd96433615c | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-49 | Chapter2_LitReview_v2_FINAL.md | 977748fc55f3 -> 5dddc0d50ee8 | no em dash
+2026-11-09 02:32 | P125_sync_audit.py | P125-50 | Chapter6_Discussion_v1.md | 7f1da0955562 -> e69b12f0f891 | no em dash
+2026-11-09 02:38 | P127_sync_outside_text.py | P127-01 | repro_package/run_all.sh | 14c263111ad3 -> 006babc40df7 | footer: the full-cohort record also differs in its result wording
+2026-11-09 02:38 | P127_sync_outside_text.py | P127-02 | Data_Provenance_Statement.md | 54f9a12197c4 -> 8b964e9758c0 | 1,002 bytes for the October cohort; subset 40 MB
+2026-11-09 02:38 | P127_sync_outside_text.py | P127-03 | repro_package/README.md | ea93cff112c4 -> a7b24dfda313 | cite release 1.3.0 with the all-versions DOI
+2026-11-09 02:38 | P127_sync_outside_text.py | P127-04 | CHECKSUMS.md | f4e4faaa3c60 -> d8c8cba66c8a | checksums after P125 and the copies

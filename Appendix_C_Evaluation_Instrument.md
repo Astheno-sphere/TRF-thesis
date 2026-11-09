@@ -96,7 +96,7 @@ The demonstration runs the artefact rather than describing it. Approximately ten
 2. *Run the checker under plaintext semantics.* `python3 trf_checker.py`. Show the output: ninety-five violations across ninety of two hundred records. Open one witness line and walk through the arithmetic: the collision month, the two constraints, the window.
 3. *Isolate the Corollary 1.2 cases.* Thirty-nine Secure Processing Environment records with no erasure request at all. Show record 100: created month 7, permit expires month 10, ceiling from month 16, floor to month 19. State the interpretive condition (Chapter 4, Section 4.6) explicitly rather than glossing it.
 4. *Show the exhaustive cross-check.* Sixteen thousand three hundred and eighty-four assignments per case; no satisfying assignment in the three conflict cases; the control case passes.
-5. *Run under invalidation semantics.* Zero violations. Show the auditor's view of record 100 after invalidation: metadata intact, commitment present, key destroyed, invalidation entry with month and legal ground, payload unreadable.
+5. *Run under invalidation semantics.* Zero violations. Show the auditor's view of record 100 after invalidation: accessor fields verified against the log, patient link removed at month 16 with its removal logged, commitment present, key destroyed, invalidation entry with month and legal ground, payload unreadable.
 6. *State the limits before being asked.* Key destruction is simulated in program state; the invalidation entry is an attestation, not a proof; no National Contact Point is connected; no performance claim is made.
 
 Step 6 is not optional. A demonstration that presents only strengths invites participants to spend their time finding the weaknesses instead of assessing the design.
@@ -156,7 +156,7 @@ Each dimension opens with the anchor statement proposed in supervisory feedback,
 | Item | Statement |
 |---|---|
 | R1 | *The residual audit log provides sufficient verification without violating GDPR Article 17 or EDPB guidelines.* |
-| R2 | The surviving residue — metadata, commitment, invalidation entry — would be defensible to a supervisory authority. |
+| R2 | The surviving residue (metadata, commitment, invalidation entry) would be defensible to a supervisory authority. |
 | R3 | Article 68(12) should be read as reaching the access logs generated within a Secure Processing Environment. |
 | R4 | The mechanism's characterisation of its residue as pseudonymised rather than anonymous is the correct characterisation. |
 

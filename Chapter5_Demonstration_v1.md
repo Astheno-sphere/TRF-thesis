@@ -24,8 +24,8 @@ Seven further modules accompany it, bringing the artefact to eight Python files 
 
 | Module | Lines | What it does | Reports a thesis figure? |
 |---|---|---|---|
-| `trf_checker.py` | 601 | Constraint evaluation under both semantics, plus the exhaustive cross-check and the audit-log integrity check | Yes — Tables 5.3 to 5.6 |
-| `synthea_layer.py` | 156 | Substitutes Synthea-generated (synthetic) FHIR R4 payloads and compares every figure against the constructed-payload run | Yes — Table 5.7 |
+| `trf_checker.py` | 601 | Constraint evaluation under both semantics, plus the exhaustive cross-check and the audit-log integrity check | Yes: Tables 5.3 to 5.6 |
+| `synthea_layer.py` | 156 | Substitutes Synthea-generated (synthetic) FHIR R4 payloads and compares every figure against the constructed-payload run | Yes: Table 5.7 |
 | `norwegian_layer.py` | 136 | Three Norwegian record classes, varying only the floor, the pathway and the arrival of requests | No |
 | `cross_sector_check.py` | 113 | The politiregisterloven § 17 instance discussed in Chapter 6, Section 6.10 | No |
 | `app.py`, `ui.py` | 1124 + 217 | Eleven-page viewer over the artefact, with the live architecture diagrams of Figures 4.1 and 5.1; never a source of results | No |
@@ -158,8 +158,8 @@ The invalidation trajectory from the constructive proof of Proposition 2 was the
 | Measure | Value |
 |---|---|
 | Records invalidated | 138 / 200 |
-| — on ground GDPR Article 17(1) | 52 |
-| — on ground EHDS Article 68(12) | 86 |
+| of which on ground GDPR Article 17(1) | 52 |
+| of which on ground EHDS Article 68(12) | 86 |
 | Records with ≥1 constraint violation | **0 / 200** |
 | Total constraint violations | **0** |
 
@@ -205,7 +205,7 @@ The layer substitutes Synthea-generated FHIR R4 resources, synthetic like every 
 | Records invalidated | 138 | 138 |
 | Semantics II: records with violation | 0 | 0 |
 | Semantics II: total violations | 0 | 0 |
-| Commitments differing between runs | — | 200 / 200 |
+| Commitments differing between runs | n/a | 200 / 200 |
 
 Every reported figure is identical while every commitment differs. This is the expected result: no constraint in the TRF Model reads the content of a payload, so the results are functions of timing and accessibility alone, and the comparison tests that claim against inputs that demonstrably changed.
 
