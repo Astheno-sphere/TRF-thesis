@@ -1673,3 +1673,7 @@
 2026-11-11 23:23 | P135_checksums_after_p134.py | P135-01 | CHECKSUMS.md | 2f639ae043c3 -> 17438f496d61 | checksum row after P134
 2026-11-11 23:47 | P136_prop4_premise.py | P136-01 | Front_Matter_v1.md | 05a7db8313da -> 09b7074afe78 | Proposition 4 with its premise
 2026-11-11 23:47 | P136_prop4_premise.py | P136-02 | Front_Matter_v1.md | 05a7db8313da -> 09b7074afe78 | Proposition 4 with its premise
+2026-11-11 23:58 | P137_viewer_readability_copies.py | P137-01 | demo_app/app.py | 8b39ccece076 -> 417af431f19f | viewer copy of app.py after the readability pass (TRF 0c540b7)
+2026-11-11 23:58 | P137_viewer_readability_copies.py | P137-02 | demo_app/ui.py | 8cc1d5a15bb1 -> 4faa3538eae0 | viewer copy of ui.py after the readability pass (TRF 0c540b7)
+2026-11-11 23:58 | P138_checksums_after_p137.py | P138-01 | CHECKSUMS.md | 17438f496d61 -> b5238b1ef1e6 | checksum row after P137
+2026-11-11 23:58 | P138_checksums_after_p137.py | P138-02 | CHECKSUMS.md | 17438f496d61 -> b5238b1ef1e6 | checksum row after P137
