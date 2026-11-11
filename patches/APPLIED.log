@@ -1663,3 +1663,11 @@
 2026-11-09 13:43 | P132_repo_links_copies.py | P132-01 | repro_package/docs/Appendix_A.md | 323a6bf4b051 -> c08c76d2aeb5 | copy of Appendix A after P131
 2026-11-09 13:43 | P132_repo_links_copies.py | P132-02 | repro_package/README.md | a7b24dfda313 -> 3f2f6dd07ede | source repository: TRF-thesis, branch joao-base
 2026-11-09 13:43 | P132_repo_links_copies.py | P132-03 | CHECKSUMS.md | 5190005123e1 -> 2f639ae043c3 | checksums
+2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-01 | Chapter4_TRF_Model_v1.md | 4aeb1062bb1d -> 6fe22e0659bb | scope the ceiling disjunct as C3 is scoped
+2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-02 | Chapter4_TRF_Model_v1.md | 4aeb1062bb1d -> 6fe22e0659bb | state the converse the sandbox already relies on
+2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-03 | Chapter5_Demonstration_v1.md | 4757ef58eb6e -> 85874a9083fe | records, not violations
+2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-04 | Chapter5_Demonstration_v1.md | 4757ef58eb6e -> 85874a9083fe | state the tie rule the artefact applies
+2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-05 | Chapter5_Demonstration_v1.md | 4757ef58eb6e -> 85874a9083fe | carry the condition Section 4.6 attaches to Corollary 1.2
+2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-06 | Chapter7_Conclusion_v1.md | 9dfcec600055 -> c9b459ec4f40 | restate Proposition 4 with its premise
+2026-11-11 23:18 | P134_viewer_prop1_copies.py | P134-01 | demo_app/app.py | 1388d35fcd2c -> 8b39ccece076 | viewer copy of app.py: Proposition 1 statement as in Chapter 4 (TRF e92f081)
+2026-11-11 23:23 | P135_checksums_after_p134.py | P135-01 | CHECKSUMS.md | 2f639ae043c3 -> 17438f496d61 | checksum row after P134

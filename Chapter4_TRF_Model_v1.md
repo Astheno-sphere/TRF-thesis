@@ -142,8 +142,12 @@ Under Semantics I the conflict is not bad luck or rare timing. It is a contradic
 > $$
 > t_r(a) + \delta \le t(a) + F(a) \quad\text{ or }\quad t_\pi(a) + 6 \le t(a) + F(a).
 > $$
+>
+> The second disjunct is tested only for records the ceiling reaches, that is, with $\sigma(a)$ = secondary and $\rho(a) = 1$.
 
 *Proof.* Take a record $a$ satisfying the first disjunct, and let $t^{*} = t_r(a) + \delta$. By hypothesis $t^{*} \le t(a) + F(a)$, and since erasure requests arrive after the access that generates the record, $t^{*} \ge t(a)$. Hence $t^{*}$ lies within the retention window, so C1 requires $V(a,t^{*}) = 1$. Under Semantics I, $V^{I}(a,t^{*}) = \alpha(a,t^{*})$, so C1 requires $\alpha(a,t^{*}) = 1$. But C2 requires $\alpha(a,t) = 0$ for all $t \ge t_r(a) + \delta = t^{*}$, so C2 requires $\alpha(a,t^{*}) = 0$. The two requirements are contradictory, and no assignment of $\alpha$ satisfies both. The argument for the second disjunct is identical, with $t^{*} = t_\pi(a) + 6$ and C3 in place of C2, on the analogous assumption that $t_\pi(a) + 6 \ge t(a)$; should the ceiling deadline precede the record's creation, the contradiction arises at $t(a)$ itself, where C1 and C3 both bind. ∎
+
+*Remark (converse).* If neither disjunct holds, the system is feasible under Semantics I: set $\alpha(a,t) = 1$ for every month of the retention window and $\alpha(a,t) = 0$ afterwards. C1 then holds, and C2 and C3, where they bind at all, bind only after the window has closed. Proposition 1 is therefore an exact characterisation of infeasibility under Semantics I, and it is this converse that the control case of Section 5.5 exercises.
 
 *Corollary 1.1 (cross-border case).* For cross-border audit records, $F(a)$ is the period left to national law: 72 months in the Norwegian pilot, as set by Helsedirektoratet as controller, 120 as reported in the literature and used illustratively in Chapter 5. The system is infeasible for record $a$ whenever an erasure request arrives at any month $t_r(a) \le t(a) + F(a)$ − $\delta$: that is, at any point but the last $\delta$ months of the window, whatever its length, so, under the baseline response period, a request in any of the 72 months from $t(a)$ to $t(a) + 71$ collides with the pilot's six-year floor. The condition is therefore not one of unusual timing: it holds for a request arriving in any but the last month of the window. How often data subjects exercise Article 17 is an empirical question that the model does not answer (Chapter 3, Section 3.7).
 

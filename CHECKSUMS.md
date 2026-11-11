@@ -20,7 +20,7 @@ Regenerate after any change with the snippet at the end of `CODE_REVIEW.md`.
 | `code_artefacts/z3_check.py` | 3342a7f3a160 | 160 |
 | `demo_app/README.md` | 37e5bc9dac83 | 78 |
 | `demo_app/README_repo.md` | 6d3ff6f3edfa | 3 |
-| `demo_app/app.py` | 1388d35fcd2c | 1124 |
+| `demo_app/app.py` | 8b39ccece076 | 1126 |
 | `demo_app/cross_sector_check.py` | 65130c3758e6 | 113 |
 | `demo_app/crypto_envelope.py` | 041627b58210 | 122 |
 | `demo_app/docs/expected_cross_sector_output.txt` | b61cd4e6b6e6 | 23 |
