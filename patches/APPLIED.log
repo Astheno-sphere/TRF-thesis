@@ -1671,3 +1671,5 @@
 2026-11-11 23:16 | P133_prop1_scope_and_restatements.py | P133-06 | Chapter7_Conclusion_v1.md | 9dfcec600055 -> c9b459ec4f40 | restate Proposition 4 with its premise
 2026-11-11 23:18 | P134_viewer_prop1_copies.py | P134-01 | demo_app/app.py | 1388d35fcd2c -> 8b39ccece076 | viewer copy of app.py: Proposition 1 statement as in Chapter 4 (TRF e92f081)
 2026-11-11 23:23 | P135_checksums_after_p134.py | P135-01 | CHECKSUMS.md | 2f639ae043c3 -> 17438f496d61 | checksum row after P134
+2026-11-11 23:47 | P136_prop4_premise.py | P136-01 | Front_Matter_v1.md | 05a7db8313da -> 09b7074afe78 | Proposition 4 with its premise
+2026-11-11 23:47 | P136_prop4_premise.py | P136-02 | Front_Matter_v1.md | 05a7db8313da -> 09b7074afe78 | Proposition 4 with its premise
