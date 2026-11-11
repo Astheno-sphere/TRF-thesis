@@ -13,7 +13,7 @@ This register lists the single live copy of every deliverable. If a file is not 
 | Type | File | md5 | Words | Modified | Contents |
 |---|---|---|---|---|---|
 | THESIS | VERA-SNARK_Thesis_SUBMISSION.md | b6494fb45130 | 77,568 | 11 Nov 23:18 | Assembled submission: front matter, Ch1-7, single bibliography, App A-C |
-| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | d85be9a09c46 | 176 eq, 25 tbl | 11 Nov 23:25 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
+| THESIS | VERA-SNARK_Thesis_SUBMISSION.docx | d8ee6a0c501f | 176 eq, 25 tbl | 11 Nov 23:42 | Word build of the submission, rebuilt 2 Oct from the base. Native equations, no LaTeX leakage. Awaiting the HiMolde template for styling |
 | THESIS | Front_Matter_v1.md | 05a7db8313da | 3,296 | 9 Nov 13:27 | Title, abstract, Sammendrag, contribution, declarations, nomenclature, TOC (Version and Change Record moved to the repository, P27) |
 | THESIS | Chapter1_Introduction_v2.md | 0cba91115e43 | 5,184 | 9 Nov 02:43 | Chapter 1 |
 | THESIS | Chapter2_LitReview_v2_FINAL.md | 876f72657146 | 14,571 | 9 Nov 02:43 | Chapter 2 incl. review protocol §2.1 |
