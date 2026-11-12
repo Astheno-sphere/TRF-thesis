@@ -13,7 +13,7 @@ INDEX = [
     ("Live demonstration", "trfhimolde.streamlit.app",
      "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs."),
     ("Archived code", "doi.org/10.5281/zenodo.23989242",
-     "Release 1.3.0, the code Appendix A reproduces. All versions: doi.org/10.5281/zenodo.23819274."),
+     "Release 1.3.0, the code Appendix A reproduces and the thesis cites. Release 1.3.1 changes viewer wording and documentation only. All versions: doi.org/10.5281/zenodo.23819274."),
     ("This supplement", "Five parts, listed on the cover",
      "Material that supports the examination without being part of the examined text."),
     ("Repository", "github.com/Astheno-sphere/TRF-thesis, branch joao-base",
@@ -29,9 +29,9 @@ PARTS = [
 ]
 
 REPRO_STEPS = [
-    ("Get the code", "git clone -b joao-base https://github.com/Astheno-sphere/TRF-thesis && cd TRF-thesis/demo_app",
+    ("Get the code", "git clone -b joao-base https://github.com/Astheno-sphere/TRF-thesis",
      "or download release 1.3.0 from Zenodo"),
-    ("Run the checker", "python3 trf_checker.py",
+    ("Run the checker", "cd TRF-thesis/demo_app && python3 trf_checker.py",
      "standard library only, under a second"),
     ("Run the tests", "pip install -r requirements.txt pytest && python3 -m pytest -q tests/",
      "56 passed"),
@@ -71,6 +71,15 @@ DOSSIER_ROUNDS = [
     ("Code audit, two passes", "6 Nov 2026",
      "An AI code review in the style of CodeRabbit, then a deeper read-only pass for what it missed.",
      "First pass: 1 critical, 16 major, 14 minor. Second pass: 1 critical, 5 major, 7 minor. Each checked before acting; one left to the author; every re-runnable recorded run still byte-identical (the full-cohort record keeps its old result wording); release 1.3.0."),
+    ("Sync and citation audits", "9 Nov 2026",
+     "Two AI agents: one set the thesis, this supplement, the archived release, the code and the viewer against each other; one checked every citation against its reference and spot-verified the DOIs.",
+     "Six blunders fixed, among them four Appendix A line counts the earlier pass missed and a supplement that contradicted itself on access. Diamantopoulos et al. (2019) rebuilt from the publisher's record; the revised Aikebaier (2026) preprint, now a sufficiency result rather than an equivalence, carried into five sites (P125 to P128)."),
+    ("Typesetting review, three rounds", "9 Nov 2026",
+     "An AI agent read every rendered page for gaps, broken tables, unreadable figures, wrong links and loud colour.",
+     "The thesis typeset in LaTeX from the unchanged text: linked contents, figures, tables, sections and propositions; booktabs tables; rotated diagrams; references to cited documents' own tables no longer linked into the thesis (B-59 to B-63)."),
+    ("Examiner pass", "11 to 12 Nov 2026",
+     "An AI agent acting as examiner on the statements of the propositions against their proofs.",
+     "Proposition 1 scoped to the records its proof covers, with its converse as a remark; Proposition 4 stated with its legal premise in Chapter 7, the Abstract and the Sammendrag (P133, P136). Release 1.3.1 carries the same wording in the viewer; no computed figure changed."),
 ]
 
 # Gauntlet-style findings: id, severity, fault, evidence, fix, verified by
@@ -143,6 +152,10 @@ AUDIT = [
      "Files present in the public thesis repository.",
      "Not changed: the author's decision. The repositories stay public until the author makes them private; Appendix D is reproduced with the sender's permission.",
      "Open."),
+    ("E-M1", "Major", "Proposition 1 claimed infeasibility from the ceiling for every record, but constraint C3 binds only records the ceiling reaches.",
+     "For a primary-use record a deletion deadline inside the window contradicts nothing; the proof covered only secondary-use records with the link to the patient kept.",
+     "The ceiling disjunct scoped to secondary use with that link, as C3 is; the converse stated as a remark; Chapters 5 and 7 restated to match (P133).",
+     "Viewer statement checked word for word against Chapter 4 by a test; 56 pass; every computed figure unchanged."),
 ]
 
 AUDIT_MINOR = ("The minor findings of both passes were fixed or documented, among them: decryption that crashed on an "
@@ -151,7 +164,7 @@ AUDIT_MINOR = ("The minor findings of both passes were fixed or documented, amon
                "payloads real. Two printed lines changed on purpose and were re-recorded; no result figure in the thesis changed.")
 
 EVIDENCE = [
-    ("Proposition 1", "Under plaintext verifiability the three obligations are infeasible whenever a deadline falls inside the retention window.",
+    ("Proposition 1", "Under plaintext verifiability the three obligations are infeasible whenever the erasure deadline, or for records the ceiling reaches the deletion deadline, falls inside the retention window.",
      "§4.6", "check_semantics_I; brute_force_semantics_I; z3_check P1", "recorded run; cross-check test (31 cases); Z3 P1 (both directions)"),
     ("Proposition 2", "Under accountability-preserving verifiability they are jointly satisfiable for every record, request pattern and floor.",
      "§4.7", "check_semantics_II; V_II; integrity", "recorded run; 3 tamper tests; exit status"),
