@@ -26,7 +26,7 @@ No instrument reconciles them. The implementing acts that must specify Secure Pr
 
 The TRF Model writes the three obligations as constraints and makes one thing explicit that the law leaves implicit: **what "verifiable" means**.
 
-- **Proposition 1.** If *verifiable* means *readable in plaintext*, the constraints are infeasible whenever an erasure or deletion deadline falls inside the retention window.
+- **Proposition 1.** If *verifiable* means *readable in plaintext*, the constraints are infeasible whenever an erasure deadline, or a deletion deadline for a record the ceiling reaches, falls inside the retention window.
 - **Proposition 2.** If *verifiable* means *accountable* (who acted, when, a hiding commitment, a logged invalidation entry), they are jointly satisfiable for every arrival pattern of requests and every retention floor.
 - **Proposition 3.** A ceiling collides with a floor only if it is no longer than the floor; the event it is anchored to decides whether the collision is visible in the text or only in each record's history.
 - **Proposition 4.** Under Semantics I, and assuming a controller that receives a relocated record receives the Article 17 obligation with it, moving the record out of the regulated environment meets the ceiling but not the right to erasure.
