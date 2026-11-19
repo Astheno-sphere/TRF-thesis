@@ -11,19 +11,28 @@ INDEX = [
     ("Thesis", "VERA-SNARK_Thesis_SUBMISSION (Word and PDF)",
      "The examined text: seven chapters, Appendices A to D, references."),
     ("Live demonstration", "trfhimolde.streamlit.app",
-     "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs."),
+     "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs. It runs TRF 0c540b7, not archived (table below)."),
     ("Archived code", "doi.org/10.5281/zenodo.23989242",
-     "Release 1.3.0, the code Appendix A reproduces and the thesis cites. Release 1.3.1 changes viewer wording and documentation only. All versions: doi.org/10.5281/zenodo.23819274."),
+     "Release 1.3.0, the code Appendix A reproduces and the thesis cites. Release 1.3.1 adds the viewer's restyle, the scoped Proposition 1 statement and re-synced documentation; no computation changed. All versions: doi.org/10.5281/zenodo.23819274."),
     ("This supplement", "Five parts, listed on the cover",
      "Material that supports the examination without being part of the examined text."),
     ("Repository", "github.com/Astheno-sphere/TRF-thesis, branch joao-base",
      "Thesis, code (demo_app/), reproduction package, full history, change trail and inspector."),
 ]
 
+CODEMAP = [
+    ("Release 1.3.0", "8f785e3", "10.5281/zenodo.23989242", "Cited by the thesis; Appendix A and Table 5.1 count this code", "1124 / 217"),
+    ("Release 1.3.1", "e92f081", "10.5281/zenodo.24148156", "Scoped Proposition 1 in the viewer; restyle", "1126 / 217"),
+    ("Current viewer", "TRF 0c540b7", "none, not archived", "Hosted app and demo_app/; readability pass", "1126 / 233"),
+]
+CODEMAP_NOTE = ("No computation differs between the three: the six result modules are byte-identical. The thesis and the commands in Part 1 refer to release 1.3.0.")
+REVIEWERS_NOTE = ("Apart from the supervisor's, the reviews reported here were by AI agents; the verification recorded is the "
+                  "author's own re-check, not a third party's. The Zenodo record contents and the Word page numbers were not independently verified.")
+
 PARTS = [
     ("Reproduce in five minutes", "One page: the commands, the numbers you should see, and where they appear in the thesis."),
-    ("Verification dossier", "Three hostile reviews of the thesis, a two-pass audit of the code, and a search for prior art: what each found and how each finding was resolved."),
-    ("Evidence map", "Every load-bearing claim, the section that makes it, the code that checks it and the test that guards it."),
+    ("Verification dossier", "Red-team, examiner and supervisor reviews of the thesis, a two-pass audit of the code, sync, citation and typesetting audits, and a search for prior art: what each found and how each finding was resolved."),
+    ("Evidence map", "The principal claims, the section that makes each, the code that checks it and the test that guards it, where one exists."),
     ("Policy brief, English", "Two findings for the Norwegian authorities who will set retention for the cross-border audit trail."),
     ("Notat, norsk", "The same brief in Norwegian."),
 ]
@@ -35,8 +44,8 @@ REPRO_STEPS = [
      "standard library only, under a second"),
     ("Run the tests", "pip install -r requirements.txt pytest && python3 -m pytest -q tests/",
      "56 passed"),
-    ("Run everything", "cd ../repro_package && ./run_all.sh",
-     "seven diffs, all empty"),
+    ("Run everything", "cd ../repro_package && bash run_all.sh",
+     "prints seven diff commands; run them: all empty"),
 ]
 
 REPRO_EXPECT = [
@@ -68,12 +77,12 @@ DOSSIER_ROUNDS = [
     ("Prior-art and new-law search", "2 Nov 2026",
      "Literature and law to November 2026, including Norwegian sources.",
      "No work found that models floor, right and ceiling together. Three updates written in: EDPS v SRB (C-413/23 P), Implementing Regulation (EU) 2026/2083, the designation of Folkehelseinstituttet."),
-    ("Code audit, two passes", "6 Nov 2026",
+    ("Code audit, two passes", "5 to 6 Nov 2026",
      "An AI code review in the style of CodeRabbit, then a deeper read-only pass for what it missed.",
-     "First pass: 1 critical, 16 major, 14 minor. Second pass: 1 critical, 5 major, 7 minor. Each checked before acting; one left to the author; every re-runnable recorded run still byte-identical (the full-cohort record keeps its old result wording); release 1.3.0."),
+     "First pass: 1 critical, 16 major, 14 minor. Second pass: 1 critical, 5 major, 7 minor. Each checked before acting; one left to the author; every re-runnable recorded run reproduces byte for byte (two were re-recorded after two printed lines were reworded on purpose; the full-cohort record keeps its old wording); release 1.3.0."),
     ("Sync and citation audits", "9 Nov 2026",
      "Two AI agents: one set the thesis, this supplement, the archived release, the code and the viewer against each other; one checked every citation against its reference and spot-verified the DOIs.",
-     "Six blunders fixed, among them four Appendix A line counts the earlier pass missed and a supplement that contradicted itself on access. Diamantopoulos et al. (2019) rebuilt from the publisher's record; the revised Aikebaier (2026) preprint, now a sufficiency result rather than an equivalence, carried into five sites (P125 to P128)."),
+     "Eight corrections, all fixed, among them four Appendix A line counts the earlier pass missed and a supplement that contradicted itself on access. Diamantopoulos et al. (2019) rebuilt from the publisher's record; the revised Aikebaier (2026) preprint, now a sufficiency result rather than an equivalence, carried into seven body sites and the reference entries (P125 to P128)."),
     ("Typesetting review, three rounds", "9 Nov 2026",
      "An AI agent read every rendered page for gaps, broken tables, unreadable figures, wrong links and loud colour.",
      "The thesis typeset in LaTeX from the unchanged text: linked contents, figures, tables, sections and propositions; booktabs tables; rotated diagrams; references to cited documents' own tables no longer linked into the thesis (B-59 to B-63)."),
@@ -123,7 +132,7 @@ AUDIT = [
     ("M12, M13", "Major", "The trail inspector could not pass outside the author's machine.",
      "Tag never pushed; pandoc crash; check 4 misread patch ranges; check 14 replayed every file from the tag.",
      "Loud failures; pandoc checked; ranges read; check 14 replays each file from the state its first logged patch began from.",
-     "Inspector passes every check, including check 14 for the first time since October."),
+     "The inspector passes with no failing check, check 14 included for the first time since October; check 4 warns that 11 later patches were committed in batches rather than one commit per patch."),
     ("M14", "Major", "The submission Word file was the one artefact no gate inspected.",
      "Page numbers left as #; a failed LibreOffice step still exited 0; the file was overwritten in place.",
      "Page numbers by default; failure on missing content or tools; atomic write with a CRC check; new inspector check 15.",
@@ -153,8 +162,8 @@ AUDIT = [
      "Not changed: the author's decision. The repositories stay public until the author makes them private; Appendix D is reproduced with the sender's permission.",
      "Open."),
     ("E-M1", "Major", "Proposition 1 claimed infeasibility from the ceiling for every record, but constraint C3 binds only records the ceiling reaches.",
-     "For a primary-use record a deletion deadline inside the window contradicts nothing; the proof covered only secondary-use records with the link to the patient kept.",
-     "The ceiling disjunct scoped to secondary use with that link, as C3 is; the converse stated as a remark; Chapters 5 and 7 restated to match (P133).",
+     "For a primary-use record a deletion deadline inside the window contradicts nothing; the proof covered only secondary-use records the ceiling reaches (\u03c1 = 1: the log entry is itself electronic health data).",
+     "The ceiling disjunct scoped to secondary-use records the ceiling reaches, as C3 is; the converse stated as a remark; Chapters 5 and 7 restated to match (P133).",
      "Viewer statement checked word for word against Chapter 4 by a test; 56 pass; every computed figure unchanged."),
 ]
 
@@ -167,18 +176,18 @@ EVIDENCE = [
     ("Proposition 1", "Under plaintext verifiability the three obligations are infeasible whenever the erasure deadline, or for records the ceiling reaches the deletion deadline, falls inside the retention window.",
      "§4.6", "check_semantics_I; brute_force_semantics_I; z3_check P1", "recorded run; cross-check test (31 cases); Z3 P1 (both directions)"),
     ("Proposition 2", "Under accountability-preserving verifiability they are jointly satisfiable for every record, request pattern and floor.",
-     "§4.7", "check_semantics_II; V_II; integrity", "recorded run; 3 tamper tests; exit status"),
+     "§4.7", "check_semantics_II; V_II; integrity", "recorded run, which prints the three tamper cases"),
     ("Proposition 3", "A ceiling collides with a floor if and only if the ceiling ends no later than the floor.",
      "§4.6", "z3_check P3; cross_sector_check", "Z3 with off-by-one mutation"),
     ("Proposition 4", "Moving a record out of the regulated environment meets the ceiling but not the right (stated premise).",
-     "§4.10", "argued, not executed", "premise listed in §3.7"),
+     "§4.10", "argued, not executed", "none automated; premise listed in §3.7"),
     ("Corollary 1.2", "Infeasibility without any erasure request, on the broad reading of Art. 68(12), for logs kept at patient-record granularity.",
      "§4.6, §5.4", "cor12 count in trf_checker", "ledger: 39 witnesses"),
     ("95 / 90 of 200", "Semantics I violations and records.", "Table 5.3", "trf_checker.main", "byte-identical recorded run"),
     ("138, 52 / 86, 0", "Invalidations, their grounds, Semantics II violations.", "Table 5.6", "apply_invalidation; check_semantics_II", "recorded run; ledger"),
-    ("200 of 200", "Records verifying against the audit log root.", "§5.7", "MerkleLog; integrity", "tamper tests must fail"),
-    ("Payload independence", "No figure moves with Synthea (synthetic) payloads.", "Table 5.7", "synthea_layer", "exit status on divergence"),
-    ("Attested, not proven", "Key destruction is simulated; the residue is pseudonymised, not anonymous.", "§4.8, §4.9", "crypto_envelope; docstrings", "stated in code, app and thesis"),
+    ("200 of 200", "Records verifying against the audit log root.", "§5.7", "MerkleLog; integrity", "recorded run, which prints the tamper cases"),
+    ("Payload independence", "No figure moves with Synthea (synthetic) payloads.", "Table 5.7", "synthea_layer", "recorded run of synthea_layer"),
+    ("Attested, not proven", "Key destruction is simulated; the residue is pseudonymised, not anonymous.", "§4.8, §4.9", "crypto_envelope; docstrings", "none automated; stated in code, app and thesis"),
 ]
 
 POLICY_EN = {
@@ -198,8 +207,8 @@ POLICY_EN = {
          "identified, keeping the patient link against an erasure request before Article 9 EHDS applies on 26 March "
          "2029, and after its 36 months, has no secure basis under Article 17(3)(b)."),
         ("Keeping and erasing can both be met, if \"verifiable\" means accountable.",
-         "If an audit record must stay readable to count as verifiable, the duties cannot all be met whenever a deadline "
-         "falls inside the retention period. If it is enough to keep who acted, when, a cryptographic commitment to the "
+         "If an audit record must stay readable to count as verifiable, the duties cannot all be met whenever an erasure "
+         "deadline, or a deletion deadline that applies to the record, falls inside the retention period. If it is enough to keep who acted, when, a cryptographic commitment to the "
          "content and a logged invalidation entry, then in the model they can be met for every record: the content goes "
          "at its deadline and the record stays checkable. The thesis specifies a mechanism for this and checks it in code "
          "on synthetic data."),
@@ -232,8 +241,8 @@ POLICY_NO = {
          "seks årene, har det ikke noe sikkert grunnlag i artikkel 17 nr. 3 bokstav b å beholde pasientkoblingen når "
          "pasienten ber om sletting, før EHDS artikkel 9 får anvendelse 26. mars 2029, og etter de 36 månedene den fastsetter."),
         ("Oppbevaring og sletting kan begge oppfylles, dersom «verifiserbar» betyr at ansvaret kan etterprøves.",
-         "Må en revisjonspost kunne leses for å regnes som verifiserbar, kan pliktene ikke oppfylles samtidig når en frist "
-         "faller innenfor lagringstiden. Er det nok å bevare hvem som handlet, når, en kryptografisk binding (commitment) "
+         "Må en revisjonspost kunne leses for å regnes som verifiserbar, kan pliktene ikke oppfylles samtidig når en slettefrist "
+         "for pasienten, eller en slettefrist som gjelder posten, faller innenfor lagringstiden. Er det nok å bevare hvem som handlet, når, en kryptografisk binding (commitment) "
          "til innholdet og en logget ugyldiggjøring, kan pliktene i modellen oppfylles for hver post: innholdet slettes "
          "ved fristen, og posten kan fortsatt kontrolleres. Oppgaven beskriver en mekanisme for dette og kontrollerer den "
          "i kode på syntetiske data."),
@@ -253,7 +262,8 @@ EXHIBITS = [
     ("P2-C1", "One audit log per population, bound at creation", "trf_checker.py", "TRF 067baec",
      ['def log_creation(rec):',
       '    if getattr(rec, "log_idx", None) is None:',
-      '        rec.log_idx = {"access": AUDIT_LOG.append(_creation_entry(rec))}'],
+      '        rec.log = AUDIT_LOG   # the log of the population this record belongs to',
+      '        rec.log_idx = {"access": rec.log.append(_creation_entry(rec))}'],
      ['def __init__(self, rid, t_a, floor, sigma, payload, t_r=INF, t_pi=INF, log=None):',
       '    self.log = log if log is not None else AUDIT_LOG',
       '',
@@ -276,14 +286,14 @@ EXHIBITS = [
      ['detected = not (ok_t or ok_g or ok_p)',
       'return 0 if (total_v2 == 0 and cross_ok and n_ok == len(records) and detected) else 1'],
      "A cross-check disagreement, a record failing its inclusion proof or an undetected tamper now exits non-zero.",
-     "CI on Python 3.11 to 3.13"),
+     "none automated; the exit status is not asserted by any test (CI runs the recorded-output comparison on 3.11 to 3.13)"),
     ("Minor", "An unauthenticated ciphertext counts as refused", "crypto_envelope.py", "TRF fb2650e",
      ['except KeyError:',
       '    refused += 1'],
      ['except (KeyError, InvalidTag):',
       '    refused += 1'],
      "A tampered ciphertext used to crash the run instead of being counted as unreadable.",
-     "recorded run, byte-identical"),
+     "none automated; the recorded run does not reach the tampered-ciphertext path"),
     ("M14", "The submission file is written atomically and checked", "handoff_tools/build_docx.py", "thesis f204d54",
      ['with zipfile.ZipFile(OUT, "w", zipfile.ZIP_DEFLATED) as z:'],
      ['if not (tables and toc and nlinks):',
@@ -300,6 +310,6 @@ EXHIBITS = [
      ['first_before.setdefault(r["file"], r["before"])',
       'state[f] = start_state(f)   # tag copy, or the committed blob whose md5',
       '                            # equals the first logged "before" md5'],
-     "The replay failed by construction since October. It now replays all 48 files exactly, so the patch log accounts for every change it took over.",
+     "The replay failed by construction since October. It now replays all 49 files exactly (48 when the check was fixed), so the patch log accounts for every change it took over.",
      "trail_check check 14"),
 ]

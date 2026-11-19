@@ -1,14 +1,25 @@
 # Code Review: Findings and Resolutions
 
-*Supplement to Appendix A. Two review passes over the artefact, 6 November 2026, and what was done about each finding.*
+*Supplement to Appendix A. Two review passes over the artefact, 5 to 6 November 2026 (git commit times, UTC), and what was done about each finding.*
 
 | | |
 |---|---|
 | Pass 1 | External review in the style of CodeRabbit, on a fresh clone of branch `joao-base` at `9d69d7c` (2 Nov). Three readers: core logic; demo app and reproducibility; tooling and hygiene. |
 | Pass 2 | A deeper read-only hunt for what pass 1 missed, run against `main` while the pass-1 fixes were being made, so it also caught a flaw in one of those fixes. |
 | Rule applied | Every finding was reproduced or checked against the code before anything changed. A finding that did not hold is marked as such. No result-producing number was allowed to move. |
-| Code repository | https://github.com/Astheno-sphere/TRF, commits `fb2650e`, `dc9d4c0`, `067baec`, `8f785e3` (CHANGE_TRAIL rows R-33 to R-36); release 1.3.0 |
-| Thesis repository | patches P115 (code and packaging sync), P116 (Appendix A listings), P117 (thesis text), P118 (checksums), P119 (viewer), P120 (release 1.3.0 cited); CHANGE_TRAIL rows P115 to P120 |
+| Code repository | https://github.com/Astheno-sphere/TRF, commits `fb2650e`, `dc9d4c0`, `067baec`, `8f785e3` (CHANGE_TRAIL rows R-33 to R-36), committed 5 November 2026 between 19:40 and 20:21 UTC; release 1.3.0 |
+| Thesis repository | patches P115 (code and packaging sync), P116 (Appendix A listings), P117 (thesis text), P118 (checksums), P119 (viewer), P120 (release 1.3.0 cited); CHANGE_TRAIL rows P115 to P120 (the trail dates P115 and P120 to 6 November; git has them on 5 November) |
+| Other links | Thesis repository: github.com/Astheno-sphere/TRF-thesis, branch `joao-base`; live viewer: trfhimolde.streamlit.app; concept DOI 10.5281/zenodo.23819274 (all versions) |
+
+**Which code is which.** This document describes the code states below; the statements in Sections 1 to 8 are about release 1.3.0 unless they say otherwise.
+
+| Version | Commit | DOI | What it is | `app.py` / `ui.py` lines |
+|---|---|---|---|---|
+| Release 1.3.0 | `8f785e3` (5 Nov 2026) | 10.5281/zenodo.23989242 | Cited by the thesis; Appendix A and Table 5.1 count this code | 1124 / 217 |
+| Release 1.3.1 | `e92f081` (tagged 11 Nov 2026, 23:17 UTC) | 10.5281/zenodo.24148156 | Scoped Proposition 1 in the viewer; type and surface restyle | 1126 / 217 |
+| Current viewer | TRF `0c540b7` (11 Nov 2026, 23:57 UTC) | none, not archived | Hosted app and `demo_app/`; readability pass | 1126 / 233 |
+
+No computation differs between them: all six result modules are byte-identical (`git diff --stat v1.3.0 d1db485` in the code repository lists only `app.py`, `ui.py`, documentation and metadata). The reviewers were AI agents; the "Verified" column records the author's own re-checks, not a third party's. The contents of the Zenodo records and the Word page numbers were not independently verified. Where a row below names a guard, the test or check that fails if the fix is undone, it is given as "Guarded by"; "none automated" means nothing fails.
 
 ## 1. Verdict
 
@@ -18,7 +29,7 @@ What was broken was the verification story around those numbers: a reproduction 
 
 - **Seven of the eight recorded runs are byte-identical** to fresh runs, except two lines reworded on purpose (Section 4); `repro_package/run_all.sh` diffs clean on all seven of its comparisons. The eighth, the full-cohort comparison (A.17), cannot be re-run without regenerating the 98-bundle cohort and keeps the old wording of its result line; no figure in it depends on that line.
 - **56 automated tests pass**, in the code repository and now also from `demo_app/` in this repository.
-- **The trail inspector passes every check** (`handoff_tools/trail_check.py`: TRAIL INTACT), including check 14, the full replay, which had failed since October. That failure was a flaw in how the check replayed files, not an unlogged edit; Section 5 explains.
+- **The trail inspector passes with no failing check** (`handoff_tools/trail_check.py`: TRAIL INTACT, 0 fail, 1 warn), check 14, the full replay, included, which had failed since October. Check 4 warns that 11 later patches (P85, P94b, P129 to P135, P137, P138) were committed in batches rather than one commit per patch. That failure was a flaw in how the check replayed files, not an unlogged edit; Section 5 explains.
 
 ## 2. Pass 1 findings
 
@@ -36,7 +47,7 @@ What was broken was the verification story around those numbers: a reproduction 
 | M2 | Appendix A.5 commands failed from `code_artefacts/`. | Yes | A.5 now says where the commands run: the release root, `repro_package/` or `demo_app/`, all of which match the release layout. `code_artefacts/` is for reading beside the appendix; `DATA_LOCATION.md` says so. The realism layer also finds the subset at `../repro_package/data/synthea_subset/`. |
 | M3 | The Merkle log detects divergence between a record and its log, not a rewrite of the log. | Yes | Stated in the code (`MerkleLog` docstring) and in Chapter 5, Section 5.7: a rewrite needs a root published outside the log, which Chapter 6, Section 6.1 specifies and the code does not implement. |
 | M4 | Semantics II: C2 and C3 hold by construction; only the integrity check can fail. | Yes | Stated in the `check_semantics_II` docstring and in Section 5.7, which now names the integrity check as the falsifiable part of the result. |
-| M5 | `brute_force_semantics_I` answered wrongly when the horizon left retention months unexamined. | Yes, outside the thesis's own calls | Now raises `ValueError` on such a horizon; precondition documented; new test. The checker also compares the cross-check with itself on its four cases and fails on a disagreement. |
+| M5 | `brute_force_semantics_I` answered wrongly when the horizon left retention months unexamined. | Yes, outside the thesis's own calls | Now raises `ValueError` on such a horizon; precondition documented; new test. The checker also compares the cross-check with itself on its four cases and fails on a disagreement. Guarded by `test_brute_force_rejects_short_horizon`; the exit-status failure on disagreement is none automated. |
 | M6 | Repro README pointed at `src/trf_checker.py`. | Yes | Paths corrected; every command in the README and `run_all.sh` run from a clean state. |
 | M7 | `demo_app/` could not find the Synthea subset. | Yes | Solved without a second 40 MB copy: the layer's search path includes the repository's one copy. |
 | M8 | The global audit log grew with every rerun of the hosted app. | Yes (4,380 leaves after ten runs) | See Section 3, item P2-C1: the first fix was itself flawed. Each population now has its own log, bound to each record when it is created. Ten runs leave 438 leaves; the test suite runs in 13 s instead of 22 s. |
@@ -44,8 +55,8 @@ What was broken was the verification story around those numbers: a reproduction 
 | M10 | Repro README cited Tables 5.1 and 5.2 for results in Tables 5.3 and 5.4. | Yes | Corrected in the rebuilt table. |
 | M11 | `demo_app/README_repo.md` was a stale copy of an older README. | Yes | Replaced by a two-line pointer to the code repository's README. |
 | M12 | `trail_check.py` constants (`main`, `joao-base-v1`) did not match the reviewed clone. | Partly | The reviewer cloned branch `joao-base`, which lags `main`; on `main` the branch constant is right. The tag `joao-base-v1` had never been pushed, so no other machine could run checks 2 and 14: now pushed. `sh()` now fails loudly on a non-zero exit instead of returning empty output. |
-| M13 | `trail_check.py` crashed without pandoc; check 4 could not read "P107-P111:" commit lines; HEAD was committed past a failing check 14. | Yes | pandoc is checked with a clear message (also in `verify_base.py`); check 4 reads patch ranges; check 14 was redesigned (Section 5) and now passes. |
-| M14 | The submission `.docx` was ungated: `#` page numbers in a plain build, unchecked LibreOffice failures, non-atomic overwrite, no content assertions. | Yes | `build_docx.py` now runs the page-number pass by default (85 of 90 entries filled; Word fills the rest on opening), fails if LibreOffice or pdftotext fail or no page number is found, refuses to write a build with no tables, contents or links, and writes to a temporary file that passes a CRC check before replacing the submission. New trail check 15 confirms the `.docx` exists, is newer than the assembled text and carries its headings, tables and page references. |
+| M13 | `trail_check.py` crashed without pandoc; check 4 could not read "P107-P111:" commit lines; HEAD was committed past a failing check 14. | Yes | pandoc is checked with a clear message (also in `verify_base.py`); check 4 reads patch ranges; check 14 was redesigned (Section 5) and now passes. Guarded by trail checks 14 and 4. |
+| M14 | The submission `.docx` was ungated: `#` page numbers in a plain build, unchecked LibreOffice failures, non-atomic overwrite, no content assertions. | Yes | `build_docx.py` now runs the page-number pass by default, writing cached page numbers into the contents (the contents is now a native Word TOC field, B-61, and Word updates it on opening), fails if LibreOffice or pdftotext fail or no page number is found, refuses to write a build with no tables, contents or links, and writes to a temporary file that passes a CRC check before replacing the submission. New trail check 15 (the guard for this row) confirms the `.docx` exists, is newer than the assembled text and carries its headings, tables and page references. |
 | M15 | `CHECKSUMS.md` in this repository described the code repository. | Yes | Now lists this repository's own code copies (44 files); the code repository keeps its own. Trail check 12 now reads the code repository's `CHECKSUMS.md` instead of this one. |
 | M16 | `concordance.py --check` passed vacuously from another directory. | Yes | Paths anchored to the repository; missing files or zero references now fail. |
 
@@ -55,7 +66,7 @@ What was broken was the verification story around those numbers: a reproduction 
 |---|---|
 | `key_id_commitment` is an unsalted digest of a predictable toy key | Documented in the code as a key-identifier digest, not a hiding commitment. Changing it would change the printed log root; the toy keys are themselves predictable. |
 | Derived salts repeat with period 256 | Documented; the 200-record run stays inside one period. |
-| `crypto_envelope` crashed on `InvalidTag` | Counted as refused, in the module and at both decrypt sites in the app. |
+| `crypto_envelope` crashed on `InvalidTag` | Counted as refused, in the module and at both decrypt sites in the app. Guarded by: none automated; the recorded run does not reach the tampered-ciphertext path. |
 | Z3: accountability conjuncts instantiated true; no timeout; full model printed on SAT | Comment added; 120 s timeout per check (unknown counts as failure); a verdict line instead of the model. Chapter 5, Section 5.5 already disclosed the first point. |
 | `integrity()` weaker than `V_II`; delta-witness not in the exit code | The delta witness now fails the exit status on any Semantics II violation; the reported 200/200 is the integrity check by design, and Semantics II itself is reported through `V_II`. |
 | Pseudonyms `PSN-{rid % 100}` collide | Documented: 100 synthetic patients, so records share patients as real logs do; no figure depends on uniqueness. Changing it would change the log root. |
@@ -72,7 +83,7 @@ What was broken was the verification story around those numbers: a reproduction 
 
 | # | Finding | Verified | Resolution |
 |---|---|---|---|
-| P2-C1 | **The first audit-log fix was flawed.** Records were attached to a log only when first invalidated, so two populations generated before invalidation shared one log, and records built directly (Norwegian and cross-sector modules, Explore page) wrote into whichever log was current, on the server possibly the cached thesis population's. A first attempt that cleared the log on every rerun crashed the cached population. | Yes (438 leaves became 933 after one Norwegian and one cross-sector run) | `Record(..., log=)` binds the log at creation; `generate()`, the Norwegian and cross-sector builds and the Explore page each start their own log and pass it explicitly, so concurrent sessions cannot swap it under a population. New test: an earlier population's log is untouched by later runs and still verifies. |
+| P2-C1 | **The first audit-log fix was flawed.** Records were attached to a log only when first invalidated, so two populations generated before invalidation shared one log, and records built directly (Norwegian and cross-sector modules, Explore page) wrote into whichever log was current, on the server possibly the cached thesis population's. A first attempt that cleared the log on every rerun crashed the cached population. | Yes (438 leaves became 933 after one Norwegian and one cross-sector run) | `Record(..., log=)` binds the log at creation; `generate()`, the Norwegian and cross-sector builds and the Explore page each start their own log and pass it explicitly, so concurrent sessions cannot swap it under a population. New test: an earlier population's log is untouched by later runs and still verifies (guarded by `test_each_population_keeps_its_own_log`). |
 | P2-M1 | Line counts in Table 5.1, §5.2 and Appendix A disagreed with the files and each other. | Yes | Regenerated with `wc -l` at the final code (P117); the non-comment count is 466. Four listing headers in Appendix A (A.10, A.12, A.13, A.15) were missed and still gave the old counts; corrected on 9 Nov (P125) after a sync audit. |
 | P2-M2 | §5.2 said payloads are drawn from Synthea; the reported run uses constructed payloads (43 bytes). | Yes | §5.2 now says so; Synthea serves the comparison of §5.8 only. |
 | P2-M3 | Two Synthea cohorts were conflated (16 September, without `-r`, which gave the subset and 1,006 bytes; 6 October, with `-r 20260916`, which gave Table 5.7's 1,002 bytes). | Yes | `Data_Provenance_Statement.md`, the subset README and `HOW_TO_RUN.md` now name both, in both repositories. |
@@ -81,7 +92,7 @@ What was broken was the verification story around those numbers: a reproduction 
 | Minor | "Shows a failure notice rather than results" was false: the page shows results, then the notice. | Yes | Thesis text (§5.8, Appendix A) now says "beside the results". |
 | Minor | The Semantics II row of the record life strip was drawn, not computed. | Yes | Computed from `V_II` per month; a failing month shows as "fails its check". |
 | Minor | App: verdict said "Semantics II holds" even on failure; Explore caption gave 6/π (600% at π = 1); record horizon capped at 130 although a floor can end at 131. | Yes | Fixed: conditional verdict, min(6, π)/π, horizon to 134. |
-| Minor | Exit status ignored undetected tampering, failed proofs and cross-check disagreement; the realism layer exited 0 on divergence. | Yes | The checker now fails on any of them; the realism layer exits 1 on divergence. |
+| Minor | Exit status ignored undetected tampering, failed proofs and cross-check disagreement; the realism layer exited 0 on divergence. | Yes | The checker now fails on any of them; the realism layer exits 1 on divergence. Guarded by: none automated; no test reads the exit status (the test suite compares recorded stdout; CI runs it on Python 3.11 to 3.13). |
 | Minor | Ties in the invalidation ground were broken silently. | Yes (4 records) | Documented: on a tie the data subject's request names the ground. |
 | Minor | Overclaims: "real FHIR", "proved against the root", `del dek` "only the wrapped copy survives", an always-true "metadata intact" flag. | Yes | Reworded to synthetic, "checked by inclusion proof", no erasure claim, and a printed log-integrity result. |
 | Minor | CI tested Python 3.12 only; README said 54 tests. | Yes | CI matrix 3.11 to 3.13; 56 tests. |
@@ -99,7 +110,7 @@ No other line of any recorded run changed. No figure in the thesis changed.
 
 Check 14 replays every logged patch from the tag `joao-base-v1` and compares the result with the files on disk. It skipped the D0 rebase that P01 is written against, and it started every file from its tag state, although many files gained content outside the patch log before their first patch: files created later (Appendix D) and code synced from the code repository. The replay therefore failed by construction for those files, and a genuine unlogged edit would have produced the same symptom, so the failure proved nothing either way.
 
-The check now includes D0 and starts each file from the state its first logged patch began from: the tag's copy when the checksums agree, otherwise the committed version whose checksum equals that first logged "before" value. A file with no such committed state fails the check by name. Every one of the 48 files now replays exactly, so the patch log fully accounts for every change it took over.
+The check now includes D0 and starts each file from the state its first logged patch began from: the tag's copy when the checksums agree, otherwise the committed version whose checksum equals that first logged "before" value. A file with no such committed state fails the check by name. Every one of the 49 files now replays exactly (48 when the check was fixed; the patch log has grown since), so the patch log fully accounts for every change it took over.
 
 ## 6. Left as they are, deliberately
 
@@ -110,12 +121,12 @@ The check now includes D0 and starts each file from the state its first logged p
 
 ## 7. Release
 
-The reviewed code, with the viewer design pass that followed it, is release 1.3.0 (https://doi.org/10.5281/zenodo.23989242, code repository commit `8f785e3`), which the thesis now cites in the abstract footer and Appendix A.1. It produces the same figures as releases 1.0.1 to 1.2.0.
+The reviewed code, with the viewer design pass that followed it, is release 1.3.0 (https://doi.org/10.5281/zenodo.23989242, code repository commit `8f785e3`), which the thesis now cites in the abstract footer and Appendix A.1. It produces the same figures as releases 1.0.1 to 1.2.0. The later archive, release 1.3.1 (`e92f081`, DOI 10.5281/zenodo.24148156), is described in the table at the top and in Section 10.
 
 ## 8. How to check this yourself
 
 ```bash
-cd repro_package && ./run_all.sh          # then the seven diffs it prints: all empty
+cd repro_package && bash run_all.sh      # prints seven diff commands; run them: all empty
 cd ../demo_app && python3 -m pytest -q tests/   # 56 passed
 cd .. && python3 handoff_tools/trail_check.py    # TRAIL INTACT (needs pandoc)
 ```
@@ -137,12 +148,16 @@ EOF
 
 A presentation-only pass on the viewer, so that it reads as one walk rather than a list of pages: navigation grouped into the seven numbered steps of the walk, then full runs, then context that is not a thesis claim; the selected page marked by a rule instead of a radio dot; a brand mark of three bands in the diagram palette (retention floor, deadline, accountable); fact cards ruled in the colour of what each quantity is in the model; alerts in the palette instead of the framework's blue; a progress strip for the walk that names the next step; the framework's deploy toolbar hidden. No computation changed, and the 56 tests pass. Code repository commit `8f785e3`, thesis patches P119 and P121.
 
-After the release, a type and surface pass (IBM Plex Sans and Source Serif 4, white page, hairline surfaces instead of rounded cards; code repository commit `7e70bfe`, thesis patch P123) changed `ui.py` and `.streamlit/config.toml` only. No computation changed and the 56 tests pass. The hosted app and `demo_app/` run this version; the archived release 1.3.0 has the earlier styling.
+After the release, a type and surface pass (IBM Plex Sans and Source Serif 4, white page, hairline surfaces instead of rounded cards; code repository commit `7e70bfe`, thesis patch P123) changed `ui.py` and `.streamlit/config.toml` only. No computation changed and the 56 tests pass. This pass is in release 1.3.1 (`e92f081`); the archived release 1.3.0 has the earlier styling.
 
-## 10. After submission preparation: audits, release 1.3.1 (9 to 12 November 2026)
+The hosted app and `demo_app/` now run TRF `0c540b7` (readability pass, R-41, P137), which post-dates release 1.3.1 (`e92f081`) and is not archived on Zenodo. Table 5.1 and Appendix A count release 1.3.0 (`app.py` 1124, `ui.py` 217); `demo_app/` has 1126 and 233.
 
-- **Sync audit (9 Nov).** An AI agent set the thesis, the supplement, the archived release, the code and the viewer against each other. Six blunders, all fixed: four Appendix A listing headers still gave old line counts (A.10, A.12, A.13, A.15; missed by P117, so P2-M1's resolution above was incomplete); A.6 named `check_semantics_II()` where `apply_invalidation()` applies the trajectory; the full-cohort record (A.17) predates the reworded result line, so seven of eight recorded runs re-run byte for byte, not eight; the 1.3.0 archive holds an earlier copy of Appendix A; the supplement contradicted itself on repository access. Thesis patches P125 to P127, code repository R-38.
-- **Citation audit (9 Nov).** Diamantopoulos et al. (2019) rebuilt from the publisher's record; the Aikebaier (2026) preprint was revised on 4 November from an equivalence to a sufficiency result, carried into five sites; APA 7 consistency (P126, P128).
-- **Examiner pass (11 to 12 Nov).** Proposition 1's ceiling disjunct was stated for every record although C3 binds only records the ceiling reaches; scoped, with its converse as a remark, and Chapters 5 and 7 restated (P133). Proposition 4 now carries its legal premise in the Abstract and Sammendrag (P136). The viewer quotes the scoped statement, checked word for word by a test (R-40, P134).
+## 10. After submission preparation: audits, release 1.3.1, pre-defence review (9 to 19 November 2026)
+
+- **Sync audit (9 Nov).** An AI agent set the thesis, the supplement, the archived release, the code and the viewer against each other. Eight corrections, all fixed: four Appendix A listing headers still gave old line counts (A.10, A.12, A.13, A.15; missed by P117, so P2-M1's resolution above was incomplete); A.6 named `check_semantics_II()` where `apply_invalidation()` applies the trajectory; the full-cohort record (A.17) predates the reworded result line, so seven of eight recorded runs re-run byte for byte, not eight; the 1.3.0 archive holds an earlier copy of Appendix A; the supplement contradicted itself on repository access. Thesis patches P125 to P127, code repository R-38.
+- **Citation audit (9 Nov).** Diamantopoulos et al. (2019) rebuilt from the publisher's record; the Aikebaier (2026) preprint was revised on 4 November from an equivalence to a sufficiency result, carried into seven body sites (P126: Ch2 §2.4 twice, Ch6 §6.2; P128: Ch2 §2.8, §2.9 twice, Ch4 §4.9) and the reference entries; APA 7 consistency (P126, P128).
+- **Examiner pass (11 to 12 Nov).** Proposition 1's ceiling disjunct was stated for every record although C3 binds only records the ceiling reaches (secondary use with ρ = 1, that is, the log entry is itself electronic health data); scoped, with its converse as a remark, and Chapters 5 and 7 restated (P133). The summary restatements in Ch3 §3.4, Ch7 §7.1, the Abstract and the Front Matter kept the short form (a deadline inside the window) until P139 (19 Nov) brought them to the scoped form; the precise statement is §4.6. Proposition 4 now carries its legal premise in the Abstract and Sammendrag (P136). The viewer quotes the scoped statement, checked word for word by a test (R-40, P134).
 - **Viewer readability pass (12 Nov).** One centred reading column, larger type, darker labels; presentation only, 56 tests pass (R-41, P137).
-- **Release 1.3.1 (12 Nov),** DOI 10.5281/zenodo.24148156: viewer wording and documentation; no computed figure changed. The thesis cites 1.3.0. Zenodo metadata of 1.3.0 and 1.3.1 edited in place to a research-record description with limitations, references, a Norwegian abstract and EuroSciVoc and MeSH subjects (R-42).
+- **Release 1.3.1 (tagged 11 Nov, 23:17 UTC; 12 Nov in Norway),** `e92f081`, DOI 10.5281/zenodo.24148156: the viewer restyle (type, surfaces), the scoped Proposition 1 statement and re-synced documentation; no computed figure changed. The readability pass (`0c540b7`) came after the tag and is in no release. The thesis cites 1.3.0. Zenodo metadata of 1.3.0 and 1.3.1 edited in place to a research-record description with limitations, references, a Norwegian abstract and EuroSciVoc and MeSH subjects (R-42).
+- **Typesetting and links (9 Nov).** Word build on the HiMolde template (B-56, B-61); thesis PDF typeset in LaTeX (B-62); three rendering reviews (P129, P130, B-59 to B-63); one repository link, github.com/Astheno-sphere/TRF-thesis, branch `joao-base` (P131, P132); Appendix A.2 placeholders (P130, R-39). No result changed.
+- **Pre-defence review (19 Nov).** Three read-only AI reviews (thesis gaps, this audit report, the defence deck). The thesis summaries of Propositions 1 and 4 were brought to their scoped forms and three overclaims narrowed (P139). This report was corrected (findings R1 to R21 of the audit review).

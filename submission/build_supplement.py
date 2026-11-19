@@ -57,6 +57,9 @@ code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 /* index */
 .idx td:first-child{font-family:'Plex Sans';font-weight:600;width:32mm}
 .idx td:nth-child(2){width:62mm;color:var(--ox);font-family:'Plex Sans';font-size:8.8pt;font-weight:500}
+table.code{font-size:8.6pt;line-height:1.36}table.code td{padding:1.4mm 2.4mm 1.4mm 0}
+table.code td:first-child{font-family:'Plex Sans';font-weight:600;width:25mm}table.code .mono{font-size:7.6pt}
+table.code td.where{white-space:normal}.cmn{font-size:8.8pt;color:var(--mute);margin:1.6mm 0 3mm}
 /* reproduce */
 .steps{counter-reset:s;margin:0 0 4mm}
 .step{display:grid;grid-template-columns:9mm 1fr;border-bottom:.6px solid var(--rule);padding:1.8mm 0}
@@ -124,13 +127,18 @@ def page_cover():
 
 def page_index():
     rows = "".join(f"<tr><td>{e(a)}</td><td>{e(b)}</td><td>{e(c)}</td></tr>" for a, b, c in C.INDEX)
+    cm = "".join(f"<tr><td>{e(a)}</td><td class='mono'>{e(b)}</td><td class='mono'>{e(c)}</td><td>{e(d)}</td><td class='where'>{e(f)}</td></tr>"
+                 for a, b, c, d, f in C.CODEMAP)
     return f"""<section class="part"><div class="kicker">What is submitted</div><h2>The submission at a glance</h2><div class="rule"></div>
 <p class="lede">The thesis is the examined work. Everything else here lets a reader check it: run the code,
 see what hostile reviewers found and how it was fixed, follow any claim to the code that tests it, and read
 what the findings mean for the authorities who will act on them.</p>
 <table class="idx"><tr><th>Item</th><th>Where</th><th>What it is for</th></tr>{rows}</table>
+<h3>Which code is which</h3>
+<table class="code"><tr><th>Version</th><th>Commit</th><th>DOI</th><th>What it is</th><th>app.py / ui.py lines</th></tr>{cm}</table>
+<p class="cmn">{e(C.CODEMAP_NOTE)}</p>
 <div class="held">Nothing in this supplement adds a claim to the thesis. Where it summarises, the thesis section is named;
-where it reports a check, the check can be rerun from the archived code.</div></section>"""
+where it reports a check, the check can be rerun from the archived code. {e(C.REVIEWERS_NOTE)}</div></section>"""
 
 
 def page_repro():
@@ -140,7 +148,7 @@ def page_repro():
                    for a, b, c in C.REPRO_EXPECT)
     return f"""<section class="part"><div class="kicker">Part 1</div><h2>Reproduce in five minutes</h2><div class="rule"></div>
 <p class="lede">Python 3.11 to 3.13; the checker needs only the standard library. The run is deterministic under seed
-20260915, so your output matches the thesis byte for byte.</p>
+20260915, so your output matches the recorded run byte for byte.</p>
 <div class="steps">{steps}</div>
 <div class="finger"><div class="k"><b class="sans">The fastest single check.</b> The auditor view of record 100 prints its
 commitment. If it matches, you are running the reported code and seed; the seven diffs of step 4 check the rest.</div><div class="v">{C.REPRO_FINGERPRINT}…</div></div>
@@ -156,35 +164,36 @@ def page_dossier():
                   for i, s, f, ev, fx, v in C.AUDIT)
     ex = "".join(f"""<div class="ex"><div class="h"><b>{e(i)}. {e(tl)}</b><span>{e(fl)}, {e(cm)}</span></div>
 <div class="diff">{"".join(f'<div class="m">{e(x)}</div>' for x in b4)}{"".join(f'<div class="p">{e(x) if x else " "}</div>' for x in af)}</div>
-<p>{e(wd)}</p><div class="g">Guarded by {e(gd)}</div></div>"""
+<p>{e(wd)}</p><div class="g">Guarded by: {e(gd)}</div></div>"""
                  for i, tl, fl, cm, b4, af, wd, gd in C.EXHIBITS)
     return f"""<section class="part"><div class="kicker">Part 2</div><h2>Verification dossier</h2><div class="rule"></div>
-<p class="lede">Six reviews between 28 October and 6 November 2026: three by AI agents set to attack the thesis, one by the
-supervisor, one search of the literature and law, and an AI audit of the code in two passes. Every finding was
-checked against its source before anything changed, and every change went through a gated patch recorded in the
-thesis repository's change trail.</p>
+<p class="lede">Nine entries between 28 October and 12 November 2026: four reviews by AI agents set to attack the thesis
+(two red teams, an examiner round, an examiner pass on the propositions), one by the supervisor, one search of the
+literature and law, an AI audit of the code in two passes, two audits of sync and citations, and a typesetting review.
+Every finding was checked against its source before anything changed, and every change to the thesis text went through
+a gated patch recorded in the change trail.</p>
 <table class="rounds"><tr><th>Review</th><th>What it attacked</th><th>What changed</th></tr>{rounds}</table>
-<div class="held">What held throughout: the four propositions, every result figure in Chapter 5, and the novelty of modelling
-the retention floor, the right to erasure and the deletion ceiling together.</div></section>
+<div class="held">What held throughout: every computed figure in Chapter 5 and the novelty of modelling the retention floor, the
+right to erasure and the deletion ceiling together. Two statements were narrowed: Proposition 1 to the records its proof
+covers, Proposition 4 to its stated legal premise.</div></section>
 <section class="part"><div class="kicker">Part 2, continued</div><h2>The code audit</h2><div class="rule"></div>
 <p class="lede">The critical and major findings of both passes and how each was resolved. Evidence and verification for every
 row are in CODE_REVIEW.md in the thesis repository; the next pages show the changes themselves.</p>
 <table class="aud"><tr><th>Finding</th><th>Severity</th><th>Fault, then fix</th></tr>{aud}</table>
 <p class="held">{e(C.AUDIT_MINOR)}</p></section>
 <section class="part"><div class="kicker">Part 2, continued</div><h2>The fixes, in the code</h2><div class="rule"></div>
-<p class="lede">Six of the changes as they stand in git: the lines before, the lines after, what the change does, and the
-test or check that fails if it is undone. Releases 1.2.0 and 1.3.0 of the code bracket them.</p>{ex}</section>"""
+<p class="lede">Six of the changes as they stand in git: the lines before, the lines after, what the change does, and,
+where one exists, the test or check that fails if it is undone. Releases 1.2.0 and 1.3.0 of the code bracket them.</p>{ex}</section>"""
 
 
 def page_evidence():
     rows = "".join(f"<tr><td>{e(a)}</td><td>{e(b)}</td><td class='where'>{e(c)}</td><td>{e(d)}</td><td>{e(g)}</td></tr>"
                    for a, b, c, d, g in C.EVIDENCE)
     return f"""<section class="part"><div class="kicker">Part 3</div><h2>Evidence map</h2><div class="rule"></div>
-<p class="lede">Each load-bearing claim, the section that makes it, the code that checks it, and what fails if the code
-stops agreeing with the thesis. Proposition 4 is argued, not executed, and is listed so that the gap is visible.</p>
+<p class="lede">The principal claims, the section that makes each, the code that checks it, and what fails, where anything
+does, if the code stops agreeing with the thesis. Proposition 4 is argued, not executed, and is listed to show the gap.</p>
 <table class="ev"><tr><th>Claim</th><th>What it says</th><th>Thesis</th><th>Checked by</th><th>Guarded by</th></tr>{rows}</table>
-<div class="held">The viewer's claim ledger recomputes every Chapter 5 figure each time it opens, and an automated test fails if
-any of them, or any proposition the viewer quotes, departs from the thesis text.</div></section>"""
+<div class="held">The viewer's claim ledger recomputes the 27 figures it lists on opening; a test fails if any departs from the thesis, or if a quoted proposition departs from Chapter 4.</div></section>"""
 
 
 def page_brief(B, kicker, limits_label, asks_label):
