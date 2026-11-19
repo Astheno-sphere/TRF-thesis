@@ -46,3 +46,11 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - [ ] verify new app loads; ask Tiger: delete old trf app, rename new to trfhimolde (keeps thesis URL)
 - [ ] whipper round 3 on PDF -> scratchpad/whipper_round3.md; fix
 - [ ] send Tiger final PDF + package; package = thesis PDF, supplement PDF, Zenodo DOI, Streamlit link, GitHub link
+
+## 19 Nov: pre-defence pass (session resumed)
+- [x] three read-only reviews (opus/sonnet; Fable needs credits): scratchpad/review_thesis_gaps.md (G1-G21), review_audit_report.md (R1-R21), review_deck.md
+- [ ] P139 thesis patch (agent, private copy scratchpad/p139copy) -> apply, assemble, PDF+docx, Appendix A copies, trail, commit
+- [ ] audit report fixes (agent, scratchpad/auditcopy) -> copy supplement_content.py, build_supplement.py, CODE_REVIEW.md; chmod +x repro_package/run_all.sh
+- [ ] deck fixes (agent, scratchpad/deckfix) -> publish to https://claude.ai/artifact/3fBxsBPWgwWQsMeh23YGm3
+- [ ] viva notes rebuilt from the three reviews (process/Viva_Preparation_Notes.md is PUBLIC on joao-base: Tiger to decide G21)
+- [ ] Tiger: submitted 14 Nov? G17-G19 citation items; G20 open app URL; G21 private or move viva notes
