@@ -54,3 +54,9 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - [ ] deck fixes (agent, scratchpad/deckfix) -> publish to https://claude.ai/artifact/3fBxsBPWgwWQsMeh23YGm3
 - [ ] viva notes rebuilt from the three reviews (process/Viva_Preparation_Notes.md is PUBLIC on joao-base: Tiger to decide G21)
 - [ ] Tiger: submitted 14 Nov? G17-G19 citation items; G20 open app URL; G21 private or move viva notes
+
+### 19 Nov, later
+- DONE: P139 (35 edits), P140, P141 (viewer sync to TRF 854b2a6, Appendix A copy, checksums); PDF 183 pp, docx, supplement rebuilt; trail 0 fail. Commit 17088c7.
+- DONE: B-65 audit report + supplement (R1-R21, G16). Commit cc9d4d5. run_all.sh now executable.
+- RUNNING: deck fix agent (scratchpad/deckfix), viva notes agent (scratchpad/viva). Viva notes NOT committed until Tiger decides G21 (notes public on joao-base).
+- WAITING ON TIGER: 14 Nov submitted? (errata note), G21 privacy, G17-G19 citations, open app, old Streamlit app delete/rename.
