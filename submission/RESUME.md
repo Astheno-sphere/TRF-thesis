@@ -60,3 +60,4 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - DONE: B-65 audit report + supplement (R1-R21, G16). Commit cc9d4d5. run_all.sh now executable.
 - RUNNING: deck fix agent (scratchpad/deckfix), viva notes agent (scratchpad/viva). Viva notes NOT committed until Tiger decides G21 (notes public on joao-base).
 - WAITING ON TIGER: 14 Nov submitted? (errata note), G21 privacy, G17-G19 citations, open app, old Streamlit app delete/rename.
+- 20 Nov: deck fixes published to Slides artifact (version 22): 31 slides, notes 14:40, 4 new backup slides. Viva notes agent resumed (scratchpad/viva).
