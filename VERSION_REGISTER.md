@@ -53,9 +53,9 @@ This register lists the single live copy of every deliverable. If a file is not 
 | CONTROL | process/CONVERSATION_LINEAGE.md | ffd26f07fbb0 | 1,448 | 10 Oct 02:42 | Seven sessions mapped; this session's identifier for future reference |
 | CONTROL | process/RESUME_PROMPT.md | c27abec3ba7b | 262 | 2 Nov 14:52 | Paste-ready resume prompt with verification commands |
 | CONTROL | process/MASTER_MANIFEST.md | b6f89159cfca | 4,352 | 2 Oct 05:40 | Every file, where it lives, its state and what is going on with it |
-| SUPPORT | process/Viva_Preparation_Notes.md | f8db73b3413a | 2,455 | 2 Nov 18:51 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
+| SUPPORT | process/Viva_Preparation_Notes.md | 3802fc146be4 | 4,063 | 20 Nov 14:59 | Five hard viva questions: concession first, surviving claim second, evidence location, what not to say |
 | ARCHIVE | TRF_Thesis_Migration_Package_02Oct.zip | (not self-recordable) | working set + .git | 2 Oct | Complete working set on the João base, with the git repository (branches `joao-base`, `zip-base-superseded`; tag `joao-base-v1`). Supersedes the 30 Sept archive, whose chapter text was not the reviewed draft. Its md5 is deliberately not recorded here: the archive contains this register, so recording the archive's checksum in it changes the archive, and no fixed point exists. Verify the archive by unpacking it and checking the other rows, which is what the integrity pass does |
-| CONTROL | CHANGE_TRAIL.md | aa8123ad558d | 26,785 | 19 Nov 16:52 | Every change with an ID, reason and verification. Synced with the repository copy |
+| CONTROL | CHANGE_TRAIL.md | 505a034eac26 | 26,868 | 20 Nov 15:00 | Every change with an ID, reason and verification. Synced with the repository copy |
 | CONTROL | CHECKSUMS.md | 9afdd9176440 | 387 | 19 Nov 16:50 | Checksums of what is pushed to GitHub. Synced with the repository copy |
 | CONTROL | process/PATCH_LOG.md | 3648d91114c3 | 566 | 2 Oct 05:35 | Log of applied patch scripts; D0 entry and what is deliberately not yet applied |
 | CONTROL | process/PATCH_QUEUE.md | 8ceed5b20a27 | 2,417 | 30 Oct 20:37 | SUPERSEDED by PATCHES.md (2 Oct); kept for its history |
