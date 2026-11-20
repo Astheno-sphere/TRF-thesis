@@ -61,3 +61,4 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - RUNNING: deck fix agent (scratchpad/deckfix), viva notes agent (scratchpad/viva). Viva notes NOT committed until Tiger decides G21 (notes public on joao-base).
 - WAITING ON TIGER: 14 Nov submitted? (errata note), G21 privacy, G17-G19 citations, open app, old Streamlit app delete/rename.
 - 20 Nov: deck fixes published to Slides artifact (version 22): 31 slides, notes 14:40, 4 new backup slides. Viva notes agent resumed (scratchpad/viva).
+- 20 Nov: TRF 1.3.2 released (524250a, DOI 10.5281/zenodo.24399784; Zenodo controlled subjects + Norwegian abstract not re-applied: needs Tiger logged in). B-66: code table, viva notes (public, Tiger's choice), cheat sheet, walkthrough. Deck notes v24. Tiger submits today.

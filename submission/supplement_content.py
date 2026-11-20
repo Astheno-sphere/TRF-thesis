@@ -11,9 +11,9 @@ INDEX = [
     ("Thesis", "VERA-SNARK_Thesis_SUBMISSION (Word and PDF)",
      "The examined text: seven chapters, Appendices A to D, references."),
     ("Live demonstration", "trfhimolde.streamlit.app",
-     "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs. It runs TRF 0c540b7, not archived (table below)."),
+     "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs. It runs release 1.3.2 (table below)."),
     ("Archived code", "doi.org/10.5281/zenodo.23989242",
-     "Release 1.3.0, the code Appendix A reproduces and the thesis cites. Release 1.3.1 adds the viewer's restyle, the scoped Proposition 1 statement and re-synced documentation; no computation changed. All versions: doi.org/10.5281/zenodo.23819274."),
+     "Release 1.3.0, the code Appendix A reproduces and the thesis cites. Releases 1.3.1 and 1.3.2 add the viewer's restyle and readability pass, the scoped Proposition 1 statement and re-synced documentation; no computation changed. All versions: doi.org/10.5281/zenodo.23819274."),
     ("This supplement", "Five parts, listed on the cover",
      "Material that supports the examination without being part of the examined text."),
     ("Repository", "github.com/Astheno-sphere/TRF-thesis, branch joao-base",
@@ -23,7 +23,7 @@ INDEX = [
 CODEMAP = [
     ("Release 1.3.0", "8f785e3", "10.5281/zenodo.23989242", "Cited by the thesis; Appendix A and Table 5.1 count this code", "1124 / 217"),
     ("Release 1.3.1", "e92f081", "10.5281/zenodo.24148156", "Scoped Proposition 1 in the viewer; restyle", "1126 / 217"),
-    ("Current viewer", "TRF 0c540b7", "none, not archived", "Hosted app and demo_app/; readability pass", "1126 / 233"),
+    ("Release 1.3.2", "524250a", "10.5281/zenodo.24399784", "Hosted app and demo_app/; readability pass; Proposition 1 summary scoped", "1126 / 233"),
 ]
 CODEMAP_NOTE = ("No computation differs between the three: the six result modules are byte-identical. The thesis and the commands in Part 1 refer to release 1.3.0.")
 REVIEWERS_NOTE = ("Apart from the supervisor's, the reviews reported here were by AI agents; the verification recorded is the "
