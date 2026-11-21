@@ -2,6 +2,9 @@
 
 Talk: slides 1 to 16 (15:00, notes run 14:40). Slide 17 is the break into questions. Slides 18 to 31 are backup.
 
+## Links in the deck
+Each talk slide from 3 to 15 and most backup slides now carry two links in the bottom row: "Thesis p. N" (opens the PDF on GitHub; the page number is printed) and "Open in app" (opens the app at the right page; on Witness a record it also selects the record and month, e.g. record 3 at month 116). The close slide links the repository, Zenodo 1.3.0 and the app. Present in the browser so the links are clickable.
+
 ## Before the day
 - Rehearse on the live URL the day before. Screenshot the Claim ledger page as the fallback.
 - On the day, open `trfhimolde.streamlit.app` in a tab ten minutes before you start. It sleeps when idle; waking takes up to a minute.

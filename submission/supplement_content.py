@@ -11,7 +11,7 @@ INDEX = [
     ("Thesis", "VERA-SNARK_Thesis_SUBMISSION (Word and PDF)",
      "The examined text: seven chapters, Appendices A to D, references."),
     ("Live demonstration", "trfhimolde.streamlit.app",
-     "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs. It runs release 1.3.2 (table below)."),
+     "The running code, page by page. It reproduces Chapter 5 when opened and shows a notice beside any figure that differs. It runs release 1.3.2 plus deep links for the defence deck (TRF e2d342a; no computation changed; table below)."),
     ("Archived code", "doi.org/10.5281/zenodo.23989242",
      "Release 1.3.0, the code Appendix A reproduces and the thesis cites. Releases 1.3.1 and 1.3.2 add the viewer's restyle and readability pass, the scoped Proposition 1 statement and re-synced documentation; no computation changed. All versions: doi.org/10.5281/zenodo.23819274."),
     ("This supplement", "Five parts, listed on the cover",

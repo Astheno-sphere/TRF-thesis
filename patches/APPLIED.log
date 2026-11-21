@@ -1716,3 +1716,5 @@
 2026-11-19 16:50 | P141_copies_after_P139.py | P141-01 | demo_app/app.py | 417af431f19f -> 083b0b9d969a | viewer copy synced to TRF 854b2a6 (R-43)
 2026-11-19 16:50 | P141_copies_after_P139.py | P141-02 | repro_package/docs/Appendix_A.md | c08c76d2aeb5 -> b509ed268c83 | copy of Appendix A after P139
 2026-11-19 16:50 | P141_copies_after_P139.py | P141-03 | CHECKSUMS.md | b5238b1ef1e6 -> 9afdd9176440 | checksums
+2026-11-21 12:50 | P142_viewer_deep_links.py | P142-01 | demo_app/app.py | 083b0b9d969a -> 010ae67cdfec | viewer copy synced to TRF e2d342a (R-45, deck deep links)
+2026-11-21 12:50 | P142_viewer_deep_links.py | P142-02 | CHECKSUMS.md | 9afdd9176440 -> 4acc2f6484d9 | checksums
