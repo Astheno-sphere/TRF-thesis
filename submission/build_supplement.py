@@ -55,17 +55,18 @@ code,.mono{font-family:'Plex Mono',monospace;font-size:8.6pt}
 .cover .contents span{font-family:'Plex Sans';font-weight:600;color:var(--gold)}
 .cover .contents b{font-family:'Plex Sans';font-weight:600;color:#F4EEE2;font-size:9.4pt}
 /* index */
+.idx td{padding:1.4mm 3mm 1.4mm 0}
 .idx td:first-child{font-family:'Plex Sans';font-weight:600;width:32mm}
 .idx td:nth-child(2){width:62mm;color:var(--ox);font-family:'Plex Sans';font-size:8.8pt;font-weight:500}
-table.code{font-size:8.6pt;line-height:1.36}table.code td{padding:1.4mm 2.4mm 1.4mm 0}
-table.code td:first-child{font-family:'Plex Sans';font-weight:600;width:25mm}table.code .mono{font-size:7.6pt}
+table.code{font-size:8.6pt;line-height:1.36}table.code td{padding:.9mm 2.4mm .9mm 0}
+table.code td:first-child{font-family:'Plex Sans';font-weight:600;width:25mm}table.code .mono{font-size:8.2pt}
 table.code td.where{white-space:normal}.cmn{font-size:8.8pt;color:var(--mute);margin:1.6mm 0 3mm}
 /* reproduce */
 .steps{counter-reset:s;margin:0 0 4mm}
 .step{display:grid;grid-template-columns:9mm 1fr;border-bottom:.6px solid var(--rule);padding:1.8mm 0}
 .step:before{counter-increment:s;content:counter(s);font-family:'Plex Sans';font-weight:700;color:var(--ox);font-size:12pt}
 .step .t{font-family:'Plex Sans';font-weight:600;font-size:9.4pt}
-.step code{display:block;background:var(--tint);padding:1.2mm 2.4mm;margin:.9mm 0 .5mm;border-left:2px solid var(--char)}
+.step code{display:block;background:var(--tint);padding:1.2mm 2.4mm;margin:.9mm 0 .5mm;border-radius:2px}
 .step .n{font-size:8.8pt;color:var(--mute)}
 .exp td{padding:1.5mm 3mm 1.5mm 0}
 .finger{margin:1mm 0 2mm;background:var(--char);color:var(--cream);padding:5mm 6mm;display:grid;grid-template-columns:1fr auto;align-items:center;gap:6mm}
@@ -74,15 +75,15 @@ table.code td.where{white-space:normal}.cmn{font-size:8.8pt;color:var(--mute);ma
 /* dossier */
 .rounds{font-size:9pt;line-height:1.38}.rounds td{padding:1.6mm 3mm 1.6mm 0}
 .rounds td:first-child{font-family:'Plex Sans';font-weight:600;width:34mm}
-.rounds td:first-child small{display:block;font-weight:500;color:var(--mute);font-size:7.8pt;margin-top:.6mm}
+.rounds td:first-child small{display:block;font-weight:500;color:var(--mute);font-size:8.2pt;margin-top:.6mm}
 .find{display:grid;grid-template-columns:21mm 1fr;border-top:.6px solid var(--rule);padding:3.2mm 0;break-inside:avoid}
 .find .id{font-family:'Plex Sans';font-weight:700;font-size:9pt}
-.find .sev{display:block;font-family:'Plex Sans';font-size:7.6pt;font-weight:600;margin-top:.8mm}
+.find .sev{display:block;font-family:'Plex Sans';font-size:8.2pt;font-weight:600;margin-top:.8mm}
 .sev.Critical{color:var(--ox)}.sev.Major{color:var(--orange)}.sev.open{color:#fff;background:var(--orange);display:inline-block;padding:.2mm 1.6mm;margin-top:1mm;border-radius:1px}
 .find .f{font-weight:600;margin-bottom:1.2mm}
 .find dl{display:grid;grid-template-columns:20mm 1fr;gap:.6mm 3mm;font-size:9.1pt;line-height:1.42}
-.find dt{font-family:'Plex Sans';font-size:7.8pt;font-weight:600;color:var(--mute);padding-top:.5mm}
-.held{margin:5mm 0 0;padding:.5mm 0 .5mm 5mm;border-left:2px solid var(--gold);font-size:9.8pt;color:var(--char2);max-width:150mm}
+.find dt{font-family:'Plex Sans';font-size:8.2pt;font-weight:600;color:var(--mute);padding-top:.5mm}
+.held{margin:3mm 0 0;padding:2.2mm 4mm;background:var(--tint);border-radius:2px;font-size:9.4pt;break-inside:avoid;color:var(--char2);max-width:150mm}
 /* audit table */
 .aud{font-size:8.9pt;line-height:1.38}.aud td{padding:1.6mm 2.6mm 1.6mm 0}
 .aud td:first-child{font-family:'Plex Sans';font-weight:600;width:17mm;white-space:nowrap}
@@ -91,12 +92,12 @@ table.code td.where{white-space:normal}.cmn{font-size:8.8pt;color:var(--mute);ma
 .ex{break-inside:avoid;border-top:.6px solid var(--rule);padding:3.4mm 0 2mm}
 .ex .h{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
 .ex .h b{font-family:'Plex Sans';font-weight:600;font-size:10pt}
-.ex .h span{font-family:'Plex Mono';font-size:7.6pt;color:var(--mute);white-space:nowrap}
-.diff{font-family:'Plex Mono';font-size:7.7pt;line-height:1.5;background:var(--tint);margin:2mm 0 1.6mm;padding:2mm 3mm;white-space:pre-wrap}
+.ex .h span{font-family:'Plex Mono';font-size:8.1pt;color:var(--mute);white-space:nowrap}
+.diff{font-family:'Plex Mono';font-size:8.1pt;line-height:1.5;background:var(--tint);margin:2mm 0 1.6mm;padding:2mm 3mm;white-space:pre-wrap}
 .diff .m{color:#8E3A41}.diff .p{color:var(--ink)}.diff .m:before{content:"− ";color:#B07479}.diff .p:before{content:"+ ";color:var(--gold)}
-.ex p{font-size:9.2pt;margin:0 0 .6mm}.ex .g{font-family:'Plex Sans';font-size:7.9pt;color:var(--mute)}
+.ex p{font-size:9.2pt;margin:0 0 .6mm}.ex .g{font-family:'Plex Sans';font-size:8.2pt;color:var(--mute)}
 /* evidence */
-.ev{font-size:8.9pt;line-height:1.36}.ev td{padding:1.5mm 2.6mm 1.5mm 0}
+.ev{font-size:8.9pt;line-height:1.36}.ev td{padding:1.1mm 2.6mm 1.1mm 0}
 .ev td:first-child{font-family:'Plex Sans';font-weight:700;width:28mm;font-size:8.6pt}
 .ev td:nth-child(4){font-family:'Plex Mono';font-size:7.6pt;width:40mm}
 .ev td:nth-child(5){font-size:8.6pt;color:var(--char2);width:36mm}
