@@ -65,7 +65,7 @@ The witnessing mechanism, **Crypto-Erasure by Invalidation**, destroys a per-rec
 
 ```bash
 git clone -b joao-base https://github.com/Astheno-sphere/TRF-thesis && cd TRF-thesis/demo_app
-pip install -r requirements.txt
+pip install -r requirements.txt pytest
 python3 trf_checker.py          # Semantics I: 95 violations across 90 of 200 records; Semantics II: 0
 python3 -m pytest -q tests/     # 56 checks: recorded runs, viewer pages, claim ledger, cross-check vs checker
 ```
