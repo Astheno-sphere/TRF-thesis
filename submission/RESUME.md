@@ -70,3 +70,11 @@ Read this first if a session ends mid-task. Updated as each step finishes.
 - Not done: slide 10 (mechanism) overload fix (optional, riskier); slide 12 dot grid is still animated.
 - Zenodo R-46 edit (ef9fe70) and its description upgrade are in the code repo; Tiger still to close the open Zenodo edit page without publishing.
 - Open for Tiger: three citation checks, live test of deep links, old Streamlit app rename decision.
+
+## 24 to 26 Nov 2026
+- 24 Nov: deck animations restored and extended (slides 4, 5, 9, 11, 12), slop stripes removed, footers shortened; deck version 1795364123-22cb. Supplement typography pass B-68 (1db4aa4), 12 pages. Delivered to Tiger: thesis PDF, supplement, Zenodo 1.3.2 zip, clean reproducibility zip (no Synthea cohort: regenerates differently).
+- 25 Nov: Prof. Ferreira's article draft and journal notes uploaded (c69ebb1). First target: Computer Law & Security Review (CLSR).
+- 26 Nov: thesis citation gap closed against primary sources (ACM DL, EUR-Lex HTML, Cambridge, IDCS record): Schneier & Kelsey 2(2), Art 68(12), Art 73(1)(e), recitals 19/36/39 only, C-413/23 P para 73, Rak p. 928, KONFIDO, TEHDAS2 D6.3 (2026a) and D7.4 (2026b). No thesis error found. EFTA EEA-Lex status unverified (bot check): Tiger by hand.
+- 26 Nov: TRF R-47 (sensitivity.py) and R-48 pushed; release v1.3.3 published on GitHub; Zenodo version DOI 10.5281/zenodo.24562862 (record 24562862; concept 10.5281/zenodo.23819274). Thesis still cites 1.3.0; no computed figure changed.
+- 26 Nov: CLSR package built outside this repo (/home/claude/work/article/package/clsr_v0.9, v0.9.1 in progress): anonymised manuscript, two-column preview, title page, cover letter, figures, anonymised code archive (41 tests pass), concordance gate. Article work files are NOT committed here (repo is public; double-anonymised review).
+- Open for Tiger: when to make GitHub private (thesis PDF links to GitHub and Streamlit; keep public until after grading); remove article draft docx from main before review?
