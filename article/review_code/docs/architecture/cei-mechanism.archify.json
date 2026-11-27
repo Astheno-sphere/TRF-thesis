@@ -1,0 +1,368 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "Crypto-Erasure by Invalidation: the mechanism at the audit boundary",
+  "output": ".archify/architecture-cei-mechanism-20261005/cei-mechanism.html",
+  "quality_profile": "showcase",
+  "legend": {
+   "entries": {
+    "external": {
+     "label": "Triggers and parties"
+    },
+    "backend": {
+     "label": "Mechanism steps"
+    },
+    "database": {
+     "label": "Stores and log"
+    },
+    "security": {
+     "label": "Key custody"
+    }
+   }
+  }
+ },
+ "components": [
+  {
+   "id": "access",
+   "type": "external",
+   "label": "Access event",
+   "sublabel": "ITI-55 query / SPE activity",
+   "pos": [
+    40,
+    250
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "writer",
+   "type": "backend",
+   "label": "Audit writer",
+   "sublabel": "accessor / subject split",
+   "pos": [
+    290,
+    250
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "commit",
+   "type": "backend",
+   "label": "Commitment",
+   "sublabel": "c(a) = Commit(p, r)",
+   "pos": [
+    540,
+    250
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "merkle",
+   "type": "database",
+   "label": "Merkle audit log",
+   "sublabel": "m_acc, c, c_subj, ι leaves",
+   "pos": [
+    790,
+    250
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "auditor",
+   "type": "external",
+   "label": "Auditor",
+   "sublabel": "checks V_II",
+   "pos": [
+    1040,
+    250
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "kms",
+   "type": "security",
+   "label": "Key custody",
+   "sublabel": "per-record k(a) under KEK",
+   "pos": [
+    290,
+    440
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "store",
+   "type": "database",
+   "label": "Record store",
+   "sublabel": "ciphertext, salts, m_subj",
+   "pos": [
+    540,
+    440
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "registry",
+   "type": "database",
+   "label": "Invalidation registry",
+   "sublabel": "month, ground, actor",
+   "pos": [
+    790,
+    440
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "erasure",
+   "type": "external",
+   "label": "Erasure request",
+   "sublabel": "GDPR Art. 17",
+   "pos": [
+    40,
+    630
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "scheduler",
+   "type": "backend",
+   "label": "Invalidation",
+   "sublabel": "min(t_r+δ, t_π+6, t+P)",
+   "pos": [
+    540,
+    630
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "permit",
+   "type": "external",
+   "label": "Permit expiry",
+   "sublabel": "HDAB, EHDS Art. 68(12)",
+   "pos": [
+    540,
+    810
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "holder",
+   "type": "external",
+   "label": "Opening holder",
+   "sublabel": "patient / home NCP",
+   "pos": [
+    540,
+    20
+   ],
+   "size": [
+    150,
+    68
+   ]
+  },
+  {
+   "id": "proactive",
+   "type": "external",
+   "label": "Payload period P(a)",
+   "sublabel": "GDPR Art. 5(1)(c),(e); specified, not run",
+   "pos": [
+    290,
+    810
+   ],
+   "size": [
+    150,
+    68
+   ]
+  }
+ ],
+ "boundaries": [
+  {
+   "kind": "region",
+   "label": "Audit repository (NCPeH or SPE logging boundary)",
+   "wraps": [
+    "writer",
+    "commit",
+    "merkle",
+    "kms",
+    "store",
+    "registry",
+    "scheduler"
+   ]
+  },
+  {
+   "kind": "security-group",
+   "label": "Custody boundary (HSM)",
+   "wraps": [
+    "kms"
+   ]
+  }
+ ],
+ "connections": [
+  {
+   "id": "e1",
+   "from": "access",
+   "to": "writer",
+   "label": "access event",
+   "variant": "emphasis"
+  },
+  {
+   "id": "e2",
+   "from": "writer",
+   "to": "commit",
+   "label": "payload p(a)",
+   "variant": "emphasis"
+  },
+  {
+   "id": "e3",
+   "from": "commit",
+   "to": "merkle",
+   "label": "leaf",
+   "variant": "emphasis"
+  },
+  {
+   "id": "e4",
+   "from": "auditor",
+   "to": "merkle",
+   "label": "proof"
+  },
+  {
+   "id": "e5",
+   "from": "writer",
+   "to": "kms",
+   "label": "encrypt p(a)",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e6",
+   "from": "kms",
+   "to": "store",
+   "label": "ciphertext"
+  },
+  {
+   "id": "e7",
+   "from": "commit",
+   "to": "store",
+   "label": "salt r(a)",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e8",
+   "from": "registry",
+   "to": "merkle",
+   "label": "ι(a) leaf",
+   "fromSide": "top",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e9",
+   "from": "erasure",
+   "to": "scheduler",
+   "label": "t_r",
+   "variant": "dashed"
+  },
+  {
+   "id": "e10",
+   "from": "permit",
+   "to": "scheduler",
+   "label": "t_π",
+   "variant": "dashed",
+   "fromSide": "top",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e11",
+   "from": "scheduler",
+   "to": "kms",
+   "label": "destroy k(a)",
+   "variant": "security",
+   "fromSide": "left",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e12",
+   "from": "scheduler",
+   "to": "store",
+   "label": "delete ct, salt; m_subj at ceiling (SPE)",
+   "variant": "security",
+   "fromSide": "top",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e13",
+   "from": "scheduler",
+   "to": "registry",
+   "label": "append ι(a)",
+   "fromSide": "right",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e14",
+   "from": "commit",
+   "to": "holder",
+   "label": "opening",
+   "variant": "dashed",
+   "fromSide": "top",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e15",
+   "from": "proactive",
+   "to": "scheduler",
+   "label": "t+P",
+   "variant": "dashed",
+   "fromSide": "right",
+   "toSide": "bottom"
+  }
+ ],
+ "cards": [
+  {
+   "dot": "cyan",
+   "title": "Semantics II",
+   "items": [
+    "V_II = m_acc ∧ c ∧ (α ∨ ι) ∧ (β ∨ ι_subj)",
+    "The trail grows when erasure happens"
+   ]
+  },
+  {
+   "dot": "amber",
+   "title": "In the artefact",
+   "items": [
+    "Run: keys, commitments, invalidation, Merkle inclusion proofs",
+    "Specified only: terminal transition, nonce, consistency proofs, accumulator"
+   ]
+  }
+ ]
+}

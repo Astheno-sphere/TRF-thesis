@@ -1,0 +1,54 @@
+COMPUTER LAW & SECURITY REVIEW   /   SECOND-ROUND REVISION
+
+Second-round review and revision notes
+
+*Auditing After Erasure in the European Health Data Space*
+
+Assessment: suitable for submission as a full-length legal and technical analysis once the authors approve the text and complete the declarations. The strongest evidence is the field-level conflict test. The simulation shows the consequences of the competing readings for a fixed set of events. No deployment study is needed for that claim.
+
+## An audit question with a testable answer
+
+The introduction, Section 3.3 and new Table 3 follow one investigation from permit to release. Two queries can produce the same aggregate while selecting different cohorts. An approval entry tells the auditor who approved the operation. An execution record may show which filter ran. Establishing why one particular patient was included requires still more evidence. The revised paper specifies how far each conclusion can reach and gives separate acceptance tests for cohort selection and output release.
+
+## Who can handle an erasure request
+
+Section 2.1 now treats identification as a condition for applying the individual erasure clock. It explains GDPR Article 11, the limits on access to the pseudonymisation key under EHDS Article 66(3), and the restriction on re-identification by the health data user under Article 61(3). Section 6.1 applies Article 73(2) to the independent review of downloads. This avoids suggesting that a lawful release can include identifiable patient rows.
+
+## A public source for the Norwegian comparison
+
+Section 2.3 and new reference [25] use the Directorate’s published privacy notice. It supports six years for listed information about healthcare professionals using the MyHealth@EU search-and-view module. The text applies 72 months as an illustrative comparison when assessing a readable payload. A broader claim about national gateway or patient-query retention would require separate evidence. The manuscript no longer depends on a private communication to support the narrower claim.
+
+## A clearer unit of analysis
+
+Section 5.1 now states that each draw is an access event. All 17 reused permit labels in the 100 secondary-use records have multiple assigned expiry dates. The model cannot establish how many real permits would be affected or how a patient-level request would propagate across a controller’s systems. Section 5.2 leads with the secondary-use results and gives the pooled comparison afterwards.
+
+# Checks and remaining decisions
+
+I reran the baseline, all six original sensitivity cases and the eight-bundle Synthea comparison under Python 3.12.14. Their complete console outputs matched the expected files supplied in the review archive. I also recomputed the strict-endpoint result and tested the five-year period discussed in TEHDAS2 OPR-18.
+
+| **SPE floor** | **Permit ceiling reaches log field** | **Affected events / 100** | **Plaintext conflicts** |
+| --- | --- | --- | --- |
+| 12 months | Yes | 53 | 58 |
+| 12 months | No | 9 | 9 |
+| 60 months | Yes | 100 | 122 |
+| 60 months | No | 22 | 22 |
+
+Reproduction: generate the standard cohort at seed 20260915, select the 100 records with sigma equal to “secondary”, and set their floor to 12 or 60. For the excluded case set permit expiry to infinity. Count records with non-empty check_semantics_I results, then sum the lengths of those results to count conflicts. All four cases returned zero modelled violations under the alternative design. At 60 months, every simulated permit ceiling fell within the window and 22 request deadlines did too.
+
+## Submission check
+
+The revised article contains approximately 8,008 words across Sections 1–7, including captions, tables and algorithm text. The abstract is 169 words. The Word file has seven keywords, three figures, three editable tables and 40 numbered references. The separate cover letter retains the public thesis and draft disclosure. Its claims match the revised manuscript.
+
+Both authors still need to approve the manuscript, AI-use statement, funding and interests, contributions and title-page details. Confirm the public thesis link and verify the repository records for version DOI 10.5281/zenodo.24562862 and concept DOI 10.5281/zenodo.23819274. The local archive ran successfully. The public deposit remains independently unverified. Confirm portal-specific file requests in Editorial Manager; the live ScienceDirect author guide remained inaccessible.
+
+## Primary sources checked in this round
+
+[EHDS Regulation, Articles 61, 66 and 73](https://eur-lex.europa.eu/eli/reg/2025/327/oj/eng)    ·    [GDPR, Article 11](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng)
+
+[Norwegian Directorate of Health, MyHealth@EU section of the privacy notice](https://www.helsedirektoratet.no/om-oss/om-nettstedet/personvernerklaering/nar-behandler-vi-personopplysninger/personopplysninger-om-helsepersonell)
+
+[TEHDAS2 technical specification, Table 5.4, OPR-18](https://tehdas.eu/wp-content/uploads/2026/06/d7.4-technical-specification-for-health-data-access-bodies-on-the-implementation-of-secure-processing-environments.pdf)
+
+[EDPB pseudonymisation guidance](https://www.edpb.europa.eu/documents/guideline/guidelines-012025-on-pseudonymisation_en)    ·    [EDPB anonymisation guidance](https://www.edpb.europa.eu/documents/guideline/guidelines-022026-on-anonymisation_en) (both cited as consultation versions).
+
+Author copy     ·     27 November 2026     /

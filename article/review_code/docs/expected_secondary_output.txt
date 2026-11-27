@@ -1,0 +1,36 @@
+seed=20260915  delta=1  ceiling=6  SPE floor=12  xborder floor=120
+
+[1] Secondary-use subset, 12-month floor
+  ceiling applies : n=100 request-related=9 ceiling=49 both=5 affected_records=53 record_constraint_pairs=58
+  ceiling excluded: n=100 request-related=9 ceiling=0 both=0 affected_records=9 record_constraint_pairs=9
+
+[2] Secondary-use subset, 60-month floor
+  ceiling applies : affected_records=100 record_constraint_pairs=122 (request=22 ceiling=100)
+  ceiling excluded: affected_records=22 record_constraint_pairs=22 (request=22 ceiling=0)
+  Arithmetic: ceiling deadline = t_a + offset + 6 <= t_a + 18 (offset in 1..12, 6-month ceiling).
+  The window ends at t_a + 60 > t_a + 18, so C3 collides in every one of the 100 records (100/100).
+  Pairs = 100 ceiling + 22 request: a request deadline t_a + (1..18) + 1 <= t_a + 19 < t_a + 60 also always collides.
+
+[3] Strict (half-open) endpoint, baseline 120-month primary floor, ceiling applies
+  closed  : pairs=95 records=90 SPE ceiling(C3) pairs=49 request(C2) pairs=46
+  strict  : pairs=86 records=83 SPE ceiling(C3) pairs=41 request(C2) pairs=45
+
+[4] GDPR response parameter delta=3, reference scenario
+  delta=1: violations=95 records=90 no_request_ceiling_witnesses=39 semantics_II=0
+  delta=3: violations=94 records=89 no_request_ceiling_witnesses=39 semantics_II=0
+
+[5] Permit labels in the 100 secondary-use records
+  label rule: permit = f'DP-{rid % 17:03d}' (rid 100..199)
+  secondary records=100 distinct labels=17 reused (>1 record)=17 singletons=0
+  group size min=5 max=6
+  reused labels with >1 distinct expiry month=17; reused labels with one expiry=[]
+  distinct expiry months per label: {'DP-000': 5, 'DP-001': 6, 'DP-002': 5, 'DP-003': 6, 'DP-004': 5, 'DP-005': 6, 'DP-006': 5, 'DP-007': 6, 'DP-008': 5, 'DP-009': 5, 'DP-010': 5, 'DP-011': 6, 'DP-012': 5, 'DP-013': 5, 'DP-014': 5, 'DP-015': 4, 'DP-016': 5}
+
+[6] Baseline re-confirmation
+  violations=95 records=90 cross-border=37 SPE=53
+  request-only=41 ceiling-only=44 both=5 no-request witnesses=39
+  invalidations=138 (request 52, ceiling 86) semantics II violations=0
+  Table 2 (records/violations):
+    floor 120: applies 90/95  excluded 46/46
+    floor  72: applies 78/83  excluded 34/34
+    floor  36: applies 61/66  excluded 17/17

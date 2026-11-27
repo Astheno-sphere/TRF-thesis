@@ -1,0 +1,25 @@
+27 November 2026
+
+The Editors
+
+Computer Law & Security Review
+
+Dear Editors,
+
+Please consider our full-length research article, “Auditing After Erasure in the European Health Data Space,” for publication in Computer Law & Security Review.
+
+A health data access body investigating a research permit may need to explain both which patients a query selected and which statistical result left the secure processing environment. Those are different findings. The paper examines the evidence each requires under Articles 68 and 73 of the European Health Data Space Regulation, and the circumstances in which Article 17 GDPR also requires a field to be erased.
+
+We offer a field-level test for a later dispute. Two queries can return the same aggregate even though one omitted a condition in the permit. A record of approval establishes who approved the operation. To determine whether the permitted filter actually ran, the reviewer needs evidence tied to its execution. In our fixed simulation of 100 secondary-use records, 53 had conflicting requirements for readable data when the permit deadline covered logged health data. Nine did when audit fields fell outside its scope. These counts show the practical consequence of a disputed statutory interpretation for the same records.
+
+The article develops research from the first author’s MSc thesis at Molde University College. The public thesis repository also included an earlier manuscript draft. We disclose both for editorial assessment. The anonymised supplementary materials contain the code and synthetic data used for the demonstration. The separate title page identifies the authors and repository.
+
+Yours sincerely,
+
+Arshad Akhtar Abbasia
+
+Corresponding author
+
+Molde University College, Molde, Norway
+
+arshad.a.abbasia@himolde.no

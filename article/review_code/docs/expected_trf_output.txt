@@ -1,0 +1,66 @@
+==========================================================================
+                         TRF FEASIBILITY CHECKER                          
+   seed=20260915  delta=1  ceiling=6  floors: cross-border=120, SPE=12    
+==========================================================================
+
+Generated 200 records (100 cross-border, 100 SPE access-log)
+
+--------------------------------------------------------------------------
+SEMANTICS I  (plaintext verifiability:  V = alpha)   -> Proposition 1
+--------------------------------------------------------------------------
+records with >=1 violation : 90/200
+  cross-border (F=120)     : 37/100
+  SPE access-log (F=12)    : 53/100
+total constraint violations: 95
+
+Corollary 1.2 witnesses (SPE, NO erasure request, still infeasible): 39
+  rid=100: t_a=7 permit expires t_pi=10 -> C3 from t=16, C1 to t=19  | collision at t=16
+  rid=103: t_a=7 permit expires t_pi=10 -> C3 from t=16, C1 to t=19  | collision at t=16
+  rid=104: t_a=3 permit expires t_pi=4 -> C3 from t=10, C1 to t=15  | collision at t=10
+
+Sample violation witnesses (cross-border):
+  C1 requires V=1 (=> alpha=1) at t=116 within [11,131]; C2 requires alpha=0 from t=116
+  C1 requires V=1 (=> alpha=1) at t=120 within [4,124]; C2 requires alpha=0 from t=120
+  C1 requires V=1 (=> alpha=1) at t=41 within [0,120]; C2 requires alpha=0 from t=41
+
+--------------------------------------------------------------------------
+INDEPENDENT CROSS-CHECK: exhaustive search over alpha assignments
+--------------------------------------------------------------------------
+  SPE, no erasure request, permit 3mo            feasible=False
+  SPE, erasure at t=2                            feasible=False
+  cross-border scaled (F=12), erasure at t=4     feasible=False
+  control: no request, no expiry                 feasible=True
+
+--------------------------------------------------------------------------
+SEMANTICS II (accountability preservation)          -> Proposition 2
+--------------------------------------------------------------------------
+records invalidated        : 138/200
+  ground = GDPR Art 17(1)  : 52
+  ground = EHDS Art 68(12) : 86
+records with >=1 violation : 0/200
+total constraint violations: 0
+
+Auditor view of rid=100 after invalidation:
+  accessor fields      : True  actor=R-008 permit=DP-015 outcome=success
+  subject link         : removed month 16
+  commitment c(a)      : 678ade47c1e6dc03296175e056fd8116...
+  payload key k(a)     : None   <- destroyed
+  salt, ciphertext     : None, None   <- destroyed, deleted
+  invalidation iota(a) : month=16 ground=EHDS Art 68(12)
+  payload readable?    : False
+
+--------------------------------------------------------------------------
+AUDIT-LOG INTEGRITY (Merkle log, RFC 6962 hashing)     -> V_II condition (i)
+--------------------------------------------------------------------------
+log entries                : 438
+log root                   : a91c07936a4eb9752b58c6483ca93d7d...
+records verifying          : 200/200
+tamper test, rid=100 actor altered : V_II=False  (access entry fails its inclusion proof (altered))
+tamper test, rid=100 ground altered: V_II=False  (invalidation entry fails its inclusion proof (altered))
+tamper test, rid=3 link altered  : V_II=False  (patient link does not open its logged commitment (altered))
+after restoring all three  : V_II=True
+
+==========================================================================
+RESULT  Semantics I : 95 violations across 90 records  -> INFEASIBLE
+RESULT  Semantics II: 0 violations across 0 records  -> FEASIBLE
+==========================================================================

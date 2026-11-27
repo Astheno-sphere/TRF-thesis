@@ -1,0 +1,86 @@
+\documentclass[$classoption$]{elsarticle}
+\usepackage{iftex}
+\ifPDFTeX
+  % pdfLaTeX route (Elsevier's build system): Times via psnfss, no system fonts needed
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{mathptmx}
+  \usepackage[scaled=0.90]{helvet}
+  \usepackage{courier}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{DejaVu Sans}
+  \setmonofont[Scale=0.85]{DejaVu Sans Mono}
+\fi
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,array}
+\usepackage[labelformat=empty]{caption}
+\usepackage{microtype}
+$if(twocol)$
+\usepackage{flushend}
+$endif$
+% Algorithm 1: algorithm float + algpseudocode (algorithmicx), booktabs rules, no box, no monospace
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\floatstyle{plain}\restylefloat{algorithm}
+\algnotext{EndIf}
+\newcommand{\algcapfont}{\footnotesize\linespread{1.05}\selectfont}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\algrenewcommand\algorithmicwhile{\textbf{while}}
+\algrenewcommand\alglinenumber[1]{\footnotesize\upshape #1}
+\algrenewcommand\algorithmicindent{1.4em}
+\algrenewcommand\algorithmiccomment[1]{\hfill\textit{#1}}
+\usepackage{xcolor}
+\usepackage{xurl}
+\urlstyle{same}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={$if(named)$Arshad Akhtar Abbasia, João Ferreira$endif$},pdfcreator={},pdfproducer={},pdftitle={$title$},pdfsubject={},pdfkeywords={}}
+\setcounter{secnumdepth}{0}
+% float placement: avoid half-empty pages before floats (v0.9.1)
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.75}
+\renewcommand{\dblfloatpagefraction}{0.75}
+\setcounter{topnumber}{3}
+\setcounter{dbltopnumber}{3}
+\setcounter{totalnumber}{5}
+\newlength{\figwsingle}
+\AtBeginDocument{\ifdim\columnwidth<90mm\setlength{\figwsingle}{\columnwidth}\else\setlength{\figwsingle}{90mm}\fi}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+$if(linenumbers)$
+\usepackage{lineno}
+\linenumbers
+$endif$
+\journal{Computer Law \& Security Review}
+$if(named)$
+\usepackage{fancyhdr}
+\fancypagestyle{pprintTitle}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[L]{\footnotesize\itshape Author preview, not the anonymised submission}\fancyfoot[R]{\footnotesize\thepage}}
+\pagestyle{pprintTitle}
+\raggedbottom
+$endif$
+\begin{document}
+\typeout{TEXTWIDTH=\the\textwidth\space COLUMNWIDTH=\the\columnwidth}
+\begin{frontmatter}
+\title{$title$}
+$if(named)$
+\author[a]{Arshad Akhtar Abbasia\corref{cor1}}
+\ead{arshad.a.abbasia@himolde.no}
+\author[a]{João Ferreira}
+\cortext[cor1]{Corresponding author. ORCID: 0000-0001-9461-9442}
+\address[a]{Molde University College (Høgskolen i Molde), P.O. Box 2110, 6402 Molde, Norway}
+$endif$
+\begin{abstract}
+$abstract$
+\end{abstract}
+\begin{keyword}
+$for(keywords)$$keywords$$sep$ \sep $endfor$
+\end{keyword}
+\end{frontmatter}
+$body$
+\end{document}
